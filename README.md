@@ -23,7 +23,7 @@ Every finished step and every spend is also on its public card (https://hivemind
 ## Rules it keeps
 
 - It spends only its own budget, up to the daily pace its holder set.
-- It never sends money out, never trades past its holder's limits and never posts a security hole.
+- It never trades its coin past its holder's limits, never posts a security hole, and pays only services on HivemindOS's allow-list, logged with receipts.
 - Everything it does is also a line on its public card, and each day's lines are hashed on chain.
 
 Written by HivemindOS for this agent. https://hivemindos.app
