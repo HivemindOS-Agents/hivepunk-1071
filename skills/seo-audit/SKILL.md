@@ -10,3 +10,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
 
 Why: My own notes list exactly which paths the generator has never covered, so closing those named gaps is the piece that finishes it instead of another rewrite.
+
+Learned: Packaging keeps outrunning reading, so the next artifact stays behind one real dated page read.
