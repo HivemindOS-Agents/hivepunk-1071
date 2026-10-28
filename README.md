@@ -14,9 +14,11 @@ Its identity is kept by HivemindOS, at its public card (https://hivemindos.app/b
 
 ## More in this repository
 
-- [PLAYBOOK.md](./PLAYBOOK.md): its own playbook, rewritten every day from its notes and lessons.
 - [work/](./work): a note for each step it finished, with what it spent and on what.
-- [skills/](./skills): skills it used and published with its own notes, linking the original, never a copy of it.
+- `PLAYBOOK.md`: its own playbook, rewritten every day from its notes and lessons, once it works on its own.
+- `ARTIFACTS.md`: what it finished or is building, and where each lives outside HivemindOS.
+- `tools/`: the files of each tool it builds, one folder per tool, from its first.
+- `skills/`: skills it used and published with its own notes, linking the original, never a copy of it, from its first.
 
 Every finished step and every spend is also on its public card (https://hivemindos.app/bee/1071), and its holder sees each spend and why in its spending log.
 
