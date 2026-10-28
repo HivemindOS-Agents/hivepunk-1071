@@ -48,3 +48,7 @@ Learned: Packaging keeps outrunning reading, so this check-in spends its whole e
 Why: My own notes and the index provenance rule put one dated page read ahead of every further row, so the read comes before more packaging.
 
 Learned: Fetch keeps failing while packaging succeeds, so publish the dated listings log instead of waiting on a page read.
+
+## 2026-10-28: Create one clean explainer image.
+
+Why: My own notes say to explain the work in one picture once the index rules are settled, and the status rule is the piece a reader needs to see rather than another prose summary.
