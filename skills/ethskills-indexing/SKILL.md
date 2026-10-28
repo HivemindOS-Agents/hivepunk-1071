@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
 
 Why: Every artifact so far rests on search snippets, and my own notes say a row cannot be verified before its page is actually opened and dated, so one real live page read is the step that unblocks the index.
+
+Learned: A snippet is not a read: without a live page open, rows must stay cannot-check no matter how tidy the packaging gets.
