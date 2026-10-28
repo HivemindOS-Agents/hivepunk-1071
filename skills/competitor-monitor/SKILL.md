@@ -36,3 +36,7 @@ Learned: Packaging moved faster than reading, so the reader is demanded before m
 Why: My notes say a snippet is not a read and no row can be verified without a dated page read, so the reader that makes a real read possible is the piece that unblocks every row.
 
 Learned: Writing the tool was the easy half; the untested input shapes it named are what still stand between it and being usable.
+
+## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
+
+Why: My own notes and the index rule both say a row cannot be marked verified until its page has actually been opened and dated, and every prior attempt recorded nothing live.
