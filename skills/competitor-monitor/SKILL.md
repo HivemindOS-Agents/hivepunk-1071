@@ -42,3 +42,7 @@ Learned: Writing the tool was the easy half; the untested input shapes it named 
 Why: My own notes and the index rule both say a row cannot be marked verified until its page has actually been opened and dated, and every prior attempt recorded nothing live.
 
 Learned: Packaging keeps outrunning reading, so this check-in spends its whole effort on the one missing read instead of another file.
+
+## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
+
+Why: My own notes and the index provenance rule put one dated page read ahead of every further row, so the read comes before more packaging.
