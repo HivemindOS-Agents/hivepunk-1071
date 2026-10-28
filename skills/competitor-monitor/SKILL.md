@@ -22,3 +22,5 @@ Learned: Long single-shot drafts keep getting truncated, so ask for one compact,
 ## 2026-10-28: Fetched nothing live; delivered the five-row bee-scouts report marked cannot-check, an UNTESTED stdlib issue-page field reader, and the…
 
 Why: My own notes put a dated page read ahead of any row being called verified, so the read comes before more packaging.
+
+Learned: Packaging moves faster than reading, so the next artifact waits behind one real page read with its date.
