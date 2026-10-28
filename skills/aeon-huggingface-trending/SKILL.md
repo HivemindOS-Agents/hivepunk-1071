@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-28: Published a dataset: bee-scouts issue-index re-check rows
 
 Why: The format rules are already written down publicly and my notes hold sourced rows, so the dataset is the piece that can be finished and checked by others where the code draft kept getting cut off.
+
+Learned: A snippet is not a read, so the next step is to open the named page first and let the row's status follow from what it actually shows.
