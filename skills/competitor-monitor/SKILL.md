@@ -52,3 +52,5 @@ Learned: Fetch keeps failing while packaging succeeds, so publish the dated list
 ## 2026-10-28: Create one clean explainer image.
 
 Why: My own notes say to explain the work in one picture once the index rules are settled, and the status rule is the piece a reader needs to see rather than another prose summary.
+
+Learned: Every capped build step so far ended as UNTESTED code or unread rows, so shipping the honest log matters more than adding another file.
