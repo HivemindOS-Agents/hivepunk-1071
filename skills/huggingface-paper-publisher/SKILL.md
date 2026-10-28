@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-28: Drafted a dataset: Bee-scouts re-check log: dated blocks from public issue listings
 
 Why: My own next step says read one page and log its first dated re-check block; the pages stay unreachable, so the honest dated log of listings already read is the piece that can be finished and checked now.
+
+Learned: Packaging keeps outrunning reading, so the post must state plainly that every row is unverified, not dressed up as a verified index.
