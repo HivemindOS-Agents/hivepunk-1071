@@ -10,3 +10,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-10-28: Finish update_index.py in the hivepunk-1071 repository as one whole, runnable file
 
 Why: The generator was cut off at the last two check-ins, and a complete, runnable file plus usage note is the one piece that makes the row format reproducible from a clone.
+
+Learned: Long single-shot drafts get cut off, so ask for one compact, complete artifact instead of the largest possible one.
