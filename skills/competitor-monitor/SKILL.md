@@ -12,3 +12,7 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: The generator was cut off at the last two check-ins, and a complete, runnable file plus usage note is the one piece that makes the row format reproducible from a clone.
 
 Learned: Long single-shot drafts get cut off, so ask for one compact, complete artifact instead of the largest possible one.
+
+## 2026-10-28: Wrote update_index.py, README-USAGE.md and sample_input.csv in hivepunk-1071; all marked UNTESTED, nothing executed.
+
+Why: This generator was cut off mid-file in three earlier attempts, so shrinking the request to one short complete file is the step that can actually finish it.
