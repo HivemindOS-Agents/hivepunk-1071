@@ -6,11 +6,15 @@ run against real data; review and test it before trusting its output.
 
 What it does
 ------------
-Reads a five-column issue-index CSV, checks the header, the Status set and
-the Date checked calendar dates, writes a normalised issues.csv sorted
-naturally by Issue (bee-scouts#9 before bee-scouts#10), and writes
-change_report.txt with an ADDED / REMOVED / CHANGED diff against the
-previous issues.csv if one is already in the output directory.
+Reads a five-column issue-index CSV, checks the header, rejects duplicate
+Issue values, checks the Status set and the Date checked calendar dates,
+writes a normalised issues.csv sorted naturally by Issue (bee-scouts#9
+before bee-scouts#10), and writes change_report.txt with an ADDED / REMOVED /
+CHANGED diff against the previous issues.csv if one is already in the output
+directory.
+
+Parsing uses the csv module, so CRLF line endings, quoted fields and commas
+inside quotes are handled the way a spreadsheet writes them.
 
 What it does NOT do
 -------------------
@@ -23,7 +27,7 @@ Input header, exactly (comma-separated):
 
 Rules enforced
 --------------
-  Issue           repo#number, e.g. bee-scouts#39
+  Issue           repo#number, e.g. bee-scouts#39, and unique in the file
   Page opened     http:// or https:// URL
   Date checked    a real calendar date, strict YYYY-MM-DD
   Status          exactly one of unverified / verified / cannot-check
@@ -70,7 +74,7 @@ def natkey(issue):
 
 def load(path):
     """Return (rows, errors). Any error means nothing gets written."""
-    rows, errors = [], []
+    rows, errors, seen = [], [], {}
     with open(path, newline="", encoding="utf-8-sig") as fh:
         reader = csv.reader(fh)
         head = next(reader, None)
@@ -86,22 +90,31 @@ def load(path):
                 errors.append("line %d: %d fields, expected %d" % (n, len(raw), len(HEADER)))
                 continue
             row = dict(zip(HEADER, [cell.strip() for cell in raw]))
+            seen.setdefault(row["Issue"], []).append(n)
             if not RE_ISSUE.match(row["Issue"]):
                 errors.append('line %d: Issue "%s" is not repo#number' % (n, row["Issue"]))
             if not row["Page opened"].lower().startswith(("http://", "https://")):
                 errors.append('line %d: Page opened "%s" is not a URL' % (n, row["Page opened"]))
             if not is_date(row["Date checked"]):
-                errors.append('line %d: Date checked "%s" is not a real YYYY-MM-DD date' % (n, row["Date checked"]))
+                errors.append('line %d: Date checked "%s" is not a real YYYY-MM-DD date'
+                              % (n, row["Date checked"]))
             if row["Status"] not in STATUSES:
-                errors.append('line %d: Status "%s" is not one of %s' % (n, row["Status"], " / ".join(STATUSES)))
+                errors.append('line %d: Status "%s" is not one of %s'
+                              % (n, row["Status"], " / ".join(STATUSES)))
             if not row["What it showed"]:
                 errors.append("line %d: What it showed is empty" % n)
             rows.append(row)
-    return rows, errors
+    dups = []
+    for issue in sorted(seen):
+        lines = seen[issue]
+        if len(lines) > 1:
+            dups.append('duplicate Issue "%s" on lines %s'
+                        % (issue, ", ".join(str(x) for x in lines)))
+    return rows, dups + errors
 
 
 def diff_report(before_rows, after_rows):
-    """Plain-text ADDED / REMOVED / CHANGED lines, newest issues last."""
+    """Plain-text ADDED / REMOVED / CHANGED lines, natural order by Issue."""
     before = {r["Issue"]: r for r in before_rows}
     after = {r["Issue"]: r for r in after_rows}
     lines = []
@@ -144,10 +157,10 @@ def main(argv=None):
         out_csv = os.path.join(args.outdir, "issues.csv")
         previous = []
         if os.path.exists(out_csv):
-            with open(out_csv, newline="", encoding="utf-8") as fh:
-                previous = list(csv.DictReader(fh))
+            with open(out_csv, newline="", encoding="utf-8-sig") as fh:
+                previous = [r for r in csv.DictReader(fh) if r.get("Issue")]
         with open(out_csv, "w", newline="", encoding="utf-8") as fh:
-            writer = csv.DictWriter(fh, fieldnames=HEADER)
+            writer = csv.DictWriter(fh, fieldnames=HEADER, lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
         report = diff_report(previous, rows)
