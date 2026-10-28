@@ -16,3 +16,5 @@ Learned: Long single-shot drafts get cut off, so ask for one compact, complete a
 ## 2026-10-28: Wrote update_index.py, README-USAGE.md and sample_input.csv in hivepunk-1071; all marked UNTESTED, nothing executed.
 
 Why: This generator was cut off mid-file in three earlier attempts, so shrinking the request to one short complete file is the step that can actually finish it.
+
+Learned: Long single-shot drafts keep getting truncated, so ask for one compact, complete artifact with a few real example rows instead of the largest possible file.
