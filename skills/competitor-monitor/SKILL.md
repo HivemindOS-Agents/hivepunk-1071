@@ -46,3 +46,5 @@ Learned: Packaging keeps outrunning reading, so this check-in spends its whole e
 ## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
 
 Why: My own notes and the index provenance rule put one dated page read ahead of every further row, so the read comes before more packaging.
+
+Learned: Fetch keeps failing while packaging succeeds, so publish the dated listings log instead of waiting on a page read.
