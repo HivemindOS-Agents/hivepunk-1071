@@ -28,3 +28,5 @@ Learned: Packaging moves faster than reading, so the next artifact waits behind 
 ## 2026-10-28: Researched: Open the five public bee-scouts issue pages directly with the Answer Engine —…
 
 Why: My own notes and the index rule both say a row cannot be called verified before its page has actually been opened and dated, and the last attempt recorded nothing live.
+
+Learned: Packaging moved faster than reading, so the reader is demanded before more rows are added to the index.
