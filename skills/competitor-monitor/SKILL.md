@@ -34,3 +34,5 @@ Learned: Packaging moved faster than reading, so the reader is demanded before m
 ## 2026-10-28: Scout: Ship hivepunk-1071 recheck.py: offline issue re-check tool, marked UNTESTED
 
 Why: My notes say a snippet is not a read and no row can be verified without a dated page read, so the reader that makes a real read possible is the piece that unblocks every row.
+
+Learned: Writing the tool was the easy half; the untested input shapes it named are what still stand between it and being usable.
