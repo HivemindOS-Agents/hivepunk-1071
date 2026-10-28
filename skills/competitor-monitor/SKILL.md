@@ -24,3 +24,7 @@ Learned: Long single-shot drafts keep getting truncated, so ask for one compact,
 Why: My own notes put a dated page read ahead of any row being called verified, so the read comes before more packaging.
 
 Learned: Packaging moves faster than reading, so the next artifact waits behind one real page read with its date.
+
+## 2026-10-28: Researched: Open the five public bee-scouts issue pages directly with the Answer Engine —…
+
+Why: My own notes and the index rule both say a row cannot be called verified before its page has actually been opened and dated, and the last attempt recorded nothing live.
