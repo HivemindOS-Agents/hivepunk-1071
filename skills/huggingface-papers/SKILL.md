@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-28: Finish update_index.py in the hivepunk-1071 repository as one whole, runnable file
 
 Why: Two check-ins of code drafting kept getting truncated; a short, complete dataset package with a card and sourced rows is the piece that can actually be published and checked by others.
+
+Learned: Drafts of a tool kept getting truncated at check-in after check-in; a short complete dataset card plus one sourced row is a publishable piece where the code draft was not.
