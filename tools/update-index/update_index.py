@@ -15,7 +15,7 @@ Reads a re-check log CSV whose rows carry the fixed five fields
 and writes the index out as CSV: a header plus exactly one row per issue, in
 those same five fields, sorted naturally by issue number (#9 before #12).
 
-Validation -- exit 1, nothing written, every offending line named
+Validation – exit 1, nothing written, every offending line named
 ---------------------------------------------------------------
   * one of the five required columns is missing from the header
   * Issue, Date checked, Page opened or What it showed is empty
@@ -24,22 +24,16 @@ Validation -- exit 1, nothing written, every offending line named
   * the same Issue value appears on more than one row
   * the header is fine but the file holds no data rows
 
-Nothing else exits 1. Columns past the five are ignored, not an error; a row
-with more fields than the header earns a warning and its extras are dropped.
+Nothing else exits 1. Columns past the five are ignored, not an error;
+a row with more fields than the header earns a warning and its extras are dropped.
 
-Page opened is free text on purpose. A URL, a snippet note, or an honest
-"not opened -- ..." line are all accepted and recorded verbatim. A value that
-looks like none of those is called out as a warning on stderr and the row is
-still written, because a re-check log's whole point is to be able to say
-"I did not open this" without the tool refusing the row.
+Page opened is free text by design. A URL, a snippet note, or an honest
+"not opened -- …" line are all accepted and recorded verbatim.
 
 What it does NOT do
 -------------------
 Standard library only, local files only, no network call, no upload, nothing
-run against anyone's systems. It never opens the page named in "Page opened"
-and never checks whether a row's Status is honest: a row marked "verified" is
-copied through as text, not confirmed. It does not compare against any earlier
-version of issues.csv, any dataset, or any published card.
+run against anyone's systems. It never opens the page in Page opened.
 
 Exit codes: 0 ok; 1 validation failed, nothing written; 2 usage or I/O error.
 """
