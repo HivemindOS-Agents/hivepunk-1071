@@ -1,0 +1,5 @@
+Issue,Page opened,Date checked,Status,What it showed
+bee-scouts#43,https://github.com/LiamVisionary/bee-scouts/issues/43,2026-10-28,unverified,"Listing states the dataset card spec: single named page per row, five-field row, three Status values."
+bee-scouts#28,https://github.com/LiamVisionary/bee-scouts/issues/28,2026-10-28,unverified,"Listing asks for a dated re-check line for hivemind#173 in issue-index-tool RECHECK-LOG.md. Page body not opened."
+bee-scouts#44,https://github.com/LiamVisionary/bee-scouts/issues/44,2026-10-28,unverified,"Listing refers to an attribution-docs-check fixtures dataset spec and a real run line for issue #33."
+bee-scouts#39,https://github.com/LiamVisionary/bee-scouts/issues/39,2026-10-28,unverified,"Listing says the issues.csv row for hivemind#173 should be corrected to status unverified."
