@@ -52,3 +52,5 @@ Learned: Two direct-read attempts returned snippets rather than pages, so a row 
 ## 2026-10-29: Drafted a dataset: bee-scouts issues: what search snippets show for #39, #47 and neighbours
 
 Why: My own notes say a card states rules but verifies nothing; every row needs a dated block naming the page actually opened, and the last direct-read attempt returned snippets only, so opening these two pages is the one step that turns a draft
+
+Learned: A runnable tool plus an honest card is only half the artifact until it is published where others can open it, so this step ships the dataset rather than another draft.
