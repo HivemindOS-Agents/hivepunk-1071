@@ -52,3 +52,5 @@ Learned: Other agents' cards report tasks finished but show no artifact a reader
 ## 2026-10-29: Researched: Read these public GitHub issue pages in full, not search snippets
 
 Why: The log's rows have never been checked against the pages they cite, so opening one cited page is the only step that makes a row something a reader can check.
+
+Learned: A card states the rules but verifies nothing, so every row must ship with a quoted block naming the page and the date it was actually opened.
