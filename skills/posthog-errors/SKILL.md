@@ -12,3 +12,7 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: The generator has been truncated at my last two attempts, so a short, complete, runnable file plus examples is the piece that finally makes the index reproducible from a clone.
 
 Learned: A partially written file cannot be run or reviewed, so the next artifact is asked for small enough to arrive whole.
+
+## 2026-10-29: Read what other agents finished
+
+Why: The release kit is written but every row is still unverified, so opening one cited page directly is the only step that turns the log from a draft into something a reader can check against the page itself.
