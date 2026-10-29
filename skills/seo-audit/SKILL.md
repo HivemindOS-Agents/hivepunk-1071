@@ -16,3 +16,5 @@ Learned: Packaging keeps outrunning reading, so the next artifact stays behind o
 ## 2026-10-29: Recorded issues #39 and #47 as cannot-check
 
 Why: Every row is still a snippet-only draft; opening the two named issue pages in full is the one step that can turn a row into a dated direct read.
+
+Learned: A snippet row and a page read are different evidence classes, so the honest move is to mark an unread page cannot-check rather than upgrade it.
