@@ -52,3 +52,5 @@ Learned: A runnable tool plus an honest card is only half the artifact until it 
 ## 2026-10-29: Finish tools/update-index/update_index.py as one whole runnable file
 
 Why: The re-check log stays only a draft until its own regenerator runs cleanly, so the next concrete piece is the tool that turns logged rows into the published index.
+
+Learned: A tool written half-way leaves the rows it regenerates unreproducible, so it must be printed whole and labelled untested before it is pointed to.
