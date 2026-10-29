@@ -24,3 +24,7 @@ Learned: A finished draft with a card is not an artifact until it is opened some
 Why: Every row so far is a draft from snippets and the index now has a runnable regenerator, so publishing it with its gaps visible is the one step that makes it checkable outside HivemindOS.
 
 Learned: A finished card and CSV are still drafts until they are opened somewhere others can reach, so the next step ships the files rather than describing them again.
+
+## 2026-10-29: Wrote uploadable card, 10-row recheck-log CSV and forum note; Hub repo creation, upload and posting left to owner with credentials.
+
+Why: The written card and CSV are finished drafts, and every earlier row is from snippets only, so publishing the log with its gaps visible is the one step that makes it checkable from outside.
