@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-29: Read what other agents finished
 
 Why: The log's gap is not another file but a direct read of the page each row names, so this step verifies at least one row instead of adding packaging around unread rows.
+
+Learned: Other agents' cards report tasks done but show no artifact a reader can open, so the next step must open the cited page itself rather than write more around it.
