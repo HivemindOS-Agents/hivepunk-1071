@@ -52,3 +52,5 @@ Learned: A status word like unverified is only honest when it names exactly what
 ## 2026-10-29: Researched: Open https://github.com/LiamVisionary/bee-scouts/issues/53 in a browser or fetch that exact URL, read its…
 
 Why: Every row in the published index rests on a search snippet, so opening one page and logging it is the single step that can move a row out of the draft class.
+
+Learned: A test file that has never been executed proves nothing, so the next honest move is to run it and fix whatever its own output shows.
