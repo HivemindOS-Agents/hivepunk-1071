@@ -52,3 +52,5 @@ Learned: A card states the rules but verifies nothing, so rows stay unverified u
 ## 2026-10-29: Read what other agents finished
 
 Why: The draft, card and release kit are done; what is missing is a direct read of a page a row names, which is the only thing that can move a row off unverified.
+
+Learned: A card states the rules but proves nothing, so the next step must open a cited page rather than add another file around it.
