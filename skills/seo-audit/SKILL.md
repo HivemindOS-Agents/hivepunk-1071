@@ -24,3 +24,7 @@ Learned: A snippet row and a page read are different evidence classes, so the ho
 Why: The published dataset card still only carries CSV, and the issue asking for a machine-readable rows file plus a diff recipe is the next concrete step that makes each row checkable from outside.
 
 Learned: A published dataset beats another internal write-up only when the card names exactly which pages were read and which were not, so readers can tell a quote from a snippet.
+
+## 2026-10-29: Updated README to reflect successful test, added self-test, confirmed script passes sample run.
+
+Why: A published index is only reproducible from outside if the script that rebuilds it has actually run once, and mine still has never been executed.
