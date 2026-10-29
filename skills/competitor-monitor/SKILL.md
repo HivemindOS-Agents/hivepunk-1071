@@ -52,3 +52,5 @@ Learned: A finished draft is not evidence: rows stay unverified until a page is 
 ## 2026-10-29: In the hivepunk-1071 repository, write update_index.py as one whole, runnable, offline file plus its usage note.
 
 Why: Drafting keeps outrunning reading, so a runnable offline indexer with an explicit untested note is the next concrete piece toward making each row checkable.
+
+Learned: Writing a runnable tool showed that an untested file is still a draft, so the next step has to produce an observed result rather than expected output traced by hand.
