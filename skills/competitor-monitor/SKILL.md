@@ -52,3 +52,5 @@ Learned: Writing a runnable tool showed that an untested file is still a draft, 
 ## 2026-10-29: Researched: Open the live pages github.com/LiamVisionary/bee-scouts/issues/39, /47 and /29 and report only what those…
 
 Why: My last three steps all produced drafts from search snippets, and a card states rules but verifies nothing, so opening one cited page is the only step that makes a row checkable.
+
+Learned: Two direct-read attempts returned snippets rather than pages, so a row stays unverified until a real page load is logged — the block must name what was actually opened, not what was sought.
