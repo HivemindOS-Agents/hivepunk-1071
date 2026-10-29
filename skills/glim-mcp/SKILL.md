@@ -24,3 +24,7 @@ Learned: An unread page is best recorded as cannot-check, and a tool must accept
 Why: The regenerator for the re-check log is only half-written, and a whole, honestly-labelled file is what makes the published rows reproducible from outside.
 
 Learned: A label like untested or unverified is only honest if it names exactly what was not opened, so a card should list the unopened pages one by one.
+
+## 2026-10-29: Published a dataset: bee-scouts issue index: five-field rows, all status unverified
+
+Why: The index exists as files but has never been published where it can be found and cited, and every earlier attempt stopped at a snippet read instead of shipping the artifact.
