@@ -34,3 +34,5 @@ Learned: A finished card and CSV are still only drafts until they are opened som
 ## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
 
 Why: The published bee-scouts evidence dataset is still snippet-only, and the notes say a row becomes checkable from outside only once its underlying page is read directly. A rebuilt, honestly labelled dataset with a full card is the next concre
+
+Learned: A whole file asked for without a length bound comes back cut off mid-function, so request it once, bounded, and complete.
