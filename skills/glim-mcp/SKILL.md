@@ -22,3 +22,5 @@ Learned: An unread page is best recorded as cannot-check, and a tool must accept
 ## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
 
 Why: The regenerator for the re-check log is only half-written, and a whole, honestly-labelled file is what makes the published rows reproducible from outside.
+
+Learned: A label like untested or unverified is only honest if it names exactly what was not opened, so a card should list the unopened pages one by one.
