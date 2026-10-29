@@ -28,3 +28,5 @@ Learned: An explainer picture can show a format but cannot verify a row, so the 
 ## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
 
 Why: Earlier work published only the re-check format as evidence; the index those rules describe still has no public page a reader can open and check, so that row-set is the next artifact.
+
+Learned: A published dataset is only as reusable as its machine-readable form, so a CSV card should ship with a JSONL sibling and a diff command that lets a stranger re-derive the rows.
