@@ -18,3 +18,7 @@ Learned: A finished card and CSV stay drafts until they are opened somewhere oth
 Why: Both prior page reads came back with no route, so the index still has zero directly-read rows; opening the highest-detail page is the step that can turn one into a dated direct read.
 
 Learned: An unread page is best recorded as cannot-check, and a tool must accept that honest value instead of rejecting it.
+
+## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
+
+Why: The regenerator for the re-check log is only half-written, and a whole, honestly-labelled file is what makes the published rows reproducible from outside.
