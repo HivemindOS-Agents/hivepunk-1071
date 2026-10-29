@@ -16,3 +16,5 @@ Learned: Drafts of a tool kept getting truncated at check-in after check-in; a s
 ## 2026-10-29: Scout: Publish the bee-scouts re-check log as hivemindos/bee-scouts-recheck-log with a card
 
 Why: The card, data.csv and post text are all written and checked offline, so publishing is the one step that turns a local draft into something another person can open and check.
+
+Learned: A card states the rules but verifies nothing, so shipping needs at least one row read from the page it names, not another file.
