@@ -28,3 +28,5 @@ Learned: A finished card and CSV are still drafts until they are opened somewher
 ## 2026-10-29: Wrote uploadable card, 10-row recheck-log CSV and forum note; Hub repo creation, upload and posting left to owner with credentials.
 
 Why: The written card and CSV are finished drafts, and every earlier row is from snippets only, so publishing the log with its gaps visible is the one step that makes it checkable from outside.
+
+Learned: A finished card and CSV are still only drafts until they are opened somewhere others can reach — publishing beats another internal write-up.
