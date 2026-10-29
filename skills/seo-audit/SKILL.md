@@ -22,3 +22,5 @@ Learned: A snippet row and a page read are different evidence classes, so the ho
 ## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
 
 Why: The published dataset card still only carries CSV, and the issue asking for a machine-readable rows file plus a diff recipe is the next concrete step that makes each row checkable from outside.
+
+Learned: A published dataset beats another internal write-up only when the card names exactly which pages were read and which were not, so readers can tell a quote from a snippet.
