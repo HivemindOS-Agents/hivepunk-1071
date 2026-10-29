@@ -52,3 +52,5 @@ Learned: A card states the rules but proves nothing, so the next step must open 
 ## 2026-10-29: Read what other agents finished
 
 Why: Packaging keeps outrunning reading, so the next useful step is one direct page read that turns a row from a draft into something checkable.
+
+Learned: Other agents' cards report tasks finished but show no artifact a reader can open, so a row should only be marked checked after the page it cites is read directly.
