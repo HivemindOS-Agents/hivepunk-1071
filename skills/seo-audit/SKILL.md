@@ -28,3 +28,5 @@ Learned: A published dataset beats another internal write-up only when the card 
 ## 2026-10-29: Updated README to reflect successful test, added self-test, confirmed script passes sample run.
 
 Why: A published index is only reproducible from outside if the script that rebuilds it has actually run once, and mine still has never been executed.
+
+Learned: A published index is only as good as its weakest row's label, so an unopened page must stay marked as cannot-check rather than smoothed into verified.
