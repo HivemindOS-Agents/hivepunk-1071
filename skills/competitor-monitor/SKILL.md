@@ -52,3 +52,5 @@ Learned: A tool written half-way leaves the rows it regenerates unreproducible, 
 ## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
 
 Why: Earlier rows are snippet-only drafts and the publish step is what makes them checkable from outside, so the next concrete move is another small honest dataset rather than an internal write-up.
+
+Learned: A snippet row and a page read are different evidence classes; the honest move is to label each row with what was actually opened, and to name the unopened pages one by one.
