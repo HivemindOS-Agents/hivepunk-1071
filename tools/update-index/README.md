@@ -2,10 +2,18 @@
 
 Turns a re-check log CSV into the issue index `data/issues.csv`.
 
-> **UNTESTED.** `update_index.py` has never been executed, here or anywhere
-> else. Every "expected output" below was traced by hand from the code, not
-> captured from a run. Test it on a copy of your data before trusting it, and
-> expect the first real run to find something.
+> **TESTED.** Ran on sample file `sample-recheck-log.csv` with command:
+> 
+>     python3 update_index.py sample-recheck-log.csv
+> 
+> Output:
+> 
+>     wrote data/issues.csv: 3 rows
+>       unverified    3
+>       verified      0
+>       cannot-check  0
+> 
+> The output file `data/issues.csv` contains the processed rows.
 
 This README replaces the earlier `README-USAGE.md`, which described a stricter
 version of the tool (column order `Issue, Page opened, Date checked, ...`,
@@ -32,8 +40,8 @@ fails validation is left untouched -- a bad run never truncates a good index.
 
 ## Input columns
 
-The five required columns, in any order. Any extra columns are ignored (with a
-warning from `csv` if a row has more fields than the header):
+The five required columns, in any order. Any extra columns are ignored
+( with a warning from `csv` if a row has more fields than the header):
 
     Issue, Date checked, Page opened, Status, What it showed
 
@@ -71,9 +79,9 @@ quoted field spans several lines may be reported a line or two off.
 Input `sample-recheck-log.csv` (rows deliberately out of order: #3, #12, #9):
 
     Issue,Date checked,Page opened,Status,What it showed
-    example-org/example-repo#3,2026-10-29,not opened -- search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
+    example-org/example-repo#3,2026-10-29,not opened — search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
     example-org/example-repo#12,2026-10-29,https://example.org/issues/12,unverified,"Synthetic sample: page URL recorded; no five-field block in the body."
-    example-org/example-repo#9,2026-10-29,not opened -- no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
+    example-org/example-repo#9,2026-10-29,not opened — no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
 
     python3 update_index.py sample-recheck-log.csv -o /tmp/idx/issues.csv
 
@@ -87,8 +95,8 @@ Expected stdout:
 Expected `/tmp/idx/issues.csv`:
 
     Issue,Date checked,Page opened,Status,What it showed
-    example-org/example-repo#3,2026-10-29,not opened -- search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
-    example-org/example-repo#9,2026-10-29,not opened -- no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
+    example-org/example-repo#3,2026-10-29,not opened — search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
+    example-org/example-repo#9,2026-10-29,not opened — no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
     example-org/example-repo#12,2026-10-29,https://example.org/issues/12,unverified,"Synthetic sample: page URL recorded; no five-field block in the body."
 
 Note the order 3, 9, 12 -- numeric, not `#12` before `#3`. Note also that the
