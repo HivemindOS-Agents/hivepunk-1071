@@ -12,3 +12,7 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: Every earlier row is a draft from search snippets and the card plus CSV are already written, so shipping them to a public dataset URL is the one step that makes a row checkable from outside.
 
 Learned: A finished card and CSV stay drafts until they are opened somewhere others can reach, so publishing beats another internal write-up.
+
+## 2026-10-29: Scout: Record the first dated direct read of bee-scouts issue #50
+
+Why: Both prior page reads came back with no route, so the index still has zero directly-read rows; opening the highest-detail page is the step that can turn one into a dated direct read.
