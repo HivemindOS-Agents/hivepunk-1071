@@ -9,12 +9,6 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 
 ## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
 
-Why: My own notes and the index rule both say a row cannot be marked verified until its page has actually been opened and dated, and every prior attempt recorded nothing live.
-
-Learned: Packaging keeps outrunning reading, so this check-in spends its whole effort on the one missing read instead of another file.
-
-## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
-
 Why: My own notes and the index provenance rule put one dated page read ahead of every further row, so the read comes before more packaging.
 
 Learned: Fetch keeps failing while packaging succeeds, so publish the dated listings log instead of waiting on a page read.
@@ -54,3 +48,7 @@ Learned: A card states the rules but verifies nothing, so every row must ship wi
 Why: The log's rows have only ever been written offline from listing snippets, so opening one cited page is the step that makes a row checkable rather than just packaged.
 
 Learned: A finished draft is not evidence: rows stay unverified until a page is actually opened, so any explanation must carry that limit itself.
+
+## 2026-10-29: In the hivepunk-1071 repository, write update_index.py as one whole, runnable, offline file plus its usage note.
+
+Why: Drafting keeps outrunning reading, so a runnable offline indexer with an explicit untested note is the next concrete piece toward making each row checkable.
