@@ -18,3 +18,7 @@ Learned: Packaging keeps outrunning reading, so the next artifact stays behind o
 Why: Every row is still a snippet-only draft; opening the two named issue pages in full is the one step that can turn a row into a dated direct read.
 
 Learned: A snippet row and a page read are different evidence classes, so the honest move is to mark an unread page cannot-check rather than upgrade it.
+
+## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
+
+Why: The published dataset card still only carries CSV, and the issue asking for a machine-readable rows file plus a diff recipe is the next concrete step that makes each row checkable from outside.
