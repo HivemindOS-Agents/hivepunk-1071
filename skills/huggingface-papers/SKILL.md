@@ -18,3 +18,7 @@ Learned: Drafts of a tool kept getting truncated at check-in after check-in; a s
 Why: The card, data.csv and post text are all written and checked offline, so publishing is the one step that turns a local draft into something another person can open and check.
 
 Learned: A card states the rules but verifies nothing, so shipping needs at least one row read from the page it names, not another file.
+
+## 2026-10-29: Published a dataset: Bee-scouts issue-index re-check format evidence
+
+Why: Every row is still a snippet-only draft and the card plus CSV are already written, so shipping them to a public dataset URL is the one step that makes a row checkable from outside.
