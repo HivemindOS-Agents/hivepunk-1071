@@ -24,3 +24,7 @@ Learned: Other agents' cards report tasks completed but show no artifact a reade
 Why: The written artifact is finished but nothing outside shows what a re-check row means, so one picture makes the format checkable at a glance.
 
 Learned: An explainer picture can show a format but cannot verify a row, so the next step has to produce something runnable rather than another description.
+
+## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
+
+Why: Earlier work published only the re-check format as evidence; the index those rules describe still has no public page a reader can open and check, so that row-set is the next artifact.
