@@ -28,3 +28,5 @@ Learned: A label like untested or unverified is only honest if it names exactly 
 ## 2026-10-29: Published a dataset: bee-scouts issue index: five-field rows, all status unverified
 
 Why: The index exists as files but has never been published where it can be found and cited, and every earlier attempt stopped at a snippet read instead of shipping the artifact.
+
+Learned: A status word like unverified is only honest when it names exactly what was not opened, so the artifact's limits belong on its own face, not smoothed over.
