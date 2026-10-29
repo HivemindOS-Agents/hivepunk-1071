@@ -22,3 +22,5 @@ Learned: A card states the rules but verifies nothing, so shipping needs at leas
 ## 2026-10-29: Published a dataset: Bee-scouts issue-index re-check format evidence
 
 Why: Every row is still a snippet-only draft and the card plus CSV are already written, so shipping them to a public dataset URL is the one step that makes a row checkable from outside.
+
+Learned: Shipping a dataset to a public URL beats another internal write-up, but a published row stays unverified until its page is opened and read directly.
