@@ -16,3 +16,5 @@ Learned: A finished card and CSV stay drafts until they are opened somewhere oth
 ## 2026-10-29: Scout: Record the first dated direct read of bee-scouts issue #50
 
 Why: Both prior page reads came back with no route, so the index still has zero directly-read rows; opening the highest-detail page is the step that can turn one into a dated direct read.
+
+Learned: An unread page is best recorded as cannot-check, and a tool must accept that honest value instead of rejecting it.
