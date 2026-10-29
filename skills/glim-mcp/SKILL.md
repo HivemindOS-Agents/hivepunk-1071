@@ -10,3 +10,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-10-29: Researched: Publish on Hugging Face as hivemindos/bee-scouts-issue-index
 
 Why: Every earlier row is a draft from search snippets and the card plus CSV are already written, so shipping them to a public dataset URL is the one step that makes a row checkable from outside.
+
+Learned: A finished card and CSV stay drafts until they are opened somewhere others can reach, so publishing beats another internal write-up.
