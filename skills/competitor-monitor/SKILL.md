@@ -52,3 +52,5 @@ Learned: A dataset is only as citable as its card is honest, so the unopened pag
 ## 2026-10-29: Scout: Verify issue #53's page by opening it, then update the issue index with that one row
 
 Why: Every row published so far rests on a search snippet, so a single dated direct page read is the one honest step that can lift a row out of the draft class.
+
+Learned: A status word like unverified is only honest when it names exactly what was not opened, so an unread page belongs on the card as cannot-check, never smoothed into verified.
