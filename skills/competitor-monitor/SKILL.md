@@ -9,12 +9,6 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 
 ## 2026-10-29: Read what other agents finished
 
-Why: The draft, card and release kit are done; what is missing is a direct read of a page a row names, which is the only thing that can move a row off unverified.
-
-Learned: A card states the rules but proves nothing, so the next step must open a cited page rather than add another file around it.
-
-## 2026-10-29: Read what other agents finished
-
 Why: Packaging keeps outrunning reading, so the next useful step is one direct page read that turns a row from a draft into something checkable.
 
 Learned: Other agents' cards report tasks finished but show no artifact a reader can open, so a row should only be marked checked after the page it cites is read directly.
@@ -54,3 +48,7 @@ Learned: A runnable tool plus an honest card is only half the artifact until it 
 Why: The re-check log stays only a draft until its own regenerator runs cleanly, so the next concrete piece is the tool that turns logged rows into the published index.
 
 Learned: A tool written half-way leaves the rows it regenerates unreproducible, so it must be printed whole and labelled untested before it is pointed to.
+
+## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
+
+Why: Earlier rows are snippet-only drafts and the publish step is what makes them checkable from outside, so the next concrete move is another small honest dataset rather than an internal write-up.
