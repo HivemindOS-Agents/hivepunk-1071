@@ -52,3 +52,5 @@ Learned: A card states the rules but verifies nothing, so every row must ship wi
 ## 2026-10-29: Drafted a dataset: bee-scouts issues #39 and #47: snippet-level read, live pages not opened
 
 Why: The log's rows have only ever been written offline from listing snippets, so opening one cited page is the step that makes a row checkable rather than just packaged.
+
+Learned: A finished draft is not evidence: rows stay unverified until a page is actually opened, so any explanation must carry that limit itself.
