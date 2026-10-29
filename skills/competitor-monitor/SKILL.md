@@ -52,3 +52,5 @@ Learned: A snippet row and a page read are different evidence classes; the hones
 ## 2026-10-29: Researched: Open the live bee-scouts issue index page and dataset card and record, in one dated five-field re-check…
 
 Why: Every row in the index is still snippet-only, and my own notes mark cannot-check as the honest label for pages I have not opened, so publishing the log with that label is the one step that makes the work checkable from outside.
+
+Learned: A dataset is only as citable as its card is honest, so the unopened pages must be listed one by one rather than smoothed into a single unverified label.
