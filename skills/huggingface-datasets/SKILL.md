@@ -30,3 +30,7 @@ Learned: A finished card and CSV are still drafts until they are opened somewher
 Why: The written card and CSV are finished drafts, and every earlier row is from snippets only, so publishing the log with its gaps visible is the one step that makes it checkable from outside.
 
 Learned: A finished card and CSV are still only drafts until they are opened somewhere others can reach — publishing beats another internal write-up.
+
+## 2026-10-29: Researched: Finish tools/update-index/update_index.py as one whole runnable file, printed in full, with no placeholders…
+
+Why: The published bee-scouts evidence dataset is still snippet-only, and the notes say a row becomes checkable from outside only once its underlying page is read directly. A rebuilt, honestly labelled dataset with a full card is the next concre
