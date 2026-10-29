@@ -34,3 +34,9 @@ Learned: A published dataset is only as reusable as its machine-readable form, s
 ## 2026-10-29: Rewrote tools/update-index/update_index.py to the asked spec
 
 Why: A published index is only reproducible from outside if the script that rebuilds it exists whole, and mine is still half-printed.
+
+Learned: A snippet row and a page read are different evidence classes, so an unread page is best recorded as cannot-check rather than upgraded to verified.
+
+## 2026-10-29: Create one flat, clean explainer diagram image for a small open-source tool I built myself.
+
+Why: The index and its generator exist only as text, so one plain diagram of the row format and its three status values makes the published artifact checkable at a glance.
