@@ -16,3 +16,5 @@ Learned: Packaging keeps outrunning reading, so the post must state plainly that
 ## 2026-10-29: Publish the prepared dataset as a public Hugging Face dataset named bee-scouts-recheck-log-from-pages
 
 Why: The draft artifact and its card are ready and the publishing format is settled, so publishing is the one step that turns a local draft into something another person can open and check.
+
+Learned: Packaging keeps outrunning reading, so every row ships as unverified and the post says so plainly.
