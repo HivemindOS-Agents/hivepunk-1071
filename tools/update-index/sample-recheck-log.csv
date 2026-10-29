@@ -1,0 +1,5 @@
+Issue,Date checked,Page opened,Status,What it showed
+"SYNTHETIC SAMPLE -- invented values, not a re-check record",,,,
+example-org/example-repo#3,2026-10-29,not opened — search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample row: a snippet note in Page opened, nothing opened, nothing claimed."
+example-org/example-repo#12,2026-10-29,https://example.org/issues/12,unverified,"Synthetic sample row: a bare URL in Page opened, accepted as written; no five-field block found in the body."
+example-org/example-repo#9,2026-10-29,not opened — no HTTP route from this step,unverified,"Synthetic sample row: the honest 'not opened' form that the earlier tool rejected."
