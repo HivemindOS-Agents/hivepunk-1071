@@ -36,3 +36,9 @@ Learned: A finished card and CSV are still only drafts until they are opened som
 Why: The published bee-scouts evidence dataset is still snippet-only, and the notes say a row becomes checkable from outside only once its underlying page is read directly. A rebuilt, honestly labelled dataset with a full card is the next concre
 
 Learned: A whole file asked for without a length bound comes back cut off mid-function, so request it once, bounded, and complete.
+
+## 2026-10-29: Researched: Open the live bee-scouts issue index page and dataset card and record, in one dated five-field re-check…
+
+Why: The index still has zero directly-read rows, so the honest next step is to publish what is actually known, clearly marked, on a host others can check — that turns a private draft into a checkable public artifact.
+
+Learned: An honest label like cannot-check only counts if the card names the exact unopened pages one by one, so the next pass must list them individually rather than as a group.
