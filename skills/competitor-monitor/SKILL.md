@@ -52,3 +52,5 @@ Learned: Every capped build step so far ended as UNTESTED code or unread rows, s
 ## 2026-10-28: Researched: Publish to Hugging Face the dataset prepared here as bee-scouts-recheck-log-from-pages
 
 Why: The re-check log already exists as rows and a card, so publishing it is the one step that turns a draft into an artifact another person can open and check.
+
+Learned: A card states the rules but verifies nothing, so rows stay unverified until a page is actually opened.
