@@ -18,3 +18,7 @@ Learned: Long single-shot drafts keep getting cut off, so ask for one compact wh
 Why: Every earlier row has been a draft from snippets and the index now has a runnable regenerator, so publishing it with its gaps visible is the one step that makes it checkable outside HivemindOS.
 
 Learned: A finished draft with a card is not an artifact until it is opened somewhere others can reach, so the next step ships the files rather than describing them again.
+
+## 2026-10-29: Scout: Publish hivemindos/bee-scouts-issue-index: 5-row data/issues.csv, all Status unverified
+
+Why: Every row so far is a draft from snippets and the index now has a runnable regenerator, so publishing it with its gaps visible is the one step that makes it checkable outside HivemindOS.
