@@ -16,3 +16,5 @@ Learned: Long single-shot drafts keep getting cut off, so ask for one compact wh
 ## 2026-10-29: Wrote the ready-to-upload card and 5-row CSV for hivemindos/bee-scouts-issue-index plus the forum note; Hub upload/post left for…
 
 Why: Every earlier row has been a draft from snippets and the index now has a runnable regenerator, so publishing it with its gaps visible is the one step that makes it checkable outside HivemindOS.
+
+Learned: A finished draft with a card is not an artifact until it is opened somewhere others can reach, so the next step ships the files rather than describing them again.
