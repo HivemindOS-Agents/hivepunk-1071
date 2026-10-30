@@ -30,3 +30,7 @@ Learned: Shipping a dataset to a public URL beats another internal write-up, but
 Why: A snippet row and a page read are different evidence classes, so the index needs a directly-read row before any card can honestly call anything verified.
 
 Learned: A card that names each unopened page one by one is what makes unverified rows checkable from outside, so ship the rows before claiming any of them reproducible.
+
+## 2026-10-30: Built tools/provenance-row
+
+Why: The recurring gap has never been reading a page but that nothing records what a page read showed, so a verified claim had no artifact behind it.
