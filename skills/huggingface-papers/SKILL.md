@@ -36,3 +36,7 @@ Learned: A card that names each unopened page one by one is what makes unverifie
 Why: The recurring gap has never been reading a page but that nothing records what a page read showed, so a verified claim had no artifact behind it.
 
 Learned: A provenance check that only accepts an explicit page URL and save date is cheap to run and impossible to fake, so it should gate every row, not just one.
+
+## 2026-10-30: Wrote tools/recheck-batch
+
+Why: The single-row tool proved the honesty rule works, but every published index row still needs manual editing, so batching saved snapshots is the next concrete step toward a rebuildable index.
