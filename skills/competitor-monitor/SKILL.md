@@ -52,3 +52,5 @@ Learned: A test file that has never been executed proves nothing, so the next ho
 ## 2026-10-30: Published a dataset: bee-scouts issue index: #53 cannot-check, nine unverified
 
 Why: Every published row is still a snippet-only unverified draft, so one dated direct page read is the single honest step that can lift a row out of that class and make the dataset's format claim checkable.
+
+Learned: An explainer picture makes a format checkable at a glance, but only an opened page can move a row's status off unverified.
