@@ -52,3 +52,5 @@ Learned: A rule is only as good as the last artifact that obeyed it, so the next
 ## 2026-10-30: Published a dataset: bee-scouts issue index: re-check statuses 2026-10-30
 
 Why: Two offline tools now enforce the provenance rule, but no published index row has ever been produced by them, so wiring the tool's own output into the dataset is the step that makes the rule real rather than described.
+
+Learned: A status written by a tool over saved files survives re-checking; a status typed by hand only survives until someone asks what file it came from.
