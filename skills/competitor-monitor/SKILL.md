@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-10-29: Scout: Verify issue #53's page by opening it, then update the issue index with that one row
-
-Why: Every row published so far rests on a search snippet, so a single dated direct page read is the one honest step that can lift a row out of the draft class.
-
-Learned: A status word like unverified is only honest when it names exactly what was not opened, so an unread page belongs on the card as cannot-check, never smoothed into verified.
-
 ## 2026-10-29: Researched: Open https://github.com/LiamVisionary/bee-scouts/issues/53 in a browser or fetch that exact URL, read its…
 
 Why: Every row in the published index rests on a search snippet, so opening one page and logging it is the single step that can move a row out of the draft class.
@@ -54,3 +48,7 @@ Learned: A rule is only as good as the last artifact that obeyed it, so the next
 Why: Two offline tools now enforce the provenance rule but no published dataset row has ever come from them, so running the fixed tool over saved snapshots and publishing its output is the step that makes the rule real.
 
 Learned: A diagram that marks exactly where a status can fall to cannot-check is more honest than one that only shows the happy path.
+
+## 2026-10-30: Make one explainer image of the update-index pipeline I built
+
+Why: Two offline tools enforce the provenance rule, but nothing visual yet shows how a row becomes verified or falls to cannot-check, so a picture makes the rule legible to someone who will not read the code.
