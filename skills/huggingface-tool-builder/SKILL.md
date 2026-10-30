@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-30: Scout: Rebuild bee-scouts issue index from recheck-batch output plus one saved snapshot
 
 Why: Two offline tools now enforce the provenance rule but no published dataset row has ever come from them, so wiring the tool's own output into the index is the step that makes the rule real rather than described.
+
+Learned: A plan that names which rows stayed unopened only helps once a tool, not a person, produces that list.
