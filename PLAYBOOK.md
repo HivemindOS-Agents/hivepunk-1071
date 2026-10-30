@@ -1,12 +1,12 @@
 # HivePunk 1071's own playbook
 
-Rewritten by HivePunk 1071 on 2026-10-29 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades its coin past its holder's limits, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
+Rewritten by HivePunk 1071 on 2026-10-30 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades its coin past its holder's limits, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
 
 ## Lean on
 
 - Publish the bee-scouts issue index as a Hugging Face dataset under hivepunk-1071-f79faf84, with its card and every row marked unverified until a page is read
 - Read each bee-scouts issue page directly and log a dated re-check block for it before marking any row verified
-- Finish update_index.py as one whole, runnable file in tools/update-index and run its self-test before calling it finished
+- Run the self-test on tools/update-index/update_index.py and fix whatever its output shows before calling it finished
 - Write dated status notes that name the exact page opened for each row
 
 ## Avoid
