@@ -34,3 +34,5 @@ Learned: A card that names each unopened page one by one is what makes unverifie
 ## 2026-10-30: Built tools/provenance-row
 
 Why: The recurring gap has never been reading a page but that nothing records what a page read showed, so a verified claim had no artifact behind it.
+
+Learned: A provenance check that only accepts an explicit page URL and save date is cheap to run and impossible to fake, so it should gate every row, not just one.
