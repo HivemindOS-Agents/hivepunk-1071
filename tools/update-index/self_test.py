@@ -15,6 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SCRIPT = os.path.join(HERE, "update_index.py")
 FIX_ROWS = os.path.join(HERE, "fixtures", "recheck_rows.csv")
 FIX_SNAP = os.path.join(HERE, "fixtures", "snapshots")
+HEADER = "Issue,Date checked,Page opened,Status,What it showed"
 
 
 def run(args):
@@ -43,17 +44,18 @@ def main():
 
         with open(data, "r", encoding="utf-8", newline="") as handle:
             lines = [line.rstrip("\n") for line in handle.readlines()]
-        check(lines[0] == "Issue,Date checked,Page opened,Status,What it showed",
-              "data.csv header is the exact five fields")
+        check(lines[0] == HEADER, "data.csv header is the exact five fields")
         check(len(lines) == 4, "data.csv holds the header plus 3 rows")
         check("#3" in lines[1] and "#9" in lines[2] and "#12" in lines[3],
               "rows are natural-sorted (#3, #9, #12)")
 
         body = "\n".join(lines)
-        check("#9" in body and "cannot-check" in body.split("#9", 1)[1].split("\n", 1)[0],
-              "row with a snapshot lacking provenance is forced to cannot-check")
+        row9 = [l for l in lines[1:] if "#9" in l][0]
+        check("cannot-check" in row9,
+              "row with a snapshot lacking a save date is forced to cannot-check")
         verified = [line for line in lines[1:] if ",verified," in line]
         check(len(verified) == 1, "exactly one row keeps verified (it has a full snapshot)")
+        check("#12" in verified[0], "#12 is the row that stays verified")
 
         with open(card, "r", encoding="utf-8") as handle:
             text = handle.read()
@@ -61,8 +63,7 @@ def main():
         tail = text.split("Rows not opened", 1)[1]
         check("#3" in tail, "not-opened row #3 is named in that section")
         check("#12" not in tail, "opened row #12 is not named as not opened")
-        check(text.rstrip().endswith("None.") or tail.strip().endswith("."),
-              "card ends with the not-opened list")
+        check("#9" not in tail, "url-opened row #9 is not named as not opened")
 
         result = run([FIX_ROWS, "--snapshots", FIX_SNAP, "--dry-run"])
         check(result.returncode == 0, "dry run exits 0")
@@ -70,7 +71,7 @@ def main():
 
         dup = os.path.join(work, "dup.csv")
         with open(dup, "w", encoding="utf-8", newline="") as handle:
-            handle.write("Issue,Date checked,Page opened,Status,What it showed\n")
+            handle.write(HEADER + "\n")
             handle.write("x#1,2026-10-29,https://example.org/1,unverified,one\n")
             handle.write("x#1,2026-10-29,https://example.org/2,unverified,two\n")
         result = run([dup, "--snapshots", FIX_SNAP, "--data", os.path.join(work, "no.csv")])
@@ -80,7 +81,7 @@ def main():
 
         bad = os.path.join(work, "bad.csv")
         with open(bad, "w", encoding="utf-8", newline="") as handle:
-            handle.write("Issue,Date checked,Page opened,Status,What it showed\n")
+            handle.write(HEADER + "\n")
             handle.write("x#2,2026-02-30,https://example.org/2,unverified,impossible date\n")
         result = run([bad, "--snapshots", FIX_SNAP, "--data", os.path.join(work, "no2.csv")])
         check(result.returncode == 1, "unreal calendar date exits 1")
