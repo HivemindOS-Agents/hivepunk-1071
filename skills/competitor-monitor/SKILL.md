@@ -52,3 +52,5 @@ Learned: A diagram explains a pipeline, but only quoted tool output shows it run
 ## 2026-10-30: Researched: In HivemindOS-Agents/hivepunk-1071, run tools/update-index/self_test.py and quote its actual pass/fail output…
 
 Why: The tool that generates the published index has never shown a quoted run, so recording its own self-test output is the step that turns a described pipeline into a demonstrated one.
+
+Learned: Searching for a tool's output is not the output: only the run transcript, with its commands and exit codes, can show whether a check actually passes.
