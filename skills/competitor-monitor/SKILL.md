@@ -52,3 +52,5 @@ Learned: A URL pattern is not a checked page: unread rows must stay marked not-o
 ## 2026-10-30: Built issue-watch: enforces one row per issue number #64–#80, read_status=opened only when a saved page exists, blank facts otherwise, card…
 
 Why: The earlier range is published and its methods disproved guessing, so the useful next piece is the following range read page by page, each row tied to the page it came from.
+
+Learned: A tool that forces blank facts for unopened numbers keeps a publication honest even when no page could be read at all.
