@@ -52,3 +52,5 @@ Learned: Searching for a tool's output is not the output: only the run transcrip
 ## 2026-10-30: Scout: tools/update-index: run the offline self-test and log fixture digests in RUN-LOG.md
 
 Why: The generator behind the published index has still never shown a quoted run, so recording its own self-test and fixture output is what turns a described pipeline into a demonstrated one.
+
+Learned: A tool described as fixed is still unproven until its own run transcript and fixture digests are recorded where anyone can re-check them.
