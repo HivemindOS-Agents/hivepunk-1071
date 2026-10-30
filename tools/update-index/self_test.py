@@ -1,69 +1,98 @@
 #!/usr/bin/env python3
-"""Self‑test for update_index.py.
+"""self_test.py -- offline checks for update_index.py.
 
-Runs the tool against the provided example file and checks that the
-behaviour matches the documentation.  Exits with ``0`` when all checks pass
-and ``1`` otherwise.
+Run with no arguments, no network. Exits 0 only when every check passes.
+Everything runs on the synthetic fixture pair in fixtures/.
 """
 
-import subprocess
 import os
+import shutil
+import subprocess
 import sys
+import tempfile
 
-SCRIPT = os.path.abspath("update_index.py")
-SAMPLE = os.path.abspath("../sample-recheck-log.csv")  # relative to the test file
-OUT = os.path.abspath("data/issues.csv")
+HERE = os.path.dirname(os.path.abspath(__file__))
+SCRIPT = os.path.join(HERE, "update_index.py")
+FIX_ROWS = os.path.join(HERE, "fixtures", "recheck_rows.csv")
+FIX_SNAP = os.path.join(HERE, "fixtures", "snapshots")
 
-# 1. Dry run: should validate and report counts, no file written.
-cmd = [sys.executable, SCRIPT, SAMPLE, "--dry-run"]
-res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                     text=True)
-if res.returncode != 0:
-    sys.exit(1)
-if res.stdout.strip() == "":
-    sys.exit(1)
-# Count lines that should appear in stdout
-if "wrote" in res.stdout or "wrote" in res.stderr:
-    sys.exit(1)
 
-# 2. Actual run: should write the output file with 3 rows.
-cmd = [sys.executable, SCRIPT, SAMPLE]
-res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                     text=True)
-if res.returncode != 0:
-    sys.exit(1)
-# Ensure data/issues.csv exists
-if not os.path.exists(OUT):
-    sys.exit(1)
-# Check file header and row count
-with open(OUT, "r", encoding="utf-8", newline="") as f:
-    lines = [l.rstrip() for l in f.readlines()]
-if len(lines) != 4:
-    sys.exit(1)
-# Ensure header is correct
-expected_hdr = "Issue,Date checked,Page opened,Status,What it showed"
-if lines[0] != expected_hdr:
-    sys.exit(1)
-# All rows should be referenced in expected sample order (3,9,12)
-# For brevity just check that the second line contains '#3' and third '#9', etc.
-if '#3' not in lines[1] or '#9' not in lines[2] or '#12' not in lines[3]:
-    sys.exit(1)
+def run(args):
+    return subprocess.run([sys.executable, SCRIPT] + args,
+                          stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                          text=True, cwd=HERE)
 
-# 3. Verify that duplicate issue detection works: create a temporary file
-with open("tmp_dup.csv", "w", encoding="utf-8") as f:
-    f.write("Issue,Date checked,Page opened,Status,What it showed\n")
-    f.write("#1,2026-10-29,https://example.com,unverified,foo\n")
-    f.write("#1,2026-10-29,https://example.org,unverified,bar\n")
-cmd = [sys.executable, SCRIPT, "tmp_dup.csv"]
-res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                     text=True)
-# Should fail with duplicate I.
-if res.returncode != 1:
-    sys.exit(1)
 
-# Clean up
-os.remove("tmp_dup.csv")
-if os.path.exists(OUT):
-    os.remove(OUT)
+def check(condition, label):
+    if not condition:
+        print("FAIL: " + label)
+        sys.exit(1)
+    print("ok: " + label)
 
-sys.exit(0)
+
+def main():
+    check(os.path.exists(FIX_ROWS), "fixture recheck_rows.csv exists")
+    check(os.path.isdir(FIX_SNAP), "fixture snapshots/ exists")
+    work = tempfile.mkdtemp(prefix="update-index-selftest-")
+    try:
+        data = os.path.join(work, "data.csv")
+        card = os.path.join(work, "README.md")
+
+        result = run([FIX_ROWS, "--snapshots", FIX_SNAP, "--data", data, "--card", card])
+        check(result.returncode == 0, "run on the fixture pair exits 0")
+
+        with open(data, "r", encoding="utf-8", newline="") as handle:
+            lines = [line.rstrip("\n") for line in handle.readlines()]
+        check(lines[0] == "Issue,Date checked,Page opened,Status,What it showed",
+              "data.csv header is the exact five fields")
+        check(len(lines) == 4, "data.csv holds the header plus 3 rows")
+        check("#3" in lines[1] and "#9" in lines[2] and "#12" in lines[3],
+              "rows are natural-sorted (#3, #9, #12)")
+
+        body = "\n".join(lines)
+        check("#9" in body and "cannot-check" in body.split("#9", 1)[1].split("\n", 1)[0],
+              "row with a snapshot lacking provenance is forced to cannot-check")
+        verified = [line for line in lines[1:] if ",verified," in line]
+        check(len(verified) == 1, "exactly one row keeps verified (it has a full snapshot)")
+
+        with open(card, "r", encoding="utf-8") as handle:
+            text = handle.read()
+        check("Rows not opened" in text, "card has a final Rows not opened section")
+        tail = text.split("Rows not opened", 1)[1]
+        check("#3" in tail, "not-opened row #3 is named in that section")
+        check("#12" not in tail, "opened row #12 is not named as not opened")
+        check(text.rstrip().endswith("None.") or tail.strip().endswith("."),
+              "card ends with the not-opened list")
+
+        result = run([FIX_ROWS, "--snapshots", FIX_SNAP, "--dry-run"])
+        check(result.returncode == 0, "dry run exits 0")
+        check("wrote" not in result.stdout, "dry run writes nothing")
+
+        dup = os.path.join(work, "dup.csv")
+        with open(dup, "w", encoding="utf-8", newline="") as handle:
+            handle.write("Issue,Date checked,Page opened,Status,What it showed\n")
+            handle.write("x#1,2026-10-29,https://example.org/1,unverified,one\n")
+            handle.write("x#1,2026-10-29,https://example.org/2,unverified,two\n")
+        result = run([dup, "--snapshots", FIX_SNAP, "--data", os.path.join(work, "no.csv")])
+        check(result.returncode == 1, "duplicate Issue exits 1")
+        check(not os.path.exists(os.path.join(work, "no.csv")),
+              "failed validation writes no data file")
+
+        bad = os.path.join(work, "bad.csv")
+        with open(bad, "w", encoding="utf-8", newline="") as handle:
+            handle.write("Issue,Date checked,Page opened,Status,What it showed\n")
+            handle.write("x#2,2026-02-30,https://example.org/2,unverified,impossible date\n")
+        result = run([bad, "--snapshots", FIX_SNAP, "--data", os.path.join(work, "no2.csv")])
+        check(result.returncode == 1, "unreal calendar date exits 1")
+
+        missing = run([os.path.join(work, "does-not-exist.csv")])
+        check(missing.returncode == 2, "missing input exits 2")
+
+        print("all checks passed")
+        return 0
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
