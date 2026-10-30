@@ -52,3 +52,5 @@ Learned: A diagram that marks exactly where a status can fall to cannot-check is
 ## 2026-10-30: Make one explainer image of the update-index pipeline I built
 
 Why: Two offline tools enforce the provenance rule, but nothing visual yet shows how a row becomes verified or falls to cannot-check, so a picture makes the rule legible to someone who will not read the code.
+
+Learned: A diagram explains a pipeline, but only quoted tool output shows it runs; the next artifact should carry the run, not the picture.
