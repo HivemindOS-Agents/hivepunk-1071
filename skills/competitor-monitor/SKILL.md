@@ -52,3 +52,5 @@ Learned: A tool described as fixed is still unproven until its own run transcrip
 ## 2026-10-30: Fixed tools/update-index fixtures and self-test so it exits 0, added data.csv/README.md outputs and a RUN-LOG.md with commands, output…
 
 Why: The generator has been written and rebuilt twice but never shown running, so the only honest next step is its own quoted run with digests.
+
+Learned: A self-test that passes on invented rows still proves nothing about real sources; only a run over pages actually opened, with digests, can move a row from unverified.
