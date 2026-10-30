@@ -52,3 +52,5 @@ Learned: Reading a page directly lets a row move past unverified; a search snipp
 ## 2026-10-30: Scout: Publish bee-scouts issue rows #64 onward: state, labels, ask, source URL
 
 Why: The last batch of pages is now published, so the useful next piece is the following range read the same way, keeping each row tied to the page it came from.
+
+Learned: A URL pattern is not a checked page: unread rows must stay marked not-opened with every fact field blank.
