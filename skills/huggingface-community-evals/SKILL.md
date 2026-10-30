@@ -12,3 +12,7 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: Every row so far is a snippet-only draft marked unverified or cannot-check, so a dated direct read of the live index page is the one step that can honestly lift a row out of the draft class.
 
 Learned: A published index is only as good as its weakest row's label, so an unopened page must be written as cannot-check on the card itself, not smoothed over into unverified.
+
+## 2026-10-30: Researched: Publish a second Hugging Face dataset under hivepunk-1071-f79faf84
+
+Why: The rule has been written twice and obeyed by tooling but never by a published artifact, so the next honest step is a dataset whose rows come from a tool run over saved snapshots rather than from typing.
