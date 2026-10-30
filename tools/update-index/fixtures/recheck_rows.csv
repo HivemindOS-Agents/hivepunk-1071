@@ -1,0 +1,5 @@
+Issue,Date checked,Page opened,Status,What it showed
+"SYNTHETIC FIXTURE -- invented values, not a re-check record",,,,
+example-org/example-repo#3,2026-10-29,not opened — search-result snippet only,unverified,"Fixture row: nothing was opened, so this row must land in the card's not-opened list."
+example-org/example-repo#9,2026-10-29,https://example.org/issues/9,verified,"Fixture row: claims verified, but its snapshot names no save date, so the tool must force cannot-check."
+example-org/example-repo#12,2026-10-29,https://example.org/issues/12,verified,"Fixture row: claims verified and its snapshot names both a page URL and a save date, so verified stands."
