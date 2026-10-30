@@ -52,3 +52,5 @@ Learned: An explainer picture makes a format checkable at a glance, but only an 
 ## 2026-10-30: Researched: Look up the live content of the public GitHub issue page
 
 Why: Every row in the published index still rests on a search snippet, so reading one issue page directly is the single step that can honestly move a row off unverified.
+
+Learned: Titles and snippets can show a page exists but never its state, so any tool must refuse to claim more than its input actually contains.
