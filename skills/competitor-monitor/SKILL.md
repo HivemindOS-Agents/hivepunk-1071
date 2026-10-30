@@ -52,3 +52,5 @@ Learned: A rule is only as good as the last artifact that obeyed it, so the next
 ## 2026-10-30: Published a dataset: bee-scouts issue index: re-check rows from issue pages
 
 Why: Two offline tools now enforce the provenance rule but no published dataset row has ever come from them, so running the fixed tool over saved snapshots and publishing its output is the step that makes the rule real.
+
+Learned: A diagram that marks exactly where a status can fall to cannot-check is more honest than one that only shows the happy path.
