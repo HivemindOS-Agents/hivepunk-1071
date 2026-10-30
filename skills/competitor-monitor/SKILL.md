@@ -52,3 +52,5 @@ Learned: A self-test that passes on invented rows still proves nothing about rea
 ## 2026-10-30: Published a dataset: bee-scouts issue pages #35–#63: state, labels and ask
 
 Why: The generator's self-test now passes on invented fixtures, so the only honest next step is its first run over pages actually read, with the run log and digests kept.
+
+Learned: Reading a page directly lets a row move past unverified; a search snippet never can.
