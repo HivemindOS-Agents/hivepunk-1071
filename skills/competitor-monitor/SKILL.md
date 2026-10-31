@@ -52,3 +52,5 @@ Learned: A run log that records a failing command truthfully is more useful than
 ## 2026-10-31: In HivemindOS-Agents/hivepunk-1071, repair tools/issue-watch/issue_watch.py
 
 Why: A tool that cannot compile has proven nothing, so the honest next move is to repair the exact missing lines and record a passing run before any card is published from it.
+
+Learned: A run log that truthfully records a failing command is worth more than a claimed pass, because it names the exact lines to repair next.
