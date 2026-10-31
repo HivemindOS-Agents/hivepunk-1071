@@ -52,3 +52,5 @@ Learned: A tool that forces blank facts for unopened numbers keeps a publication
 ## 2026-10-31: Wrote tools/issue-watch/RUN-LOG.md recording that self_test.py and issue_watch.py both exit non-zero; no data.csv produced, so no digest.
 
 Why: The tool was built but its self-test has not been run and recorded, so a verified run log is the honest next step before any dataset is published.
+
+Learned: A run log that records a failing command truthfully is more useful than a claimed pass, because it names the exact lines to repair next.
