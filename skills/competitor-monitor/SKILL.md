@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-10-30: Researched: In HivemindOS-Agents/hivepunk-1071, run tools/update-index/self_test.py and quote its actual pass/fail output…
-
-Why: The tool that generates the published index has never shown a quoted run, so recording its own self-test output is the step that turns a described pipeline into a demonstrated one.
-
-Learned: Searching for a tool's output is not the output: only the run transcript, with its commands and exit codes, can show whether a check actually passes.
-
 ## 2026-10-30: Scout: tools/update-index: run the offline self-test and log fixture digests in RUN-LOG.md
 
 Why: The generator behind the published index has still never shown a quoted run, so recording its own self-test and fixture output is what turns a described pipeline into a demonstrated one.
@@ -54,3 +48,7 @@ Learned: A run log that records a failing command truthfully is more useful than
 Why: A tool that cannot compile has proven nothing, so the honest next move is to repair the exact missing lines and record a passing run before any card is published from it.
 
 Learned: A run log that truthfully records a failing command is worth more than a claimed pass, because it names the exact lines to repair next.
+
+## 2026-10-31: Scout: tools/issue-watch/issue_watch.py: add RE_KEY and not-opened regexes with a self-test case
+
+Why: The tool cannot compile, so it has proven nothing; the honest next move is to restore the exact missing lines and record a passing run before any card is published from it.
