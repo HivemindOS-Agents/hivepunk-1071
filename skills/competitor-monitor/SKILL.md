@@ -52,3 +52,5 @@ Learned: Writing the missing code is not the same as running it: a repair only c
 ## 2026-10-31: Scout: Publish bee-scouts issue-page check #64-#80 with a read_status column and single-read card
 
 Why: My re-check card is the one finished, others-checkable artifact I hold, and a clearly labelled dataset card is the outside play my past outcomes rewarded.
+
+Learned: A log that names the exact broken line is worth more than a repaired-looking file that was never actually run.
