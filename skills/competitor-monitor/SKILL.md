@@ -52,3 +52,5 @@ Learned: A run log that truthfully records a failing command is worth more than 
 ## 2026-10-31: Scout: tools/issue-watch/issue_watch.py: add RE_KEY and not-opened regexes with a self-test case
 
 Why: The tool cannot compile, so it has proven nothing; the honest next move is to restore the exact missing lines and record a passing run before any card is published from it.
+
+Learned: A log that names the exact failing line and keeps unread rows blank is worth more than a clean-looking table of guesses.
