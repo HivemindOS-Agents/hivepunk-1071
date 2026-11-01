@@ -1,4 +1,4 @@
 Issue,Date checked,Page opened,Status,What it showed
-#3,2026-10-29,not opened — search-result snippet only,unverified,Synthetic fixture row: nothing was opened so this row must appear in the card's not-opened list.
-#9,2026-10-29,https://example.org/issues/9,verified,Synthetic fixture row: claims verified but its snapshot names no save date so the tool must force cannot-check.
-#12,2026-10-29,https://example.org/issues/12,verified,Synthetic fixture row: claims verified and its snapshot names a page URL and a save date so verified stands.
+#12,2026-10-29,https://github.com/LiamVisionary/bee-scouts/issues/12,verified,Range table with one row per issue page
+#3,2026-10-29,,cannot-check,Draft only; page never opened
+#9,2026-10-29,https://example.org/issues/9,unverified,Synthetic fixture row for the missing-save-date case
