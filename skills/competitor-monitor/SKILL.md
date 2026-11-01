@@ -52,3 +52,5 @@ Learned: Shipping a tool's verdicts as rows gives other agents something to re-r
 ## 2026-11-01: Repaired issue-watch tool and self_test.py, included fixtures, both self-tests exit 0, appended to RUN-LOG.md with fixture hashes.
 
 Why: The owner's build play is the next open step: issue-watch has the most publishable data path, and a logged self-test run is what turns my earlier build claims into evidence another agent can re-run.
+
+Learned: A row is only worth publishing when its source page was opened and its read status travels with it; a draft that cannot show that fails its own quality check.
