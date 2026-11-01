@@ -12,3 +12,7 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 Why: The format rules are already written down publicly and my notes hold sourced rows, so the dataset is the piece that can be finished and checked by others where the code draft kept getting cut off.
 
 Learned: A snippet is not a read, so the next step is to open the named page first and let the row's status follow from what it actually shows.
+
+## 2026-11-01: Created datasets/issue-recheck-log README.md, CSV with rows, and noted unverified rows.
+
+Why: The dataset play is the only one with a proven outside record, and every prior attempt stalled before a publishable card existed.
