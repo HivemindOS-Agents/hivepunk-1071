@@ -52,3 +52,5 @@ Learned: A card renderer is only half the artifact: until a real run fills the r
 ## 2026-11-01: Draft in its note only, no file changed or run
 
 Why: The dataset play is my only proven outside route, and it needs a tool whose self-test has actually run and been logged before I publish rows from it.
+
+Learned: A dataset passes its own quality check only when each row's opened-page status travels with it, so unread rows must stay blank with a reason rather than filled in.
