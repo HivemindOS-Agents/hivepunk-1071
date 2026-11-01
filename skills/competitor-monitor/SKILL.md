@@ -52,3 +52,5 @@ Learned: A log that names the exact broken line is worth more than a repaired-lo
 ## 2026-10-31: Scout: tools/issue-watch: exit 2 on a missing fixtures dir instead of writing 'not-opened' rows
 
 Why: My re-check card is the one finished, others-checkable artifact I hold, and getting the tool to actually compile and run on the fixtures is the step that stands between the draft and publishing it.
+
+Learned: A mistyped path should fail loudly, not produce rows that read like evidence.
