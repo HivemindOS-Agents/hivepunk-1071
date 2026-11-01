@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """self_test.py -- offline checks for issue-watch.
 
-Run with no arguments and no network. Exits 0 only when every check passes.
+Run with no arguments and no network from this folder. Exits 0 only when
+every check passes.
+
 It (1) compiles and runs issue_watch.py on the HTML fixture, (2) checks the
 CSV, and (3) builds a 3-row recheck_rows.csv in a temp dir and runs
 ../recheck-lint/publish_recheck_rows.py on it, asserting the non-opened row
-is marked and the opened rows are left in the table.
+is marked Not opened and the opened rows are left in the table.
+
+The recheck-lint path is resolved from THIS file's directory via realpath and
+passed absolute, so the subprocess cwd cannot change which file is run.
 """
 
 import csv
@@ -15,10 +20,11 @@ import subprocess
 import sys
 import tempfile
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.realpath(os.path.dirname(os.path.abspath(__file__)))
 TOOL = os.path.join(HERE, "issue_watch.py")
 FIXTURES = os.path.join(HERE, "fixtures")
-RECHECK = os.path.join(HERE, "..", "recheck-lint", "publish_recheck_rows.py")
+RECHECK = os.path.realpath(
+    os.path.join(HERE, os.pardir, "recheck-lint", "publish_recheck_rows.py"))
 
 fails = []
 
@@ -27,6 +33,12 @@ def check(ok, label):
     print(("ok: " + label) if ok else ("FAIL: " + label))
     if not ok:
         fails.append(label)
+
+
+def run(cmd, cwd):
+    print("run: " + " ".join(cmd))
+    return subprocess.run(cmd, stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE, text=True, cwd=cwd)
 
 
 def main():
@@ -42,19 +54,18 @@ def main():
     tmp = tempfile.mkdtemp(prefix="issue-watch-selftest-")
     try:
         bad_out = os.path.join(tmp, "should_not_exist.csv")
-        r = subprocess.run([sys.executable, TOOL, "--pages",
-                            os.path.join(tmp, "nope"), "--out", bad_out],
-                           stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                           text=True, cwd=tmp)
-        check(r.returncode == 2, "missing --pages exits 2 (got %d)" % r.returncode)
-        check(not os.path.exists(bad_out), "missing --pages writes nothing")
+        r = run([sys.executable, TOOL, "--pages",
+                 os.path.join(tmp, "nope"), "--out", bad_out], tmp)
+        check(r.returncode == 2,
+              "missing --pages exits 2 (got %d)" % r.returncode)
+        check(not os.path.exists(bad_out),
+              "missing --pages writes nothing")
 
         # 3. Run over the fixtures.
         out = os.path.join(tmp, "data.csv")
-        r = subprocess.run([sys.executable, TOOL, "--pages", FIXTURES,
-                            "--out", out], stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE, text=True, cwd=tmp)
-        check(r.returncode == 0, "run over fixtures exits 0 (got %d)" % r.returncode)
+        r = run([sys.executable, TOOL, "--pages", FIXTURES, "--out", out], tmp)
+        check(r.returncode == 0,
+              "run over fixtures exits 0 (got %d)" % r.returncode)
 
         rows = []
         if os.path.exists(out):
@@ -73,41 +84,51 @@ def main():
                   "64: source URL recorded")
 
         # 4. Build a 3-row recheck CSV and run recheck-lint on it.
-        rows_path = os.path.join(tmp, "recheck_rows.csv")
-        header = "Issue,Date checked,Page opened,Status,What it showed,Source URL"
-        body = [
-            "#64,2026-11-02,yes,verified,Page read; one row per issue page,"
-            "https://github.com/LiamVisionary/bee-scouts/issues/64",
-            "#65,2026-11-02,no,cannot-check,Page never opened,",
-            "#66,2026-11-02,yes,unverified,Page read; duplicate,"
-            "https://github.com/LiamVisionary/bee-scouts/issues/66",
-        ]
-        with open(rows_path, "w", encoding="utf-8", newline="") as fh:
-            fh.write(header + "\n" + "\n".join(body) + "\n")
+        if not os.path.isfile(RECHECK):
+            check(False, "recheck-lint tool found at %s" % RECHECK)
+        else:
+            rows_path = os.path.join(tmp, "recheck_rows.csv")
+            header = ("Issue,Date checked,Page opened,Status,"
+                      "What it showed,Source URL")
+            body = [
+                "#64,2026-11-02,yes,verified,Page read; one row per issue page,"
+                "https://github.com/LiamVisionary/bee-scouts/issues/64",
+                "#65,2026-11-02,no,cannot-check,Page never opened,",
+                "#66,2026-11-02,yes,unverified,Page read; duplicate,"
+                "https://github.com/LiamVisionary/bee-scouts/issues/66",
+            ]
+            with open(rows_path, "w", encoding="utf-8", newline="") as fh:
+                fh.write(header + "\n" + "\n".join(body) + "\n")
 
-        card = os.path.join(tmp, "dataset_card.md")
-        rr = subprocess.run([sys.executable, os.path.abspath(RECHECK),
-                             rows_path, "--card", card],
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                            text=True, cwd=tmp)
-        check(rr.returncode == 0,
-              "recheck-lint on 3-row CSV exits 0 (got %d)" % rr.returncode)
-        check(os.path.isfile(card), "recheck-lint wrote the card")
-        text = ""
-        if os.path.isfile(card):
-            with open(card, "r", encoding="utf-8") as fh:
-                text = fh.read()
-        check("## Not opened" in text, "card has a Not opened section")
-        tail = text.split("## Not opened", 1)[1] if "## Not opened" in text else ""
-        tail = tail.split("## Could not check", 1)[0]
-        check("#65" in tail, "non-opened row #65 is marked in Not opened")
-        check("#64" not in tail, "opened row #64 stays out of Not opened")
-        check("#66" not in tail, "opened row #66 stays out of Not opened")
-        check("#64" in text and "#66" in text,
-              "opened rows remain in the main table")
+            card = os.path.join(tmp, "dataset_card.md")
+            rr = run([sys.executable, RECHECK, rows_path, "--card", card], tmp)
+            if rr.returncode != 0:
+                print("recheck-lint stderr: " + rr.stderr.strip())
+            check(rr.returncode == 0,
+                  "recheck-lint on 3-row CSV exits 0 (got %d)"
+                  % rr.returncode)
+            check(os.path.isfile(card), "recheck-lint wrote the card")
+            text = ""
+            if os.path.isfile(card):
+                with open(card, "r", encoding="utf-8") as fh:
+                    text = fh.read()
+            check("## Not opened" in text, "card has a Not opened section")
+            tail = text.split("## Not opened", 1)[1] if "## Not opened" in text else ""
+            tail = tail.split("## Could not check", 1)[0]
+            check("#65" in tail,
+                  "non-opened row #65 is marked in Not opened")
+            check("#64" not in tail,
+                  "opened row #64 stays out of Not opened")
+            check("#66" not in tail,
+                  "opened row #66 stays out of Not opened")
+            check("#64" in text and "#66" in text,
+                  "opened rows remain in the main table")
 
+        if fails:
+            print("%d check(s) failed" % len(fails))
+            return 1
         print("all checks passed")
-        return 0 if not fails else 1
+        return 0
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
