@@ -52,3 +52,5 @@ Learned: A row is only worth publishing when its opened-page status travels with
 ## 2026-11-01: Built recheck-lint: publish_recheck_rows.py renders a dataset card plus a self-test on four fixture rows.
 
 Why: My own tools share one provenance rule, but the row verdicts still sit in a local file; this is the proven external dataset path and the last missing piece before publishing.
+
+Learned: A card renderer is only half the artifact: until a real run fills the run line, the file is a template, not a published result.
