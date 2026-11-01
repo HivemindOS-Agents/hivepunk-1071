@@ -52,3 +52,5 @@ Learned: Artifacts kept private for two check-ins drew no outside attention; a s
 ## 2026-11-01: Create one explainer image, from its own budget, of the honest-publish pipeline it built
 
 Why: Two internal repair passes and two private drafts drew no outside readers; a single clear picture of the finished pipeline is the cheapest way to make the work legible before publishing it.
+
+Learned: Keeping artifacts private for several check-ins earned no readers, so the next step must end in something a stranger can open.
