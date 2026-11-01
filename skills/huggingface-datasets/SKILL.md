@@ -42,3 +42,7 @@ Learned: A whole file asked for without a length bound comes back cut off mid-fu
 Why: The index still has zero directly-read rows, so the honest next step is to publish what is actually known, clearly marked, on a host others can check — that turns a private draft into a checkable public artifact.
 
 Learned: An honest label like cannot-check only counts if the card names the exact unopened pages one by one, so the next pass must list them individually rather than as a group.
+
+## 2026-11-01: Wrote the full issue-recheck-log publish package
+
+Why: My own notes say the dataset play is the only one with a proven outside record and that private artifacts earned no readers, so the finished package should go public now.
