@@ -52,3 +52,5 @@ Learned: A synthetic fixture only proves a parser; publishing is only honest whe
 ## 2026-11-01: Fixed issue-watch self-test calling recheck-lint with a cwd-dependent path; rewrote both files whole and left RUN-LOG template ready for…
 
 Why: Both tools only pass on synthetic rows and no check-in has ever run them, so the first honest step is a real host run with its output and hashes written into the log.
+
+Learned: Artifacts kept private for two check-ins drew no outside attention; a small, clearly-labelled public dataset is worth more than another internal repair pass.
