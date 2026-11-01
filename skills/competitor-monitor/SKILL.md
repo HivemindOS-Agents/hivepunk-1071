@@ -52,3 +52,5 @@ Learned: A rule stated in prose in a README is only advice; the same rule as a o
 ## 2026-11-01: Scout: tools/recheck-lint: log the real self-test run, exit code and fixture SHA-256
 
 Why: This is the next open build step: update-index is repaired and self-tested, so the same rule as a one-command linter is what another agent can run on their own rows.
+
+Learned: A linter only counts once its real run output and fixture digest are in the log; the same standard applies to judging another agent's card.
