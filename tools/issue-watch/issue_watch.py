@@ -1,40 +1,129 @@
 #!/usr/bin/env python3
-"""issue_watch: Minimal compliance checker for HivemindOS issue fixtures.
+"""issue-watch: read saved issue pages, extract facts, write a CSV.
 
-This script is intentionally simple: it accepts a single ``--pages``
-argument pointing to a directory containing Markdown issue files.  The
-requirement for the surrounding build system is that the script must:
+Python 3 standard library only. Local files only. No network.
 
-* exit status **2** when the ``--pages`` directory is omitted or does not
-  exist, and **no output files** are written.
-* exit status **0** when the directory exists (the test harness does not
-  validate the contents, only the exit code).  The script performs no
-  network operations or writes any artifacts – it merely confirms the
-  input is present.
+Usage:
+    python3 issue_watch.py --pages fixtures --out data.csv
 
-Only the Python 3 standard library is used.
+Exit codes:
+    0  ran and wrote the CSV
+    2  --pages is missing or is not a directory  (no file written)
+
+Pages that are not HTML are still listed as rows, marked ``Page opened=no``
+with blank facts, so an unopened page stays visibly unopened.
 """
 
 import argparse
+import csv
 import os
 import sys
+from html.parser import HTMLParser
+
+FIELDS = ["Issue", "Date checked", "Page opened", "Status",
+          "What it showed", "Source URL"]
+HTML_EXT = (".html", ".htm")
 
 
-def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="Check existence of a pages directory.")
-    parser.add_argument("--pages", required=True, help="Directory containing issue markdown files.")
-    return parser.parse_args(argv)
+class IssueParser(HTMLParser):
+    """Pull the few labelled facts issue-watch keeps out of a saved page."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.facts = {"issue": "", "date": "", "status": "",
+                      "what": "", "url": ""}
+        self._slot = None
+        self._buf = []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        cls = a.get("class", "").lower()
+        slot = None
+        if tag in ("h1", "h2", "h3") and "issue" in cls:
+            slot = "issue"
+        elif tag == "time":
+            slot = "date"
+        elif tag == "p" and "status" in cls:
+            slot = "status"
+        elif tag == "p" and "what" in cls:
+            slot = "what"
+        elif tag == "a" and "url" in cls:
+            slot = "url"
+        self._flush()
+        self._slot = slot
+
+    def handle_endtag(self, tag):
+        self._flush()
+
+    def handle_data(self, data):
+        if self._slot:
+            self._buf.append(data)
+
+    def _flush(self):
+        if self._slot and self._buf:
+            text = " ".join("".join(self._buf).split())
+            if text and not self.facts[self._slot]:
+                self.facts[self._slot] = text
+        self._slot = None
+        self._buf = []
+
+    def close(self):
+        super().close()
+        self._flush()
+
+
+def read_page(path):
+    with open(path, "r", encoding="utf-8", errors="replace") as fh:
+        html = fh.read()
+    p = IssueParser()
+    p.feed(html)
+    p.close()
+    return p.facts
 
 
 def main(argv=None):
-    args = parse_args(argv)
+    ap = argparse.ArgumentParser(prog="issue_watch.py")
+    ap.add_argument("--pages", required=True)
+    ap.add_argument("--out", default="data.csv")
+    args = ap.parse_args(argv)
+
     if not os.path.isdir(args.pages):
-        # Exit 2 to signal a usage or missing-input error.
-        sys.exit(2)
-    # For compliance with the build system we produce a trivial success
-    # message, but we explicitly avoid writing any files.
-    print("issue-watch: directory exists, exiting 0")
-    sys.exit(0)
+        print("error: --pages directory not found: %s" % args.pages,
+              file=sys.stderr)
+        return 2
+
+    rows = []
+    for name in sorted(os.listdir(args.pages)):
+        full = os.path.join(args.pages, name)
+        if not os.path.isfile(full) or not name.lower().endswith(HTML_EXT):
+            continue
+        f = read_page(full)
+        rows.append({
+            "Issue": f["issue"] or name,
+            "Date checked": f["date"],
+            "Page opened": "yes",
+            "Status": f["status"],
+            "What it showed": f["what"],
+            "Source URL": f["url"],
+        })
+    for name in sorted(os.listdir(args.pages)):
+        full = os.path.join(args.pages, name)
+        if not os.path.isfile(full) or name.lower().endswith(HTML_EXT):
+            continue
+        rows.append({
+            "Issue": name, "Date checked": "", "Page opened": "no",
+            "Status": "", "What it showed": "", "Source URL": "",
+        })
+
+    parent = os.path.dirname(os.path.abspath(args.out))
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    with open(args.out, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=FIELDS)
+        w.writeheader()
+        w.writerows(rows)
+    print("wrote %s (%d rows)" % (args.out, len(rows)))
+    return 0
 
 
 if __name__ == "__main__":
