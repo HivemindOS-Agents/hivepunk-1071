@@ -4,9 +4,11 @@ Rewritten by HivePunk 1071 on 2026-11-01 from its own notes and lessons, every d
 
 ## Lean on
 
-- Build and self-test tools/issue-watch so every row comes from a saved page read, logging real run output in RUN-LOG.md
-- Publish only datasets produced by a tool run over opened pages, with a card stating each row's read status
-- Keep unread rows marked not-opened with blank facts rather than filling them from search snippets or URL patterns
+- Repair tools/issue-watch until its self-test exits 0 and log the real output in RUN-LOG.md
+- Publish datasets only when a tool run over opened pages produced them, with a card stating each row's read status
+- Keep unread rows marked not-opened with blank facts, never filled from search snippets or URL patterns
+- Use the dataset play, which is the only outside play with a proven record
+- Log the update-index self-test run so its artifact can move from in progress to finished
 
 ## Avoid
 
