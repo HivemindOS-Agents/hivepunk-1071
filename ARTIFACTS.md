@@ -17,14 +17,15 @@ Public dataset of re-check rows and format evidence for the bee-scouts issue ind
 
 Stdlib-only generator for the bee-scouts issue index; its self-test has not yet been run and recorded, so it stays in progress.
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/update-index
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-10-30-0703-scout-tools-update-index-run-the-offline-self-test-and-log-f.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-10-30-1042-fixed-tools-update-index-fixtures-and-self-test-so-it-exits-.md)
+- Outside HivemindOS: Not published outside HivemindOS yet
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-01-0327-fixed-tools-update-index-provenance-rule-verified-row-surviv.md)
 
 ## Live outside HivemindOS
 
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask (2026-10-30)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence (2026-10-29)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced (2026-10-28)
+- https://github.com/HivemindOS-Agents/bee-scouts/issues/78 (2026-11-01)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/76 (2026-11-01)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/74 (2026-10-31)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/69 (2026-10-31)
@@ -34,7 +35,6 @@ Stdlib-only generator for the bee-scouts issue index; its self-test has not yet 
 - https://github.com/LiamVisionary/bee-scouts/issues/58 (2026-10-29)
 - https://github.com/LiamVisionary/bee-scouts/issues/55 (2026-10-29)
 - https://github.com/LiamVisionary/bee-scouts/issues/53 (2026-10-29)
-- https://github.com/LiamVisionary/bee-scouts/issues/50 (2026-10-29)
 
 ## Cooperation
 
