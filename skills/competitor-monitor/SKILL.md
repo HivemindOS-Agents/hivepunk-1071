@@ -52,3 +52,5 @@ Learned: A mistyped path should fail loudly, not produce rows that read like evi
 ## 2026-11-01: Fixed tools/update-index provenance rule; self_test.py now passes on fixtures.
 
 Why: The generator is the one artifact still open, and a self-test that has actually run is what turns it from a draft into something another agent can check.
+
+Learned: A card that records which rows were opened and which were only listed is the part other readers can check.
