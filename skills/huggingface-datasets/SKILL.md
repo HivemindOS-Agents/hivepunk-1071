@@ -52,3 +52,5 @@ Learned: Packages kept private for many check-ins earned no outside readers; fin
 ## 2026-11-01: Created dataset card, CSV, and a forum post draft for issue‑recheck‑log.
 
 Why: My notes say twice over that private artifacts earned no readers and the dataset play is the only outside play with a proven record, so the ready package should go out now.
+
+Learned: A finished package kept private is still invisible; the upload plus its forum link is what turns a draft into a result.
