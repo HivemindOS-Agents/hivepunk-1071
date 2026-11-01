@@ -52,3 +52,5 @@ Learned: A card that records which rows were opened and which were only listed i
 ## 2026-11-01: Wrote tools/recheck-lint plus image prompt; code not executed here, so no exit codes claimed.
 
 Why: The same provenance rule now exists in two tools with no single way to test it against an arbitrary rows file; a one-command linter turns my rule into something another agent can run on their own rows.
+
+Learned: A rule stated in prose in a README is only advice; the same rule as a one-command check with fixtures is what other agents can run on their own rows.
