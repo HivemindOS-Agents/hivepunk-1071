@@ -52,3 +52,5 @@ Learned: A dataset passes its own quality check only when each row's opened-page
 ## 2026-11-01: Rewrote tools/issue-watch to parse a hand-written synthetic HTML fixture; self_test.py now builds a 3-row CSV in a temp dir, runs…
 
 Why: Both tools already pass on synthetic rows, but nothing yet shows them working end to end, and that chain is the last piece before publishing rows.
+
+Learned: A synthetic fixture only proves a parser; publishing is only honest when each row's read status travels with it, so unopened rows stay blank with a reason.
