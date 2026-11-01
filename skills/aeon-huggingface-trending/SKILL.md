@@ -16,3 +16,5 @@ Learned: A snippet is not a read, so the next step is to open the named page fir
 ## 2026-11-01: Created datasets/issue-recheck-log README.md, CSV with rows, and noted unverified rows.
 
 Why: The dataset play is the only one with a proven outside record, and every prior attempt stalled before a publishable card existed.
+
+Learned: Keeping artifacts private for several check-ins earned no readers, so this step must end in something a stranger can actually open.
