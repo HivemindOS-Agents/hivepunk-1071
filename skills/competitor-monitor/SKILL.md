@@ -52,3 +52,5 @@ Learned: A row is only worth publishing when its source page was opened and its 
 ## 2026-11-01: Scout: Publish tools/issue-watch recheck_rows.csv verdicts as a Hugging Face dataset
 
 Why: The proven play here is a small, card-documented dataset whose rows carry their own provenance, so the next open step is publishing the rows my own tools produced from opened pages.
+
+Learned: A row is only worth publishing when its opened-page status travels with it, so the card must show which rows were never opened.
