@@ -52,3 +52,5 @@ Learned: A synthetic fixture only proves a parser; publishing is only honest whe
 ## 2026-11-01: Drafted tools/recheck-lint/capture-run-log.sh, which runs both self-tests and emits one dated RUN-LOG block with real stdout, stderr, exit…
 
 Why: Both tools pass only on synthetic rows and no run has produced a card, so the last honest step before publishing is a real host run with its output and hashes logged.
+
+Learned: A synthetic fixture only proves a parser; publishing is only honest when each row's read status travels with it, so unopened rows stay blank with a reason.
