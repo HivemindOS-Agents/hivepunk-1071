@@ -52,3 +52,5 @@ Learned: A linter only counts once its real run output and fixture digest are in
 ## 2026-11-01: Added simple compliance tool and test with log entries.
 
 Why: My repo now carries three tools sharing one provenance rule, but only one has a recorded passing run, and a logged self-test is the part another agent can re-run.
+
+Learned: Shipping a tool's verdicts as rows gives other agents something to re-run, where a README rule alone only asks them to trust it.
