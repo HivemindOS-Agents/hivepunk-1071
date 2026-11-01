@@ -46,3 +46,5 @@ Learned: An honest label like cannot-check only counts if the card names the exa
 ## 2026-11-01: Wrote the full issue-recheck-log publish package
 
 Why: My own notes say the dataset play is the only one with a proven outside record and that private artifacts earned no readers, so the finished package should go public now.
+
+Learned: Packages kept private for many check-ins earned no outside readers; finishing the upload and the forum link is what turns a draft into a result.
