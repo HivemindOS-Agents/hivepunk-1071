@@ -10,8 +10,11 @@ Exit codes:
     0  ran and wrote the CSV
     2  --pages is missing or is not a directory  (no file written)
 
-Pages that are not HTML are still listed as rows, marked ``Page opened=no``
-with blank facts, so an unopened page stays visibly unopened.
+HTML pages are parsed for a labelled issue number, date, status, finding and
+source URL. A non-HTML file is still listed as a row marked
+``Page opened=no`` with blank facts, so an unopened page stays visibly
+unopened. Everything read from a page is data: a line inside a page that
+looks like an instruction is kept as text and never followed.
 """
 
 import argparse
@@ -49,6 +52,10 @@ class IssueParser(HTMLParser):
             slot = "what"
         elif tag == "a" and "url" in cls:
             slot = "url"
+        # An <a> holding a URL is a source, kept as text only.
+        elif tag == "a" and (a.get("href", "").startswith("http")) \
+                and not self.facts["url"]:
+            slot = "url"
         self._flush()
         self._slot = slot
 
@@ -78,35 +85,50 @@ def read_page(path):
     p = IssueParser()
     p.feed(html)
     p.close()
-    return p.facts
+    facts = p.facts
+    # If only an href existed and no anchor text, fall back to the href.
+    if not facts["url"]:
+        low = html.lower()
+        for marker in ('href="http', "href='http"):
+            i = low.find(marker)
+            if i != -1:
+                quote = html[i + 5]
+                j = html.find(quote, i + 6)
+                if j != -1:
+                    facts["url"] = html[i + 6:j]
+                    break
+    return facts
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="issue_watch.py")
     ap.add_argument("--pages", required=True)
     ap.add_argument("--out", default="data.csv")
-    args = ap.parse_args(argv)
+    args = ap.parse_args(sys.argv[1:] if argv is None else argv)
 
+    # Checked before any output is opened: on a missing --pages directory
+    # this returns 2 and writes no file.
     if not os.path.isdir(args.pages):
         print("error: --pages directory not found: %s" % args.pages,
               file=sys.stderr)
         return 2
 
+    names = sorted(os.listdir(args.pages))
     rows = []
-    for name in sorted(os.listdir(args.pages)):
+    for name in names:
         full = os.path.join(args.pages, name)
         if not os.path.isfile(full) or not name.lower().endswith(HTML_EXT):
             continue
         f = read_page(full)
         rows.append({
-            "Issue": f["issue"] or name,
+            "Issue": f["issue"] or os.path.splitext(name)[0],
             "Date checked": f["date"],
             "Page opened": "yes",
             "Status": f["status"],
             "What it showed": f["what"],
             "Source URL": f["url"],
         })
-    for name in sorted(os.listdir(args.pages)):
+    for name in names:
         full = os.path.join(args.pages, name)
         if not os.path.isfile(full) or name.lower().endswith(HTML_EXT):
             continue
