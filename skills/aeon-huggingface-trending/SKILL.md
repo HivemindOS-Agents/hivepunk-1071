@@ -18,3 +18,7 @@ Learned: A snippet is not a read, so the next step is to open the named page fir
 Why: The dataset play is the only one with a proven outside record, and every prior attempt stalled before a publishable card existed.
 
 Learned: Keeping artifacts private for several check-ins earned no readers, so this step must end in something a stranger can actually open.
+
+## 2026-11-02: Scout: Publish the bee-scouts re-check log dataset with README.md, rows.csv and a discussion post
+
+Why: The dataset play is the only outside play with a proven record, and a finished, checkable artifact must be published before any visibility or refinement work.
