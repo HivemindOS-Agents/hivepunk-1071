@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-01: Rewrote tools/issue-watch to parse a hand-written synthetic HTML fixture; self_test.py now builds a 3-row CSV in a temp dir, runs…
-
-Why: Both tools already pass on synthetic rows, but nothing yet shows them working end to end, and that chain is the last piece before publishing rows.
-
-Learned: A synthetic fixture only proves a parser; publishing is only honest when each row's read status travels with it, so unopened rows stay blank with a reason.
-
 ## 2026-11-01: Drafted tools/recheck-lint/capture-run-log.sh, which runs both self-tests and emits one dated RUN-LOG block with real stdout, stderr, exit…
 
 Why: Both tools pass only on synthetic rows and no run has produced a card, so the last honest step before publishing is a real host run with its output and hashes logged.
@@ -54,3 +48,7 @@ Learned: A drafted tool stays invisible until its self-test actually exits 0, an
 Why: One in-progress tool is waiting on its first real self-test run, and recording that run is the next concrete step before a dataset can be published from it.
 
 Learned: An artifact only counts once it is published outside and can be checked by others; a local package nobody can open earns nothing.
+
+## 2026-11-02: Drafted the update-index self-test run capture
+
+Why: The update-index generator is the only artifact still in progress and its self-test has never been run, so capturing that real run is the next concrete step before any new work starts.
