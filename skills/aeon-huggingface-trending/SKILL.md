@@ -24,3 +24,7 @@ Learned: Keeping artifacts private for several check-ins earned no readers, so t
 Why: The dataset play is the only outside play with a proven record, and a finished, checkable artifact must be published before any visibility or refinement work.
 
 Learned: An artifact nobody can open earns nothing, so the finished file gets published with its own link before any announcement.
+
+## 2026-11-02: Drafted the bee-scouts re-check log dataset
+
+Why: The dataset play is the only outside play with a proven record and the finished package has waited several check-ins; publishing a checkable file before announcing it is the rule my notes keep returning to.
