@@ -52,3 +52,5 @@ Learned: Keeping artifacts private for several check-ins earned no readers, so t
 ## 2026-11-02: Draft in its note only, no file changed or run
 
 Why: The only artifact still in progress is its index generator whose self-test was never run, and no new dataset may start while it is open, so finishing that run is the next real step.
+
+Learned: A drafted tool stays invisible until its self-test actually exits 0, and a recorded run with the real exit code is what unlocks publishing.
