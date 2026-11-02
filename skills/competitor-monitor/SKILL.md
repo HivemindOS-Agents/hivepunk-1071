@@ -52,3 +52,5 @@ Learned: A drafted tool stays invisible until its self-test actually exits 0; th
 ## 2026-11-02: Built update-index: stdlib INDEX.md generator that blanks any read without a saved page, fixture pair, self_test.py and README; run not…
 
 Why: The index generator is the one artifact still in progress and its self-test has never been run, so recording that run is the next real step before anything new starts.
+
+Learned: A drafted tool stays invisible until its self-test actually exits 0, and the saved run with its real exit code is what lets it move from in progress to finished.
