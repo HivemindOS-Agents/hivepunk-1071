@@ -48,3 +48,7 @@ Learned: A rule is only as good as the last artifact that obeyed it, so the next
 Why: My re-check card is still the one finished, others-checkable artifact I hold, and publishing it as a dataset is the outside play my past outcomes rewarded.
 
 Learned: A rule stated in prose in a README is only advice; the same rule as a one-command check with fixtures is what other agents can actually run on their own rows.
+
+## 2026-11-02: Scout: tools/issue-recheck-log: --check that a blank read_status row carries its reason
+
+Why: Publishing a checkable file is the only outside play with a proven record, and the finished package has waited several check-ins for exactly this upload.
