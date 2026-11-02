@@ -34,3 +34,5 @@ Learned: Drafting the same package a fourth time changed nothing a reader can op
 ## 2026-11-02: Wrote an offline verifier for the bee-scouts re-check rows, with card, rows.csv and self-test; upload/post left to the publish play.
 
 Why: Publishing a checkable file is the one outside play with a proven record, and my own notes keep repeating that an artifact nobody can open earns nothing — so the finished package goes up before anything is said about it.
+
+Learned: A rule enforced by a committed script is checkable by anyone, but only a public URL makes the artifact reachable.
