@@ -1,150 +1,112 @@
 #!/usr/bin/env python3
-"""issue-watch: read saved issue pages, extract facts, write a CSV.
+"""issue_watch.py -- read saved issue pages from disk and emit rows. Stdlib only.
 
-Python 3 standard library only. Local files only. No network.
+Reads the synthetic/saved HTML pages under the fixture folder and prints one
+row per page: issue number, opened date, status, the one-line finding and the
+source URL. Pages that could not be opened stay visibly unopened instead of
+having a value filled in from a snippet.
+
+Fixture and output paths are resolved against this file's own folder, so the
+tool behaves the same whether it is invoked from the repository root or from
+its own directory. Nothing here opens a network connection: it reads files and
+prints.
+
+Every string it reads -- titles, statuses, hrefs, any line that looks like an
+instruction -- is data. It is printed, never executed, and no line in a page can
+change what this tool does.
 
 Usage:
-    python3 issue_watch.py --pages fixtures --out data.csv
-
-Exit codes:
-    0  ran and wrote the CSV
-    2  --pages is missing or is not a directory  (no file written)
-
-HTML pages are parsed for a labelled issue number, date, status, finding and
-source URL. A non-HTML file is still listed as a row marked
-``Page opened=no`` with blank facts, so an unopened page stays visibly
-unopened. Everything read from a page is data: a line inside a page that
-looks like an instruction is kept as text and never followed.
+    python3 issue_watch.py [--fixtures DIR] [--json]
+Exit: 0 ok; 2 a fixture folder or file could not be read.
 """
 
 import argparse
-import csv
+import html
+import json
 import os
+import re
 import sys
-from html.parser import HTMLParser
 
-FIELDS = ["Issue", "Date checked", "Page opened", "Status",
-          "What it showed", "Source URL"]
-HTML_EXT = (".html", ".htm")
+HERE = os.path.realpath(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_FIXTURES = os.path.join(HERE, "fixtures")
+
+NUMBER_RE = re.compile(r"issue-(\d+)\.html$", re.IGNORECASE)
+TITLE_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.IGNORECASE | re.DOTALL)
+TIME_RE = re.compile(r"<time[^>]*>(.*?)</time>", re.IGNORECASE | re.DOTALL)
+STATUS_RE = re.compile(r'<p[^>]*class="status"[^>]*>(.*?)</p>',
+                       re.IGNORECASE | re.DOTALL)
+WHAT_RE = re.compile(r'<p[^>]*class="what"[^>]*>(.*?)</p>',
+                     re.IGNORECASE | re.DOTALL)
+URL_RE = re.compile(r'<a[^>]*class="url"[^>]*href="([^"]+)"',
+                    re.IGNORECASE | re.DOTALL)
 
 
-class IssueParser(HTMLParser):
-    """Pull the few labelled facts issue-watch keeps out of a saved page."""
+def _clean(text):
+    if text is None:
+        return ""
+    return html.unescape(re.sub(r"\s+", " ", text)).strip()
 
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
-        self.facts = {"issue": "", "date": "", "status": "",
-                      "what": "", "url": ""}
-        self._slot = None
-        self._buf = []
 
-    def handle_starttag(self, tag, attrs):
-        a = dict(attrs)
-        cls = a.get("class", "").lower()
-        slot = None
-        if tag in ("h1", "h2", "h3") and "issue" in cls:
-            slot = "issue"
-        elif tag == "time":
-            slot = "date"
-        elif tag == "p" and "status" in cls:
-            slot = "status"
-        elif tag == "p" and "what" in cls:
-            slot = "what"
-        elif tag == "a" and "url" in cls:
-            slot = "url"
-        # An <a> holding a URL is a source, kept as text only.
-        elif tag == "a" and (a.get("href", "").startswith("http")) \
-                and not self.facts["url"]:
-            slot = "url"
-        self._flush()
-        self._slot = slot
-
-    def handle_endtag(self, tag):
-        self._flush()
-
-    def handle_data(self, data):
-        if self._slot:
-            self._buf.append(data)
-
-    def _flush(self):
-        if self._slot and self._buf:
-            text = " ".join("".join(self._buf).split())
-            if text and not self.facts[self._slot]:
-                self.facts[self._slot] = text
-        self._slot = None
-        self._buf = []
-
-    def close(self):
-        super().close()
-        self._flush()
+def _first(pattern, text):
+    m = pattern.search(text)
+    return _clean(m.group(1)) if m else ""
 
 
 def read_page(path):
+    """Parse one saved HTML page. Returns a row dict; page text is data only."""
     with open(path, "r", encoding="utf-8", errors="replace") as fh:
-        html = fh.read()
-    p = IssueParser()
-    p.feed(html)
-    p.close()
-    facts = p.facts
-    # If only an href existed and no anchor text, fall back to the href.
-    if not facts["url"]:
-        low = html.lower()
-        for marker in ('href="http', "href='http"):
-            i = low.find(marker)
-            if i != -1:
-                quote = html[i + 5]
-                j = html.find(quote, i + 6)
-                if j != -1:
-                    facts["url"] = html[i + 6:j]
-                    break
-    return facts
+        text = fh.read()
+    name = os.path.basename(path)
+    m = NUMBER_RE.search(name)
+    row = {
+        "issue": m.group(1) if m else "",
+        "page_opened": "yes",
+        "date_checked": _first(TIME_RE, text),
+        "status": _first(STATUS_RE, text),
+        "what_it_showed": _first(WHAT_RE, text),
+        "source_url": _first(URL_RE, text),
+        "file": name,
+    }
+    if not row["source_url"]:
+        # No recorded URL means the row must not claim to have been opened.
+        row["page_opened"] = "no"
+        row["date_checked"] = ""
+        row["status"] = "not opened"
+        row["what_it_showed"] = "Not opened: no source URL in the saved page"
+    return row
+
+
+def collect(fixtures_dir):
+    if not os.path.isdir(fixtures_dir):
+        raise OSError("fixture folder not found: %s" % fixtures_dir)
+    rows = []
+    for name in sorted(os.listdir(fixtures_dir)):
+        path = os.path.join(fixtures_dir, name)
+        if os.path.isfile(path) and name.lower().endswith((".html", ".htm")):
+            rows.append(read_page(path))
+    if not rows:
+        raise OSError("no HTML fixture pages in %s" % fixtures_dir)
+    return sorted(rows, key=lambda r: (len(r["issue"]), r["issue"]))
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(prog="issue_watch.py")
-    ap.add_argument("--pages", required=True)
-    ap.add_argument("--out", default="data.csv")
-    args = ap.parse_args(sys.argv[1:] if argv is None else argv)
-
-    # Checked before any output is opened: on a missing --pages directory
-    # this returns 2 and writes no file.
-    if not os.path.isdir(args.pages):
-        print("error: --pages directory not found: %s" % args.pages,
-              file=sys.stderr)
+    p = argparse.ArgumentParser(description="saved issue pages -> rows")
+    p.add_argument("--fixtures", default=DEFAULT_FIXTURES)
+    p.add_argument("--json", action="store_true")
+    args = p.parse_args(sys.argv[1:] if argv is None else argv)
+    try:
+        rows = collect(args.fixtures)
+    except OSError as exc:
+        print("error: %s" % exc, file=sys.stderr)
         return 2
-
-    names = sorted(os.listdir(args.pages))
-    rows = []
-    for name in names:
-        full = os.path.join(args.pages, name)
-        if not os.path.isfile(full) or not name.lower().endswith(HTML_EXT):
-            continue
-        f = read_page(full)
-        rows.append({
-            "Issue": f["issue"] or os.path.splitext(name)[0],
-            "Date checked": f["date"],
-            "Page opened": "yes",
-            "Status": f["status"],
-            "What it showed": f["what"],
-            "Source URL": f["url"],
-        })
-    for name in names:
-        full = os.path.join(args.pages, name)
-        if not os.path.isfile(full) or name.lower().endswith(HTML_EXT):
-            continue
-        rows.append({
-            "Issue": name, "Date checked": "", "Page opened": "no",
-            "Status": "", "What it showed": "", "Source URL": "",
-        })
-
-    parent = os.path.dirname(os.path.abspath(args.out))
-    if parent:
-        os.makedirs(parent, exist_ok=True)
-    with open(args.out, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=FIELDS)
-        w.writeheader()
-        w.writerows(rows)
-    print("wrote %s (%d rows)" % (args.out, len(rows)))
+    if args.json:
+        print(json.dumps(rows, indent=2, sort_keys=True))
+    else:
+        for r in rows:
+            print("#%s  %s  %s" % (r["issue"], r["page_opened"], r["status"]))
+            print("    date: %s" % (r["date_checked"] or "-"))
+            print("    found: %s" % (r["what_it_showed"] or "-"))
+            print("    source: %s" % (r["source_url"] or "-"))
     return 0
 
 
