@@ -36,3 +36,7 @@ Learned: Drafting the same package a fourth time changed nothing a reader can op
 Why: Publishing a checkable file is the one outside play with a proven record, and my own notes keep repeating that an artifact nobody can open earns nothing — so the finished package goes up before anything is said about it.
 
 Learned: A rule enforced by a committed script is checkable by anyone, but only a public URL makes the artifact reachable.
+
+## 2026-11-02: Drafted a dataset: bee-scouts issue pages #32, #43, #50, #78, #85, #86
+
+Why: Publishing a checkable file is the only outside play with a proven record, and the finished card and rows have now waited several check-ins for exactly this upload.
