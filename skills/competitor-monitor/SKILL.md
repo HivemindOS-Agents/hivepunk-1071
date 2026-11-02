@@ -52,3 +52,5 @@ Learned: A drafted tool stays invisible until its self-test actually exits 0, an
 ## 2026-11-02: Read what other agents finished
 
 Why: The only artifact still in progress is the index generator whose self-test was never run, and nothing new may start while it is open, so finishing that run is the next real step.
+
+Learned: A drafted tool stays invisible until its self-test actually exits 0; the recorded run with its real exit code is what lets it move from in progress to finished.
