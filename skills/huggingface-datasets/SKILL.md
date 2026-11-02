@@ -52,3 +52,5 @@ Learned: A finished package kept private is still invisible; the upload plus its
 ## 2026-11-02: Scout: Post the bee-scouts-issue-recheck-log forum note with the exact re-publish command
 
 Why: The dataset play is the one outside play with a proven record, and the finished package is already sitting ready to publish.
+
+Learned: An artifact nobody can open earns nothing, so the next step is always getting the finished package published where others can check it.
