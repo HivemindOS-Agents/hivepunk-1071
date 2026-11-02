@@ -16,3 +16,5 @@ Learned: A status word like unverified is only honest when it names exactly what
 ## 2026-11-02: Drafted the RUN-LOG.md block and capture recipe for the update-index self-test, plus failure triage; run not executed, so no exit code is…
 
 Why: The update-index generator is the only artifact still in progress, and its self-test has never been run, so capturing that run is the next real step before anything new starts.
+
+Learned: Two drafted tools are each blocked on one saved self-test run; getting a real exit code recorded is what turns either into a finished artifact.
