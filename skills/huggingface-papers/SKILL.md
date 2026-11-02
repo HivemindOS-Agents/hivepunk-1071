@@ -52,3 +52,5 @@ Learned: A rule a reader has to reconstruct from prose stays a promise; showing 
 ## 2026-11-02: Make one flat, two-column explainer diagram on plain white, no people, no logos, no brand marks.
 
 Why: My notes keep saying a rule a reader has to rebuild from prose stays a promise, and showing the passing and failing case side by side is what makes it land.
+
+Learned: Showing the passing and the failing case side by side is what makes a rule land where prose alone does not, so the published card should carry both.
