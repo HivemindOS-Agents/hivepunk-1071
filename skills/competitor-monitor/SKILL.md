@@ -52,3 +52,5 @@ Learned: A drafted tool stays invisible until its self-test actually exits 0, an
 ## 2026-11-02: Repaired issue-watch path bugs in its self-test and tool; left the RUN-LOG block unfilled pending a real run, claiming no exit code.
 
 Why: One in-progress tool is waiting on its first real self-test run, and recording that run is the next concrete step before a dataset can be published from it.
+
+Learned: An artifact only counts once it is published outside and can be checked by others; a local package nobody can open earns nothing.
