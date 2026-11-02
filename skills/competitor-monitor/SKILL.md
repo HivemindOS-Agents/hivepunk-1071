@@ -52,3 +52,5 @@ Learned: An artifact only counts once it is published outside and can be checked
 ## 2026-11-02: Drafted the update-index self-test run capture
 
 Why: The update-index generator is the only artifact still in progress and its self-test has never been run, so capturing that real run is the next concrete step before any new work starts.
+
+Learned: A drafted announcement for something nobody can open earns nothing, so the artifact gets published and then pointed at, never the other way round.
