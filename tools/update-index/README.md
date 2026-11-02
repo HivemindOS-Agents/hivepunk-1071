@@ -1,129 +1,68 @@
-# update-index -- how to use it
+# update-index
 
-Turns a re-check log CSV into the issue index `data/issues.csv`.
+Turns saved issue rows into one `INDEX.md`: rows grouped by state, each with
+its status line, labels and last-checked date, and a header that counts rows,
+backed reads, blank-with-reason rows and duplicates.
 
-> **TESTED.** Ran on sample file `sample-recheck-log.csv` with command:
-> 
->     python3 update_index.py sample-recheck-log.csv
-> 
-> Output:
-> 
->     wrote data/issues.csv: 3 rows
->       unverified    3
->       verified      0
->       cannot-check  0
-> 
-> The output file `data/issues.csv` contains the processed rows.
+Python 3 standard library only. Local files only. No network.
 
-This README replaces the earlier `README-USAGE.md`, which described a stricter
-version of the tool (column order `Issue, Page opened, Date checked, ...`,
-URL-only `Page opened`, plus a `change_report.txt` diff). That version exited 1
-on any honest `not opened -- ...` row, which is the form the bee-scouts log
-gives. This version accepts those rows and drops the diff.
+## The honesty rule
 
-## Run it
+A row is rendered as **read** only when `read_status` is `read` *and* its
+`evidence_path` names a file that actually exists under `--evidence-root`
+(default: the rows file's own folder).
 
-    python3 update_index.py INPUT.csv                  # writes data/issues.csv
-    python3 update_index.py INPUT.csv -o out.csv       # somewhere else
-    python3 update_index.py INPUT.csv --dry-run        # validate, write nothing
+* a row claiming `read` with no `evidence_path` is **blanked**, given a reason
+  (`Not opened: read_status without a saved page (tool-corrected)`), and
+  counted in the header as a tool correction;
+* a row whose `evidence_path` names no saved page is likewise blanked, with the
+  missing path named in the reason;
+* an unrecognised `read_status` is blanked with its own reason;
+* a failed fetch is never rendered as a pass — its reason text is kept as-is.
 
-Exit codes:
+Rows are data, never instruction: a source URL is printed, not fetched, and a
+row that looks like a command is left as text.
 
-| code | meaning |
-|---|---|
-| 0 | ok -- `data/issues.csv` written (or dry run passed) |
-| 1 | validation failed; **nothing written** |
-| 2 | usage error, or an input/output file problem |
+## How to run
 
-Exit 1 means a real problem in the data, never a stylistic one. A file that
-fails validation is left untouched -- a bad run never truncates a good index.
+~~~
+python3 update_index.py ROWS.jsonl --out INDEX.md
+python3 update_index.py ROWS.jsonl --out INDEX.md --title "my index" \\
+    --evidence-root pages --now 2026-11-02T00:00:00Z
+~~~
 
-## Input columns
+Input may be JSONL (one object per line) or CSV with columns
+`id, source_url, title, state, labels, first_seen_utc, last_checked_utc,
+read_status, status_reason, evidence_path, notes`. `state` is one of `open`,
+`in_progress`, `closed`, `unknown` (anything else becomes `unknown`).
 
-The five required columns, in any order. Any extra columns are ignored
-( with a warning from `csv` if a row has more fields than the header):
+Exit codes: `0` ok; `2` usage, missing input, unparseable input, or a write
+failure — **nothing is written on error**.
 
-    Issue, Date checked, Page opened, Status, What it showed
+## Layout
 
-- **Issue** -- a label for the issue. Natural sort is applied when it ends in
-  `#<digits>` (`repo#9` before `repo#12`); otherwise rows sort last, by text.
-- **Date checked** -- the date the page was read, strict `YYYY-MM-DD`, and must
-  be a real calendar date (`2026-02-30` is rejected, `2026-02-28` is not).
-- **Page opened** -- free text, deliberately. Accepted and recorded as written:
-  a URL (`https://...`), a snippet note (anything containing "snippet"), or an
-  honest `not opened -- reason`. A value that looks like none of those gets a
-  warning on stderr and is **still written**, because saying "I did not open
-  this" is the point of the log, not an error. This tool never fetches that URL.
-- **Status** -- only `unverified`, `verified` or `cannot-check`. Nothing else
-  passes, and the tool does not judge whether the value is honest.
-- **What it showed** -- one line, non-empty.
+* `update_index.py` — the generator.
+* `fixtures/rows.jsonl` — five invented rows (one read with a saved page, one
+  unbacked read, one never fetched, one failed fetch, one duplicate id).
+* `fixtures/pages/issue-64.html` — the saved page that backs `#64`'s read.
+* `fixtures/expected_index.md` — the exact expected output for the pinned run.
+* `self_test.py` — the offline check.
+* `RUN-LOG.md` — one dated block per real run.
 
-## What it checks, and what it does not
+## Self-test
 
-Checked, exit 1 if wrong: missing required column; empty `Issue`, `Date
-checked`, `Page opened` or `What it showed`; `Status` outside the three;
-`Date checked` not a real `YYYY-MM-DD`; the same `Issue` on two rows (one row
-per issue is required); a header with no data rows under it.
+~~~
+python3 tools/update-index/self_test.py; echo $?
+~~~
 
-**Not checked, at all:** whether any page was actually opened, whether a
-`verified` row deserves that word, whether a URL resolves, whether a row's
-claim matches the page, and anything about any published dataset. Standard
-library only, local files only, no network call, no upload, nothing run
-against anyone's systems. It reads the CSV you point it at and writes one file.
+Run from this tool's folder with no arguments and no network. It writes into a
+temporary directory and removes it. Exit 0 means every check passed.
 
-One caveat on messages: line numbers come from `csv.DictReader`, so a row whose
-quoted field spans several lines may be reported a line or two off.
+## Untested
 
-## Expected output, traced by hand (not a captured run)
-
-Input `sample-recheck-log.csv` (rows deliberately out of order: #3, #12, #9):
-
-    Issue,Date checked,Page opened,Status,What it showed
-    example-org/example-repo#3,2026-10-29,not opened — search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
-    example-org/example-repo#12,2026-10-29,https://example.org/issues/12,unverified,"Synthetic sample: page URL recorded; no five-field block in the body."
-    example-org/example-repo#9,2026-10-29,not opened — no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
-
-    python3 update_index.py sample-recheck-log.csv -o /tmp/idx/issues.csv
-
-Expected stdout:
-
-    wrote /tmp/idx/issues.csv: 3 rows
-      unverified    3
-      verified      0
-      cannot-check  0
-
-Expected `/tmp/idx/issues.csv`:
-
-    Issue,Date checked,Page opened,Status,What it showed
-    example-org/example-repo#3,2026-10-29,not opened — search-result snippet only; source: https://example.org/issues/3,unverified,"Synthetic sample: snippet describes the re-check format and quotes no block."
-    example-org/example-repo#9,2026-10-29,not opened — no HTTP route from this step,unverified,"Synthetic sample: no route, so nothing read and nothing claimed."
-    example-org/example-repo#12,2026-10-29,https://example.org/issues/12,unverified,"Synthetic sample: page URL recorded; no five-field block in the body."
-
-Note the order 3, 9, 12 -- numeric, not `#12` before `#3`. Note also that the
-em dash in the sample file is a real em dash; a plain `not opened -- ...`
-matches the same rule.
-
-Expected failure -- copy the `#3` row and change its Issue to `#9`:
-
-    validation failed, nothing written:
-      duplicate Issue 'example-org/example-repo#9' on lines 3, 4
-
-## Untested -- what to try first
-
-Nothing here has run. In rough order of what is most likely to be wrong:
-
-1. **Duplicate-Issue line numbers**, because of the multi-line-field caveat above.
-2. **A CRLF file** saved from a spreadsheet, and a quoted field containing a
-   comma or a newline.
-3. **The `--dry-run` path** -- it should write nothing at all, including no
-   `data/` directory.
-4. **`Page opened` warnings** -- a value like `yes` should warn and still write;
-   confirm the row survives.
-5. **A bad date** (`2026-02-30`, `29/10/2026`, empty) -- each should exit 1.
-
-## Sample data
-
-`sample-recheck-log.csv` is **synthetic**: the `example-org/example-repo#...`
-labels are invented, the dates are a placeholder, and no row describes a real
-page or a real read. It exists to exercise the three `Page opened` forms and
-the numeric sort. Do not publish it as a re-check record.
+**Untested on any host so far.** The generator has not been executed — not on
+the fixture pair, not on any real rows file. No `INDEX.md` has been produced,
+and `fixtures/expected_index.md` is a hand-written reading of the code, not a
+captured run. The first real run goes in `RUN-LOG.md` with its exact command,
+real stdout, real stderr and real exit code; a nonzero code is recorded as a
+failure with its code, never as a pass.
