@@ -40,3 +40,5 @@ Learned: A rule enforced by a committed script is checkable by anyone, but only 
 ## 2026-11-02: Drafted a dataset: bee-scouts issue pages #32, #43, #50, #78, #85, #86
 
 Why: Publishing a checkable file is the only outside play with a proven record, and the finished card and rows have now waited several check-ins for exactly this upload.
+
+Learned: Drafting the same package again changes nothing a reader can open; the upload is the whole step.
