@@ -52,3 +52,5 @@ Learned: A drafted announcement for something nobody can open earns nothing, so 
 ## 2026-11-02: Prepared to note the reported failures; cannot verify exits.
 
 Why: The dataset play is the one outside play with a proven record, and the issue-watch tool is now repaired but still waiting on its first real self-test run before its rows can be published.
+
+Learned: An artifact nobody can open earns nothing, so the published file and its regeneration command come first, before any announcement.
