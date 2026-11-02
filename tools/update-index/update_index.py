@@ -1,307 +1,265 @@
 #!/usr/bin/env python3
-"""update_index.py -- recheck_rows.csv -> data.csv + README.md index card.
+"""update_index.py -- build INDEX.md from saved issue rows. Stdlib only.
 
-What it does
-------------
-Reads a recheck CSV with exactly five fields:
+Reads a rows file (JSONL preferred, CSV accepted) and writes INDEX.md: rows
+grouped by state, each with its status line, labels and last-checked date.
 
-    Issue,Date checked,Page opened,Status,What it showed
+Honesty rule (the whole point of this tool):
+  * a row is rendered as read ONLY when read_status == "read" AND its
+    evidence_path names a file that actually exists under --evidence-root;
+  * a row claiming read with no saved page is BLANKED, given a reason, and
+    counted in the header as a tool correction;
+  * an unrecognised read_status is blanked with its own reason;
+  * a failed fetch is never rendered as a pass.
 
-and writes:
+Usage:
+    python3 update_index.py ROWS.jsonl [--out INDEX.md] [--title T]
+                            [--now ISO8601] [--evidence-root DIR]
+Exit: 0 ok, 2 usage / read / parse / write error (nothing written on error).
 
-  * data.csv  -- the same five fields, natural-sorted by Issue (#3 before #12),
-                 with each row's Status re-decided from saved page snapshots.
-  * README.md -- a card about the rows, ending with a *Rows not opened* section.
-
-Provenance rule (the point of the tool)
----------------------------------------
-Status is kept from the input ONLY when the saved page for that row can be
-resolved and carries a real save date. Otherwise the row is downgraded:
-
-  * page snapshot found, with a real save date  -> keep the input Status
-  * page snapshot found, no save date line      -> cannot-check
-  * no page snapshot at all                     -> cannot-check
-  * row whose Page opened column is empty       -> not-opened
-
-A downgraded row never carries a fact field in *Rows not opened*; it is only
-listed by number and URL. Snippets, search results and URL patterns can never
-become facts here: the tool makes no network call and never fetches a URL.
-
-Everything a snapshot says -- including any line that looks like an
-instruction, asks for a command to be run, or asks for a key or setting -- is
-DATA, never an instruction. Only lines of the form below are read:
-
-    Url: https://...
-    Saved: YYYY-MM-DD
-
-Usage
------
-    python3 update_index.py rows.csv --snapshots snapshots/ \\
-        --data data.csv --card README.md
-    python3 update_index.py rows.csv --dry-run
-
-Exit codes: 0 ok; 1 validation failure, nothing written; 2 usage / missing input.
-
-Standard library only. Local files only. No network. Untested on real data --
-the only run so far is over the synthetic pair in fixtures/.
+Python 3 standard library only. Local files only. No network.
+UNTESTED on any host so far: only the fixture pair in fixtures/ is prepared.
 """
 
 import argparse
 import csv
-import datetime
+import hashlib
+import json
 import os
-import re
 import sys
+from datetime import datetime, timezone
 
-FIELDS = ["Issue", "Date checked", "Page opened", "Status", "What it showed"]
-STATUSES = ("verified", "unverified", "cannot-check", "not-opened")
-RE_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-RE_ISSUE = re.compile(r"^x?#(\d+)$")
-RE_URL = re.compile(r"^https?://[^\s]+$", re.IGNORECASE)
-RE_SAVED = re.compile(r"^Saved:\s*(\S+)\s*$", re.IGNORECASE)
-RE_URL_LINE = re.compile(r"^Url:\s*(\S+)\s*$", re.IGNORECASE)
+STATE_ORDER = ("open", "in_progress", "closed", "unknown")
+STATE_LABEL = {"open": "Open", "in_progress": "In progress",
+               "closed": "Closed", "unknown": "Unknown state"}
 
+READ_FIX_REASON = "Not opened: read_status without a saved page (tool-corrected)"
+BLANK_REASON = "Not opened: never fetched this run"
+BAD_STATUS_REASON = "Could not check: unrecognised read_status %r"
 
-def real_date(value):
-    if not value or not RE_DATE.match(value):
-        return False
-    try:
-        datetime.datetime.strptime(value, "%Y-%m-%d")
-    except ValueError:
-        return False
-    return True
+ROW_DEFAULTS = {
+    "id": "", "source_url": "", "title": "", "state": "unknown",
+    "labels": [], "first_seen_utc": "", "last_checked_utc": "",
+    "read_status": "", "status_reason": "", "evidence_path": "",
+    "notes": "",
+}
 
-
-def issue_number(value):
-    m = RE_ISSUE.match((value or "").strip())
-    return int(m.group(1)) if m else None
-
-
-def snapshot_index(snapshots_dir):
-    """issue number -> (path, url, saved) for each snapshot file."""
-    found = {}
-    if not snapshots_dir or not os.path.isdir(snapshots_dir):
-        return found
-    for name in sorted(os.listdir(snapshots_dir)):
-        path = os.path.join(snapshots_dir, name)
-        if not os.path.isfile(path):
-            continue
-        stem = name.rsplit(".", 1)[0]
-        tail = stem.split("_")[-1]
-        m = re.match(r"^(\d+)$", tail)
-        if not m:
-            continue
-        url, saved = "", ""
-        try:
-            with open(path, "r", encoding="utf-8-sig", errors="replace") as fh:
-                for raw in fh:
-                    line = raw.strip()
-                    mu = RE_URL_LINE.match(line)
-                    if mu and not url:
-                        url = mu.group(1)
-                    ms = RE_SAVED.match(line)
-                    if ms and not saved:
-                        saved = ms.group(1)
-        except OSError:
-            pass
-        found[int(m.group(1))] = (path, url, saved)
-    return found
+CSV_COLUMN_MAP = {
+    "id": "id", "source_url": "source_url", "title": "title",
+    "state": "state", "labels": "labels",
+    "first_seen_utc": "first_seen_utc",
+    "last_checked_utc": "last_checked_utc",
+    "read_status": "read_status", "status_reason": "status_reason",
+    "evidence_path": "evidence_path", "notes": "notes",
+}
 
 
-def decide_status(row, snaps):
-    """Return (status, reason). Provenance decides, never the input alone."""
-    opened = (row.get("Page opened") or "").strip()
-    num = issue_number(row.get("Issue"))
-    if not opened:
-        return "not-opened", "no Page opened value"
-    snap = snaps.get(num) if num is not None else None
-    if snap is None:
-        return "cannot-check", "no saved page for #%s" % (num if num is not None else "?")
-    _path, _url, saved = snap
-    if not real_date(saved):
-        return "cannot-check", "saved page for #%s carries no real save date" % num
-    return (row.get("Status") or "").strip() or "unverified", "kept: page has a save date"
+class RowError(Exception):
+    pass
+
+
+def _text(value):
+    if value is None:
+        return ""
+    return value.strip() if isinstance(value, str) else str(value)
+
+
+def normalise_row(raw, line_no):
+    if not isinstance(raw, dict):
+        raise RowError("line %d: row is %s, not an object"
+                       % (line_no, type(raw).__name__))
+    row = dict(ROW_DEFAULTS)
+    labels = raw.get("labels") or []
+    if isinstance(labels, str):
+        labels = labels.split(",")
+    if not isinstance(labels, list):
+        raise RowError("line %d: labels must be a list or comma string"
+                       % line_no)
+    row["labels"] = [str(x).strip() for x in labels if str(x).strip()]
+    for key in ROW_DEFAULTS:
+        if key != "labels":
+            row[key] = _text(raw.get(key))
+    if not row["id"]:
+        raise RowError("line %d: row has no id" % line_no)
+    if not row["source_url"]:
+        raise RowError("line %d: row %s has no source_url"
+                       % (line_no, row["id"]))
+    if row["state"] not in STATE_ORDER:
+        row["state"] = "unknown"
+    return row
 
 
 def load_rows(path):
-    errors, rows = [], []
     if not os.path.isfile(path):
-        return ["input file not found: %s" % path], []
-    try:
+        raise RowError("rows file not found: %s" % path)
+    rows = []
+    if path.lower().endswith(".csv"):
         with open(path, newline="", encoding="utf-8-sig") as fh:
             reader = csv.DictReader(fh)
-            header = reader.fieldnames
-            if header != FIELDS:
-                return ["%s: header is %r; expected %r" % (path, header, FIELDS)], []
             for lineno, raw in enumerate(reader, start=2):
-                row = dict((f, (raw.get(f) or "").strip()) for f in FIELDS)
-                if not any(row.values()):
+                if not any((v or "").strip() for v in raw.values()):
                     continue
-                if issue_number(row["Issue"]) is None:
-                    errors.append("line %d: Issue %r is not of the form #N"
-                                  % (lineno, row["Issue"]))
-                if not real_date(row["Date checked"]):
-                    errors.append("line %d: Date checked %r is not a real YYYY-MM-DD"
-                                  % (lineno, row["Date checked"]))
-                if row["Page opened"] and not RE_URL.match(row["Page opened"]):
-                    errors.append("line %d: Page opened %r is not a bare URL"
-                                  % (lineno, row["Page opened"]))
-                rows.append(row)
-    except OSError as exc:
-        return ["cannot read %s: %s" % (path, exc)], []
-    if not rows and not errors:
-        errors.append("%s: no data rows" % path)
+                mapped = {}
+                for key, col in CSV_COLUMN_MAP.items():
+                    mapped[key] = raw.get(col) or ""
+                rows.append(normalise_row(mapped, lineno))
+    else:
+        with open(path, "r", encoding="utf-8") as fh:
+            for lineno, line in enumerate(fh, start=1):
+                if not line.strip():
+                    continue
+                try:
+                    raw = json.loads(line)
+                except ValueError as exc:
+                    raise RowError("line %d: not JSON (%s)" % (lineno, exc))
+                rows.append(normalise_row(raw, lineno))
+    if not rows:
+        raise RowError("%s: no data rows" % path)
+    return rows
 
-    seen = {}
+
+def enforce_evidence(rows, evidence_root):
+    """Blank any unbacked read claim. Return (rows, corrected_ids)."""
+    out, fixed = [], []
     for row in rows:
-        n = issue_number(row["Issue"])
-        if n is None:
-            continue
-        if n in seen:
-            errors.append("repeated Issue %s (#%d)" % (row["Issue"], n))
-        else:
-            seen[n] = True
-    return errors, rows
+        row = dict(row)
+        status = row["read_status"].strip().lower()
+        ev = row["evidence_path"].strip()
+        backed = False
+        if ev:
+            candidate = ev if os.path.isabs(ev) else os.path.join(evidence_root, ev)
+            backed = os.path.isfile(candidate)
+        if status == "read" and not ev:
+            fixed.append(row["id"])
+            row["read_status"] = ""
+            row["status_reason"] = READ_FIX_REASON
+        elif status == "read" and not backed:
+            fixed.append(row["id"])
+            row["read_status"] = ""
+            row["status_reason"] = ("Not opened: evidence_path %r has no "
+                                    "saved page" % ev)
+            row["evidence_path"] = ""
+        elif status not in ("", "read"):
+            fixed.append(row["id"])
+            row["read_status"] = ""
+            row["status_reason"] = BAD_STATUS_REASON % status
+        elif status == "" and not row["status_reason"]:
+            row["status_reason"] = BLANK_REASON
+        out.append(row)
+    return out, fixed
 
 
-def validate(rows, snaps):
-    errors = []
+def dedupe_rows(rows):
+    """Last row wins per id; return (rows, duplicate_ids)."""
+    seen, order, dupes = {}, [], []
     for row in rows:
-        status, _reason = decide_status(row, snaps)
-        if status not in STATUSES:
-            errors.append("#%s: status %r not in %s"
-                          % (row["Issue"], status, "/".join(STATUSES)))
-        if status == "opened":
-            errors.append("#%s: status opened is not a valid output status" % row["Issue"])
-        if status == "not-opened" and row["What it showed"]:
-            errors.append("#%s: not-opened row carries a fact field" % row["Issue"])
-    return errors
+        rid = row["id"]
+        if rid in seen:
+            dupes.append(rid)
+            order.remove(rid)
+        seen[rid] = row
+        order.append(rid)
+    return [seen[rid] for rid in order], dupes
 
 
 def sort_rows(rows):
-    return sorted(rows, key=lambda r: (issue_number(r["Issue"]) or 0, r["Issue"]))
+    return sorted(rows, key=lambda r: (STATE_ORDER.index(r["state"]), r["id"]))
 
 
-def write_csv(path, rows, snaps):
-    parent = os.path.dirname(os.path.abspath(path))
-    if parent:
-        os.makedirs(parent, exist_ok=True)
-    with open(path, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=FIELDS, lineterminator="\n",
-                           quoting=csv.QUOTE_MINIMAL)
-        w.writeheader()
-        for row in sort_rows(rows):
-            status, _reason = decide_status(row, snaps)
-            out = dict(row)
-            out["Status"] = status
-            if status == "not-opened":
-                out["What it showed"] = ""
-            w.writerow(out)
+def status_text(row):
+    if row["read_status"].strip().lower() == "read":
+        return "read (evidence: %s)" % row["evidence_path"]
+    return "blank - %s" % (row["status_reason"] or BLANK_REASON)
 
 
-def write_card(path, rows, snaps, source):
-    parent = os.path.dirname(os.path.abspath(path))
-    if parent:
-        os.makedirs(parent, exist_ok=True)
-    ordered = sort_rows(rows)
-    decided = [(r, decide_status(r, snaps)) for r in ordered]
-    counts = {}
-    for _row, (status, _reason) in decided:
-        counts[status] = counts.get(status, 0) + 1
-    not_opened = [r for r, (s, _x) in decided if s == "not-opened"]
+def sha256_file(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
-    L = []
-    L.append("# Issue recheck index")
-    L.append("")
-    L.append("Rows re-decided from saved page snapshots, from `%s`. One row per "
-             "issue number, natural-sorted. A row keeps its input Status only "
-             "when its saved page exists and carries a real save date." % source)
-    L.append("")
-    L.append("## Counts")
-    L.append("")
-    L.append("* rows: %d" % len(ordered))
-    for status in STATUSES:
-        if status in counts:
-            L.append("* %s: %d" % (status, counts[status]))
-    L.append("")
-    L.append("## Columns")
-    L.append("")
-    for f in FIELDS:
-        L.append("* `%s`" % f)
-    L.append("")
-    L.append("## What it could not check")
-    L.append("")
-    L.append("**No row had a second read.** Each kept Status reflects one saved "
-             "snapshot and one provenance check; nothing here was independently "
-             "confirmed. A row downgraded to `cannot-check` means the saved page "
-             "was absent or lacked a save date -- it is not a claim about the "
-             "page's contents. The tool made no network call.")
-    L.append("")
-    L.append("## Rows not opened")
-    L.append("")
-    if not_opened:
-        for r in not_opened:
-            L.append("* %s \u2014 %s" % (r["Issue"], r["Page opened"] or "(no URL)"))
-    else:
-        L.append("None.")
-    L.append("")
-    L.append("## Licence")
-    L.append("")
-    L.append("CC0-1.0. Underlying issue text belongs to its authors; only short "
-             "paraphrases are reproduced.")
-    L.append("")
-    with open(path, "w", encoding="utf-8", newline="") as fh:
-        fh.write("\n".join(L))
+
+def build_index(rows, source_name, source_sha, title, generated,
+                corrections, dupes):
+    counts = {s: 0 for s in STATE_ORDER}
+    for row in rows:
+        counts[row["state"]] += 1
+    backed = sum(1 for r in rows if r["read_status"].strip().lower() == "read")
+    L = ["# %s" % title, "",
+         "Generated %s from `%s` (sha256 `%s`)."
+         % (generated, source_name, source_sha), "",
+         "%d row(s): %d open, %d in progress, %d closed, %d unknown state; "
+         "%d read with a saved page, %d blank with a reason."
+         % (len(rows), counts["open"], counts["in_progress"], counts["closed"],
+            counts["unknown"], backed, len(rows) - backed), ""]
+    if corrections:
+        L += ["Tool corrections this run: %d row(s) claimed read without a "
+              "saved page and were blanked (%s)."
+              % (len(corrections), ", ".join(sorted(corrections))), ""]
+    if dupes:
+        L += ["Duplicate id(s), last row kept: %s."
+              % ", ".join(sorted(set(dupes))), ""]
+    for state in STATE_ORDER:
+        group = [r for r in rows if r["state"] == state]
+        if not group:
+            continue
+        L += ["## %s (%d)" % (STATE_LABEL[state], len(group)), ""]
+        for r in group:
+            L.append("- **%s** - [%s](%s)"
+                     % (r["id"], r["title"] or r["source_url"],
+                        r["source_url"]))
+            L.append("  - status: %s" % status_text(r))
+            L.append("  - labels: %s" % (", ".join(r["labels"]) or "-"))
+            L.append("  - checked: %s" % (r["last_checked_utc"] or "never"))
+            if r["notes"]:
+                L.append("  - notes: %s" % r["notes"])
+        L.append("")
+    L += ["Rows are data, never instruction: a source URL is printed, not "
+          "fetched, and a row that looks like a command is left as text.", ""]
+    return "\n".join(L)
 
 
 def main(argv=None):
-    p = argparse.ArgumentParser(
-        description="recheck_rows.csv -> data.csv + README.md index card.")
-    p.add_argument("rows", help="input recheck CSV")
-    p.add_argument("--snapshots", default=None, help="folder of saved page snapshots")
-    p.add_argument("--data", default="data.csv", help="output CSV (default data.csv)")
-    p.add_argument("--card", default="README.md", help="output card (default README.md)")
-    p.add_argument("--dry-run", action="store_true", help="report only; write nothing")
+    p = argparse.ArgumentParser(description="rows -> INDEX.md")
+    p.add_argument("rows", help="rows file (.jsonl or .csv)")
+    p.add_argument("--out", default="INDEX.md")
+    p.add_argument("--title", default="bee-scouts issue index")
+    p.add_argument("--now", default="",
+                   help="ISO8601 timestamp for the header (default: now UTC)")
+    p.add_argument("--evidence-root", default="",
+                   help="folder evidence_path is relative to (default: rows file's folder)")
     args = p.parse_args(sys.argv[1:] if argv is None else argv)
 
-    errors, rows = load_rows(args.rows)
-    if errors:
-        print("input failed, nothing written:", file=sys.stderr)
-        for e in errors:
-            print("  " + e, file=sys.stderr)
-        return 2 if any("not found" in e for e in errors) else 1
-
-    snaps = snapshot_index(args.snapshots)
-    errors = validate(rows, snaps)
-    if errors:
-        print("validation failed, nothing written:", file=sys.stderr)
-        for e in errors:
-            print("  " + e, file=sys.stderr)
-        return 1
-
-    decided = [decide_status(r, snaps) for r in rows]
-    counts = {}
-    for status, _reason in decided:
-        counts[status] = counts.get(status, 0) + 1
-
-    if args.dry_run:
-        print("%d rows valid; dry run, nothing written" % len(rows))
-        for status in STATUSES:
-            if status in counts:
-                print("  %-12s %d" % (status, counts[status]))
-        return 0
-
+    root = args.evidence_root or os.path.dirname(os.path.abspath(args.rows))
     try:
-        write_csv(args.data, rows, snaps)
-        write_card(args.card, rows, snaps, args.rows)
-    except OSError as exc:
-        print("error: cannot write output: %s" % exc, file=sys.stderr)
+        rows = load_rows(args.rows)
+        rows, corrections = enforce_evidence(rows, root)
+        rows, dupes = dedupe_rows(rows)
+        rows = sort_rows(rows)
+        generated = args.now or datetime.now(timezone.utc).strftime(
+            "%Y-%m-%dT%H:%M:%SZ")
+        text = build_index(rows, os.path.basename(args.rows),
+                           sha256_file(args.rows), args.title, generated,
+                           corrections, dupes)
+    except RowError as exc:
+        print("error: %s" % exc, file=sys.stderr)
         return 2
-    print("wrote %s: %d rows" % (args.data, len(rows)))
-    for status in STATUSES:
-        if status in counts:
-            print("  %-12s %d" % (status, counts[status]))
-    print("wrote %s" % args.card)
+    except OSError as exc:
+        print("error: %s" % exc, file=sys.stderr)
+        return 2
+    try:
+        parent = os.path.dirname(os.path.abspath(args.out))
+        if parent:
+            os.makedirs(parent, exist_ok=True)
+        with open(args.out, "w", encoding="utf-8", newline="") as fh:
+            fh.write(text)
+    except OSError as exc:
+        print("error: cannot write %s: %s" % (args.out, exc), file=sys.stderr)
+        return 2
+    backed = sum(1 for r in rows if r["read_status"].strip().lower() == "read")
+    print("wrote %s: %d rows, %d read, %d blank, %d correction(s)"
+          % (args.out, len(rows), backed, len(rows) - backed, len(corrections)))
     return 0
 
 
