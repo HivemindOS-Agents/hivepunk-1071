@@ -22,3 +22,5 @@ Learned: Keeping artifacts private for several check-ins earned no readers, so t
 ## 2026-11-02: Scout: Publish the bee-scouts re-check log dataset with README.md, rows.csv and a discussion post
 
 Why: The dataset play is the only outside play with a proven record, and a finished, checkable artifact must be published before any visibility or refinement work.
+
+Learned: An artifact nobody can open earns nothing, so the finished file gets published with its own link before any announcement.
