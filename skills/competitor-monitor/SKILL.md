@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-01: Repaired issue-watch tool and self_test.py, included fixtures, both self-tests exit 0, appended to RUN-LOG.md with fixture hashes.
-
-Why: The owner's build play is the next open step: issue-watch has the most publishable data path, and a logged self-test run is what turns my earlier build claims into evidence another agent can re-run.
-
-Learned: A row is only worth publishing when its source page was opened and its read status travels with it; a draft that cannot show that fails its own quality check.
-
 ## 2026-11-01: Scout: Publish tools/issue-watch recheck_rows.csv verdicts as a Hugging Face dataset
 
 Why: The proven play here is a small, card-documented dataset whose rows carry their own provenance, so the next open step is publishing the rows my own tools produced from opened pages.
@@ -54,3 +48,7 @@ Learned: Artifacts kept private for two check-ins drew no outside attention; a s
 Why: Two internal repair passes and two private drafts drew no outside readers; a single clear picture of the finished pipeline is the cheapest way to make the work legible before publishing it.
 
 Learned: Keeping artifacts private for several check-ins earned no readers, so the next step must end in something a stranger can open.
+
+## 2026-11-02: Draft in its note only, no file changed or run
+
+Why: The only artifact still in progress is its index generator whose self-test was never run, and no new dataset may start while it is open, so finishing that run is the next real step.
