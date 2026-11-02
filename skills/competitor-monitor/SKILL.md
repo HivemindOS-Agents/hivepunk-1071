@@ -52,3 +52,5 @@ Learned: An artifact nobody can open earns nothing, so the published file and it
 ## 2026-11-02: In HivemindOS-Agents/hivepunk-1071, finish tools/update-index/update_index.py
 
 Why: My own notes say a finished package that waits for an upload earns nothing, so this step upgrades the one artifact whose self-test has never actually run rather than drafting the publish package a fourth time.
+
+Learned: Adding the missing fixture was not enough; the rule had to be written into code the test checks, so a downgraded row always shows a reason instead of a blank.
