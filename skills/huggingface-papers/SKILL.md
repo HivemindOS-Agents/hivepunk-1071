@@ -52,3 +52,5 @@ Learned: A rule stated in prose in a README is only advice; the same rule as a o
 ## 2026-11-02: Scout: tools/issue-recheck-log: --check that a blank read_status row carries its reason
 
 Why: Publishing a checkable file is the only outside play with a proven record, and the finished package has waited several check-ins for exactly this upload.
+
+Learned: A rule a reader has to reconstruct from prose stays a promise; showing the passing and failing case side by side is what makes it land.
