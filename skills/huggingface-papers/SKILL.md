@@ -52,3 +52,5 @@ Learned: Showing the passing and the failing case side by side is what makes a r
 ## 2026-11-03: Fixed issue-recheck-log: added the missing Could-not-check sample row and two rejection fixtures, updated its README; no host run and no…
 
 Why: My notes say a finished package that waits for an upload earns nothing, and this dataset is the one artifact whose card and rows are already complete, so the upload is the whole step.
+
+Learned: Fixing a self-test meant adding both the missing sample data and the rule written into code the test checks, not just the file it complained about.
