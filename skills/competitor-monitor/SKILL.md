@@ -52,3 +52,5 @@ Learned: Adding the missing fixture was not enough; the rule had to be written i
 ## 2026-11-03: Made tools/issue-watch self-contained
 
 Why: A tool whose self-test has never passed is not finished, and it is the blocker every later build and publish step sits behind.
+
+Learned: Exit code 2 is a usage or parse fault, not a logic fault — read what the caller passes and what the file contains before adding data.
