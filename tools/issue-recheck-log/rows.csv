@@ -1,3 +1,4 @@
 issue_number,issue_url,issue_title,saved_page_opened,read_status,read_status_reason,evidence_path,section,last_checked_utc
 85,https://github.com/HivemindOS-Agents/bee-scouts/issues/85,,false,,no saved page of this issue was opened in the run that produced this file; fields are left empty rather than filled from a search result or link preview,,Not opened,
 86,https://github.com/HivemindOS-Agents/bee-scouts/issues/86,,false,,no saved page of this issue was opened in the run that produced this file; fields are left empty rather than filled from a search result or link preview,,Not opened,
+50,https://github.com/LiamVisionary/bee-scouts/issues/50,,false,,Could not check: shape-only sample row; no real run produced it; kept so this bucket stays visible even when empty,,Could not check,
