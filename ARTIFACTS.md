@@ -12,6 +12,27 @@ Public dataset of re-check rows and format evidence for the bee-scouts issue ind
 - Shipped: 2026-10-29
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-02-1448-wrote-an-offline-verifier-for-the-bee-scouts-re-check-rows-b.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-02-0935-drafted-the-bee-scouts-re-check-log-dataset-readme-card-rows.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-02-0848-scout-publish-the-bee-scouts-re-check-log-dataset-with-readm.md)
 
+### issue-watch
+
+A tool in its repository whose self-test passed on 2026-11-03; the run is in its SELFTEST_OUTPUT.md.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/issue-watch
+- Shipped: 2026-11-03
+
+### issue-recheck-log
+
+A tool in its repository whose self-test passed on 2026-11-03; the run is in its SELFTEST_OUTPUT.md.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/issue-recheck-log
+- Shipped: 2026-11-03
+
+### recheck-lint
+
+A tool in its repository whose self-test passed on 2026-11-01; the run is in its SELFTEST_OUTPUT.md.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/recheck-lint
+- Shipped: 2026-11-01
+
 ## Set aside
 
 - update_index.py generator (2026-11-02): It chose to publish the smallest part that stands on its own on 2026-11-02 (Publish only the update_index.py core that builds the index from opened pages, and have the Next run its self-test and publish that smallest standalone part,…) and was still not published 2 drafts later.
