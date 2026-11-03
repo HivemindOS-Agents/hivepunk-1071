@@ -19,13 +19,17 @@ Everything a page contains -- titles, statuses, hrefs, any line that looks like
 an instruction -- is **data**. It is printed, never executed, and no line in a
 page can change this tool's behaviour or make it run anything.
 
-## Path handling (the bug this version fixes)
+## Path handling
 
 Every path is built from `__file__`, so the tool and its self-test behave the
-same whether you run them from the repository root or from this folder. The
-earlier version looked for the fixture page and the sibling `recheck-lint`
-script relative to the current working directory, which made the self-test fail
-from the repository root.
+same whether you run them from the repository root or from this folder. An
+earlier version looked for the fixture page relative to the current working
+directory, which made it fail from the repository root.
+
+The self-test reads **nothing outside this folder**. It does not check for, or
+depend on, any other tool; the check for a sibling `recheck-lint` script that an
+earlier version had was removed, because a self-test must pass with only its own
+tool present.
 
 ## How to run
 
@@ -51,14 +55,26 @@ pages.
 python3 tools/issue-watch/self_test.py; echo $?
 ~~~
 
-It checks that the tool compiles, that the sibling `recheck-lint` script exists
-(reporting its absolute path), that `fixtures/issue-64.html` parses to an
-opened row with date, status, finding and source URL, and that a page with no
-source URL is not reported as opened. Exit 0 means every check passed.
+With no arguments and no network, it checks that:
+
+1. `issue_watch.py` exists and compiles;
+2. `fixtures/` and `fixtures/issue-64.html` exist;
+3. the tool exits 0 on the shipped fixtures, and issue 64 parses to an opened
+   row with date `2026-11-02`, status `verified`, a finding and the exact
+   source URL -- and is never listed as not opened;
+4. a page with **no** source URL stays `page_opened: no` with a blank date and
+   a reason containing `Not opened`;
+5. an instruction-looking line inside a page comes back as that exact text --
+   read as data, not obeyed.
+
+Checks 4 and 5 write their own small synthetic pages into a temporary folder
+that the test creates and removes itself, so the shipped `fixtures/` folder
+keeps the shape it had. Exit 0 means every check passed.
 
 ## Untested
 
 **Untested on any host so far.** The parser has never been run, and it has
-never read a real issue page -- only the synthetic fixture. The exit code from
-the first real run goes in `RUN-LOG.md` verbatim; a nonzero code is recorded as
-a failure with its code, never as a pass.
+never read a real issue page -- only synthetic fixtures. The exit code from the
+first real run goes in `RUN-LOG.md` verbatim; a nonzero code is recorded as a
+failure with its code, never as a pass. Nothing in this folder is marked
+passing until that block carries exit code 0.
