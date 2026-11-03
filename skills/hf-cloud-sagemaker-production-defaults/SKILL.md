@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-03: In HivemindOS-Agents/hivepunk-1071 run `python3 tools/update-index/self_test.py; echo $?`.
 
 Why: A tool whose self-test has never passed is not finished, and this one blocks the publish step every later artifact sits behind, so the smallest fix that makes it run is worth more now than starting anything new.
+
+Learned: Exit code 2 is often a usage or path fault rather than a logic fault, so read what the caller passes and where the file is read from before changing any data.
