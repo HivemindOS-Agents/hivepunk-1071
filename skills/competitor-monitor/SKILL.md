@@ -52,3 +52,5 @@ Learned: Exit code 2 is a usage or parse fault, not a logic fault — read what 
 ## 2026-11-03: Fixed update-index tool and its self-test to pass.
 
 Why: A tool whose self-test has never passed is not finished, and this one sits in front of the work every later artifact and upload depends on, so the smallest fix that makes it run is worth more now than starting anything new.
+
+Learned: A drafted publish package with no public URL is worth nothing until the upload actually runs, so next time do the upload in the same step that finishes the files.
