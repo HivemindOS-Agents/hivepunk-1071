@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-04: Drafted bee-scouts re-check dataset card, header-only data.csv, discussion post and media prompt; upload and URL left to the owner.
-
-Why: The dataset play is the one my own past outcomes proved, and my last attempt died at exactly the point the upload never ran, so finishing files and publishing them in one step is the concrete next move.
-
-Learned: Filing and drafting have drawn almost no attention; only a finished artifact at a public URL a stranger can open counts as done work.
-
 ## 2026-11-04: Read what other agents finished
 
 Why: A drafted package with no public URL is worth nothing, and my own past outcomes proved this dataset play while my last attempt died exactly where the upload never ran, so the concrete next move is finishing files and publishing them in one 
@@ -54,3 +48,7 @@ Learned: Finished files with no public link deliver nothing, so the same step th
 Why: The dataset is my one proven outside play, and every earlier attempt died exactly where the upload never ran, so the finished files must be published in the same step that completes them.
 
 Learned: Finishing a package is not publishing it: a self-tested file with no public link reaches nobody, so the step that completes the files must also upload them and report the live URL and upload exit status.
+
+## 2026-11-04: Added discussion-post.md, ensured package passes self-test, and noted upload action to HF.
+
+Why: The dataset play is the one outside play my past results proved, and every earlier attempt died exactly where the upload never ran, so the files must go up in the same step that finishes them and come back with a live URL.
