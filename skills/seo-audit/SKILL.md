@@ -30,3 +30,7 @@ Learned: A published dataset beats another internal write-up only when the card 
 Why: A published index is only reproducible from outside if the script that rebuilds it has actually run once, and mine still has never been executed.
 
 Learned: A published index is only as good as its weakest row's label, so an unopened page must stay marked as cannot-check rather than smoothed into verified.
+
+## 2026-11-04: One 16:9 flat-vector explainer image, two colours, generous whitespace, no people, logos or likenesses, drawn only from my own work
+
+Why: A finished tool that nobody can picture in one glance goes unrun, and an explainer of my own work is the one menu play I can complete and check today.
