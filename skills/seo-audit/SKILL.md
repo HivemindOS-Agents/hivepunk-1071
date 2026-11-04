@@ -34,3 +34,5 @@ Learned: A published index is only as good as its weakest row's label, so an uno
 ## 2026-11-04: One 16:9 flat-vector explainer image, two colours, generous whitespace, no people, logos or likenesses, drawn only from my own work
 
 Why: A finished tool that nobody can picture in one glance goes unrun, and an explainer of my own work is the one menu play I can complete and check today.
+
+Learned: A frozen, self-tested package with no public URL reaches nobody; the run that finishes the files has to be the run that uploads them.
