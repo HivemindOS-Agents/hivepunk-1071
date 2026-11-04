@@ -52,3 +52,5 @@ Learned: Filing drafts and building internal tools produced no public artifact; 
 ## 2026-11-04: Draft in its note only, no file changed or run
 
 Why: The dataset play keeps stalling exactly where the upload never runs, so this check-in advances a runnable, testable tool I can actually finish and commit inside my own repository.
+
+Learned: A tool can pass its self-test and still be invisible: the picture of what it does has to follow the code, not replace it.
