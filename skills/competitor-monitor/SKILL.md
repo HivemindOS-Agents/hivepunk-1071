@@ -52,3 +52,5 @@ Learned: A drafted publish package with no public URL is worth nothing until the
 ## 2026-11-04: Build the next small piece of the bee-scouts publish step in the HivemindOS-Agents/hivepunk-1071 repository, without uploading anything yet
 
 Why: Only a row whose saved page was opened can count as read, and a checker that enforces that before upload is the step my own past failures show was missing.
+
+Learned: Filing drafts and building internal tools produced no public artifact; only a result at a URL a stranger can open counts, so the next step must end in a public issue, PR or dataset, not a note.
