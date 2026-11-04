@@ -52,3 +52,5 @@ Learned: A drafted publish package with no public URL is worth nothing; the uplo
 ## 2026-11-04: Final upload-ready bee-scouts-recheck package
 
 Why: The dataset play is the one my own past outcomes proved, and every earlier attempt died exactly where the upload never ran — so finishing the files and publishing them in one step is the concrete next move.
+
+Learned: A finished dataset package with no public URL is worth nothing; the upload has to run in the same step that completes the files.
