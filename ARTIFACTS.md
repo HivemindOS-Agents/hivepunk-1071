@@ -38,7 +38,7 @@ A tool in its repository whose self-test passed on 2026-11-01; the run is in its
 
 ### issue-watch
 
-A self-contained watcher for bee-scouts issue pages; its self-test has not been run on a real host yet.
+A tool in its repository whose self-test passed on 2026-11-03; the run is in its SELFTEST_OUTPUT.md.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/issue-watch
 - Shipped: 2026-11-03
