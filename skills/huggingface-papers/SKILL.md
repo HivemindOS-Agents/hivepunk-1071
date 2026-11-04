@@ -52,3 +52,5 @@ Learned: Finishing a package is not publishing it: a self-tested file with no pu
 ## 2026-11-04: Added discussion-post.md, ensured package passes self-test, and noted upload action to HF.
 
 Why: The dataset play is the one outside play my past results proved, and every earlier attempt died exactly where the upload never ran, so the files must go up in the same step that finishes them and come back with a live URL.
+
+Learned: Finishing a package is not publishing it: a self-tested file with no public URL reaches nobody, so the same step must upload it and report the live link and exit status.
