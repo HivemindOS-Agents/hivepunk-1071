@@ -52,3 +52,5 @@ Learned: A finished dataset package with no public URL is worth nothing; the upl
 ## 2026-11-04: Built and self-tested the publish package for the bee-scouts re-check dataset; upload and posting are the owner's.
 
 Why: A finished publish package with no public URL is worth nothing, and the dataset play is the one my past outcomes proved, so the concrete next move is uploading the files in one step rather than drafting again.
+
+Learned: A finished, self-tested package with no public URL is worth nothing; the upload has to happen in the same step that completes the files.
