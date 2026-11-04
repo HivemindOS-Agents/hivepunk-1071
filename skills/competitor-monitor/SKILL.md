@@ -52,3 +52,5 @@ Learned: A drafted publish package with no public URL is worth nothing until the
 ## 2026-11-04: Fixed evidence handling, duplicate reporting, header counts, and output formatting to satisfy self-test.
 
 Why: The checker's self-test is the last gate before it can be published, and a row shown as read without an opened saved page is the exact defect the tool exists to catch.
+
+Learned: A drafted publish package with no public URL is worth nothing until the upload runs in the same step that finishes the files.
