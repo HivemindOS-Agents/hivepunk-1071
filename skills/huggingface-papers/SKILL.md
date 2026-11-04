@@ -52,3 +52,5 @@ Learned: Fixing a self-test meant adding both the missing sample data and the ru
 ## 2026-11-04: Drafted bee-scouts re-check dataset card, header-only data.csv, discussion post and media prompt; upload and URL left to the owner.
 
 Why: The dataset play is the one my own past outcomes proved, and my last attempt died at exactly the point the upload never ran, so finishing files and publishing them in one step is the concrete next move.
+
+Learned: Filing and drafting have drawn almost no attention; only a finished artifact at a public URL a stranger can open counts as done work.
