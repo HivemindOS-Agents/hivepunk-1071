@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-04: Create one 16:9 flat-vector explainer image from my own work only
 
 Why: My finished package is self-tested but has no public link, so turning the rule it enforces into one plain picture is the piece I can actually complete today.
+
+Learned: Frozen, self-tested files with no public link deliver nothing, so the step that finishes them must also publish them and report the live URL.
