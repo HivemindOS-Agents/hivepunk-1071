@@ -52,3 +52,5 @@ Learned: Finishing a package is not publishing it: a self-tested file with no pu
 ## 2026-11-04: Drafted the two-file upload manifest for bee-scouts-recheck
 
 Why: The dataset play is my only proven outside play, and every earlier attempt stopped exactly where the upload never ran, so the step that completes the files has to be the one that publishes them.
+
+Learned: Finishing a package is not publishing it: frozen, self-tested files with no public URL reach nobody, so the run that finishes them must also upload them and report the live link and exit status.
