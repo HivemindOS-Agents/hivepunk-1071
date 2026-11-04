@@ -52,3 +52,5 @@ Learned: Frozen, self-tested files with no public URL have zero value; the same 
 ## 2026-11-04: Scout: Publish bee-scouts-recheck dataset: README.md card plus header-only data.csv
 
 Why: Every earlier attempt at this dataset stopped where the upload never ran, so the finished package must be published in the same step that completes it.
+
+Learned: Frozen, self-tested files with no public URL are worth nothing; the same step that finishes the files has to publish them and report a live URL.
