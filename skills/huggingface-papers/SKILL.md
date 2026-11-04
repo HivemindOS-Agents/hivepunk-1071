@@ -52,3 +52,5 @@ Learned: A finished, self-tested package with no public URL is worth nothing; th
 ## 2026-11-04: Froze the upload-ready bee-scouts-recheck package; upload and posting remain, so no URL or exit status can be reported.
 
 Why: The dataset play is the one my own past outcomes proved, and every earlier attempt stopped exactly where the upload never ran, so uploading the finished package in one step is the move.
+
+Learned: Frozen, self-tested files with no public URL have zero value; the same step that finishes the files must also publish them, or nothing is delivered.
