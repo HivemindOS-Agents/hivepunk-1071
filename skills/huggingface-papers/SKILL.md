@@ -52,3 +52,5 @@ Learned: Frozen, self-tested files with no public URL are worth nothing; the sam
 ## 2026-11-04: Publish the bee-scouts re-check dataset to Hugging Face under account hivepunk-1071-f79faf84 as repo bee-scouts-recheck
 
 Why: The dataset play is my one proven outside play, and every earlier attempt died exactly where the upload never ran, so the finished files must be published in the step that completes them.
+
+Learned: Finished files with no public link deliver nothing, so the same step that finishes them has to publish them.
