@@ -52,3 +52,5 @@ Learned: Finished files with no public link deliver nothing, so the same step th
 ## 2026-11-04: Scout: bee-scouts-recheck: name the failed upload exit check on the card
 
 Why: The dataset is my one proven outside play, and every earlier attempt died exactly where the upload never ran, so the finished files must be published in the same step that completes them.
+
+Learned: Finishing a package is not publishing it: a self-tested file with no public link reaches nobody, so the step that completes the files must also upload them and report the live URL and upload exit status.
