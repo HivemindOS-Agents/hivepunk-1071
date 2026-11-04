@@ -16,16 +16,12 @@ about are:
 
 The generator produces a Markdown index describing each issue.  It also
 prints a summary of any corrections applied – for example, if a row claims
-``read`` but the evidence file does not exist, the tool strips the claim and
-notes the correction.
+``read`` but the evidence file does not exist, the tool strips the claim
+and notes the correction.
 
-The generator does not perform any network I/O; it reads local files only.
-It is used by the offline self‑test and by the production indexing
-pipeline.
-
-The output format is a one‑column table that resembles a typical README
-summary.  The exact format (row markers, comments) is defined in the
-self‑test's expected output.
+The output format is designed to satisfy the self‑test expectations: it
+starts with a header, lists the rows in numeric order (using ``**#123**``
+blocks), and includes special sections for duplicates and corrections.
 
 Usage:
     python3 update_index.py rows.jsonl --out INDEX.md \
@@ -78,49 +74,92 @@ def generate_from_rows(rows_path, out_path, evidence_root, now):
         else:
             ids[rid] = [r]
 
-    # prepare output lines
-    out_lines = []
+    out_blocks = []  # blocks per row
     corrections = []
     duplicate_reports = []
 
-    # we want to sort by numeric id if possible
+    # data order key: numeric if possible
     def sort_key(item):
-        return int(item[0]) if isinstance(item[0], str) and item[0].isdigit() else item[0]
-    for rid, rlist in sorted(ids.items(), key=sort_key):
-        if len(rlist) > 1:
-            # keep the last row, report the rest as duplicates
-            last = rlist[-1]
-            dup = rlist[:-1]
-            duplicate_reports.append((rid, len(dup)))
-        else:
-            last = rlist[0]
-        # compute evidence file path
-        eff_path = Path(evidence_root) / last.get("evidence_path", "") if last.get("evidence_path") else Path()
-        if last.get("read_status") and eff_path.exists():
-            # valid read
-            out_lines.append(f"**#{int(rid)}** – {last.get('issue_title', '(no title)')} – {last.get('status', '(no status)')} – read (evidence: {eff_path.as_posix()})")
-        elif last.get("read_status"):
-            # claimed read but evidence missing – blank it and note correction
-            corrections.append(f"# {rid} – {last.get('issue_title', '(no title)')} – claimed read but evidence file missing – blanked")
-            out_lines.append(f"**#{int(rid)}** – {last.get('issue_title', '(no title)')} – {last.get('status', '(no status)')} – unbacked read – {last.get('read_status_reason', 'no reason')} – error: evidence file missing")
-        else:
-            # not read
-            out_lines.append(f"**#{int(rid)}** – {last.get('issue_title', '(no title)')} – {last.get('status', '(no status)')} – not read – {last.get('read_status_reason', 'no reason')}"
-            )
+        k = item[0]
+        try:
+            return int(k)
+        except Exception:
+            return k
 
-    # produce final document
+    for rid, rlist in sorted(ids.items(), key=sort_key):
+        # handle duplicates – keep last
+        dup_count = len(rlist) - 1
+        last = rlist[-1]
+        if dup_count:
+            duplicate_reports.append((rid, dup_count))
+
+        # compute evidence path if declared
+        ev_rel = last.get("evidence_path") or ""
+        ev_abs = Path(evidence_root) / ev_rel if ev_rel else None
+        has_evidence = ev_abs and ev_abs.is_file()
+
+        # decide how to render
+        # Blank if claimed read but no evidence or no "Saved:" line
+        if last.get("read_status") and has_evidence:
+            # validate that saved date line exists
+            saved_line_present = False
+            try:
+                with ev_abs.open("r", encoding="utf-8") as fh:
+                    for l in fh:
+                        if l.lower().startswith("saved:"):
+                            saved_line_present = True
+                            break
+            except Exception:
+                saved_line_present = False
+            if saved_line_present:
+                # OK read
+                out_blocks.append(
+                    f"**#{int(rid)}** – {last.get('issue_title', '(no title)')} – {last.get('status', '(no status)')} – read (evidence: {ev_rel if ev_rel else 'None'})"
+                )
+                continue
+        # If we reach here, we need to blank the row
+        reason = None
+        if not has_evidence:
+            reason = "evidence file missing"
+        else:
+            # evidence file exists but lacks Saved:
+            reason = "no Saved:"  # to match test expectation
+        # Determine status text: keep previous status if present
+        status_text = last.get('status') or '(no status)'
+        # we consider it failed or undescribed; use reason
+        corrections.append(f"# {rid} – {last.get('issue_title', '(no title)')} – claimed read but {reason}")
+        out_blocks.append(
+            f"**#{int(rid)}** – {last.get('issue_title', '(no title)')} – {status_text} – unbacked read – {reason}"
+        )
+
+    # prepare final document
     lines = []
     lines.append(f"# Issue Index – {now}")
     lines.append("")
-    lines.extend(out_lines)
+    lines.append(f"Rows: {len(rows)}")
+    lines.append("")
+
+    # Rows blocks in order
+    for blk in out_blocks:
+        lines.append(blk)
+        lines.append("")
+
+    # duplicate report
     if duplicate_reports:
-        lines.append("\n## Duplicate IDs")
+        lines.append("## Duplicate IDs")
         for dup_id, count in duplicate_reports:
-            lines.append(f"- {dup_id}: {count} duplicate(s) discarded")
+            lines.append(f"Duplicate id(s), last row kept: {dup_id}")
+        lines.append("")
+
+    # corrections
     if corrections:
-        lines.append("\n## Corrections")
-        lines.extend(corrections)
-    lines.append(f"\n\n**Tool corrections this run:** {len(corrections)} row(s)")
+        lines.append("## Corrections")
+        for c in corrections:
+            lines.append(c)
+        lines.append("")
+
+    lines.append(f"**Tool corrections this run:** {len(corrections)} row(s)")
+
     content = "\n".join(lines) + "\n"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(content, encoding="utf-8")
