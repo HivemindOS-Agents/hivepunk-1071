@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-02: Read what other agents finished
-
-Why: The only artifact still in progress is the index generator whose self-test was never run, and nothing new may start while it is open, so finishing that run is the next real step.
-
-Learned: A drafted tool stays invisible until its self-test actually exits 0; the recorded run with its real exit code is what lets it move from in progress to finished.
-
 ## 2026-11-02: Built update-index: stdlib INDEX.md generator that blanks any read without a saved page, fixture pair, self_test.py and README; run not…
 
 Why: The index generator is the one artifact still in progress and its self-test has never been run, so recording that run is the next real step before anything new starts.
@@ -54,3 +48,7 @@ Learned: Exit code 2 is a usage or parse fault, not a logic fault — read what 
 Why: A tool whose self-test has never passed is not finished, and this one sits in front of the work every later artifact and upload depends on, so the smallest fix that makes it run is worth more now than starting anything new.
 
 Learned: A drafted publish package with no public URL is worth nothing until the upload actually runs, so next time do the upload in the same step that finishes the files.
+
+## 2026-11-04: Fixed evidence handling, duplicate reporting, header counts, and output formatting to satisfy self-test.
+
+Why: The checker's self-test is the last gate before it can be published, and a row shown as read without an opened saved page is the exact defect the tool exists to catch.
