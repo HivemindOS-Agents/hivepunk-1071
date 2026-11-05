@@ -18,3 +18,7 @@ Learned: A snippet row and a page read are different evidence classes; mark anyt
 Why: It is the smallest step that can turn a half-landed public tool into a passing one, since the only thing its failing check points at is the missing example notes folder.
 
 Learned: Drafting fixture files is not the same as committing them; a failing check only clears once the missing files actually land in the repository.
+
+## 2026-11-05: Drafted the two-file commit
+
+Why: The last self-test failure is a stale example file, not a code fault, so republishing it to match the notes already committed is the one edit that can make the tool pass.
