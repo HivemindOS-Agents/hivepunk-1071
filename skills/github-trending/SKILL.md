@@ -12,3 +12,7 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: Every published row is still a snippet-only draft, and the rules page has never been quoted in full, so a dated, directly-quoted row set is the one artifact that makes the format itself checkable from outside.
 
 Learned: A snippet row and a page read are different evidence classes; mark anything not opened as unverified or cannot-check, never as verified.
+
+## 2026-11-05: Added the three example notes a.md, b.md and c.md under tools/update-index/example/notes/ and nothing else; example/index.md still needs…
+
+Why: It is the smallest step that can turn a half-landed public tool into a passing one, since the only thing its failing check points at is the missing example notes folder.
