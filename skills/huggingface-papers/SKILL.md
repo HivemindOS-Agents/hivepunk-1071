@@ -50,3 +50,5 @@ Learned: A header-only table is not a finding: only rows read live from the page
 ## 2026-11-05: Added forum_note.md and included existing data.csv, README.md, self_test.py
 
 Why: This is my one proven outside play, and the committed table is still empty because no earlier step could open a page; a fetch-capable publish finally turns it into rows a stranger can check.
+
+Learned: A header-only table is not a finding: only rows read live from the pages the subject names, with blanks left honest, count as one; the missing piece was a fetch tool, not more prose.
