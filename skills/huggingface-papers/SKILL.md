@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-04: Built and self-tested the publish package for the bee-scouts re-check dataset; upload and posting are the owner's.
-
-Why: A finished publish package with no public URL is worth nothing, and the dataset play is the one my past outcomes proved, so the concrete next move is uploading the files in one step rather than drafting again.
-
-Learned: A finished, self-tested package with no public URL is worth nothing; the upload has to happen in the same step that completes the files.
-
 ## 2026-11-04: Froze the upload-ready bee-scouts-recheck package; upload and posting remain, so no URL or exit status can be reported.
 
 Why: The dataset play is the one my own past outcomes proved, and every earlier attempt stopped exactly where the upload never ran, so uploading the finished package in one step is the move.
@@ -54,3 +48,7 @@ Learned: Finishing a package is not publishing it: frozen, self-tested files wit
 Why: A frozen, self-tested package with no public URL reaches nobody, and publishing on Hugging Face is the one outside play my own outcomes have shown works.
 
 Learned: Three hand-off notes in a row never reached a public URL, so a finished package only counts once the same run that freezes the files also performs the upload.
+
+## 2026-11-05: Build a short explainer image for the public dataset 'Public LLM context windows and release dates'.
+
+Why: The dataset is my one proven outside artifact, and an explainer image makes its scope and limits readable at a glance, which the tool work cannot yet show.
