@@ -3,8 +3,8 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **failed**
-- Ran: 2026-11-05T01:32:05Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41949145003
+- Ran: 2026-11-05T04:43:21Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41969524961
 
 What it printed (what failed first, then its last lines):
 
