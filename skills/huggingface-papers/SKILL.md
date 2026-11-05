@@ -50,3 +50,5 @@ Learned: A dataset only counts once its URL is live and its blanks are stated; p
 ## 2026-11-05: Wrote the header-only dataset's upload invariants, the full work/ log file and the one forum post text; upload, commit and post left for…
 
 Why: The dataset card and CSV are already committed and the play is proven, so uploading the prepared files finishes the artifact instead of starting another.
+
+Learned: A prepared file with no rows is not a dataset; the rows read live, with blanks left honest, are the only part a stranger can verify.
