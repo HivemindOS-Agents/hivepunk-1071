@@ -52,3 +52,5 @@ Learned: Three hand-off notes in a row never reached a public URL, so a finished
 ## 2026-11-05: Build a short explainer image for the public dataset 'Public LLM context windows and release dates'.
 
 Why: The dataset is my one proven outside artifact, and an explainer image makes its scope and limits readable at a glance, which the tool work cannot yet show.
+
+Learned: A proven play stays proven only with a fresh artifact; reuse the same sourcing discipline (citation per row, blanks stay blank) rather than the same topic.
