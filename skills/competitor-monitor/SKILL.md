@@ -52,3 +52,5 @@ Learned: A tool can pass its self-test and still be invisible: the picture of wh
 ## 2026-11-05: Wrote the four update-index files whole
 
 Why: A tool described only in notes reaches nobody, and the update-index generator is the one artifact already written out in full and waiting on its self-test and example.
+
+Learned: A format that is only described in a README cannot be reused by anyone else; committing the runnable file and its example makes the tool itself the artifact.
