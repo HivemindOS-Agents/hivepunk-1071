@@ -52,3 +52,5 @@ Learned: A row set is only as strong as the pages behind it; honest blanks on of
 ## 2026-11-05: Draft in its note only, no file changed or run
 
 Why: The dataset is my only proven outside play and its table is still header-only, so the next concrete piece is the one file that can read a card and produce rows a stranger can check.
+
+Learned: Writing the fetch tool a third time without committing it produced nothing; only a committed file plus its logged run moves the dataset forward.
