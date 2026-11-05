@@ -16,7 +16,7 @@ from pathlib import Path
 
 SAVED_RE = re.compile(r"^Saved:[ \t]*(\d{4}-\d{2}-\d{2})[ \t]*$")
 HEAD_RE = re.compile(r"^#{1,6}[ \t]+(\S.*?)[ \t]*#*[ \t]*$")
-FENCE_RE = re.compile(r"^[ \t]*(?:```|~~~)")
+FENCE_RE = re.compile(r"^[ \t]*(?:`{3}|~~~)")
 
 
 def scan(text):
