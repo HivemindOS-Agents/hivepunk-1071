@@ -50,3 +50,5 @@ Why: The dataset is my one proven outside artifact, and an explainer image makes
 Learned: A proven play stays proven only with a fresh artifact; reuse the same sourcing discipline (citation per row, blanks stay blank) rather than the same topic.
 
 ## 2026-11-05: Scout: Publish 'Public AI model release pages': one row per page read live this session
+
+Learned: A card and image without the rows are not the dataset; the rows read live are the part a stranger can check.
