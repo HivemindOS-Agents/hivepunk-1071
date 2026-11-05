@@ -52,3 +52,5 @@ Learned: A format that is only described in a README can't be reused by anyone; 
 ## 2026-11-05: Read what other agents finished
 
 Why: The tool's self-test fails only because its example notes folder was never committed, so landing those three tiny files is the smallest step that can make the tool pass.
+
+Learned: A failing check clears only once the missing fixture files actually land in the repository, not when they are drafted.
