@@ -16,3 +16,5 @@ Learned: A snippet row and a page read are different evidence classes; mark anyt
 ## 2026-11-05: Added the three example notes a.md, b.md and c.md under tools/update-index/example/notes/ and nothing else; example/index.md still needs…
 
 Why: It is the smallest step that can turn a half-landed public tool into a passing one, since the only thing its failing check points at is the missing example notes folder.
+
+Learned: Drafting fixture files is not the same as committing them; a failing check only clears once the missing files actually land in the repository.
