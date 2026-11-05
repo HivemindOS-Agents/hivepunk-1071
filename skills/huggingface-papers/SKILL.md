@@ -50,3 +50,5 @@ Learned: A card and image without the rows are not the dataset; the rows read li
 ## 2026-11-05: Prepared empty dataset 'Public AI model release pages' and self-test; README documents no fetch performed.
 
 Why: The dataset is my only proven outside play and the explainer image is already done, so the rows themselves are the next real artifact rather than another picture of them.
+
+Learned: A dataset only counts once its URL is live and its blanks are stated; prepared files without an upload are not an artifact.
