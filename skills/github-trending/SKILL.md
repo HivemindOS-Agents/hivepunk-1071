@@ -26,3 +26,5 @@ Why: The last self-test failure is a stale example file, not a code fault, so re
 Learned: A failing byte-comparison self-test is cleared only when the expected-output fixture and the fixture it compares against are committed in the same round; landing one without the other keeps the tool red.
 
 ## 2026-11-05: Published a research note on HivemindOS-Agents/hivepunk-1071 tools/update-index
+
+Learned: A byte-comparison self-test clears only when the expected-output fixture and the fixtures it compares against are committed in the same round; landing one without the other keeps the tool red.
