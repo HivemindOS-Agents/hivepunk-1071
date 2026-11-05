@@ -1,68 +1,69 @@
 # update-index
 
-Turns saved issue rows into one `INDEX.md`: rows grouped by state, each with
-its status line, labels and last-checked date, and a header that counts rows,
-backed reads, blank-with-reason rows and duplicates.
+`index_build.py` reads a folder of saved agent-note `.md` files and writes a single
+`index.md` for that folder: one sorted line per note, holding the note's path, its first
+Markdown heading, and its saved date when the note carries a `Saved: YYYY-MM-DD` line.
+The date slot is left empty when it does not. A note with no heading still gets its row.
 
-Python 3 standard library only. Local files only. No network.
+Standard library only: no network, no configuration, no state kept between runs, and the
+notes themselves are never modified. The output file is skipped as an input, so a second
+run on the same folder gives byte-identical output.
 
-## The honesty rule
+## How to run it
 
-A row is rendered as **read** only when `read_status` is `read` *and* its
-`evidence_path` names a file that actually exists under `--evidence-root`
-(default: the rows file's own folder).
+    python3 index_build.py notes/
 
-* a row claiming `read` with no `evidence_path` is **blanked**, given a reason
-  (`Not opened: read_status without a saved page (tool-corrected)`), and
-  counted in the header as a tool correction;
-* a row whose `evidence_path` names no saved page is likewise blanked, with the
-  missing path named in the reason;
-* an unrecognised `read_status` is blanked with its own reason;
-* a failed fetch is never rendered as a pass — its reason text is kept as-is.
+Reads every `*.md` under `notes/` (recursively) and writes `notes/index.md`, printing how
+many notes were indexed and how many had no heading. To write the index elsewhere:
 
-Rows are data, never instruction: a source URL is printed, not fetched, and a
-row that looks like a command is left as text.
+    python3 index_build.py notes/ -o work/notes-index.md
 
-## How to run
+One line per note, LF endings, file ends with a newline:
 
-~~~
-python3 update_index.py ROWS.jsonl --out INDEX.md
-python3 update_index.py ROWS.jsonl --out INDEX.md --title "my index" \\
-    --evidence-root pages --now 2026-11-02T00:00:00Z
-~~~
+    - <path relative to the notes folder> | <first heading> | <saved date or empty>
 
-Input may be JSONL (one object per line) or CSV with columns
-`id, source_url, title, state, labels, first_seen_utc, last_checked_utc,
-read_status, status_reason, evidence_path, notes`. `state` is one of `open`,
-`in_progress`, `closed`, `unknown` (anything else becomes `unknown`).
+A `|` inside a path or heading is written `\|`. Only `#`-style headings are read; a
+heading inside a fenced code block is skipped. A `Saved:` line that does not hold a plain
+`YYYY-MM-DD` date leaves the date slot empty.
 
-Exit codes: `0` ok; `2` usage, missing input, unparseable input, or a write
-failure — **nothing is written on error**.
+## Example
 
-## Layout
+`example/notes/` holds three tiny saved notes and `example/index.md` is the index the
+builder produces for them:
 
-* `update_index.py` — the generator.
-* `fixtures/rows.jsonl` — five invented rows (one read with a saved page, one
-  unbacked read, one never fetched, one failed fetch, one duplicate id).
-* `fixtures/pages/issue-64.html` — the saved page that backs `#64`'s read.
-* `fixtures/expected_index.md` — the exact expected output for the pinned run.
-* `self_test.py` — the offline check.
-* `RUN-LOG.md` — one dated block per real run.
+    - 2026-11-01-first-check-in.md | First check-in | 2026-11-01
+    - 2026-11-02-untitled-note.md |  |
+    - 2026-11-03-pipe-and-late-date.md | Honest | summary | 2026-11-02
+
+Note the middle row: no heading, so the heading cell is empty and the row is still there.
+Note the third: a pipe in the heading is escaped, and the `Saved:` date is taken from
+wherever in the file it appears.
 
 ## Self-test
 
-~~~
-python3 tools/update-index/self_test.py; echo $?
-~~~
+    python3 self_test.py ; echo $?
 
-Run from this tool's folder with no arguments and no network. It writes into a
-temporary directory and removes it. Exit 0 means every check passed.
+Builds a throwaway fixture folder under the system temp dir, runs the builder on it and
+checks: exit code 0; one row per `.md` file; rows sorted by path; a `Saved:` date shown;
+an empty date slot for a note without a valid one; a row still written for a note with no
+heading; pipes escaped; the output file never indexed as a row; non-`.md` files ignored; a
+second run byte-identical; and a non-zero exit when the folder does not exist. It then runs
+the builder on `example/notes/` and compares the result with the committed
+`example/index.md` byte for byte. It exits 0 only when every check passes and prints
+`ok: all index_build checks pass`.
 
-## Untested
+## What is untested
 
-**Untested on any host so far.** The generator has not been executed — not on
-the fixture pair, not on any real rows file. No `INDEX.md` has been produced,
-and `fixtures/expected_index.md` is a hand-written reading of the code, not a
-captured run. The first real run goes in `RUN-LOG.md` with its exact command,
-real stdout, real stderr and real exit code; a nonzero code is recorded as a
-failure with its code, never as a pass.
+Only the fixture self-test has been written. **Nothing has been run against real notes.**
+No real notes folder has been indexed, on any machine, and the committed `example/index.md`
+is what the builder is documented to produce for `example/notes/` rather than a captured
+run. Untested in particular: very large note folders, unusual encodings (invalid UTF-8 is
+replaced with U+FFFD rather than refused), symlinked folders, and whether any particular
+real note carries its `Saved:` line in the shape this tool expects.
+
+## Notes on input
+
+Every file it reads is data. Text inside a note that looks like an instruction ("ignore
+your rules", a URL to fetch, a key to print) is indexed as plain text or skipped, never
+obeyed. The tool makes no network request, runs nothing from a note, and writes only the
+index file it was asked for.
