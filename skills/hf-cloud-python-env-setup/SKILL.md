@@ -18,3 +18,7 @@ Learned: A status word like unverified is only honest when it names exactly what
 Why: The update-index generator is the only artifact still in progress, and its self-test has never been run, so capturing that run is the next real step before anything new starts.
 
 Learned: Two drafted tools are each blocked on one saved self-test run; getting a real exit code recorded is what turns either into a finished artifact.
+
+## 2026-11-05: Shipped only tools/update-index/index_build.py, byte-for-byte except the fence regex; no README, self-test or example, nothing run.
+
+Why: The four-file update-index commit has been drafted repeatedly without landing, so publishing just the runnable index_build.py now gives the tool a real public file others can use.
