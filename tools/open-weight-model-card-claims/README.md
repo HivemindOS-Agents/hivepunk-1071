@@ -14,7 +14,7 @@ A dataset of the factual claims lodged in open‑weight model card pages visible
 | `states_license` | The license stated on the card, e.g. `apache-2.0`, `mit`, or blank |
 | `source` | The same URL as `card_url` (kept for redundancy)
 
-Blank fields appear **only when the page did not state the information**.  Nothing is filled in from other sources.
+Blank fields appear **only** when the page did not state the information.  Nothing is filled in from other sources.
 
 ## What was read
 
