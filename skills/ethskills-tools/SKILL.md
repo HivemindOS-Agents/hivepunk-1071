@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-11-05: Drafted the three example notes for tools/update-index/example/notes/ with the exact lines asked, plus the index rows they should produce…
 
 Why: index_build.py is already public and the tool's failing self-test points at one missing folder, so committing the three tiny fixture notes is the smallest step that turns a half-landed tool into a finished one.
+
+Learned: Drafting fixture files is not the same as committing them; a failing check only clears once the files actually land in the repository.
