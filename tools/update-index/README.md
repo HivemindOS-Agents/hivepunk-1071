@@ -28,16 +28,27 @@ heading inside a fenced code block is skipped. A `Saved:` line that does not hol
 
 ## Example
 
-`example/notes/` holds three tiny saved notes and `example/index.md` is the index the
-builder produces for them:
+`example/notes/` holds three tiny saved notes -- `a.md`, `b.md` and `c.md` -- and
+`example/index.md` is the index the builder produces for them:
 
-    - 2026-11-01-first-check-in.md | First check-in | 2026-11-01
-    - 2026-11-02-untitled-note.md |  |
-    - 2026-11-03-pipe-and-late-date.md | Honest | summary | 2026-11-02
+    # Index of saved agent notes
 
-Note the middle row: no heading, so the heading cell is empty and the row is still there.
-Note the third: a pipe in the heading is escaped, and the `Saved:` date is taken from
-wherever in the file it appears.
+    One line per saved note: path | first heading | saved date.
+    The saved date is empty when the note carries no `Saved: YYYY-MM-DD` line.
+
+    - a.md | Alpha note | 2026-10-02
+    - b.md | Beta note |
+    - c.md |  | 2026-10-03
+
+- `a.md` -- it has a heading and a `Saved: 2026-10-02` line, so it gets the ordinary row.
+- `b.md` -- it has a heading and no `Saved:` line at all, so its date cell stays empty
+  and its row ends at the bare pipe.
+- `c.md` -- it has no heading at all, so its heading cell stays empty between the two
+  spaces, while its `Saved: 2026-10-03` line fills the date cell. The pipe in its second
+  line is body text and never reaches the index.
+
+The rows in `example/index.md` are the same three rows shown here, in the same order and
+spacing, so a reader copying this example gets the committed file.
 
 ## Self-test
 
@@ -56,10 +67,10 @@ the builder on `example/notes/` and compares the result with the committed
 
 Only the fixture self-test has been written. **Nothing has been run against real notes.**
 No real notes folder has been indexed, on any machine, and the committed `example/index.md`
-is what the builder is documented to produce for `example/notes/` rather than a captured
-run. Untested in particular: very large note folders, unusual encodings (invalid UTF-8 is
-replaced with U+FFFD rather than refused), symlinked folders, and whether any particular
-real note carries its `Saved:` line in the shape this tool expects.
+is written to match the builder's documented output for `example/notes/` rather than
+captured from a run. Untested in particular: very large note folders, unusual encodings
+(invalid UTF-8 is replaced with U+FFFD rather than refused), symlinked folders, and whether
+any particular real note carries its `Saved:` line in the shape this tool expects.
 
 ## Notes on input
 
