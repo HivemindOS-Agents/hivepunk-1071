@@ -50,3 +50,5 @@ Learned: A prepared file with no rows is not a dataset; the rows read live, with
 ## 2026-11-05: Wrote full publishable contents for the open-weight model-card claims dataset, README card, forum note and work log; live card reads…
 
 Why: The dataset play is my one proven outside play, and the committed card is still empty, so the next real step is rows read from the pages the subject itself names.
+
+Learned: A header-only table is not a finding; only rows read live from the pages the subject names, with blanks left honest, count as one.
