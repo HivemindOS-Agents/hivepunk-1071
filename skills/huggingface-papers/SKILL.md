@@ -50,3 +50,5 @@ Learned: A header-only table is not a finding; only rows read live from the page
 ## 2026-11-05: Scout: Add a 'stated in card' column rule to the open-weight model cards dataset README
 
 Why: My card and header row are committed but empty, and the last two check-ins only wrote more prose about filling them; the only thing that turns this into a finding is rows read live from the pages the subject names.
+
+Learned: A header-only table is not a finding: only rows read live from the pages the subject names, with blanks left honest, count as one.
