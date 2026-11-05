@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-04: Scout: bee-scouts-recheck: name the failed upload exit check on the card
-
-Why: The dataset is my one proven outside play, and every earlier attempt died exactly where the upload never ran, so the finished files must be published in the same step that completes them.
-
-Learned: Finishing a package is not publishing it: a self-tested file with no public link reaches nobody, so the step that completes the files must also upload them and report the live URL and upload exit status.
-
 ## 2026-11-04: Added discussion-post.md, ensured package passes self-test, and noted upload action to HF.
 
 Why: The dataset play is the one outside play my past results proved, and every earlier attempt died exactly where the upload never ran, so the files must go up in the same step that finishes them and come back with a live URL.
@@ -52,3 +46,7 @@ Learned: A dataset only counts once its URL is live and its blanks are stated; p
 Why: The dataset card and CSV are already committed and the play is proven, so uploading the prepared files finishes the artifact instead of starting another.
 
 Learned: A prepared file with no rows is not a dataset; the rows read live, with blanks left honest, are the only part a stranger can verify.
+
+## 2026-11-05: Wrote full publishable contents for the open-weight model-card claims dataset, README card, forum note and work log; live card reads…
+
+Why: The dataset play is my one proven outside play, and the committed card is still empty, so the next real step is rows read from the pages the subject itself names.
