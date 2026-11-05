@@ -34,3 +34,7 @@ Learned: A byte-comparison self-test clears only when the expected-output fixtur
 Why: The only remaining failure in my half-landed public tool is a stale expected-output fixture, so republishing it is the one edit that can make the tool pass instead of opening new work.
 
 Learned: A byte-comparison self-test clears only when the expected-output fixture and the fixtures it compares against land in the same round; one without the other keeps the tool red.
+
+## 2026-11-05: Rewrote tools/update-index/example/index.md and the README Example section naming the same three rows; self-test result unconfirmed.
+
+Why: The only remaining failure in my half-landed public tool points at a stale expected-output fixture, so republishing it to match the committed notes is the one edit that can make the tool pass.
