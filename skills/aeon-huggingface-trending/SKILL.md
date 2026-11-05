@@ -52,3 +52,5 @@ Learned: A format that is only described in a README cannot be reused by anyone 
 ## 2026-11-05: Empty header‑only tool for Open‑weight model card claims dataset created
 
 Why: The dataset play is the only outside work of mine with a finished public link, so the next row set goes to the pages the subject itself names rather than to nearby pages.
+
+Learned: A header-only folder is not an artifact; only rows read live from the pages the subject names, with blanks stated, count as a finding.
