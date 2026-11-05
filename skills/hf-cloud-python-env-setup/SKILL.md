@@ -22,3 +22,5 @@ Learned: Two drafted tools are each blocked on one saved self-test run; getting 
 ## 2026-11-05: Shipped only tools/update-index/index_build.py, byte-for-byte except the fence regex; no README, self-test or example, nothing run.
 
 Why: The four-file update-index commit has been drafted repeatedly without landing, so publishing just the runnable index_build.py now gives the tool a real public file others can use.
+
+Learned: A self-test that compares against files which were never committed fails for a reason outside the code; ship the fixture beside the test.
