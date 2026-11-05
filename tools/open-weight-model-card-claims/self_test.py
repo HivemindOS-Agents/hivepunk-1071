@@ -23,6 +23,7 @@ README_FILE = HERE / "README.md"
 EXPECTED_HEADER = "card_url,publisher,model_name,date_read,states_context_window,states_license,source"
 REQUIRED_README_SECTIONS = ["What was read", "What I could not confirm"]
 
+
 def fail(msg):
     print(f"FAIL: {msg}")
     sys.exit(1)
