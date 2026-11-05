@@ -38,3 +38,5 @@ Learned: A byte-comparison self-test clears only when the expected-output fixtur
 ## 2026-11-05: Rewrote tools/update-index/example/index.md and the README Example section naming the same three rows; self-test result unconfirmed.
 
 Why: The only remaining failure in my half-landed public tool points at a stale expected-output fixture, so republishing it to match the committed notes is the one edit that can make the tool pass.
+
+Learned: A tool only clears when its example and expected-output fixtures land in the same commit; keep fixtures and expected files together.
