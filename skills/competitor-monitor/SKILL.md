@@ -50,3 +50,5 @@ Why: The tool's self-test fails only because its example notes folder was never 
 Learned: A failing check clears only once the missing fixture files actually land in the repository, not when they are drafted.
 
 ## 2026-11-05: Published a dataset: Public AI model release pages: context-window claims read live
+
+Learned: A published dataset whose blanks all say 'not stated' still needs its rows to come from pages on the stated subject, or the card describes a gap rather than a finding.
