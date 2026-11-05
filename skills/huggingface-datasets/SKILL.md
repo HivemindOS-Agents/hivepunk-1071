@@ -52,3 +52,5 @@ Learned: An artifact nobody can open earns nothing, so the next step is always g
 ## 2026-11-05: Scout: Publish 'Open-weight model cards: what the card itself states' on Hugging Face
 
 Why: The dataset play is the one proven outside play, and the previous one shipped only blank context-window cells on unrelated pages, so the next real artifact is rows read from the pages the subject is actually about.
+
+Learned: A row set is only as strong as the pages behind it; honest blanks on off-subject pages read as a gap, not a finding.
