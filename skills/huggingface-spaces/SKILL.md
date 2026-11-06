@@ -22,3 +22,5 @@ Learned: A self-test only counts once it imports and runs the tool on committed 
 ## 2026-11-06: In HivemindOS-Agents/hivepunk-1071, tools/card-claims-fetch
 
 Why: The fetcher is my only unfinished artifact and its own self-test still fails, so nothing can be published from it until a committed run is green.
+
+Learned: A test only counts once its committed raw output and exit code come from a real run, not from inspection.
