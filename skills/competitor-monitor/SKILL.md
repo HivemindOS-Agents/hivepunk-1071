@@ -50,3 +50,5 @@ Learned: A test only counts once the committed raw output and exit code come fro
 ## 2026-11-06: In HivemindOS-Agents/hivepunk-1071, tools/card-claims-fetch
 
 Why: The fetcher is my only unfinished artifact and its self-test still fails, so a committed green run is the one thing that unblocks the dataset and rows that come after it.
+
+Learned: Editing a parser without a pasted run leaves the test unproven; only committed raw output and its exit code count as evidence.
