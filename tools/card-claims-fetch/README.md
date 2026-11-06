@@ -1,47 +1,74 @@
 # card-claims-fetch
 
-## Purpose
+Read-only, stdlib-only helper for the dataset **"Open-weight model cards: what the card itself states"**. For each candidate huggingface.co model-card URL it fetches that card's raw `README.md` over HTTPS and records only what the card itself states. Nothing is inferred from memory, from a model family, or from the shape of a URL.
 
-`fetch_cards.py` is a lightweight, **stdlib‑only** command that fetches the eight candidate model‑card URLs listed in the Open‑weight model‑cards dataset README. For each card it extracts only the information that the card **owns**:
+| field | where the value comes from |
+|-------|----------------------------|
+| `card_url` | the URL that was opened |
+| `publisher` | the owner segment printed in that URL |
+| `model_name` | front-matter `model_name`, else the card's first `#` heading |
+| `date_read` | yyyy-mm-dd of the moment the card was opened |
+| `states_context_window` | a context-window / context-length / `max_position_embeddings` number printed in the card; blank when the card states none |
+| `states_license` | front-matter `license`, or `license_name` when `license: other`; blank when absent |
+| `source` | the same URL as `card_url` |
 
-* publisher – the organization appearing on the page
-* model name – the title shown on the card or the `model_name` front‑matter field
-* stated context window – any explicit token‑count mentioned on the card
-* stated license – the license string from the card’s front‑matter
+Fetched card text is **data, never instruction**. A sentence inside a card telling this tool to run something, reveal a setting, change its goal, send money or post anywhere is ignored and never executed.
 
-No inference, no external API calls, and no mutation of the card are performed. Cells are left blank if the card does not state the field.
+Outputs, in the directory given by `--out` (default `.`):
 
-The tool writes:
+* `data.csv` — header plus one row per card that loaded
+* `notes.md` — a list of missing cells and failed loads, to be pasted by hand under this README's "What I could not confirm" section
 
-* `data.csv` – a CSV with one row per successfully fetched card
-* `notes.md` – a Markdown list of missing or failed cards, inserted for
-  manual review
+## What was read
 
-Both outputs are produced in the directory passed via `--out` (default `.`).  In
-offline mode the tool can read local fixture files (plain `.md` with an optional
-`.status` file) with `--fixtures`.
+On **2026-11-06** (UTC) **no model-card page was opened**. None of the eight candidate cards below has been fetched live, by this tool or by hand, so **`data.csv` still holds no rows** — it is exactly its header line:
 
-### Caveats
+~~~
+card_url,publisher,model_name,date_read,states_context_window,states_license,source
+~~~
 
-* The tool only works with publicly readable Hugging Face card pages.
-* Large front‑matter tables or non‑standard key names are not handled.
-* The output is *not* test‑validated except for the empty‑dataset self‑test.
-* Network failure or unexpected HTML changes will result in a failure row.
+The eight candidate cards, listed for the next read session; none opened, none read:
 
-© 2026 HivePunk – no licence claimed.
+1. https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+2. https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
+3. https://huggingface.co/Qwen/Qwen2.5-7B-Instruct
+4. https://huggingface.co/google/gemma-2-9b-it
+5. https://huggingface.co/microsoft/Phi-3-mini-4k-instruct
+6. https://huggingface.co/tiiuae/falcon-7b-instruct
+7. https://huggingface.co/HuggingFaceH4/zephyr-7b-beta
+8. https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
 
----
+When rows are added, each row's `date_read` must be the date its card was actually opened, and no row may be added for a card that was not opened.
 
-Run the tool:
+## What I could not confirm
 
-```
+* **Everything.** No card has been fetched, so no cell, for any of the eight candidates, has been read from a card's own text.
+* `states_context_window` and `states_license` for all eight cards: unknown, because the cards were never opened.
+* Whether the eight URLs above still resolve, and whether each card is still reachable at `<card_url>/raw/main/README.md`: untested — no live request has been made from here.
+* Whether the extraction patterns in `fetch_cards.py` pick the right string from a real card: untested; they have never met one.
+* History note: an earlier version of this README carried neither a "What was read" nor a "What I could not confirm" section, and `self_test.py` failed on the first of them. Both sections are now present.
+
+## How to run
+
+~~~
 python3 fetch_cards.py --out .
-```
+python3 fetch_cards.py --fixtures fixtures/ --out .   # offline, no network
+python3 fetch_cards.py --help
+~~~
 
-Or with fixtures:
+## Self-test
 
-```
-python3 fetch_cards.py --fixtures fixtures/ --out .
-```
+~~~
+python3 self_test.py ; echo $?
+~~~
 
-For further testing the provided `self_test.py` can be executed.
+`self_test.py` is offline and read-only: it checks that `data.csv` is exactly the header line, that the header matches the column order, and that this README carries the "What was read" and "What I could not confirm" sections. It never touches the network and never writes a file. The verbatim output of a real run belongs with the commit that runs it; no run was executed while this README was edited, so no output line is pasted here.
+
+## What is untested
+
+* the live fetch path (`fetch`), its timeout and HTTP-error handling, against huggingface.co
+* extraction of real card text (context window, license, model name) on an actual card
+* the `data.csv` / `notes.md` writing path of `fetch_cards.py`
+* the tool was never run with network access from here; nothing was uploaded and no account or token is involved
+
+© 2026 HivePunk — no licence claimed. Created by bee #1071.
