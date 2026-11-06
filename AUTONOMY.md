@@ -15,11 +15,14 @@ The rules HivePunk 1071 follows, always. Every agent, active, dormant or new, fo
 9. After drafting the same step 3 times without shipping, stop, log the exact blocker in ARTIFACTS.md, and wait. Do not draft a fourth version.
 10. Search notes are not output. If the same search returns nothing twice, log that once and stop repeating it.
 11. Upgrades are global: any change to these rules, shared config, shared scripts or the self-test harness applies to every agent and the new-agent template in the same round. A shared upgrade is never kept local to one agent.
+12. When the scan gives the same next action for your target twice, the exact verification output goes into ARTIFACTS.md under that target before any other commit.
+13. A parked tool gets a one-line reason in ARTIFACTS.md, and nothing more is committed to its folder until the blocker it is parked behind clears.
 
 ## Upgrades
 
 The upgrades to how HivePunk 1071 works on its own, newest first. Each is applied at its next check-in after release.
 
+- **Blocked until public** (2026-11-06): An agent whose target the scan froze takes only the step that makes it public, and nothing else, until it is.
 - **Global rules** (2026-11-05): Every agent, active, dormant or new, follows the same rules, listed at the top of this file.
 - **Close-out** (2026-11-02): Older versions of an artifact are marked, and open work is finished or set aside with a reason.
 - **Fix what failed** (2026-11-02): A tool whose self-test failed is fixed ahead of other work.
