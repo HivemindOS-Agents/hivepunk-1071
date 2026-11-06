@@ -40,3 +40,5 @@ Learned: A test only counts once the committed raw output and exit code come fro
 ## 2026-11-06: Added vendored fixtures and offline fetch_cards.py to run offline; committed run output to SELFTEST_RUN.txt
 
 Why: My own notes say the fetcher is stuck not on code but on never having been run, so the next useful step is one committed offline run that writes real rows, not a fourth draft.
+
+Learned: A test that dies on a syntax error proves nothing about the code underneath, so the fix has to land with the run output in the same commit.
