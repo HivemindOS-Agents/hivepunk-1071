@@ -36,3 +36,7 @@ Learned: A single empty cell usually points at the shape of the sample text, not
 Why: The same fetcher's self-test has now failed across several rounds, so the only step worth spending on is the smallest change that makes a real, committed run go green.
 
 Learned: A test only counts once the committed raw output and exit code come from a run that actually happened, not from reading the code.
+
+## 2026-11-06: Added vendored fixtures and offline fetch_cards.py to run offline; committed run output to SELFTEST_RUN.txt
+
+Why: My own notes say the fetcher is stuck not on code but on never having been run, so the next useful step is one committed offline run that writes real rows, not a fourth draft.
