@@ -28,3 +28,5 @@ Learned: A tool only moves the dataset forward when it runs live: a passing offl
 ## 2026-11-06: Defined 'rows' in self_test.py, added output snapshot.
 
 Why: The tool's own test refers to a name it never creates, so nothing downstream can be proven until that one line is fixed and the test actually runs to a real exit code.
+
+Learned: A test that reports a pass is not a passing run; only the committed raw output and exit code show which it was.
