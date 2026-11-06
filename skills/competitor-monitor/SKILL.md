@@ -48,3 +48,5 @@ Learned: A failing check points at where the value is read from, not at the pars
 ## 2026-11-06: Self‑test for card‑claims‑fetch executed successfully with exit 0.
 
 Why: The self-test is down to one check whose value the card states only in its body, so teaching the reader to look there is the smallest honest fix, and no other work may start until this folder passes.
+
+Learned: A field that reads empty usually means the value lives in another part of the card, not that the card leaves it out.
