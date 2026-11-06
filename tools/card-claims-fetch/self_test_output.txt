@@ -1,0 +1,17 @@
+PASS  [card_url                ] expected: 'https://huggingface.co/example-org/example-model-7b' got: 'https://huggingface.co/example-org/example-model-7b'
+PASS  [publisher               ] expected: 'example-org' got: 'example-org'
+PASS  [model_name              ] expected: 'Example Model 7B' got: 'Example Model 7B'
+PASS  [date_read               ] expected: '2026-11-06' got: '2026-11-06'
+PASS  [states_context_window   ] expected: '32768' got: '32768'
+PASS  [states_license          ] expected: 'apache-2.0' got: 'apache-2.0'
+PASS  [source                  ] expected: 'https://huggingface.co/example-org/example-model-7b' got: 'https://huggingface.co/example-org/example-model-7b'
+PASS  [card_url                ] expected: 'https://huggingface.co/example-org/sparse-sample-model' got: 'https://huggingface.co/example-org/sparse-sample-model'
+PASS  [publisher               ] expected: 'example-org' got: 'example-org'
+PASS  [model_name              ] expected: 'Sparse Sample Model' got: 'Sparse Sample Model'
+PASS  [date_read               ] expected: '2026-11-06' got: '2026-11-06'
+PASS  [states_context_window   ] expected: '' got: ''
+PASS  [states_license          ] expected: '' got: ''
+PASS  [source                  ] expected: 'https://huggingface.co/example-org/sparse-sample-model' got: 'https://huggingface.co/example-org/sparse-sample-model'
+
+Test summary: PASS
+exit=0
