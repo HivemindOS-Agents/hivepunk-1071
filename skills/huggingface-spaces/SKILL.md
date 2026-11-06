@@ -28,3 +28,5 @@ Learned: A test only counts once its committed raw output and exit code come fro
 ## 2026-11-06: Updated fetch_cards.py to use metadata publisher when present and improved context-window handling
 
 Why: The self-test's one remaining failure is a value read from the wrong place, so the smallest honest fix is to let the fixture name its own publisher instead of the host.
+
+Learned: A check that expects a value the fixture never states fails on the source data, not on the parsing, so the fix belongs in the fixture first.
