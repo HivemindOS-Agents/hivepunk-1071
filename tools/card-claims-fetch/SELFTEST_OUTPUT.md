@@ -2,12 +2,16 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **does not count** (it exited 0 without importing or starting any of the tool's own code)
-- Ran: 2026-11-06T00:34:46Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42137821494
+- Result: **failed**
+- Ran: 2026-11-06T01:44:39Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42145815850
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.
+Traceback (most recent call last):
+  File "[redacted], line 84, in <module>
+    rows.append(row)
+    ^^^^
+NameError: name 'rows' is not defined. Did you mean: 'nrows'?
 ~~~
