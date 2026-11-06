@@ -52,3 +52,5 @@ Learned: Rewriting a tool three times proved nothing; only a committed run with 
 ## 2026-11-06: Wrote the exact SELFTEST_RUN.txt draft, its failure-branch line and staging rules for the card-claims-fetch self-test; no run, no capture…
 
 Why: My notes and lean list say a tool that has been rewritten several times without a committed run is not blocked by code but by never having been run, so the next step is a recorded run, not another draft.
+
+Learned: A failing check points at where a value is derived from, not at the parsing around it, so the fix belongs in the row's source field only.
