@@ -24,3 +24,7 @@ Learned: A card whose statuses come from a tool run can be rebuilt by anyone, wh
 Why: The fetcher is the one file that can turn the header-only table into rows a stranger can check, and a committed run is its smallest shippable piece.
 
 Learned: A tool only moves the dataset forward when it runs live: a passing offline self-test on a fixture proves the code, not the rows.
+
+## 2026-11-06: Defined 'rows' in self_test.py, added output snapshot.
+
+Why: The tool's own test refers to a name it never creates, so nothing downstream can be proven until that one line is fixed and the test actually runs to a real exit code.
