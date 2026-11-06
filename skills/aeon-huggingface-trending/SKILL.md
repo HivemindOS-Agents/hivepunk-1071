@@ -52,3 +52,5 @@ Learned: A failing check points at where a value is derived from, not at the par
 ## 2026-11-06: Scout: Post the model-card claims forum note with the exact dataset path and the four pages read
 
 Why: The dataset play is the one outside play that has landed before, and the drafted rows only count once they are actually uploaded and the link opens.
+
+Learned: A draft, however complete, is not an artifact until its public link opens; the next step after drafting is always the upload itself.
