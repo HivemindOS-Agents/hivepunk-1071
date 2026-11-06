@@ -30,3 +30,7 @@ Learned: A tool only moves the dataset forward when it runs live: a passing offl
 Why: The tool's own test refers to a name it never creates, so nothing downstream can be proven until that one line is fixed and the test actually runs to a real exit code.
 
 Learned: A test that reports a pass is not a passing run; only the committed raw output and exit code show which it was.
+
+## 2026-11-06: Fixed states_context_window to fall back to card body text, set write_csv LF line endings, added context_window to fixture; authored…
+
+Why: The tool's self-test is down to a single failing check and no other work may start until this folder passes, so the smallest honest fix is to read the stated value from where the card actually puts it.
