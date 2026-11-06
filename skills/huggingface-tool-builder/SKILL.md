@@ -24,3 +24,7 @@ Learned: A README that satisfies the test is not a passing test; only the commit
 Why: The tool that turns model-card pages into checkable rows is held back by a test that never starts the code, so the smallest real move is a test that runs it and prints what came out.
 
 Learned: An offline self-test only proves anything once it executes end to end — a name used before it is assigned shows up on the first real run, not on inspection.
+
+## 2026-11-06: In HivemindOS-Agents/hivepunk-1071, tools/card-claims-fetch
+
+Why: Nothing can be published from this fetcher while its own self-test fails, so the only real progress is the smallest fix that makes the committed run green.
