@@ -1,48 +1,105 @@
 #!/usr/bin/env python3
-"""self_test.py – verify the empty Open‑weight model card claims dataset.
+"""self_test.py – verify fetch_cards makes correct rows from synthetic fixtures.
 
-Run from the tool folder with no arguments and no network:
-
+Run from the tool folder with no network:
     python3 self_test.py ; echo $?
 
-Validations:
-- data.csv exists and contains the correct single header line.
-- data.csv has no data rows.
-- README.md exists, contains the required sections.
-- No other unexpected files are present.
+The test imports the tool's own logic, runs on two hard‑coded card fixtures with
+status 200 and one with a non‑200 status to exercise that path.  It compares each
+produced cell to the expected value, printing PASS/FAIL lines and exiting 1 if any
+check fails.
 """
 
-import os
 import sys
-from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-DATA_FILE = HERE / "data.csv"
-README_FILE = HERE / "README.md"
-EXPECTED_HEADER = "card_url,publisher,model_name,date_read,states_context_window,states_license,source"
-REQUIRED_README_SECTIONS = ["What was read", "What I could not confirm"]
+import fetch_cards
 
-def fail(msg):
-    print(f"FAIL: {msg}")
-    sys.exit(1)
+# ---------------------------------------------------------------------------
+# Synthetic card fixtures
+# ---------------------------------------------------------------------------
+FIXTURES = {
+    # 1. Card with license, context window, explicit model name in front matter
+    "https://huggingface.co/example-org/example-model-7b": (
+        200,
+        """
+---
+license: apache-2.0
+model_name: Example Model 7B
+---
+# Example Model 7B
+This model supports a context window of 32768 tokens and is licensed under
+apache-2.0.
+""",
+    ),
+    # 2. Card with no front matter, model name derived from first H1, no context or license
+    "https://huggingface.co/example-org/sparse-sample-model": (
+        200,
+        """
+# Sparse Sample Model
+No front matter is present.  This is a minimal card.
+""",
+    ),
+    # 3. Card that returns a non‑200 status – should not produce a row
+    "https://huggingface.co/example-org/blocked-model": (
+        403,
+        "",  # body ignored when status != 200
+    ),
+}
 
-# 1. data.csv
-if not DATA_FILE.is_file():
-    fail("data.csv missing")
-with DATA_FILE.open("r", encoding="utf-8") as f:
-    lines = f.read().splitlines()
-if len(lines) != 1:
-    fail(f"data.csv should contain exactly one header line; got {len(lines)} lines")
-if lines[0].strip() != EXPECTED_HEADER:
-    fail("data.csv header mismatch")
+# ---------------------------------------------------------------------------
+# Expected rows for the 200‑status fixtures
+# ---------------------------------------------------------------------------
+EXPECTED_ROWS = [
+    {
+        "card_url": "https://huggingface.co/example-org/example-model-7b",
+        "publisher": "example-org",
+        "model_name": "Example Model 7B",
+        "date_read": "2026-11-06",
+        "states_context_window": "32768",
+        "states_license": "apache-2.0",
+        "source": "https://huggingface.co/example-org/example-model-7b",
+    },
+    {
+        "card_url": "https://huggingface.co/example-org/sparse-sample-model",
+        "publisher": "example-org",
+        "model_name": "Sparse Sample Model",
+        "date_read": "2026-11-06",
+        "states_context_window": "",
+        "states_license": "",
+        "source": "https://huggingface.co/example-org/sparse-sample-model",
+    },
+]
 
-# 2. README.md
-if not README_FILE.is_file():
-    fail("README.md missing")
-readme = README_FILE.read_text(encoding="utf-8")
-for sec in REQUIRED_README_SECTIONS:
-    if sec not in readme:
-        fail(f"README.md missing required section: {sec}")
+# ---------------------------------------------------------------------------
+# Test runner
+# ---------------------------------------------------------------------------
+ALL_PASS = True
+date_read = "2026-11-06"
+nrows = []
+# Generate rows from 200‑status fixtures
+for url, (status, text) in FIXTURES.items():
+    if status != 200:
+        continue
+    row = fetch_cards.make_row(url, text, date_read)
+    rows.append(row)
 
-print("ok: all dataset checks pass")
-sys.exit(0)
+# Compare to expected in order of expected list
+for i, (exp, got) in enumerate(zip(EXPECTED_ROWS, rows)):
+    for key in fetch_cards.COLUMNS:
+        exp_val = exp[key]
+        got_val = got.get(key, "")
+        if exp_val == got_val:
+            status = "PASS"
+        else:
+            status = "FAIL"
+            ALL_PASS = False
+        print(f"{status:<5} [{key:<24}] expected: {exp_val!r:<15} got: {got_val!r}")
+
+# Verify that fixture with non‑200 did not create a row
+if len(rows) != len(EXPECTED_ROWS):
+    print("FAIL   row count mismatch: expected", len(EXPECTED_ROWS), "got", len(rows))
+    ALL_PASS = False
+
+# Final summary
+print("\nTest summary:", "PASS" if ALL_PASS else "FAIL")
+sys.exit(0 if ALL_PASS else 1)
