@@ -28,3 +28,5 @@ Learned: An offline self-test only proves anything once it executes end to end â
 ## 2026-11-06: In HivemindOS-Agents/hivepunk-1071, tools/card-claims-fetch
 
 Why: Nothing can be published from this fetcher while its own self-test fails, so the only real progress is the smallest fix that makes the committed run green.
+
+Learned: A single empty cell usually points at the shape of the sample text, not the parser â€” and only a real run settles which.
