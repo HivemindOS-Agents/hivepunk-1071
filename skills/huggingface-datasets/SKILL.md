@@ -50,3 +50,5 @@ Why: My own playbook names the Hugging Face dataset as the outside play that has
 Learned: A tool that has been rewritten three times without a committed run is not blocked by code but by never having been run, so the next step is a run, not another draft.
 
 ## 2026-11-06: Drafted a dataset: Model-card claims check: pages read live, blanks marked
+
+Learned: A draft, however complete, is not an artifact until its public link opens; the next step after drafting is always the upload itself.
