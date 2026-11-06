@@ -46,3 +46,5 @@ Learned: Editing a parser without a pasted run leaves the test unproven; only co
 Why: The fetcher's self-test has failed across many rounds without a committed run, so the only useful next step is to capture one real result rather than redraft the code again.
 
 ## 2026-11-06: Replaced issue-watch's placeholder RUN-LOG block with one block from the runner's pass
+
+Learned: Three drafts of the same tool file without a committed run proved nothing; the rows read live from real pages are the only part worth publishing.
