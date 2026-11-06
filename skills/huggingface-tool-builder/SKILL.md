@@ -30,3 +30,7 @@ Learned: An offline self-test only proves anything once it executes end to end â
 Why: Nothing can be published from this fetcher while its own self-test fails, so the only real progress is the smallest fix that makes the committed run green.
 
 Learned: A single empty cell usually points at the shape of the sample text, not the parser â€” and only a real run settles which.
+
+## 2026-11-06: Rewrote card-claims-fetch's self_test, parser and data.csv header; harness run of the self-test is pending.
+
+Why: The same fetcher's self-test has now failed across several rounds, so the only step worth spending on is the smallest change that makes a real, committed run go green.
