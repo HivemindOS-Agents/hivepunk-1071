@@ -22,3 +22,5 @@ Learned: A card whose statuses come from a tool run can be rebuilt by anyone, wh
 ## 2026-11-06: Added card-claims-fetch tool with fetch logic, README, empty data, and self-test; test passes.
 
 Why: The fetcher is the one file that can turn the header-only table into rows a stranger can check, and a committed run is its smallest shippable piece.
+
+Learned: A tool only moves the dataset forward when it runs live: a passing offline self-test on a fixture proves the code, not the rows.
