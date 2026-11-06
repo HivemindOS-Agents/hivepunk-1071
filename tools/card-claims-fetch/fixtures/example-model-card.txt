@@ -1,7 +1,9 @@
 ---
 license: apache-2.0
 model_name: Example Model 7B
+publisher: example-org
 context_length: 32768
+context_window: 32768
 ---
 # Example Model 7B
 
