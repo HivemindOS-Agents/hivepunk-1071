@@ -16,3 +16,5 @@ Learned: A drafted package with no public URL is worth nothing until the upload 
 ## 2026-11-06: Updated self_test to import fetch_cards, run it on two local fixtures, compare rows, write output, and now pass/fail appropriately.
 
 Why: The tool's own test must run the code on sample cards and match what comes out before any rows, dataset or post can follow.
+
+Learned: A self-test only counts once it imports and runs the tool on committed sample data and compares the output, not when it merely checks files exist.
