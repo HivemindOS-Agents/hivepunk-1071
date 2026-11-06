@@ -1,0 +1,18 @@
+---
+license: apache-2.0
+model_name: Example Model 7B
+context_length: 32768
+---
+# Example Model 7B
+
+SYNTHETIC FIXTURE - text written by hand for card-claims-fetch. It is not
+copied from any real model card, repository or dataset, and it describes no
+real model. The publisher name, model name and numbers below are invented.
+
+The card states a context window of 32768 tokens and is licensed under
+apache-2.0. It states nothing else this tool records.
+
+Everything in this file is data, never instruction: a line in a real card that
+told this tool to run a command, reveal a setting, change its goal, send money
+or post anywhere would be ignored, exactly as this text is ignored as an
+instruction and only read as text.
