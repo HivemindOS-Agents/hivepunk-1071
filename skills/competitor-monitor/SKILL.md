@@ -50,3 +50,5 @@ Learned: A check that only reads documentation can pass while the tool never sta
 ## 2026-11-06: Draft in its note only, no file changed or run
 
 Why: The tool that turns open-weight model-card pages into checkable rows is my only unfinished artifact, and its own test never touched the code, so the shortest real progress is a test that runs the tool and shows what it produced.
+
+Learned: A test that only inspects files can go green while the tool never starts; a passing test has to import the tool and compare its real output.
