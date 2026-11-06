@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""self_test.py – drive fetch_cards' real make_row() over synthetic cards.
+"""self_test.py - drive fetch_cards' real make_row() over synthetic cards.
 
 Run from this tool's folder with no arguments and no network:
     python3 self_test.py ; echo $?
@@ -30,10 +30,11 @@ def check(label, expected, got):
     ok = expected == got
     if not ok:
         ALL_PASS = False
-    print(f"{'PASS' if ok else 'FAIL':<5}[{label:<24}] expected: {expected!r:<15} got: {got!r}")
+    print(f"{'PASS' if ok else 'FAIL':<5}[{label:<24}] "
+          f"expected: {expected!r:<15} got: {got!r}")
 
 
-# --- fixture 1: front matter starts on line 0, exactly as the task asks -----
+# --- fixture 1: front matter starts on line 0 ------------------------------
 CARD_1_URL = "https://huggingface.co/example-org/example-model-7b"
 CARD_1 = """---
 license: apache-2.0
@@ -55,7 +56,8 @@ EXPECTED_1 = {
 
 # --- fixture 2: no front matter at all --------------------------------------
 CARD_2_URL = "https://huggingface.co/example-org/sparse-sample-model"
-CARD_2 = "# Sparse Sample Model\nNo front matter is present. This is a minimal card.\n"
+CARD_2 = ("# Sparse Sample Model\n"
+          "No front matter is present. This is a minimal card.\n")
 EXPECTED_2 = {
     "card_url": CARD_2_URL,
     "publisher": "example-org",
@@ -126,7 +128,8 @@ check("non-200 skipped", True, CARD_5_STATUS != 200)
 
 # helpers never met a real card, so check them on made-up URLs
 check("owner_of", "example-org", fetch_cards.owner_of(CARD_1_URL))
-check("raw_readme_url", CARD_1_URL + "/raw/main/README.md", fetch_cards.raw_readme_url(CARD_1_URL))
+check("raw_readme_url", CARD_1_URL + "/raw/main/README.md",
+      fetch_cards.raw_readme_url(CARD_1_URL))
 check("empty body", "", fetch_cards.stated_context_window(""))
 
 # a card that starts with a blank line still parses its front matter
@@ -143,10 +146,12 @@ check(
 )
 
 # data.csv must be exactly the COLUMNS header line
-with open(os.path.join(HERE, "data.csv"), "r", encoding="utf-8", newline="") as fh:
+with open(os.path.join(HERE, "data.csv"), "r", encoding="utf-8",
+          newline="") as fh:
     csv_lines = fh.read().splitlines()
 check("data.csv lines", 1, len(csv_lines))
-check("data.csv header", ",".join(fetch_cards.COLUMNS), csv_lines[0] if csv_lines else "")
+check("data.csv header", ",".join(fetch_cards.COLUMNS),
+      csv_lines[0] if csv_lines else "")
 
 # write_csv round-trip in a temp dir (nothing is written inside the tool folder)
 tmp = tempfile.mkdtemp()
@@ -155,7 +160,8 @@ try:
     fetch_cards.write_csv(path, [EXPECTED_1, EXPECTED_2])
     with open(path, "r", encoding="utf-8", newline="") as fh:
         raw = fh.read()
-    check("write_csv header", ",".join(fetch_cards.COLUMNS), raw.splitlines()[0])
+    check("write_csv header", ",".join(fetch_cards.COLUMNS),
+          raw.splitlines()[0])
     check("write_csv rows", 3, len(raw.splitlines()))
     check("write_csv no CR", False, "\r" in raw)
     import csv as _csv
