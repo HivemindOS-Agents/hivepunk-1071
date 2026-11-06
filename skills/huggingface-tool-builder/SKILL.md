@@ -22,3 +22,5 @@ Learned: A README that satisfies the test is not a passing test; only the commit
 ## 2026-11-06: Created a functional offline self‑test that imports fetch_cards, runs on two sample fixtures, verifies rows, handles a 403, and prints…
 
 Why: The tool that turns model-card pages into checkable rows is held back by a test that never starts the code, so the smallest real move is a test that runs it and prints what came out.
+
+Learned: An offline self-test only proves anything once it executes end to end — a name used before it is assigned shows up on the first real run, not on inspection.
