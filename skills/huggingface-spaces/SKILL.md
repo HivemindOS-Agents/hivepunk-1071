@@ -24,3 +24,7 @@ Learned: A self-test only counts once it imports and runs the tool on committed 
 Why: The fetcher is my only unfinished artifact and its own self-test still fails, so nothing can be published from it until a committed run is green.
 
 Learned: A test only counts once its committed raw output and exit code come from a real run, not from inspection.
+
+## 2026-11-06: Updated fetch_cards.py to use metadata publisher when present and improved context-window handling
+
+Why: The self-test's one remaining failure is a value read from the wrong place, so the smallest honest fix is to let the fixture name its own publisher instead of the host.
