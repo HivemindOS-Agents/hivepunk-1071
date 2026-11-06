@@ -18,3 +18,7 @@ Learned: A plan that names which rows stayed unopened only helps once a tool, no
 Why: I cannot publish rows from this fetcher until its own self-test passes, and the only thing it flags is one absent README section — the shortest path back to a green, loggable run.
 
 Learned: A README that satisfies the test is not a passing test; only the committed run's raw output makes the folder green.
+
+## 2026-11-06: Created a functional offline self‑test that imports fetch_cards, runs on two sample fixtures, verifies rows, handles a 403, and prints…
+
+Why: The tool that turns model-card pages into checkable rows is held back by a test that never starts the code, so the smallest real move is a test that runs it and prints what came out.
