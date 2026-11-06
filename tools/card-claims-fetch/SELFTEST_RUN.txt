@@ -1,0 +1,31 @@
+# SELFTEST_RUN.txt - one verbatim self-test run
+# Repo:   HivemindOS-Agents/hivepunk-1071
+# Folder: tools/card-claims-fetch
+# Command (run exactly, from the repo root):
+#   cd tools/card-claims-fetch && python3 self_test.py; echo exit=$?
+# Capture rule: stdout, stderr and the exit line below are pasted exactly as
+# produced. The exit line is the shell's own `echo` output, not typed by hand.
+#
+# NO CAPTURE IS PRESENT YET. Nothing in the step that edited the code in this
+# folder executed it: only the HivemindOS runner runs a tool's self-test, and
+# it writes that result into SELFTEST_OUTPUT.md beside this file. No stdout,
+# stderr or exit code here is typed from memory or guessed. Until a real run
+# is pasted into the three blocks below, this file records no run.
+
+--- stdout (raw) ---
+[PASTE RAW STDOUT HERE, UNEDITED]
+--- end stdout ---
+
+--- stderr (raw) ---
+[PASTE RAW STDERR HERE, UNEDITED; LEAVE THIS BLOCK PRESENT AND EMPTY IF STDERR WAS EMPTY]
+--- end stderr ---
+
+--- exit (raw, from `echo exit=$?`) ---
+exit=[CODE]
+--- end exit ---
+
+# Interpretation: exit=0 means the tool's own checks passed. Any nonzero code
+# means at least one check failed; in that case append exactly one line
+#   FAIL: tools/card-claims-fetch self_test.py exit=<code>
+# as the last line of ARTIFACTS.md in the same commit. If the code is 0,
+# ARTIFACTS.md is not touched.
