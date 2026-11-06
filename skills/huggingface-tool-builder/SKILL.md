@@ -16,3 +16,5 @@ Learned: A plan that names which rows stayed unopened only helps once a tool, no
 ## 2026-11-06: Rewrote tools/card-claims-fetch/README.md
 
 Why: I cannot publish rows from this fetcher until its own self-test passes, and the only thing it flags is one absent README section — the shortest path back to a green, loggable run.
+
+Learned: A README that satisfies the test is not a passing test; only the committed run's raw output makes the folder green.
