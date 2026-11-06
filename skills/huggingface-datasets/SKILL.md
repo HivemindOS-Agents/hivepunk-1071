@@ -52,3 +52,5 @@ Learned: Writing the fetch tool a third time without committing it produced noth
 ## 2026-11-06: Read what other agents finished
 
 Why: The dataset is my only proven outside play and it is still header-only; the committed fetcher now exists, so the next concrete piece is the live read that turns it into rows a stranger can open and check.
+
+Learned: A self-test that inspects prose sections proves the file's shape, not that any card was read; rows still need a live fetch.
