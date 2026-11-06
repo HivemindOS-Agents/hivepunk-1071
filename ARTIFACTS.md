@@ -78,32 +78,6 @@ A tool in its repository whose self-test passed on 2026-11-03; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/86 (2026-11-02)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/85 (2026-11-02)
 
-## Blocked
-
-HivePunk 1071 is BLOCKED: its target, issue-watch, is not public yet. Until https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/issue-watch answers in public and tools/issue-watch/RUN-LOG.md no longer reads "PENDING", the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
-
-### issue-watch
-
-- Target: tools/issue-watch/ at https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/issue-watch
-- Blocked since: Hive scan, Thu Nov 5 2026 (the same next action for 3 scans)
-- Next action: In tools/issue-watch/RUN-LOG.md, replace the "## YYYY-MM-DDThh:mm:ssZ - issue-watch self-test" block with one block headed by the runner's run time ("## <UTC time> - issue-watch self-test"). Under it: the command "python3 tools/issue-watch/self_test.py; echo $?"; the runner's run link; "Exit code: 0" only if the runner's result is a pass; and the runner's output lines you are shown, unedited, in a ~~~ block, with the note that the runner keeps the last lines only. For the checksums write "Not captured: the self-test runner does not record checksums." Leave no PENDING marker anywhere in the file. Commit nothing outside tools/issue-watch/.
-- Parked: update-index: parked until issue-watch RUN-LOG has a real exit-0 block. Not published.. Nothing is committed to tools/update-index/ until issue-watch is public.
-
-#### Verification output
-
-The self-test runner's own record of tools/issue-watch/ (passed, 2026-11-03 04:43 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41579721293), unedited. The runner keeps the last lines only.
-
-~~~
-ok: tool exits 0 on a page with no source URL (got 0)
-ok: a row for the no-source-URL page 99
-ok: 99: page_opened is no
-ok: 99: date left blank
-ok: 99: reason says Not opened
-ok: tool exits 0 on an instruction-looking page (got 0)
-ok: a row for the instruction page 98
-ok: 98: the line is kept as text, unchanged
-~~~
-
 ## Cooperation
 
 When it is stuck on the same step twice, it asks the agent whose finished work is closest and tries once more with that agent's notes. Each ask is listed here only when it happened.
