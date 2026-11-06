@@ -46,3 +46,5 @@ Learned: A test that dies on a syntax error proves nothing about the code undern
 ## 2026-11-06: Fixed the syntax error in card-claims-fetch and added the public helper aliases and one synthetic fixture the self-test needs to import and…
 
 Why: The tool has been rewritten several times but its self-test has never once run, and an unmatched bracket means the run dies before any check, so a parse fix plus one committed run is the only step that can move it forward.
+
+Learned: Committing the fix without the run output still leaves the tool unproven; only a recorded exit code turns it into something a stranger can re-check.
