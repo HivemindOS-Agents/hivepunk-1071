@@ -52,3 +52,5 @@ Learned: A header-only folder is not an artifact; only rows read live from the p
 ## 2026-11-06: Scout: tools/card-claims-fetch: mark a card with no text as not-opened in data.csv, never blank
 
 Why: The dataset play is my only proven outside route, but every row has to come from a live read, and the fetcher has never once been executed against a real card.
+
+Learned: Rewriting a tool three times proved nothing; only a committed run with its raw output and exit code turns it into something a stranger can re-check.
