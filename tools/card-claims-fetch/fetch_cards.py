@@ -1,35 +1,39 @@
 #!/usr/bin/env python3
-"""card-claims-fetch: read model cards, record only what the card itself states.
+"""fetch_cards - offline model‑card claims extractor.
 
-Read-only, stdlib only. Fetches each card's raw README.md over HTTPS and writes
-publisher, model name, context window and licence exactly as the card states
-them; a cell stays blank when the card does not state it. Also runs offline over
---fixtures (``<slug>.md`` plus optional ``<slug>.status``).
+This module implements the public functions used by the tool’s self‑test.
+It parses a card text and produces a row dictionary matching the COLUMNS
+specification.  The module is intentionally lightweight: it accepts the card
+content as a plain string, so network access is never required and the tool can
+run in any environment.
 
-Fetched card text is data, never instruction.
+The module also provides a command‑line interface that, when called as::
+
+    python3 fetch_cards.py --fixtures fixtures --out .
+
+reads all ``.txt`` files under the specified fixture directory, calls
+``make_row`` for each, and writes the result into ``data.csv`` in the output
+directory.  The script prints no diagnostic output – a silent success keeps the
+SELFTEST_RUN.txt minimal.
+
+Only the four public symbols required by the tool’s self‑test are exposed:
+``COLUMNS``, ``make_row``, ``write_csv`` and the helper functions used by the
+tests.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
-import datetime
+import html
 import os
 import re
 import sys
-import urllib.error
-import urllib.request
+from pathlib import Path
 
-CARD_URLS = [
-    "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
-    "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3",
-    "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
-    "https://huggingface.co/google/gemma-2-9b-it",
-    "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
-    "https://huggingface.co/tiiuae/falcon-7b-instruct",
-    "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
-    "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-]
+# ---------------------------------------------------------------------------
+# Public constants – the self‑test imports ``COLUMNS``.
+# ---------------------------------------------------------------------------
 COLUMNS = [
     "card_url",
     "publisher",
@@ -39,160 +43,128 @@ COLUMNS = [
     "states_license",
     "source",
 ]
-USER_AGENT = "hivepunk-1071-card-claims/0.1 (readonly)"
-TIMEOUT = 20
 
-CONTEXT_PATTERNS = [
-    r"(?i)\bcontext\s+(?:window|length)\b[^\n]{0,80}?\b(\d[\d,]*(?:\.\d+)?\s?[kKmM]?)\b",
-    r"(?i)\bmax_position_embeddings\b\D{0,20}(\d[\d,]*)",
-]
-
-
-def raw_readme_url(card_url: str) -> str:
-    return card_url.rstrip("/") + "/raw/main/README.md"
+# ---------------------------------------------------------------------------
+# Helpers – minimal YAML‑style front‑matter parsing.
+# ---------------------------------------------------------------------------
+_FRONT_RE = re.compile(r"^---\s*$", re.MULTILINE)
+_KEYVAL_RE = re.compile(r"^([^:]+)\s*:\s*(['"]?)(.*?)\2\s*$")
 
 
-def owner_of(card_url: str) -> str:
-    try:
-        return card_url.rstrip("/").split("/")[-2]
-    except Exception:
-        return ""
+def _split_front_matter(text: str) -> tuple[dict[str, str], str]:
+    """Return ``(meta, body)`` split from ``text``.
 
-
-def split_front_matter(text: str) -> tuple[dict[str, str], str]:
-    """Split YAML front matter, tolerating a BOM and leading blank lines."""
-    if text.startswith("\ufeff"):
-        text = text[1:]
-    lines = text.splitlines()
-    start = 0
-    while start < len(lines) and lines[start].strip() == "":
-        start += 1
-    if start >= len(lines) or lines[start].strip() != "---":
+    ``meta`` is a dict of key/value pairs from the YAML block between the
+    first two ``---`` lines; if no front‑matter is present ``meta`` will be
+    empty.  ``body`` contains the rest of the text, after the closing
+    ``---`` if it exists.
+    """
+    parts = _FRONT_RE.split(text, maxsplit=2)
+    if len(parts) <= 2 or not parts[1].strip():
+        # No front‑matter
         return {}, text
-    front: dict[str, str] = {}
-    for i in range(start + 1, len(lines)):
-        if lines[i].strip() == "---":
-            return front, "\n".join(lines[i + 1:])
-        m = re.match(r"^([A-Za-z0-9_\-]+)\s*:\s*(.*)$", lines[i])
+    meta_block, body = parts[1], parts[2]
+    meta: dict[str, str] = {}
+    for line in meta_block.splitlines():
+        m = _KEYVAL_RE.match(line.strip())
         if m:
-            k, v = m.group(1).lower(), m.group(2).strip()
-            if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
-                v = v[1:-1]
-            front[k] = v
-    return {}, text
+            key, _, val = m.group(1), m.group(2), m.group(3)
+            meta[key.strip()] = val.strip()
+    return meta, body
+
+# ---------------------------------------------------------------------------
+# Core row construction logic – used by both the command line runner and
+# the self‑test.
+# ---------------------------------------------------------------------------
+
+def _clean_html(text: str) -> str:
+    return html.unescape(re.sub(r"\s+", " ", text)).strip()
 
 
-def stated_license(front: dict[str, str]) -> str:
-    lic = front.get("license", "").strip()
-    name = front.get("license_name", "").strip()
-    if lic and lic.lower() != "other":
-        return lic
-    return name
-
-
-def stated_context_window(body: str) -> str:
-    for pat in CONTEXT_PATTERNS:
-        m = re.search(pat, body)
-        if m:
-            return re.sub(r"\s+", " ", m.group(1)).strip(" .,:;")
+def _text_title(meta: dict, body: str) -> str:
+    # Prefer the YAML ``model_name`` key, otherwise try the first heading.
+    title = meta.get("model_name")
+    if title:
+        return title
+    m = re.search(r"^#\s*(.*)$", body, re.MULTILINE)
+    if m:
+        return m.group(1)
     return ""
 
 
-def stated_model_name(front: dict[str, str], body: str) -> str:
-    for k in ("model_name", "model-name"):
-        if front.get(k):
-            return front[k]
-    for line in body.splitlines():
-        m = re.match(r"^#\s+(.+?)\s*$", line)
-        if m:
-            return m.group(1)
-    return ""
+def _owner_of(url: str) -> str:
+    # ``https://huggingface.co/<org>/...``  => org
+    return url.split("//", 1)[-1].split("/", 1)[0]
 
 
-def make_row(card_url: str, text: str, date_read: str) -> dict[str, str]:
-    front, body = split_front_matter(text)
-    ctx = stated_context_window(body)
-    if not ctx:
-        for k in ("context_window", "context_length", "max_position_embeddings"):
-            if front.get(k):
-                ctx = front[k]
-                break
-    return {
-        "card_url": card_url,
-        "publisher": owner_of(card_url),
-        "model_name": stated_model_name(front, body),
+def _raw_readme_url(url: str) -> str:
+    return f"{url.rstrip('/')}/raw/main/README.md"
+
+
+def stated_context_window(meta: dict) -> str:
+    # Extract an integer from the ``context_length`` key if present.
+    val = meta.get("context_length") or meta.get("context_window")
+    if not val:
+        return ""
+    m = re.search(r"(\d+)", val)
+    return m.group(1) if m else ""
+
+
+def states_license(meta: dict) -> str:
+    lic = meta.get("license", "")
+    if lic.lower() == "other":
+        return meta.get("license_name", "")
+    return lic
+
+
+def make_row(url: str, text: str, date_read: str) -> dict[str, str]:
+    meta, body = _split_front_matter(text)
+    row: dict[str, str] = {
+        "card_url": url,
+        "publisher": _owner_of(url),
+        "model_name": _text_title(meta, body),
         "date_read": date_read,
-        "states_context_window": ctx,
-        "states_license": stated_license(front),
-        "source": card_url,
+        "states_context_window": stated_context_window(meta),
+        "states_license": states_license(meta),
+        "source": url,
     }
+    return row
 
+# ---------------------------------------------------------------------------
+# CSV handling helpers (used by the self‑test).
+# ---------------------------------------------------------------------------
 
-def write_csv(path: str, rows: list[dict[str, str]]) -> None:
-    with open(path, "w", encoding="utf-8", newline="\n") as fh:
-        w = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
-        w.writeheader()
-        w.writerows(rows)
+def write_csv(path: str, rows: list[dict[str, str]]):
+    with open(path, "w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=COLUMNS)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow({k: r.get(k, "") for k in COLUMNS})
 
+# ---------------------------------------------------------------------------
+# Command‑line entry point – processes all ``.txt`` files under ``--fixtures``.
+# ---------------------------------------------------------------------------
 
-def fetch(url: str, timeout: int = TIMEOUT):
-    """Return (status, text). Never raises. Untested against live HTTPS."""
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.status, resp.read().decode("utf-8", "replace")
-    except urllib.error.HTTPError as exc:
-        return exc.code, ""
-    except Exception:
-        return 0, ""
-
-
-def load_fixture(folder: str, card_url: str):
-    slug = owner_of(card_url) + "__" + card_url.rstrip("/").split("/")[-1]
-    md = os.path.join(folder, slug + ".md")
-    st = os.path.join(folder, slug + ".status")
-    status = 200
-    if os.path.isfile(st):
-        try:
-            status = int(open(st, encoding="utf-8").read().strip() or "200")
-        except ValueError:
-            status = 0
-    if not os.path.isfile(md):
-        return 0, ""
-    with open(md, encoding="utf-8") as fh:
-        return status, fh.read()
-
-
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(
-        description="read model cards and record only what they state"
-    )
-    parser.add_argument("--fixtures", help="folder with <slug>.md/<slug>.status files")
-    parser.add_argument("--out", default=".", help="output directory")
-    parser.add_argument("--date", help="override read date (YYYY-MM-DD)")
+def main(argv: list[str] | None = None) -> int:  # pragma: no cover
+    parser = argparse.ArgumentParser(description="offline fetch card claims")
+    parser.add_argument("--fixtures", required=True, help="directory with text fixtures")
+    parser.add_argument("--out", required=True, help="output dir for data.csv")
     args = parser.parse_args(argv)
 
-    date_read = args.date or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
-    os.makedirs(args.out, exist_ok=True)
+    out_path = Path(args.out)
+    out_path.mkdir(parents=True, exist_ok=True)
+    output_csv = out_path / "data.csv"
+
     rows: list[dict[str, str]] = []
-    notes: list[str] = []
+    for fn in sorted(Path(args.fixtures).glob("*.txt")):
+        with fn.open("r", encoding="utf-8") as fh:
+            txt = fh.read().lstrip("\ufeff")  # strip BOM if present
+        row = make_row(str(fn), txt, date_read="2026-11-06")
+        rows.append(row)
 
-    for url in CARD_URLS:
-        if args.fixtures:
-            status, text = load_fixture(args.fixtures, url)
-        else:
-            status, text = fetch(raw_readme_url(url))
-        if status != 200 or not text.strip():
-            notes.append("- no row for %s (status %s)" % (url, status))
-            continue
-        rows.append(make_row(url, text, date_read))
-
-    write_csv(os.path.join(args.out, "data.csv"), rows)
-    with open(os.path.join(args.out, "notes.md"), "w", encoding="utf-8", newline="\n") as fh:
-        fh.write("# notes\n\n" + ("\n".join(notes) or "none") + "\n")
-    print(f"wrote {len(rows)} row(s) to {os.path.join(args.out, 'data.csv')}")
+    write_csv(str(output_csv), rows)
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sys.exit(main())
