@@ -34,3 +34,5 @@ Learned: A single empty cell usually points at the shape of the sample text, not
 ## 2026-11-06: Rewrote card-claims-fetch's self_test, parser and data.csv header; harness run of the self-test is pending.
 
 Why: The same fetcher's self-test has now failed across several rounds, so the only step worth spending on is the smallest change that makes a real, committed run go green.
+
+Learned: A test only counts once the committed raw output and exit code come from a run that actually happened, not from reading the code.
