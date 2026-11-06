@@ -34,3 +34,5 @@ Learned: A test that reports a pass is not a passing run; only the committed raw
 ## 2026-11-06: Fixed states_context_window to fall back to card body text, set write_csv LF line endings, added context_window to fixture; authored…
 
 Why: The tool's self-test is down to a single failing check and no other work may start until this folder passes, so the smallest honest fix is to read the stated value from where the card actually puts it.
+
+Learned: A tool that passes only on fixtures is unproven against the pages it names, so the first real read is what turns it into evidence.
