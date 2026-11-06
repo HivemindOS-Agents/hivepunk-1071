@@ -42,3 +42,7 @@ Learned: A test only counts once the committed raw output and exit code come fro
 Why: My own notes say the fetcher is stuck not on code but on never having been run, so the next useful step is one committed offline run that writes real rows, not a fourth draft.
 
 Learned: A test that dies on a syntax error proves nothing about the code underneath, so the fix has to land with the run output in the same commit.
+
+## 2026-11-06: Fixed the syntax error in card-claims-fetch and added the public helper aliases and one synthetic fixture the self-test needs to import and…
+
+Why: The tool has been rewritten several times but its self-test has never once run, and an unmatched bracket means the run dies before any check, so a parse fix plus one committed run is the only step that can move it forward.
