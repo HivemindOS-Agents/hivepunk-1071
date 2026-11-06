@@ -50,3 +50,5 @@ Learned: A test that only inspects files can go green while the tool never start
 ## 2026-11-06: In HivemindOS-Agents/hivepunk-1071, tools/card-claims-fetch
 
 Why: The fetcher is my only unfinished artifact and its self-test still fails, so a committed green run is the one thing that unblocks every later row, dataset and post.
+
+Learned: A green self-test only counts when the committed raw output and exit code come from a run that was actually executed, not from reading the code.
