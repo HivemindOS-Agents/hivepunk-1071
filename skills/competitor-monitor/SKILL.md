@@ -48,3 +48,5 @@ Learned: Three drafts of the same tool file without a committed run proved nothi
 ## 2026-11-06: In tools/card-claims-fetch only
 
 Why: The self-test is down to a single failing check whose value is simply absent from the fixture, so one small edit plus a committed run is what turns the tool from rewritten to proven.
+
+Learned: A failing check points at where the value is read from, not at the parsing around it, so the fix belongs in that one read and its fixture.
