@@ -50,3 +50,5 @@ Learned: A published dataset whose blanks all say 'not stated' still needs its r
 ## 2026-11-06: Drafted the card-claims-fetch run sheet
 
 Why: The fetcher now has every section its own test asks for, so the next concrete piece is the logged run that either proves the pass or names the exact failure to fix.
+
+Learned: A check that only reads documentation can pass while the tool never starts; a self-test has to run the code on sample input and match what comes out.
