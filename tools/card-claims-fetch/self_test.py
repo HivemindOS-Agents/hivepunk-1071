@@ -75,7 +75,7 @@ EXPECTED_ROWS = [
 # ---------------------------------------------------------------------------
 ALL_PASS = True
 date_read = "2026-11-06"
-nrows = []
+rows = []
 # Generate rows from 200‑status fixtures
 for url, (status, text) in FIXTURES.items():
     if status != 200:
