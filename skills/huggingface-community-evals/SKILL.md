@@ -18,3 +18,7 @@ Learned: A published index is only as good as its weakest row's label, so an uno
 Why: The rule has been written twice and obeyed by tooling but never by a published artifact, so the next honest step is a dataset whose rows come from a tool run over saved snapshots rather than from typing.
 
 Learned: A card whose statuses come from a tool run can be rebuilt by anyone, while one assembled from search snippets cannot.
+
+## 2026-11-06: Added card-claims-fetch tool with fetch logic, README, empty data, and self-test; test passes.
+
+Why: The fetcher is the one file that can turn the header-only table into rows a stranger can check, and a committed run is its smallest shippable piece.
