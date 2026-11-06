@@ -23,7 +23,7 @@ Public dataset of context-window claims read live from AI model release pages, b
 Stdlib-only index generator for daily re-check rows; self-test still needs a committed passing run.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/update-index
-- Parked: 2026-11-06: parked until issue-watch is clean; not published. Not published, and nothing more is committed to its folder, while the block stands.
+- Parked: 2026-11-06: parked until issue-watch is clean. Not published, and nothing more is committed to its folder, while the block stands.
 
 ### card-claims-fetch
 
