@@ -52,8 +52,6 @@ COLUMNS = [
 _FRONTR_RE = re.compile(r"^---\s*$", re.MULTILINE)
 # NOTE: the character class below is ``['\"]`` - a square bracket that opens
 # the class, the two quote characters it holds, and the bracket that closes it.
-# An earlier revision had the opening bracket missing, which made Python read
-# the ']' as unmatched and the whole module failed with a SyntaxError at import.
 _KEYVAL_R = re.compile(r"^([^:]+)\s*:\s*(['\"]?)(.*?)\2\s*$")
 
 
@@ -104,12 +102,20 @@ def _text_title(meta: dict, body: str) -> str:
 def _owner_of(url: str) -> str:
     """Return the first path component of ``url`` (the org/username).
 
-    Prior versions returned the hostname (e.g. ``huggingface.co``). The
-    public ``owner_of`` helper now extracts the first segment after the
-    scheme/domain, yielding ``example-org`` for
-    ``https://huggingface.co/example-org/...``.
+    A known card host (huggingface.co, www.huggingface.co, hf.co) is dropped
+    so ``https://huggingface.co/example-org/example-model-7b`` yields
+    ``example-org``. For a bare host URL the host itself is returned; for
+    other hosts the first path segment is returned.
     """
-    return url.split("//", 1)[-1].split("/", 1)[0]
+    rest = url.split("//", 1)[-1]
+    rest = rest.split("@", 1)[-1]              # drop any user@
+    host, _, path = rest.partition("/")
+    host = host.split(":", 1)[0].lower()
+    if host in ("huggingface.co", "www.huggingface.co", "hf.co"):
+        seg = path.split("/", 1)[0] if path else ""
+        return seg or host
+    seg = path.split("/", 1)[0] if path else ""
+    return seg or host
 
 
 def _raw_readme_url(url: str) -> str:
@@ -123,20 +129,38 @@ owner_of = _owner_of
 raw_readme_url = _raw_readme_url
 
 
-def stated_context_window(meta: dict) -> str:
-    """Return the extracted context‑window number from front‑matter.
+# Body-text fallback patterns. The card may state its window only in prose
+# ("a context window of 32768 tokens") instead of in its front matter.
+_BODY_WINDOW_R = re.compile(
+    r"(?:context\s*window|context\s*length|max_position_embeddings)"
+    r"[^0-9]{0,40}?(\d[\d,]*)\s*(?:tokens?)?",
+    re.IGNORECASE,
+)
 
-    The helper is defensive: if ``meta`` is not a dictionary (e.g. an empty
-    string passed by the self‑test) the function returns an empty string
-    instead of raising ``AttributeError``.
+
+def stated_context_window(meta, body: str = "") -> str:
+    """Return the context-window number, front matter first, then body text.
+
+    The function is defensive: if ``meta`` is not a dictionary (e.g. an empty
+    string passed by the self-test) it is treated as an empty mapping rather
+    than raising ``AttributeError``. Front-matter keys ``context_length`` and
+    ``context_window`` are read first; when neither is present, the card's own
+    body text is searched for a stated number. Commas in a number are removed.
     """
     if not isinstance(meta, dict):
         return ""
     val = meta.get("context_length") or meta.get("context_window")
     if not val:
-        return ""
-    m = re.search(r"(\d+)", val)
-    return m.group(1) if m else ""
+        val = meta.get("max_position_embeddings")
+    if val:
+        m = re.search(r"(\d[\d,]*)", str(val))
+        if m:
+            return m.group(1).replace(",", "")
+    if isinstance(body, str) and body:
+        m = _BODY_WINDOW_R.search(body)
+        if m:
+            return m.group(1).replace(",", "")
+    return ""
 
 
 def states_license(meta: dict) -> str:
@@ -153,7 +177,7 @@ def make_row(url: str, text: str, date_read: str) -> dict[str, str]:
         "publisher": meta.get("publisher") or _owner_of(url),
         "model_name": _text_title(meta, body),
         "date_read": date_read,
-        "states_context_window": stated_context_window(meta),
+        "states_context_window": stated_context_window(meta, body),
         "states_license": states_license(meta),
         "source": url,
     }
@@ -165,8 +189,11 @@ def make_row(url: str, text: str, date_read: str) -> dict[str, str]:
 # ---------------------------------------------------------------------------
 
 def write_csv(path: str, rows: list[dict[str, str]]) -> None:
+    # ``lineterminator="\n"`` keeps the file free of carriage returns; the
+    # default ("\r\n") is what made the earlier run fail ``write_csv no CR``.
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=COLUMNS)
+        writer = csv.DictWriter(fh, fieldnames=COLUMNS,
+                                lineterminator="\n")
         writer.writeheader()
         for r in rows:
             writer.writerow({k: r.get(k, "") for k in COLUMNS})
