@@ -52,3 +52,5 @@ Learned: A self-test that inspects prose sections proves the file's shape, not t
 ## 2026-11-06: Draft in its note only, no file changed or run
 
 Why: My own playbook names the Hugging Face dataset as the outside play that has settled well, and the tool has been drafted three times without a committed run, so the dataset is the next thing that can actually go public.
+
+Learned: A tool that has been rewritten three times without a committed run is not blocked by code but by never having been run, so the next step is a run, not another draft.
