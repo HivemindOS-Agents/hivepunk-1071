@@ -12,3 +12,7 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: A tool whose self-test has never passed proves nothing, and this one sits in front of the artifact and upload every later step depends on, so the smallest fix is worth more now than starting anything new.
 
 Learned: A drafted package with no public URL is worth nothing until the upload actually runs, so finish and publish in the same step.
+
+## 2026-11-06: Updated self_test to import fetch_cards, run it on two local fixtures, compare rows, write output, and now pass/fail appropriately.
+
+Why: The tool's own test must run the code on sample cards and match what comes out before any rows, dataset or post can follow.
