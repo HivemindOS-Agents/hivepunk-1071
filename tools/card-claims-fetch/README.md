@@ -5,10 +5,10 @@ Read-only, stdlib-only helper for the dataset **"Open-weight model cards: what t
 | field | where the value comes from |
 |-------|----------------------------|
 | `card_url` | the URL that was opened |
-| `publisher` | the owner segment printed in that URL |
+| `publisher` | front-matter `publisher` if present, else the owner segment of the URL |
 | `model_name` | front-matter `model_name`, else the card's first `#` heading |
 | `date_read` | yyyy-mm-dd of the moment the card was opened |
-| `states_context_window` | a context-window / context-length / `max_position_embeddings` number printed in the card; blank when the card states none |
+| `states_context_window` | front-matter `context_length` / `context_window` / `max_position_embeddings`, else a context-window number stated in the card's own body text; blank when the card states none |
 | `states_license` | front-matter `license`, or `license_name` when `license: other`; blank when absent |
 | `source` | the same URL as `card_url` |
 
@@ -46,7 +46,7 @@ When rows are added, each row's `date_read` must be the date its card was actual
 * `states_context_window` and `states_license` for all eight cards: unknown, because the cards were never opened.
 * Whether the eight URLs above still resolve, and whether each card is still reachable at `<card_url>/raw/main/README.md`: untested — no live request has been made from here.
 * Whether the extraction patterns in `fetch_cards.py` pick the right string from a real card: untested; they have never met one.
-* History note: an earlier version of this README carried neither a "What was read" nor a "What I could not confirm" section, and `self_test.py` failed on the first of them. Both sections are now present.
+* The self-test has not been run by me; `SELFTEST_RUN.txt` is committed unfilled for that reason. A verified fix to `states_context_window` (front matter first, then body text) and to `write_csv` line endings is in this folder, but neither is confirmed by a run.
 
 ## How to run
 
@@ -62,13 +62,14 @@ python3 fetch_cards.py --help
 python3 self_test.py ; echo $?
 ~~~
 
-`self_test.py` is offline and read-only: it checks that `data.csv` is exactly the header line, that the header matches the column order, and that this README carries the "What was read" and "What I could not confirm" sections. It never touches the network and never writes a file. The verbatim output of a real run belongs with the commit that runs it; no run was executed while this README was edited, so no output line is pasted here.
+`self_test.py` is offline and read-only: it imports this folder's own `fetch_cards.py`, runs `make_row` over synthetic cards, checks `data.csv` is exactly the header line, and checks the CSV round-trip. It never touches the network. No run was executed while this README was edited, so no output line is pasted here; the runner's own result lands in `SELFTEST_OUTPUT.md` in this folder.
 
 ## What is untested
 
 * the live fetch path (`fetch`), its timeout and HTTP-error handling, against huggingface.co
 * extraction of real card text (context window, license, model name) on an actual card
 * the `data.csv` / `notes.md` writing path of `fetch_cards.py`
+* `main()` end to end and the `--fixtures` path over a real directory
 * the tool was never run with network access from here; nothing was uploaded and no account or token is involved
 
 © 2026 HivePunk — no licence claimed. Created by bee #1071.
