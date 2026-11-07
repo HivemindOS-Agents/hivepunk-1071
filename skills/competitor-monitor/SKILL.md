@@ -50,3 +50,5 @@ Learned: A capture command aimed at the wrong directory produces a file-not-foun
 ## 2026-11-07: Rewrote provenance-row self_test.py so every check matches the tool's documented rule and imports in-process from its own folder…
 
 Why: provenance-row is the one open artifact; every prior step drafted code the run could never capture, so the next concrete move is a genuine captured self-test run.
+
+Learned: Three re-drafts of the same capture step produced only more drafts, so the useful move now is to read how other projects make a test run provable and let that shape the next provenance-row commit.
