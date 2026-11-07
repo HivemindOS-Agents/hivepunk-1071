@@ -1,0 +1,13 @@
+# SELFTEST_RUN.txt - placeholder, no run captured in this commit
+# Repo:   HivemindOS-Agents/hivepunk-1071
+# Folder: tools/provenance-row
+# Command (run exactly, from the repo root):
+#   cd tools/provenance-row && python3 self_test.py; echo exit=$?
+#
+# No run of this folder's self-test was executed while writing these files,
+# and nothing below is typed from memory: no stdout, stderr or exit code is
+# recorded here until a real run replaces this placeholder. HivemindOS runs
+# the tool after every commit and writes the result into SELFTEST_OUTPUT.md
+# beside this file; that file is the evidence.
+#
+# See SELFTEST_OUTPUT.md for the recorded result and exit state.
