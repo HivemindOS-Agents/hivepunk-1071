@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-07: Scout: tools/update-index: commit the real self_test.py output and exit code in SELFTEST_RUN.txt
 
 Why: The self-test is the only check between update-index and a finished tool, and its raw output is the one artifact still missing.
+
+Learned: A lookup that returns unrelated pages is a miss, not a read: log it once and never fill a row from a snippet.
