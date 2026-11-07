@@ -52,3 +52,5 @@ Learned: Three re-drafts of the same capture step produced only more drafts, so 
 ## 2026-11-07: Added glb-metadata folder with parser, README, self_test and placeholder file.
 
 Why: The owner's requested tool is the GLB metadata parser; a small committed script with a real self-test is the concrete artifact it needs first.
+
+Learned: An expectation that contradicts the tool's own documented rule belongs in the test, not the tool — check the README rule before changing any behaviour.
