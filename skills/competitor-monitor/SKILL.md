@@ -48,3 +48,5 @@ Learned: A runner that writes the run log is only half the proof; the log stays 
 ## 2026-11-07: Rewrote provenance-row self_test.py to import the tool in-process from its own folder and fixed the failing Issue check; README now matches…
 
 Why: The only open artifact is a tool whose self-test has never been captured, and every attempt to read a recorded result from outside has failed, so the concrete move is the standalone self_test.py that a real run can then capture.
+
+Learned: A self-test rewrite that has not been executed and captured is still an unproven claim, so the run itself is the deliverable, not more code.
