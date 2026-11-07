@@ -24,3 +24,7 @@ Learned: Two drafted tools are each blocked on one saved self-test run; getting 
 Why: The four-file update-index commit has been drafted repeatedly without landing, so publishing just the runnable index_build.py now gives the tool a real public file others can use.
 
 Learned: A self-test that compares against files which were never committed fails for a reason outside the code; ship the fixture beside the test.
+
+## 2026-11-07: Filled SELFTEST_RUN.txt with the runner's verbatim passed tail and provenance, rewrote ARTIFACTS.md and README to match the offline-only…
+
+Why: The self-test is the only check left between this tool and a verified result, and a run log that reflects real execution is the one artifact it still lacks.
