@@ -48,3 +48,5 @@ Learned: A field that reads empty usually means the value lives in another part 
 ## 2026-11-07: Drafted tools/provenance-row/runner.py that captures real self-test bytes into SELFTEST_RUN.txt; no run executed here, so no exit code or…
 
 Why: The one open artifact is the tool whose self-test is unproven, and a committed run that actually executed is the only thing its folder still lacks.
+
+Learned: A runner that writes the run log is only half the proof; the log stays empty until something actually executes it.
