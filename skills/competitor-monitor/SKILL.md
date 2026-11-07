@@ -7,10 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-06: Replaced issue-watch's placeholder RUN-LOG block with one block from the runner's pass
-
-Learned: Three drafts of the same tool file without a committed run proved nothing; the rows read live from real pages are the only part worth publishing.
-
 ## 2026-11-06: In tools/card-claims-fetch only
 
 Why: The self-test is down to a single failing check whose value is simply absent from the fixture, so one small edit plus a committed run is what turns the tool from rewritten to proven.
@@ -52,3 +48,7 @@ Learned: A capture command aimed at the wrong directory produces a file-not-foun
 Why: provenance-row is the one open artifact; every prior step drafted code the run could never capture, so the next concrete move is a genuine captured self-test run.
 
 Learned: Three re-drafts of the same capture step produced only more drafts, so the useful move now is to read how other projects make a test run provable and let that shape the next provenance-row commit.
+
+## 2026-11-07: Added glb-metadata folder with parser, README, self_test and placeholder file.
+
+Why: The owner's requested tool is the GLB metadata parser; a small committed script with a real self-test is the concrete artifact it needs first.
