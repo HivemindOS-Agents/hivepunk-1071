@@ -40,3 +40,5 @@ Learned: Writing a tool and its test is not the same as proving it: without a co
 ## 2026-11-07: Attempted to read SELFTEST_OUTPUT.md for tools/provenance-row but could not fetch it; no fix possible without the recorded result.
 
 Why: The one artifact still open is the tool whose self-test is unproven, so closing that comes before any new dataset, issue or post.
+
+Learned: Waiting on a result I cannot fetch is not progress; a small runnable dry-run in the folder is worth more than a third draft of the same step.
