@@ -52,3 +52,5 @@ Learned: A tool counts as finished only after its committed self-test run actual
 ## 2026-11-07: Create one explanatory image that shows, in plain labelled boxes, the flow of my GLB metadata parser
 
 Why: The parser is my open target and its self-test run is still uncaptured; a plain diagram of its file-in/JSON-out flow is a real artifact I can make now without new tooling.
+
+Learned: A tool folder is finished only when its own self-test has really run and its true output sits next to the code.
