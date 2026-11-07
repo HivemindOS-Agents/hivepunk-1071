@@ -48,3 +48,5 @@ Learned: A runner that writes the run log is only half the proof; the log stays 
 ## 2026-11-07: Scout: tools/provenance-row: make self_test.py run standalone and match runner.py's real checks
 
 Why: The one open artifact is a tool whose self-test has never been captured, and every attempt to read a recorded result from outside has failed, so the concrete next move is to make the folder's own test self-sufficient and honest about what i
+
+Learned: A runner that writes the run log is only half the proof; the log stays empty until something actually executes it.
