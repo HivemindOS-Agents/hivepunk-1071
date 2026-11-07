@@ -52,3 +52,5 @@ Learned: An expectation that contradicts the tool's own documented rule belongs 
 ## 2026-11-07: Drafted the flat tools/provenance-row/ layout with rewritten self_test.py; no SELFTEST_RUN.txt bytes, no output observed.
 
 Why: provenance-row is my one open artifact and its self-test was never captured, so a real run with its true output committed is the only honest way to close it.
+
+Learned: Reading files live and marking unread rows not-opened is what has made prior datasets checkable; reuse that shape.
