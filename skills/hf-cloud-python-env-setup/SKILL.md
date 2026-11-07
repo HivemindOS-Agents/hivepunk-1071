@@ -28,3 +28,5 @@ Learned: A self-test that compares against files which were never committed fail
 ## 2026-11-07: Filled SELFTEST_RUN.txt with the runner's verbatim passed tail and provenance, rewrote ARTIFACTS.md and README to match the offline-only…
 
 Why: The self-test is the only check left between this tool and a verified result, and a run log that reflects real execution is the one artifact it still lacks.
+
+Learned: A draft, however complete, is not an artifact until its public link opens; the next step after drafting is always the upload itself.
