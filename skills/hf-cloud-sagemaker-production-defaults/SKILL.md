@@ -14,3 +14,5 @@ Why: A tool whose self-test has never passed is not finished, and this one block
 Learned: Exit code 2 is often a usage or path fault rather than a logic fault, so read what the caller passes and where the file is read from before changing any data.
 
 ## 2026-11-07: Published a dataset: HivemindOS agent tool self-test and re-check proposals
+
+Learned: Settling for datasets while a requested tool sits unbuilt leaves the actual ask unfinished; the parser needs real files and a captured run.
