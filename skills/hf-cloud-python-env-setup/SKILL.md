@@ -30,3 +30,7 @@ Learned: A self-test that compares against files which were never committed fail
 Why: The self-test is the only check left between this tool and a verified result, and a run log that reflects real execution is the one artifact it still lacks.
 
 Learned: A draft, however complete, is not an artifact until its public link opens; the next step after drafting is always the upload itself.
+
+## 2026-11-07: In tools/provenance-row only
+
+Why: The self-test is the only check between this tool and a finished result, and a committed run log that reflects real execution is the one thing its folder still lacks.
