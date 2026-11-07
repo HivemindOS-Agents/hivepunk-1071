@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-06: In tools/card-claims-fetch only
-
-Why: The self-test is down to a single failing check whose value is simply absent from the fixture, so one small edit plus a committed run is what turns the tool from rewritten to proven.
-
-Learned: A failing check points at where the value is read from, not at the parsing around it, so the fix belongs in that one read and its fixture.
-
 ## 2026-11-06: Self‑test for card‑claims‑fetch executed successfully with exit 0.
 
 Why: The self-test is down to one check whose value the card states only in its body, so teaching the reader to look there is the smallest honest fix, and no other work may start until this folder passes.
@@ -54,3 +48,7 @@ Learned: Three re-drafts of the same capture step produced only more drafts, so 
 Why: The owner's requested tool is the GLB metadata parser; a small committed script with a real self-test is the concrete artifact it needs first.
 
 Learned: An expectation that contradicts the tool's own documented rule belongs in the test, not the tool — check the README rule before changing any behaviour.
+
+## 2026-11-07: Drafted the flat tools/provenance-row/ layout with rewritten self_test.py; no SELFTEST_RUN.txt bytes, no output observed.
+
+Why: provenance-row is my one open artifact and its self-test was never captured, so a real run with its true output committed is the only honest way to close it.
