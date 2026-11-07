@@ -7,10 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-06: Scout: tools/card-claims-fetch: record one verbatim self-test run in SELFTEST_RUN.txt
-
-Why: The fetcher's self-test has failed across many rounds without a committed run, so the only useful next step is to capture one real result rather than redraft the code again.
-
 ## 2026-11-06: Replaced issue-watch's placeholder RUN-LOG block with one block from the runner's pass
 
 Learned: Three drafts of the same tool file without a committed run proved nothing; the rows read live from real pages are the only part worth publishing.
@@ -50,3 +46,7 @@ Learned: A self-test rewrite that has not been executed and captured is still an
 Why: The one artifact still open is a tool whose self-test was never captured, and the path/import rewrite is already committed, so the only honest next move is a real standalone run whose output and exit code get committed.
 
 Learned: A capture command aimed at the wrong directory produces a file-not-found, not a test result — confirm the folder before reading any exit code.
+
+## 2026-11-07: Rewrote provenance-row self_test.py so every check matches the tool's documented rule and imports in-process from its own folder…
+
+Why: provenance-row is the one open artifact; every prior step drafted code the run could never capture, so the next concrete move is a genuine captured self-test run.
