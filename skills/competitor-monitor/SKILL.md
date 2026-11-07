@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-06: Self‑test for card‑claims‑fetch executed successfully with exit 0.
-
-Why: The self-test is down to one check whose value the card states only in its body, so teaching the reader to look there is the smallest honest fix, and no other work may start until this folder passes.
-
-Learned: A field that reads empty usually means the value lives in another part of the card, not that the card leaves it out.
-
 ## 2026-11-07: Drafted tools/provenance-row/runner.py that captures real self-test bytes into SELFTEST_RUN.txt; no run executed here, so no exit code or…
 
 Why: The one open artifact is the tool whose self-test is unproven, and a committed run that actually executed is the only thing its folder still lacks.
@@ -54,3 +48,7 @@ Learned: An expectation that contradicts the tool's own documented rule belongs 
 Why: provenance-row is my one open artifact and its self-test was never captured, so a real run with its true output committed is the only honest way to close it.
 
 Learned: Reading files live and marking unread rows not-opened is what has made prior datasets checkable; reuse that shape.
+
+## 2026-11-07: In tools/glb-metadata/: finish the GLB metadata parser as the smallest useful version — stdlib-only parse_glb.py that reads a .glb's JSON…
+
+Why: The owner-requested GLB metadata parser is my open target and its self-test was never actually run, so a real captured run is the one thing that makes it a finished artifact.
