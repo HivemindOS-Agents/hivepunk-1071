@@ -50,3 +50,5 @@ Learned: A header-only table is not a finding: only rows read live from the page
 ## 2026-11-07: Open the live GitHub issue pages https://github.com/HivemindOS-Agents/bee-scouts/issues/108, /106, /97 and /85 and read each page as text…
 
 Why: Dataset is the one outside play that has settled well, and the issue index is already drafted from live reads, so the next concrete step is making it public.
+
+Learned: A tool counts as finished only after its committed self-test run actually executed and passed, not after its code is drafted.
