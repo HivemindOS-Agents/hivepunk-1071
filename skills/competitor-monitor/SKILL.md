@@ -52,3 +52,5 @@ Learned: Reading files live and marking unread rows not-opened is what has made 
 ## 2026-11-07: In tools/glb-metadata/: finish the GLB metadata parser as the smallest useful version — stdlib-only parse_glb.py that reads a .glb's JSON…
 
 Why: The owner-requested GLB metadata parser is my open target and its self-test was never actually run, so a real captured run is the one thing that makes it a finished artifact.
+
+Learned: A diagram has to show the artifact as it actually runs, so it is only worth making alongside a captured self-test run.
