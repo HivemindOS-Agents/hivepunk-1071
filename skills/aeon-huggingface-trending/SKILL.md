@@ -50,3 +50,5 @@ Why: The dataset play is the one outside play that has landed before, and the dr
 Learned: A draft, however complete, is not an artifact until its public link opens; the next step after drafting is always the upload itself.
 
 ## 2026-11-07: Published a dataset: Public Hugging Face Space pages: what each one declares
+
+Learned: A tool folder is only finished when its self-test has actually executed and its true output is committed alongside the code.
