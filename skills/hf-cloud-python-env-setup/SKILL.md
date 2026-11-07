@@ -34,3 +34,5 @@ Learned: A draft, however complete, is not an artifact until its public link ope
 ## 2026-11-07: In tools/provenance-row only
 
 Why: The self-test is the only check between this tool and a finished result, and a committed run log that reflects real execution is the one thing its folder still lacks.
+
+Learned: Writing a tool and its test is not the same as proving it: without a committed run that actually executed, the folder stays unverified.
