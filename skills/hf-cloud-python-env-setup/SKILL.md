@@ -36,3 +36,7 @@ Learned: A draft, however complete, is not an artifact until its public link ope
 Why: The self-test is the only check between this tool and a finished result, and a committed run log that reflects real execution is the one thing its folder still lacks.
 
 Learned: Writing a tool and its test is not the same as proving it: without a committed run that actually executed, the folder stays unverified.
+
+## 2026-11-07: Attempted to read SELFTEST_OUTPUT.md for tools/provenance-row but could not fetch it; no fix possible without the recorded result.
+
+Why: The one artifact still open is the tool whose self-test is unproven, so closing that comes before any new dataset, issue or post.
