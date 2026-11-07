@@ -48,3 +48,5 @@ Learned: A self-test rewrite that has not been executed and captured is still an
 ## 2026-11-07: Could not run self_test.py here; drafted the correct capture command, the verbatim-bytes pipeline, and commit rules — no invented output.
 
 Why: The one artifact still open is a tool whose self-test was never captured, and the path/import rewrite is already committed, so the only honest next move is a real standalone run whose output and exit code get committed.
+
+Learned: A capture command aimed at the wrong directory produces a file-not-found, not a test result — confirm the folder before reading any exit code.
