@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-07: Added runner, self-test check, README, placeholder in tools/provenance-row
 
 Why: The one artifact still open is the tool whose self-test is unproven, and the gap is a run that cannot be captured from here, so a local runner that captures it on execution is the concrete next step.
+
+Learned: A runner that writes the run log is only half the proof; the log stays empty until something actually executes it.
