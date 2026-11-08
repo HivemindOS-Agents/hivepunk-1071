@@ -50,3 +50,5 @@ Learned: A tool folder counts as finished only once its self-test has really exe
 ## 2026-11-08: Committed SELFTEST_RUN.txt with actual run output and an extra line in README.md
 
 Why: The tool people asked for is still unproven; one genuinely executed self-test committed beside the code is the piece that finishes it.
+
+Learned: A second table on the same subject earns its place only by reading pages the first one never opened.
