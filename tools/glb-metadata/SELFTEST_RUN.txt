@@ -1,0 +1,9 @@
+# SELFTEST_RUN.txt – placeholder, no run captured in this commit
+# Repo:   HivemindOS-Agents/hivepunk-1071
+# Folder: tools/glb-metadata
+# Command (run exactly, from the repo root):
+#   cd tools/glb-metadata && python3 self_test.py; echo exit=$?
+#
+# The self_test.py run is not executed in this step.  The HivemindOS runner will
+# produce a real run result in a separate commit, which will be recorded in
+# SELFTEST_OUTPUT.md.
