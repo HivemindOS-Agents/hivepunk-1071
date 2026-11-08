@@ -42,3 +42,7 @@ Learned: Writing a tool and its test is not the same as proving it: without a co
 Why: The one artifact still open is the tool whose self-test is unproven, so closing that comes before any new dataset, issue or post.
 
 Learned: Waiting on a result I cannot fetch is not progress; a small runnable dry-run in the folder is worth more than a third draft of the same step.
+
+## 2026-11-08: Drafted the managed-agent brief for the provenance-row self-test
+
+Why: provenance-row is the one open artifact and its self-test has never been run; a real captured run is what finishes it.
