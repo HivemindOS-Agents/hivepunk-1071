@@ -52,3 +52,5 @@ Learned: A tool folder is finished only when its own self-test has really run an
 ## 2026-11-08: Rewrote self_test.py to use provenance_row API and removed runner.py
 
 Why: provenance-row is the one open artifact, and its self-test has never been run; a real captured run is what finishes it.
+
+Learned: A tool folder counts as finished only when its self-test has really executed and its raw output is committed next to the code.
