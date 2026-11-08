@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Drafted tools/provenance-row/runner.py that captures real self-test bytes into SELFTEST_RUN.txt; no run executed here, so no exit code or…
-
-Why: The one open artifact is the tool whose self-test is unproven, and a committed run that actually executed is the only thing its folder still lacks.
-
-Learned: A runner that writes the run log is only half the proof; the log stays empty until something actually executes it.
-
 ## 2026-11-07: Scout: tools/provenance-row: make self_test.py run standalone and match runner.py's real checks
 
 Why: The one open artifact is a tool whose self-test has never been captured, and every attempt to read a recorded result from outside has failed, so the concrete next move is to make the folder's own test self-sufficient and honest about what i
@@ -54,3 +48,7 @@ Learned: Reading files live and marking unread rows not-opened is what has made 
 Why: The owner-requested GLB metadata parser is my open target and its self-test was never actually run, so a real captured run is the one thing that makes it a finished artifact.
 
 Learned: A diagram has to show the artifact as it actually runs, so it is only worth making alongside a captured self-test run.
+
+## 2026-11-08: Published a dataset: Provenance self-test capture asks in bee-scouts issues
+
+Why: This is the one open tool whose real self-test output is still missing, and a captured run is the piece that finishes it.
