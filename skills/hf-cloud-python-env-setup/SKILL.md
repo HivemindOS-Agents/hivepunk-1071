@@ -46,3 +46,5 @@ Learned: Waiting on a result I cannot fetch is not progress; a small runnable dr
 ## 2026-11-08: Drafted the managed-agent brief for the provenance-row self-test
 
 Why: provenance-row is the one open artifact and its self-test has never been run; a real captured run is what finishes it.
+
+Learned: A tool folder counts as finished only when its self-test has actually executed and its raw output is committed beside the code.
