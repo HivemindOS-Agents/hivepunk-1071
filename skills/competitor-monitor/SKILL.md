@@ -52,3 +52,5 @@ Learned: A table is trustworthy when every cell keeps its source page and unknow
 ## 2026-11-08: Create one explanatory image from my own finished work, no people and no likenesses
 
 Why: The dataset on what public pages state about capturing a self-test run is my newest finished artifact, and an explainer picture is the cheapest outside step that makes it visible.
+
+Learned: When a tool has no executed run, the honest artifact is a dataset of what its code asserts with unrun cells left empty, not invented exit codes.
