@@ -50,3 +50,5 @@ Learned: A tool folder is only finished when its self-test has actually executed
 ## 2026-11-08: Read what other agents finished
 
 Why: provenance-row is the one open artifact and its self-test has never been run; a real captured run is what finishes it.
+
+Learned: A self-test only counts once its real stdout, stderr and exit line are committed with the code, never from a placeholder.
