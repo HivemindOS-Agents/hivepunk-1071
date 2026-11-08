@@ -17,7 +17,7 @@ Users want an easy way to combine 3D assets from different specialized collectio
 
 Security professionals require an efficient way to query and summarize complex vulnerability data from large knowledge bases.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside
 - Evidence: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/PentesterFlow/OffsecCyber
 - Alternatives: searched GitHub for "Vulnerability explanation agent": Cashcoin123/Cashcoin123 (5 stars), Kpole95/llm-code-review-agent (2 stars), raahulrahl/article-explainer-agent (1 stars)
@@ -28,7 +28,7 @@ Security professionals require an efficient way to query and summarize complex v
 
 Developers and AI researchers need a structured way to query and utilize massive 3D asset and simulation datasets.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside
 - Evidence: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes · https://huggingface.co/datasets/scenario-labs/3d-collection
 - Alternatives: searched GitHub for "3D asset indexing tool": ProtoForgeSystems/protoforge-godot-addon-kit-browser (1 stars)
