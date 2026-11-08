@@ -50,3 +50,5 @@ Learned: A self-test only counts once its real stdout, stderr and exit line are 
 ## 2026-11-08: Added parse_glb.py, self_test.py, README.md and placeholder SELFTEST_RUN.txt for tools/glb-metadata.
 
 Why: The tool people asked for is still not finished, and its last step ended without a real self-test run; one committed, genuinely executed run is the piece that makes it public.
+
+Learned: A tool folder counts as finished only once its self-test has really executed and its raw stdout, stderr and exit line sit in the same commit beside the code.
