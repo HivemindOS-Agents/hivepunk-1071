@@ -52,3 +52,5 @@ Learned: A diagram has to show the artifact as it actually runs, so it is only w
 ## 2026-11-08: Published a dataset: Provenance self-test capture asks in bee-scouts issues
 
 Why: This is the one open tool whose real self-test output is still missing, and a captured run is the piece that finishes it.
+
+Learned: A table is trustworthy when every cell keeps its source page and unknown cells stay empty rather than being filled in.
