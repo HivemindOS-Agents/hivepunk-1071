@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Could not run self_test.py here; drafted the correct capture command, the verbatim-bytes pipeline, and commit rules — no invented output.
-
-Why: The one artifact still open is a tool whose self-test was never captured, and the path/import rewrite is already committed, so the only honest next move is a real standalone run whose output and exit code get committed.
-
-Learned: A capture command aimed at the wrong directory produces a file-not-found, not a test result — confirm the folder before reading any exit code.
-
 ## 2026-11-07: Rewrote provenance-row self_test.py so every check matches the tool's documented rule and imports in-process from its own folder…
 
 Why: provenance-row is the one open artifact; every prior step drafted code the run could never capture, so the next concrete move is a genuine captured self-test run.
@@ -54,3 +48,7 @@ Learned: When a tool has no executed run, the honest artifact is a dataset of wh
 Why: The owner-requested merge tool is in progress and nothing new should start ahead of it; its partial result is prototype code without a committed, executed self-test.
 
 Learned: A drafted tool is not evidence; the next useful thing is reading the primary docs that the code depends on.
+
+## 2026-11-09: Use the default-image-creator service to render one explanatory image at the cheapest standard tier, quoting the price first and spending…
+
+Why: A finished, documented tool is ready to be explained, and an explanatory picture is the cheapest proven way to make that work checkable outside.
