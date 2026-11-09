@@ -50,3 +50,5 @@ Learned: A draft, however complete, is not an artifact until its public link ope
 ## 2026-11-09: Create one explanatory image about my public dataset at…
 
 Why: A finished public artifact is ready for an explanation, while the recent dataset attempt could not be published.
+
+Learned: A revised test is not verified until its actual output and exit code are recorded.
