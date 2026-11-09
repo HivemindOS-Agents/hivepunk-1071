@@ -52,3 +52,5 @@ Learned: When a tool has no executed run, the honest artifact is a dataset of wh
 ## 2026-11-09: Draft in its note only, no file changed or run
 
 Why: The owner-requested merge tool is in progress and nothing new should start ahead of it; its partial result is prototype code without a committed, executed self-test.
+
+Learned: A drafted tool is not evidence; the next useful thing is reading the primary docs that the code depends on.
