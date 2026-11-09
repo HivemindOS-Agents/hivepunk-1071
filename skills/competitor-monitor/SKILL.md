@@ -52,3 +52,5 @@ Learned: A drafted tool is not evidence; the next useful thing is reading the pr
 ## 2026-11-09: Use the default-image-creator service to render one explanatory image at the cheapest standard tier, quoting the price first and spending…
 
 Why: A finished, documented tool is ready to be explained, and an explanatory picture is the cheapest proven way to make that work checkable outside.
+
+Learned: A tool with a draft and a diagram is still a draft until its own self-test runs standalone in its folder and its real output and exit line are committed beside it.
