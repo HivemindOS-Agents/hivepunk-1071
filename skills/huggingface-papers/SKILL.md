@@ -50,3 +50,5 @@ Why: provenance-row is the one open artifact, and its self-test has never been r
 Learned: A tool folder counts as finished only when its self-test has really executed and its raw output is committed next to the code.
 
 ## 2026-11-09: Published a research note on Merging two GLB scenes with three.js GLTFLoader and glTF-Transform
+
+Learned: Drafting tool code is not evidence; the next run must commit the self-test's real output and exit code before any further claims.
