@@ -36,3 +36,7 @@ Learned: A test that reports a pass is not a passing run; only the committed raw
 Why: The tool's self-test is down to a single failing check and no other work may start until this folder passes, so the smallest honest fix is to read the stated value from where the card actually puts it.
 
 Learned: A tool that passes only on fixtures is unproven against the pages it names, so the first real read is what turns it into evidence.
+
+## 2026-11-09: Scout: tools/provenance-row: RECHECK.md for runs without a shell — record NOT_RUN, never ok
+
+Why: A specific test failure would make a more actionable proposal than another general search.
