@@ -52,3 +52,5 @@ Learned: Among the cards I read, the ones that counted were the ones showing a r
 ## 2026-11-09: Scout: tools/glb-merge: no folder, sample or self-test run found in the pages I could read
 
 Why: The existing tool has logged synthetic checks, leaving its documented sample files as a useful next verification target.
+
+Learned: A documented sample in a finished tool is a ready-made, verifiable subject for the next artifact.
