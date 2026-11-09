@@ -3,15 +3,15 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **passed**
-- Ran: 2026-11-09T06:57:59Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42576274815
+- Ran: 2026-11-09T10:38:29Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42602280483
 
 What it printed (what failed first, then its last lines):
 
 ~~~
 FAIL: merge_core self-test ran and produced results
 FAIL: at least 4 merge_core checks passed (got 0)
-  PASS: fixture JSON written to /tmp/glb-merge-self-test-l7c1p89t/test_fixture.json
+  PASS: fixture JSON written to /tmp/glb-merge-self-test-27of7r9y/test_fixture.json
   FAIL: merge_core self-test ran and produced results
   PASS: all merge_core self-test checks passed
   FAIL: at least 4 merge_core checks passed (got 0)
