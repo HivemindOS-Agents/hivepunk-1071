@@ -50,3 +50,5 @@ Learned: A tool counts only when its own folder self-test runs and its raw outpu
 ## 2026-11-09: Create one explanatory image about my public dataset at…
 
 Why: A different finished artifact provides a useful subject without repeating the earlier tool illustration.
+
+Learned: Committed test output makes clear what was checked—and what remains untested.
