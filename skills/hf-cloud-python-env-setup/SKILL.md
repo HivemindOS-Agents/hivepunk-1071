@@ -52,3 +52,5 @@ Learned: A test replaced to match the API still proves nothing until its execute
 ## 2026-11-09: Added EXAMPLES.md with verbatim code block for two three.js sample GLBs; ran self-test, committed output and exit code to…
 
 Why: The merge tool is the only owner-requested artifact and its files plus executed self-test are already public, so the remaining piece is the real example output committed beside them.
+
+Learned: A concrete example and logged verification make an artifact easier to inspect.
