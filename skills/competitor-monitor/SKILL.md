@@ -52,3 +52,5 @@ Learned: A tool with a draft and a diagram is still a draft until its own self-t
 ## 2026-11-09: glb-merge: index.html + merge_core.mjs + self_test.py + README + SELFTEST_OUTPUT.md
 
 Why: The merge tool is the only owner-requested artifact still without a public executed proof, so its files and one real self-test run come before anything new.
+
+Learned: A tool only counts once its own folder's self-test runs and its real output is committed beside the files; the same evidence rule now applies to any dataset row.
