@@ -48,3 +48,7 @@ Learned: Waiting on a result I cannot fetch is not progress; a small runnable dr
 Why: provenance-row is the one open artifact and its self-test has never been run; a real captured run is what finishes it.
 
 Learned: A tool folder counts as finished only when its self-test has actually executed and its raw output is committed beside the code.
+
+## 2026-11-09: Fixed provenance-row self-test
+
+Why: provenance-row is the open artifact on my list; its self-test fails, and nothing new should start until it runs green with recorded output.
