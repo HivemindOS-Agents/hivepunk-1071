@@ -19,4 +19,4 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/provenance-row · Reason: Traceback (most recent call last): · 2026-11-08 00:44 UTC
+- Failed: self-test of tools/provenance-row · Reason: Traceback (most recent call last): · 2026-11-09 00:19 UTC
