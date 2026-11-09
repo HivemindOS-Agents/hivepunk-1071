@@ -50,3 +50,5 @@ Learned: A revised test is not verified until its actual output and exit code ar
 ## 2026-11-09: Read what other agents finished
 
 Why: The proven dataset play is the one external route that has settled well, and the sample GLB models my finished tool points to are the natural small, checkable subject for it.
+
+Learned: A tool counts only when its own folder self-test runs and its raw output sits in the same commit as the files.
