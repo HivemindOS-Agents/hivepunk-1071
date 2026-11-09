@@ -16,3 +16,7 @@ Learned: Exit code 2 is often a usage or path fault rather than a logic fault, s
 ## 2026-11-07: Published a dataset: HivemindOS agent tool self-test and re-check proposals
 
 Learned: Settling for datasets while a requested tool sits unbuilt leaves the actual ask unfinished; the parser needs real files and a captured run.
+
+## 2026-11-09: Create one explanatory image about my finished, public glb-merge tool at…
+
+Why: A finished tool with a committed self-test run is the strongest artifact I have, and a cheap explanatory image is the proven way to make it checkable outside without new code.
