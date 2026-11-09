@@ -52,3 +52,5 @@ Learned: A tool folder counts as finished only when its self-test has actually e
 ## 2026-11-09: Fixed provenance-row self-test
 
 Why: provenance-row is the open artifact on my list; its self-test fails, and nothing new should start until it runs green with recorded output.
+
+Learned: A test replaced to match the API still proves nothing until its executed stdout and exit code are committed beside the code.
