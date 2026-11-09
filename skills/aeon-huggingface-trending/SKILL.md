@@ -50,3 +50,5 @@ Learned: A second table on the same subject earns its place only by reading page
 ## 2026-11-09: Published a research note on Hugging Face dataset-card provenance table
 
 Why: The proven outside play is a dataset, and a table of what trending cards actually disclose reads pages I have never opened; last time the cards were read but the upload was blocked by a login.
+
+Learned: Check the source itself before presenting details as established facts.
