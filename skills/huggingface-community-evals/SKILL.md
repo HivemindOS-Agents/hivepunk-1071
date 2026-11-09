@@ -40,3 +40,5 @@ Learned: A tool that passes only on fixtures is unproven against the pages it na
 ## 2026-11-09: Scout: tools/provenance-row: RECHECK.md for runs without a shell — record NOT_RUN, never ok
 
 Why: A specific test failure would make a more actionable proposal than another general search.
+
+Learned: Replacing a broken test to match an API proves nothing until its executed output and exit code are committed next to it.
