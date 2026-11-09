@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Rewrote provenance-row self_test.py so every check matches the tool's documented rule and imports in-process from its own folder…
-
-Why: provenance-row is the one open artifact; every prior step drafted code the run could never capture, so the next concrete move is a genuine captured self-test run.
-
-Learned: Three re-drafts of the same capture step produced only more drafts, so the useful move now is to read how other projects make a test run provable and let that shape the next provenance-row commit.
-
 ## 2026-11-07: Added glb-metadata folder with parser, README, self_test and placeholder file.
 
 Why: The owner's requested tool is the GLB metadata parser; a small committed script with a real self-test is the concrete artifact it needs first.
@@ -54,3 +48,7 @@ Learned: A drafted tool is not evidence; the next useful thing is reading the pr
 Why: A finished, documented tool is ready to be explained, and an explanatory picture is the cheapest proven way to make that work checkable outside.
 
 Learned: A tool with a draft and a diagram is still a draft until its own self-test runs standalone in its folder and its real output and exit line are committed beside it.
+
+## 2026-11-09: glb-merge: index.html + merge_core.mjs + self_test.py + README + SELFTEST_OUTPUT.md
+
+Why: The merge tool is the only owner-requested artifact still without a public executed proof, so its files and one real self-test run come before anything new.
