@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """self_test.py — Runs glb_check.py on sample .glb files and verifies results.
 
-Dependencies: none (stdlib only).
+Dependencies: none (stdlib only). Relies on sample/valid_minimal.glb and
+sample/bad_magic.glb already written (run make_samples.py first, or commit
+the files themselves).
 
 Runs inside tools/glb-structure-check/:
-    cd tools/glb-structure-check && python3 self_test.py; echo exit=$?
+    python3 self_test.py; echo exit=$?
 
 Exits 0 only when every check passes.
 Writes SELFTEST_OUTPUT.md with verbatim output and exit code.
@@ -36,15 +38,6 @@ def run_check(filename):
     stdout = proc.stdout.strip()
     return stdout, proc.returncode
 
-def check_line(prefix, expected_prefix, filename, all_good):
-    """Check a single output line starts with the expected prefix."""
-    if prefix == expected_prefix:
-        print(f"  PASS: [{filename}] {prefix}")
-        return True, all_good
-    else:
-        print(f"  FAIL: [{filename}] expected '{expected_prefix}' got '{prefix}'")
-        return False, False
-
 def main():
     all_pass = True
     output_lines = []
@@ -54,7 +47,6 @@ def main():
     stdout, rc = run_check("valid_minimal.glb")
     output_lines.append(f"=== valid_minimal.glb ===\n{stdout}\nexit={rc}")
 
-    # Parse stdout
     lines = stdout.split("\n") if stdout else []
 
     # Expected lines in order (ignoring summary line at end)
@@ -93,30 +85,20 @@ def main():
 
     lines = stdout.split("\n") if stdout else []
 
-    # Expected: magic failure, others pass or fail based on structure
-    # (bad_magic.glb has same structure as valid, but magic is wrong)
-    expected_fails_bad = [
-        "FAIL: bad_magic.glb: magic check failed (got b'NOTglTF')",
-    ]
-
-    bad_fails = 0
-    for line in lines:
-        for expected in expected_fails_bad:
-            if expected in line:
-                bad_fails += 1
-                break
-
-    if bad_fails >= 1:
-        print(f"PASS: bad_magic.glb reported at least 1 failure (got {bad_fails})")
+    # Check that magic failure is reported
+    magic_fail_seen = any("FAIL: bad_magic.glb: magic check failed (got b'NOTglTF')" in line for line in lines)
+    if magic_fail_seen:
+        print("PASS: bad_magic.glb reported magic failure as expected")
     else:
-        print(f"FAIL: bad_magic.glb should report magic failure")
+        print("FAIL: bad_magic.glb should report magic failure")
         all_pass = False
 
-    if rc != 1:
+    # Check that exit code is 1 (some check failed)
+    if rc == 1:
+        print("PASS: bad_magic.glb returned exit code 1 as expected")
+    else:
         print(f"FAIL: bad_magic.glb returned exit code {rc}, expected 1")
         all_pass = False
-    else:
-        print(f"PASS: bad_magic.glb returned exit code 1")
 
     print()
 
@@ -141,7 +123,7 @@ def main():
 def _write_output(lines):
     """Write verbatim output to SELFTEST_OUTPUT.md."""
     content = "# Self-test output\n\n"
-    content += "Command: `cd tools/glb-structure-check && python3 self_test.py; echo exit=$?`\n\n"
+    content += "Command: `python3 self_test.py; echo exit=$?`\n\n"
     content += "```\n"
     content += "\n".join(lines) + "\n"
     content += "```\n"
