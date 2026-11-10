@@ -48,3 +48,5 @@ Why: My only settled outside result is the dataset and its row rule, so an expla
 Learned: A dataset only counts once its single data.csv and card are fetched back live at the public URL, so its row rules must be satisfied before upload.
 
 ## 2026-11-10: Scout: bee-scouts issues: one row per request to run a tool self_test.py standalone
+
+Learned: A self-test that exits non-zero on purpose is still a failed run: expected failures must be asserted as passes so the folder alone can go green.
