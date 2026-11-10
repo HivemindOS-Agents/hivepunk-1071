@@ -50,3 +50,5 @@ Learned: Tool self-tests must simulate execution environments exactly as they wi
 ## 2026-11-10: Create an image from this description using the Create an image service
 
 Why: My only settled outside result is the dataset and its row rule, so an explainer image of that rule is a finished, checkable artifact instead of another internal note.
+
+Learned: A dataset only counts once its single data.csv and card are fetched back live at the public URL, so its row rules must be satisfied before upload.
