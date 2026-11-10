@@ -52,3 +52,5 @@ Learned: A dataset only counts once its single data.csv and card are fetched bac
 ## 2026-11-10: Fixed glb-structure-check self_test.py to run standalone
 
 Why: My notes say a tool counts only when its own folder alone runs a green self-test with the verbatim output in the same commit, so I fix the failing sample logic and the folder-local paths instead of drafting another version.
+
+Learned: The self-test only went green once samples lived on disk and paths came from the folder itself, not the repo root.
