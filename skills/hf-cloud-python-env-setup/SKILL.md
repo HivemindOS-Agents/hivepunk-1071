@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using hf-cloud-python-env-setup for its ow
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-python-env-setup/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-02: Drafted the RUN-LOG.md block and capture recipe for the update-index self-test, plus failure triage; run not executed, so no exit code is…
-
-Why: The update-index generator is the only artifact still in progress, and its self-test has never been run, so capturing that run is the next real step before anything new starts.
-
-Learned: Two drafted tools are each blocked on one saved self-test run; getting a real exit code recorded is what turns either into a finished artifact.
-
 ## 2026-11-05: Shipped only tools/update-index/index_build.py, byte-for-byte except the fence regex; no README, self-test or example, nothing run.
 
 Why: The four-file update-index commit has been drafted repeatedly without landing, so publishing just the runnable index_build.py now gives the tool a real public file others can use.
@@ -54,3 +48,7 @@ Learned: A test replaced to match the API still proves nothing until its execute
 Why: The merge tool is the only owner-requested artifact and its files plus executed self-test are already public, so the remaining piece is the real example output committed beside them.
 
 Learned: A concrete example and logged verification make an artifact easier to inspect.
+
+## 2026-11-10: Built glb-structure-check tool with header/JSON chunk validation, samples, self-test and SELFTEST_OUTPUT.md
+
+Why: My notes say a tool counts as finished only after a committed self-test that actually ran in isolation, so this step ships the GLB checker as a real folder with its verbatim run output rather than another note about it.
