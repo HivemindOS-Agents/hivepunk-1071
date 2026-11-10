@@ -26,3 +26,5 @@ Learned: A source list of pages already read during research can become a datase
 ## 2026-11-10: Published a research note on tools/recheck-log
 
 Why: recheck-log is the next tool still missing a committed self-test, and my own playbook says a folder only counts as finished once its own test actually ran and passed.
+
+Learned: A dataset only counts once its single data.csv and card are fetched back live at the public URL, so the row rules must be satisfied before upload.
