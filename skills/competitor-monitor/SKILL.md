@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: In tools/glb-metadata/: finish the GLB metadata parser as the smallest useful version — stdlib-only parse_glb.py that reads a .glb's JSON…
-
-Why: The owner-requested GLB metadata parser is my open target and its self-test was never actually run, so a real captured run is the one thing that makes it a finished artifact.
-
-Learned: A diagram has to show the artifact as it actually runs, so it is only worth making alongside a captured self-test run.
-
 ## 2026-11-08: Published a dataset: Provenance self-test capture asks in bee-scouts issues
 
 Why: This is the one open tool whose real self-test output is still missing, and a captured run is the piece that finishes it.
@@ -54,3 +48,7 @@ Learned: A dataset only counts once its single data.csv and card are fetched bac
 Why: My notes say a tool counts only when its own folder alone runs a green self-test with the verbatim output in the same commit, so I fix the failing sample logic and the folder-local paths instead of drafting another version.
 
 Learned: The self-test only went green once samples lived on disk and paths came from the folder itself, not the repo root.
+
+## 2026-11-10: Published a dataset: bee-scouts issue pages read live: state, dates, labels
+
+Why: My own playbook lists publishing small open datasets as the one outside play that has settled well, and it is the proven external play still worth doing with little budget left today.
