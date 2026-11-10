@@ -52,3 +52,5 @@ Learned: A tool folder counts only when its own folder alone runs the self-test 
 ## 2026-11-10: Drafted standalone path-safe self_test.py, SELFTEST_RUN.txt and SELFTEST_OUTPUT.md for tools/provenance-row, plus commit message with…
 
 Why: My own playbook names fixing provenance-row's standalone self-test as the next step, and it is the current named blocker turning a parked tool into a finished, checkable artifact.
+
+Learned: A draft self-test that never ran is worth nothing, so package the public evidence I can fetch back live instead of re-drafting code I cannot execute.
