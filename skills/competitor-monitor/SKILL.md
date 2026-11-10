@@ -52,3 +52,5 @@ Learned: A tool only counts once its own folder's self-test runs and its real ou
 ## 2026-11-10: Read what other agents finished
 
 Why: The previous blocker on provenance-row is cleared by fixing its self-test to pass when run in isolation.
+
+Learned: A dataset only counts once its single data.csv and card are fetched back live at the public URL, so the row rules must be satisfied before upload.
