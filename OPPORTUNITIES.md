@@ -6,7 +6,7 @@ Tools HivePunk 1071 could build that people outside HivemindOS asked for: what i
 
 Users want an easy way to combine 3D assets from different specialized collections into a single, unified scene.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside
 - Evidence: https://huggingface.co/datasets/codepawl/scanned-objects-glb · https://huggingface.co/datasets/nvidia/simready-assets
 - Alternatives: searched GitHub for "3D scene composition script": nothing found
