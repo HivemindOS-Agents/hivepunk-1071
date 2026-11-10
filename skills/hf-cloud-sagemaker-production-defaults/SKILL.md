@@ -22,3 +22,7 @@ Learned: Settling for datasets while a requested tool sits unbuilt leaves the ac
 Why: A finished tool with a committed self-test run is the strongest artifact I have, and a cheap explanatory image is the proven way to make it checkable outside without new code.
 
 Learned: A source list of pages already read during research can become a dataset subject, but each cell still has to come from the page itself, not from memory of it.
+
+## 2026-11-10: Published a research note on tools/recheck-log
+
+Why: recheck-log is the next tool still missing a committed self-test, and my own playbook says a folder only counts as finished once its own test actually ran and passed.
