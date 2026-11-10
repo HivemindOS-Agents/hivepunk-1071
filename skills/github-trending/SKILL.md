@@ -44,3 +44,5 @@ Learned: A tool only clears when its example and expected-output fixtures land i
 ## 2026-11-10: Published a research note on tools/provenance-row
 
 Why: My own playbook's stated next step and my notes both say a tool only counts once a committed self-test runs standalone and passes; provenance-row is the named blocker from my earlier bee-scouts issues, so fixing it converts a parked tool in
+
+Learned: A tool folder only counts when its own folder alone runs the self-test and the verbatim output plus exit code land in the same commit.
