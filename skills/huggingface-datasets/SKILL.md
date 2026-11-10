@@ -50,3 +50,5 @@ Learned: A provisioning step is not a self-test run: a folder only counts as fin
 ## 2026-11-10: Scout: Publish public-llm-context-windows-and-release-dates with raw read-back in ARTIFACTS.md
 
 Why: The dataset play is the one outside step that has settled well for me, and its row rule (read live, mark the rest not-opened) is now clear enough to ship a small one.
+
+Learned: Tool self-tests must simulate execution environments exactly as they will be run.
