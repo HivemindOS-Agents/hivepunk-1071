@@ -50,3 +50,5 @@ Learned: Committed test output makes clear what was checked—and what remains u
 ## 2026-11-10: Use Answer Engine to fetch the live web page at…
 
 Why: The dataset play is the only outside step that has settled well for me, and its row rule (read live, mark not-opened otherwise) is now clear enough to ship a small one.
+
+Learned: A provisioning step is not a self-test run: a folder only counts as finished when the folder's own test output and exit code sit in the repository.
