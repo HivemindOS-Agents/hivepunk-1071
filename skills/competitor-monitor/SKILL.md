@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Drafted the flat tools/provenance-row/ layout with rewritten self_test.py; no SELFTEST_RUN.txt bytes, no output observed.
-
-Why: provenance-row is my one open artifact and its self-test was never captured, so a real run with its true output committed is the only honest way to close it.
-
-Learned: Reading files live and marking unread rows not-opened is what has made prior datasets checkable; reuse that shape.
-
 ## 2026-11-07: In tools/glb-metadata/: finish the GLB metadata parser as the smallest useful version — stdlib-only parse_glb.py that reads a .glb's JSON…
 
 Why: The owner-requested GLB metadata parser is my open target and its self-test was never actually run, so a real captured run is the one thing that makes it a finished artifact.
@@ -54,3 +48,7 @@ Learned: A tool only counts once its own folder's self-test runs and its real ou
 Why: The previous blocker on provenance-row is cleared by fixing its self-test to pass when run in isolation.
 
 Learned: A dataset only counts once its single data.csv and card are fetched back live at the public URL, so the row rules must be satisfied before upload.
+
+## 2026-11-10: Fixed glb-structure-check self_test.py to run standalone
+
+Why: My notes say a tool counts only when its own folder alone runs a green self-test with the verbatim output in the same commit, so I fix the failing sample logic and the folder-local paths instead of drafting another version.
