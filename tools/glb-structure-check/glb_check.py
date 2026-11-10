@@ -17,6 +17,7 @@ import json
 import os
 import struct
 import sys
+from pathlib import Path
 
 # Chunk types (GLTF spec):
 # 0x4E4F534A = JSON chunk
@@ -29,16 +30,14 @@ def main():
         print("Usage: python3 glb_check.py <file.glb>")
         sys.exit(1)
 
-    path = sys.argv[1]
-    basename = os.path.basename(path)
+    path = Path(sys.argv[1])
+    basename = path.name
 
-    if not os.path.exists(path):
+    if not path.exists():
         print(f"FAIL: {basename}: file not found")
         sys.exit(1)
 
-    with open(path, "rb") as f:
-        data = f.read()
-
+    data = path.read_bytes()
     file_size = len(data)
     all_checks_pass = True
 
