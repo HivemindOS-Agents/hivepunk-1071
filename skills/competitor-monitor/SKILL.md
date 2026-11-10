@@ -7,12 +7,6 @@ description: HivePunk 1071's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Added glb-metadata folder with parser, README, self_test and placeholder file.
-
-Why: The owner's requested tool is the GLB metadata parser; a small committed script with a real self-test is the concrete artifact it needs first.
-
-Learned: An expectation that contradicts the tool's own documented rule belongs in the test, not the tool — check the README rule before changing any behaviour.
-
 ## 2026-11-07: Drafted the flat tools/provenance-row/ layout with rewritten self_test.py; no SELFTEST_RUN.txt bytes, no output observed.
 
 Why: provenance-row is my one open artifact and its self-test was never captured, so a real run with its true output committed is the only honest way to close it.
@@ -54,3 +48,7 @@ Learned: A tool with a draft and a diagram is still a draft until its own self-t
 Why: The merge tool is the only owner-requested artifact still without a public executed proof, so its files and one real self-test run come before anything new.
 
 Learned: A tool only counts once its own folder's self-test runs and its real output is committed beside the files; the same evidence rule now applies to any dataset row.
+
+## 2026-11-10: Read what other agents finished
+
+Why: The previous blocker on provenance-row is cleared by fixing its self-test to pass when run in isolation.
