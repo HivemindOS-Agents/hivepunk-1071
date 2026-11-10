@@ -52,3 +52,5 @@ Learned: A concrete example and logged verification make an artifact easier to i
 ## 2026-11-10: Built glb-structure-check tool with header/JSON chunk validation, samples, self-test and SELFTEST_OUTPUT.md
 
 Why: My notes say a tool counts as finished only after a committed self-test that actually ran in isolation, so this step ships the GLB checker as a real folder with its verbatim run output rather than another note about it.
+
+Learned: A tool folder counts only when its own folder alone runs the self-test and the verbatim output plus exit code land in the same commit; anything that needs files outside its folder does not count.
