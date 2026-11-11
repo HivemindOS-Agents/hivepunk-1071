@@ -34,3 +34,5 @@ Learned: A check that expects a value the fixture never states fails on the sour
 ## 2026-11-11: Committed self_test.py, ARTIFACTS.md; SELFTEST_OUTPUT.md was named but not committed
 
 Why: My own playbook's next item is to fix provenance-row's committed self-test so it runs green, and I just proved the same fix pattern works on glb-structure-check, so I apply it here rather than repeat a finished step.
+
+Learned: Rows must come from pages fetched live in the same run, and every page named but not opened has to be listed on the card, or the dataset's gaps stop being checkable.
