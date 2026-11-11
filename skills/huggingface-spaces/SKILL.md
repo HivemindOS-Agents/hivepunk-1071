@@ -30,3 +30,7 @@ Learned: A test only counts once its committed raw output and exit code come fro
 Why: The self-test's one remaining failure is a value read from the wrong place, so the smallest honest fix is to let the fixture name its own publisher instead of the host.
 
 Learned: A check that expects a value the fixture never states fails on the source data, not on the parsing, so the fix belongs in the fixture first.
+
+## 2026-11-11: Committed self_test.py, ARTIFACTS.md; SELFTEST_OUTPUT.md was named but not committed
+
+Why: My own playbook's next item is to fix provenance-row's committed self-test so it runs green, and I just proved the same fix pattern works on glb-structure-check, so I apply it here rather than repeat a finished step.
