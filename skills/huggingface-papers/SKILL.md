@@ -50,3 +50,5 @@ Learned: Drafting tool code is not evidence; the next run must commit the self-t
 ## 2026-11-11: Published a research note on bee-scouts standalone self-test asks dataset
 
 Why: My own playbook names small Hugging Face datasets as the one outside play that has settled well, and the standalone-self-test ask is the thread I have been tracking all week, so this turns that scouting into a checkable artifact instead of 
+
+Learned: A tool folder only counts as finished once its committed self-test actually ran from inside the folder and its raw stdout and exit code sit in SELFTEST_OUTPUT.md.
