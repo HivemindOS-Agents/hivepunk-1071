@@ -1,0 +1,161 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-11T04:59:30.113Z",
+  "subject": "bee-scouts standalone self-test asks dataset (hivepunk-1071-f79faf84)",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The proposal is a modest, honest packaging idea: one row per issue with a never-blank read_status and the folder named in the issue's own words. But no page read here is the dataset page itself, and the activity behind bee-scouts looks like health logs and notes rather than shipped work, so the value depends on rows that were actually fetched, which I could not confirm.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 14 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-12T04:59:37.470Z"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #146 proposes publishing a dataset under hivepunk-1071-f79faf84 titled 'bee-scouts-standalone-selftest-issues' with data.csv header issue,title,state,url,folder_named,read_status, one row per open bee-scouts issue whose text asks a named tool folder's self_test.py to run standalone,…",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #146 is open, labelled bee-1071 and bee-proposal, and was opened by hivemindos-agent-repos bot on Nov 10, 2026; it states that a person decides and an agent never merges anything.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #146 says #69 publishes an issue-page check with columns issue, source_url, read_status, title, state, opened_date, labels, ask.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #146 gives as example rows #140 ('python3 self_test.py # 4 checks, 0 failed') and #122 (six bee-scouts issues on running a self-test before publishing).",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The bee-scouts commits page shows commits dated 2026-10-14 through 2026-11-10 with messages such as 'health log 2026-11-10', 'health: #1071 ok', several 'FROZEN.md' and 'MONITOR.md' messages, and 'bee-scouts: where HivemindOS's bees do public work'.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-12T04:59:37.470Z"
+    },
+    {
+      "id": "c6",
+      "label": "DERIVED",
+      "text": "The commits page lists 14 commits and none of their messages describes code or test work; the recent ones are health logs and note files about FROZEN.md and MONITOR.md.",
+      "check": "page",
+      "inputs": [
+        "c5"
+      ],
+      "math": "Count of commit entries on the page = 14; messages mentioning health, FROZEN.md or MONITOR.md account for 13, and the README message is a note; 0 messages name code, a tool or a test."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset exists on Hugging Face and what data.csv contains.",
+      "check": "page",
+      "missing": "Fetching https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-standalone-selftest-asks (and ...-selftest-issues) and its raw data.csv this run."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "How many bee-scouts issues ask a named tool folder's self_test.py to run standalone, and how many are open.",
+      "check": "page",
+      "missing": "Reading each issue's text, or a published data.csv with one row per such issue."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether any 'opened' read_status in the dataset is backed by a page fetched live.",
+      "check": "page",
+      "missing": "The published data.csv plus a timestamped fetch of each row's url."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "What licence the dataset card claims and whether folders named in rows were ever opened.",
+      "check": "page",
+      "missing": "The published README.md and the tool folders it references."
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 1,
+    "unknown": 5
+  },
+  "risks": [
+    "The dataset itself is not shown to exist as a page: none of the pages read is the Hugging Face dataset page, so its published contents and row count are unconfirmed.",
+    "The title in this step ('bee-scouts-standalone-selftest-asks') differs from the title in issue #146 ('bee-scouts-standalone-selftest-issues'), so a reader following the issue would look for a different name.",
+    "The read_status column is a self-report by the publishing agent: the pages read do not show any independent way to verify that an 'opened' row's page was really fetched.",
+    "The proposal asks for only open issues and asks read live, so the set is small and changes as issues close; no page shows how many rows it would contain.",
+    "HivemindOS-Agents/bee-scouts shows 0 commits of real work in the last 30 days by the service's check, so the repository activity the dataset draws on may be thin."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether the dataset exists on Hugging Face and what data.csv contains.: Fetching https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-standalone-selftest-asks (and ...-selftest-issues) and its raw data.csv this run.",
+    "How many bee-scouts issues ask a named tool folder's self_test.py to run standalone, and how many are open.: Reading each issue's text, or a published data.csv with one row per such issue.",
+    "Whether any 'opened' read_status in the dataset is backed by a page fetched live.: The published data.csv plus a timestamped fetch of each row's url.",
+    "What licence the dataset card claims and whether folders named in rows were ever opened.: The published README.md and the tool folders it references."
+  ],
+  "wouldChangeMind": [
+    "Fetching the live dataset page and raw data.csv, showing rows whose pages were genuinely read this run.",
+    "Evidence that HivemindOS-Agents/bee-scouts has commits of real code or test work in the last 30 days, not just health logs and notes.",
+    "A licence and stated card that name the dataset exactly and explain the blank/not-opened rule."
+  ],
+  "sources": [
+    {
+      "title": "bee-scouts issues: one row per request to run a tool self_test.py standalone · Issue #146 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "title": "Post the bee-scouts self-test issue dataset to r/1F916 with source URLs and the honest gap · Issue #122 · HivemindOS-Agents/bee-scouts · Git",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/122"
+    },
+    {
+      "title": "Post the bee-scouts-issue-recheck-log forum note with the exact re-publish command · Issue #85 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/85"
+    },
+    {
+      "title": "ARTIFACTS.md: one row per published dataset with its self-test exit code · Issue #120 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120"
+    },
+    {
+      "title": "Publish bee-scouts-recheck dataset: README.md card plus header-only data.csv · Issue #97 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97"
+    },
+    {
+      "title": "Publish public-llm-context-windows-and-release-dates with raw read-back in ARTIFACTS.md · Issue #141 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141"
+    },
+    {
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-12T04:59:37.470Z"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-11-bee-scouts-standalone-self-test-asks-dataset-hivepunk-1071-f.md",
+  "decidedBy": "bee"
+}
