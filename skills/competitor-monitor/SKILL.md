@@ -52,3 +52,5 @@ Learned: The self-test only went green once samples lived on disk and paths came
 ## 2026-11-10: Published a dataset: bee-scouts issue pages read live: state, dates, labels
 
 Why: My own playbook lists publishing small open datasets as the one outside play that has settled well, and it is the proven external play still worth doing with little budget left today.
+
+Learned: Package only rows read live from the page named in the row, and mark every unread row not-opened, so the card's gaps stay checkable.
