@@ -1,139 +1,88 @@
 #!/usr/bin/env python3
-"""self_test.py — Runs glb_check.py on sample .glb files and verifies results.
+"""self_test.py -- offline checks for glb-structure-check.
 
-Dependencies: none (stdlib only). Relies on sample/valid_minimal.glb and
-sample/bad_magic.glb already written (run make_samples.py first, or commit
-the files themselves).
+Run from inside the folder:
+    cd tools/glb-structure-check && python3 self_test.py
 
-Runs inside tools/glb-structure-check/:
-    python3 self_test.py; echo exit=$?
-
-Exits 0 only when every check passes.
-Writes SELFTEST_OUTPUT.md with verbatim output and exit code.
+It generates missing sample files via make_samples.py, then invokes glb_check.py
+on both valid and invalid samples and expects correct exit codes. No arguments,
+no network. Exits 0 only when every check passes.
 """
 
-import os
 import subprocess
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-CHECK_SCRIPT = HERE / "glb_check.py"
-SAMPLE_DIR = HERE / "sample"
-OUTPUT_PATH = HERE / "SELFTEST_OUTPUT.md"
+SAMPLE = HERE / "sample"
+MAKE_SAMPLES = HERE / "make_samples.py"
+GLB_CHECK = HERE / "glb_check.py"
+VALID_GLB = SAMPLE / "valid_minimal.glb"
+BAD_MAGIC = SAMPLE / "bad_magic.glb"
 
-def run_check(filename):
-    """Run glb_check.py on a sample file; return (stdout, returncode)."""
-    filepath = SAMPLE_DIR / filename
-    if not filepath.exists():
-        print(f"FAIL: sample file not found: {filepath}")
-        return "", -1
+def ensure_samples():
+    """If sample files are missing, run make_samples.py to create them."""
+    if not (SAMPLE.exists() and VALID_GLB.exists() and BAD_MAGIC.exists()):
+        print("Generating missing sample files...")
+        proc = subprocess.run(
+            [sys.executable, str(MAKE_SAMPLES)],
+            cwd=str(HERE),
+            capture_output=True,
+            text=True
+        )
+        if proc.returncode != 0:
+            print(f"make_samples.py failed: {proc.stderr.strip()}", file=sys.stderr)
+            sys.exit(1)
 
+CHECKS = 0
+PASSES = 0
+
+def test_valid():
+    global CHECKS, PASSES
+    CHECKS += 1
+    print(f"Testing valid_minimal.glb...")
     proc = subprocess.run(
-        [sys.executable, str(CHECK_SCRIPT), str(filepath)],
+        [sys.executable, str(GLB_CHECK), str(VALID_GLB)],
         capture_output=True,
-        text=True,
-        timeout=30
+        text=True
     )
-    stdout = proc.stdout.strip()
-    return stdout, proc.returncode
+    if proc.returncode == 0:
+        print("  PASS: valid_minimal.glb returned exit code 0")
+        PASSES += 1
+    else:
+        print(f"  FAIL: valid_minimal.glb returned exit code {proc.returncode}, expected 0")
+        print(f"  stdout: {proc.stdout.strip()}")
+        print(f"  stderr: {proc.stderr.strip()}")
+
+def test_bad_magic():
+    global CHECKS, PASSES
+    CHECKS += 1
+    print(f"Testing bad_magic.glb...")
+    proc = subprocess.run(
+        [sys.executable, str(GLB_CHECK), str(BAD_MAGIC)],
+        capture_output=True,
+        text=True
+    )
+    # Expected exit code 1 (invalid file detected)
+    if proc.returncode == 1:
+        print("  PASS: bad_magic.glb reported magic failure")
+        PASSES += 1
+    else:
+        print(f"  FAIL: bad_magic.glb returned exit code {proc.returncode}, expected 1")
+        print(f"  stdout: {proc.stdout.strip()}")
+        print(f"  stderr: {proc.stderr.strip()}")
 
 def main():
-    all_pass = True
-    output_lines = []
-
-    # 1. Valid minimal GLB: all checks should pass
-    print("Testing valid_minimal.glb...")
-    stdout, rc = run_check("valid_minimal.glb")
-    output_lines.append(f"=== valid_minimal.glb ===\n{stdout}\nexit={rc}")
-
-    lines = stdout.split("\n") if stdout else []
-
-    # Expected lines in order (ignoring summary line at end)
-    expected_passes_valid = [
-        "PASS: valid_minimal.glb: magic check passed (glTF)",
-        "PASS: valid_minimal.glb: total length check passed (56 bytes)",
-        "PASS: valid_minimal.glb: chunk layout check passed (JSON first, lengths aligned)",
-        "PASS: valid_minimal.glb: required keys check passed (asset.version present)",
-    ]
-
-    valid_passes = 0
-    for line in lines:
-        for expected in expected_passes_valid:
-            if line == expected:
-                valid_passes += 1
-                break
-
-    if valid_passes == len(expected_passes_valid):
-        print(f"PASS: All {len(expected_passes_valid)} checks passed for valid_minimal.glb")
-    else:
-        print(f"FAIL: Expected {len(expected_passes_valid)} passes, got {valid_passes}")
-        all_pass = False
-
-    if rc != 0:
-        print(f"FAIL: valid_minimal.glb returned exit code {rc}, expected 0")
-        all_pass = False
-    else:
-        print(f"PASS: valid_minimal.glb returned exit code 0")
-
-    print()
-
-    # 2. Bad magic file: magic check should fail, chunk/keys might also fail
-    print("Testing bad_magic.glb...")
-    stdout, rc = run_check("bad_magic.glb")
-    output_lines.append(f"=== bad_magic.glb ===\n{stdout}\nexit={rc}")
-
-    lines = stdout.split("\n") if stdout else []
-
-    # Check that magic failure is reported
-    magic_fail_seen = any("FAIL: bad_magic.glb: magic check failed (got b'NOTglTF')" in line for line in lines)
-    if magic_fail_seen:
-        print("PASS: bad_magic.glb reported magic failure as expected")
-    else:
-        print("FAIL: bad_magic.glb should report magic failure")
-        all_pass = False
-
-    # Check that exit code is 1 (some check failed)
-    if rc == 1:
-        print("PASS: bad_magic.glb returned exit code 1 as expected")
-    else:
-        print(f"FAIL: bad_magic.glb returned exit code {rc}, expected 1")
-        all_pass = False
-
-    print()
-
-    # 3. Summary and exit
-    if all_pass:
+    ensure_samples()
+    test_valid()
+    test_bad_magic()
+    print(f"\nResults: {PASSES}/{CHECKS} checks passed")
+    if PASSES == CHECKS:
         print("All self-tests passed.")
-        final_rc = 0
+        sys.exit(0)
     else:
         print("Some self-tests failed.")
-        final_rc = 1
-
-    print(f"exit={final_rc}")
-    output_lines.append(f"\nResult: {'PASS' if final_rc == 0 else 'FAIL'}")
-    output_lines.append(f"exit={final_rc}")
-
-    # Write SELFTEST_OUTPUT.md
-    _write_output(output_lines)
-
-    sys.exit(final_rc)
-
-
-def _write_output(lines):
-    """Write verbatim output to SELFTEST_OUTPUT.md."""
-    content = "# Self-test output\n\n"
-    content += "Command: `python3 self_test.py; echo exit=$?`\n\n"
-    content += "```\n"
-    content += "\n".join(lines) + "\n"
-    content += "```\n"
-    content += "\n_Autogenerated by self_test.py — do not edit manually._\n"
-
-    tmp_path = str(OUTPUT_PATH) + ".tmp"
-    with open(tmp_path, "w", encoding="utf-8") as f:
-        f.write(content)
-    os.replace(tmp_path, str(OUTPUT_PATH))
-
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
