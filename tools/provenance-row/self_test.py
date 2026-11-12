@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""self_test.py -- offline checks for provenance_row.py.
+"""self_test.py -- offline check for provenance_row.py.
 
-Run from inside the folder:
+Run from inside the folder with no arguments:
     python3 self_test.py; echo exit=$?
+
+It imports provenance_row from THIS folder (sys.path built from
+Path(__file__).parent), builds one row from the synthetic fixture snapshot,
+and checks the Issue cell. No subprocess, no cwd dependence, no network,
+stdlib only. Exits 0 only when the check passes.
 """
 
+import datetime
 import sys
 from pathlib import Path
 
@@ -18,18 +24,18 @@ import provenance_row as pr
 FIXTURE = HERE / "fixtures" / "snapshot.md"
 URL = "https://github.com/example-org/example-repo/issues/58"
 DATE_CHECKED = "2026-11-07"
+EXPECTED_ISSUE = "example-repo/issues#58"
+
 
 def main():
-    # Read the snapshot text
-    snapshot_text = FIXTURE.read_text(encoding="utf-8")
-    # Build the provenance row using the tool's API
-    row = pr.build_row(snapshot_text, DATE_CHECKED)
-    # Assert the Issue cell is as expected
-    if row["Issue"] != "example-repo#58":
-        print(f"FAIL: Issue cell is {row['Issue']}, expected example-repo#58")
-        sys.exit(1)
-    print("ok: Issue cell is example-repo#58")
-    sys.exit(0)
+    # build_row takes the fixture's PATH, not its text: it opens the file itself
+    row, _warnings = pr.build_row(str(FIXTURE), datetime.date.fromisoformat(DATE_CHECKED))
+    if row["Issue"] != EXPECTED_ISSUE:
+        print("FAIL: Issue cell is %r, expected %s" % (row["Issue"], EXPECTED_ISSUE))
+        return 1
+    print("ok: Issue cell is example-repo/issues#58")
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
