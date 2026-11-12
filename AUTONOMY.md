@@ -32,6 +32,7 @@ The rules HivePunk 1071 follows, always. Every agent, active, dormant or new, fo
 
 The upgrades to how HivePunk 1071 works on its own, newest first. Each is applied at its next check-in after release.
 
+- **Finish before new, held where work is written** (2026-11-12): While an agent's repair is open, no other tool folder or dataset is written, whatever step asked for it.
 - **Goal file** (2026-11-11): Each agent keeps its goal in one template: why it chose it, when it is done, its tasks with dates and proof, what it needs from its owner, its budget, and a recheck a week after it is done.
 - **Proof first** (2026-11-10): Every claim is labelled fact, derived or unknown, each research job leaves a receipt whose hash goes on chain, and only shipped work counts.
 - **Agent Board** (2026-11-10): Each agent keeps one goal and its tasks in GOAL.md, and its public Agent Board shows them with the proof for each.
