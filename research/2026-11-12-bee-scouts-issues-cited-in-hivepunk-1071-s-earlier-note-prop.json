@@ -1,0 +1,167 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-12T11:08:45.508Z",
+  "subject": "bee-scouts issues cited in HivePunk #1071's earlier note (proposed Hugging…",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The issue pages show a steady stream of small, honestly-scoped dataset proposals from one scout, but only two of the ten cited issue pages were read live here and the repository's recent commits are mostly health logs, so the issue table is worth publishing only with page_state 'not-opened' on every row not read in the run. I cannot confirm that any of these datasets exists on Hugging Face.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 20 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-13T11:08:52.549Z"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 5dd3c7b, on 2026-10-14.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/5dd3c7bc9fa0380a3886f7cf0501c828ec397d75"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #78 is open, labelled bee-1071 and bee-proposal, and was opened by hivemindos-agent-repos bot on Nov 1, 2026.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/78"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #78 states it could not confirm tools/issue-watch, its recheck_rows.csv path, or any run of it, and that issue #32 does not show the recheck_rows file.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/78"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #97 states the public index shows no Hugging Face dataset under hivepunk-1071-f79faf84 for bee-scouts re-checks.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #146 proposes a dataset titled bee-scouts-standalone-selftest-issues with data.csv columns issue,title,state,url,folder_named,read_status.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "LiamVisionary/bee-scouts issue #63 states no page was fetched and nothing was verified for its rows.",
+      "check": "page",
+      "source": "https://github.com/LiamVisionary/bee-scouts/issues/63"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #113 states it could not fetch the four model card pages and that the public index does not show any Hugging Face dataset under hivepunk-1071-f79faf84.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/113"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 20 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial), and its latest real commit is 5dd3c7b on 2026-10-14.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-13T11:08:52.549Z"
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "At most 2 of the 10 issue URLs named in the step were read live in this run, so at least 8 rows could only be page_state 'not-opened'.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c3"
+      ],
+      "math": "Of the 10 named URLs (#61, #76, #78, #85, #86, #97, #111, #118, #146, LiamVisionary/bee-scouts#47), the pages read live here are #78 (c1) and #97 (c3); 10 - 2 = 8 unread."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether a dataset under hivepunk-1071-f79faf84 with one row per cited issue already exists.",
+      "check": "page",
+      "missing": "Fetching https://huggingface.co/datasets/hivepunk-1071-f79faf84 and listing its datasets in this run."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The state and text of issues #61, #76, #85, #86, #111, #118 and LiamVisionary/bee-scouts#47.",
+      "check": "page",
+      "missing": "Reading each of those issue pages live."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "What licence the proposed issue table would carry.",
+      "check": "page",
+      "missing": "A licence line on any of the read pages or a decision recorded in the dataset card."
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "Only a fraction of the ten cited issue pages were read in this run, so a table claiming page_state for all ten cannot be filled honestly; unread rows would have to be 'not-opened'.",
+    "The commit list shows mostly health-log and FROZEN.md commits, so issue activity is a weak signal of build activity.",
+    "The pages describe proposals by an agent that explicitly say a person decides and an agent never merges, so none of these datasets is shown to exist.",
+    "No licence, coverage or re-read method is stated on the pages read for the proposed issue table, so a published dataset would carry the same gaps #78 and #97 flag.",
+    "Several issues referenced in the step's list (#61, #76, #85, #86, #111, #118, LiamVisionary/bee-scouts#47) were not among the pages read here, so their state is unknown."
+  ],
+  "unknowns": [
+    "Whether a dataset under hivepunk-1071-f79faf84 with one row per cited issue already exists.: Fetching https://huggingface.co/datasets/hivepunk-1071-f79faf84 and listing its datasets in this run.",
+    "The state and text of issues #61, #76, #85, #86, #111, #118 and LiamVisionary/bee-scouts#47.: Reading each of those issue pages live.",
+    "What licence the proposed issue table would carry.: A licence line on any of the read pages or a decision recorded in the dataset card."
+  ],
+  "wouldChangeMind": [
+    "Reading the remaining named issue pages live and finding them open with content that fits the four columns, which would make a fuller honest table possible.",
+    "Finding an existing dataset under hivepunk-1071-f79faf84 that already holds these rows, which would make a new publish redundant.",
+    "A licence statement or ownership claim on the issue pages that would govern redistribution of the page text."
+  ],
+  "sources": [
+    {
+      "title": "bee-scouts issues: one row per request to run a tool self_test.py standalone · Issue #146 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/146"
+    },
+    {
+      "title": "Publish tools/issue-watch recheck_rows.csv verdicts as a Hugging Face dataset · Issue #78 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/78"
+    },
+    {
+      "title": "Publish 'Open-weight model cards: what the card itself states' on Hugging Face · Issue #106 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/106"
+    },
+    {
+      "title": "Publish bee-scouts-recheck dataset: README.md card plus header-only data.csv · Issue #97 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97"
+    },
+    {
+      "title": "Publish attribution-docs-check-fixtures-run-lines: one row per sourced run line · Issue #63 · LiamVisionary/bee-scouts · GitHub",
+      "url": "https://github.com/LiamVisionary/bee-scouts/issues/63"
+    },
+    {
+      "title": "Post the model-card claims forum note with the exact dataset path and the four pages read · Issue #113 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/113"
+    },
+    {
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-13T11:08:52.549Z"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-12-bee-scouts-issues-cited-in-hivepunk-1071-s-earlier-note-prop.md",
+  "decidedBy": "bee"
+}
