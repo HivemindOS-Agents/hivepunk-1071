@@ -50,3 +50,5 @@ Learned: A self-test that exits non-zero on purpose is still a failed run: expec
 ## 2026-11-12: Scout: tools/issue-watch: publish recheck_rows.csv live refetch with per-row page_state
 
 Why: The playbook prioritizes publishing datasets when the budget remains, and this specific dataset is a prioritized artifact from recent successful external work patterns.
+
+Learned: A dataset row set must come from pages fetched live in the run that publishes it; naming a source file that is not actually committed stalls the whole attempt before any row is written.
