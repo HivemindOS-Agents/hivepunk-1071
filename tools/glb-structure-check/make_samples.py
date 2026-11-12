@@ -1,61 +1,60 @@
 #!/usr/bin/env python3
-"""make_samples.py — Write the two sample .glb files used by glb_check.py self-test.
+"""make_samples.py -- generate binary sample GLB files for glb-structure-check.
 
-Run once before the self-test:
-    python3 make_samples.py
+Generates in the sample/ directory two files:
+  valid_minimal.glb - a minimally valid GLB with JSON chunk containing asset version.
+  bad_magic.glb - a file with incorrect magic bytes.
 
-Creates in sample/:
-    valid_minimal.glb  — a minimal valid GLB file
-    bad_magic.glb      — same structure but with invalid magic bytes
-
-Both files are 56 bytes.
+Run from the tool folder: python3 make_samples.py
 """
 
-import json
 import struct
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SAMPLE_DIR = HERE / "sample"
+SAMPLE = HERE / "sample"
 
-def build_glb(json_obj, magic=b"glTF"):
-    """Build a minimal valid two-chunk GLB (JSON only, no BIN chunk)."""
-    # JSON chunk content
-    json_bytes = json.dumps(json_obj, separators=(",", ":")).encode("utf-8")
-    # Pad to 4 bytes
+def write_valid_minimal():
+    """Create a minimal valid GLB: magic glTF, version 2, one JSON chunk."""
+    # Minimal JSON: asset version 2.0
+    json_str = '{"asset":{"version":"2.0"}}'
+    json_bytes = json_str.encode('utf-8')
+    # Pad JSON to 4-byte alignment (already aligned: length 27, aligned 28)
     padding = (4 - len(json_bytes) % 4) % 4
-    json_bytes_padded = json_bytes + b" " * padding
+    padded_json = json_bytes + b' ' * padding
+    # Chunk: JSON type 0x4E4F534A, length of chunk data (padded_json)
+    chunk_length = len(padded_json)
+    chunk_type = 0x4E4F534A  # JSON
+    chunk_header = struct.pack('<II', chunk_length, chunk_type)
+    # Total file length: 12 (header) + len(chunk_header) + chunk_length
+    total_length = 12 + len(chunk_header) + chunk_length
+    header = struct.pack('<4sII', b'glTF', 2, total_length)
+    return header + chunk_header + padded_json
 
-    # Chunk header: length (uint32), type (uint32, JSON = 0x4E4F534A)
-    chunk_header = struct.pack("<II", len(json_bytes_padded), 0x4E4F534A)
-
-    # Total file: 12-byte header + 8-byte chunk header + padded chunk
-    total_length = 12 + 8 + len(json_bytes_padded)
-
-    # File header: magic (4 bytes), version (uint32, =2), total length (uint32)
-    header = magic + struct.pack("<II", 2, total_length)
-
-    return header + chunk_header + json_bytes_padded
-
-
-def write_sample(filename, glb_bytes):
-    out_path = SAMPLE_DIR / filename
-    SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
-    out_path.write_bytes(glb_bytes)
-    print(f"Wrote {out_path} ({len(glb_bytes)} bytes)")
-
+def write_bad_magic():
+    """Create a file with wrong magic bytes (NOT 'glTF')."""
+    json_str = '{"asset":{"version":"2.0"}}'
+    json_bytes = json_str.encode('utf-8')
+    padding = (4 - len(json_bytes) % 4) % 4
+    padded_json = json_bytes + b' ' * padding
+    chunk_length = len(padded_json)
+    chunk_type = 0x4E4F534A
+    chunk_header = struct.pack('<II', chunk_length, chunk_type)
+    total_length = 12 + len(chunk_header) + chunk_length
+    # Use "NOTg" as magic (should fail check)
+    header = struct.pack('<4sII', b'NOTg', 2, total_length)
+    return header + chunk_header + padded_json
 
 def main():
-    json_content = {"asset": {"version": "2.0"}}
-
-    # Valid file
-    valid = build_glb(json_content, magic=b"glTF")
-    write_sample("valid_minimal.glb", valid)
-
-    # Bad magic file
-    bad = build_glb(json_content, magic=b"NOTglTF")
-    write_sample("bad_magic.glb", bad)
-
+    SAMPLE.mkdir(parents=True, exist_ok=True)
+    valid_path = SAMPLE / "valid_minimal.glb"
+    bad_path = SAMPLE / "bad_magic.glb"
+    valid_path.write_bytes(write_valid_minimal())
+    bad_path.write_bytes(write_bad_magic())
+    print(f"Created {valid_path} ({valid_path.stat().st_size} bytes)")
+    print(f"Created {bad_path} ({bad_path.stat().st_size} bytes)")
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()
