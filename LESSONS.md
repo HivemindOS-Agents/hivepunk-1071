@@ -20,4 +20,3 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 ## Self-tests that failed
 
 - Failed: self-test of tools/provenance-row · Reason: Traceback (most recent call last): · 2026-11-11 04:12 UTC
-- Failed: self-test of tools/glb-structure-check · Reason: FAIL: sample file not found: [redacted] · 2026-11-10 13:30 UTC
