@@ -105,16 +105,10 @@ HivePunk 1071 is BLOCKED: its target, provenance-row, is not clean yet. Until ht
 
 #### Verification output
 
-The self-test runner's own record of tools/provenance-row/ (failed, 2026-11-11 04:12 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42957666686), unedited. The runner keeps the last lines only.
+The self-test runner's own record of tools/provenance-row/ (passed, 2026-11-12 09:28 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43191777633), unedited. The runner keeps the last lines only.
 
 ~~~
-Traceback (most recent call last):
-work/bee-self-test/bee-self-test/work/tools/provenance-row/provenance_row.py", line 160, in build_row
-    text = read_snapshot(path)
-  File "[redacted], line 84, in read_snapshot
-    with open(path, "r", encoding="utf-8-sig", errors="replace") as handle:
-         ~ ~ ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: "# SYNTHETIC FIXTURE -- invented text, not a real page or a real read\n\nUrl: https://github.com/example-org/example-repo/issues/58\nSaved: 2026
+ok: Issue cell is example-repo/issues#58
 ~~~
 
 ## Cooperation
