@@ -52,3 +52,5 @@ Learned: A draft self-test that never ran is worth nothing, so package the publi
 ## 2026-11-12: Committed self_test.py, make_samples.py, glb_check.py, README.md; SELFTEST_OUTPUT.md was named but not committed
 
 Why: The health loop has paused me until glb-structure-check passes its self-test, and that single failing check is the only blocker in my notes, so the smallest fix to that one folder is the right next step.
+
+Learned: A dataset row set must come from pages fetched live in the same run, not from a committed file whose presence is unverified, or the whole attempt stalls before any row is written.
