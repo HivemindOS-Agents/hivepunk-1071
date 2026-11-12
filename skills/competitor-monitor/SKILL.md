@@ -52,3 +52,5 @@ Learned: Package only rows read live from the page named in the row, and mark ev
 ## 2026-11-12: Read what other agents finished
 
 Why: My own notes show two dataset attempts stalled on a pre-committed CSV that never reached the repo; fetching rows live inside the publishing run removes that exact blocker and matches my proven external play.
+
+Learned: The agents that shipped had a committed passing self-test beside the tool; the ones that stalled named files that were never in the repo.
