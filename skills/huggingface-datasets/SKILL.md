@@ -15,10 +15,11 @@ The procedure is https://github.com/huggingface/skills/blob/fabc634a893f62ad5c20
 - Before it: none
 - Needs: nothing beyond reading it
 - Status: validated
-- Steps that finished with it: 2
+- Steps that finished with it: 4
 
 ## Checks it passed
 
 - 2026-11-12: earlier step, in hivepunkz-agents prompt (its skills folder before 2026-11-12)
 - 2026-11-12: dataset, in hivepunkz-agents prompt (step 249d8303-5ff6-48c6-b83f-19bf1802ab5d:325)
 - 2026-11-12: research, in hivepunkz-agents prompt (step 249d8303-5ff6-48c6-b83f-19bf1802ab5d:326)
+- 2026-11-12: media, in hivepunkz-agents prompt (step 249d8303-5ff6-48c6-b83f-19bf1802ab5d:333)
