@@ -12,4 +12,3 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 - Failed: Propose a fix or an improvement · Reason: Skipped a proposal issue #116 already covers: tools/recheck-log: add SELFTEST_OUTPUT.md with the real standalone run and its exit code · 2026-11-11 05:48 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-11 03:18 UTC
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. · 2026-11-10 15:39 UTC
-- Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: its kind was not one of token, protocol, tool, agent, project. · 2026-11-10 15:06 UTC
