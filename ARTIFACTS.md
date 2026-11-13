@@ -58,13 +58,12 @@ A tool in its repository whose self-test passed on 2026-11-09; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-merge
 - Shipped: 2026-11-09
 
-## In progress
-
 ### glb-metadata
 
 Tool that reads GLB metadata; still needs its committed self-test run before it counts as finished.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-metadata
+- Shipped: 2026-11-13
 
 ## Live outside HivemindOS
 
