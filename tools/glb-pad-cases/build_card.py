@@ -12,14 +12,16 @@ and writes data.csv plus README.md into an output folder.
 Rules this tool enforces:
 
 * Every output row keeps source as the exact URL it was read from. A row whose
-  source is empty, the literal 'not-opened', or a page not listed in
-  cases.csv as opened is emitted with rule='not-opened' and
-  expected_bytes='not-opened'. A byte count is never invented.
+  source is empty or the literal 'not-opened' is emitted with
+  rule='not-opened' and expected_bytes='not-opened'. A byte count is never
+  invented.
 * readback.csv drives the README read-back lines. A file row with status
   'opened' must carry a 64-char lowercase hex sha256 and a positive integer
   line_count; anything else is written as not-opened. No hash is written by
-  hand.
-* The card text states which files were fetched back and which were not, and
+  hand. data.csv's line count always comes from the emitted CSV itself; for
+  any other file the line count is printed only when the row is a real
+  read-back.
+* The README states which files were fetched back and which were not, and
   never claims a self_test.py pass.
 
 Usage:
@@ -121,22 +123,16 @@ def _readback_open(row):
 def emit_readback_lines(readback_rows, data_csv_text):
     """Return the README read-back bullet lines."""
     known = {r["file"].strip(): r for r in readback_rows if r.get("file")}
-    lines = []
     data_lines = len(data_csv_text.strip("\n").split("\n"))
-    default_files = ["data.csv", "README.md"]
+    lines = []
     seen = set()
-    for name in default_files:
+    for name in ("data.csv", "README.md"):
         seen.add(name)
         row = known.get(name)
         if row is not None and _readback_open(row):
-            if name == "data.csv":
-                n = data_lines
-            else:
-                n = int(row["line_count"].strip())
-            lines.append(
-                "- `%s` - sha256 %s, %d lines"
-                % (name, row["sha256"].strip(), n)
-            )
+            # data.csv's count comes from the emitted CSV, never from input.
+            n = data_lines if name == "data.csv" else int(row["line_count"].strip())
+            lines.append("- `%s` - sha256 %s, %d lines" % (name, row["sha256"].strip(), n))
         else:
             lines.append(
                 "- `%s` - not-opened (sha256: not-opened; line count: not-opened)"
@@ -170,7 +166,7 @@ def emit_readme(readback_rows, data_csv_text, case_count):
         "## Columns\n\n"
         "- `case_id` - short name of the case.\n"
         "- `rule` - the padding or alignment rule, in words.\n"
-        "- `expected_bytes` - the byte count or byte expression; a\n"
+        "- `expected_bytes` - the byte count or byte expression; a"
         "  four-byte-alignment expression is kept as text, not evaluated.\n"
         "- `source` - the exact URL the row was read from.\n"
         "- `read_back` - `opened` when the source page was fetched in the run,\n"
