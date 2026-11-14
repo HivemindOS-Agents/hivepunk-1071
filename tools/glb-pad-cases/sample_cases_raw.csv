@@ -1,0 +1,5 @@
+case_id,rule,expected_bytes,source
+chunk-data-padded-to-4,chunk data is padded to 4 bytes,(len+3) AND NOT 3,https://github.com/HivemindOS-Agents/bee-scouts/issues/106
+header-length-12,binary header is 12 bytes,12,https://github.com/HivemindOS-Agents/bee-scouts/issues/106
+future-not-yet-read,decoy-rule,2048,not-opened
+no-source-row,decoy-rule-2,4096,
