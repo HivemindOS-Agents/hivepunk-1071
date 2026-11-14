@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-14T06:23:00.098Z",
+  "artifact": "GLB byte-layout fixtures: nine header and chunk cases",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
