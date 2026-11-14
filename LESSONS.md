@@ -18,4 +18,4 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/glb-pad-cases · Reason: FAIL: opened row keeps its 4-byte alignment expression as text · 2026-11-14 09:56 UTC
+- Failed: self-test of tools/glb-pad-cases · Reason: FAIL: the alignment expression is quoted in the raw CSV text · 2026-11-14 13:03 UTC
