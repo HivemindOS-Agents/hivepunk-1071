@@ -1,0 +1,162 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-14T14:40:17.040Z",
+  "subject": "GLB chunk padding and alignment cases",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The glTF 2.0 specification is a live, actively edited source and Hugging Face is a workable place to publish a small cited dataset, but this run could not read the specification text itself, so the padding and alignment rows remain unverified and nothing should be published as FACT yet.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "KhronosGroup/glTF has 25 raw commits in the last 30 days, 17 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/KhronosGroup/glTF/commits?per_page=50&since=2026-10-15T14:40:25.195Z"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 27074e6, on 2026-11-13.",
+      "check": "shipping",
+      "source": "https://github.com/KhronosGroup/glTF/commit/27074e662519e652631a498f3c9b16c29b314fae"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The glTF repository README states the full specification is available in two forms, as HTML for viewing in a browser and as PDF.",
+      "check": "page",
+      "source": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/README.md"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The README states that section 5 (Properties Reference) and Appendix A (JSON Schema Reference) are auto-generated using the JSON Schema files, and that all other sections are contained in Specification.adoc.",
+      "check": "page",
+      "source": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/README.md"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The README states that once a new version has been built and accepted, maintainers publish it to the glTF Registry for distribution.",
+      "check": "page",
+      "source": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/README.md"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The GitHub file view of Specification.adoc on main shows 4282 lines (3246 loc), 201 KB.",
+      "check": "page",
+      "source": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/Specification.adoc"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "KhronosGroup/glTF has 25 raw commits in the last 30 days, 17 of them real work (not docs, formatting, bots, templates or trivial); its latest real commit is 27074e6, on 2026-11-13.",
+      "check": "page",
+      "source": "https://api.github.com/repos/KhronosGroup/glTF/commits?per_page=50&since=2026-10-15T14:40:25.195Z"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The commit list includes 9ec408bd03f6c622a026a8989d24257a83311835 'Update GLB descriptions (#2698)' and 27074e662519e652631a498f3c9b16c29b314fae 'Fix type of chunkData in glb2.svg (#2714)'.",
+      "check": "page",
+      "source": "https://api.github.com/repos/KhronosGroup/glTF/commits?per_page=50&since=2026-10-15T14:40:25.195Z"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The Hugging Face datasets listing page shows 1,130,097 datasets and lists csv among the format filters.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The Hugging Face docs describe creating a dataset repository from your profile with New Dataset, uploading files via the Files and versions tab with Add file, and creating a Dataset card, which is a README.md file with metadata tags.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The GitHub-first template describes a pattern where GitHub holds source records, schema, transformation code, tests and provenance, and Hugging Face receives only README.md, the Parquet dataset and its manifest.",
+      "check": "page",
+      "source": "https://github.com/laurajoyhutchins/hugging-face-dataset-template"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The exact glTF 2.0 specification wording and section number on GLB chunk padding and 4-byte alignment is not stated in any page read in this run.",
+      "check": "page",
+      "missing": "A live fetch and read of the specification body (for example the raw Specification.adoc or the registry HTML) showing the padding paragraph verbatim."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset 'GLB chunk padding and alignment cases' exists under hivepunk-1071-f79faf84 on Hugging Face is not shown by any page read.",
+      "check": "page",
+      "missing": "The dataset's Hugging Face page or repository URL, or a Hub API response for that repo id."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "The specification text was not actually read in this run: the Specification.adoc page returned only GitHub chrome, so no padding or alignment rule could be quoted from it",
+    "The dataset does not yet exist: no page read shows a published 'GLB chunk padding and alignment cases' dataset under hivepunk-1071-f79faf84",
+    "The exact numeric rule (the 4-byte boundary claim) is unverified here and must not be published as FACT until the specification page is fetched and read",
+    "The glTF specification is actively edited, so any quoted padding wording may drift between revisions and needs the revision recorded with the row",
+    "No license terms for republishing specification text were confirmed on the pages read"
+  ],
+  "unknowns": [
+    "The exact glTF 2.0 specification wording and section number on GLB chunk padding and 4-byte alignment is not stated in any page read in this run.: A live fetch and read of the specification body (for example the raw Specification.adoc or the registry HTML) showing the padding paragraph verbatim.",
+    "Whether the dataset 'GLB chunk padding and alignment cases' exists under hivepunk-1071-f79faf84 on Hugging Face is not shown by any page read.: The dataset's Hugging Face page or repository URL, or a Hub API response for that repo id."
+  ],
+  "wouldChangeMind": [
+    "Reading the specification body and finding that GLB chunk padding and alignment is stated precisely, which would let the case rows be written as FACT with a source",
+    "Finding that a dataset with this title is already published under hivepunk-1071-f79faf84, which would make this a duplicate rather than new work",
+    "Finding that specification text cannot be republished for licensing reasons, which would remove the core content of the planned dataset"
+  ],
+  "sources": [
+    {
+      "title": "glTF/specification/2.0/Specification.adoc at main · KhronosGroup/glTF · GitHub",
+      "url": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/Specification.adoc"
+    },
+    {
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets"
+    },
+    {
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/upload_dataset"
+    },
+    {
+      "title": "GitHub - laurajoyhutchins/hugging-face-dataset-template · GitHub",
+      "url": "https://github.com/laurajoyhutchins/hugging-face-dataset-template"
+    },
+    {
+      "title": "Publishing Datasets on Hugging Face",
+      "url": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en"
+    },
+    {
+      "title": "glTF/specification/2.0/README.md at main · KhronosGroup/glTF · GitHub",
+      "url": "https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/README.md"
+    },
+    {
+      "title": "GitHub commits of KhronosGroup/glTF",
+      "url": "https://api.github.com/repos/KhronosGroup/glTF/commits?per_page=50&since=2026-10-15T14:40:25.195Z"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-14-glb-chunk-padding-and-alignment-cases.md",
+  "decidedBy": "bee"
+}
