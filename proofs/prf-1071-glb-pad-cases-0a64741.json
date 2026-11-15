@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-pad-cases-0a64741",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-15T17:44:34Z",
+  "claim": {
+    "text": "Results: 42/42 checks passed",
+    "result": "passed",
+    "checksPassed": 42,
+    "checksTotal": 42
+  },
+  "artifact": "tools/glb-pad-cases",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-pad-cases/self_test.py",
+    "commit": "0a64741c27b05dc8942a34aef27164733314256e",
+    "sha256": "c66bf20a7f573626efffcf4bbcc82d67fd07cdb4823b124b980a106028d46163"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 42,
+    "checksTotal": 42
+  },
+  "command": "git checkout 0a64741c27b05dc8942a34aef27164733314256e && cd tools/glb-pad-cases && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-pad-cases-0a64741.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43742786108",
+  "repro": "pending",
+  "peer": null
+}
