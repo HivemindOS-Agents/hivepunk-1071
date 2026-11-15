@@ -59,10 +59,12 @@ override the emitted one; a non-hex "hash" is refused; and the no-unverified
 hash rule is pinned from both sides - a card with no opened read-back (all
 not-opened, or an empty read-back) must contain no long hex run at all, while
 an opened card must contain exactly one long hex run and it must be that
-row's own hash. The guard is also called directly: it refuses a hash with no
-opened row and accepts an opened row's hash. It also parses the shipped
-`sample_cases_raw.csv` and `sample_readback.csv`. No network, no subprocess,
-nothing written outside a temp dir. It exits 0 only when every check passes.
+row's own hash. The guard is also called directly for three cases: it refuses
+a hash when no row was opened, it refuses a borrowed 64-char hex hash when
+the read-back's only opened row carries a different hash, and it accepts an
+opened row's own hash. It also parses the shipped `sample_cases_raw.csv` and
+`sample_readback.csv`. No network, no subprocess, nothing written outside a
+temp dir. It exits 0 only when every check passes.
 
 On quoting: the raw fixture writes the four-byte expression `(len+3) AND NOT 3`
 as a quoted CSV field, and the emitted cell comes back byte-identical; the
@@ -102,9 +104,10 @@ this folder, because none was read from a publish run.
 - CSV files much larger than the sample, and header names with stray spaces.
 - It does not check that a `source` page is live or that a rule is true; it
   records what you read.
-- `out/data.csv` and `out/README.md` shipped in this folder were hand-shaped
-  to match the emitter's output for the 10 real rows; the emitter was run on
-  the 4-row sample only.
+- `out/data.csv` and `out/README.md` shipped in this folder were shaped by
+  hand to match the emitter's output for the 10 real rows; the emitter was
+  run on the 4-row sample only, so the shipped card is not covered by the
+  self-test.
 
 ## Files
 
