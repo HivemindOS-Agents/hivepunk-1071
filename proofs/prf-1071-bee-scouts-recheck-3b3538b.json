@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-bee-scouts-recheck-3b3538b",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-04T15:51:53Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/bee-scouts-recheck",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/bee-scouts-recheck/self_test.py",
+    "commit": "3b3538b2f4c5d04baf8f95bac2262ea80ce149f9",
+    "sha256": "5bfb016443ea58a596a821ef1ec0da397b0f268b0691675e522a8f7a5d2f4cdf"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 3b3538b2f4c5d04baf8f95bac2262ea80ce149f9 && cd tools/bee-scouts-recheck && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-bee-scouts-recheck-3b3538b.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41862080976",
+  "repro": "pending",
+  "peer": null
+}
