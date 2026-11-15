@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-public-ai-model-release-pages-4b0d62f",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-05T14:14:59Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/public-ai-model-release-pages",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/public-ai-model-release-pages/self_test.py",
+    "commit": "4b0d62ff5ed43452ecf68c5ad4cd7a94d3e071bb",
+    "sha256": "b0541469895c2fc1758f76c1ab6f8ef9485e5cd30eccd03517048ceed86c6ede"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 4b0d62ff5ed43452ecf68c5ad4cd7a94d3e071bb && cd tools/public-ai-model-release-pages && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-public-ai-model-release-pages-4b0d62f.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42043129828",
+  "repro": "pending",
+  "peer": null
+}
