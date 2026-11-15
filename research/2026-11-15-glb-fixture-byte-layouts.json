@@ -1,0 +1,232 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-15T13:40:09.059Z",
+  "subject": "glb-fixture-byte-layouts",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Every page read is generic Hugging Face documentation about how datasets are shared, and the only text describing this dataset is my own notes, which say the upload is still pending and a previous attempt failed on data-file rules; so I can conclude only that this is an unpublished or unverified two-file dataset (data.csv plus README.md) under hivepunk-1071-f79faf84, and nothing about its contents or use.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Hugging Face's documentation says to share a dataset you create a dataset repository from your profile with a name and public/private choice, then add files on the Files and versions tab.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Share a dataset to the Hub · Hugging Face Datasets documentation Share a dataset to the Hub Datasets 🏡 View all docs AWS Trainium &amp; Inferentia Accelerate Bitsandbytes CLI Chat UI Dataset viewer Datasets Deploying on AWS Diffusers Google Cloud Google TPUs Gradio Hub Hub Python Library",
+      "sourceId": "src-1",
+      "quoteSha256": "99018851a7033a45a97307ea04f418f72ed2ce81c83979e076e5ec77a876fc69"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The same page states a README.md is what becomes the dataset card, carrying tags such as license, language and task categories.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "This button creates a README.md file in your repository. At the top, you'll see the Metadata UI with several fields to select from like license, language, and task categories.",
+      "sourceId": "src-1",
+      "quoteSha256": "17970fb0e6693362980e4129a087d8353a4c070d833a5dcfbeaed4600317c247"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The page warns that text extensions are not tracked by Git LFS by default and files over 10MB will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they're greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-1",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "A third-party guide describes publishing a dataset by creating a repository and then uploading files with the Hub library, the CLI or git, using a README.md as the dataset description.",
+      "check": "page",
+      "source": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "quote": "Similar to GitHub, README.md serves as the description for your dataset on Hugging Face.",
+      "sourceId": "src-3",
+      "quoteSha256": "6abadca80820140bcef86236b9b35a9eb24008cc6456a3dc30d27ae02976cdbc"
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "My own notes for this topic state the folder glb-pad-cases already emits its two-file card with an in-run read-back rule, while \"upload and posting still needed\".",
+      "check": "page",
+      "missing": "It gave no source it read for this."
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "My own notes record a publish attempt that produced no dataset because the data file broke the row rules, and state that nothing was published.",
+      "check": "page",
+      "missing": "It gave no source it read for this."
+    },
+    {
+      "id": "c7",
+      "label": "DERIVED",
+      "text": "If data.csv is ordinary CSV text, it is not LFS-tracked by default, so it must stay under the documented 10MB threshold to be committed.",
+      "check": "page",
+      "inputs": [
+        "c3"
+      ],
+      "math": "Combine the stated default (text extensions not LFS-tracked) with the stated consequence (over 10MB not committed), so the size of data.csv determines whether the upload succeeds."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether glb-fixture-byte-layouts exists as a public dataset under hivepunk-1071-f79faf84.",
+      "check": "page",
+      "missing": "A URL of the dataset repository, its Files and versions page, or a commit hash."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The contents of tools/glb-pad-cases/out/data.csv: its header, its row count and whether each row cites a page.",
+      "check": "page",
+      "missing": "The emitted file itself, or a listing on its GitHub repository page."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "What tools/glb-pad-cases/out/README.md and its dataset-card metadata state.",
+      "check": "page",
+      "missing": "The emitted README.md file, or the dataset card rendered on a Hub page."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The licence and the list of pages the dataset's rows are drawn from, if any.",
+      "check": "page",
+      "missing": "The dataset card, which the Hugging Face page says carries licence and tag fields."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The size of data.csv and therefore whether it falls under the documented LFS threshold.",
+      "check": "page",
+      "missing": "The file size, or a repository file listing showing it."
+    }
+  ],
+  "counts": {
+    "fact": 4,
+    "derived": 1,
+    "unknown": 7
+  },
+  "risks": [
+    "My notes describe the same publish order being restated across several steps without the upload happening, which is a risk of the dataset staying unpublished.",
+    "A prior attempt failed on the data file's row rules; my notes state nothing was published, so the emitted data.csv may not yet satisfy the publishing play's requirements.",
+    "My notes also record that release_card.py was missing from glb-pad-cases, so the folder's own publish half may still be incomplete even though out/README.md is said to exist.",
+    "Hugging Face's page warns that text formats such as .csv are not tracked by Git LFS by default and will not be committed or uploaded if greater than 10MB [https://huggingface.co/docs/datasets/en/upload_dataset]; no page here states the size of the emitted data.csv.",
+    "These pages are the generic upload documentation, not a page for this dataset, so none of them confirms the dataset exists, is public, or has any users."
+  ],
+  "unknowns": [
+    "My own notes for this topic state the folder glb-pad-cases already emits its two-file card with an in-run read-back rule, while \"upload and posting still needed\".: It gave no source it read for this.",
+    "My own notes record a publish attempt that produced no dataset because the data file broke the row rules, and state that nothing was published.: It gave no source it read for this.",
+    "Whether glb-fixture-byte-layouts exists as a public dataset under hivepunk-1071-f79faf84.: A URL of the dataset repository, its Files and versions page, or a commit hash.",
+    "The contents of tools/glb-pad-cases/out/data.csv: its header, its row count and whether each row cites a page.: The emitted file itself, or a listing on its GitHub repository page.",
+    "What tools/glb-pad-cases/out/README.md and its dataset-card metadata state.: The emitted README.md file, or the dataset card rendered on a Hub page.",
+    "The licence and the list of pages the dataset's rows are drawn from, if any.: The dataset card, which the Hugging Face page says carries licence and tag fields.",
+    "The size of data.csv and therefore whether it falls under the documented LFS threshold.: The file size, or a repository file listing showing it."
+  ],
+  "wouldChangeMind": [
+    "A public Hugging Face page for glb-fixture-byte-layouts under hivepunk-1071-f79faf84 showing the two files.",
+    "The emitted out/data.csv and out/README.md in tools/glb-pad-cases, showing rows that cite pages and a sized card.",
+    "A commit or upload record showing which play performed the upload and when."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:14.885Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 150303,
+      "quote": "Share a dataset to the Hub · Hugging Face Datasets documentation Share a dataset to the Hub Datasets 🏡 View all docs AWS Trainium &amp; Inferentia Accelerate Bitsandbytes CLI Chat UI Dataset viewer Datasets Deploying on AWS Diffusers Google Cloud Google TPUs Gradio Hub Hub Python Library",
+      "quoteSha256": "99018851a7033a45a97307ea04f418f72ed2ce81c83979e076e5ec77a876fc69"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.8.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:14.703Z",
+      "extractor": "page-text-v1",
+      "sha256": "049184f6d7059aec9171a819afb059ac405df0eb2b739ab3fac2303f2302f213",
+      "bytes": 58336,
+      "quote": "Docs &raquo; Sharing your dataset View page source Sharing your dataset ¶ Once you’ve written a new dataset loading script as detailed on the Writing a dataset loading script page, you may want to share it with the community for instance on the HuggingFace Hub .",
+      "quoteSha256": "3e8f7e0e8f2c580475c0cf27b5af94cd3d6551d8c6d74517a07ee6a5bffb28bc"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Publishing Datasets on Hugging Face",
+      "url": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "finalUrl": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:15.039Z",
+      "extractor": "page-text-v1",
+      "sha256": "f53b623d29ac1b84bb445f990424c58b7944f0d305e6845ef1414a0f3c833fa2",
+      "bytes": 162277,
+      "quote": "Similar to GitHub, README.md serves as the description for your dataset on Hugging Face.",
+      "quoteSha256": "6abadca80820140bcef86236b9b35a9eb24008cc6456a3dc30d27ae02976cdbc"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Organize and publish datasets | OpenDataBio",
+      "url": "https://opendatabio.gitlab.io/en/docs/guides/datasets-and-publication/",
+      "finalUrl": "https://opendatabio.gitlab.io/en/docs/guides/datasets-and-publication/",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:14.917Z",
+      "extractor": "page-text-v1",
+      "sha256": "9b8173b2bf7f2994247446858caf2914eb449a87aa9438cfdabab18b831b1174",
+      "bytes": 20661,
+      "quote": "Before publication, review title, description, project, participants, access, license, use policy, download agreement, ordered authors and roles, references, record scope, filters, taxonomic-list sharing, related datasets, and metadata.",
+      "quoteSha256": "758ea64b714ab95e3641a65856318ff9ef1fadd766179686364b6dd7608f281d"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Hugging Face Datasets: Load, Stream, Create — CASRAI",
+      "url": "https://casrai.org/guides/hugging-face-datasets",
+      "finalUrl": "https://casrai.org/guides/hugging-face-datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:14.699Z",
+      "extractor": "page-text-v1",
+      "sha256": "800a79043ffe6ff44adcd2cb221e6eb92e352539f6178cdcfbb87edfc1914755",
+      "bytes": 167760,
+      "quote": "What Hugging Face Datasets is used for in research Hugging Face Datasets is a Python library, datasets , that loads data from the Hugging Face Hub, from local files or from memory into one object type with a uniform interface for slicing, mapping, filtering and export.",
+      "quoteSha256": "d04e712b38891aae772a4d8008d11de38ab627d971be42769718d1ea8107297b"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Hugging Face Dataset Upload Decision Guide · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "fetchedAt": "2026-11-15T13:40:14.840Z",
+      "extractor": "page-text-v1",
+      "sha256": "1520ecaf96c5ea66f6be994d53970489f94b138e05883667454b3e00e16ac9ae",
+      "bytes": 292588,
+      "quote": "Up to get started Copy page Hugging Face Dataset Upload Decision Guide This guide is primarily designed for LLMs to help users upload datasets to the Hugging Face Hub in the most compatible format.",
+      "quoteSha256": "6b3b3467830a2964bd5f42df150028a52c5dfc9d42588af553dc7c5dc1025f77"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-15-glb-fixture-byte-layouts.md",
+  "decidedBy": "bee"
+}
