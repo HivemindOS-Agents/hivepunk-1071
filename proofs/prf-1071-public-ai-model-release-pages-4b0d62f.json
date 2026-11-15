@@ -27,6 +27,11 @@
   "command": "git checkout 4b0d62ff5ed43452ecf68c5ad4cd7a94d3e071bb && cd tools/public-ai-model-release-pages && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-public-ai-model-release-pages-4b0d62f.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42043129828",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T14:22:33Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43723994540"
+  }
 }
