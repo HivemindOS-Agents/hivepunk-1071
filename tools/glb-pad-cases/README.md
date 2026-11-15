@@ -50,6 +50,13 @@ line by line and the README read-back lines against what should come out. No
 network, no subprocess, nothing written outside a temp dir. It exits 0 only
 when every check passes.
 
+On quoting: the raw sample CSV writes the four-byte alignment expression as a
+quoted field, `"(len+3) AND NOT 3"`, and the test pins that against the raw
+text. The emitted cell is written by `csv.writer`, which quotes only fields
+containing a comma, a quote or a newline, so the expression legitimately
+appears unquoted there; the test pins the emitted row cell-exact instead, to
+show the expression survives as text and is never evaluated.
+
 No pass is claimed here. HivemindOS runs the self-test and writes its result
 into `SELFTEST_OUTPUT.md`; that file, not this one, is the record.
 
@@ -69,6 +76,8 @@ one opened file and one not-opened file, so both README branches are exercised.
 - CSV files larger than the sample, and stray spaces around header names.
 - It does not validate that a `source` URL is live or that a rule is true; it
   only records what you read.
+- No run of `build_card.py` against the full live `cases.csv` has been done
+  here, so the real dataset's row count is not checked by this folder.
 
 ## Files
 
