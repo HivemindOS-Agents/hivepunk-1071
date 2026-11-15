@@ -1,0 +1,11 @@
+case_id,rule,expected_bytes,source,read_back
+header-length-12,GLB header is 12 bytes,12,GLB 2.0 spec: section 3.2,not-opened
+chunk-length-field-4,chunk length field is 4 bytes,4,GLB 2.0 spec: section 3.3,not-opened
+chunk-type-field-4,chunk type field is 4 bytes,4,GLB 2.0 spec: section 3.3,not-opened
+chunk-data-padded-to-4,chunk data is padded to 4 bytes,(len+3) AND NOT 3,GLB 2.0 spec: section 3.3,not-opened
+chunk-header-8-bytes,chunk header is 8 bytes,8,GLB 2.0 spec: section 3.3,not-opened
+json-chunk-type,JSON chunk type is 0x4E4F534A,4,GLB 2.0 spec: section 3.3,not-opened
+bin-chunk-type,BIN chunk type is 0x004E4942,4,GLB 2.0 spec: section 3.3,not-opened
+total-length-field-4,total length field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
+version-field-4,version field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
+magic-field-4,magic field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
