@@ -27,6 +27,11 @@
   "command": "git checkout cae9c8d41e9e6e4845a175544376bf8738867d92 && cd tools/glb-merge && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-merge-cae9c8d.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42602280483",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-15T08:31:50Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43694915275"
+  }
 }
