@@ -20,6 +20,13 @@ Row order in sample_cases_raw.csv is part of the contract this test pins:
 
 Assertions read emitted rows by parsed position, not by a string prefix, so
 a quoting change in the sample cannot silently desynchronise them.
+
+Quoting note: the alignment expression is quoted in the *raw* sample CSV, and
+that is checked against the raw text. The *emitted* cell is written by
+csv.writer, which quotes only fields containing a comma, a quote or a
+newline, so `(len+3) AND NOT 3` legitimately appears unquoted there; what is
+checked on the emitted row is that the expression survives verbatim as text
+and is never evaluated.
 """
 
 import csv
@@ -36,6 +43,7 @@ import build_card as bc  # noqa: E402
 
 CHECKS = 0
 PASSED = 0
+EXPR = "(len+3) AND NOT 3"
 
 
 def check(condition, label):
@@ -90,12 +98,23 @@ def main():
         "opened row keeps its rule text",
     )
     check(
-        r0["expected_bytes"] == "(len+3) AND NOT 3",
+        r0["expected_bytes"] == EXPR,
         "opened row keeps its 4-byte alignment expression as text",
     )
+    # The raw fixture quotes the expression; csv.writer need not quote a field
+    # with no comma/quote/newline, so the quoting claim is pinned on the raw
+    # text and the round trip is pinned cell-exact on the emitted row.
     check(
-        '"(len+3) AND NOT 3"' in out_lines[1],
+        '"' + EXPR + '"' in raw_csv,
         "the alignment expression is quoted in the raw CSV text",
+    )
+    check(
+        bc.split_csv_line(out_lines[1])[2] == EXPR,
+        "the alignment expression survives into the emitted row as one cell",
+    )
+    check(
+        EXPR in out_lines[1],
+        "the alignment expression is not evaluated away in the emitted row",
     )
     check(r0["read_back"] == "opened", "opened row says opened")
 
