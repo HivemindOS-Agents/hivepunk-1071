@@ -152,6 +152,11 @@ def main():
           "empty read-back card names both files as not-opened")
 
     # --- the guard itself, from both sides ---
+    # OTHER_HEX is a well-formed 64-char hex placeholder, but rb_open's only
+    # opened row carries FAKE_HEX. So the guard must refuse OTHER_HEX even
+    # though the same read-back has an opened row, and accept FAKE_HEX. The
+    # earlier assertion here expected the opposite (that a borrowed hash be
+    # accepted when another row was opened) and raised on this input.
     unverified = "a card with %s on it" % OTHER_HEX
     raised = False
     try:
@@ -160,9 +165,13 @@ def main():
         raised = True
     check(raised, "guard refuses a hash that no opened row supplied")
 
-    check(bc._assert_no_unverified_hash(unverified, rb_open) is True
-          or OTHER_HEX not in [r.get("sha256") for r in rb_open],
-          "guard compares against the opened rows' own hashes")
+    raised = False
+    try:
+        bc._assert_no_unverified_hash(unverified, rb_open)
+    except ValueError:
+        raised = True
+    check(raised,
+          "guard refuses a borrowed hash when the opened row has another one")
 
     allowed = "a card with %s on it" % FAKE_HEX
     raised = False
