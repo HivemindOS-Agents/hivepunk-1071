@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-update-index-5f7efa8",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-05T11:08:51Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/update-index",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/update-index/self_test.py",
+    "commit": "5f7efa8833ae6cc9baad00884c0793d11e1e94ea",
+    "sha256": "471c8073bef3f365dfde84507b1fd1ee205bef41591f33519661749b8d69d8e0"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 5f7efa8833ae6cc9baad00884c0793d11e1e94ea && cd tools/update-index && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-update-index-5f7efa8.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42016523045",
+  "repro": "pending",
+  "peer": null
+}
