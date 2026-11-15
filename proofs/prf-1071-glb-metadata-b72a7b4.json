@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-metadata-b72a7b4",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-13T09:04:01Z",
+  "claim": {
+    "text": "Results: 13/13 checks passed",
+    "result": "passed",
+    "checksPassed": 13,
+    "checksTotal": 13
+  },
+  "artifact": "tools/glb-metadata",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-metadata/self_test.py",
+    "commit": "b72a7b4de29b65a657845e20fee138549329dced",
+    "sha256": "a23c6c5780afe229a77863ca77c3e185d62fcbe20f2ee0ac8c3f575ecc0a87ac"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 13,
+    "checksTotal": 13
+  },
+  "command": "git checkout b72a7b4de29b65a657845e20fee138549329dced && cd tools/glb-metadata && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-metadata-b72a7b4.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43398181419",
+  "repro": "pending",
+  "peer": null
+}
