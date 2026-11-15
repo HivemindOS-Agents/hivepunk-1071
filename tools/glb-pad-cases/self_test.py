@@ -28,6 +28,8 @@ CHECKS = 0
 PASSED = 0
 EXPR = "(len+3) AND NOT 3"
 FAKE_HEX = "a" * 64
+OTHER_HEX = "b" * 64
+HEX_RUN = re.compile(r"(?<![0-9a-f])[0-9a-f]{64}(?![0-9a-f])")
 
 CASES = (
     "case_id,rule,expected_bytes,source\n"
@@ -49,6 +51,8 @@ READBACK_ALL_CLOSED = (
     "data.csv,%s,5,not-opened\n"
     "README.md,%s,4,opened\n" % (FAKE_HEX, "manual-claim")
 )
+
+READBACK_EMPTY = "file,sha256,line_count,status\n"
 
 
 def check(condition, label):
@@ -112,7 +116,12 @@ def main():
     check("data.csv has 5 lines (1 header + 4 rows)" in card,
           "card line count comes from the emitted CSV")
 
-    # data.csv's line count is the emitted one, never the input's 5-is-right/6-wrong.
+    # An opened read-back card carries exactly one long hex run: that hash.
+    opened_runs = HEX_RUN.findall(card)
+    check(len(opened_runs) == 1 and opened_runs[0] == FAKE_HEX,
+          "opened card carries exactly the opened row's hash, nothing else")
+
+    # data.csv's line count is the emitted one, never the input's.
     rb_wrong_count = bc.read_readback(
         READBACK_ONE_OPEN.replace("data.csv,%s,5" % FAKE_HEX,
                                   "data.csv,%s,99" % FAKE_HEX))
@@ -120,17 +129,58 @@ def main():
     check("data.csv has 5 lines (1 header + 4 rows)" in card2,
           "a wrong input line_count cannot override the emitted count")
 
-    # A hand-typed non-hex hash is refused even with status=opened.
+    # --- no unverified hash when no read-back happened ---
+    # All rows not-opened: the emitted card must contain no long hex run at
+    # all, and the raw data.csv hex must not leak onto it.
     rb_closed = bc.read_readback(READBACK_ALL_CLOSED)
     card3 = bc.emit_readme(rb_closed, data_csv, len(rows))
     check("- `README.md` - not-opened" in card3,
           "a non-hex sha256 is treated as not-opened")
     check("manual-claim" not in card3, "hand-typed hash never appears")
+    check(HEX_RUN.findall(card3) == [],
+          "all-not-opened card carries no long hex hash")
+    check(card3.count(bc.NOT_OPENED) >= 4,
+          "all-not-opened card names not-opened for both files")
+
+    # No read-back rows at all: still no long hex run.
+    rb_empty = bc.read_readback(READBACK_EMPTY)
+    card4 = bc.emit_readme(rb_empty, data_csv, len(rows))
+    check(HEX_RUN.findall(card4) == [],
+          "empty read-back card carries no long hex hash")
+    check("- `data.csv` - not-opened" in card4
+          and "- `README.md` - not-opened" in card4,
+          "empty read-back card names both files as not-opened")
+
+    # --- the guard itself, from both sides ---
+    unverified = "a card with %s on it" % OTHER_HEX
+    raised = False
+    try:
+        bc._assert_no_unverified_hash(unverified, rb_closed)
+    except ValueError:
+        raised = True
+    check(raised, "guard refuses a hash that no opened row supplied")
+
+    check(bc._assert_no_unverified_hash(unverified, rb_open) is True
+          or OTHER_HEX not in [r.get("sha256") for r in rb_open],
+          "guard compares against the opened rows' own hashes")
+
+    allowed = "a card with %s on it" % FAKE_HEX
+    raised = False
+    try:
+        bc._assert_no_unverified_hash(allowed, rb_open)
+    except ValueError:
+        raised = True
+    check(not raised, "guard accepts the hash of an opened read-back row")
+
+    raised = False
+    try:
+        bc.emit_readme(rb_closed, data_csv, len(rows))
+    except ValueError:
+        raised = True
+    check(not raised, "emit_readme itself succeeds with no opened row")
 
     # --- no dead claims in the card ---
     check("huggingface.co" not in card, "card states no dataset URL")
-    check(re.search(r"[0-9a-f]{40,}", card) is None,
-          "card carries no long hex hash when none was read back")
     check("self_test" not in card.replace("No self_test pass", ""),
           "card does not claim a self-test pass")
 
@@ -145,6 +195,8 @@ def main():
     check(readme_written.startswith(
         "# GLB binary chunk padding and alignment cases\n"),
         "written README starts with the card title")
+    check(HEX_RUN.findall(readme_written) == [FAKE_HEX],
+          "written README carries only the opened row's hash")
 
     # --- the shipped sample files still parse ---
     sample_cases = (HERE / "sample_cases_raw.csv").read_text(encoding="utf-8")
@@ -157,8 +209,8 @@ def main():
     sample_rb = (HERE / "sample_readback.csv").read_text(encoding="utf-8")
     rb = bc.read_readback(sample_rb)
     check(len(rb) == 2, "shipped sample_readback.csv parses as 2 rows")
-    card4 = bc.emit_readme(rb, s_data, len(s_rows))
-    check("data.csv has 5 lines (1 header + 4 rows)" in card4,
+    card5 = bc.emit_readme(rb, s_data, len(s_rows))
+    check("data.csv has 5 lines (1 header + 4 rows)" in card5,
           "sample card states the sample line count")
 
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
