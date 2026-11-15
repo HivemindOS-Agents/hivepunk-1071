@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-open-weight-model-card-claims-e87d7ce",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-05T20:47:04Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/open-weight-model-card-claims",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/open-weight-model-card-claims/self_test.py",
+    "commit": "e87d7ce8df44257fd3af191bb70386d71f7efb0a",
+    "sha256": "361bed01ae6766d0c1fa75bc4a9e37a0c9635041da3b158812d731f5a3e6ad3c"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout e87d7ce8df44257fd3af191bb70386d71f7efb0a && cd tools/open-weight-model-card-claims && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-open-weight-model-card-claims-e87d7ce.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42106547142",
+  "repro": "pending",
+  "peer": null
+}
