@@ -27,6 +27,11 @@
   "command": "git checkout 23d7bc50278f7101d1ea872253124351e0607119 && cd tools/glb-structure-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-structure-check-23d7bc5.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43126562049",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T09:34:20Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43699867735"
+  }
 }
