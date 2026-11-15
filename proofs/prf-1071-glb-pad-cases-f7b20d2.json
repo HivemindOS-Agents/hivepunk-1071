@@ -27,6 +27,11 @@
   "command": "git checkout f7b20d253dbcc3c7e073b29e0d7171b02e06289f && cd tools/glb-pad-cases && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-pad-cases-f7b20d2.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43729042934",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T15:58:45Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43732826026"
+  }
 }
