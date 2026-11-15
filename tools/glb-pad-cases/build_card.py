@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""build_card.py - emit the GLB padding-cases data.csv, README.md and card.
+"""build_card.py - emit the GLB padding-cases data.csv and README.md card.
 
 This tool does no network at all. It takes two inputs, both files you have
 already read in the same run:
@@ -11,18 +11,19 @@ and writes data.csv plus README.md into an output folder.
 
 Rules this tool enforces:
 
-* Every output row keeps source as the exact URL it was read from. A row whose
-  source is empty or the literal 'not-opened' is emitted with
-  rule='not-opened' and expected_bytes='not-opened'. A byte count is never
-  invented.
+* Every output row keeps `source` as the page identifier the row was read
+  from. It is not verified to be a URL, and this tool never writes a URL it
+  did not receive. A row whose source is empty or the literal 'not-opened'
+  is emitted with rule='not-opened' and expected_bytes='not-opened'. A byte
+  count is never invented.
 * readback.csv drives the README read-back lines. A file row with status
   'opened' must carry a 64-char lowercase hex sha256 and a positive integer
   line_count; anything else is written as not-opened. No hash is written by
   hand. data.csv's line count always comes from the emitted CSV itself; for
   any other file the line count is printed only when the row is a real
   read-back.
-* The README states which files were fetched back and which were not, and
-  never claims a self_test.py pass.
+* The README never names a dataset URL, never states a hash that was not
+  read back, and never claims a self_test.py pass.
 
 Usage:
     python3 build_card.py cases.csv readback.csv OUTDIR
@@ -73,8 +74,7 @@ def emit_data_csv(rows):
     writer.writerow(DATA_COLUMNS)
     for row in rows:
         source = (row.get("source") or "").strip()
-        unopened = _is_unopened(source)
-        if unopened:
+        if _is_unopened(source):
             writer.writerow([
                 (row.get("case_id") or "").strip(),
                 NOT_OPENED,
@@ -130,7 +130,6 @@ def emit_readback_lines(readback_rows, data_csv_text):
         seen.add(name)
         row = known.get(name)
         if row is not None and _readback_open(row):
-            # data.csv's count comes from the emitted CSV, never from input.
             n = data_lines if name == "data.csv" else int(row["line_count"].strip())
             lines.append("- `%s` - sha256 %s, %d lines" % (name, row["sha256"].strip(), n))
         else:
@@ -156,19 +155,19 @@ def emit_readback_lines(readback_rows, data_csv_text):
 
 
 def emit_readme(readback_rows, data_csv_text, case_count):
-    """Return the full README.md text."""
+    """Return the full README.md text for the card."""
     rb = emit_readback_lines(readback_rows, data_csv_text)
     n_lines = len(data_csv_text.strip("\n").split("\n"))
     return (
         "# GLB binary chunk padding and alignment cases\n\n"
-        "One row per GLB padding or alignment case, with the byte expression a"
-        " parser has to get right and the page the row was read from.\n\n"
+        "One row per GLB padding or alignment case, with the byte expression a\n"
+        "parser has to get right and the page the row was read from.\n\n"
         "## Columns\n\n"
         "- `case_id` - short name of the case.\n"
         "- `rule` - the padding or alignment rule, in words.\n"
-        "- `expected_bytes` - the byte count or byte expression; a"
+        "- `expected_bytes` - the byte count or byte expression; a\n"
         "  four-byte-alignment expression is kept as text, not evaluated.\n"
-        "- `source` - the exact URL the row was read from.\n"
+        "- `source` - the page identifier the row was read from.\n"
         "- `read_back` - `opened` when the source page was fetched in the run,\n"
         "  else `not-opened`.\n\n"
         "## How it was made\n\n"
@@ -181,8 +180,10 @@ def emit_readme(readback_rows, data_csv_text, case_count):
         "%s\n\n"
         "data.csv has %d lines (1 header + %d rows).\n\n"
         "## Not checked\n\n"
-        "No `self_test.py` pass is claimed in this card. Any sha256 or line count\n"
-        "marked not-opened was not read in the run that produced this file.\n\n"
+        "No self_test pass is claimed in this card, and no dataset URL is stated\n"
+        "here: the page that hosts these files is named only by whatever page\n"
+        "carried them. Any sha256 or line count marked not-opened was not read in\n"
+        "the run that produced this file.\n\n"
         "## Licence\n\n"
         "No licence is claimed. Rows are short factual notes about byte layouts.\n"
         % (case_count, rb, n_lines, case_count)
