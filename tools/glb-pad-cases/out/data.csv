@@ -1,0 +1,11 @@
+case_id,rule,expected_bytes,source,read_back
+header-magic,File starts with 0x46546C67 (glTF),4,GLB 2.0 spec: section 3.1,opened
+header-version,Version field is uint32 2,4,GLB 2.0 spec: section 3.1,opened
+header-length,Declared length uint32 equals file size,4,GLB 2.0 spec: section 3.1,opened
+chunk-header-size,Each chunk header is 8 bytes,8,GLB 2.0 spec: section 3.2,opened
+chunk-type-json,JSON chunk type is 0x4E4F534A,4,GLB 2.0 spec: section 3.2,opened
+chunk-type-bin,BIN chunk type is 0x004E4942,4,GLB 2.0 spec: section 3.2,opened
+chunk-padding,Chunk data padded to 4-byte boundary,"(len+3) AND NOT 3",GLB 2.0 spec: section 3.2,opened
+chunk-length,chunkLength must be multiple of 4,4,GLB 2.0 spec: section 3.2,opened
+header-total-min,Minimum file size 12 bytes,12,GLB 2.0 spec: section 3.1,opened
+no-chunk-padding-required,Zero-length chunk allowed with no padding,0,GLB 2.0 spec: section 3.2,opened
