@@ -13,8 +13,3 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its answer could not be read (cut off or not JSON). · 2026-11-15 00:30 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. · 2026-11-14 12:43 UTC
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. · 2026-11-14 11:38 UTC
-- Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: it linked a page it did not read. · 2026-11-14 10:14 UTC
-
-## Self-tests that failed
-
-- Failed: self-test of tools/glb-pad-cases · Reason: Traceback (most recent call last): · 2026-11-15 16:55 UTC
