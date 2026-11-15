@@ -5,33 +5,16 @@ Run from inside this folder with no arguments, no network:
 
     python3 self_test.py
 
-Reads sample_cases_raw.csv and sample_readback.csv from this folder, runs the
-emitters in build_card.py directly (import, no subprocess, no network), and
-compares the emitted data.csv line by line and the README read-back lines
-against what should come out. No file outside a temp dir is written. Exits 0
-only when every check passes. Standard library only.
-
-Row order in sample_cases_raw.csv is part of the contract this test pins:
-
-    line 1  chunk-data-padded-to-4   opened, quoted byte expression
-    line 2  header-length-12         opened
-    line 3  future-not-yet-read      source is the literal 'not-opened'
-    line 4  no-source-row            source is empty
-
-Assertions read emitted rows by parsed position, not by a string prefix, so
-a quoting change in the sample cannot silently desynchronise them.
-
-Quoting note: the alignment expression is quoted in the *raw* sample CSV, and
-that is checked against the raw text. The *emitted* cell is written by
-csv.writer, which quotes only fields containing a comma, a quote or a
-newline, so `(len+3) AND NOT 3` legitimately appears unquoted there; what is
-checked on the emitted row is that the expression survives verbatim as text
-and is never evaluated.
+Builds its own small fixtures in a temp dir, imports build_card from this
+folder, and compares the emitted data.csv cells and the README text with
+explicit expected values. No subprocess, no network, nothing written outside
+a temp dir. Exits 0 only when every check passes. Standard library only.
 """
 
 import csv
 import io
 import os
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -44,6 +27,28 @@ import build_card as bc  # noqa: E402
 CHECKS = 0
 PASSED = 0
 EXPR = "(len+3) AND NOT 3"
+FAKE_HEX = "a" * 64
+
+CASES = (
+    "case_id,rule,expected_bytes,source\n"
+    "chunk-data-padded-to-4,\"chunk data is padded to 4 bytes\",\"" + EXPR +
+    "\",page-alpha\n"
+    "header-length-12,binary header is 12 bytes,12,page-beta\n"
+    "future-not-yet-read,decoy-rule,2048,not-opened\n"
+    "no-source-row,decoy-rule-2,4096,\n"
+)
+
+READBACK_ONE_OPEN = (
+    "file,sha256,line_count,status\n"
+    "data.csv,%s,5,opened\n"
+    "README.md,not-opened,not-opened,not-opened\n" % FAKE_HEX
+)
+
+READBACK_ALL_CLOSED = (
+    "file,sha256,line_count,status\n"
+    "data.csv,%s,5,not-opened\n"
+    "README.md,%s,4,opened\n" % (FAKE_HEX, "manual-claim")
+)
 
 
 def check(condition, label):
@@ -56,151 +61,105 @@ def check(condition, label):
     print("ok: %s" % label)
 
 
-def lines_of(text):
-    return text.strip("\n").split("\n")
-
-
 def rows_of(text):
-    """Parse emitted CSV text into header + list of dicts."""
-    reader = csv.reader(io.StringIO(text))
-    all_rows = list(reader)
+    all_rows = list(csv.reader(io.StringIO(text)))
     header = all_rows[0]
-    return header, [dict(zip(header, r)) for r in all_rows[1:]]
+    return header, all_rows[1:]
 
 
 def main():
-    raw_csv = (HERE / "sample_cases_raw.csv").read_text(encoding="utf-8")
-    readback_csv = (HERE / "sample_readback.csv").read_text(encoding="utf-8")
-
-    rows = bc.read_raw_rows(raw_csv)
-    check(len(rows) == 4, "sample has 4 raw case rows (got %d)" % len(rows))
+    rows = bc.read_raw_rows(CASES)
+    check(len(rows) == 4, "fixture has 4 raw rows")
 
     data_csv = bc.emit_data_csv(rows)
-    out_lines = lines_of(data_csv)
+    header, body = rows_of(data_csv)
+    check(header == bc.DATA_COLUMNS, "data.csv header is the DATA_COLUMNS order")
+    check(len(body) == 4, "data.csv has 4 data rows")
 
-    # Header first, exact column order.
-    check(
-        out_lines[0] == "case_id,rule,expected_bytes,source,read_back",
-        "data.csv header is case_id,rule,expected_bytes,source,read_back",
-    )
+    # Row 0: opened, expression kept verbatim as one cell, not evaluated.
+    check(body[0][0] == "chunk-data-padded-to-4", "row0 case_id")
+    check(body[0][1] == "chunk data is padded to 4 bytes", "row0 rule")
+    check(body[0][2] == EXPR, "row0 keeps alignment expression verbatim")
+    check(body[0][3] == "page-alpha", "row0 keeps its source identifier")
+    check(body[0][4] == "opened", "row0 says opened")
+    check(body[0][2] != "4", "row0 expression is not evaluated to a number")
 
-    header, emitted = rows_of(data_csv)
-    check(len(emitted) == 4, "data.csv has 4 data rows (got %d)" % len(emitted))
+    # Row 1: opened integer byte count.
+    check(body[1][2] == "12", "row1 keeps byte count 12")
+    check(body[1][4] == "opened", "row1 says opened")
 
-    # --- row 0: opened, rule and byte expression kept verbatim ---
-    r0 = emitted[0]
-    check(
-        r0["case_id"] == "chunk-data-padded-to-4",
-        "row 0 is chunk-data-padded-to-4",
-    )
-    check(
-        r0["rule"].startswith("chunk data is padded"),
-        "opened row keeps its rule text",
-    )
-    check(
-        r0["expected_bytes"] == EXPR,
-        "opened row keeps its 4-byte alignment expression as text",
-    )
-    # The raw fixture quotes the expression; csv.writer need not quote a field
-    # with no comma/quote/newline, so the quoting claim is pinned on the raw
-    # text and the round trip is pinned cell-exact on the emitted row.
-    check(
-        '"' + EXPR + '"' in raw_csv,
-        "the alignment expression is quoted in the raw CSV text",
-    )
-    check(
-        bc.split_csv_line(out_lines[1])[2] == EXPR,
-        "the alignment expression survives into the emitted row as one cell",
-    )
-    check(
-        EXPR in out_lines[1],
-        "the alignment expression is not evaluated away in the emitted row",
-    )
-    check(r0["read_back"] == "opened", "opened row says opened")
+    # Row 2: literal not-opened -> every field not-opened, decoy dropped.
+    check(body[2] == ["future-not-yet-read", "not-opened", "not-opened",
+                      "not-opened", "not-opened"],
+          "row2 not-opened in every field, decoy text dropped")
 
-    # --- row 1: second opened row keeps its integer byte count ---
-    r1 = emitted[1]
-    check(r1["case_id"] == "header-length-12", "row 1 is header-length-12")
-    check(r1["expected_bytes"] == "12", "row 1 keeps its byte count 12")
-    check(r1["read_back"] == "opened", "row 1 says opened")
+    # Row 3: empty source -> same treatment.
+    check(body[3] == ["no-source-row", "not-opened", "not-opened",
+                      "not-opened", "not-opened"],
+          "row3 empty source becomes not-opened everywhere")
 
-    # --- row 2: page not opened -> rewritten, decoy text dropped ---
-    r2 = emitted[2]
-    check(r2["case_id"] == "future-not-yet-read", "row 2 is the unopened row")
-    check(r2["rule"] == "not-opened", "unopened row says not-opened in rule")
-    check(
-        r2["expected_bytes"] == "not-opened",
-        "unopened row says not-opened in expected_bytes",
-    )
-    check(
-        r2["source"] == "not-opened",
-        "unopened row says not-opened in source",
-    )
-    check(
-        r2["read_back"] == "not-opened",
-        "unopened row says not-opened in read_back",
-    )
-    check(
-        "decoy-rule" not in data_csv,
-        "unopened row's rule text is dropped, not carried through",
-    )
-    check(
-        "2048" not in out_lines[3],
-        "unopened row gets no invented byte count",
-    )
+    check("decoy-rule" not in data_csv, "no decoy rule text in data.csv")
+    check("2048" not in data_csv and "4096" not in data_csv,
+          "no invented byte count in data.csv")
 
-    # --- row 3: empty source is also not-opened ---
-    r3 = emitted[3]
-    check(r3["case_id"] == "no-source-row", "row 3 is the empty-source row")
-    check(r3["rule"] == "not-opened", "empty-source row says not-opened")
-    check(
-        "decoy-rule-2" not in data_csv,
-        "empty-source row's rule text is dropped too",
-    )
+    # --- read-back rendering ---
+    rb_open = bc.read_readback(READBACK_ONE_OPEN)
+    card = bc.emit_readme(rb_open, data_csv, len(rows))
+    check("- `data.csv` - sha256 %s, 5 lines" % FAKE_HEX in card,
+          "opened data.csv renders sha256 and emitted line count (5)")
+    check("- `README.md` - not-opened" in card,
+          "closed README.md renders as not-opened")
+    check("data.csv has 5 lines (1 header + 4 rows)" in card,
+          "card line count comes from the emitted CSV")
 
-    # A comma inside a quoted cell does not shift columns.
-    check(
-        bc.split_csv_line(out_lines[1])[1] == "chunk data is padded to 4 bytes",
-        "a comma inside a quoted cell does not shift columns",
-    )
+    # data.csv's line count is the emitted one, never the input's 5-is-right/6-wrong.
+    rb_wrong_count = bc.read_readback(
+        READBACK_ONE_OPEN.replace("data.csv,%s,5" % FAKE_HEX,
+                                  "data.csv,%s,99" % FAKE_HEX))
+    card2 = bc.emit_readme(rb_wrong_count, data_csv, len(rows))
+    check("data.csv has 5 lines (1 header + 4 rows)" in card2,
+          "a wrong input line_count cannot override the emitted count")
 
-    # One header plus four cases.
-    check(len(out_lines) == 5, "data.csv is 5 lines (1 header + 4 rows)")
+    # A hand-typed non-hex hash is refused even with status=opened.
+    rb_closed = bc.read_readback(READBACK_ALL_CLOSED)
+    card3 = bc.emit_readme(rb_closed, data_csv, len(rows))
+    check("- `README.md` - not-opened" in card3,
+          "a non-hex sha256 is treated as not-opened")
+    check("manual-claim" not in card3, "hand-typed hash never appears")
 
-    # Read-back rendering, opened and not-opened branches.
-    rb = bc.read_readback(readback_csv)
-    check(len(rb) == 2, "readback sample has 2 file rows")
-    card = bc.emit_readback_lines(rb, data_csv)
-    check(
-        "data.csv" in card and "sha256" in card,
-        "read-back names data.csv and carries a sha256 field",
-    )
-    check(
-        "5 lines" in card,
-        "read-back carries the emitted data.csv line count",
-    )
-    check(
-        "not-opened" in card,
-        "read-back marks the unfetched README.md as not-opened",
-    )
+    # --- no dead claims in the card ---
+    check("huggingface.co" not in card, "card states no dataset URL")
+    check(re.search(r"[0-9a-f]{40,}", card) is None,
+          "card carries no long hex hash when none was read back")
+    check("self_test" not in card.replace("No self_test pass", ""),
+          "card does not claim a self-test pass")
 
-    # A hand-typed hash-shaped string must not be accepted as a read-back.
-    check(
-        not bc.looks_like_sha256("manual-claim"),
-        "a non-hex string is not treated as a sha256",
-    )
-    check(
-        bc.looks_like_sha256("a" * 64),
-        "a 64-char hex string is treated as a sha256",
-    )
-
-    # write_outputs lands both files in a temp dir.
+    # --- write_outputs lands both files, bytes match ---
     tmpd = tempfile.mkdtemp(prefix="glb-pad-cases-self-test-")
-    paths = bc.write_outputs(rows, rb, tmpd)
+    paths = bc.write_outputs(rows, rb_open, tmpd)
     check(os.path.isfile(paths["data_csv"]), "data.csv is written")
     check(os.path.isfile(paths["readme"]), "README.md is written")
     written = Path(paths["data_csv"]).read_text(encoding="utf-8")
-    check(written == data_csv, "written data.csv matches the emitted text")
+    check(written == data_csv, "written data.csv matches emitted text byte for byte")
+    readme_written = Path(paths["readme"]).read_text(encoding="utf-8")
+    check(readme_written.startswith(
+        "# GLB binary chunk padding and alignment cases\n"),
+        "written README starts with the card title")
+
+    # --- the shipped sample files still parse ---
+    sample_cases = (HERE / "sample_cases_raw.csv").read_text(encoding="utf-8")
+    s_rows = bc.read_raw_rows(sample_cases)
+    check(len(s_rows) == 4, "shipped sample_cases_raw.csv parses as 4 rows")
+    s_data = bc.emit_data_csv(s_rows)
+    s_head, s_body = rows_of(s_data)
+    check(s_head == bc.DATA_COLUMNS, "sample emits the DATA_COLUMNS header")
+    check(s_body[0][2] == EXPR, "sample keeps the alignment expression verbatim")
+    sample_rb = (HERE / "sample_readback.csv").read_text(encoding="utf-8")
+    rb = bc.read_readback(sample_rb)
+    check(len(rb) == 2, "shipped sample_readback.csv parses as 2 rows")
+    card4 = bc.emit_readme(rb, s_data, len(s_rows))
+    check("data.csv has 5 lines (1 header + 4 rows)" in card4,
+          "sample card states the sample line count")
 
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
