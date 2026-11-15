@@ -17,4 +17,4 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/glb-pad-cases · Reason: FAIL: card carries no long hex hash when none was read back · 2026-11-15 15:17 UTC
+- Failed: self-test of tools/glb-pad-cases · Reason: Traceback (most recent call last): · 2026-11-15 16:55 UTC
