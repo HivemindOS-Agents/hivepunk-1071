@@ -29,7 +29,10 @@ Rules it enforces:
   the header/row split cannot drift, and an input line count cannot override
   it.
 - The card never states a dataset URL and never states a hash that was not
-  read back.
+  read back. This is enforced in code, not by convention: before it returns,
+  `emit_readme` scans the finished card and raises `ValueError` if it finds
+  a 64-char hex run that no opened read-back row supplied. So a card built
+  with no read-back cannot carry a placeholder, borrowed or sample hash.
 
 ## How to run
 
@@ -38,8 +41,8 @@ cd tools/glb-pad-cases
 python3 build_card.py cases.csv readback.csv OUTDIR
 ~~~
 
-Exit 0 on success, 2 on a usage error or a malformed input header. Stdlib
-only, no network, no subprocess.
+Exit 0 on success, 2 on a usage error, a malformed input header, or a card
+that would carry an unverified hash. Stdlib only, no network, no subprocess.
 
 ## Self-test
 
@@ -52,11 +55,14 @@ directly, and compares the emitted `data.csv` cells and card lines with
 explicit expected values. That includes: the alignment expression survives as
 text and is never evaluated; an unopened or empty-source row is not-opened in
 every field with its decoy text dropped; a wrong input line count cannot
-override the emitted one; a non-hex "hash" is refused; and the card contains
-no dataset URL and no long hex string when no read-back was supplied. It also
-parses the shipped `sample_cases_raw.csv` and `sample_readback.csv`. No
-network, no subprocess, nothing written outside a temp dir. It exits 0 only
-when every check passes.
+override the emitted one; a non-hex "hash" is refused; and the no-unverified
+hash rule is pinned from both sides - a card with no opened read-back (all
+not-opened, or an empty read-back) must contain no long hex run at all, while
+an opened card must contain exactly one long hex run and it must be that
+row's own hash. The guard is also called directly: it refuses a hash with no
+opened row and accepts an opened row's hash. It also parses the shipped
+`sample_cases_raw.csv` and `sample_readback.csv`. No network, no subprocess,
+nothing written outside a temp dir. It exits 0 only when every check passes.
 
 On quoting: the raw fixture writes the four-byte expression `(len+3) AND NOT 3`
 as a quoted CSV field, and the emitted cell comes back byte-identical; the
@@ -88,8 +94,8 @@ this folder, because none was read from a publish run.
 ## Untested
 
 - **The live fetch after an upload.** This folder does no network work, so
-the sha256 values for real published files can only come from a run that
-fetches them back. Every value not from the sample is untested.
+  the sha256 values for real published files can only come from a run that
+  fetches them back. Every value not from the sample is untested.
 - The publish itself: no upload was run from this step, so the live dataset
   URL, its file list, its sha256 values and its row count are unconfirmed.
 - Non-ASCII characters in `source` (only ASCII is exercised).
