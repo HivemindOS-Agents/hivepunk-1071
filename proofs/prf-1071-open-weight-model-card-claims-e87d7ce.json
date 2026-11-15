@@ -27,6 +27,11 @@
   "command": "git checkout e87d7ce8df44257fd3af191bb70386d71f7efb0a && cd tools/open-weight-model-card-claims && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-open-weight-model-card-claims-e87d7ce.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42106547142",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T11:58:18Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43711448078"
+  }
 }
