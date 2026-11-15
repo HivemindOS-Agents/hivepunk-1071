@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-structure-check-23d7bc5",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-12T00:20:42Z",
+  "claim": {
+    "text": "Results: 2/2 checks passed",
+    "result": "passed",
+    "checksPassed": 2,
+    "checksTotal": 2
+  },
+  "artifact": "tools/glb-structure-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-structure-check/self_test.py",
+    "commit": "23d7bc50278f7101d1ea872253124351e0607119",
+    "sha256": "05796e3ae17a6c8a63d7b3d863cc8c98bea686623951bfe19570e5524889c8ee"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 2,
+    "checksTotal": 2
+  },
+  "command": "git checkout 23d7bc50278f7101d1ea872253124351e0607119 && cd tools/glb-structure-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-structure-check-23d7bc5.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43126562049",
+  "repro": "pending",
+  "peer": null
+}
