@@ -22,6 +22,9 @@ Rules this tool enforces:
   hand. data.csv's line count always comes from the emitted CSV itself; for
   any other file the line count is printed only when the row is a real
   read-back.
+* A finished card is scanned before it is returned: any 64-char hex run on
+  it must have come from an opened read-back row. A card with no read-back
+  therefore cannot carry a placeholder, borrowed or sample hash.
 * The README never names a dataset URL, never states a hash that was not
   read back, and never claims a self_test.py pass.
 
@@ -41,6 +44,7 @@ from pathlib import Path
 DATA_COLUMNS = ["case_id", "rule", "expected_bytes", "source", "read_back"]
 NOT_OPENED = "not-opened"
 _HEX64 = re.compile(r"^[0-9a-f]{64}$")
+_HEX_RUN = re.compile(r"(?<![0-9a-f])[0-9a-f]{64}(?![0-9a-f])")
 
 
 def split_csv_line(line):
@@ -120,6 +124,15 @@ def _readback_open(row):
         return False
 
 
+def _emitted_sha(row):
+    """The sha256 text for one read-back row: the row's own hash, or the
+    literal not-opened. A raw cell value never reaches the card for a row
+    that is not a real, well-formed read-back."""
+    if _readback_open(row):
+        return row["sha256"].strip()
+    return NOT_OPENED
+
+
 def emit_readback_lines(readback_rows, data_csv_text):
     """Return the README read-back bullet lines."""
     known = {r["file"].strip(): r for r in readback_rows if r.get("file")}
@@ -131,11 +144,13 @@ def emit_readback_lines(readback_rows, data_csv_text):
         row = known.get(name)
         if row is not None and _readback_open(row):
             n = data_lines if name == "data.csv" else int(row["line_count"].strip())
-            lines.append("- `%s` - sha256 %s, %d lines" % (name, row["sha256"].strip(), n))
+            lines.append("- `%s` - sha256 %s, %d lines"
+                         % (name, _emitted_sha(row), n))
         else:
             lines.append(
-                "- `%s` - not-opened (sha256: not-opened; line count: not-opened)"
-                % name
+                "- `%s` - not-opened (sha256: %s; line count: %s)"
+                % (name, NOT_OPENED if row is None else _emitted_sha(row),
+                   NOT_OPENED)
             )
     for name in known:
         if name in seen:
@@ -144,21 +159,43 @@ def emit_readback_lines(readback_rows, data_csv_text):
         if _readback_open(row):
             lines.append(
                 "- `%s` - sha256 %s, %s lines"
-                % (name, row["sha256"].strip(), row["line_count"].strip())
+                % (name, _emitted_sha(row), row["line_count"].strip())
             )
         else:
             lines.append(
-                "- `%s` - not-opened (sha256: not-opened; line count: not-opened)"
-                % name
+                "- `%s` - not-opened (sha256: %s; line count: %s)"
+                % (name, _emitted_sha(row), NOT_OPENED)
             )
     return "\n".join(lines)
+
+
+def _assert_no_unverified_hash(text, readback_rows):
+    """Raise ValueError if `text` carries a 64-char hex run that no opened
+    read-back row supplied.
+
+    This is the rule in code: for an unread file the sha256 field reads
+    not-opened, never a placeholder, borrowed or sample value. Checking the
+    finished card means no future edit to the emitter wording can smuggle
+    one in.
+    """
+    allowed = set()
+    for row in readback_rows:
+        if _readback_open(row):
+            allowed.add(row["sha256"].strip())
+    for found in _HEX_RUN.findall(text or ""):
+        if found not in allowed:
+            raise ValueError(
+                "card carries a 64-char hex hash %r that no opened read-back "
+                "row supplied" % found
+            )
+    return True
 
 
 def emit_readme(readback_rows, data_csv_text, case_count):
     """Return the full README.md text for the card."""
     rb = emit_readback_lines(readback_rows, data_csv_text)
     n_lines = len(data_csv_text.strip("\n").split("\n"))
-    return (
+    card = (
         "# GLB binary chunk padding and alignment cases\n\n"
         "One row per GLB padding or alignment case, with the byte expression a\n"
         "parser has to get right and the page the row was read from.\n\n"
@@ -188,6 +225,8 @@ def emit_readme(readback_rows, data_csv_text, case_count):
         "No licence is claimed. Rows are short factual notes about byte layouts.\n"
         % (case_count, rb, n_lines, case_count)
     )
+    _assert_no_unverified_hash(card, readback_rows)
+    return card
 
 
 def write_outputs(rows, readback_rows, outdir):
@@ -225,7 +264,11 @@ def main(argv=None):
     except (OSError, ValueError) as exc:
         print("error: %s" % exc, file=sys.stderr)
         return 2
-    paths = write_outputs(rows, readback_rows, outdir)
+    try:
+        paths = write_outputs(rows, readback_rows, outdir)
+    except ValueError as exc:
+        print("error: %s" % exc, file=sys.stderr)
+        return 2
     print("wrote %s" % paths["data_csv"])
     print("wrote %s" % paths["readme"])
     return 0
