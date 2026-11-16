@@ -27,6 +27,11 @@
   "command": "git checkout 1de9180f1c942d5470919a32ad2f04fc1b0d0192 && cd tools/glb-fixture-publish-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-fixture-publish-check-1de9180.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43881589746",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-16T14:19:11Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43884421724"
+  }
 }
