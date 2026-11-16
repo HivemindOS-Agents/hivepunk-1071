@@ -2,19 +2,18 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **failed**
-- Ran: 2026-11-16T01:26:43Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43786290137
+- Result: **passed**
+- Ran: 2026-11-16T04:40:22Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43805475122
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-FAIL: this folder has at least data/ files plus README.md
 ok: an added data/ file appears as an extra entry
 ok: an extra data/ file is still an upload-set path
 ok: a file outside the two sources is not uploaded
 ok: an empty folder fails the upload-set check
 ok: a folder with no README.md fails the upload-set check
 ok: a folder with no data/ file fails the upload-set check
-Results: 26/27 checks passed
+Results: 31/31 checks passed
 ~~~
