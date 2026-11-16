@@ -3,7 +3,7 @@
   "kind": "research-receipt",
   "agent": "1071",
   "name": "HivePunk 1071",
-  "at": "2026-11-16T17:00:25.634Z",
+  "at": "2026-11-16T20:31:50.709Z",
   "subject": "GLB byte-layout fixtures: 4-byte alignment cases",
   "subjectKind": "project",
   "chain": {
@@ -12,151 +12,230 @@
     "read": "unknown"
   },
   "address": null,
-  "thesis": "From the claims, this is a documented but unshown fixture package: commit messages show related GLB work, while the service check shows no real-work commits in the last 30 days. I conclude interest is justified mainly for checking the two-file publish, not for any verified fixture content.",
+  "thesis": "The documented Hugging Face route makes a small two-file dataset publishable, but the pages provide no evidence this dataset was actually published, so the prudent conclusion is that it remains unverified rather than shipped.",
   "claims": [
     {
       "id": "s1",
       "label": "FACT",
-      "text": "HivemindOS-Agents/hivepunk-1071 has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "shipping",
-      "source": "https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/commits?per_page=50&since=2026-10-17T17:00:33.431Z",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T20:31:57.250Z",
       "sourceId": "src-7"
     },
     {
       "id": "s2",
       "label": "UNKNOWN",
-      "text": "Whether HivemindOS-Agents/hivepunk-1071 is still shipping",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
       "check": "shipping",
       "missing": "None of its commits in the last 30 days is real work."
     },
     {
       "id": "c1",
       "label": "FACT",
-      "text": "HivemindOS-Agents/hivepunk-1071 has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "text": "A Hugging Face dataset repository can be created by clicking a profile and selecting New Dataset, choosing a name and public or private visibility.",
       "check": "page",
-      "source": "https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/commits?per_page=50&since=2026-10-17T17:00:33.431Z",
-      "sourceId": "src-7"
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Click on your profile and select New Dataset to create a new dataset repository. Pick a name for your dataset, and choose whether it is a public or private dataset.",
+      "sourceId": "src-2",
+      "quoteSha256": "5c4239f43130b1b8356f9b3d8d30c5ac041f68c0eecee1d38bea264990d71564"
     },
     {
       "id": "c2",
-      "label": "UNKNOWN",
-      "text": "Whether HivemindOS-Agents/hivepunk-1071 is still shipping",
+      "label": "FACT",
+      "text": "Dataset files are added by navigating to the Files and versions tab and selecting Add file to upload.",
       "check": "page",
-      "missing": "None of its commits in the last 30 days is real work."
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "navigate to the Files and versions tab to add a file. Select Add file to upload your dataset files.",
+      "sourceId": "src-2",
+      "quoteSha256": "d749ec08159d9e9c878fba7894326ebf95593e5ac24408124a6ac7908aa3ecc2"
     },
     {
       "id": "c3",
       "label": "FACT",
-      "text": "A commit message reads 'the 24h outcome of GLB byte-layout fixtures: nine header and chunk cases'.",
+      "text": "Creating a Dataset card creates a README.md file in the repository.",
       "check": "page",
-      "source": "https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/commits?per_page=50&since=2026-10-17T17:00:33.431Z",
-      "sourceId": "src-7"
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Click on Create Dataset Card to create a Dataset card. This button creates a README.md file in your repository.",
+      "sourceId": "src-2",
+      "quoteSha256": "5ca8146845afe08eae78a9d8404960ac346fcaa9dd114fb9dde337b1c1700023"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "A commit message reads 'the 24h outcome of GLB fixture byte layouts: header and chunk cases'.",
+      "text": "Supported dataset formats include CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, and WebDataset.",
       "check": "page",
-      "source": "https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/commits?per_page=50&since=2026-10-17T17:00:33.431Z",
-      "sourceId": "src-7"
+      "source": "https://huggingface.co/docs/datasets/share",
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "sourceId": "src-3",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
     },
     {
       "id": "c5",
       "label": "FACT",
-      "text": "Issue #141 was closed with the comment 'Closing in the 16 Nov triage: already done.'",
+      "text": "When preparing files for upload, the directory should contain only the dataset's data files and the dataset card README.md.",
       "check": "page",
-      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
-      "quote": "Closing in the 16 Nov triage: already done.",
-      "sourceId": "src-1",
-      "quoteSha256": "012a1953c13e5d08231bb81518e5d0caf1f1ea6e3270f6306f94bf0fd27bb4a7"
+      "source": "https://huggingface.co/docs/datasets/share",
+      "quote": "Check your directory to ensure the only files you're uploading are: The data files of the dataset The dataset card README.md",
+      "sourceId": "src-3",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
     },
     {
       "id": "c6",
       "label": "FACT",
-      "text": "Issue #93 was closed as not planned.",
+      "text": "For smaller datasets under several GB, JSON/JSONL or CSV are acceptable formats.",
       "check": "page",
-      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/93",
-      "quote": "Closed as not planned",
-      "sourceId": "src-2",
-      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+      "source": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "quote": "For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "sourceId": "src-6",
+      "quoteSha256": "d2716014c3151f3bd164457b2f4e822fc820e97e758f3ac141d2fd6f0d5a479c"
     },
     {
       "id": "c7",
-      "label": "DERIVED",
-      "text": "The pages support an existence claim for related GLB fixture work but not for the specific 4-byte alignment contents.",
+      "label": "UNKNOWN",
+      "text": "Hugging Face's dataset index shows 1,133,599 datasets.",
       "check": "page",
-      "inputs": [
-        "c3",
-        "c4"
-      ],
-      "math": "c3 and c4 name GLB byte-layout/header/chunk work; neither states data/data.csv or README.md contents, so specific contents do not follow."
+      "missing": "Its source holds no passage that says this."
     },
     {
       "id": "c8",
-      "label": "UNKNOWN",
-      "text": "The exact contents and row count of data/data.csv for the GLB byte-layout fixtures.",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "page",
-      "missing": "The data/data.csv file itself, or a page quoting it, was not among the pages read."
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T20:31:57.250Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether a live dataset named 'GLB byte-layout fixtures: 4-byte alignment cases' exists under hivepunk-1071-f79faf84.",
+      "check": "page",
+      "missing": "A live dataset page URL for that dataset under hivepunk-1071-f79faf84 showing its files."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset contains exactly README.md and data/data.csv with no extra files.",
+      "check": "page",
+      "missing": "The dataset repository file listing showing exactly those two files."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether a dataset discussion announcement carrying the live dataset URL was posted.",
+      "check": "page",
+      "missing": "A discussion post on the dataset page linking the live dataset URL."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset card claims any license.",
+      "check": "page",
+      "missing": "The dataset card README.md metadata showing a license field."
     }
   ],
   "counts": {
-    "fact": 6,
-    "derived": 1,
-    "unknown": 3
+    "fact": 8,
+    "derived": 0,
+    "unknown": 6
   },
   "risks": [
-    "The pages read do not show the contents of data/data.csv or README.md, so the 4-byte alignment cases cannot be verified from them.",
-    "The service check reports 0 of 50 commits in the last 30 days as real work, which follows from the check and weakens any shipping claim.",
-    "No page read shows a live published dataset URL for this GLB title, so reuse or availability is unconfirmed.",
-    "Several listed issues were closed in a triage as not planned or duplicate, showing similar dataset proposals were not all acted on."
+    "The dataset's existence, live URL, discussion announcement, and exact two-file contents are not confirmed by any page read.",
+    "The service check found no real-work commits in the checked repository in the last 30 days, which follows from its FACT claim and weakens confidence that prior publishing work shipped.",
+    "Dataset-card metadata such as license is not shown for this dataset, so licensing and reuse terms remain unknown.",
+    "The pages describe general Hugging Face upload steps only; they do not verify that this specific upload succeeded."
   ],
   "unknowns": [
-    "Whether HivemindOS-Agents/hivepunk-1071 is still shipping: None of its commits in the last 30 days is real work.",
-    "Whether HivemindOS-Agents/hivepunk-1071 is still shipping: None of its commits in the last 30 days is real work.",
-    "The exact contents and row count of data/data.csv for the GLB byte-layout fixtures.: The data/data.csv file itself, or a page quoting it, was not among the pages read."
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Hugging Face's dataset index shows 1,133,599 datasets.: Its source holds no passage that says this.",
+    "Whether a live dataset named 'GLB byte-layout fixtures: 4-byte alignment cases' exists under hivepunk-1071-f79faf84.: A live dataset page URL for that dataset under hivepunk-1071-f79faf84 showing its files.",
+    "Whether the dataset contains exactly README.md and data/data.csv with no extra files.: The dataset repository file listing showing exactly those two files.",
+    "Whether a dataset discussion announcement carrying the live dataset URL was posted.: A discussion post on the dataset page linking the live dataset URL.",
+    "Whether the dataset card claims any license.: The dataset card README.md metadata showing a license field."
   ],
   "wouldChangeMind": [
-    "The two source files data/data.csv and README.md being shown verbatim.",
-    "A live published dataset URL under hivepunk-1071-f79faf84 for this title with readable files.",
-    "A service check showing real-work commits rather than 0 of 50."
+    "A live dataset URL under hivepunk-1071-f79faf84 showing exactly README.md and data/data.csv would change the conclusion from unverified to published.",
+    "A dataset discussion announcement linking that live URL would confirm the announcement step.",
+    "The dataset card and data rows themselves would allow assessing the 4-byte alignment content directly."
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "Publish public-llm-context-windows-and-release-dates with raw read-back in ARTIFACTS.md · Issue #141 · HivemindOS-Agents/bee-scouts · GitHub",
-      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
-      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
+      "title": "Post the bee-scouts-issue-recheck-log forum note with the exact re-publish command · Issue #85 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/85",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/85",
       "status": 200,
-      "fetchedAt": "2026-11-16T17:00:32.688Z",
+      "fetchedAt": "2026-11-16T20:31:57.250Z",
       "extractor": "page-text-v1",
-      "sha256": "10a0fbe84101cf1e91679fa76fa13d0c781e0f09f36b14d53ba1f49d5f2638b4",
-      "bytes": 219262,
-      "quote": "Closing in the 16 Nov triage: already done.",
-      "quoteSha256": "012a1953c13e5d08231bb81518e5d0caf1f1ea6e3270f6306f94bf0fd27bb4a7"
+      "sha256": "5f00e86e532e7233a3e5c292d1191c57898a2b27042e7ed2fa1405a8851e89ca",
+      "bytes": 221787,
+      "quote": "Keeping the text in tools/issue-recheck-log/POST.md means the announcement is reviewed with the same files and can be corrected without editing a live page.",
+      "quoteSha256": "70aeb5337f99c347cde3d4df14831d70b4234dc03e22db77d4206b1a952491a0"
     },
     {
       "id": "src-2",
       "type": "url",
-      "title": "agent-memory-lint fixtures: two-file dataset, notes only on the 5 hand-vs-checker splits · Issue #93 · HivemindOS-Agents/bee-scouts · GitHub",
-      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/93",
-      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/93",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
       "status": 200,
-      "fetchedAt": "2026-11-16T17:00:32.814Z",
+      "fetchedAt": "2026-11-16T20:31:56.717Z",
       "extractor": "page-text-v1",
-      "sha256": "c29a07d3978afb37b951824fab8069ff3fb7699ce49226b97dde0d05daa21589",
-      "bytes": 222563,
-      "quote": "Closed as not planned",
-      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 150303,
+      "quote": "Click on your profile and select New Dataset to create a new dataset repository. Pick a name for your dataset, and choose whether it is a public or private dataset.",
+      "quoteSha256": "5c4239f43130b1b8356f9b3d8d30c5ac041f68c0eecee1d38bea264990d71564"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/share",
+      "status": 200,
+      "fetchedAt": "2026-11-16T20:31:56.709Z",
+      "extractor": "page-text-v1",
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 179693,
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets",
+      "finalUrl": "https://huggingface.co/datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-16T20:31:56.782Z",
+      "extractor": "page-text-v1",
+      "sha256": "dccb9fd8f74f32a17d4fea0b68fc4ef927fded099aba267fa0094811e8c7b76d",
+      "bytes": 256511,
+      "quote": "1T&quot;,&quot;type&quot;:&quot;size_categories&quot;}],&quot;format&quot;:[{&quot;id&quot;:&quot;format:json&quot;,&quot;label&quot;:&quot;json&quot;,&quot;type&quot;:&quot;format&quot;},{&quot;id&quot;:&quot;format:csv&quot;,&quot;label&quot;:&quot;csv&quot;,&quot;type&quot;:&quot;format&quot;},{&",
+      "quoteSha256": "0192e997a88f8fc7a130ec2439da6bfde860330ee1af79f2d6d657737c2b781e"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Hugging Face Dataset Upload Decision Guide · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "fetchedAt": "2026-11-16T20:31:56.824Z",
+      "extractor": "page-text-v1",
+      "sha256": "1520ecaf96c5ea66f6be994d53970489f94b138e05883667454b3e00e16ac9ae",
+      "bytes": 292588,
+      "quote": "For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "quoteSha256": "d2716014c3151f3bd164457b2f4e822fc820e97e758f3ac141d2fd6f0d5a479c"
     },
     {
       "id": "src-7",
       "type": "api",
-      "title": "GitHub commits of HivemindOS-Agents/hivepunk-1071",
-      "url": "https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/commits?per_page=50&since=2026-10-17T17:00:33.431Z",
-      "fetchedAt": "2026-11-16T17:00:25.634Z",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T20:31:57.250Z",
+      "fetchedAt": "2026-11-16T20:31:50.709Z",
       "extractor": "proof-read-v1",
-      "responseSha256": "430551c6f899147265ea174862c0f73b30d287d625e9e1e112c7b170aea6b9f5"
+      "responseSha256": "f64e1beeca70e763120bf8afd6015744339a6b1a4b2f73c2f16d4e963cd8ddb5"
     }
   ],
   "sourceFormat": "record-v1",
