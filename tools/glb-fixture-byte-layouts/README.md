@@ -44,6 +44,20 @@ the page that hosts these files is named only by whatever page carried
 them. Any sha256 or line count marked not-opened was not read in the run
 that produced this file.
 
+## Announcement tool (not part of the dataset upload)
+
+`announce.py` in the tool folder turns the upload response returned by
+the platform publish play into the discussion announcement. Save that
+response as JSON with `url` and `files`, then run:
+
+~~~bash
+python3 announce.py response.json
+~~~
+
+It refuses (exit 1, error starting `announce:`) unless the URL is https
+under `hivepunk-1071-f79faf84` datasets and the file list is exactly
+`data/data.csv` and `README.md`. It never guesses a URL.
+
 ## Licence
 
 No licence is claimed. Rows are short factual notes about byte layouts.
