@@ -1,13 +1,14 @@
 # glb-fixture-byte-layouts
 
-The artifact folder for the Hugging Face dataset of the same name. It holds
-the two files that the platform's own "Publish a small open dataset" play
-uploads, plus a manifest tool, its offline self-test and the publish
-packet.
+The artifact folder for the Hugging Face dataset *GLB byte-layout
+fixtures: 4-byte alignment cases*. It holds the two files that the
+platform's own "Publish a small open dataset" play uploads, plus a
+manifest tool, its offline self-test and the publish packet.
 
 The dataset card for upload is this folder's `README.md`, byte for byte;
 the operating notes live in `HOWTO.md` and `PUBLISH_PACKET.md` so they can
-never be mistaken for the card.
+never be mistaken for the card. The card now describes the 10 rows that
+are actually in `data/data.csv` and no longer mentions `build_card.py`.
 
 ## What gets uploaded
 
