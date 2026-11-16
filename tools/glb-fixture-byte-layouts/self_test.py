@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""self_test.py - offline checks for publish_manifest.py.
+"""self_test.py - offline checks for publish_manifest.py and announce.py.
 
 Run from inside this folder with no arguments, no network:
 
@@ -14,6 +14,7 @@ dir. Exits 0 only when every check passes. Stdlib only.
 """
 
 import hashlib
+import json
 import sys
 import tempfile
 from pathlib import Path
@@ -21,6 +22,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import announce  # noqa: E402
 import publish_manifest as pm  # noqa: E402
 
 CHECKS = 0
@@ -73,7 +75,6 @@ def main():
           "nothing outside data/... plus README.md is in this folder's set")
 
     # --- regression: the exact 2-entry publish set (named failing case) ---
-    # An earlier version demanded >=3 entries and failed this correct set.
     two_root = build_two_entry_fixture(tempfile.mkdtemp(prefix="glb-fixture-two-"))
     two = pm.collect(two_root)
     check(len(two) == 2, "exact 2-entry fixture has exactly 2 entries")
@@ -176,6 +177,37 @@ def main():
     except ValueError:
         raised = True
     check(raised, "a folder with no data/ file fails the upload-set check")
+
+    # --- announce.py: exact two-file announcement from an upload response ---
+    good_response = {
+        "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-byte-layout-fixtures",
+        "files": ["data/data.csv", "README.md"],
+    }
+    text = announce.announcement_text(good_response)
+    check(good_response["url"] in text, "announce: carries the live URL from the response")
+    check("data/data.csv" in text and "README.md" in text,
+          "announce: carries both file names")
+    check(announce.check_response(good_response) is True,
+          "announce: exact 2-file response is valid")
+    check(announce.check_response({"url": good_response["url"], "files": ["README.md", "data/data.csv"]}) is True,
+          "announce: file order does not matter, set must be exact")
+    resp_file = Path(tempfile.mkdtemp(prefix="glb-announce-")) / "response.json"
+    resp_file.write_text(json.dumps(good_response), encoding="utf-8")
+    check(announce.load_response(str(resp_file))["url"] == good_response["url"],
+          "announce: loads response JSON from a file")
+    for bad, label in [
+        ({"url": good_response["url"], "files": ["README.md"]}, "announce: one-file response is refused"),
+        ({"url": good_response["url"], "files": ["data/data.csv", "README.md", "extra.txt"]}, "announce: three-file response is refused"),
+        ({"url": good_response["url"], "files": ["data/data.csv", "data/other.csv"]}, "announce: renamed file response is refused"),
+        ({"url": "https://huggingface.co/datasets/other-account/x", "files": ["data/data.csv", "README.md"]}, "announce: wrong-account URL is refused"),
+        ({"files": ["data/data.csv", "README.md"]}, "announce: missing URL is refused"),
+        ({"url": "http://huggingface.co/datasets/hivepunk-1071-f79faf84/x", "files": ["data/data.csv", "README.md"]}, "announce: non-https URL is refused"),
+    ]:
+        try:
+            announce.check_response(bad)
+            check(False, label)
+        except ValueError as exc:
+            check("announce:" in str(exc), label)
 
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
