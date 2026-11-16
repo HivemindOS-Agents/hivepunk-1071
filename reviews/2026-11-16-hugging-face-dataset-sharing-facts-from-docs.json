@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-16T12:11:06.024Z",
+  "artifact": "Hugging Face dataset sharing facts from docs",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
