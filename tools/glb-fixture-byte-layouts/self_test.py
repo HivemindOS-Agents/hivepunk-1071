@@ -25,6 +25,7 @@ CHECKS = 0
 PASSED = 0
 CARD = "# card\n\nnot a real dataset card in this fixture.\n"
 CSV_A = "case_id,rule\na,b\n"
+CSV_A_LONG = "case_id,rule\na,cc\n"
 CSV_B = "case_id,rule\nc,d\n"
 
 
@@ -73,12 +74,20 @@ def main():
         check(size == exp[0], "size read for %s" % source)
         check(digest == exp[1], "sha256 read for %s" % source)
 
-    data_entry = [e for e in entries if e[0] == "data/a.csv"][0]
-    changed = (root / "data" / "a.csv")
-    changed.write_text(CSV_A.replace("a,b", "a,c"), encoding="utf-8")
+    before = [e for e in entries if e[0] == "data/a.csv"][0]
+    changed = root / "data" / "a.csv"
+    changed.write_text(CSV_A_LONG, encoding="utf-8")
     after = [e for e in pm.collect(root) if e[0] == "data/a.csv"][0]
-    check(after[3] != data_entry[3], "a changed byte changes the sha256")
-    check(after[2] != data_entry[2], "a changed byte changes the byte count")
+    check(after[3] != before[3], "a changed byte changes the sha256")
+    check(after[2] != before[2], "a longer change changes the byte count")
+    check(after[2] == len(CSV_A_LONG.encode()),
+          "byte count equals the length of the bytes on disk")
+
+    changed.write_text(CSV_A.replace("a,b", "a,c"), encoding="utf-8")
+    same_len = [e for e in pm.collect(root) if e[0] == "data/a.csv"][0]
+    check(same_len[3] != before[3], "same-length change still changes the sha256")
+    check(same_len[2] == before[2],
+          "same-length change keeps the byte count (correct, not a bug)")
 
     manifest = pm.manifest_text(pm.collect(root))
     check("README.md" in manifest and "data/a.csv" in manifest,
@@ -104,7 +113,7 @@ def main():
 
     (root / "data" / "extra.csv").write_text("x,y\n", encoding="utf-8")
     extra = pm.collect(root)
-    check(len(extra) == 4, "an added file appears as an extra entry")
+    check(len(extra) == 4, "an added data/ file appears as an extra entry")
     check(pm.check_two_entries(extra) is True,
           "an extra data/ file is still an upload-set path")
 
@@ -121,14 +130,24 @@ def main():
         raised = True
     check(raised, "an empty folder fails the upload-set check")
 
-    missing = Path(tempfile.mkdtemp(prefix="glb-fixture-missing-"))
-    (missing / "data").mkdir()
+    missing_card = Path(tempfile.mkdtemp(prefix="glb-fixture-missing-"))
+    (missing_card / "data").mkdir()
+    (missing_card / "data" / "a.csv").write_text(CSV_A, encoding="utf-8")
     raised = False
     try:
-        pm.check_two_entries(pm.collect(missing))
+        pm.check_two_entries(pm.collect(missing_card))
     except ValueError:
         raised = True
     check(raised, "a folder with no README.md fails the upload-set check")
+
+    missing_data = Path(tempfile.mkdtemp(prefix="glb-fixture-nodata-"))
+    (missing_data / "README.md").write_text(CARD, encoding="utf-8")
+    raised = False
+    try:
+        pm.check_two_entries(pm.collect(missing_data))
+    except ValueError:
+        raised = True
+    check(raised, "a folder with no data/ file fails the upload-set check")
 
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
