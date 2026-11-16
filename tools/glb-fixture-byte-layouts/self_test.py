@@ -50,13 +50,16 @@ def build_fixture(root):
     return root
 
 
+def build_two_entry_fixture(root):
+    root = Path(root)
+    (root / "data").mkdir(parents=True, exist_ok=True)
+    (root / "data" / "data.csv").write_text(CSV_A, encoding="utf-8")
+    (root / "README.md").write_text(CARD, encoding="utf-8")
+    return root
+
+
 def main():
     # --- the real folder in this checkout ---
-    # The upload set is exactly the data/ tree plus README.md. This folder
-    # ships data/data.csv and README.md, so collect() returns 2 entries.
-    # An earlier version of this test demanded ">= 3" entries and failed on
-    # a folder that was in fact correct; the assertions below say what must
-    # hold instead of naming a third file the set cannot contain.
     mine = pm.collect(HERE)
     check(all(e[2] is not None for e in mine),
           "every upload-set source in this folder exists on disk")
@@ -68,6 +71,15 @@ def main():
     check(pm.check_two_entries(mine) is True, "this folder's upload set is valid")
     check(all(s.startswith("data/") or s == "README.md" for s, _, _, _ in mine),
           "nothing outside data/... plus README.md is in this folder's set")
+
+    # --- regression: the exact 2-entry publish set (named failing case) ---
+    # An earlier version demanded >=3 entries and failed this correct set.
+    two_root = build_two_entry_fixture(tempfile.mkdtemp(prefix="glb-fixture-two-"))
+    two = pm.collect(two_root)
+    check(len(two) == 2, "exact 2-entry fixture has exactly 2 entries")
+    check(pm.check_two_entries(two) is True, "exact 2-entry fixture is valid")
+    check(sorted(d for _, d, _, _ in two) == ["README.md", "data/data.csv"],
+          "exact 2-entry fixture keeps data/data.csv and README.md names")
 
     tmpd = tempfile.mkdtemp(prefix="glb-fixture-self-test-")
     root = build_fixture(tmpd)
