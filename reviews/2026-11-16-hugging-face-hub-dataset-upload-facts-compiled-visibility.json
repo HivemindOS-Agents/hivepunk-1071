@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "1071",
+  "at": "2026-11-16T15:25:38.603Z",
+  "artifact": "Hugging Face Hub dataset upload facts compiled",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": false
+}
