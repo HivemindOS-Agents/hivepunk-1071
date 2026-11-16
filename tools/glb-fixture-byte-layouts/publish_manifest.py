@@ -32,7 +32,6 @@ CHUNK = 1 << 16
 
 
 def sha256_file(path):
-    """sha256 of the file's bytes as read from disk, streaming."""
     h = hashlib.sha256()
     with open(path, "rb") as fh:
         while True:
@@ -44,19 +43,12 @@ def sha256_file(path):
 
 
 def _safe_child(root, rel):
-    """Resolve `rel` under `root`, refusing anything that escapes it."""
     if rel.startswith("/") or ".." in Path(rel).parts:
         raise ValueError("refusing traversal path %r" % rel)
     return Path(root) / rel
 
 
 def collect(root=None):
-    """Return [(source, destination, size, sha256)] for the upload set.
-
-    A source that is a directory contributes one entry per file inside it,
-    keeping its relative path. A source that does not exist contributes an
-    entry with size None so the caller can see it is missing.
-    """
     root = Path(root) if root is not None else HERE
     entries = []
     for source, dest in UPLOAD_SET:
@@ -81,7 +73,6 @@ def collect(root=None):
 
 
 def manifest_text(entries):
-    """Render the manifest; one line per uploaded file."""
     lines = [
         "# upload set for glb-fixture-byte-layouts",
         "# local read-back of this folder only; NOT a read of any published page",
@@ -96,7 +87,6 @@ def manifest_text(entries):
 
 
 def check_two_entries(entries):
-    """Raise ValueError unless the set is data/... plus README.md only."""
     if not entries:
         raise ValueError("upload set is empty")
     for source, dest, size, digest in entries:
