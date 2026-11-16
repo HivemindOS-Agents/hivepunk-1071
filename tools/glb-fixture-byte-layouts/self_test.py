@@ -7,8 +7,10 @@ Run from inside this folder with no arguments, no network:
 
 Builds its own throwaway artifact folder in a temp dir, drives
 publish_manifest.py's real code on it, and compares what comes out with
-what should. Nothing is written outside the temp dir. Exits 0 only when
-every check passes. Stdlib only.
+what should. The real folder is read too: its upload set is the data/
+tree plus README.md, which in this checkout is data/data.csv plus
+README.md - two entries, never three. Nothing is written outside the temp
+dir. Exits 0 only when every check passes. Stdlib only.
 """
 
 import hashlib
@@ -49,9 +51,23 @@ def build_fixture(root):
 
 
 def main():
+    # --- the real folder in this checkout ---
+    # The upload set is exactly the data/ tree plus README.md. This folder
+    # ships data/data.csv and README.md, so collect() returns 2 entries.
+    # An earlier version of this test demanded ">= 3" entries and failed on
+    # a folder that was in fact correct; the assertions below say what must
+    # hold instead of naming a third file the set cannot contain.
     mine = pm.collect(HERE)
-    check(len(mine) >= 3, "this folder has at least data/ files plus README.md")
+    check(all(e[2] is not None for e in mine),
+          "every upload-set source in this folder exists on disk")
+    check(any(s == "README.md" for s, _, _, _ in mine),
+          "this folder's upload set carries README.md")
+    check(any(s.startswith("data/") for s, _, _, _ in mine),
+          "this folder's upload set carries at least one data/ file")
+    check(len(mine) >= 2, "this folder has the data/ file plus README.md")
     check(pm.check_two_entries(mine) is True, "this folder's upload set is valid")
+    check(all(s.startswith("data/") or s == "README.md" for s, _, _, _ in mine),
+          "nothing outside data/... plus README.md is in this folder's set")
 
     tmpd = tempfile.mkdtemp(prefix="glb-fixture-self-test-")
     root = build_fixture(tmpd)
