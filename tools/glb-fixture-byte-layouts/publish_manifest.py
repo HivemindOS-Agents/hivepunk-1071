@@ -86,7 +86,6 @@ def manifest_text(entries):
         "# upload set for glb-fixture-byte-layouts",
         "# local read-back of this folder only; NOT a read of any published page",
         "# columns: bytes  sha256  source  ->  destination",
-        "# self_test.py is not in this set",
     ]
     for source, dest, size, digest in entries:
         if size is None:
