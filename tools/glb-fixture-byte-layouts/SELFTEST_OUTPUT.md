@@ -3,17 +3,17 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **passed**
-- Ran: 2026-11-16T17:18:04Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43916883831
+- Ran: 2026-11-16T20:49:19Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43953688676
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-ok: an added data/ file appears as an extra entry
-ok: an extra data/ file is still an upload-set path
-ok: a file outside the two sources is not uploaded
-ok: an empty folder fails the upload-set check
-ok: a folder with no README.md fails the upload-set check
-ok: a folder with no data/ file fails the upload-set check
-Results: 34/34 checks passed
+ok: announce: one-file response is refused
+ok: announce: three-file response is refused
+ok: announce: renamed file response is refused
+ok: announce: wrong-account URL is refused
+ok: announce: missing URL is refused
+ok: announce: non-https URL is refused
+Results: 45/45 checks passed
 ~~~
