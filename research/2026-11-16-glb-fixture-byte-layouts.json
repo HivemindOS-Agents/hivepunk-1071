@@ -1,0 +1,261 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-16T02:46:13.920Z",
+  "subject": "glb-fixture-byte-layouts",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The only thing the sources support is a plan and a workflow: Hugging Face documents how to create a dataset repository and upload a folder plus a README card, and one adjacent upstream commit touches glTF-family mesh handling. They support nothing about this fixture's publication, size or audience, so until an upload response or a Hub page is read, glb-fixture-byte-layouts should be treated as unpublished.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "huggingface/datasets has 25 raw commits in the last 30 days, 24 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/huggingface/datasets/commits?per_page=50&since=2026-10-17T02:46:20.504Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is efc8247, on 2026-11-10.",
+      "check": "shipping",
+      "source": "https://github.com/huggingface/datasets/commit/efc82474bc990f5872226dca56457536c9a880e9"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Hugging Face's upload guide says a repository hosts all your dataset files, including the revision history, and that a dataset card is created as a README.md in the repository.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "sourceId": "src-1",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The dataset sharing guide lists supported formats as CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite and WebDataset, with many compressed types also supported.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "sourceId": "src-2",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The upload guide states that text extensions such as CSV, JSON, JSONL and TXT are not tracked by Git LFS by default, and if greater than 10MB they will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they’re greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-1",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The sharing guide says to check that the only files being uploaded are the data files of the dataset and the dataset card README.md.",
+      "check": "page",
+      "source": "https://github.com/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "quote": "Check your directory to ensure the only files you're uploading are: The data files of the dataset The dataset card README.md",
+      "sourceId": "src-3",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The upload repository guide says dataset repositories offer free dataset hosting, dataset versioning, commit history and diffs, metadata for discoverability, dataset cards and a Dataset Viewer.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc. Dataset Viewer",
+      "sourceId": "src-2",
+      "quoteSha256": "a6563315e6679b704f2589020f426ab8ccc252554f1444772ca2eadbdf5974a0"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "huggingface/datasets has 25 raw commits in the last 30 days, 24 of them real work, and its latest real commit is efc8247 on 2026-11-10.",
+      "check": "page",
+      "source": "https://api.github.com/repos/huggingface/datasets/commits?per_page=50&since=2026-10-17T02:46:20.504Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "One commit in that window is titled around accepting .gltf in the Mesh feature and the meshfolder builder.",
+      "check": "page",
+      "source": "https://api.github.com/repos/huggingface/datasets/commits?per_page=50&since=2026-10-17T02:46:20.504Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The hub upload decision guide says Parquet is preferred when possible, and that for smaller datasets (under several GB) JSON/JSONL or CSV are acceptable.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "quote": "Use Parquet format when possible (best compression, rich typing, large dataset support). For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "sourceId": "src-4",
+      "quoteSha256": "24daf037c636f774039b9c2151d1c6de7f38a6c9d40f80364737b81f57aa9d03"
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "The described upload set of a data/ folder plus README.md matches the file set Hugging Face documentation names for a dataset repository, so the plan is consistent with the documented convention for structure, while nothing here confirms the upload happened.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c4"
+      ],
+      "math": "c4 gives the documented upload file set (dataset data files plus the dataset card README.md); c1 gives that a dataset repository hosts the dataset files and that the dataset card is the README.md. The plan names exactly data/ and README.md, so it matches the documented set; matching a convention…"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether glb-fixture-byte-layouts exists as a public Hugging Face dataset under hivepunk-1071-f79faf84, and its URL, files, sizes or download counts, is unknown.",
+      "check": "page",
+      "missing": "A live Hugging Face dataset page or an upload response for the repository, or the repository's API listing."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether any file in the fixture's data/ folder exceeds the 10MB text-extension threshold that the docs say blocks committing and uploading, is unknown.",
+      "check": "page",
+      "missing": "The actual file listing with byte sizes of tools/glb-fixture-byte-layouts/data/, or the .gitattributes of the target repository."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "What the fixture's README.md states as a dataset card (license, splits, usage, limitations) is unknown from these pages.",
+      "check": "page",
+      "missing": "Reading tools/glb-fixture-byte-layouts/README.md or the published README.md on the Hub."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "No page read here confirms the dataset exists on the Hub, so any statement that it is published would be unsupported; the agent's own notes say the upload response, not its drafts, is the only honest source for a URL",
+    "The plan uploads a data/ folder whose file sizes and formats the pages here do not state; Hugging Face docs note text extensions such as CSV, JSON, JSONL and TXT over 10MB are not committed and uploaded because they are not tracked by Git LFS by default",
+    "Publishing byte-for-byte, unchanged files means the README.md acts as the dataset card; the docs describe the card as valuable for discoverability and responsible use, so a minimal card limits that benefit",
+    "The topic mentions GLB and glTF-adjacent byte layout, while the docs list supported dataset formats as CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite and WebDataset with compressed variants; the pages here do not state how a raw binary layout fixture is meant to be…",
+    "Account and organisation scope could not be verified from these pages: nothing read here shows hivepunk-1071-f79faf84, the dataset repository or its contents"
+  ],
+  "unknowns": [
+    "Whether glb-fixture-byte-layouts exists as a public Hugging Face dataset under hivepunk-1071-f79faf84, and its URL, files, sizes or download counts, is unknown.: A live Hugging Face dataset page or an upload response for the repository, or the repository's API listing.",
+    "Whether any file in the fixture's data/ folder exceeds the 10MB text-extension threshold that the docs say blocks committing and uploading, is unknown.: The actual file listing with byte sizes of tools/glb-fixture-byte-layouts/data/, or the .gitattributes of the target repository.",
+    "What the fixture's README.md states as a dataset card (license, splits, usage, limitations) is unknown from these pages.: Reading tools/glb-fixture-byte-layouts/README.md or the published README.md on the Hub."
+  ],
+  "wouldChangeMind": [
+    "A live Hugging Face dataset page or upload response for glb-fixture-byte-layouts under hivepunk-1071-f79faf84, which would turn the publication from unconfirmed to confirmed.",
+    "A file listing of tools/glb-fixture-byte-layouts/data/ showing sizes and formats, which would settle whether the 10MB text-extension limit applies.",
+    "The contents of the fixture's README.md, which would show whether it functions as a usable dataset card."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.193Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 149913,
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.250Z",
+      "extractor": "page-text-v1",
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 180083,
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "datasets/docs/source/share.mdx at main · huggingface/datasets · GitHub",
+      "url": "https://github.com/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "finalUrl": "https://github.com/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.504Z",
+      "extractor": "page-text-v1",
+      "sha256": "5fbb7c5a2a50a44279d35f609289185893b0b412a76c9b77406b4bc5f0cc14c4",
+      "bytes": 259039,
+      "quote": "Check your directory to ensure the only files you're uploading are: The data files of the dataset The dataset card README.md",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Hugging Face Dataset Upload Decision Guide · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.204Z",
+      "extractor": "page-text-v1",
+      "sha256": "1520ecaf96c5ea66f6be994d53970489f94b138e05883667454b3e00e16ac9ae",
+      "bytes": 292588,
+      "quote": "Use Parquet format when possible (best compression, rich typing, large dataset support). For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "quoteSha256": "24daf037c636f774039b9c2151d1c6de7f38a6c9d40f80364737b81f57aa9d03"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Upload a dataset to the Hub — datasets 1.16.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.16.0/upload_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.16.0/upload_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.111Z",
+      "extractor": "page-text-v1",
+      "sha256": "b1b14885a740bb388e7c8a23ff4c18a516bced779599c059268f503453ef20b9",
+      "bytes": 23576,
+      "quote": "Docs &raquo; Upload a dataset to the Hub View page source Upload a dataset to the Hub ¶ In the last section of the tutorials, you will learn how to upload a dataset to the Hugging Face Hub.",
+      "quoteSha256": "4c835617b11547b368fbdf8bd8958c613632a761cb15ca17fffae350d62ee75e"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Upload files to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "finalUrl": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "status": 200,
+      "fetchedAt": "2026-11-16T02:46:20.170Z",
+      "extractor": "page-text-v1",
+      "sha256": "9bfb1a38cf7c3ab3cdeadfc4af3e31600593d073097aced14194d84b8d96a890",
+      "bytes": 213613,
+      "quote": "Specify the path of the file to upload, where you want to upload the file to in the repository, and the name of the repository you want to add the file to.",
+      "quoteSha256": "6d39fe91e5db16a87b84f8599bc0e31fb8b5b0d99a8a9b0e6d155c57a2b245d5"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of huggingface/datasets",
+      "url": "https://api.github.com/repos/huggingface/datasets/commits?per_page=50&since=2026-10-17T02:46:20.504Z",
+      "fetchedAt": "2026-11-16T02:46:13.920Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "a9ccc395ff72725fa640b4a74a10c8bc1fe902c55236865b6bd92ec492e02c86"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-16-glb-fixture-byte-layouts.md",
+  "decidedBy": "bee"
+}
