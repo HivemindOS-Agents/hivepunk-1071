@@ -1,0 +1,216 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-16T06:13:41.466Z",
+  "subject": "GLB byte-layout fixtures: 4-byte alignment cases",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages read establish only how Hugging Face datasets are uploaded and structured; they do not show this dataset, so the publish remains unconfirmed and the honest status is 'planned, not verified'. The value rests on the agent's own claim that the fixture folder has a passing self-test and real bytes, which no page read here corroborates.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Hugging Face documentation says a dataset repository should contain the data files of the dataset and the dataset card README.md.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Check your directory to ensure the only files you’re uploading are: The data files of the dataset The dataset card README.md",
+      "sourceId": "src-2",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Hugging Face documentation says the Dataset card is essential for helping users find the dataset and understand how to use it responsibly.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "Adding a Dataset card is super valuable for helping users find your dataset and understand how to use it responsibly.",
+      "sourceId": "src-1",
+      "quoteSha256": "7d4b26bc170ade1d7178d026c24c2ab0dc9b41ffd3505e00d25610571c10abc4"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Hugging Face documentation lists CSV among the supported data formats.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/v1.16.0/upload_dataset.html",
+      "quote": "We currently support the following data formats: CSV, JSON, JSON lines, text, and Parquet.",
+      "sourceId": "src-4",
+      "quoteSha256": "9afa167d7469e6499bdcd52e1b1cf6b98be32d4219951951cde4dc488c9d7f06"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Hugging Face documentation states that text file extensions are not tracked by Git LFS by default and files greater than 10MB will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they’re greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-1",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Hugging Face documentation says uploads can be made from the Hub UI by selecting Add file, or from the terminal with hf upload.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Use the hf upload command to upload files to the Hub directly.",
+      "sourceId": "src-2",
+      "quoteSha256": "d66d2ce3d6083be1427b3b8d6bf3ee91915f0de20da1b18efb37414ec3316fe1"
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset 'GLB byte-layout fixtures: 4-byte alignment cases' exists at huggingface.co/datasets/hivepunk-1071-f79faf84.",
+      "check": "page",
+      "missing": "The live dataset page URL or the upload response from Hugging Face; no page read here shows it."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The contents, row count, column names and file size of data/data.csv.",
+      "check": "page",
+      "missing": "Reading the file itself, or the rendered dataset viewer on the live dataset page."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether the upload preserved data/data.csv and README.md byte-for-byte.",
+      "check": "page",
+      "missing": "Comparing the published files' hashes against the local ones; no page read shows either side."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The license and any declared limitations of the dataset.",
+      "check": "page",
+      "missing": "Reading the dataset card metadata on the live dataset page; the README.md contents were not shown in any page read."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the fixture bytes match any external GLB specification.",
+      "check": "page",
+      "missing": "A link to a specification plus a byte-level comparison; no such page was read here."
+    }
+  ],
+  "counts": {
+    "fact": 5,
+    "derived": 0,
+    "unknown": 5
+  },
+  "risks": [
+    "No page read confirms the upload happened, so the dataset may still be unpublished.",
+    "No page read shows the actual contents, row count or file size of data/data.csv, so the 'fixture bytes' claim is unverified from sources.",
+    "Hugging Face documentation warns that text file extensions like .csv are not tracked by Git LFS by default and files greater than 10MB will not be committed and uploaded (https://huggingface.co/docs/datasets/upload_dataset).",
+    "A byte-for-byte upload cannot be confirmed from the documentation pages read; only the upload mechanism is described.",
+    "The account's other listed dataset is about 'GLB pad-case publish targets and file layout', which is a different title, so that earlier dataset is not evidence for this one."
+  ],
+  "unknowns": [
+    "Whether the dataset 'GLB byte-layout fixtures: 4-byte alignment cases' exists at huggingface.co/datasets/hivepunk-1071-f79faf84.: The live dataset page URL or the upload response from Hugging Face; no page read here shows it.",
+    "The contents, row count, column names and file size of data/data.csv.: Reading the file itself, or the rendered dataset viewer on the live dataset page.",
+    "Whether the upload preserved data/data.csv and README.md byte-for-byte.: Comparing the published files' hashes against the local ones; no page read shows either side.",
+    "The license and any declared limitations of the dataset.: Reading the dataset card metadata on the live dataset page; the README.md contents were not shown in any page read.",
+    "Whether the fixture bytes match any external GLB specification.: A link to a specification plus a byte-level comparison; no such page was read here."
+  ],
+  "wouldChangeMind": [
+    "A live Hugging Face dataset page under hivepunk-1071-f79faf84 with this title, showing both files.",
+    "The actual contents and size of data/data.csv, confirming the fixture claim and the 10MB limit.",
+    "A license or dataset-card metadata field on the published dataset, which is currently unstated in everything read."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.590Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 149913,
+      "quote": "Adding a Dataset card is super valuable for helping users find your dataset and understand how to use it responsibly.",
+      "quoteSha256": "7d4b26bc170ade1d7178d026c24c2ab0dc9b41ffd3505e00d25610571c10abc4"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.554Z",
+      "extractor": "page-text-v1",
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 180083,
+      "quote": "Check your directory to ensure the only files you’re uploading are: The data files of the dataset The dataset card README.md",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Publishing Datasets on Hugging Face",
+      "url": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "finalUrl": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.712Z",
+      "extractor": "page-text-v1",
+      "sha256": "f53b623d29ac1b84bb445f990424c58b7944f0d305e6845ef1414a0f3c833fa2",
+      "bytes": 162277,
+      "quote": "This article organizes the process of publishing a dataset on Hugging Face, also serving as a personal memo for the author.",
+      "quoteSha256": "fdacbb1d4971ec2e1a3f2c12faff98c998c3d0a03f676cc06a34ecc1bb737ed4"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Upload a dataset to the Hub — datasets 1.16.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.16.0/upload_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.16.0/upload_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.491Z",
+      "extractor": "page-text-v1",
+      "sha256": "b1b14885a740bb388e7c8a23ff4c18a516bced779599c059268f503453ef20b9",
+      "bytes": 23576,
+      "quote": "We currently support the following data formats: CSV, JSON, JSON lines, text, and Parquet.",
+      "quoteSha256": "9afa167d7469e6499bdcd52e1b1cf6b98be32d4219951951cde4dc488c9d7f06"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.8.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.398Z",
+      "extractor": "page-text-v1",
+      "sha256": "049184f6d7059aec9171a819afb059ac405df0eb2b739ab3fac2303f2302f213",
+      "bytes": 58336,
+      "quote": "Docs &raquo; Sharing your dataset View page source Sharing your dataset ¶ Once you’ve written a new dataset loading script as detailed on the Writing a dataset loading script page, you may want to share it with the community for instance on the HuggingFace Hub .",
+      "quoteSha256": "3e8f7e0e8f2c580475c0cf27b5af94cd3d6551d8c6d74517a07ee6a5bffb28bc"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.4.1 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-16T06:13:47.423Z",
+      "extractor": "page-text-v1",
+      "sha256": "2f58c25f7a59b3bd1093189747af7a7446f8e4c24cced1a9588bd3afb62ec20b",
+      "bytes": 57326,
+      "quote": "Docs &raquo; Sharing your dataset View page source Sharing your dataset ¶ Once you’ve written a new dataset loading script as detailed on the Writing a dataset loading script page, you may want to share it with the community for instance on the HuggingFace Hub .",
+      "quoteSha256": "3e8f7e0e8f2c580475c0cf27b5af94cd3d6551d8c6d74517a07ee6a5bffb28bc"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-16-glb-byte-layout-fixtures-4-byte-alignment-cases.md",
+  "decidedBy": "bee"
+}
