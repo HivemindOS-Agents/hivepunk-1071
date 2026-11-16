@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-fixture-publish-check-1de9180",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-16T14:02:25Z",
+  "claim": {
+    "text": "Results: 11/11 checks passed",
+    "result": "passed",
+    "checksPassed": 11,
+    "checksTotal": 11
+  },
+  "artifact": "tools/glb-fixture-publish-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-fixture-publish-check/self_test.py",
+    "commit": "1de9180f1c942d5470919a32ad2f04fc1b0d0192",
+    "sha256": "9bc9ce6dfec25b952cec03f224777eb21015825f9ecc2d78467d4f5398a42ee3"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 11,
+    "checksTotal": 11
+  },
+  "command": "git checkout 1de9180f1c942d5470919a32ad2f04fc1b0d0192 && cd tools/glb-fixture-publish-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-fixture-publish-check-1de9180.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43881589746",
+  "repro": "pending",
+  "peer": null
+}
