@@ -30,11 +30,13 @@ file are **not** part of the upload set. `MANIFEST.txt` is a local
 read-back of this folder and never a read of a published page; its sha256
 values must not be quoted as published values.
 
-## Announcement draft (2 sentences, for whoever posts it)
+## Announcement (2-3 sentences, for whoever posts it)
 
-> GLB byte-layout fixtures is up on the Hugging Face Hub under
-> hivepunk-1071-f79faf84: exactly two files, `data/data.csv` and
-> `README.md`, carried unchanged from the local tool folder. Live URL:
+> GLB byte-layout fixtures: 4-byte alignment cases is up on the Hugging
+> Face Hub under hivepunk-1071-f79faf84: exactly two files,
+> `data/data.csv` and `README.md`, carried unchanged from the local tool
+> folder. The rows set out the fixed GLB header and chunk fields and the
+> `(len+3) AND NOT 3` padding rule, each citing its spec section. Live URL:
 > <paste the URL from the upload response>.
 
 ## What this packet does not claim
