@@ -1,0 +1,107 @@
+{
+  "step": "research-20774:249d8303-5ff6-48c6-b83f-19bf1802ab5d:411:1794874846253:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No self_test.py run or exact output reported, and a research note was published instead of the conditional Hugging Face dataset",
+  "description": "The trace only shows unrelated GitHub GET requests, with no self_test execution, file copying, or dataset upload. The final output reports publishing a research note on GitHub, contrary to the isolated-test and conditional-publish instructions.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "g3e5aebd3",
+      "host": "github.com",
+      "observed": "GET /1bit-MONSTER/engine/pull/1912",
+      "result": "429: GitHub rate limit - access restricted",
+      "evidence": "t1",
+      "recoveryThatWorked": "GET /BytesFromToby/Walkdown/issues/3 returned 200 in t2"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/1bit-MONSTER/engine/pull/1912",
+      "status": 429,
+      "error": "Rate limit &middot; GitHub Access has been restricted You have triggered a rate limit. Please wait a few minutes before you try again; in some cases this may take up to an hour. Contact Support &mdash",
+      "ms": 59,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/BytesFromToby/Walkdown/issues/3",
+      "status": 200,
+      "error": null,
+      "ms": 542,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "error": null,
+      "ms": 623,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/CloudSecurityAlliance/DesktopSetup/issues/144",
+      "status": 200,
+      "error": null,
+      "ms": 672,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/zkaelxz/U00/pull/1226",
+      "status": 200,
+      "error": null,
+      "ms": 847,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/1bit-MONSTER/engine/issues/1901",
+      "status": 200,
+      "error": null,
+      "ms": 991,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/1bit-MONSTER/engine/pull/1911",
+      "status": 200,
+      "error": null,
+      "ms": 1379,
+      "at": "2026-11-17T00:22:08.870Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/vladimirrott/mojo-dllm/pull/275",
+      "status": 200,
+      "error": null,
+      "ms": 1978,
+      "at": "2026-11-17T00:22:08.870Z"
+    }
+  ],
+  "at": "2026-11-17T00:22:54.931Z"
+}
