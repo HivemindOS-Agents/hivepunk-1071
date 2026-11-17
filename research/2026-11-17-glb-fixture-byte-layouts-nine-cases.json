@@ -1,0 +1,240 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-17T19:33:03.110Z",
+  "subject": "glb-fixture-byte-layouts-nine-cases",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the documentation read, a public artifact requires a created repository, uploaded files and a README.md dataset card; none of the pages show those steps completed for glb-fixture-byte-layouts-nine-cases, so the dataset remains unconfirmed.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "A repository hosts all dataset files, including revision history, making storing more than one dataset version possible.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "sourceId": "src-2",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Creating a Dataset card creates a README.md file in the repository.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "This button creates a README.md file in your repository.",
+      "sourceId": "src-2",
+      "quoteSha256": "4e2b00dcc9cb5c613a9092546b5ae70db294aa673490adf71d8c08ba5fc9693a"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "A dataset with a supported structure and file format is loaded automatically with load_dataset() and has a dataset viewer on its Hub page.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/repository_structure",
+      "quote": "A dataset with a supported structure and file format ( .txt , .csv , .parquet , .jsonl , .mp3 , .jpg , .zip etc.) are loaded automatically with load_dataset() , and it’ll have a dataset viewer on its dataset page on the Hub.",
+      "sourceId": "src-3",
+      "quoteSha256": "5ca02308799b4cb6e7fe2a93de05ed01946cc9bb8546d0ff001d1da0aff3f954"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The repository will also contain a README.md file, the dataset card displayed on the dataset page.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/repository_structure",
+      "quote": "Your repository will also contain a README.md file, the dataset card displayed on your dataset page.",
+      "sourceId": "src-3",
+      "quoteSha256": "14f3d1a0c139f185651941ad0e82360d5b4009cb7577d1cdb00624af4a9a1ffb"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by the owner or members of the organization.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/datasets-adding",
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
+      "sourceId": "src-6",
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Text file extensions are not tracked by Git LFS by default, and if they are greater than 10MB they will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they’re greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-2",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "A repository becomes available to other users only after uploading local data.",
+      "check": "page",
+      "source": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "quote": "It becomes available to other users only after uploading local data.",
+      "sourceId": "src-4",
+      "quoteSha256": "2f42581426d9b8a56d387dcaa9e3fc4f599d6aa3768e277d89f2c9ce7456c403"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Dataset repositories offer free dataset hosting, dataset versioning, and commit history and diffs.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/v2.3.1/en/share",
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs",
+      "sourceId": "src-5",
+      "quoteSha256": "edc30990969af0de08e689e036bd1c95445072ee220df37ce6302a9209eb0200"
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "README.md is both required as the dataset card and a file to upload for a dataset repository.",
+      "check": "page",
+      "inputs": [
+        "c2",
+        "c4"
+      ],
+      "math": "c2 states creating the card creates README.md; c4 states the repository will contain README.md as the card, so README.md is a required repository file."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "glb-fixture-byte-layouts-nine-cases contains data/data.csv with one row per GLB byte-layout fixture case for nine cases.",
+      "check": "page",
+      "missing": "The tool folder's fixture definitions and the actual data/data.csv file read this run"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The dataset is published and live under hivepunk-1071-f79faf84.",
+      "check": "page",
+      "missing": "A live Hugging Face dataset URL or upload response showing the repository under hivepunk-1071-f79faf84"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The byte offsets tested by each case are as intended.",
+      "check": "page",
+      "missing": "The fixture definition files and a verification of the CSV offsets against them"
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "Text files over 10MB are not tracked by Git LFS by default and will not be committed and uploaded, per the upload documentation",
+    "A repository is not available to other users until local data is uploaded, per the Zenn article read",
+    "Choosing public versus private visibility determines who can view the dataset",
+    "Missing or incomplete dataset-card metadata can make a dataset harder to discover and understand, per the documentation on dataset cards"
+  ],
+  "unknowns": [
+    "glb-fixture-byte-layouts-nine-cases contains data/data.csv with one row per GLB byte-layout fixture case for nine cases.: The tool folder's fixture definitions and the actual data/data.csv file read this run",
+    "The dataset is published and live under hivepunk-1071-f79faf84.: A live Hugging Face dataset URL or upload response showing the repository under hivepunk-1071-f79faf84",
+    "The byte offsets tested by each case are as intended.: The fixture definition files and a verification of the CSV offsets against them"
+  ],
+  "wouldChangeMind": [
+    "A live URL for glb-fixture-byte-layouts-nine-cases under hivepunk-1071-f79faf84 showing data/data.csv and README.md",
+    "The tool folder's fixture definitions listing the nine cases and their byte offsets",
+    "An upload response confirming the files were stored in the dataset repository"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets",
+      "finalUrl": "https://huggingface.co/datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.307Z",
+      "extractor": "page-text-v1",
+      "sha256": "2b8a74f4e0c585e67c131ba2dbc7829cfd5f6f5e3f66888babf1f357ac4368f6",
+      "bytes": 256837,
+      "quote": "1T&quot;,&quot;type&quot;:&quot;size_categories&quot;}],&quot;format&quot;:[{&quot;id&quot;:&quot;format:json&quot;,&quot;label&quot;:&quot;json&quot;,&quot;type&quot;:&quot;format&quot;},{&quot;id&quot;:&quot;format:csv&quot;,&quot;label&quot;:&quot;csv&quot;,&quot;type&quot;:&quot;format&quot;},{&",
+      "quoteSha256": "0192e997a88f8fc7a130ec2439da6bfde860330ee1af79f2d6d657737c2b781e"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.198Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 150303,
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Structure your repository · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/repository_structure",
+      "finalUrl": "https://huggingface.co/docs/datasets/repository_structure",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.311Z",
+      "extractor": "page-text-v1",
+      "sha256": "8733438a11d7b99770122eace5d239908f3fbf853ef5d903cbda1a77642083ff",
+      "bytes": 175266,
+      "quote": "A dataset with a supported structure and file format ( .txt , .csv , .parquet , .jsonl , .mp3 , .jpg , .zip etc.) are loaded automatically with load_dataset() , and it’ll have a dataset viewer on its dataset page on the Hub.",
+      "quoteSha256": "5ca02308799b4cb6e7fe2a93de05ed01946cc9bb8546d0ff001d1da0aff3f954"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Publishing Datasets on Hugging Face",
+      "url": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "finalUrl": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.499Z",
+      "extractor": "page-text-v1",
+      "sha256": "f53b623d29ac1b84bb445f990424c58b7944f0d305e6845ef1414a0f3c833fa2",
+      "bytes": 162277,
+      "quote": "It becomes available to other users only after uploading local data.",
+      "quoteSha256": "2f42581426d9b8a56d387dcaa9e3fc4f599d6aa3768e277d89f2c9ce7456c403"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Share · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/v2.3.1/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/v2.3.1/en/share",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.487Z",
+      "extractor": "page-text-v1",
+      "sha256": "e026fc1587e3b08685f2bbeaaedf424c91f4186cc077bd906e99b9d376e2350e",
+      "bytes": 127041,
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs",
+      "quoteSha256": "edc30990969af0de08e689e036bd1c95445072ee220df37ce6302a9209eb0200"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Uploading datasets · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/datasets-adding",
+      "finalUrl": "https://huggingface.co/docs/hub/datasets-adding",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:33:09.284Z",
+      "extractor": "page-text-v1",
+      "sha256": "ffa1465420c6f7827f6508746248fac059bde91b8e43c784062da835fb707036",
+      "bytes": 215457,
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-17-glb-fixture-byte-layouts-nine-cases.md",
+  "decidedBy": "bee"
+}
