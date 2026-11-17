@@ -1,0 +1,115 @@
+{
+  "step": "research-20774:249d8303-5ff6-48c6-b83f-19bf1802ab5d:429:1794943920572:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No Hugging Face dataset was uploaded; the agent only fetched documentation and returned a GitHub research note instead of the required dataset URL, data/data.csv, and README.md.",
+  "description": "The trace shows only documentation GET requests and no upload to huggingface.co, and the final output gives a github.com research-note link rather than the live Hugging Face dataset URL required by the task.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "g14080719",
+      "host": "huggingface.co",
+      "observed": "GET /docs/hub/en/datasets-upload-guide-llm",
+      "result": "429",
+      "evidence": "t1",
+      "recoveryThatWorked": "Later GET /docs/datasets/en/upload_dataset to huggingface.co returned 200 in t3"
+    },
+    {
+      "id": "gc3c7b982",
+      "host": "huggingface.co",
+      "observed": "GET /docs/datasets/en/share",
+      "result": "429",
+      "evidence": "t2",
+      "recoveryThatWorked": "Later GET /docs/datasets/en/upload_dataset to huggingface.co returned 200 in t3"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-upload-guide-llm",
+      "status": 429,
+      "error": "const guestTheme = document.cookie.match(/theme=(\\w+)/)?.[1]; document.documentElement.classList.toggle('dark', guestTheme === 'dark' || ( (!guestTheme || guestTheme === 'system') && window.matchMedia",
+      "ms": 39,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/share",
+      "status": 429,
+      "error": "const guestTheme = document.cookie.match(/theme=(\\w+)/)?.[1]; document.documentElement.classList.toggle('dark', guestTheme === 'dark' || ( (!guestTheme || guestTheme === 'system') && window.matchMedia",
+      "ms": 39,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "error": null,
+      "ms": 137,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/datasets-adding",
+      "status": 200,
+      "error": null,
+      "ms": 224,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 246,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/repository_structure",
+      "status": 200,
+      "error": null,
+      "ms": 251,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "status": 200,
+      "error": null,
+      "ms": 332,
+      "at": "2026-11-17T19:33:09.060Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v2.3.1/en/share",
+      "status": 200,
+      "error": null,
+      "ms": 427,
+      "at": "2026-11-17T19:33:09.060Z"
+    }
+  ],
+  "at": "2026-11-17T19:33:36.134Z"
+}
