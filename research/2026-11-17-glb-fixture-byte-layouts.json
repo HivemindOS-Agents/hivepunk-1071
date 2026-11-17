@@ -1,0 +1,251 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-17T00:22:02.737Z",
+  "subject": "glb-fixture-byte-layouts",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages alone, an unrun or fixture-sensitive self-test is not proof a tool works, so the isolated run's verbatim output is the decisive evidence. Because no page shows that output for glb-fixture-byte-layouts, the thesis remains unconfirmed for this specific folder.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "zkaelxz/U00 has 50 raw commits in the last 30 days, 48 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-18T00:22:10.866Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 90f0579, on 2026-11-17.",
+      "check": "shipping",
+      "source": "https://github.com/zkaelxz/U00/commit/90f057956d93afcfb03692d158266c089a3aa4d6"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The #1824 sweep is specific to tests/*.sh, so the same defect in tools/*.py was invisible.",
+      "check": "page",
+      "source": "https://github.com/1bit-MONSTER/engine/pull/1911",
+      "quote": "The #1824 sweep is specific to tests/*.sh , so the same defect in tools/*.py was invisible",
+      "sourceId": "src-2",
+      "quoteSha256": "29a19be5ac1c73241d8ce9b664bd0c29db1d0bfd3f25c4a56ced3fabea5870a1"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Under a runner-only definition, 5 tools were unregistered: batched_repeat, logprob_agree, mtp_head_ref, spec_decode_acceptance and whisper_encoder_baseline.",
+      "check": "page",
+      "source": "https://github.com/1bit-MONSTER/engine/pull/1911",
+      "quote": "5 unregistered tools/batched_repeat.py tools/logprob_agree.py tools/mtp_head_ref.py tools/spec_decode_acceptance.py tools/whisper_encoder_baseline.py",
+      "sourceId": "src-2",
+      "quoteSha256": "d498d046117bc99bcd1317b0994dbc4708d292432c9319afcdcc37df9ab3f2d5"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "zkaelxz/U00 has 50 raw commits in the last 30 days, 48 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-18T00:22:10.866Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Its latest real commit is 90f0579, on 2026-11-17.",
+      "check": "page",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-18T00:22:10.866Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "python -m compileall compiles .py files inside Fixtures/ too, which can add __pycache__ files to fixture hashes.",
+      "check": "page",
+      "source": "https://github.com/BytesFromToby/Walkdown/issues/3",
+      "quote": "A plain python -m compileall <src> compiles the .py files inside Fixtures/ too",
+      "sourceId": "src-4",
+      "quoteSha256": "4fd73d84ec8365ddaf59bfac9b00c5a68053f4f139570acb8b13cfc6b2a4c9c8"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The Walkdown grader reported SETUP ERROR and exited 4 after compileall.",
+      "check": "page",
+      "source": "https://github.com/BytesFromToby/Walkdown/issues/3",
+      "quote": "python grader/grader.py all # exit 4: 01-inventory, 04-phrases, 05-capability SETUP ERROR",
+      "sourceId": "src-4",
+      "quoteSha256": "d0637ceefc33e8ca9835f0ac1018f2bf0df611528a23bf7bcb8cad4682c0bd62"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "A tool that ships a --self-test is claiming it can be verified without its real inputs.",
+      "check": "page",
+      "source": "https://github.com/1bit-MONSTER/engine/issues/1901",
+      "quote": "A tool that ships a --self-test is claiming it can be verified without its real inputs.",
+      "sourceId": "src-6",
+      "quoteSha256": "3cfb2224dd0bde9fee06e5022acc03a57073a7bb148baebd8c0984c7fa95e03a"
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "The honest unregistered count depends on the definition: 2 by any mention, 5 by runner-only.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c2"
+      ],
+      "math": "PR 1911 states 2 unregistered by any mention and 5 only by a runner that can run it; 5 - 2 = 3 additional tools are cited but not run."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether tools/glb-fixture-byte-layouts/self_test.py passes in an isolated run, and its exact output.",
+      "check": "page",
+      "missing": "A page showing the isolated run of that folder's self_test.py with its exact output"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether a Hugging Face dataset for glb-fixture-byte-layouts exists, its URL, status line or served files.",
+      "check": "page",
+      "missing": "A live Hugging Face dataset page for glb-fixture-byte-layouts read verbatim"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "What glb-fixture-byte-layouts contains and how it works.",
+      "check": "page",
+      "missing": "A page describing the folder's files and purpose"
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "A tool declaring a self-test that no runner names is maintained beside the logic and never executed, per the engine pages.",
+    "Fixture hashes that include __pycache__ can make a byte-compiled install fail its own self-test even when the engine is unchanged.",
+    "A check that cannot fail can pass silently, as described for checkers without self-tests in the DesktopSetup issue.",
+    "No page confirms the exact output of running this folder's self_test.py in isolation, so the named failing check cannot be verified from these pages.",
+    "No page confirms whether any Hugging Face dataset for this folder exists or what files it serves."
+  ],
+  "unknowns": [
+    "Whether tools/glb-fixture-byte-layouts/self_test.py passes in an isolated run, and its exact output.: A page showing the isolated run of that folder's self_test.py with its exact output",
+    "Whether a Hugging Face dataset for glb-fixture-byte-layouts exists, its URL, status line or served files.: A live Hugging Face dataset page for glb-fixture-byte-layouts read verbatim",
+    "What glb-fixture-byte-layouts contains and how it works.: A page describing the folder's files and purpose"
+  ],
+  "wouldChangeMind": [
+    "A page showing the exact isolated self_test.py output for tools/glb-fixture-byte-layouts",
+    "A live Hugging Face page for the dataset with its status line and served file list",
+    "A source describing the folder's contents and the named failing check"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "W-SELF-TEST: python -m tools.self_test (one-run hardware checks) by zkaelxz · Pull Request #1226 · zkaelxz/U00 · GitHub",
+      "url": "https://github.com/zkaelxz/U00/pull/1226",
+      "finalUrl": "https://github.com/zkaelxz/U00/pull/1226",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:09.749Z",
+      "extractor": "page-text-v1",
+      "sha256": "c96c3c528a7d027ab6b662028710f3b1fc7dc1da749f93abeba2e4f002c368df",
+      "bytes": 270956,
+      "quote": "Every line goes through redact_for_support (which uses redact_secrets ), and URLs and paths are replaced with [URL] and [path] .",
+      "quoteSha256": "65adc9e6ecdfc53e0bad89110c6346601aec180654ffaa6693c00decddaff682"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "ci: a tools/*.py that declares a self-test and no runner names is now a failing row (engine#1901) by bong-water-water-bong · Pull Request #1",
+      "url": "https://github.com/1bit-MONSTER/engine/pull/1911",
+      "finalUrl": "https://github.com/1bit-MONSTER/engine/pull/1911",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:10.292Z",
+      "extractor": "page-text-v1",
+      "sha256": "9ea504ec2bd298ba3084e3e897037a2a7c169a1dd1ce59171be3bd75b4c5df8f",
+      "bytes": 497339,
+      "quote": "The #1824 sweep is specific to tests/*.sh , so the same defect in tools/*.py was invisible",
+      "quoteSha256": "29a19be5ac1c73241d8ce9b664bd0c29db1d0bfd3f25c4a56ced3fabea5870a1"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:09.517Z",
+      "extractor": "page-text-v1",
+      "sha256": "597b9b9bfd0b6dfa215a6e3514a10ddc786978a298618981864bce52a623825f",
+      "bytes": 225278,
+      "quote": "You switched accounts on another tab or window.",
+      "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "grader: fixture hashes include __pycache__, so a byte-compiled install fails its own self-test · Issue #3 · BytesFromToby/Walkdown · GitHub",
+      "url": "https://github.com/BytesFromToby/Walkdown/issues/3",
+      "finalUrl": "https://github.com/BytesFromToby/Walkdown/issues/3",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:09.443Z",
+      "extractor": "page-text-v1",
+      "sha256": "8ce537d3c1adf1b8ed36840e59079f907add7b58ef5d810374e0b8be8a08f2e8",
+      "bytes": 191504,
+      "quote": "A plain python -m compileall <src> compiles the .py files inside Fixtures/ too",
+      "quoteSha256": "4fd73d84ec8365ddaf59bfac9b00c5a68053f4f139570acb8b13cfc6b2a4c9c8"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Two of eleven checkers carry no self-test, and one of them is doing real work · Issue #144 · CloudSecurityAlliance/DesktopSetup · GitHub",
+      "url": "https://github.com/CloudSecurityAlliance/DesktopSetup/issues/144",
+      "finalUrl": "https://github.com/CloudSecurityAlliance/DesktopSetup/issues/144",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:09.581Z",
+      "extractor": "page-text-v1",
+      "sha256": "e3e426d70019fe8db8d6681ebb848585d8bcdc733fe1477fe2682e1cb60b6969",
+      "bytes": 238058,
+      "quote": "check-powershell-native.py self-tests before it reports, because two separate bugs — a \\w* that swallowed command names, and a six-line try { window that exempted exactly the region where the wrappers live — each turned it into a check that printed \"all native calls are guarded\" no matter what.",
+      "quoteSha256": "da8838a220d49473e50f4a18bee705c6fa42cd2d8fcc00fea8cf256831c976ee"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "tools: a tools/*.py that declares a --self-test and is registered nowhere is invisible to the #1824 sweep (2 files today) · Issue #1901 · 1b",
+      "url": "https://github.com/1bit-MONSTER/engine/issues/1901",
+      "finalUrl": "https://github.com/1bit-MONSTER/engine/issues/1901",
+      "status": 200,
+      "fetchedAt": "2026-11-17T00:22:09.862Z",
+      "extractor": "page-text-v1",
+      "sha256": "bebc88b65489d29581f7a2bcef96bbd7e8b45d8a096e731742ed2c3a525bffb1",
+      "bytes": 428329,
+      "quote": "A tool that ships a --self-test is claiming it can be verified without its real inputs.",
+      "quoteSha256": "3cfb2224dd0bde9fee06e5022acc03a57073a7bb148baebd8c0984c7fa95e03a"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of zkaelxz/U00",
+      "url": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-18T00:22:10.866Z",
+      "fetchedAt": "2026-11-17T00:22:02.737Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "77b8cc7c7724d87e9a3ed671d76a15cc2d877ea9495130f6cd3131103c981eda"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-17-glb-fixture-byte-layouts.md",
+  "decidedBy": "bee"
+}
