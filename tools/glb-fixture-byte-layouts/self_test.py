@@ -61,96 +61,64 @@ def build_two_entry_fixture(root):
 
 
 def main():
-    # --- the real folder in this checkout ---
     mine = pm.collect(HERE)
-    check(all(e[2] is not None for e in mine),
-          "every upload-set source in this folder exists on disk")
-    check(any(s == "README.md" for s, _, _, _ in mine),
-          "this folder's upload set carries README.md")
-    check(any(s.startswith("data/") for s, _, _, _ in mine),
-          "this folder's upload set carries at least one data/ file")
+    check(all(e[2] is not None for e in mine), "every upload-set source in this folder exists on disk")
+    check(any(s == "README.md" for s, _, _, _ in mine), "this folder's upload set carries README.md")
+    check(any(s.startswith("data/") for s, _, _, _ in mine), "this folder's upload set carries at least one data/ file")
     check(len(mine) >= 2, "this folder has the data/ file plus README.md")
     check(pm.check_two_entries(mine) is True, "this folder's upload set is valid")
-    check(all(s.startswith("data/") or s == "README.md" for s, _, _, _ in mine),
-          "nothing outside data/... plus README.md is in this folder's set")
-
-    # --- regression: the exact 2-entry publish set (named failing case) ---
+    check(all(s.startswith("data/") or s == "README.md" for s, _, _, _ in mine), "nothing outside data/... plus README.md is in this folder's set")
     two_root = build_two_entry_fixture(tempfile.mkdtemp(prefix="glb-fixture-two-"))
     two = pm.collect(two_root)
     check(len(two) == 2, "exact 2-entry fixture has exactly 2 entries")
     check(pm.check_two_entries(two) is True, "exact 2-entry fixture is valid")
-    check(sorted(d for _, d, _, _ in two) == ["README.md", "data/data.csv"],
-          "exact 2-entry fixture keeps data/data.csv and README.md names")
-
+    check(sorted(d for _, d, _, _ in two) == ["README.md", "data/data.csv"], "exact 2-entry fixture keeps data/data.csv and README.md names")
     tmpd = tempfile.mkdtemp(prefix="glb-fixture-self-test-")
     root = build_fixture(tmpd)
-
     entries = pm.collect(root)
     check(len(entries) == 3, "fixture upload set is exactly 3 files")
     check(pm.check_two_entries(entries) is True, "fixture upload set is valid")
-
     dests = sorted(d for _, d, _, _ in entries)
-    check(dests == ["README.md", "data/a.csv", "data/b.csv"],
-          "destinations keep the data/ tree and README.md name")
-
-    want = {
-        "data/a.csv": (len(CSV_A.encode()), hashlib.sha256(CSV_A.encode()).hexdigest()),
-        "data/b.csv": (len(CSV_B.encode()), hashlib.sha256(CSV_B.encode()).hexdigest()),
-        "README.md": (len(CARD.encode()), hashlib.sha256(CARD.encode()).hexdigest()),
-    }
+    check(dests == ["README.md", "data/a.csv", "data/b.csv"], "destinations keep the data/ tree and README.md name")
+    want = {"data/a.csv": (len(CSV_A.encode()), hashlib.sha256(CSV_A.encode()).hexdigest()), "data/b.csv": (len(CSV_B.encode()), hashlib.sha256(CSV_B.encode()).hexdigest()), "README.md": (len(CARD.encode()), hashlib.sha256(CARD.encode()).hexdigest())}
     for source, dest, size, digest in entries:
         exp = want[source]
         check(size == exp[0], "size read for %s" % source)
         check(digest == exp[1], "sha256 read for %s" % source)
-
     before = [e for e in entries if e[0] == "data/a.csv"][0]
     changed = root / "data" / "a.csv"
     changed.write_text(CSV_A_LONG, encoding="utf-8")
     after = [e for e in pm.collect(root) if e[0] == "data/a.csv"][0]
     check(after[3] != before[3], "a changed byte changes the sha256")
     check(after[2] != before[2], "a longer change changes the byte count")
-    check(after[2] == len(CSV_A_LONG.encode()),
-          "byte count equals the length of the bytes on disk")
-
+    check(after[2] == len(CSV_A_LONG.encode()), "byte count equals the length of the bytes on disk")
     changed.write_text(CSV_A.replace("a,b", "a,c"), encoding="utf-8")
     same_len = [e for e in pm.collect(root) if e[0] == "data/a.csv"][0]
     check(same_len[3] != before[3], "same-length change still changes the sha256")
-    check(same_len[2] == before[2],
-          "same-length change keeps the byte count (correct, not a bug)")
-
+    check(same_len[2] == before[2], "same-length change keeps the byte count (correct, not a bug)")
     manifest = pm.manifest_text(pm.collect(root))
-    check("README.md" in manifest and "data/a.csv" in manifest,
-          "manifest names both upload entries")
-    check("self_test.py" not in manifest,
-          "manifest does not list the test file")
-    check("https://" not in manifest and "huggingface" not in manifest,
-          "manifest states no URL and no host")
-
+    check("README.md" in manifest and "data/a.csv" in manifest, "manifest names both upload entries")
+    check("self_test.py" not in manifest, "manifest does not list the test file")
+    check("https://" not in manifest and "huggingface" not in manifest, "manifest states no URL and no host")
     raised = False
     try:
         pm._safe_child(root, "../secret.txt")
     except ValueError:
         raised = True
     check(raised, "traversal path is refused")
-
     raised = False
     try:
         pm._safe_child(root, "/etc/passwd")
     except ValueError:
         raised = True
     check(raised, "absolute path is refused")
-
     (root / "data" / "extra.csv").write_text("x,y\n", encoding="utf-8")
     extra = pm.collect(root)
     check(len(extra) == 4, "an added data/ file appears as an extra entry")
-    check(pm.check_two_entries(extra) is True,
-          "an extra data/ file is still an upload-set path")
-
+    check(pm.check_two_entries(extra) is True, "an extra data/ file is still an upload-set path")
     (root / "stray.txt").write_text("x\n", encoding="utf-8")
     stray_manifest = pm.manifest_text(pm.collect(root))
-    check("stray.txt" not in stray_manifest,
-          "a file outside the two sources is not uploaded")
-
+    check("stray.txt" not in stray_manifest, "a file outside the two sources is not uploaded")
     empty = Path(tempfile.mkdtemp(prefix="glb-fixture-empty-"))
     raised = False
     try:
@@ -158,7 +126,6 @@ def main():
     except ValueError:
         raised = True
     check(raised, "an empty folder fails the upload-set check")
-
     missing_card = Path(tempfile.mkdtemp(prefix="glb-fixture-missing-"))
     (missing_card / "data").mkdir()
     (missing_card / "data" / "a.csv").write_text(CSV_A, encoding="utf-8")
@@ -168,7 +135,6 @@ def main():
     except ValueError:
         raised = True
     check(raised, "a folder with no README.md fails the upload-set check")
-
     missing_data = Path(tempfile.mkdtemp(prefix="glb-fixture-nodata-"))
     (missing_data / "README.md").write_text(CARD, encoding="utf-8")
     raised = False
@@ -177,38 +143,21 @@ def main():
     except ValueError:
         raised = True
     check(raised, "a folder with no data/ file fails the upload-set check")
-
-    # --- announce.py: exact two-file announcement from an upload response ---
-    good_response = {
-        "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-byte-layout-fixtures",
-        "files": ["data/data.csv", "README.md"],
-    }
+    good_response = {"url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-byte-layout-fixtures", "files": ["data/data.csv", "README.md"]}
     text = announce.announcement_text(good_response)
     check(good_response["url"] in text, "announce: carries the live URL from the response")
-    check("data/data.csv" in text and "README.md" in text,
-          "announce: carries both file names")
-    check(announce.check_response(good_response) is True,
-          "announce: exact 2-file response is valid")
-    check(announce.check_response({"url": good_response["url"], "files": ["README.md", "data/data.csv"]}) is True,
-          "announce: file order does not matter, set must be exact")
+    check("data/data.csv" in text and "README.md" in text, "announce: carries both file names")
+    check(announce.check_response(good_response) is True, "announce: exact 2-file response is valid")
+    check(announce.check_response({"url": good_response["url"], "files": ["README.md", "data/data.csv"]}) is True, "announce: file order does not matter, set must be exact")
     resp_file = Path(tempfile.mkdtemp(prefix="glb-announce-")) / "response.json"
     resp_file.write_text(json.dumps(good_response), encoding="utf-8")
-    check(announce.load_response(str(resp_file))["url"] == good_response["url"],
-          "announce: loads response JSON from a file")
-    for bad, label in [
-        ({"url": good_response["url"], "files": ["README.md"]}, "announce: one-file response is refused"),
-        ({"url": good_response["url"], "files": ["data/data.csv", "README.md", "extra.txt"]}, "announce: three-file response is refused"),
-        ({"url": good_response["url"], "files": ["data/data.csv", "data/other.csv"]}, "announce: renamed file response is refused"),
-        ({"url": "https://huggingface.co/datasets/other-account/x", "files": ["data/data.csv", "README.md"]}, "announce: wrong-account URL is refused"),
-        ({"files": ["data/data.csv", "README.md"]}, "announce: missing URL is refused"),
-        ({"url": "http://huggingface.co/datasets/hivepunk-1071-f79faf84/x", "files": ["data/data.csv", "README.md"]}, "announce: non-https URL is refused"),
-    ]:
+    check(announce.load_response(str(resp_file))["url"] == good_response["url"], "announce: loads response JSON from a file")
+    for bad, label in [({"url": good_response["url"], "files": ["README.md"]}, "announce: one-file response is refused"), ({"url": good_response["url"], "files": ["data/data.csv", "README.md", "extra.txt"]}, "announce: three-file response is refused"), ({"url": good_response["url"], "files": ["data/data.csv", "data/other.csv"]}, "announce: renamed file response is refused"), ({"url": "https://huggingface.co/datasets/other-account/x", "files": ["data/data.csv", "README.md"]}, "announce: wrong-account URL is refused"), ({"files": ["data/data.csv", "README.md"]}, "announce: missing URL is refused"), ({"url": "http://huggingface.co/datasets/hivepunk-1071-f79faf84/x", "files": ["data/data.csv", "README.md"]}, "announce: non-https URL is refused")]:
         try:
             announce.check_response(bad)
             check(False, label)
         except ValueError as exc:
             check("announce:" in str(exc), label)
-
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
 
