@@ -5,8 +5,8 @@ Account: hivepunk-1071-f79faf84
 
 ## Live dataset URL
 
-NOT CONFIRMED in this step. No upload was run here and no live URL
-was returned to this step, so no URL is stated.
+NOT CONFIRMED. No upload was run in this step and no live URL was
+returned, so no URL is stated.
 
 Expected form once the platform publish play returns it:
 https://huggingface.co/datasets/hivepunk-1071-f79faf84/<slug>
@@ -23,25 +23,41 @@ required set; it is not a read-back from a published page.
 
 ## Self-test output (verbatim)
 
-NOT CAPTURED in this step. This step did not run
-`python3 self_test.py` from inside tools/glb-fixture-byte-layouts,
-so no stdout is quoted here. Paste the verbatim stdout from
-the run that actually executes it, without editing.
+Verbatim stdout from the latest runner run on record for this tool
+in the tool listing (self-test run
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44062997456 ,
+ranAt 2026-11-17 10:14 UTC, state passed):
 
-Latest runner result on record before this step (from the tool
-listing, not re-run here): 57/57 checks passed, self-test run
-https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44035429150
+~~~
+ok: announce: one-file response is refused
+ok: announce: three-file response is refused
+ok: announce: renamed file response is refused
+ok: announce: wrong-account URL is refused
+ok: announce: missing URL is refused
+ok: announce: non-https URL is refused
+Results: 57/57 checks passed
+~~~
+
+That block is the verbatim tail returned by the runner in the tool
+listing for this step; the full stdout is held by that runner run
+linked above. No assertion failed in that run, so no fix was made
+in this step and self_test.py, publish_manifest.py and announce.py
+are carried unchanged.
 
 ## Work note
 
-Earlier work: publish_manifest.py with tested write_manifest(),
-announce.py for the discussion announcement, and research notes
-on GLB byte-layout fixtures. This record links the tool folder
-(tools/glb-fixture-byte-layouts) and leaves the live URL and the
-verbatim self-test capture to the publish run that produces them.
+This step: recorded the verbatim passing self-test output above into
+this file (tools/glb-fixture-byte-layouts/ARTIFACTS.md) under the
+glb-fixture-byte-layouts target, clearing the NOT CAPTURED marker for
+the self-test only, and linked this file and the run
+(https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44062997456)
+here. Earlier work: publish_manifest.py with tested write_manifest(),
+announce.py for the discussion announcement, and research notes on
+GLB byte-layout fixtures.
 
 ## Not checked
 
 - Live Hugging Face dataset URL, published file list, revision id.
 - Published sha256 values for either file.
-- Fresh self-test stdout captured in this step.
+- A fresh local run of self_test.py in this step; the output above
+  is the runner output on record in the tool listing.
