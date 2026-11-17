@@ -2,12 +2,18 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **does not count** (it exited 0 without importing or starting any of the tool's own code)
-- Ran: 2026-11-17T03:17:24Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44009117169
+- Result: **passed**
+- Ran: 2026-11-17T03:49:46Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44012872339
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.
+ok: announce: one-file response is refused
+ok: announce: three-file response is refused
+ok: announce: renamed file response is refused
+ok: announce: wrong-account URL is refused
+ok: announce: missing URL is refused
+ok: announce: non-https URL is refused
+Results: 52/52 checks passed
 ~~~
