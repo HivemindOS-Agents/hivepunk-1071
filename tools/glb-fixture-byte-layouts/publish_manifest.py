@@ -82,6 +82,14 @@ def check_two_entries(entries):
     if not any(s.startswith("data/") for s, _, _, _ in entries):
         raise ValueError("data/ is missing from the upload set")
     return True
+def write_manifest(root=None, target=None):
+    root = Path(root) if root is not None else HERE
+    target = Path(target) if target is not None else (root / "MANIFEST.txt")
+    entries = collect(root)
+    check_two_entries(entries)
+    text = manifest_text(entries)
+    Path(target).write_text(text, encoding="utf-8")
+    return text
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
     if argv and argv[0] in ("-h", "--help"):
@@ -105,7 +113,7 @@ def main(argv=None):
         return 0
     target = HERE / "MANIFEST.txt"
     if mode == "write":
-        target.write_text(text, encoding="utf-8")
+        write_manifest(HERE, target)
         print("wrote %s" % target)
         return 0
     if not target.exists():
