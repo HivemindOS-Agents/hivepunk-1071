@@ -64,6 +64,17 @@ def main():
     check(len(two) == 2, "exact 2-entry fixture has exactly 2 entries")
     check(pm.check_two_entries(two) is True, "exact 2-entry fixture is valid")
     check(sorted(d for _, d, _, _ in two) == ["README.md", "data/data.csv"], "exact 2-entry fixture keeps data/data.csv and README.md names")
+    written = pm.write_manifest(two_root)
+    check((two_root / "MANIFEST.txt").read_text(encoding="utf-8") == written, "write_manifest: written file equals the returned text byte for byte")
+    check(written == pm.manifest_text(pm.collect(two_root)), "write_manifest: returned text equals manifest_text of a fresh collect")
+    check("data/data.csv" in written and "README.md" in written, "write_manifest: output names both entries")
+    check(written.endswith("\n") and "https://" not in written, "write_manifest: output ends with newline and states no URL")
+    raised = False
+    try:
+        pm.write_manifest(Path(tempfile.mkdtemp(prefix="glb-fixture-empty-write-")))
+    except ValueError:
+        raised = True
+    check(raised, "write_manifest: refuses an empty folder")
     tmpd = tempfile.mkdtemp(prefix="glb-fixture-self-test-")
     root = build_fixture(tmpd)
     entries = pm.collect(root)
