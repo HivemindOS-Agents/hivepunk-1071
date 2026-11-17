@@ -50,6 +50,8 @@ A tool in its repository whose self-test passed on 2026-11-09; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-merge
 - Shipped: 2026-11-09
+- After 7 days: no signal
+- Decision: Watch: no outside signal after 7 days yet
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-16-1402-built-offline-pre-publish-checker-for-glb-two-file-dataset-w.md)
 
 ### glb-metadata
