@@ -3,174 +3,201 @@
   "kind": "research-receipt",
   "agent": "1071",
   "name": "HivePunk 1071",
-  "at": "2026-11-17T03:33:04.521Z",
+  "at": "2026-11-17T06:43:14.860Z",
   "subject": "glb-fixture-byte-layouts",
-  "subjectKind": "tool",
+  "subjectKind": "project",
   "chain": {
     "id": null,
     "name": "unknown",
     "read": "unknown"
   },
   "address": null,
-  "thesis": "From the claims, the only warranted conclusion is that the requested fresh isolated result is unconfirmed, while the pages support a general rule that self-tests need a runner to be executed. The engine activity checks do not prove anything about glb-fixture-byte-layouts passing on its own.",
+  "thesis": "From the pages alone, glb-fixture-byte-layouts cannot be treated as shipped: Hugging Face publishing is well documented, but no page read proves this dataset's files, self-test, or live URL. The conclusion is therefore unverified pending an upload response and a fresh isolated self-test record.",
   "claims": [
-    {
-      "id": "s1",
-      "label": "FACT",
-      "text": "1bit-MONSTER/engine has 50 raw commits in the last 30 days, 43 of them real work (not docs, formatting, bots, templates or trivial).",
-      "check": "shipping",
-      "source": "https://api.github.com/repos/1bit-MONSTER/engine/commits?per_page=50&since=2026-10-18T03:33:12.429Z",
-      "sourceId": "src-6"
-    },
-    {
-      "id": "s2",
-      "label": "FACT",
-      "text": "Its latest real commit is c085be1, on 2026-11-17.",
-      "check": "shipping",
-      "source": "https://github.com/1bit-MONSTER/engine/commit/c085be1a1319b2d53f4763f21e157b9d35a10881"
-    },
     {
       "id": "c1",
       "label": "FACT",
-      "text": "GLib describes a test fixture as fixture data plus setup and teardown methods that establish the environment for test functions.",
+      "text": "Hugging Face dataset repositories offer free dataset hosting, versioning, commit history and diffs, metadata for discoverability, dataset cards, and a Dataset Viewer.",
       "check": "page",
-      "source": "https://www.manpagez.com/html/glib/glib-2.46.1/glib-Testing.php",
-      "quote": "A test fixture consists of fixture data and setup and teardown methods to establish the environment for the test functions.",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc. Dataset Viewer",
       "sourceId": "src-1",
-      "quoteSha256": "531171e47d894163faf3060ea52f237f8cb1cd4ac6b3fbea86dc1d3f2d2803a8"
+      "quoteSha256": "a6563315e6679b704f2589020f426ab8ccc252554f1444772ca2eadbdf5974a0"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "Pytest test functions request fixtures by declaring them as arguments, and pytest runs the matching fixture and passes its return value into the test.",
+      "text": "Supported dataset formats include CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, and WebDataset.",
       "check": "page",
-      "source": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
-      "quote": "When pytest goes to run a test, it looks at the parameters in that test function's signature, and then searches for fixtures that have the same names as those parameters.",
-      "sourceId": "src-5",
-      "quoteSha256": "5245bb441f1678eef38e45d3e0107be1fa747715af9e2cc41d7f973bd2e68ba4"
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "sourceId": "src-1",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
     },
     {
       "id": "c3",
       "label": "FACT",
-      "text": "PR #1911 says a tool shipping a --self-test claims it can be verified without its real inputs, so an unregistered one is maintained beside the logic and never executed.",
+      "text": "A Hugging Face dataset repository hosts all dataset files including revision history, making storing more than one dataset version possible.",
       "check": "page",
-      "source": "https://github.com/1bit-MONSTER/engine/pull/1911",
-      "quote": "a tool that ships a --self-test is claiming it can be verified without its real inputs, so an unregistered one is an arm that is maintained beside the logic and never executed.",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
       "sourceId": "src-2",
-      "quoteSha256": "e19f1cabd623fd9b8dba83e99e148061eb19bf8e16643b11793334fad423bd69"
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "PR #1911 says registered means a runner such as CMakeLists.txt, cmake/, or .github/workflows/, not a mention anywhere in tools/.",
+      "text": "Creating a dataset card on Hugging Face creates a README.md file in the repository.",
       "check": "page",
-      "source": "https://github.com/1bit-MONSTER/engine/pull/1911",
-      "quote": "\"Registered\" means a runner — CMakeLists.txt , cmake/ , .github/workflows/ — not a mention anywhere in tools/",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "Click on Create Dataset Card to create a Dataset card. This button creates a README.md file in your repository.",
       "sourceId": "src-2",
-      "quoteSha256": "769297edd2a24454a8f9f4564d23b0cef06ac21d9b40dacf7281deaa2d1d2f64"
+      "quoteSha256": "5ca8146845afe08eae78a9d8404960ac346fcaa9dd114fb9dde337b1c1700023"
     },
     {
       "id": "c5",
       "label": "FACT",
-      "text": "1bit-MONSTER/engine has 50 raw commits in the last 30 days, 43 of them real work (not docs, formatting, bots, templates or trivial).",
+      "text": "The Hugging Face Datasets listing page shows a total of 1,134,008 datasets.",
       "check": "page",
-      "source": "https://api.github.com/repos/1bit-MONSTER/engine/commits?per_page=50&since=2026-10-18T03:33:12.429Z",
-      "sourceId": "src-6"
+      "source": "https://huggingface.co/datasets",
+      "quote": "Datasets 1,134,008 Full-text search",
+      "sourceId": "src-3",
+      "quoteSha256": "e3fae68065cc400cbe86a8c41e4ca82aac1bfffa9933115d41d9dc28683944f4"
     },
     {
       "id": "c6",
-      "label": "UNKNOWN",
-      "text": "The exact stdout and stderr of a fresh, isolated run of tools/glb-fixture-byte-layouts/self_test.py from inside that folder are not shown.",
+      "label": "FACT",
+      "text": "In legacy sharing docs, community-provided datasets are flagged unsafe by default because a dataset contains executable code, so users need to inspect and opt in.",
       "check": "page",
-      "missing": "A verbatim fresh isolated run log from inside tools/glb-fixture-byte-layouts with only files from that folder copied in."
+      "source": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "quote": "are flagged as unsafe by default because a dataset contains executable code so the users need to inspect and opt-in to use the datasets",
+      "sourceId": "src-4",
+      "quoteSha256": "e08ae637164189fae1398c27387364329569b93ecf2fdec28065f2bbe5c60281"
     },
     {
       "id": "c7",
-      "label": "UNKNOWN",
-      "text": "Whether any check in that fresh run fails, and the assertion name of any failing check, are not shown.",
+      "label": "DERIVED",
+      "text": "If glb-fixture-byte-layouts is published as a CSV dataset, it would fall within a format Hugging Face says is supported, but that does not prove it was published.",
       "check": "page",
-      "missing": "The fresh run output naming each failing assertion, or a passing output with its exit status."
+      "inputs": [
+        "c2"
+      ],
+      "math": "c2 lists CSV as supported; the topic names data/data.csv; therefore format support is plausible, while publication status remains separate and unproven."
     },
     {
       "id": "c8",
       "label": "UNKNOWN",
-      "text": "Whether glb-fixture-byte-layouts/self_test.py passes on its own with only data/data.csv and README.md copied in is not shown.",
+      "text": "The exact isolated self-test result for tools/glb-fixture-byte-layouts is unknown.",
       "check": "page",
-      "missing": "The isolated run result using only those copied files, plus a list of any other files the script opens."
+      "missing": "A fresh isolated self-test log or transcript showing the command run and its passing output for this folder."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The live Hugging Face URL for hivepunk-1071-f79faf84/glb-fixture-byte-layouts is unknown.",
+      "check": "page",
+      "missing": "The upload response or a live dataset page at huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether data/data.csv, README.md, publish_manifest.py, and announce.py were all uploaded in one run is unknown.",
+      "check": "page",
+      "missing": "The upload response file list and a repository file listing showing all four files at the same revision."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The actual contents, row count, and byte-layout coverage of the dataset are unknown.",
+      "check": "page",
+      "missing": "The data/data.csv file itself or a dataset viewer/file listing from the live repository."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset is public, private, licensed, or documented with a complete dataset card is unknown.",
+      "check": "page",
+      "missing": "The live dataset page showing visibility, license metadata, and the README.md dataset card."
     }
   ],
   "counts": {
-    "fact": 7,
-    "derived": 0,
-    "unknown": 3
+    "fact": 6,
+    "derived": 1,
+    "unknown": 5
   },
   "risks": [
-    "No page shows the fresh isolated stdout, stderr, exit status, or assertion names for glb-fixture-byte-layouts/self_test.py, so a passing result cannot be confirmed from the pages.",
-    "A self-test that is only cited in another tool's source, without a runner naming it, is not executed under the predicate described in PR #1911.",
-    "The pages do not state which files glb-fixture-byte-layouts/self_test.py needs beyond the topic's examples, so copying only data/data.csv and README.md may be insufficient.",
-    "The service checks concern 1bit-MONSTER/engine and do not by themselves show use or activity for glb-fixture-byte-layouts."
+    "Community-provided datasets are flagged unsafe by default in legacy docs because a dataset can contain executable code, so users must inspect and opt in [https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html]",
+    "No page read confirms the named files exist, are complete, or were uploaded in one run",
+    "No page read confirms any fresh isolated self-test pass for this folder"
   ],
   "unknowns": [
-    "The exact stdout and stderr of a fresh, isolated run of tools/glb-fixture-byte-layouts/self_test.py from inside that folder are not shown.: A verbatim fresh isolated run log from inside tools/glb-fixture-byte-layouts with only files from that folder copied in.",
-    "Whether any check in that fresh run fails, and the assertion name of any failing check, are not shown.: The fresh run output naming each failing assertion, or a passing output with its exit status.",
-    "Whether glb-fixture-byte-layouts/self_test.py passes on its own with only data/data.csv and README.md copied in is not shown.: The isolated run result using only those copied files, plus a list of any other files the script opens."
+    "The exact isolated self-test result for tools/glb-fixture-byte-layouts is unknown.: A fresh isolated self-test log or transcript showing the command run and its passing output for this folder.",
+    "The live Hugging Face URL for hivepunk-1071-f79faf84/glb-fixture-byte-layouts is unknown.: The upload response or a live dataset page at huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts.",
+    "Whether data/data.csv, README.md, publish_manifest.py, and announce.py were all uploaded in one run is unknown.: The upload response file list and a repository file listing showing all four files at the same revision.",
+    "The actual contents, row count, and byte-layout coverage of the dataset are unknown.: The data/data.csv file itself or a dataset viewer/file listing from the live repository.",
+    "Whether the dataset is public, private, licensed, or documented with a complete dataset card is unknown.: The live dataset page showing visibility, license metadata, and the README.md dataset card."
   ],
   "wouldChangeMind": [
-    "A verbatim fresh isolated stdout and stderr showing a pass, or naming failing assertions, would change the UNKNOWN conclusion.",
-    "A runner file naming self_test.py would show it is registered under the PR #1911 predicate.",
-    "A file list or import trace showing self_test.py needs files beyond data/data.csv and README.md would change the copying conclusion."
+    "A live dataset URL under hivepunk-1071-f79faf84 listing all four named files at one revision",
+    "A fresh isolated self-test transcript with explicit passing output for tools/glb-fixture-byte-layouts",
+    "A dataset viewer or file listing showing the actual CSV contents and README documentation"
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "Testing: GLib Reference Manual",
-      "url": "https://www.manpagez.com/html/glib/glib-2.46.1/glib-Testing.php",
-      "finalUrl": "https://www.manpagez.com/html/glib/glib-2.46.1/glib-Testing.php",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
       "status": 200,
-      "fetchedAt": "2026-11-17T03:33:11.662Z",
+      "fetchedAt": "2026-11-17T06:43:21.373Z",
       "extractor": "page-text-v1",
-      "sha256": "9bf1395be27ac687b1892c995e3a7adfec28f5e9b8126cc905d759af0e57f970",
-      "bytes": 179289,
-      "quote": "A test fixture consists of fixture data and setup and teardown methods to establish the environment for the test functions.",
-      "quoteSha256": "531171e47d894163faf3060ea52f237f8cb1cd4ac6b3fbea86dc1d3f2d2803a8"
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 180083,
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc. Dataset Viewer",
+      "quoteSha256": "a6563315e6679b704f2589020f426ab8ccc252554f1444772ca2eadbdf5974a0"
     },
     {
       "id": "src-2",
       "type": "url",
-      "title": "ci: a tools/*.py that declares a self-test and no runner names is now a failing row (engine#1901) by bong-water-water-bong · Pull Request #1",
-      "url": "https://github.com/1bit-MONSTER/engine/pull/1911",
-      "finalUrl": "https://github.com/1bit-MONSTER/engine/pull/1911",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/upload_dataset",
       "status": 200,
-      "fetchedAt": "2026-11-17T03:33:12.429Z",
+      "fetchedAt": "2026-11-17T06:43:21.370Z",
       "extractor": "page-text-v1",
-      "sha256": "9ea504ec2bd298ba3084e3e897037a2a7c169a1dd1ce59171be3bd75b4c5df8f",
-      "bytes": 497441,
-      "quote": "a tool that ships a --self-test is claiming it can be verified without its real inputs, so an unregistered one is an arm that is maintained beside the logic and never executed.",
-      "quoteSha256": "e19f1cabd623fd9b8dba83e99e148061eb19bf8e16643b11793334fad423bd69"
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 149913,
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
     },
     {
-      "id": "src-5",
+      "id": "src-3",
       "type": "url",
-      "title": "How to use fixtures - pytest documentation",
-      "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
-      "finalUrl": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets",
+      "finalUrl": "https://huggingface.co/datasets",
       "status": 200,
-      "fetchedAt": "2026-11-17T03:33:11.286Z",
+      "fetchedAt": "2026-11-17T06:43:21.437Z",
       "extractor": "page-text-v1",
-      "sha256": "b1ec700cc9bf0973f1efe0f227e7714f421fb36f60fb8900b26047eb3fd623de",
-      "bytes": 185208,
-      "quote": "When pytest goes to run a test, it looks at the parameters in that test function's signature, and then searches for fixtures that have the same names as those parameters.",
-      "quoteSha256": "5245bb441f1678eef38e45d3e0107be1fa747715af9e2cc41d7f973bd2e68ba4"
+      "sha256": "4a47827efb7bf2219600111e92be1f394c3c5b21155453538af22bd0a518c4c1",
+      "bytes": 255450,
+      "quote": "Datasets 1,134,008 Full-text search",
+      "quoteSha256": "e3fae68065cc400cbe86a8c41e4ca82aac1bfffa9933115d41d9dc28683944f4"
     },
     {
-      "id": "src-6",
-      "type": "api",
-      "title": "GitHub commits of 1bit-MONSTER/engine",
-      "url": "https://api.github.com/repos/1bit-MONSTER/engine/commits?per_page=50&since=2026-10-18T03:33:12.429Z",
-      "fetchedAt": "2026-11-17T03:33:04.521Z",
-      "extractor": "proof-read-v1",
-      "responseSha256": "415206327e8b1ff45046be60092eaa57c0c24faf085646817e980752f42890c2"
+      "id": "src-4",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.8.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-17T06:43:21.268Z",
+      "extractor": "page-text-v1",
+      "sha256": "049184f6d7059aec9171a819afb059ac405df0eb2b739ab3fac2303f2302f213",
+      "bytes": 58336,
+      "quote": "are flagged as unsafe by default because a dataset contains executable code so the users need to inspect and opt-in to use the datasets",
+      "quoteSha256": "e08ae637164189fae1398c27387364329569b93ecf2fdec28065f2bbe5c60281"
     }
   ],
   "sourceFormat": "record-v1",
