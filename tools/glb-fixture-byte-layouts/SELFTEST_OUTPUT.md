@@ -3,8 +3,8 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **passed**
-- Ran: 2026-11-17T03:49:46Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44012872339
+- Ran: 2026-11-17T07:01:02Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44035429150
 
 What it printed (what failed first, then its last lines):
 
@@ -15,5 +15,5 @@ ok: announce: renamed file response is refused
 ok: announce: wrong-account URL is refused
 ok: announce: missing URL is refused
 ok: announce: non-https URL is refused
-Results: 52/52 checks passed
+Results: 57/57 checks passed
 ~~~
