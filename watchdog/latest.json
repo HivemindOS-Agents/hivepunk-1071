@@ -1,0 +1,120 @@
+{
+  "v": 1,
+  "kind": "watchdog",
+  "agent": "1071",
+  "at": "2026-11-17T14:46:28.176Z",
+  "version": "watchdog-v1",
+  "mode": "report",
+  "checked": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D8",
+    "D13",
+    "D14",
+    "D15",
+    "D17",
+    "D18",
+    "D22",
+    "D23",
+    "D24",
+    "D28"
+  ],
+  "notChecked": [],
+  "notBuilt": [
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D16",
+    "D19",
+    "D20",
+    "D21",
+    "D25",
+    "D26"
+  ],
+  "findings": [
+    {
+      "id": "wd-1071-D0-monitor-flags",
+      "check": "D0",
+      "name": "checker_fresh",
+      "severity": "report",
+      "subject": "bee-scouts MONITOR.md",
+      "detail": "MONITOR.md's Latest flags still says no scan has written there.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/MONITOR.md"
+      ],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "name": "failure_not_in_health",
+      "severity": "repair",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 4 failed attempts, 0 of them after it was delivered.",
+      "evidence": [],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json"
+      ],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json"
+      ],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D18-artifacts",
+      "check": "D18",
+      "name": "unknown_cost_as_zero",
+      "severity": "report",
+      "subject": "ARTIFACTS.md",
+      "detail": "10 lines say $0.00 for a cost that was not priced.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D23-owner",
+      "check": "D23",
+      "name": "owner_handoff",
+      "severity": "report",
+      "subject": "its steps",
+      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Drafted standard-tier square flat-vector explainer prompt and caption for write_manifest(); no live URL confirmed, generation left for owner\".",
+      "evidence": [
+        "step 2026-11-17T13:59Z",
+        "step 2026-11-17T13:23Z",
+        "step 2026-11-17T10:46Z",
+        "step 2026-11-17T10:14Z"
+      ],
+      "firstSeen": "2026-11-17T14:46:28.176Z"
+    }
+  ],
+  "notSeenAgain": [],
+  "said": "6 found",
+  "requests": 22,
+  "elapsedMs": 2845
+}
