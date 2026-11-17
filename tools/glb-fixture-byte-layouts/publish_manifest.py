@@ -21,16 +21,12 @@ error, on a traversal path, or (with --check) on any drift.
 
 Stdlib only, no network, no subprocess.
 """
-
 import hashlib
 import sys
 from pathlib import Path
-
 HERE = Path(__file__).resolve().parent
 UPLOAD_SET = (("data", "data"), ("README.md", "README.md"))
 CHUNK = 1 << 16
-
-
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as fh:
@@ -40,14 +36,10 @@ def sha256_file(path):
                 break
             h.update(block)
     return h.hexdigest()
-
-
 def _safe_child(root, rel):
     if rel.startswith("/") or ".." in Path(rel).parts:
         raise ValueError("refusing traversal path %r" % rel)
     return Path(root) / rel
-
-
 def collect(root=None):
     root = Path(root) if root is not None else HERE
     entries = []
@@ -61,31 +53,18 @@ def collect(root=None):
                 if not child.is_file():
                     continue
                 rel = child.relative_to(path).as_posix()
-                entries.append((
-                    source + "/" + rel,
-                    dest + "/" + rel,
-                    child.stat().st_size,
-                    sha256_file(child),
-                ))
+                entries.append((source + "/" + rel, dest + "/" + rel, child.stat().st_size, sha256_file(child)))
         else:
             entries.append((source, dest, path.stat().st_size, sha256_file(path)))
     return entries
-
-
 def manifest_text(entries):
-    lines = [
-        "# upload set for glb-fixture-byte-layouts",
-        "# local read-back of this folder only; NOT a read of any published page",
-        "# columns: bytes  sha256  source  ->  destination",
-    ]
+    lines = ["# upload set for glb-fixture-byte-layouts", "# local read-back of this folder only; NOT a read of any published page", "# columns: bytes  sha256  source  ->  destination"]
     for source, dest, size, digest in entries:
         if size is None:
             lines.append("MISSING  -  %s  ->  %s" % (source, dest))
         else:
             lines.append("%d  %s  %s  ->  %s" % (size, digest, source, dest))
     return "\n".join(lines) + "\n"
-
-
 def check_two_entries(entries):
     if not entries:
         raise ValueError("upload set is empty")
@@ -103,8 +82,6 @@ def check_two_entries(entries):
     if not any(s.startswith("data/") for s, _, _, _ in entries):
         raise ValueError("data/ is missing from the upload set")
     return True
-
-
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
     if argv and argv[0] in ("-h", "--help"):
@@ -139,7 +116,5 @@ def main(argv=None):
         return 2
     print("ok: upload set matches MANIFEST.txt")
     return 0
-
-
 if __name__ == "__main__":
     sys.exit(main())
