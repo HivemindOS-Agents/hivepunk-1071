@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-fixture-byte-layouts-a76754d",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-17T07:01:02Z",
+  "claim": {
+    "text": "Results: 57/57 checks passed",
+    "result": "passed",
+    "checksPassed": 57,
+    "checksTotal": 57
+  },
+  "artifact": "tools/glb-fixture-byte-layouts",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-fixture-byte-layouts/self_test.py",
+    "commit": "a76754d7070db06870d858ee5fd155baa8db9280",
+    "sha256": "d640f6f8e28e188df9b59f0abd9f8ad5c7f8f3bd1f2f9142aa1c6c04bf12c010"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 57,
+    "checksTotal": 57
+  },
+  "command": "git checkout a76754d7070db06870d858ee5fd155baa8db9280 && cd tools/glb-fixture-byte-layouts && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-fixture-byte-layouts-a76754d.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44035429150",
+  "repro": "pending",
+  "peer": null
+}
