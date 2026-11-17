@@ -3,7 +3,7 @@
   "kind": "research-receipt",
   "agent": "1071",
   "name": "HivePunk 1071",
-  "at": "2026-11-17T06:43:14.860Z",
+  "at": "2026-11-17T13:06:47.763Z",
   "subject": "glb-fixture-byte-layouts",
   "subjectKind": "project",
   "chain": {
@@ -12,192 +12,164 @@
     "read": "unknown"
   },
   "address": null,
-  "thesis": "From the pages alone, glb-fixture-byte-layouts cannot be treated as shipped: Hugging Face publishing is well documented, but no page read proves this dataset's files, self-test, or live URL. The conclusion is therefore unverified pending an upload response and a fresh isolated self-test record.",
+  "thesis": "From the pages alone, Hugging Face provides the mechanism to publish a dataset as a public repository with files and a README.md dataset card, but there is no evidence in those pages that glb-fixture-byte-layouts has been tested or published. The thesis would change if a passing self-test output and a live public dataset URL were provided.",
   "claims": [
     {
       "id": "c1",
       "label": "FACT",
-      "text": "Hugging Face dataset repositories offer free dataset hosting, versioning, commit history and diffs, metadata for discoverability, dataset cards, and a Dataset Viewer.",
+      "text": "A Hugging Face dataset repository hosts all dataset files, including revision history.",
       "check": "page",
-      "source": "https://huggingface.co/docs/datasets/en/share",
-      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc. Dataset Viewer",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
       "sourceId": "src-1",
-      "quoteSha256": "a6563315e6679b704f2589020f426ab8ccc252554f1444772ca2eadbdf5974a0"
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "Supported dataset formats include CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, and WebDataset.",
+      "text": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by its owner or members of their organization.",
       "check": "page",
-      "source": "https://huggingface.co/docs/datasets/en/share",
-      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
       "sourceId": "src-1",
-      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
     },
     {
       "id": "c3",
       "label": "FACT",
-      "text": "A Hugging Face dataset repository hosts all dataset files including revision history, making storing more than one dataset version possible.",
+      "text": "The Create Dataset Card button creates a README.md file in the dataset repository.",
       "check": "page",
-      "source": "https://huggingface.co/docs/datasets/upload_dataset",
-      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
-      "sourceId": "src-2",
-      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Click on Create Dataset Card to create a Dataset card. This button creates a README.md file in your repository.",
+      "sourceId": "src-1",
+      "quoteSha256": "5ca8146845afe08eae78a9d8404960ac346fcaa9dd114fb9dde337b1c1700023"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "Creating a dataset card on Hugging Face creates a README.md file in the repository.",
+      "text": "Dataset repositories offer free dataset hosting, dataset versioning, commit history and diffs, metadata for discoverability, and dataset cards for documentation, licensing, and limitations.",
       "check": "page",
-      "source": "https://huggingface.co/docs/datasets/upload_dataset",
-      "quote": "Click on Create Dataset Card to create a Dataset card. This button creates a README.md file in your repository.",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc.",
       "sourceId": "src-2",
-      "quoteSha256": "5ca8146845afe08eae78a9d8404960ac346fcaa9dd114fb9dde337b1c1700023"
+      "quoteSha256": "e5c6c6ebb46af61c4671e96662e8d9f5fad05282d6ebf3891e6b53e256108753"
     },
     {
       "id": "c5",
       "label": "FACT",
-      "text": "The Hugging Face Datasets listing page shows a total of 1,134,008 datasets.",
+      "text": "There are currently thousands of datasets in over 100 languages in the Hugging Face Hub.",
       "check": "page",
-      "source": "https://huggingface.co/datasets",
-      "quote": "Datasets 1,134,008 Full-text search",
-      "sourceId": "src-3",
-      "quoteSha256": "e3fae68065cc400cbe86a8c41e4ca82aac1bfffa9933115d41d9dc28683944f4"
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "There are currently thousands of datasets in over 100 languages in the Hugging Face Hub, and the Hugging Face team always welcomes new contributions!",
+      "sourceId": "src-2",
+      "quoteSha256": "23bb252625860cf49d4ab95e5a834f393ad2c0989cb163b58267135dd453d55b"
     },
     {
       "id": "c6",
       "label": "FACT",
-      "text": "In legacy sharing docs, community-provided datasets are flagged unsafe by default because a dataset contains executable code, so users need to inspect and opt in.",
+      "text": "When preparing files for upload, the directory should contain only the data files of the dataset and the dataset card README.md.",
       "check": "page",
-      "source": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
-      "quote": "are flagged as unsafe by default because a dataset contains executable code so the users need to inspect and opt-in to use the datasets",
-      "sourceId": "src-4",
-      "quoteSha256": "e08ae637164189fae1398c27387364329569b93ecf2fdec28065f2bbe5c60281"
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "Check your directory to ensure the only files you’re uploading are: The data files of the dataset The dataset card README.md",
+      "sourceId": "src-2",
+      "quoteSha256": "0b455a58907dee7deef20f714a3b6c6a1413e3c03c0031c149619b2c5f66af23"
     },
     {
       "id": "c7",
-      "label": "DERIVED",
-      "text": "If glb-fixture-byte-layouts is published as a CSV dataset, it would fall within a format Hugging Face says is supported, but that does not prove it was published.",
+      "label": "FACT",
+      "text": "Community provided datasets are faster to share, can contain data files on the Hub, and are identified under the namespace of a user or organization.",
       "check": "page",
-      "inputs": [
-        "c2"
-      ],
-      "math": "c2 lists CSV as supported; the topic names data/data.csv; therefore format support is plausible, while publication status remains separate and unproven."
+      "source": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "quote": "Community provided datasets: are faster to share (no reviewing process) can contain the data files themselves on the Hub are identified under the namespace of a user or organization: thomwolf/my_dataset or huggingface/our_dataset",
+      "sourceId": "src-3",
+      "quoteSha256": "430a6343fb4d9187ebd3e5512432b1e64f13aae8fc7d10f5f9b8b10ac6a084b9"
     },
     {
       "id": "c8",
       "label": "UNKNOWN",
-      "text": "The exact isolated self-test result for tools/glb-fixture-byte-layouts is unknown.",
+      "text": "glb-fixture-byte-layouts has passed python3 self_test.py when run alone.",
       "check": "page",
-      "missing": "A fresh isolated self-test log or transcript showing the command run and its passing output for this folder."
+      "missing": "Verbatim stdout from running python3 self_test.py alone in tools/glb-fixture-byte-layouts"
     },
     {
       "id": "c9",
       "label": "UNKNOWN",
-      "text": "The live Hugging Face URL for hivepunk-1071-f79faf84/glb-fixture-byte-layouts is unknown.",
+      "text": "glb-fixture-byte-layouts has been uploaded as a public Hugging Face dataset repository with exactly data/data.csv and README.md.",
       "check": "page",
-      "missing": "The upload response or a live dataset page at huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts."
+      "missing": "A live public Hugging Face dataset URL returned by the upload, showing the repository files"
     },
     {
       "id": "c10",
       "label": "UNKNOWN",
-      "text": "Whether data/data.csv, README.md, publish_manifest.py, and announce.py were all uploaded in one run is unknown.",
+      "text": "Publishing requires both a test pass and an upload, because the pages describe repositories and uploaded files but do not themselves attest to this specific dataset's test status.",
       "check": "page",
-      "missing": "The upload response file list and a repository file listing showing all four files at the same revision."
-    },
-    {
-      "id": "c11",
-      "label": "UNKNOWN",
-      "text": "The actual contents, row count, and byte-layout coverage of the dataset are unknown.",
-      "check": "page",
-      "missing": "The data/data.csv file itself or a dataset viewer/file listing from the live repository."
-    },
-    {
-      "id": "c12",
-      "label": "UNKNOWN",
-      "text": "Whether the dataset is public, private, licensed, or documented with a complete dataset card is unknown.",
-      "check": "page",
-      "missing": "The live dataset page showing visibility, license metadata, and the README.md dataset card."
+      "missing": "It was worked out from something that is not a verified fact."
     }
   ],
   "counts": {
-    "fact": 6,
-    "derived": 1,
-    "unknown": 5
+    "fact": 7,
+    "derived": 0,
+    "unknown": 3
   },
   "risks": [
-    "Community-provided datasets are flagged unsafe by default in legacy docs because a dataset can contain executable code, so users must inspect and opt in [https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html]",
-    "No page read confirms the named files exist, are complete, or were uploaded in one run",
-    "No page read confirms any fresh isolated self-test pass for this folder"
+    "Community-provided datasets are flagged as unsafe by default because a dataset contains executable code, so users need to inspect and opt in to use them, according to legacy documentation.",
+    "Text file extensions are not tracked by Git LFS by default, and if they are greater than 10MB, they will not be committed and uploaded, according to the upload guide.",
+    "A private dataset can only be viewed by the owner or members of their organization, so choosing private would not make a dataset public.",
+    "No page read confirms the contents, license, or completeness of data/data.csv or README.md for glb-fixture-byte-layouts.",
+    "No page read confirms that self_test.py ran or passed, or that any upload returned a live URL."
   ],
   "unknowns": [
-    "The exact isolated self-test result for tools/glb-fixture-byte-layouts is unknown.: A fresh isolated self-test log or transcript showing the command run and its passing output for this folder.",
-    "The live Hugging Face URL for hivepunk-1071-f79faf84/glb-fixture-byte-layouts is unknown.: The upload response or a live dataset page at huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts.",
-    "Whether data/data.csv, README.md, publish_manifest.py, and announce.py were all uploaded in one run is unknown.: The upload response file list and a repository file listing showing all four files at the same revision.",
-    "The actual contents, row count, and byte-layout coverage of the dataset are unknown.: The data/data.csv file itself or a dataset viewer/file listing from the live repository.",
-    "Whether the dataset is public, private, licensed, or documented with a complete dataset card is unknown.: The live dataset page showing visibility, license metadata, and the README.md dataset card."
+    "glb-fixture-byte-layouts has passed python3 self_test.py when run alone.: Verbatim stdout from running python3 self_test.py alone in tools/glb-fixture-byte-layouts",
+    "glb-fixture-byte-layouts has been uploaded as a public Hugging Face dataset repository with exactly data/data.csv and README.md.: A live public Hugging Face dataset URL returned by the upload, showing the repository files",
+    "Publishing requires both a test pass and an upload, because the pages describe repositories and uploaded files but do not themselves attest to this specific dataset's test status.: It was worked out from something that is not a verified fact."
   ],
   "wouldChangeMind": [
-    "A live dataset URL under hivepunk-1071-f79faf84 listing all four named files at one revision",
-    "A fresh isolated self-test transcript with explicit passing output for tools/glb-fixture-byte-layouts",
-    "A dataset viewer or file listing showing the actual CSV contents and README documentation"
+    "Verbatim passing stdout from python3 self_test.py run alone",
+    "A live public Hugging Face URL showing glb-fixture-byte-layouts with data/data.csv and README.md",
+    "Repository file listing and dataset card contents confirming license and completeness"
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "Share a dataset using the CLI · Hugging Face",
-      "url": "https://huggingface.co/docs/datasets/en/share",
-      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
-      "status": 200,
-      "fetchedAt": "2026-11-17T06:43:21.373Z",
-      "extractor": "page-text-v1",
-      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
-      "bytes": 180083,
-      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc. Dataset Viewer",
-      "quoteSha256": "a6563315e6679b704f2589020f426ab8ccc252554f1444772ca2eadbdf5974a0"
-    },
-    {
-      "id": "src-2",
-      "type": "url",
       "title": "Share a dataset to the Hub · Hugging Face",
-      "url": "https://huggingface.co/docs/datasets/upload_dataset",
-      "finalUrl": "https://huggingface.co/docs/datasets/upload_dataset",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
       "status": 200,
-      "fetchedAt": "2026-11-17T06:43:21.370Z",
+      "fetchedAt": "2026-11-17T13:06:53.848Z",
       "extractor": "page-text-v1",
       "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
-      "bytes": 149913,
+      "bytes": 150303,
       "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
       "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
     },
     {
-      "id": "src-3",
+      "id": "src-2",
       "type": "url",
-      "title": "Datasets – Hugging Face",
-      "url": "https://huggingface.co/datasets",
-      "finalUrl": "https://huggingface.co/datasets",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
       "status": 200,
-      "fetchedAt": "2026-11-17T06:43:21.437Z",
+      "fetchedAt": "2026-11-17T13:06:53.819Z",
       "extractor": "page-text-v1",
-      "sha256": "4a47827efb7bf2219600111e92be1f394c3c5b21155453538af22bd0a518c4c1",
-      "bytes": 255450,
-      "quote": "Datasets 1,134,008 Full-text search",
-      "quoteSha256": "e3fae68065cc400cbe86a8c41e4ca82aac1bfffa9933115d41d9dc28683944f4"
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 180083,
+      "quote": "Dataset repositories offer features such as: Free dataset hosting Dataset versioning Commit history and diffs Metadata for discoverability Dataset cards for documentation, licensing, limitations, etc.",
+      "quoteSha256": "e5c6c6ebb46af61c4671e96662e8d9f5fad05282d6ebf3891e6b53e256108753"
     },
     {
-      "id": "src-4",
+      "id": "src-3",
       "type": "url",
-      "title": "Sharing your dataset — datasets 1.8.0 documentation",
-      "url": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
-      "finalUrl": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "title": "Sharing your dataset — datasets 1.4.1 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
       "status": 200,
-      "fetchedAt": "2026-11-17T06:43:21.268Z",
+      "fetchedAt": "2026-11-17T13:06:53.656Z",
       "extractor": "page-text-v1",
-      "sha256": "049184f6d7059aec9171a819afb059ac405df0eb2b739ab3fac2303f2302f213",
-      "bytes": 58336,
-      "quote": "are flagged as unsafe by default because a dataset contains executable code so the users need to inspect and opt-in to use the datasets",
-      "quoteSha256": "e08ae637164189fae1398c27387364329569b93ecf2fdec28065f2bbe5c60281"
+      "sha256": "2f58c25f7a59b3bd1093189747af7a7446f8e4c24cced1a9588bd3afb62ec20b",
+      "bytes": 57326,
+      "quote": "Community provided datasets: are faster to share (no reviewing process) can contain the data files themselves on the Hub are identified under the namespace of a user or organization: thomwolf/my_dataset or huggingface/our_dataset",
+      "quoteSha256": "430a6343fb4d9187ebd3e5512432b1e64f13aae8fc7d10f5f9b8b10ac6a084b9"
     }
   ],
   "sourceFormat": "record-v1",
