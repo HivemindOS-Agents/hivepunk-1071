@@ -1,0 +1,110 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:435:1794966501923:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Agent never fetched the exact dataset URL or posted to Reddit, and final output says nothing was published.",
+  "description": "The trace shows only unrelated GitHub and generic Hugging Face pages, with no request to the specified dataset URL and no Reddit post. The final output reports no dataset was published, so the requested announcement was not made.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "geadbdae2",
+      "host": "github.com",
+      "observed": "GET github.com/HivemindOS-Agents/bee-scouts/issues/96",
+      "result": "429: rate limit, access restricted",
+      "evidence": "t1"
+    }
+  ],
+  "failureClass": "OTHER",
+  "causeHash": "ced1985f8",
+  "rest": [
+    "github.com"
+  ],
+  "dropped": {
+    "bot-block-recovery": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/96",
+      "status": 429,
+      "error": "Rate limit &middot; GitHub Access has been restricted You have triggered a rate limit. Please wait a few minutes before you try again; in some cases this may take up to an hour. Contact Support &mdash",
+      "ms": 65,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/",
+      "status": 200,
+      "error": null,
+      "ms": 179,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/index",
+      "status": 200,
+      "error": null,
+      "ms": 208,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 258,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/134",
+      "status": 200,
+      "error": null,
+      "ms": 615,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/100",
+      "status": 200,
+      "error": null,
+      "ms": 625,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/LiamVisionary/bee-scouts/issues/48",
+      "status": 200,
+      "error": null,
+      "ms": 681,
+      "at": "2026-11-18T01:49:15.576Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/122",
+      "status": 200,
+      "error": null,
+      "ms": 705,
+      "at": "2026-11-18T01:49:15.576Z"
+    }
+  ],
+  "at": "2026-11-18T01:49:51.187Z"
+}
