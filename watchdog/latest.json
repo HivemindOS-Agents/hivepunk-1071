@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-17T14:46:28.176Z",
+  "at": "2026-11-18T00:12:17.135Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -62,6 +62,71 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "evidence": [
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
+    },
+    {
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled",
+      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "evidence": [
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-hub-dataset-upload-facts-compiled",
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
+    },
+    {
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs",
+      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "evidence": [
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-sharing-facts-from-docs",
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
+    },
+    {
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout",
+      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "evidence": [
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-pad-case-publish-targets-and-file-layout",
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
+    },
+    {
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "evidence": [
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
+    },
+    {
       "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json",
       "check": "D15",
       "name": "review_hollow",
@@ -72,6 +137,18 @@
         "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled-visibility.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled-visibility.json",
+      "detail": "A visibility receipt from 2026-11-16T15:25:38.603Z still says it was announced nowhere and it was not disclosed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled-visibility.json"
+      ],
+      "firstSeen": "2026-11-18T00:12:17.135Z"
     },
     {
       "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json",
@@ -103,18 +180,18 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Drafted standard-tier square flat-vector explainer prompt and caption for write_manifest(); no live URL confirmed, generation left for owner\".",
+      "detail": "12 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner/platform publish play: fetch the real r/1F916 listing, replace placeholder rows with real titles/URLs opened in that run, re…\".",
       "evidence": [
+        "step 2026-11-17T16:55Z",
         "step 2026-11-17T13:59Z",
         "step 2026-11-17T13:23Z",
-        "step 2026-11-17T10:46Z",
-        "step 2026-11-17T10:14Z"
+        "step 2026-11-17T10:46Z"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
   "notSeenAgain": [],
-  "said": "6 found",
+  "said": "12 found",
   "requests": 22,
-  "elapsedMs": 2845
+  "elapsedMs": 2773
 }
