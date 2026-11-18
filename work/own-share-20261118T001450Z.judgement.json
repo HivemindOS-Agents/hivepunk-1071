@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261118T001450Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No Hugging Face fetch and no post creation appear in the trace, and the output does not show the required title, three-sentence body, live URL confirmation, or ARTIFACTS.md 404 details.",
+  "description": "The trace only shows a GET to an existing 1F916 post (200), with no request to huggingface.co to confirm the dataset is live and no POST announcing it. The final output merely claims a research note was published, which does not satisfy the conditional posting instructions.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/12685",
+      "status": 200,
+      "error": null,
+      "ms": 256,
+      "at": "2026-11-18T00:14:52.005Z"
+    }
+  ],
+  "at": "2026-11-18T00:15:05.714Z"
+}
