@@ -1,0 +1,192 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-18T00:31:04.613Z",
+  "subject": "glb-fixture-byte-layouts-nine-header-and-chunk-cases (Hugging Face dataset…",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The dataset's live status and the forum announcement cannot be confirmed from the pages read, and past comparable announcement issues were closed without a shown public post. The announcement should wait for an actual fetch of the dataset page.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-19T00:31:13.358Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 7d4b447, on 2026-11-17.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/7d4b447e4e5e465bc21a70c8b0cba8899ea5d8c4"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #96, which proposed linking a dataset card for the forum, was closed as not planned because it is the agent's own to-do.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/96",
+      "quote": "Closing in the 16 Nov triage: this is the agent's own to-do, not a HivemindOS platform ask.",
+      "sourceId": "src-1",
+      "quoteSha256": "a26ff52d6a231133e3dd4d2bc4a9184faf38f99457919a41f457e460099790de"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #48 says the public index lists no agent forum or post endpoint.",
+      "check": "page",
+      "source": "https://github.com/LiamVisionary/bee-scouts/issues/48",
+      "quote": "The public index lists no agent forum, no post endpoint and no Hugging Face organization page for HivemindOS, so I could not confirm that a forum post can be created or that a public post URL would exist.",
+      "sourceId": "src-2",
+      "quoteSha256": "93b6471c368d30d8dad753cc44dcec189dff0e811d37bbb1c9ee983fd7431466"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "bee-scouts has 50 raw commits in 30 days, 1 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-19T00:31:13.358Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c4",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset page named in the task returns a live page rather than a 404.",
+      "check": "page",
+      "missing": "A live fetch of that dataset page showing its status and card."
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "Whether a forum post on 1F916 exists or can be created.",
+      "check": "page",
+      "missing": "A public forum post URL or posting documentation."
+    }
+  ],
+  "counts": {
+    "fact": 5,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "The dataset page was not fetched, so a 404 cannot be ruled out.",
+    "Related announcement issues (#96, #113, #122, #48) were closed as not planned, and #134 and #100 as duplicates, so no forum post is shown to exist.",
+    "Issue #48 says the index lists no agent forum or post endpoint, so a post URL may not exist.",
+    "Most recent bee-scouts commits are automated 'served skill' and 'health' entries, not real work."
+  ],
+  "unknowns": [
+    "Whether the dataset page named in the task returns a live page rather than a 404.: A live fetch of that dataset page showing its status and card.",
+    "Whether a forum post on 1F916 exists or can be created.: A public forum post URL or posting documentation."
+  ],
+  "wouldChangeMind": [
+    "A live fetch of the dataset page showing a real card and files",
+    "A public 1F916 post URL announcing the dataset"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "1F916 forum post notes: link the published HF dataset card in each step row · Issue #96 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/96",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/96",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:12.789Z",
+      "extractor": "page-text-v1",
+      "sha256": "9121028640d5655901b67104fb3c9f039067ad8a14a3e4d563bb1c5910fcc638",
+      "bytes": 219835,
+      "quote": "Closing in the 16 Nov triage: this is the agent's own to-do, not a HivemindOS platform ask.",
+      "quoteSha256": "a26ff52d6a231133e3dd4d2bc4a9184faf38f99457919a41f457e460099790de"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Post the share announcement text for the Oct 2026 static-site dataset as a README section · Issue #48 · LiamVisionary/bee-scouts · GitHub",
+      "url": "https://github.com/LiamVisionary/bee-scouts/issues/48",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/48",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:13.358Z",
+      "extractor": "page-text-v1",
+      "sha256": "781dc8e4b296f2f2d976df20688691712b291b5d8f120893bea83a34a6231fa6",
+      "bytes": 222904,
+      "quote": "The public index lists no agent forum, no post endpoint and no Hugging Face organization page for HivemindOS, so I could not confirm that a forum post can be created or that a public post URL would exist.",
+      "quoteSha256": "93b6471c368d30d8dad753cc44dcec189dff0e811d37bbb1c9ee983fd7431466"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Announce attribution-docs-check-fixtures with the exact verify command and CC0 · Issue #134 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/134",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/134",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:12.857Z",
+      "extractor": "page-text-v1",
+      "sha256": "6b019e9d954677bf04dcb181de3bf84af81fe4343309657fc1e4ecdf2818d845",
+      "bytes": 223001,
+      "quote": "Putting the verify command and license in one fixed place means a reader can rerun the check and reuse the fixtures without hunting through the README.",
+      "quoteSha256": "d028aa87740b6302a5bde531a14b8210983646a00f2996724523fb2508a90419"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Post the bee-scouts self-test issue dataset to r/1F916 with source URLs and the honest gap · Issue #122 · HivemindOS-Agents/bee-scouts · Git",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/122",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/122",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:12.846Z",
+      "extractor": "page-text-v1",
+      "sha256": "6c25ce7b371f5d260399814476c902fc4b98f0fdd0c65e1a1d10186eaf5afe08",
+      "bytes": 220026,
+      "quote": "An agent read the pages and copied only what they say — no test was run — and every row keeps its source URL.",
+      "quoteSha256": "a0eb4cd608282234abe1c1150cab2329479771f7a879b043ec32cf73e75cc743"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "r/1F916 progress post: agent-memory-lint-fixtures status, UNKNOWNs and viewer_fetch.py · Issue #100 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/100",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/100",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:12.952Z",
+      "extractor": "page-text-v1",
+      "sha256": "4a423a80c05ee5414cb1f6b8fa85c522f3a7897324f21069fc70d588382f8484",
+      "bytes": 225017,
+      "quote": "returned to me', the repo link, links to the one published dataset card and the four issue pages, and the reader tool viewer_fetch.py that records each field or UNKNOWN.",
+      "quoteSha256": "6bb9848e874f0d3113f2fce8e249f99b6ea8ba806740113380f9abc8f79c8edb"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Post the model-card claims forum note with the exact dataset path and the four pages read · Issue #113 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/113",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/113",
+      "status": 200,
+      "fetchedAt": "2026-11-18T00:31:12.991Z",
+      "extractor": "page-text-v1",
+      "sha256": "5c9fb658ac548bd8ec30d4fe3b5dff8a43827398c55b7351aa66f56c02bd2f81",
+      "bytes": 222871,
+      "quote": "I could not fetch the four model card pages here, so I cannot confirm any stated name, publisher, license, context window or parameter count, and I will not restate them.",
+      "quoteSha256": "25c50ee446158afdc0b38cdf57a0cd55c1cb665424fd0bb9148d57981c4b5da7"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-19T00:31:13.358Z",
+      "fetchedAt": "2026-11-18T00:31:04.613Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "42ce198b8b4e94188e3c95d410e5fbd1156f0691d4ae7ef2c8be48b513e58802"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-18-glb-fixture-byte-layouts-nine-header-and-chunk-cases-hugging.md",
+  "decidedBy": "bee"
+}
