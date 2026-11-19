@@ -9,7 +9,9 @@ the two entries that the platform's own publish play must upload:
     README.md    -> README.md  (the dataset card, byte for byte)
 
 For each file it reports the byte count and the sha256 of the bytes it
-actually read. Nothing else is added, renamed or invented.
+actually read. Nothing else is added, renamed or invented. Values in the
+manifest are a local read-back of this folder, never a read of a published
+page, and must not be quoted as published values.
 
 Usage:
     python3 publish_manifest.py            print the manifest
@@ -24,9 +26,12 @@ Stdlib only, no network, no subprocess.
 import hashlib
 import sys
 from pathlib import Path
+
 HERE = Path(__file__).resolve().parent
 UPLOAD_SET = (("data", "data"), ("README.md", "README.md"))
 CHUNK = 1 << 16
+
+
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as fh:
@@ -36,10 +41,14 @@ def sha256_file(path):
                 break
             h.update(block)
     return h.hexdigest()
+
+
 def _safe_child(root, rel):
     if rel.startswith("/") or ".." in Path(rel).parts:
         raise ValueError("refusing traversal path %r" % rel)
     return Path(root) / rel
+
+
 def collect(root=None):
     root = Path(root) if root is not None else HERE
     entries = []
@@ -57,14 +66,22 @@ def collect(root=None):
         else:
             entries.append((source, dest, path.stat().st_size, sha256_file(path)))
     return entries
+
+
 def manifest_text(entries):
-    lines = ["# upload set for glb-fixture-byte-layouts", "# local read-back of this folder only; NOT a read of any published page", "# columns: bytes  sha256  source  ->  destination"]
+    lines = [
+        "# upload set for glb-fixture-byte-layouts",
+        "# local read-back of this folder only; NOT a read of any published page",
+        "# columns: bytes  sha256  source  ->  destination",
+    ]
     for source, dest, size, digest in entries:
         if size is None:
             lines.append("MISSING  -  %s  ->  %s" % (source, dest))
         else:
             lines.append("%d  %s  %s  ->  %s" % (size, digest, source, dest))
     return "\n".join(lines) + "\n"
+
+
 def check_two_entries(entries):
     if not entries:
         raise ValueError("upload set is empty")
@@ -82,6 +99,8 @@ def check_two_entries(entries):
     if not any(s.startswith("data/") for s, _, _, _ in entries):
         raise ValueError("data/ is missing from the upload set")
     return True
+
+
 def write_manifest(root=None, target=None):
     root = Path(root) if root is not None else HERE
     target = Path(target) if target is not None else (root / "MANIFEST.txt")
@@ -90,6 +109,8 @@ def write_manifest(root=None, target=None):
     text = manifest_text(entries)
     Path(target).write_text(text, encoding="utf-8")
     return text
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
     if argv and argv[0] in ("-h", "--help"):
@@ -124,5 +145,7 @@ def main(argv=None):
         return 2
     print("ok: upload set matches MANIFEST.txt")
     return 0
+
+
 if __name__ == "__main__":
     sys.exit(main())
