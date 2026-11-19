@@ -12,19 +12,20 @@ padding, BIN missing 0x00 padding to 4-byte alignment). Checker:
 glb_check.py. Self-test: self_test.py.
 
 ## Status
-- Isolated self-test now FAILED on record: 61/62 checks passed.
+- Isolated self-test now PASSED on record: 62/62 checks passed.
+  Runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370
+  ranAt 2026-11-19 13:15 UTC, state passed, exit code 0.
+  Exact command: python3 self_test.py (from inside
+  tools/glb-fixture-byte-layouts/, no arguments, offline).
+  Full runner output is recorded verbatim in ARTIFACTS.md.
+- Previous failure (superseded): 61/62 checks passed.
   Runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44526417923
   ranAt 2026-11-19 12:42 UTC, state failed. Exact failing check:
   "shipped MANIFEST.txt claims no published values". See ARTIFACTS.md.
-- Cause: MANIFEST.txt contained a second 'published' wording
-  ('Nothing in this file is a published value') beyond the allowed
-  'NOT a read of any published page' label.
-- Fix applied in this step: reworded that line to 'Nothing in this
-  file is a live value' in MANIFEST.txt only. No validation weakened,
-  no published values invented. publish_manifest.py and self_test.py
-  unchanged.
-- Re-run after the fix is NOT yet confirmed here: no new runner
-  result was obtained in this step, so no pass is claimed.
+- Fix that resolved it: reworded 'Nothing in this file is a published value'
+  to 'Nothing in this file is a live value' in MANIFEST.txt only.
+  The 62/62 pass above is the runner evidence for that latest
+  committed repair; no pass is claimed beyond that run.
 - Earlier pass on record: run 44470911666, 2026-11-19 06:16 UTC,
   50/50 checks passed (superseded by the later 61/62 failure run).
 - Upload NOT done and NOT verified live. No live file list,
