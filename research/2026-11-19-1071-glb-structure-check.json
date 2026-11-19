@@ -1,0 +1,129 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-19T00:35:16.382Z",
+  "subject": "1071/glb-structure-check",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The only supported conclusion is narrow: 1071/glb-structure-check is named as a served skill, while the GLB fixture itself remains unverified and recent bee-scouts commits show no real work.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-20T00:35:23.150Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-20T00:35:23.150Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "A bee-scouts commit message says served skill: 1071/glb-structure-check at 23d7bc5.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-20T00:35:23.150Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "UNKNOWN",
+      "text": "The Hugging Face datasets page shows Datasets 1,137,168.",
+      "check": "page",
+      "missing": "Its source holds no passage that says this."
+    },
+    {
+      "id": "c4",
+      "label": "UNKNOWN",
+      "text": "Whether the GLB fixture dataset exists as a live page with nine cases and all named files.",
+      "check": "page",
+      "missing": "The live Hugging Face dataset page and its served file list."
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "Whether self_test.py for the GLB fixture passed.",
+      "check": "page",
+      "missing": "A self_test.py run output and exit code from its folder."
+    },
+    {
+      "id": "c6",
+      "label": "DERIVED",
+      "text": "The real-work share of recent bee-scouts commits in the check is 0%.",
+      "check": "page",
+      "inputs": [
+        "c1"
+      ],
+      "math": "0 real work / 50 raw commits = 0/50 = 0%"
+    }
+  ],
+  "counts": {
+    "fact": 3,
+    "derived": 1,
+    "unknown": 4
+  },
+  "risks": [
+    "The pages do not include the GLB fixture dataset page, so its existence, file list, and nine cases are unconfirmed.",
+    "The pages do not show any self_test.py run or result for this tool.",
+    "Recent bee-scouts activity is classified in the checks as 0 real work out of 50 raw commits, which weakens evidence of ongoing shipping."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "The Hugging Face datasets page shows Datasets 1,137,168.: Its source holds no passage that says this.",
+    "Whether the GLB fixture dataset exists as a live page with nine cases and all named files.: The live Hugging Face dataset page and its served file list.",
+    "Whether self_test.py for the GLB fixture passed.: A self_test.py run output and exit code from its folder."
+  ],
+  "wouldChangeMind": [
+    "A live GLB fixture dataset page showing its files and nine cases.",
+    "A pasted self_test.py run with exit code 0 from its folder.",
+    "Evidence of real-work commits in bee-scouts beyond the checked 50-commit window."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets",
+      "finalUrl": "https://huggingface.co/datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:35:22.664Z",
+      "extractor": "page-text-v1",
+      "sha256": "255a179189ffbecb559128294086b02a22d3c6f13a14e86f913dd135554da635",
+      "bytes": 256748,
+      "quote": "1T&quot;,&quot;type&quot;:&quot;size_categories&quot;}],&quot;format&quot;:[{&quot;id&quot;:&quot;format:json&quot;,&quot;label&quot;:&quot;json&quot;,&quot;type&quot;:&quot;format&quot;},{&quot;id&quot;:&quot;format:csv&quot;,&quot;label&quot;:&quot;csv&quot;,&quot;type&quot;:&quot;format&quot;},{&",
+      "quoteSha256": "0192e997a88f8fc7a130ec2439da6bfde860330ee1af79f2d6d657737c2b781e"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-20T00:35:23.150Z",
+      "fetchedAt": "2026-11-19T00:35:16.382Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "c709850e318b04efb8f8b74c90b64c2c81dd8a90f48178acf4a61d7ba2ecb01a"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-19-1071-glb-structure-check.md",
+  "decidedBy": "bee"
+}
