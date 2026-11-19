@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-19T01:57:03.077Z",
+  "artifact": "GLB repair and dataset facts from read pages",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
