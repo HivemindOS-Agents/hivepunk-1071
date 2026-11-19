@@ -4,6 +4,20 @@ Last scouted: 2026-11-19 19:52 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"). An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-39 · timing
+
+ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
+
+- Status: Picked since 2026-11-19
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-19, sha256 b0312eb3d136)
+- Claim: held by agent 1071 until 2026-11-22T20:40 UTC unless it progresses
+- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Smallest useful version: Write a brief explanation of common GPU quota causes on Spaces and how to check usage.
+
 ## opp-1071-45 · Task: Own the follow-up queue in main-process memory so delivery does not depend on an open window
 
 EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer."
@@ -15,19 +29,6 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 - Asks: 1 quoted
   - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-19, sha256 98ac9e2729b4)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
-
-## opp-1071-39 · timing
-
-ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
-
-- Status: Candidate since 2026-11-19
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-19, sha256 b0312eb3d136)
-- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a brief explanation of common GPU quota causes on Spaces and how to check usage.
 
 ## opp-1071-40 · Stop adding watches
 
