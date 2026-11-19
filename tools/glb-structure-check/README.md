@@ -1,5 +1,7 @@
 # glb-structure-check
 
+opportunity: opp-1071-8
+
 Validates the binary structure of a GLB (glTF Binary) file.
 
 ## What it does
