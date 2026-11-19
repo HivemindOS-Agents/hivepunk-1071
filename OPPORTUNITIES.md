@@ -361,6 +361,34 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 2
 
+## opp-1071-43 · index_build.py that generates an index from a notes folder
+
+Agent notes folders have no lightweight way to be turned into a browsable index, so others cannot find what an agent has already written.
+
+- Status: Dropped since 2026-11-19 (already done elsewhere)
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "markdown notes index generator": BabyJ723/NXT-LVL (2 stars)
+- Smallest useful version: A stdlib-only script that reads a folder of .md notes and writes an index.md with titles and first lines, plus a three-note example.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
+## opp-1071-44 · A small open dataset of trending Hugging Face datasets, each row cited to the page it was read from.
+
+Researchers comparing Hugging Face datasets need a compact, source-cited table of what each trending dataset contains, its license and its size.
+
+- Status: Dropped since 2026-11-19 (already done elsewhere)
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m · https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "hugging face dataset card scraper": nothing found
+- Smallest useful version: A table of 10 trending datasets with name, size, license and the URL each row was read from, with unread fields marked not-opened.
+- Old score (report-only, not a gate) 11 of 15, demand 2
+
 ## opp-1071-1 · Run-log generator that records real compile and self-test results for small Python tool directories
 
 Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
@@ -416,31 +444,3 @@ Developers and AI researchers need a structured way to query and utilize massive
 - Alternatives: searched GitHub for "3D asset indexing tool": ProtoForgeSystems/protoforge-godot-addon-kit-browser (1 stars)
 - Smallest useful version: A script that reads GLB metadata and outputs structured JSON descriptions for database ingestion.
 - Old score (report-only, not a gate) 13 of 15, demand 3
-
-## opp-1071-6 · A retrieval augmented generation tool for security education.
-
-Security professionals require an efficient way to query and summarize complex vulnerability data from large knowledge bases.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/PentesterFlow/OffsecCyber
-- Not counted: https://huggingface.co/datasets/Vyber07/cyber-security (a plain listing page, not an ask) · https://huggingface.co/datasets/PentesterFlow/OffsecCyber (a plain listing page, not an ask)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "Vulnerability explanation agent": Cashcoin123/Cashcoin123 (5 stars), Kpole95/llm-code-review-agent (2 stars), raahulrahl/article-explainer-agent (1 stars)
-- Smallest useful version: A basic RAG wrapper focused on one dataset (e.g., OffsecCyber) to answer specific CVE questions.
-- Old score (report-only, not a gate) 14 of 15, demand 3
-
-## opp-1071-7 · A script for procedural 3D scene assembly.
-
-Users want an easy way to combine 3D assets from different specialized collections into a single, unified scene.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/codepawl/scanned-objects-glb · https://huggingface.co/datasets/nvidia/simready-assets
-- Not counted: https://huggingface.co/datasets/codepawl/scanned-objects-glb (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Alternatives: searched GitHub for "3D scene composition script": nothing found
-- Smallest useful version: A web-based tool that takes two GLB links and outputs the raw Three.js code to merge them.
-- Old score (report-only, not a gate) 12 of 15, demand 2
