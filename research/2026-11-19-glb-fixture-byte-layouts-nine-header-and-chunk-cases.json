@@ -1,0 +1,224 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-19T07:19:20.999Z",
+  "subject": "glb-fixture-byte-layouts-nine-header-and-chunk-cases",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages read, only the general Hugging Face upload process is established. The claimed GLB fixture upload, read-back, and revision remain unconfirmed, so they should not be reported as done.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The Hub documentation says a file can be uploaded after creating a repository",
+      "check": "page",
+      "source": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "quote": "Once you’ve created a repository with create_repo() , you can upload a file to your repository using upload_file() .",
+      "sourceId": "src-1",
+      "quoteSha256": "575346b3eceb0644ed2a93a3effa19b338d75317ea16fda454644b32b274033f"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Uploading files to the Hub requires logging in to a Hugging Face account",
+      "check": "page",
+      "source": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "quote": "Whenever you want to upload files to the Hub, you need to log in to your Hugging Face account.",
+      "sourceId": "src-1",
+      "quoteSha256": "6d22166ec2cd81445ed233048b44d49ce855ec6d001effff5d9d73c404987083"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The Hub documentation describes upload_folder for uploading a local folder to an existing repository",
+      "check": "page",
+      "source": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "quote": "Use the upload_folder() function to upload a local folder to an existing repository.",
+      "sourceId": "src-1",
+      "quoteSha256": "17ea59b81dc92d5989ef67c112044981c7ac28eff85a25cf44f88f1967d58a36"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "A dataset repository hosts dataset files including revision history",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "sourceId": "src-3",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Creating a dataset card creates a README.md file in the repository",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "This button creates a README.md file in your repository.",
+      "sourceId": "src-3",
+      "quoteSha256": "4e2b00dcc9cb5c613a9092546b5ae70db294aa673490adf71d8c08ba5fc9693a"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The dataset documentation lists .csv among supported data extensions for Hub UI upload",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/upload_dataset",
+      "quote": "We support many text, audio, and image data extensions such as .csv , .mp3 , and .jpg among many others.",
+      "sourceId": "src-3",
+      "quoteSha256": "5b2d4a7217c4b6153c46c902b5503a104fcf3ba9b55e67a8c8d925a974ca23ef"
+    },
+    {
+      "id": "c7",
+      "label": "DERIVED",
+      "text": "The pages establish the upload route and repository revision history but do not establish that the target GLB files were uploaded",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "math": "c1 and c3 describe methods, c4 describes what a repository can host; none of the three states that the target files or the target dataset were uploaded."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether README.md and data/data.csv from tools/glb-fixture-byte-layouts are present on the target dataset",
+      "check": "page",
+      "missing": "A live read-back of the target dataset file listing and file contents"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The row count of data/data.csv on the live dataset",
+      "check": "page",
+      "missing": "The data/data.csv file itself or a dataset viewer row count from a page read"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The live revision or version commit of the target dataset upload",
+      "check": "page",
+      "missing": "A commit or revision page for the target dataset showing the upload commit"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether GOAL.md was updated",
+      "check": "page",
+      "missing": "The updated GOAL.md file or a page showing its new contents"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The GLB fixture byte-layout cases and any self-test result",
+      "check": "page",
+      "missing": "The tools/glb-fixture-byte-layouts files, checker output, or self-test output from a page read"
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 1,
+    "unknown": 5
+  },
+  "risks": [
+    "Uploading requires logging in to a Hugging Face account, as stated in the Hub documentation.",
+    "By default, .gitignore is taken into account for upload_folder, which could affect which local files are uploaded.",
+    "Text files such as .csv are not tracked by Git LFS by default and, if greater than 10MB, will not be committed and uploaded, as stated in the dataset documentation.",
+    "A dataset card creates a README.md, so the contents of an existing README.md could be overwritten or need checking after upload.",
+    "No page read provides live read-back evidence for the target dataset, so a false-success report cannot be ruled out from the pages."
+  ],
+  "unknowns": [
+    "Whether README.md and data/data.csv from tools/glb-fixture-byte-layouts are present on the target dataset: A live read-back of the target dataset file listing and file contents",
+    "The row count of data/data.csv on the live dataset: The data/data.csv file itself or a dataset viewer row count from a page read",
+    "The live revision or version commit of the target dataset upload: A commit or revision page for the target dataset showing the upload commit",
+    "Whether GOAL.md was updated: The updated GOAL.md file or a page showing its new contents",
+    "The GLB fixture byte-layout cases and any self-test result: The tools/glb-fixture-byte-layouts files, checker output, or self-test output from a page read"
+  ],
+  "wouldChangeMind": [
+    "A live read-back page for the target dataset listing README.md and data/data.csv",
+    "A commit or revision identifier for the upload plus a verified row count for data/data.csv",
+    "The tool files or checker output showing the GLB fixture cases and their results"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Upload files to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "finalUrl": "https://huggingface.co/docs/huggingface_hub/guides/upload",
+      "status": 200,
+      "fetchedAt": "2026-11-19T07:19:29.336Z",
+      "extractor": "page-text-v1",
+      "sha256": "9bfb1a38cf7c3ab3cdeadfc4af3e31600593d073097aced14194d84b8d96a890",
+      "bytes": 214815,
+      "quote": "Once you’ve created a repository with create_repo() , you can upload a file to your repository using upload_file() .",
+      "quoteSha256": "575346b3eceb0644ed2a93a3effa19b338d75317ea16fda454644b32b274033f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Hugging Face Dataset Upload Decision Guide · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "fetchedAt": "2026-11-19T07:19:29.081Z",
+      "extractor": "page-text-v1",
+      "sha256": "1520ecaf96c5ea66f6be994d53970489f94b138e05883667454b3e00e16ac9ae",
+      "bytes": 294408,
+      "quote": "Up to get started Copy page Hugging Face Dataset Upload Decision Guide This guide is primarily designed for LLMs to help users upload datasets to the Hugging Face Hub in the most compatible format.",
+      "quoteSha256": "6b3b3467830a2964bd5f42df150028a52c5dfc9d42588af553dc7c5dc1025f77"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-19T07:19:28.943Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 151115,
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Uploading datasets · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-adding",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-adding",
+      "status": 200,
+      "fetchedAt": "2026-11-19T07:19:28.914Z",
+      "extractor": "page-text-v1",
+      "sha256": "ffa1465420c6f7827f6508746248fac059bde91b8e43c784062da835fb707036",
+      "bytes": 218504,
+      "quote": "Create a repository A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "5180a85542c0b5c7ac1332a466b6006de53bfd12f2380b0da44b1e2b873340f7"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Upload folder using huggingface_hub · longcodeu/longcodeu-dataset at f4c06ae",
+      "url": "https://huggingface.co/datasets/longcodeu/longcodeu-dataset/commit/f4c06ae5b879ff739bfe85f391628e755a1d51e3",
+      "finalUrl": "https://huggingface.co/datasets/longcodeu/longcodeu-dataset/commit/f4c06ae5b879ff739bfe85f391628e755a1d51e3",
+      "status": 200,
+      "fetchedAt": "2026-11-19T07:19:29.078Z",
+      "extractor": "page-text-v1",
+      "sha256": "5799bcd8354f57c87b716c222d71809f3958b9857fca6981a53d655995886d00",
+      "bytes": 1500267,
+      "quote": "Upload folder using huggingface_hub · longcodeu/longcodeu-dataset at f4c06ae XuyuanGuo commited on May 30, 2025 Commit f4c06ae · verified · 1 Parent(s): 8fdbaa4 Upload folder using huggingface_hub Browse files This view is limited to 50 files because it contains too many changes.",
+      "quoteSha256": "eb0db93fd7381a7fb2c97299c099b5eb801c94b0572d46840bc22f7d249d3a83"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-19-glb-fixture-byte-layouts-nine-header-and-chunk-cases.md",
+  "decidedBy": "bee"
+}
