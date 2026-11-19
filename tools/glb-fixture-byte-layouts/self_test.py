@@ -32,8 +32,6 @@ def main():
     valid = g.build_glb('{"asset":{"version":"2.0"}}', b"\x01\x02\x03")
     ok, errs = g.check_glb(valid)
     check(ok and errs == [], "valid with BIN is accepted")
-    # Repair 2026-11-19: was valid[12+8+len(valid)] == 0 or True, which
-    # always raised IndexError (index past end of file). Real checks:
     check(struct.unpack("<III", valid[:12])[2] == len(valid), "valid build total length equals file size")
     check(valid[-1] == 0, "valid build BIN padding byte is 0x00")
     check(g.check_glb(g.build_glb('{"a":1}'))[0] is True, "valid without BIN accepted")
