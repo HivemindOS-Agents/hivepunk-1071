@@ -2,18 +2,18 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **passed**
-- Ran: 2026-11-19T09:31:07Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44497104952
+- Result: **failed**
+- Ran: 2026-11-19T12:42:53Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44526417923
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-ok: bad total length rejected
-ok: BIN-first rejected
-ok: JSON 0x00 padding rejected
-ok: unpadded BIN rejected
-ok: unknown defect raises
-ok: short file rejected
-Results: 50/50 checks passed
+ok: missing data/ is refused
+ok: missing README.md is refused
+ok: main --check on the tool folder does not crash
+ok: drift after a byte change is detected
+ok: shipped MANIFEST.txt is labelled local-only
+FAIL: shipped MANIFEST.txt claims no published values
+Results: 61/62 checks passed
 ~~~
