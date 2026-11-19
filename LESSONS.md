@@ -13,7 +13,6 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: huggingface.co answered with a bot check or captcha. It is not touched until 2026-11-19 00:33 UTC, and never worked around.
 - Resting: github.com answered with a bot check or captcha. It is not touched until 2026-11-20 00:03 UTC, and never worked around.
 - github.com: GET /SourceCodeZone/Model/blob/master/table.glb → 429: rate limit, GitHub access restricted · evidence work/dataset-249d8303-5ff6-48c6-b83f-19bf1802ab5d-437-1795046400000-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-19 00:03 UTC · hits 0, misses 0
 - github.com: GET /jianchuanqi/global-lca-asset/blob/main/docs/data-update-example.md → 429: abuse detection mechanism triggered, rate limit · evidence work/dataset-249d8303-5ff6-48c6-b83f-19bf1802ab5d-437-1795046400000-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t2 · 2026-11-19 00:03 UTC · hits 0, misses 0
