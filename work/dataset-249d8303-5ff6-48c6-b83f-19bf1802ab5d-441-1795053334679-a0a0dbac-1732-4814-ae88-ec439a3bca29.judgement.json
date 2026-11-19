@@ -1,0 +1,138 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:441:1795053334679:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Published a different dataset instead of repairing the target nine-case GLB fixture dataset, with no evidence of GOAL.md update, nine sourced cases, self_test.py run, live file/row verification, ARTIFACTS.md record, or forum post.",
+  "description": "The trace shows only unrelated dataset page reads followed by a repo create, commit, and settings update. The final output reports creating 'glb-repair-and-dataset-facts-from-read-pages', not the required target dataset, and provides no forum URL, test output, or verification details.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/barty/SWE-Repair",
+      "status": 200,
+      "error": null,
+      "ms": 124,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "polyvia3d.com",
+      "path": "/repair/glb",
+      "status": 200,
+      "error": null,
+      "ms": 131,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/JetBrains-Research/lca-ci-builds-repair",
+      "status": 200,
+      "error": null,
+      "ms": 138,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/resolve-cache/datasets/John6666/forum2/:id/tiny_vlm_(2)_patched.ipynb",
+      "status": 200,
+      "error": null,
+      "ms": 150,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 237,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/franlucc/defects4c",
+      "status": 200,
+      "error": null,
+      "ms": 240,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/codepawl/abo-glb",
+      "status": 200,
+      "error": null,
+      "ms": 295,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/code-rag-bench/github-repos-python/viewer",
+      "status": 200,
+      "error": null,
+      "ms": 783,
+      "at": "2026-11-19T01:56:49.175Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 87,
+      "at": "2026-11-19T01:57:00.823Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 296,
+      "at": "2026-11-19T01:57:00.910Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 364,
+      "at": "2026-11-19T01:57:01.206Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 208,
+      "at": "2026-11-19T01:57:01.570Z"
+    }
+  ],
+  "at": "2026-11-19T01:57:16.916Z"
+}
