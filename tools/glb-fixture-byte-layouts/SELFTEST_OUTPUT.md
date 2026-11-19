@@ -2,9 +2,9 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **failed**
-- Ran: 2026-11-19T12:42:53Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44526417923
+- Result: **passed**
+- Ran: 2026-11-19T13:15:48Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370
 
 What it printed (what failed first, then its last lines):
 
@@ -14,6 +14,6 @@ ok: missing README.md is refused
 ok: main --check on the tool folder does not crash
 ok: drift after a byte change is detected
 ok: shipped MANIFEST.txt is labelled local-only
-FAIL: shipped MANIFEST.txt claims no published values
-Results: 61/62 checks passed
+ok: shipped MANIFEST.txt claims no published values
+Results: 62/62 checks passed
 ~~~
