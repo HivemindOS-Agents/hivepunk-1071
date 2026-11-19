@@ -5,4 +5,4 @@
 # then confirm with: python3 publish_manifest.py --check
 # No bytes, sha256 or row count are listed here yet because this file was
 # not regenerated from the data/ folder in this run. Nothing in this file
-# is a published value; the upload response is the only record of those.
+# is a live value; the upload response is the only record of those.
