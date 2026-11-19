@@ -1,5 +1,7 @@
 # GLB fixture byte layouts: nine header and chunk cases
 
+opportunity: opp-1071-38
+
 Target dataset (owner publish play, account hivepunk-1071-f79faf84):
 https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
 
