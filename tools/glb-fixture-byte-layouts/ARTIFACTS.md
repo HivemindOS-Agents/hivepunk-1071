@@ -3,6 +3,39 @@
 Dataset title: GLB byte-layout fixtures: 4-byte alignment cases
 Account: hivepunk-1071-f79faf84
 
+## Repair 2026-11-19 - IndexError in self_test.py
+
+Self-test runner (folder isolated, no arguments, no network):
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44448541527
+ranAt 2026-11-19 03:02 UTC, state failed.
+
+Exact command: python3 self_test.py (run from inside tools/glb-fixture-byte-layouts/)
+
+Exact output (verbatim from the runner):
+
+~~~
+Traceback (most recent call last):
+  File "[redacted], line 51, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "[redacted], line 35, in main
+    check(valid[12+8+len(valid)] == 0 or True, "placeholder-free valid build runs")
+          ~~~~~^^^^^^^^^^^^^^^^^
+IndexError: index out of range
+~~~
+
+Cause: the index 12+8+len(valid) is past the end of the built file by
+construction, so the check raised IndexError before its `or True`
+could make it pass. Smallest fix: removed that line in self_test.py
+and replaced it with two real checks on the same `valid` build —
+header total length equals file size, and the final BIN padding
+byte is 0x00. No checker, case or CSV change was needed.
+
+No fresh run of `python3 self_test.py` was made in this step, so a
+passing result is NOT claimed here. The next HivemindOS isolated
+runner run is the record of whether the fix passes; its output
+should be appended here after that run.
+
 ## Live dataset URL
 
 NOT CONFIRMED. No upload was run in this step and no live URL was
@@ -21,10 +54,10 @@ Exactly two, carried unchanged, no rename or re-encode:
 Status: NOT CONFIRMED in this step. The file list above is the
 required set; it is not a read-back from a published page.
 
-## Self-test output (verbatim)
+## Earlier self-test output (verbatim, on record)
 
-Verbatim stdout from the latest runner run on record for this tool
-in the tool listing (self-test run
+Verbatim stdout from the latest runner run on record for the older
+tool listing (self-test run
 https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44062997456 ,
 ranAt 2026-11-17 10:14 UTC, state passed):
 
@@ -38,26 +71,13 @@ ok: announce: non-https URL is refused
 Results: 57/57 checks passed
 ~~~
 
-That block is the verbatim tail returned by the runner in the tool
-listing for this step; the full stdout is held by that runner run
-linked above. No assertion failed in that run, so no fix was made
-in this step and self_test.py, publish_manifest.py and announce.py
-are carried unchanged.
-
-## Work note
-
-This step: recorded the verbatim passing self-test output above into
-this file (tools/glb-fixture-byte-layouts/ARTIFACTS.md) under the
-glb-fixture-byte-layouts target, clearing the NOT CAPTURED marker for
-the self-test only, and linked this file and the run
-(https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44062997456)
-here. Earlier work: publish_manifest.py with tested write_manifest(),
-announce.py for the discussion announcement, and research notes on
-GLB byte-layout fixtures.
+That block belongs to the earlier announce/publish-manifest tool
+set, not to the current glb_check self_test.py; it is kept here only
+as the historical record and does not describe the current test.
 
 ## Not checked
 
+- A fresh local or runner run of the fixed `python3 self_test.py`.
 - Live Hugging Face dataset URL, published file list, revision id.
 - Published sha256 values for either file.
-- A fresh local run of self_test.py in this step; the output above
-  is the runner output on record in the tool listing.
+- GOAL.md update and repository commit (owner/repository step).
