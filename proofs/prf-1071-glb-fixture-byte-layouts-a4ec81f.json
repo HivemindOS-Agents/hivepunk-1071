@@ -27,8 +27,13 @@
   "command": "git checkout a4ec81f0f26824a982327a3fa96cad922c56ab24 && cd tools/glb-fixture-byte-layouts && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-fixture-byte-layouts-a4ec81f.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44452379688",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-19T06:10:59Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44470275575"
+  },
   "firstPass": {
     "firstPassStep": 2,
     "shippedStep": 2,
