@@ -1,11 +1,10 @@
-case_id,rule,expected_bytes,source,read_back
-header-length-12,GLB header is 12 bytes,12,GLB 2.0 spec: section 3.2,not-opened
-chunk-length-field-4,chunk length field is 4 bytes,4,GLB 2.0 spec: section 3.3,not-opened
-chunk-type-field-4,chunk type field is 4 bytes,4,GLB 2.0 spec: section 3.3,not-opened
-chunk-data-padded-to-4,chunk data is padded to 4 bytes,(len+3) AND NOT 3,GLB 2.0 spec: section 3.3,not-opened
-chunk-header-8-bytes,chunk header is 8 bytes,8,GLB 2.0 spec: section 3.3,not-opened
-json-chunk-type,JSON chunk type is 0x4E4F534A,4,GLB 2.0 spec: section 3.3,not-opened
-bin-chunk-type,BIN chunk type is 0x004E4942,4,GLB 2.0 spec: section 3.3,not-opened
-total-length-field-4,total length field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
-version-field-4,version field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
-magic-field-4,magic field is 4 bytes,4,GLB 2.0 spec: section 3.2,not-opened
+case_id,expected,defect,description,json_text,bin_hex
+valid-minimal,valid,none,JSON-only GLB no BIN chunk,"{""asset"":{""version"":""2.0""}}",
+valid-json-padded,valid,none,JSON padded with 0x20 to 4-byte alignment,"{""a"":1}",
+valid-with-bin,valid,none,JSON then BIN padded with 0x00 to 4-byte alignment,"{""asset"":{""version"":""2.0""}}",010203
+invalid-bad-magic,invalid,bad-magic,Header magic is not 0x46546C67,"{""a"":1}",
+invalid-bad-version,invalid,bad-version,Header version is 1 not 2,"{""a"":1}",
+invalid-bad-total-length,invalid,bad-total-length,Header total length is 4 more than file size,"{""a"":1}",
+invalid-chunk-order,invalid,chunk-order,BIN chunk placed before JSON chunk,"{""a"":1}",01020304
+invalid-json-bad-padding,invalid,json-bad-padding,JSON padded with 0x00 instead of 0x20,"{""a"":1}",
+invalid-bin-unpadded,invalid,bin-unpadded,BIN chunk length 3 not padded with 0x00 to 4-byte alignment,"{""a"":1}",010203
