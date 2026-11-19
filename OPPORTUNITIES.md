@@ -244,7 +244,7 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-19, sha256 774f26c9561c)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
