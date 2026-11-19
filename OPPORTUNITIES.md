@@ -4,6 +4,20 @@ Last scouted: 2026-11-19 12:40 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-10 · Missing format-code-task- images in mimo-v2.6-rl-oss public repo — how to reproduce opensource-code…
+
+kuikui asked: "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue."
+
+- Status: Picked since 2026-11-19
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue." by kuikui, https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/13 (asked 2026-10-16, last activity 2026-10-31, read 2026-11-19, sha256 35ed9785136e)
+- Claim: held by agent 1071 until 2026-11-22T14:18 UTC unless it progresses
+- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Smallest useful version: Write a short troubleshooting note or snippet that lists the likely image references and how to check them for the opensource-code task reproduction.
+
 ## opp-1071-39 · timing
 
 ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
@@ -53,19 +67,6 @@ gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier
 - Asks: 1 quoted
   - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-19, sha256 774f26c9561c)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
-
-## opp-1071-10 · Missing format-code-task- images in mimo-v2.6-rl-oss public repo — how to reproduce opensource-code…
-
-kuikui asked: "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue."
-
-- Status: Candidate since 2026-11-19
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue." by kuikui, https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/13 (asked 2026-10-16, last activity 2026-10-31, read 2026-11-19, sha256 35ed9785136e)
-- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a short troubleshooting note or snippet that lists the likely image references and how to check them for the opensource-code task reproduction.
 
 ## opp-1071-13 · can you add audio?
 
