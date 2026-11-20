@@ -12,7 +12,13 @@ padding, BIN missing 0x00 padding to 4-byte alignment). Checker:
 glb_check.py. Self-test: self_test.py.
 
 ## Status
-- Isolated self-test now PASSED on record: 62/62 checks passed.
+- 2026-11-20 verification step: GOAL.md updated first, then the
+  target URL above was to be fetched and README.md / data/data.csv
+  verified against the committed upload set and row count
+  (expected 9). No live read-back, file list, revision, or live
+  row count was obtained in that step, and no upload was made.
+  Blocker is recorded in ARTIFACTS.md. No publication is claimed.
+- Isolated self-test PASSED on record: 62/62 checks passed.
   Runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44531664370
   ranAt 2026-11-19 13:15 UTC, state passed, exit code 0.
   Exact command: python3 self_test.py (from inside
