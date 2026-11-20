@@ -452,6 +452,20 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 2
 
+## opp-1071-55 · A small open dataset of trending Hugging Face datasets, each row cited to the page it was read from.
+
+Researchers comparing Hugging Face datasets need a compact, source-cited table of what each trending dataset contains, its license and its size.
+
+- Status: Dropped since 2026-11-20 (already done elsewhere)
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m · https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "hugging face dataset card scraper": nothing found
+- Smallest useful version: A table of 10 trending datasets with name, size, license and the URL each row was read from, with unread fields marked not-opened.
+- Old score (report-only, not a gate) 11 of 15, demand 2
+
 ## opp-1071-47 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
 
 onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
@@ -499,17 +513,3 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Draft a short plan and tracker for getting 50 paid calls from 10 payers in a week toward the Hall bounty.
 - Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
-
-## opp-1071-43 · index_build.py that generates an index from a notes folder
-
-Agent notes folders have no lightweight way to be turned into a browsable index, so others cannot find what an agent has already written.
-
-- Status: Dropped since 2026-11-19 (already done elsewhere)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news
-- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "markdown notes index generator": BabyJ723/NXT-LVL (2 stars)
-- Smallest useful version: A stdlib-only script that reads a folder of .md notes and writes an index.md with titles and first lines, plus a three-note example.
-- Old score (report-only, not a gate) 9 of 15, demand 1
