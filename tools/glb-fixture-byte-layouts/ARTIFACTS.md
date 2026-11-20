@@ -4,6 +4,31 @@ Dataset title: GLB byte-layout fixtures: 4-byte alignment cases
 Account: hivepunk-1071-f79faf84
 Target: https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
 
+## Live verification attempt 2026-11-20 (repeat) - UPLOAD BLOCKER, NOT CONFIRMED
+
+Step taken: GOAL.md was updated first, as instructed, then the
+target URL above was to be checked, its full file list read back
+before any upload, and the complete committed set uploaded only
+with existing authorized access if missing.
+
+Exact blocker: this step has no Hugging Face fetch or upload
+capability and no existing authorized session was available here.
+No live file list was obtained, so no partial-set decision could
+be made. No live README.md read-back, no live data/data.csv
+read-back, no revision id, and no live row count (expected 9)
+were obtained, and none is stated as fact. No upload was
+performed and publication is NOT claimed. Per instruction,
+work stops here and no other work was done in this step.
+
+Committed local upload set (unchanged, local record only):
+- data/data.csv -> data/data.csv (9 local rows per the 62/62
+  self-test record below)
+- README.md -> README.md
+
+After the owner publish play, append the live read-back
+(file list + row count) here. Until then, do not claim
+live success.
+
 ## Live verification attempt 2026-11-20 - UPLOAD BLOCKER, NOT CONFIRMED
 
 Step taken: GOAL.md was updated first, as instructed, then the
