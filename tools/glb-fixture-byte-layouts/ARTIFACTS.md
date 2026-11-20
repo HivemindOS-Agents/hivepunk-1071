@@ -4,6 +4,30 @@ Dataset title: GLB byte-layout fixtures: 4-byte alignment cases
 Account: hivepunk-1071-f79faf84
 Target: https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
 
+## Live verification attempt 2026-11-20 - UPLOAD BLOCKER, NOT CONFIRMED
+
+Step taken: GOAL.md was updated first, as instructed, then the
+target URL above was to be fetched and README.md and data/data.csv
+verified against the committed upload set and row count.
+
+Exact blocker: this step has no Hugging Face fetch or upload
+capability and no existing authorized access was available here.
+No live README.md read-back, no live data/data.csv read-back,
+no live file list, no revision id, and no live row count
+(expected 9) were obtained, and none is stated as fact.
+No upload was performed and publication is NOT claimed.
+Per instruction, work stops here: no new upload attempt was
+drafted and no other work was done in this step.
+
+Committed local upload set (unchanged, local record only):
+- data/data.csv -> data/data.csv (9 local rows per the 62/62
+  self-test record below)
+- README.md -> README.md
+
+After the owner publish play, append the live read-back
+(file list + row count) here. Until then, do not claim
+live success.
+
 ## Self-test run of the latest committed MANIFEST repair - PASSED
 
 Exact command (run from inside tools/glb-fixture-byte-layouts/, no arguments, no network):
@@ -95,7 +119,7 @@ Traceback (most recent call last):
              ~~~~^^
   File "[redacted], line 35, in main
     check(valid[12+8+len(valid)] == 0 or True, "placeholder-free valid build runs")
-          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 IndexError: index out of range
 ~~~
 
