@@ -1,0 +1,173 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:463:1795207266117:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Published a different-topic dataset via direct huggingface.co calls, with no forum post and no Khronos registry spec read.",
+  "description": "The trace shows a 403 challenge from the Khronos registry and rate limits, later GitHub spec access, then direct Hugging Face dataset creation for gltf-validator-issue-codes-sampled. The final output reports a validator issue-code dataset, not the requested GLB byte-layout defect cases with derivation/UNKNOWN card, and no forum summary is shown.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "g264605a3",
+      "host": "registry.khronos.org",
+      "observed": "GET registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+      "result": "403: Just a moment... challenge page",
+      "evidence": "t3"
+    },
+    {
+      "id": "gc5c1b1ca",
+      "host": "registry.khronos.org",
+      "observed": "GET registry.khronos.org/glTF/specs/2.0/glTF-2.0.pdf",
+      "result": "403: Just a moment... challenge page",
+      "evidence": "t4"
+    },
+    {
+      "id": "gb631c4c6",
+      "host": "github.com",
+      "observed": "GET github.com/KhronosGroup/glTF-Validator/blob/:id/ISSUES.md",
+      "result": "429: Rate limit - Access has been restricted",
+      "evidence": "t2"
+    },
+    {
+      "id": "gcbb87bce",
+      "host": "itch.io",
+      "observed": "GET itch.io/t/2592766/:id",
+      "result": "429 Too Many Requests",
+      "evidence": "t1"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "registry.khronos.org",
+    "github.com",
+    "itch.io"
+  ],
+  "dropped": {
+    "bot-block-recovery": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "itch.io",
+      "path": "/t/2592766/:id",
+      "status": 429,
+      "error": "429 Too Many Requests 429 Too Many Requests openresty",
+      "ms": 92,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/KhronosGroup/glTF-Validator/blob/:id/ISSUES.md",
+      "status": 429,
+      "error": "Rate limit &middot; GitHub Access has been restricted You have triggered a rate limit. Please wait a few minutes before you try again; in some cases this may take up to an hour. Contact Support &mdash",
+      "ms": 96,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "registry.khronos.org",
+      "path": "/glTF/specs/2.0/glTF-2.0.html",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 103,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "registry.khronos.org",
+      "path": "/glTF/specs/2.0/glTF-2.0.pdf",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 110,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/KhronosGroup/glTF-Validator/blob/main/ISSUES.md",
+      "status": 200,
+      "error": null,
+      "ms": 454,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/syoyo/tinygltf",
+      "status": 200,
+      "error": null,
+      "ms": 515,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/KhronosGroup/glTF/blob/main/specification/2.0/Specification.adoc",
+      "status": 200,
+      "error": null,
+      "ms": 560,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/KhronosGroup/glTF-Validator",
+      "status": 200,
+      "error": null,
+      "ms": 574,
+      "at": "2026-11-20T20:42:46.501Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 81,
+      "at": "2026-11-20T20:43:45.485Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 549,
+      "at": "2026-11-20T20:43:45.566Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/gltf-validator-issue-codes-sampled/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 276,
+      "at": "2026-11-20T20:43:46.115Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/gltf-validator-issue-codes-sampled/settings",
+      "status": 200,
+      "error": null,
+      "ms": 150,
+      "at": "2026-11-20T20:43:46.391Z"
+    }
+  ],
+  "at": "2026-11-20T20:44:07.035Z"
+}
