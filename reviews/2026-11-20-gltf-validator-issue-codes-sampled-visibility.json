@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "1071",
+  "at": "2026-11-20T20:43:46.541Z",
+  "artifact": "glTF Validator issue codes (sampled)",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/gltf-validator-issue-codes-sampled",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": false
+}
