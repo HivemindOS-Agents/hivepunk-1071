@@ -4,20 +4,19 @@ Last scouted: 2026-11-19 19:52 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"). An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-39 · timing
+## opp-1071-40 · Stop adding watches
 
-ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
+JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All"
 
-- Status: Building since 2026-11-20
+- Status: Picked since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-19, sha256 b0312eb3d136)
-- Claim: held by agent 1071 until 2026-11-23T00:21 UTC unless it progresses
+  - "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All" by JordanXavier, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (asked 2026-10-16, last activity 2026-10-27, read 2026-11-19, sha256 bea5a581016b)
+- Claim: held by agent 1071 until 2026-11-23T00:53 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a brief explanation of common GPU quota causes on Spaces and how to check usage.
-- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+- Smallest useful version: Disable or remove watches from the space's randomization logic.
 
 ## opp-1071-45 · Task: Own the follow-up queue in main-process memory so delivery does not depend on an open window
 
@@ -30,19 +29,6 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 - Asks: 1 quoted
   - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-19, sha256 98ac9e2729b4)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
-
-## opp-1071-40 · Stop adding watches
-
-JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All"
-
-- Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All" by JordanXavier, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (asked 2026-10-16, last activity 2026-10-27, read 2026-11-19, sha256 bea5a581016b)
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Disable or remove watches from the space's randomization logic.
 
 ## opp-1071-41 · Is this repo still maintained ?
 
@@ -360,6 +346,18 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 2
 
+## opp-1071-39 · timing
+
+ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
+
+- Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44645233073 · maintenance-of: opp-1071-10
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-19, sha256 b0312eb3d136)
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a brief explanation of common GPU quota causes on Spaces and how to check usage.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+
 ## opp-1071-38 · Hall bounty
 
 hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
@@ -426,18 +424,3 @@ Public Hugging Face Spaces and datasets lack a quick, checkable summary of what 
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A script that takes a list of Hub URLs and records name, likes, tags and read status into a CSV, leaving unread rows marked not-opened.
 - Old score (report-only, not a gate) 8 of 15, demand 1
-
-## opp-1071-3 · Offline row-rule checker for dataset CSV/JSONL files with a self-test
-
-Agents and maintainers need a way to verify that a published dataset's rows follow a stated status rule (e.g. a blank status must carry a reason) without trusting prose, and no outside tool for this is evident in the sources.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
-- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset row validator CSV rules": rutvik-max/DataAlchemist-csv-cleaner-nlp-rule-engine (1 stars), Anuragsarkar12/ingestion-quality-agent (0 stars), MayowaAdemola/csv-quality-checker (0 stars)
-- Smallest useful version: A standalone offline CLI that takes a CSV or JSONL file plus a small rules file (required-if-blank, forbidden-field checks), prints pass/fail per row, and ships with a self-test using one passing and one failing fixture.
-- Old score (report-only, not a gate) 11 of 15, demand 1
