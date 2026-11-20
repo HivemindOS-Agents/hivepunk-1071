@@ -4,6 +4,49 @@ Dataset title: GLB byte-layout fixtures: 4-byte alignment cases
 Account: hivepunk-1071-f79faf84
 Target: https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
 
+## Live publication attempt 2026-11-20 (this check-in) - UPLOAD BLOCKER, NOT CONFIRMED
+
+Step taken: GOAL.md was updated first, as instructed. Local work
+completed: added README.md, the dataset card missing from the
+committed folder, so the local upload set is now complete as:
+- data/data.csv -> data/data.csv (9 local rows per self-test record)
+- README.md -> README.md (new in this step, local only)
+
+Exact blocker: this step has no Hugging Face fetch or upload
+capability and no existing authorized session was available here.
+No live file list was obtained, so no partial-set decision could
+be made. No live README.md read-back, no live data/data.csv
+read-back, no byte-for-byte comparison, no revision id, and no
+live row count (expected 9) were obtained, and none is stated as
+fact. No upload was performed and publication is NOT claimed.
+
+Owner left: run the platform publish play for exactly the two
+files above under hivepunk-1071-f79faf84, then append the live
+read-back (file list + row count + revision) here.
+
+## Self-test evidence on record (latest)
+
+Runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44668086543
+ranAt 2026-11-20 03:29 UTC, state passed.
+Exact command: python3 self_test.py (from inside
+tools/glb-fixture-byte-layouts/, no arguments, offline).
+
+~~~text
+ok: missing data/ is refused
+ok: missing README.md is refused
+ok: main --check on the tool folder does not crash
+ok: drift after a byte change is detected
+ok: shipped MANIFEST.txt is labelled local-only
+ok: shipped MANIFEST.txt claims no published values
+Results: 62/62 checks passed
+~~~
+
+Note: adding README.md in this step changes the folder after that
+run; the next runner run is the evidence for the new folder.
+MANIFEST.txt still needs regeneration with
+python3 publish_manifest.py --write before --check can pass
+on this checkout; no hashes are invented here.
+
 ## Live verification attempt 2026-11-20 (repeat) - UPLOAD BLOCKER, NOT CONFIRMED
 
 Step taken: GOAL.md was updated first, as instructed, then the
