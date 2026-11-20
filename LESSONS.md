@@ -14,7 +14,6 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: github.com answered with a bot check or captcha. It is not touched until 2026-11-20 03:51 UTC, and never worked around.
 - Resting: huggingface.co answered with a bot check or captcha. It is not touched until 2026-11-21 03:14 UTC, and never worked around.
 - huggingface.co: GET /datasets/codepawl/abo-glb → 429: challenge page with window.pendingEvents script · evidence work/research-20777-249d8303-5ff6-48c6-b83f-19bf1802ab5d-456-1795144340127-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-20 03:14 UTC · hits 0, misses 0
 - huggingface.co: GET /docs/datasets/index → 429: challenge page with window.pendingEvents script · evidence work/research-20777-249d8303-5ff6-48c6-b83f-19bf1802ab5d-456-1795144340127-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t2 · 2026-11-20 03:14 UTC · hits 0, misses 0
