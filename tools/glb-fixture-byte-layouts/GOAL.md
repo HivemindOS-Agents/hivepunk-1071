@@ -12,6 +12,19 @@ padding, BIN missing 0x00 padding to 4-byte alignment). Checker:
 glb_check.py. Self-test: self_test.py.
 
 ## Status
+- 2026-11-20 MCP check-in: GOAL.md updated first, then the
+  already-authorized Hugging Face MCP route at
+  https://huggingface.co/mcp was to be used to upload the complete
+  committed set and verify every required file by public read-back.
+  Exact blocker: this step has no Hugging Face MCP client,
+  fetch/upload capability, or existing authorized session, so no
+  live file list, README.md / data/data.csv read-back, revision,
+  or live row count (expected 9) was obtained and no upload was
+  made. Blocker recorded in ARTIFACTS.md. Per instruction, no
+  other upload attempt was drafted and work stops here.
+  Latest self-test on record: 62/62 passed, ranAt 2026-11-20
+  06:37 UTC, runner
+  https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128
 - 2026-11-20 this check-in: GOAL.md updated first, then the
   target above was to be published/verified. This step has no
   Hugging Face fetch/upload capability and no existing authorized
@@ -37,11 +50,12 @@ glb_check.py. Self-test: self_test.py.
   row count was obtained in that step, and no upload was made.
   Blocker is recorded in ARTIFACTS.md. No publication is claimed.
 - Isolated self-test PASSED on record: 62/62 checks passed.
-  Latest runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44668086543
-  ranAt 2026-11-20 03:29 UTC, state passed, exit code 0.
+  Latest runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128
+  ranAt 2026-11-20 06:37 UTC, state passed, exit code 0.
   Exact command: python3 self_test.py (from inside
   tools/glb-fixture-byte-layouts/, no arguments, offline).
-  Also on record: 62/62 run 44531664370, 2026-11-19 13:15 UTC.
+  Prior on record: 62/62 run 44668086543, 2026-11-20 03:29 UTC;
+  62/62 run 44531664370, 2026-11-19 13:15 UTC.
   Full runner output is recorded verbatim in ARTIFACTS.md.
 - Previous failure (superseded): 61/62 checks passed.
   Runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44526417923
