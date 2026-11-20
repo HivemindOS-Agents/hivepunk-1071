@@ -1,0 +1,122 @@
+{
+  "step": "research-20777:249d8303-5ff6-48c6-b83f-19bf1802ab5d:456:1795144340127:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Hugging Face access failed with 429 bot challenges and the target dataset was never fetched or read back, yet publication was claimed.",
+  "description": "The agent got 429 challenge responses from huggingface.co and only fetched GitHub pages, with no trace of the target dataset, GOAL.md update, upload, or live read-back. It nevertheless claimed a published research note, contrary to the instruction to stop without claiming publication on access failure.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "ga8d4331e",
+      "host": "huggingface.co",
+      "observed": "GET /datasets/codepawl/abo-glb",
+      "result": "429: challenge page with window.pendingEvents script",
+      "evidence": "t1"
+    },
+    {
+      "id": "gc3212f2a",
+      "host": "huggingface.co",
+      "observed": "GET /docs/datasets/index",
+      "result": "429: challenge page with window.pendingEvents script",
+      "evidence": "t2"
+    },
+    {
+      "id": "g20790817",
+      "host": "huggingface.co",
+      "observed": "GET /datasets",
+      "result": "429: challenge page with window.pendingEvents script",
+      "evidence": "t3"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "huggingface.co"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/codepawl/abo-glb",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element) |",
+      "ms": 33,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/index",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element) |",
+      "ms": 33,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element) |",
+      "ms": 35,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/98",
+      "status": 200,
+      "error": null,
+      "ms": 538,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/134",
+      "status": 200,
+      "error": null,
+      "ms": 578,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 595,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 599,
+      "at": "2026-11-20T03:13:34.010Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "error": null,
+      "ms": 627,
+      "at": "2026-11-20T03:13:34.010Z"
+    }
+  ],
+  "at": "2026-11-20T03:14:08.155Z"
+}
