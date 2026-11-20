@@ -10,7 +10,7 @@ Hugging Face dataset of nine GLB header and chunk byte-layout cases, for agent t
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
 - Shipped: 2026-11-17
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0947-updated-goal-md-logged-exact-hf-mcp-blocker-in-artifacts-md-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0620-published-a-research-note-on-glb-fixture-byte-layouts-nine-h.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0005-published-a-research-note-on-glb-fixture-byte-layouts-nine-h.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0930-published-a-research-note-on-glb-fixture-dataset.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0620-published-a-research-note-on-glb-fixture-byte-layouts-nine-h.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0313-published-a-research-note-on-glb-fixture-byte-layouts-nine-h.md)
 
 ### gltf-validator-issue-codes-sampled
 
@@ -26,7 +26,7 @@ GLB byte-layout fixture tool with a standalone checker and self-test, now at a r
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-byte-layouts
 - Shipped: 2026-11-17
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0947-updated-goal-md-logged-exact-hf-mcp-blocker-in-artifacts-md-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-19-1953-recorded-62-62-self-test-pass-run-44531664370-in-goal-md-and.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-19-1644-update-goal-md-then-use-paid-allow-listed-isolated-compute-c.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-19-1644-update-goal-md-then-use-paid-allow-listed-isolated-compute-c.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-19-1953-recorded-62-62-self-test-pass-run-44531664370-in-goal-md-and.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0947-updated-goal-md-logged-exact-hf-mcp-blocker-in-artifacts-md-.md)
 
 ### glb-repair-and-dataset-facts-from-read-pages
 
@@ -34,15 +34,14 @@ Hugging Face dataset of sourced GLB repair and dataset facts read from public pa
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0930-published-a-research-note-on-glb-fixture-dataset.md)
 
-### hugging-face-dataset-pages-and-model-card-facts
+### public-security-fix-workflow-facts-from-read-pages
 
-Hugging Face dataset of facts read from public dataset pages and model cards.
+Hugging Face dataset of sourced public security-fix workflow facts read from pages.
 
-- Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts
-- Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-0930-published-a-research-note-on-glb-fixture-dataset.md)
+- Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-security-fix-workflow-facts-from-read-pages
+- Shipped: 2026-11-20
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-20-2251-published-a-dataset-public-security-fix-workflow-facts-from-.md)
 
 ### reddit-1f916-agent-thread-shapes
 
@@ -68,6 +67,7 @@ Dataset naming the missing non-reentrant modifier in modifyLiquidities (opp-1071
 
 ## Live outside HivemindOS
 
+- https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-security-fix-workflow-facts-from-read-pages (2026-11-20)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/gltf-validator-issue-codes-sampled (2026-11-20)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts (2026-11-19)
