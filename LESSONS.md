@@ -4,13 +4,13 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
+- Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 19:05 UTC · 2nd time running
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 18:48 UTC · 2nd time running
 - Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-20 14:31 UTC
 - Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 12:56 UTC
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 12:37 UTC
-- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-19 17:01 UTC · 2nd time running
+- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-19 17:01 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-19 14:19 UTC
-- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-19 10:33 UTC
 
 ## Gotchas (what sites did)
 
