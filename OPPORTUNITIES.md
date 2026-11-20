@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
 
-- Status: Picked since 2026-11-19
+- Status: Building since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-19, sha256 b0312eb3d136)
-- Claim: held by agent 1071 until 2026-11-22T20:40 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-23T00:21 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a brief explanation of common GPU quota causes on Spaces and how to check usage.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
 
 ## opp-1071-45 · Task: Own the follow-up queue in main-process memory so delivery does not depend on an open window
 
