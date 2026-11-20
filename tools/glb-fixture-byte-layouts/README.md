@@ -1,38 +1,53 @@
-# GLB fixture byte layouts: nine header and chunk cases
+---
+license: mit
+dataset_info:
+  features:
+  - name: case_id
+    dtype: string
+  - name: expected
+    dtype: string
+  - name: defect
+    dtype: string
+  - name: description
+    dtype: string
+  - name: json_text
+    dtype: string
+  - name: bin_hex
+    dtype: string
+  splits:
+  - name: train
+    num_examples: 9
+configs:
+- config_name: default
+  data_files: data/data.csv
+---
 
-opportunity: opp-1071-38
+# GLB byte-layout fixtures: 4-byte alignment cases
 
-Target dataset (owner publish play, account hivepunk-1071-f79faf84):
-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases
+Nine small GLB header/chunk byte-layout cases for download and
+checking. Each row of `data/data.csv` rebuilds one GLB byte string
+with `glb_check.py`: 12-byte header (magic 0x46546C67, version 2,
+total length equal to file size), then a JSON chunk first and an
+optional BIN chunk second, each chunk length a multiple of 4, JSON
+padded with 0x20 spaces and BIN padded with 0x00.
 
-## What this is
+## Cases
 
-A repaired 9-row fixture dataset for GLB (glTF 2.0 binary) header and
-chunk byte layout. Each row in data/data.csv is one concrete case that
-glb_check.py rebuilds byte-for-byte: case_id, expected (valid/invalid),
-defect, description, json_text and bin_hex.
+Valid (3): `valid-minimal`, `valid-json-padded`, `valid-with-bin`.
 
-Cases: 3 valid (minimal JSON-only, JSON 0x20-padded, JSON+BIN with
-0x00 BIN padding to 4-byte alignment) and 6 invalid (bad magic,
-bad version, bad total length, BIN chunk before JSON, JSON padded
-with 0x00 instead of 0x20, BIN chunk not padded with 0x00 to a
-multiple of 4).
+Invalid (6): `invalid-bad-magic` (bad-magic), `invalid-bad-version`
+(bad-version), `invalid-bad-total-length` (bad-total-length),
+`invalid-chunk-order` (BIN before JSON), `invalid-json-bad-padding`
+(JSON padded with 0x00 instead of 0x20), `invalid-bin-unpadded`
+(BIN missing 0x00 padding to 4-byte alignment).
 
-## Run
+Columns: `case_id`, `expected` (valid/invalid), `defect`,
+`description`, `json_text`, `bin_hex` (empty when no BIN chunk).
 
-~~~bash
-python3 glb_check.py data/data.csv
-python3 self_test.py
-~~~
+## Use
 
-Stdlib only, no network, no upload.
-
-## Untested
-
-- Live Hugging Face files, revision and row count were not verified
-  in the build step; the publish play must upload data/data.csv and
-  README.md and read back the live row count (9) before claiming
-  the repair is live.
-- Full glTF specification beyond the header/chunk rules stated here.
-- Side datasets are superseded by this target per the goal; they
-  were not deleted here.
+Rebuild and check locally with `glb_check.py` against
+`data/data.csv`: valid rows must be accepted and invalid rows
+must be rejected with a reason. This card describes the local
+committed set only; it is not a read-back of any live page and
+claims no live revision, hash, or published row count.
