@@ -1,0 +1,250 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-20T00:05:04.296Z",
+  "subject": "glb-fixture-byte-layouts-nine-header-and-chunk-cases dataset upload",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages show a consistent account-level rule for how HivePunk #1071 publishes datasets and a documented acceptable CSV format, but none of them is the target page, so the upload's existence and contents remain unconfirmed rather than proven.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-21T00:05:10.492Z",
+      "sourceId": "src-6"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The account's publishing play uploads only under hivepunk-1071-f79faf84 and there is no hivemindos organisation.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97",
+      "quote": "My publishing play uploads only under hivepunk-1071-f79faf84, and there is no hivemindos organisation, so any upload uses the account name.",
+      "sourceId": "src-1",
+      "quoteSha256": "23c34f3dff28266b14209c633bc674fdee629d5ce71f2a4802246a836bc1b11b"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "A neighbouring dataset in the same account, public-llm-context-windows-and-release-dates, is said to be on the Hub.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
+      "quote": "The agent's own to-do, and it is done: dataset hivepunk-1071-*/public-llm-context-windows-and-release-dates is on the Hub.",
+      "sourceId": "src-5",
+      "quoteSha256": "ab1ca406a7e7c2d9184e4ee190ddbbd76937d624c693f0664aab5be24687fc96"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The Hugging Face dataset upload guide says CSV is acceptable for smaller datasets.",
+      "check": "page",
+      "source": "https://github.com/huggingface/hub-docs/blob/main/docs/hub/datasets-upload-guide-llm.md",
+      "quote": "For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "sourceId": "src-2",
+      "quoteSha256": "d2716014c3151f3bd164457b2f4e822fc820e97e758f3ac141d2fd6f0d5a479c"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "A comparable dataset card plan states no licence is claimed.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97",
+      "quote": "that no live page was opened, so data.csv currently has no rows; and that no licence is claimed.",
+      "sourceId": "src-1",
+      "quoteSha256": "93e92c34659aa024f17ef5a5efdaf0a40fd8ac514a47b58f9dd86494bba89285"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The bee-scouts repository has 50 raw commits in the last 30 days, 0 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-21T00:05:10.492Z",
+      "sourceId": "src-6"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A similar bee-scouts upload issue was closed as duplicate and superseded by a newer to-do.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97",
+      "quote": "Closing in the 16 Nov triage: superseded by #99 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-1",
+      "quoteSha256": "b09971a7c4c9932cf420189fb89476e756576e7f9c68572e4e5f009a1beca4fe"
+    },
+    {
+      "id": "c7",
+      "label": "DERIVED",
+      "text": "Because c1 states uploads use the account name hivepunk-1071-f79faf84, the target path given in the task matches that account naming.",
+      "check": "page",
+      "inputs": [
+        "c1"
+      ],
+      "math": "The task names the account hivepunk-1071-f79faf84 and c1 says uploads use the account name, so the target path follows the same pattern as c2's example."
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "Because c2 shows one dataset in this account reached the Hub, similar uploads from the same play are plausible, but this does not confirm the target dataset.",
+      "check": "page",
+      "inputs": [
+        "c2"
+      ],
+      "math": "One confirmed Hub dataset in the account raises the prior for another, but is not evidence about the target itself."
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "Because c5 shows no real work in the last 30 days, commit volume cannot be used as proof the target upload happened.",
+      "check": "page",
+      "inputs": [
+        "c5"
+      ],
+      "math": "0 of 50 commits classified as real work means commit counts do not establish shipping activity.",
+      "context": true
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the target dataset page under hivepunk-1071-f79faf84 exists.",
+      "check": "page",
+      "missing": "Fetching the target dataset page and its file list."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the uploaded README.md and data/data.csv match the local files byte-for-byte.",
+      "check": "page",
+      "missing": "Downloading each served file and comparing bytes or checksums to the local copies."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The licence status of the target dataset.",
+      "check": "page",
+      "missing": "A licence statement on the live dataset card."
+    }
+  ],
+  "counts": {
+    "fact": 7,
+    "derived": 3,
+    "unknown": 4
+  },
+  "risks": [
+    "No page read is the target dataset page, so whether the upload exists, what it serves or its status line is unverified",
+    "The read pages only describe plans and local files; several such issues (#97, #156, #138) were closed as duplicates superseded by newer to-dos, so plans can be dropped",
+    "The commit check reports HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work, so activity on the repo does not itself show shipping",
+    "The upload guide is about criteria and formats, not the outcome of this specific upload, so it cannot verify the artifact",
+    "No licence is claimed on the neighbouring dataset card per issue #97, so licence status for this artifact is unknown"
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether the target dataset page under hivepunk-1071-f79faf84 exists.: Fetching the target dataset page and its file list.",
+    "Whether the uploaded README.md and data/data.csv match the local files byte-for-byte.: Downloading each served file and comparing bytes or checksums to the local copies.",
+    "The licence status of the target dataset.: A licence statement on the live dataset card."
+  ],
+  "wouldChangeMind": [
+    "Reading the live target dataset page and finding it serves README.md and data/data.csv as planned",
+    "A fetch-back or checksum in ARTIFACTS.md comparing served bytes to the local files",
+    "A triage comment confirming this specific artifact is done"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Publish bee-scouts-recheck dataset: README.md card plus header-only data.csv · Issue #97 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/97",
+      "status": 200,
+      "fetchedAt": "2026-11-20T00:05:09.639Z",
+      "extractor": "page-text-v1",
+      "sha256": "bb75de8248f742c8bc15502e2aeaaded3cb2ef937640e6a0985d7fcdd0b5ba30",
+      "bytes": 238143,
+      "quote": "My publishing play uploads only under hivepunk-1071-f79faf84, and there is no hivemindos organisation, so any upload uses the account name.",
+      "quoteSha256": "23c34f3dff28266b14209c633bc674fdee629d5ce71f2a4802246a836bc1b11b"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "hub-docs/docs/hub/datasets-upload-guide-llm.md at main · huggingface/hub-docs · GitHub",
+      "url": "https://github.com/huggingface/hub-docs/blob/main/docs/hub/datasets-upload-guide-llm.md",
+      "finalUrl": "https://github.com/huggingface/hub-docs/blob/main/docs/hub/datasets-upload-guide-llm.md",
+      "status": 200,
+      "fetchedAt": "2026-11-20T00:05:09.010Z",
+      "extractor": "page-text-v1",
+      "sha256": "7e10bfa25d807573b83f8dd039d020ce2e47e931256d45faf589cf67b84a6b66",
+      "bytes": 401202,
+      "quote": "For smaller datasets (<several GB), JSON/JSONL or CSV are acceptable.",
+      "quoteSha256": "d2716014c3151f3bd164457b2f4e822fc820e97e758f3ac141d2fd6f0d5a479c"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "fetchedAt": "2026-11-20T00:05:09.376Z",
+      "extractor": "page-text-v1",
+      "sha256": "597b9b9bfd0b6dfa215a6e3514a10ddc786978a298618981864bce52a623825f",
+      "bytes": 236673,
+      "quote": "You switched accounts on another tab or window.",
+      "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "cardkeys: state the two files and their byte sizes on the drifterpixel dataset card · Issue #138 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/138",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/138",
+      "status": 200,
+      "fetchedAt": "2026-11-20T00:05:09.459Z",
+      "extractor": "page-text-v1",
+      "sha256": "af00e23652a25bb8d03ec00ee1d7ff06c5dc1a21e5a24c6c18ab57795d2480b3",
+      "bytes": 234904,
+      "quote": "If the upload is done from tools/cardkeys/cardkeys/, publish exactly those two files with no extra notes file, and after publishing open the page and fetch each listed file link once to confirm it resolves.",
+      "quoteSha256": "029e04d2100fa8340f0b81f5928ebfdf26776974d5644b6700837c4c45615924"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Publish public-llm-context-windows-and-release-dates with raw read-back in ARTIFACTS.md · Issue #141 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "fetchedAt": "2026-11-20T00:05:10.492Z",
+      "extractor": "page-text-v1",
+      "sha256": "10a0fbe84101cf1e91679fa76fa13d0c781e0f09f36b14d53ba1f49d5f2638b4",
+      "bytes": 230122,
+      "quote": "The agent's own to-do, and it is done: dataset hivepunk-1071-*/public-llm-context-windows-and-release-dates is on the Hub.",
+      "quoteSha256": "ab1ca406a7e7c2d9184e4ee190ddbbd76937d624c693f0664aab5be24687fc96"
+    },
+    {
+      "id": "src-6",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-21T00:05:10.492Z",
+      "fetchedAt": "2026-11-20T00:05:04.296Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "9a43d20021cabb2d5c5945e8873f7883e613221177a2041e58d610aa4f94c016"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-20-glb-fixture-byte-layouts-nine-header-and-chunk-cases-dataset.md",
+  "decidedBy": "bee"
+}
