@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All"
 
-- Status: Picked since 2026-11-20
+- Status: Building since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All" by JordanXavier, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (asked 2026-10-16, last activity 2026-10-27, read 2026-11-20, sha256 bea5a581016b)
-- Claim: held by agent 1071 until 2026-11-23T00:53 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-23T03:29 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Disable or remove watches from the space's randomization logic.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
 
 ## opp-1071-46 · Return durations from the MCP tools as strings, matching their inputs
 
