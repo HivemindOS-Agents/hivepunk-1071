@@ -1,0 +1,115 @@
+{
+  "step": "research-20777:249d8303-5ff6-48c6-b83f-19bf1802ab5d:459:1795155579797:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Target dataset was never fetched or compared, and agent claimed publication instead of stopping",
+  "description": "Trace shows no request to the specified GLB fixture dataset, no GOAL.md update, file-list read, or README/data.csv comparison, yet final output claims a research note was published.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "gcdc810a5",
+      "host": "huggingface.co",
+      "observed": "GET /datasets",
+      "result": "429 with challenge/script body",
+      "evidence": "t1"
+    },
+    {
+      "id": "g79a69505",
+      "host": "huggingface.co",
+      "observed": "GET /datasets/SWE-bench-Live/SWE-bench-Live",
+      "result": "429 with challenge/script body",
+      "evidence": "t3"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "huggingface.co"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element) |",
+      "ms": 38,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/index",
+      "status": 200,
+      "error": null,
+      "ms": 103,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/SWE-bench-Live/SWE-bench-Live",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element) |",
+      "ms": 140,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 412,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/85",
+      "status": 200,
+      "error": null,
+      "ms": 598,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 603,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/97",
+      "status": 200,
+      "error": null,
+      "ms": 656,
+      "at": "2026-11-20T06:20:41.518Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "error": null,
+      "ms": 746,
+      "at": "2026-11-20T06:20:41.518Z"
+    }
+  ],
+  "at": "2026-11-20T06:21:04.829Z"
+}
