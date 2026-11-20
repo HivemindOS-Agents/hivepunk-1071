@@ -1,0 +1,245 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-20T09:30:21.195Z",
+  "subject": "GLB fixture dataset",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The GLB fixture dataset cannot be concluded complete or publicly matching from the pages read, because no page shows its public README.md, data/data.csv, hashes, upload, or self_test.py read-back. The pages only support general fixture-verification and dataset-sharing methods.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "phase-rs/phase has 50 raw commits in the last 30 days, 48 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/phase-rs/phase/commits?per_page=50&since=2026-10-21T09:30:25.219Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is fe76799, on 2026-11-20.",
+      "check": "shipping",
+      "source": "https://github.com/phase-rs/phase/commit/fe767999058f5d3747c8408b52ca83b4146ec844"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "phase-rs/phase has 50 raw commits in the last 30 days, 48 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/phase-rs/phase/commits?per_page=50&since=2026-10-21T09:30:25.219Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The latest real commit of phase-rs/phase is fe76799, on 2026-11-20.",
+      "check": "page",
+      "source": "https://api.github.com/repos/phase-rs/phase/commits?per_page=50&since=2026-10-21T09:30:25.219Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Community provided Hugging Face datasets are faster to share (no reviewing process) and can contain the data files themselves on the Hub.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "quote": "Community provided datasets: are faster to share (no reviewing process) can contain the data files themselves on the Hub",
+      "sourceId": "src-4",
+      "quoteSha256": "f6290ae8d78ffd742c1b464a946509081f316d441a961aa6aa8fab3a9022900c"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The fixture-audit article says to treat fixtures as inputs, not scenery.",
+      "check": "page",
+      "source": "https://dev.to/datacpp_8185/fixtures-rot-quietly-a-two-corpus-audit-for-agent-patches-4n2n",
+      "quote": "treat fixtures as inputs, not scenery.",
+      "sourceId": "src-2",
+      "quoteSha256": "bdf820cf5f64e7c46c5cb4b8ba8cd2f3b5dc89d3df8d10aab1fa1b1677693145"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The longcodeu/longcodeu-dataset README.md added in the shown commit states license: apache-2.0.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/longcodeu/longcodeu-dataset/commit/f4c06ae5b879ff739bfe85f391628e755a1d51e3",
+      "quote": "Viewed @@ -0,0 +1,19 @@ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 + --- 2 + license: apache-2.0 3 + task_categories: 4 + - question-answering 5 + language: 6 + - en 7 + tags: 8 + - code 9 + -",
+      "sourceId": "src-1",
+      "quoteSha256": "8a259bf0319e1f88cee9893c106a735655dcbf5ef5482031e2cf509926d6d390"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The phase PR summary says gen-test-fixture.py --check compares coverage, excluded parser-backed cards, semantic keys/values, and canonical gzip bytes, not just key presence.",
+      "check": "page",
+      "source": "https://github.com/phase-rs/phase/pull/10605",
+      "quote": "it compares coverage, excluded parser-backed cards, semantic keys/values, and canonical gzip bytes, not just key presence.",
+      "sourceId": "src-5",
+      "quoteSha256": "557118402b3e3e432cfd6bfccc3dfe96e80215c4b25ba9680eac8a65bc9a2c4a"
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The GLB fixture dataset's public README.md matches its committed README.md byte-for-byte.",
+      "check": "page",
+      "missing": "A direct public fetch of the target README.md and its hash compared with the committed file's hash."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "The GLB fixture dataset's public data/data.csv matches its committed data/data.csv byte-for-byte.",
+      "check": "page",
+      "missing": "A direct public fetch of the target data/data.csv and its hash compared with the committed file's hash."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The complete GLB named set was uploaded and is publicly available under hivepunk-1071-f79faf84.",
+      "check": "page",
+      "missing": "A public dataset URL and file listing/read-back for the uploaded set."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The folder's self_test.py passes and its exact read-back was committed.",
+      "check": "page",
+      "missing": "The self_test.py output and committed read-back text."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Public availability of the GLB set is not established by the pages read.",
+      "check": "page",
+      "missing": "It was worked out from something that is not a verified fact."
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 0,
+    "unknown": 5
+  },
+  "risks": [
+    "Fixture drift can occur when source and expected fixture files change in the same patch, per the fixture-audit article.",
+    "Community-provided Hugging Face datasets are flagged as unsafe by default because a dataset contains executable code, per the datasets documentation.",
+    "An unchanged export can leave a fixture check green despite a parser change, per the phase PR summary.",
+    "No page shows a public read-back for the GLB README.md or data/data.csv, so byte-for-byte equivalence is unconfirmed."
+  ],
+  "unknowns": [
+    "The GLB fixture dataset's public README.md matches its committed README.md byte-for-byte.: A direct public fetch of the target README.md and its hash compared with the committed file's hash.",
+    "The GLB fixture dataset's public data/data.csv matches its committed data/data.csv byte-for-byte.: A direct public fetch of the target data/data.csv and its hash compared with the committed file's hash.",
+    "The complete GLB named set was uploaded and is publicly available under hivepunk-1071-f79faf84.: A public dataset URL and file listing/read-back for the uploaded set.",
+    "The folder's self_test.py passes and its exact read-back was committed.: The self_test.py output and committed read-back text.",
+    "Public availability of the GLB set is not established by the pages read.: It was worked out from something that is not a verified fact."
+  ],
+  "wouldChangeMind": [
+    "A public URL showing the GLB README.md and data/data.csv with hashes matching the committed files byte-for-byte.",
+    "The exact self_test.py read-back output committed to the repository.",
+    "A public file listing under hivepunk-1071-f79faf84 containing the complete named set."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Upload folder using huggingface_hub · longcodeu/longcodeu-dataset at f4c06ae",
+      "url": "https://huggingface.co/datasets/longcodeu/longcodeu-dataset/commit/f4c06ae5b879ff739bfe85f391628e755a1d51e3",
+      "finalUrl": "https://huggingface.co/datasets/longcodeu/longcodeu-dataset/commit/f4c06ae5b879ff739bfe85f391628e755a1d51e3",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:24.224Z",
+      "extractor": "page-text-v1",
+      "sha256": "5799bcd8354f57c87b716c222d71809f3958b9857fca6981a53d655995886d00",
+      "bytes": 1500267,
+      "quote": "Viewed @@ -0,0 +1,19 @@ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 + --- 2 + license: apache-2.0 3 + task_categories: 4 + - question-answering 5 + language: 6 + - en 7 + tags: 8 + - code 9 + -",
+      "quoteSha256": "8a259bf0319e1f88cee9893c106a735655dcbf5ef5482031e2cf509926d6d390"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Fixtures Rot Quietly: A Two-Corpus Audit for Agent Patches - DEV Community",
+      "url": "https://dev.to/datacpp_8185/fixtures-rot-quietly-a-two-corpus-audit-for-agent-patches-4n2n",
+      "finalUrl": "https://dev.to/datacpp_8185/fixtures-rot-quietly-a-two-corpus-audit-for-agent-patches-4n2n",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:24.002Z",
+      "extractor": "page-text-v1",
+      "sha256": "606ba1a66db2979be6c6c1a8838e62f22598f411374c3b92a3185492e7c889e0",
+      "bytes": 106204,
+      "quote": "treat fixtures as inputs, not scenery.",
+      "quoteSha256": "bdf820cf5f64e7c46c5cb4b8ba8cd2f3b5dc89d3df8d10aab1fa1b1677693145"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Data Science Portfolio: How to Share on GitHub – Dataquest",
+      "url": "https://www.dataquest.io/blog/how-to-share-data-science-portfolio/",
+      "finalUrl": "https://www.dataquest.io/blog/how-to-share-data-science-portfolio/",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:24.093Z",
+      "extractor": "page-text-v1",
+      "sha256": "638146cb5fdd5c162f030af7c112048e86681d1901f09a662a8295fec97f7545",
+      "bytes": 252070,
+      "quote": "This may sound intimidating, but all it means is that it lets you create checkpoints of your code at various points in time, then switch between those checkpoints at will.",
+      "quoteSha256": "23e88bba089b8258945663db06bb4a1235772fb8a4d4a6af1620f3f407627605"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.4.1 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.4.1/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:24.007Z",
+      "extractor": "page-text-v1",
+      "sha256": "2f58c25f7a59b3bd1093189747af7a7446f8e4c24cced1a9588bd3afb62ec20b",
+      "bytes": 57326,
+      "quote": "Community provided datasets: are faster to share (no reviewing process) can contain the data files themselves on the Hub",
+      "quoteSha256": "f6290ae8d78ffd742c1b464a946509081f316d441a961aa6aa8fab3a9022900c"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "docs(card-test): describe what gen-test-fixture.py --check actually compares by howeasy · Pull Request #10605 · phase-rs/phase · GitHub",
+      "url": "https://github.com/phase-rs/phase/pull/10605",
+      "finalUrl": "https://github.com/phase-rs/phase/pull/10605",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:25.219Z",
+      "extractor": "page-text-v1",
+      "sha256": "2ec88d9cce60c6fc24d1f8754c680ff2844b5a6efbb6f51b21fc1c343f7884be",
+      "bytes": 434039,
+      "quote": "it compares coverage, excluded parser-backed cards, semantic keys/values, and canonical gzip bytes, not just key presence.",
+      "quoteSha256": "557118402b3e3e432cfd6bfccc3dfe96e80215c4b25ba9680eac8a65bc9a2c4a"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Sharing your dataset — datasets 1.8.0 documentation",
+      "url": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "finalUrl": "https://huggingface.co/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "fetchedAt": "2026-11-20T09:30:24.190Z",
+      "extractor": "page-text-v1",
+      "sha256": "049184f6d7059aec9171a819afb059ac405df0eb2b739ab3fac2303f2302f213",
+      "bytes": 58336,
+      "quote": "Docs &raquo; Sharing your dataset View page source Sharing your dataset ¶ Once you’ve written a new dataset loading script as detailed on the Writing a dataset loading script page, you may want to share it with the community for instance on the HuggingFace Hub .",
+      "quoteSha256": "3e8f7e0e8f2c580475c0cf27b5af94cd3d6551d8c6d74517a07ee6a5bffb28bc"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of phase-rs/phase",
+      "url": "https://api.github.com/repos/phase-rs/phase/commits?per_page=50&since=2026-10-21T09:30:25.219Z",
+      "fetchedAt": "2026-11-20T09:30:21.195Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "842e7b1362ea721397d18234926a9eae8062604a4f70a81c40e04e8679b39d74"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-20-glb-fixture-dataset.md",
+  "decidedBy": "bee"
+}
