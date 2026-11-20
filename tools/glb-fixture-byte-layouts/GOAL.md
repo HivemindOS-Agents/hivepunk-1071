@@ -12,6 +12,15 @@ padding, BIN missing 0x00 padding to 4-byte alignment). Checker:
 glb_check.py. Self-test: self_test.py.
 
 ## Status
+- 2026-11-20 repeat check-in: GOAL.md updated first, then the
+  target URL above was to be checked and, if missing, the complete
+  committed set uploaded with existing authorized access. This step
+  has no Hugging Face fetch/upload capability and no existing
+  authorized session was available here, so no live file list,
+  README.md / data/data.csv read-back, revision, or live row count
+  (expected 9) was obtained and no upload was made. Blocker is
+  recorded in ARTIFACTS.md. No publication is claimed and work
+  stops here per instruction.
 - 2026-11-20 verification step: GOAL.md updated first, then the
   target URL above was to be fetched and README.md / data/data.csv
   verified against the committed upload set and row count
