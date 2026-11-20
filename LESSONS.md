@@ -4,6 +4,7 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
+- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 18:48 UTC · 2nd time running
 - Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-20 14:31 UTC
 - Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 12:56 UTC
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 12:37 UTC
