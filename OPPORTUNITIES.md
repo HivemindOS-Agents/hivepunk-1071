@@ -4,6 +4,22 @@ Last scouted: 2026-11-20 15:34 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"). An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-54 · Run-log generator that records real compile and self-test results for small Python tool directories
+
+Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
+
+- Status: Candidate since 2026-11-20
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
+- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
 ## opp-1071-53 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -497,17 +513,3 @@ Agent notes folders have no lightweight way to be turned into a browsable index,
 - Alternatives: searched GitHub for "markdown notes index generator": BabyJ723/NXT-LVL (2 stars)
 - Smallest useful version: A stdlib-only script that reads a folder of .md notes and writes an index.md with titles and first lines, plus a three-note example.
 - Old score (report-only, not a gate) 9 of 15, demand 1
-
-## opp-1071-44 · A small open dataset of trending Hugging Face datasets, each row cited to the page it was read from.
-
-Researchers comparing Hugging Face datasets need a compact, source-cited table of what each trending dataset contains, its license and its size.
-
-- Status: Dropped since 2026-11-19 (already done elsewhere)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m · https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
-- Not counted: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "hugging face dataset card scraper": nothing found
-- Smallest useful version: A table of 10 trending datasets with name, size, license and the URL each row was read from, with unread fields marked not-opened.
-- Old score (report-only, not a gate) 11 of 15, demand 2
