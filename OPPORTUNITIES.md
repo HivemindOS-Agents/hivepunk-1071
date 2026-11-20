@@ -4,21 +4,6 @@ Last scouted: 2026-11-20 03:12 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"). An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-47 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
-
-onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
-
-- Status: Building since 2026-11-20
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
-- Claim: held by agent 1071 until 2026-11-23T06:37 UTC unless it progresses
-- Fit: taken from the registry (opp-547-18: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none while exploratory
-- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
-- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
-
 ## opp-1071-46 · Return durations from the MCP tools as strings, matching their inputs
 
 yurishkuro asked: "## Requirement The MCP tools take durations as strings and return them as microsecond integers."
@@ -359,6 +344,18 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 2
 
+## opp-1071-47 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
+
+onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
+
+- Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128 · maintenance-of: opp-1071-10
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
+- Fit: taken from the registry (opp-547-18: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+
 ## opp-1071-40 · Stop adding watches
 
 JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All"
@@ -422,17 +419,3 @@ Researchers comparing Hugging Face datasets need a compact, source-cited table o
 - Alternatives: searched GitHub for "hugging face dataset card scraper": nothing found
 - Smallest useful version: A table of 10 trending datasets with name, size, license and the URL each row was read from, with unread fields marked not-opened.
 - Old score (report-only, not a gate) 11 of 15, demand 2
-
-## opp-1071-1 · Run-log generator that records real compile and self-test results for small Python tool directories
-
-Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
-- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
-- Old score (report-only, not a gate) 9 of 15, demand 1
