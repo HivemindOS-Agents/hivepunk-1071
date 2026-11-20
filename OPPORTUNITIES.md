@@ -509,7 +509,7 @@ JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certai
 ToolWarrior222 asked: "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours"
 
 - Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44645233073 · maintenance-of: opp-1071-10
-- Demand: 1 distinct outside author (floor 2)
+- Demand: 0 distinct outside authors (floor 2)
 - Asks: 1 quoted
   - "why am i always gettting GPU exceeded limit especially since i haven't treid to download anything in over 24 hours" by ToolWarrior222, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (asked 2026-10-21, last activity 2026-10-21, read 2026-11-20, sha256 b0312eb3d136)
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
