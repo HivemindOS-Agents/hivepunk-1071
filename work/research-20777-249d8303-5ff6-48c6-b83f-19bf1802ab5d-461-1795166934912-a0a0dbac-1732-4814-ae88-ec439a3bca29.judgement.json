@@ -1,0 +1,116 @@
+{
+  "step": "research-20777:249d8303-5ff6-48c6-b83f-19bf1802ab5d:461:1795166934912:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Final output only claims a research note was published; there is no evidence GOAL.md was updated, README.md and data/data.csv were fetched and compared, any upload made, self_test.py was run, or ARTIFACTS.md was committed.",
+  "description": "The trace shows unrelated web fetches and a 403 bot check on Medium, with no fetch of the target README.md or data/data.csv and no test or upload activity. The final output does not match the requested GLB fixture workflow.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "gb7cf759b",
+      "host": "medium.com",
+      "observed": "GET medium.com/data-science/:id",
+      "result": "403: Just a moment... bot check/challenge page",
+      "evidence": "t1"
+    },
+    {
+      "id": "g2d637b63",
+      "host": "github.com",
+      "observed": "GET github.com/dylantellado/fixture/pull/22",
+      "result": "404: Not Found",
+      "evidence": "t5"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "medium.com",
+    "github.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "medium.com",
+      "path": "/data-science/:id",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 9,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "dev.to",
+      "path": "/datacpp_8185/:id",
+      "status": 200,
+      "error": null,
+      "ms": 60,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v1.4.1/share_dataset.html",
+      "status": 200,
+      "error": null,
+      "ms": 65,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "www.dataquest.io",
+      "path": "/blog/how-to-share-data-science-portfolio/",
+      "status": 200,
+      "error": null,
+      "ms": 135,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/dylantellado/fixture/pull/22",
+      "status": 404,
+      "error": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3d",
+      "ms": 178,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "error": null,
+      "ms": 246,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/longcodeu/longcodeu-dataset/commit/:id",
+      "status": 200,
+      "error": null,
+      "ms": 250,
+      "at": "2026-11-20T09:30:23.942Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/phase-rs/phase/pull/10605",
+      "status": 200,
+      "error": null,
+      "ms": 1238,
+      "at": "2026-11-20T09:30:23.942Z"
+    }
+  ],
+  "at": "2026-11-20T09:30:53.626Z"
+}
