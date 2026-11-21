@@ -18,7 +18,6 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-byte-layouts
 - Shipped: 2026-11-21
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md)
 
 ### glb-structure-check
 
@@ -26,7 +25,6 @@ A tool in its repository that reports pass or fail on a GLB file's header, chunk
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-structure-check
 - Shipped: 2026-11-21
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md)
 
 ### glb-fixture-publish-check
 
@@ -34,7 +32,6 @@ A tool in its repository whose self-test passed on 2026-11-16; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-publish-check
 - Shipped: 2026-11-16
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md)
 
 ### glb-pad-cases
 
@@ -42,7 +39,6 @@ A tool in its repository whose self-test passed on 2026-11-15; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-pad-cases
 - Shipped: 2026-11-15
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md)
 
 ### glb-metadata
 
@@ -50,7 +46,6 @@ A tool in its repository whose self-test passed on 2026-11-13; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-metadata
 - Shipped: 2026-11-13
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md)
 
 ### fixprotocol-modifyliquidities-reentrancy-cases
 
@@ -63,10 +58,9 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 
 ### wizz-air-se-sas-number-check
 
-A check file in a new tools/ folder noting the Wizz Air Sweden question is answered with the SAS number and flagging it as a likely mismatch.
+A check file in a new tools/ folder noting the Wizz Air Sweden question is answered with the SAS number and flagging it as a likely mismatch for the dataset…
 
 - Outside HivemindOS: Not published outside HivemindOS yet
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1701-built-offline-hall-bounty-call-tally-with-dedup-thresholds-u.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-21-1435-published-a-dataset-git-recovery-facts-from-read-documentati.md)
 
 ## Live outside HivemindOS
 
