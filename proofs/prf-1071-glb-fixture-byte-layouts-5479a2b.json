@@ -1,0 +1,147 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-glb-fixture-byte-layouts-5479a2b",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-21T04:30:35Z",
+  "claim": {
+    "text": "Results: 71/71 checks passed",
+    "result": "passed",
+    "checksPassed": 71,
+    "checksTotal": 71
+  },
+  "artifact": "tools/glb-fixture-byte-layouts",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/glb-fixture-byte-layouts/self_test.py",
+    "commit": "5479a2b6e949aaf1819b01dc87836678e87b2e0c",
+    "sha256": "46aa77f80f2546cb9d560bf6cc2b3df98c01180961a44a9b46bef8d9a793fe3b"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 71,
+    "checksTotal": 71
+  },
+  "command": "git checkout 5479a2b6e949aaf1819b01dc87836678e87b2e0c && cd tools/glb-fixture-byte-layouts && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-glb-fixture-byte-layouts-5479a2b.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44866430685",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 2,
+    "shippedStep": 13,
+    "shippedCommit": "5479a2b6e949aaf1819b01dc87836678e87b2e0c",
+    "outcome": "shipped-final",
+    "asOfStep": 13,
+    "steps": [
+      {
+        "step": 1,
+        "state": "failed",
+        "commit": "e2258fbde9958e85bc8c5b3f3219586ca0292302",
+        "tree": "3a3ed364cbe3d376fd74e5c11a0763dd6501fda8",
+        "checkSha256": null
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "a4ec81f0f26824a982327a3fa96cad922c56ab24",
+        "tree": "69e6710efa90b408a406e35dca1527038dcc022b",
+        "checkSha256": null
+      },
+      {
+        "step": 3,
+        "state": "passed",
+        "commit": "66e5d67c243823df155d0362658f9b7702be84ea",
+        "tree": "03e43be6ffaad2d617bc33664fa265764587fde6",
+        "checkSha256": null
+      },
+      {
+        "step": 4,
+        "state": "passed",
+        "commit": "ea5bca5baf96f39c377aca2fc04d602cf498ba9c",
+        "tree": "10ba83a85f7faae5688aaab3e031d94057662207",
+        "checkSha256": null
+      },
+      {
+        "step": 5,
+        "state": "failed",
+        "commit": "bcd63e15c3687968098a1d3d72bed26ff4762b79",
+        "tree": "b1b60c834ed128839880bb25dae10006186b8d97",
+        "checkSha256": null
+      },
+      {
+        "step": 6,
+        "state": "passed",
+        "commit": "030065620c15d114d464ab776aec388591d270a1",
+        "tree": "5e97f0c5ef97898789b70a6ad1343ff4d3ea13d5",
+        "checkSha256": null
+      },
+      {
+        "step": 7,
+        "state": "passed",
+        "commit": "b8c458967cc4fead7759693a9197e26ab5ee2a38",
+        "tree": "ab98cf7e2874af283e24b4c06a9cf4288c08f311",
+        "checkSha256": null
+      },
+      {
+        "step": 8,
+        "state": "passed",
+        "commit": "92ae344de9eccc6984dd3e92fa00e28696c5d9fc",
+        "tree": "76f7d47650248c59d94253a70dd32cfc41ab892a",
+        "checkSha256": null
+      },
+      {
+        "step": 9,
+        "state": "passed",
+        "commit": "099ef38afe06638e9e140d71b5c524c5c23c338b",
+        "tree": "328d531401e8b0b97759daf5b23a2704571c7c0a",
+        "checkSha256": null
+      },
+      {
+        "step": 10,
+        "state": "passed",
+        "commit": "fc053c8b0045236d1df15e695694d2d0a2a68aa2",
+        "tree": "2773f9285959e39aaaf3077d3c34da715987e389",
+        "checkSha256": null
+      },
+      {
+        "step": 11,
+        "state": "passed",
+        "commit": "e00c357e2316bea815da247e13d7d7005c9d18a4",
+        "tree": "e22aebae3e26b2ce7325bbb2f8590210ae42587c",
+        "checkSha256": null
+      },
+      {
+        "step": 12,
+        "state": "passed",
+        "commit": "25bc9d298ce499aad894d55284417caf66882ce9",
+        "tree": "78de3271d285fad0222c1b83594389abf6a44800",
+        "checkSha256": null
+      },
+      {
+        "step": 13,
+        "state": "passed",
+        "commit": "5479a2b6e949aaf1819b01dc87836678e87b2e0c",
+        "tree": "1d1cbf51cd379a89acd5484e247515a9051073b1",
+        "checkSha256": "46aa77f80f2546cb9d560bf6cc2b3df98c01180961a44a9b46bef8d9a793fe3b"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44866430685",
+    "testedSha": "5479a2b6e949aaf1819b01dc87836678e87b2e0c",
+    "checkFrom": "base",
+    "baseSha": "25bc9d298ce499aad894d55284417caf66882ce9",
+    "checkSha256": "46aa77f80f2546cb9d560bf6cc2b3df98c01180961a44a9b46bef8d9a793fe3b",
+    "checkEdited": false,
+    "baseCheck": "unchanged",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": []
+  },
+  "checkFrom": "base"
+}
