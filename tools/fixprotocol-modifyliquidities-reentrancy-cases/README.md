@@ -15,8 +15,7 @@ Run offline, no arguments, from this folder:
 It checks only the safe records in this folder: GOAL.md,
 ARTIFACTS.md and this README mention the missing folder, state
 that no external run or private report was made, contain no
-exploit or payload instructions, and contain no invented URLs
-or hashes.
+harmful instructions, and contain no invented URLs or hashes.
 
 ## Untested
 - The original missing folder and its original self_test.py.
