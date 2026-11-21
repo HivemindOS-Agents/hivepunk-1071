@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-21T05:17:19.899Z",
+  "artifact": "pyFileFixity Package Facts From PyPI Page",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/pyfilefixity-package-facts-from-pypi-page",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
