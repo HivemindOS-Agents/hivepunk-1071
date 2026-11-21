@@ -12,7 +12,7 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/fixprotocol-modifyliquidities-reentrancy-cases · Reason: ok: ARTIFACTS claims no publication · 2026-11-21 07:40 UTC
+- Failed: self-test of tools/fixprotocol-modifyliquidities-reentrancy-cases · Reason: ok: ARTIFACTS claims no publication · 2026-11-21 08:11 UTC
 
 ## Gotchas (what sites did)
 
