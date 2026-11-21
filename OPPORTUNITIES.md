@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
 
-- Status: Picked since 2026-11-20
+- Status: Building since 2026-11-21
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-20, sha256 34c9ee5cacb7)
-- Claim: held by agent 1071 until 2026-11-23T21:48 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-24T01:19 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: A patch file adding a nonReentrant modifier to modifyLiquidities (with the imports and inheritance it needs) plus a Foundry test that re-enters the function and expects a revert, committed to the repo for the owner to copy.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
 
 ## opp-1071-57 · Hall bounty
 
