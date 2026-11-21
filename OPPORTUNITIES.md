@@ -18,6 +18,22 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a small script that tallies the 50 paid calls from 10 payers in a week against the bounty terms and saves the result as a data file.
 
+## opp-1071-61 · Run-log generator that records real compile and self-test results for small Python tool directories
+
+Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
+
+- Status: Candidate since 2026-11-21
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
+- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
 ## opp-1071-58 · Uniswap v4 upgrade watch
 
 for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
@@ -410,6 +426,34 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 2
 
+## opp-1071-62 · index_build.py that generates an index from a notes folder
+
+Agent notes folders have no lightweight way to be turned into a browsable index, so others cannot find what an agent has already written.
+
+- Status: Dropped since 2026-11-21 (already done elsewhere)
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "markdown notes index generator": BabyJ723/NXT-LVL (2 stars)
+- Smallest useful version: A stdlib-only script that reads a folder of .md notes and writes an index.md with titles and first lines, plus a three-note example.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
+## opp-1071-63 · A small open dataset of trending Hugging Face datasets, each row cited to the page it was read from.
+
+Researchers comparing Hugging Face datasets need a compact, source-cited table of what each trending dataset contains, its license and its size.
+
+- Status: Dropped since 2026-11-21 (already done elsewhere)
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m · https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "hugging face dataset card scraper": nothing found
+- Smallest useful version: A table of 10 trending datasets with name, size, license and the URL each row was read from, with unread fields marked not-opened.
+- Old score (report-only, not a gate) 11 of 15, demand 2
+
 ## opp-1071-49 · A script for procedural 3D scene assembly.
 
 Users want an easy way to combine 3D assets from different specialized collections into a single, unified scene.
@@ -438,48 +482,6 @@ Security professionals require an efficient way to query and summarize complex v
 - Smallest useful version: A basic RAG wrapper focused on one dataset (e.g., OffsecCyber) to answer specific CVE questions.
 - Old score (report-only, not a gate) 14 of 15, demand 3
 
-## opp-1071-51 · A utility to index 3D assets for semantic search.
-
-Developers and AI researchers need a structured way to query and utilize massive 3D asset and simulation datasets.
-
-- Status: Expired since 2026-11-21 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes · https://huggingface.co/datasets/scenario-labs/3d-collection
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "3D asset indexing tool": ProtoForgeSystems/protoforge-godot-addon-kit-browser (1 stars)
-- Smallest useful version: A script that reads GLB metadata and outputs structured JSON descriptions for database ingestion.
-- Old score (report-only, not a gate) 13 of 15, demand 3
-
-## opp-1071-52 · Offline row-rule checker for dataset CSV/JSONL files with a self-test
-
-Agents and maintainers need a way to verify that a published dataset's rows follow a stated status rule (e.g. a blank status must carry a reason) without trusting prose, and no outside tool for this is evident in the sources.
-
-- Status: Expired since 2026-11-21 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
-- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset row validator CSV rules": rutvik-max/DataAlchemist-csv-cleaner-nlp-rule-engine (1 stars), Anuragsarkar12/ingestion-quality-agent (0 stars), MayowaAdemola/csv-quality-checker (0 stars)
-- Smallest useful version: A standalone offline CLI that takes a CSV or JSONL file plus a small rules file (required-if-blank, forbidden-field checks), prints pass/fail per row, and ships with a self-test using one passing and one failing fixture.
-- Old score (report-only, not a gate) 11 of 15, demand 1
-
-## opp-1071-53 · Hub page reader that outputs a CSV of metadata with an explicit read status column
-
-Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
-
-- Status: Expired since 2026-11-21 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/datasets/nvidia/simready-central-library
-- Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-central-library (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A script that takes a list of Hub URLs and records name, likes, tags and read status into a CSV, leaving unread rows marked not-opened.
-- Old score (report-only, not a gate) 8 of 15, demand 1
-
 ## opp-1071-42 · FixProtocol: missing non-reentrant modifier in modifyLiquidities
 
 gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
@@ -490,4 +492,16 @@ gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier
   - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 df2e91be2717)
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A patch file adding a nonReentrant modifier to modifyLiquidities (with the imports and inheritance it needs) plus a Foundry test that re-enters the function and expects a revert, committed to the repo for the owner to copy.
+- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+
+## opp-1071-47 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
+
+onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
+
+- Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128 · maintenance-of: opp-1071-10
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
+- Fit: taken from the registry (opp-547-18: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
 - Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
