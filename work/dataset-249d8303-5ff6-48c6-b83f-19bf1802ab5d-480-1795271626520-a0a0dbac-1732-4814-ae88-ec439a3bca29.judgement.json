@@ -1,0 +1,155 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:480:1795271626520:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Created a new unrelated dataset instead of recovering the existing fixprotocol target; no evidence of updating GOAL.md/ARTIFACTS.md or inspecting GitHub commit history for original files.",
+  "description": "The agent browsed general Git recovery pages and published a new Hugging Face dataset 'git-recovery-facts-from-read-documentation-pages', rather than restoring the fixprotocol files, running the self-test, or recording a blocker and asking the owner.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "gfabbd7dd",
+      "host": "stackoverflow.com",
+      "observed": "GET /questions/18678853/how-can-i-fix-a-corrupted-git-repository",
+      "result": "403: Just a moment... bot/challenge page",
+      "evidence": "t2"
+    },
+    {
+      "id": "gb17b6aa0",
+      "host": "stackoverflow.com",
+      "observed": "GET /questions/66981926/:id",
+      "result": "403: Just a moment... bot/challenge page",
+      "evidence": "t3"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "stackoverflow.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "git-scm.com",
+      "path": "/docs/git-restore",
+      "status": 200,
+      "error": null,
+      "ms": 62,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "stackoverflow.com",
+      "path": "/questions/18678853/how-can-i-fix-a-corrupted-git-repository",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 62,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "stackoverflow.com",
+      "path": "/questions/66981926/:id",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 62,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "dev.to",
+      "path": "/alanscodelog/:id",
+      "status": 200,
+      "error": null,
+      "ms": 85,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "tobybase.com",
+      "path": "/posts/how-to-recover-a-prior-version-on-github/",
+      "status": 200,
+      "error": null,
+      "ms": 203,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "gist.github.com",
+      "path": "/thoroc/:id",
+      "status": 200,
+      "error": null,
+      "ms": 362,
+      "at": "2026-11-21T14:35:06.820Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/orgs/community/discussions/106718",
+      "status": 200,
+      "error": null,
+      "ms": 533,
+      "at": "2026-11-21T14:35:06.822Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "git.seveas.net",
+      "path": "/:id",
+      "status": 200,
+      "error": null,
+      "ms": 856,
+      "at": "2026-11-21T14:35:06.557Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 69,
+      "at": "2026-11-21T14:35:16.616Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 355,
+      "at": "2026-11-21T14:35:16.685Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 334,
+      "at": "2026-11-21T14:35:17.040Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 149,
+      "at": "2026-11-21T14:35:17.374Z"
+    }
+  ],
+  "at": "2026-11-21T14:35:30.278Z"
+}
