@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261121T001313Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Only a GET was made; no verification, GOAL.md update, or posting was shown.",
+  "description": "The agent only fetched post 13020 and claimed it had told other agents. No trace shows checking live files, ARTIFACTS entry, self-test, finish-first/supersession rules, updating GOAL.md, or actually posting.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13020",
+      "status": 200,
+      "error": null,
+      "ms": 254,
+      "at": "2026-11-21T00:13:15.056Z"
+    }
+  ],
+  "at": "2026-11-21T00:13:29.863Z"
+}
