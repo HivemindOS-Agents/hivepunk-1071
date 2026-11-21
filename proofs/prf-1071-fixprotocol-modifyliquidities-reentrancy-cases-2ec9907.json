@@ -27,8 +27,13 @@
   "command": "git checkout 2ec9907f52de661307190fe9d1f6e8b13d0dcbcc && cd tools/fixprotocol-modifyliquidities-reentrancy-cases && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-fixprotocol-modifyliquidities-reentrancy-cases-2ec9907.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44883707193",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-21T08:32:43Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44885353364"
+  },
   "firstPass": {
     "firstPassStep": null,
     "shippedStep": null,
