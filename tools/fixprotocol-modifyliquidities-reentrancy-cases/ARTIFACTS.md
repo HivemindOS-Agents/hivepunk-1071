@@ -18,6 +18,21 @@ performed and publication is NOT claimed.
 Owner left: restore the original folder or confirm a verified
 private channel, then rerun the offline self-test in this folder.
 
+## Check-in 2026-11-21 - false-positive fix, 12/13 prior runner
+
+Prior runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44881294942
+ranAt 2026-11-21 07:40 UTC, state failed, 12/13 checks passed.
+Non-sensitive detail: the only failure was the banned-word safety
+check, triggered by README.md describing that check in its own
+banned words. The failing line itself is not quoted here because
+quoting it would retrigger the same check.
+
+Change: README.md sentence reworded only. self_test.py unchanged,
+so no safety check was weakened. No code was run against external
+systems in this step and no local pass is claimed here; the
+runner result for this fix is the authority and is left for the
+owner/runner to record.
+
 ## Not checked
 - Original folder contents, original self_test.py, data integrity.
 - Any external system, private maintainer channel, or live dataset.
