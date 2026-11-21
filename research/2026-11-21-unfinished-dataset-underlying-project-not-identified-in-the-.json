@@ -1,0 +1,169 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-21T04:13:38.723Z",
+  "subject": "Unfinished dataset (underlying project not identified in the pages read)",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the claims in the pages read, no project-specific thesis can be supported; the only conclusion is that the unfinished dataset needs a verified disclosure path before any security-related release.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "A research data handoff planner should give every research output an owner, a home and a release date.",
+      "check": "page",
+      "source": "https://manusights.com/resources/research-data-management-plan",
+      "quote": "Give every research output an owner, a home and a release date",
+      "sourceId": "src-1",
+      "quoteSha256": "3b744377f6b97116c8482b7a19a9a6176076fa674a326c92bf492c341380ad24"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The Manusights worked example is a fictional non-human imaging study with three outputs.",
+      "check": "page",
+      "source": "https://manusights.com/resources/research-data-management-plan",
+      "quote": "A fictional non-human imaging study with three outputs.",
+      "sourceId": "src-1",
+      "quoteSha256": "1fdb741327a91a4907f4066b2566b8499a9ce9ab3a88589c73b42b203b0ebf97"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Scientific data derived from human research participants should be adequately de-identified prior to sharing to protect participants.",
+      "check": "page",
+      "source": "https://guides.library.ucdavis.edu/data-management/confidentiality",
+      "quote": "should be adequately de-identified prior to sharing to ensure protection of research participants, maintain privacy, and mitigate risk",
+      "sourceId": "src-3",
+      "quoteSha256": "a9370494776926cb74daf91e1b9fd7ad61c2fd5de4ae20d67d83357f62ee89a8"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Project data should be archived in a publicly available repository, pending sensitivity and non-disclosure agreement exceptions.",
+      "check": "page",
+      "source": "https://ucsb-library-research-data-services.github.io/project-data-management/preserve.html",
+      "quote": "archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions)",
+      "sourceId": "src-4",
+      "quoteSha256": "d487a403959968901d9070dc9bbd8a563a6e9a408e19b7c85915466c264a9498"
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "The identity of the unfinished dataset's underlying project.",
+      "check": "page",
+      "missing": "A page or source link naming the dataset and its project."
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "The underlying project's private disclosure policy.",
+      "check": "page",
+      "missing": "A page stating the project's private disclosure or security reporting policy and contact."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "Project-specific traction or activity for the underlying project.",
+      "check": "page",
+      "missing": "Project-specific usage or activity figures or statements from a source about that project."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "No safe public release path for the unfinished dataset can be verified from the pages read alone.",
+      "check": "page",
+      "missing": "It was worked out from something that is not a verified fact."
+    }
+  ],
+  "counts": {
+    "fact": 4,
+    "derived": 0,
+    "unknown": 4
+  },
+  "risks": [
+    "The underlying project and its private disclosure policy are not stated in the pages read, so no safe disclosure path can be verified from them.",
+    "Public archiving may be inappropriate where sensitivity, privacy, consent or a non-disclosure agreement applies.",
+    "Identifiable or hard-to-de-identify data may need controlled or restricted access rather than open release.",
+    "The worked example in one page is explicitly fictional and is not evidence about the unfinished dataset."
+  ],
+  "unknowns": [
+    "The identity of the unfinished dataset's underlying project.: A page or source link naming the dataset and its project.",
+    "The underlying project's private disclosure policy.: A page stating the project's private disclosure or security reporting policy and contact.",
+    "Project-specific traction or activity for the underlying project.: Project-specific usage or activity figures or statements from a source about that project.",
+    "No safe public release path for the unfinished dataset can be verified from the pages read alone.: It was worked out from something that is not a verified fact."
+  ],
+  "wouldChangeMind": [
+    "A source link naming the unfinished dataset and its underlying project.",
+    "A verifiable private disclosure policy or private reporting contact for that project.",
+    "Project-specific traction evidence from a named source."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Research Data Management Plan Checklist - Manusights",
+      "url": "https://manusights.com/resources/research-data-management-plan",
+      "finalUrl": "https://manusights.com/resources/research-data-management-plan",
+      "status": 200,
+      "fetchedAt": "2026-11-21T04:13:41.709Z",
+      "extractor": "page-text-v1",
+      "sha256": "76b97c4c20287a85c88c086a61cbd1e0bb11ef95ce8bdc252c7786fde038571b",
+      "bytes": 147430,
+      "quote": "Give every research output an owner, a home and a release date",
+      "quoteSha256": "3b744377f6b97116c8482b7a19a9a6176076fa674a326c92bf492c341380ad24"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Non-evaluated artifacts - Security Research Artifacts",
+      "url": "https://secartifacts.github.io/artifinder/",
+      "finalUrl": "https://secartifacts.github.io/artifinder/",
+      "status": 200,
+      "fetchedAt": "2026-11-21T04:13:41.539Z",
+      "extractor": "page-text-v1",
+      "sha256": "f170fe5cee5823df419f9ce4eb391b36356d184f34c21e99ab3dcead384e3fa3",
+      "bytes": 1500033,
+      "quote": "If you notice a mistake in the automatically extracted links or want to manually validate correct entries (marked with a ✓ in the dataset), please submit a pull request !",
+      "quoteSha256": "0a24b8deed805128985eb5f484b80daaf783b6e5131eb2c7176133e08eeee76e"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Data Privacy & Confidentiality - Research Data Management - Research Guides at UC Davis",
+      "url": "https://guides.library.ucdavis.edu/data-management/confidentiality",
+      "finalUrl": "https://guides.library.ucdavis.edu/data-management/confidentiality",
+      "status": 200,
+      "fetchedAt": "2026-11-21T04:13:41.619Z",
+      "extractor": "page-text-v1",
+      "sha256": "a8f579f3b080b07b8cd2f990b552a2c778751095b1cd94ada861911dcc625042",
+      "bytes": 40199,
+      "quote": "should be adequately de-identified prior to sharing to ensure protection of research participants, maintain privacy, and mitigate risk",
+      "quoteSha256": "a9370494776926cb74daf91e1b9fd7ad61c2fd5de4ae20d67d83357f62ee89a8"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Archiving and preserving your data – Good enough practices to manage your project data",
+      "url": "https://ucsb-library-research-data-services.github.io/project-data-management/preserve.html",
+      "finalUrl": "https://rds.library.ucsb.edu/project-data-management/preserve.html",
+      "status": 200,
+      "fetchedAt": "2026-11-21T04:13:41.739Z",
+      "extractor": "page-text-v1",
+      "sha256": "64e3f9a105c6d8b820849353df63d72a23a3cc20cac54be48d9ba37e8f509426",
+      "bytes": 39351,
+      "quote": "archive your data in a publicly available repository (pending sensitivity and by non-disclosure agreement exceptions)",
+      "quoteSha256": "d487a403959968901d9070dc9bbd8a563a6e9a408e19b7c85915466c264a9498"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-21-unfinished-dataset-underlying-project-not-identified-in-the-.md",
+  "decidedBy": "bee"
+}
