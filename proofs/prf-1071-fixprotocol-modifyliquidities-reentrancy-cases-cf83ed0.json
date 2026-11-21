@@ -1,0 +1,84 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-fixprotocol-modifyliquidities-reentrancy-cases-cf83ed0",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-21T13:48:03Z",
+  "claim": {
+    "text": "Results: 13/13 checks passed",
+    "result": "passed",
+    "checksPassed": 13,
+    "checksTotal": 13
+  },
+  "artifact": "tools/fixprotocol-modifyliquidities-reentrancy-cases",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/fixprotocol-modifyliquidities-reentrancy-cases/self_test.py",
+    "commit": "cf83ed0becfc7f0ef338fa885756b0a8eced129d",
+    "sha256": "7e6b4ce741d7b129a2b20fd180db3bb7def857635c96b28a8293c71df5aa14fd"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 13,
+    "checksTotal": 13
+  },
+  "command": "git checkout cf83ed0becfc7f0ef338fa885756b0a8eced129d && cd tools/fixprotocol-modifyliquidities-reentrancy-cases && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-fixprotocol-modifyliquidities-reentrancy-cases-cf83ed0.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44910638944",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 3,
+    "shippedStep": 4,
+    "shippedCommit": "cf83ed0becfc7f0ef338fa885756b0a8eced129d",
+    "outcome": "shipped-final",
+    "asOfStep": 4,
+    "steps": [
+      {
+        "step": 1,
+        "state": "failed",
+        "commit": "0139b5d47968962b47d65db27607b8f5e5717520",
+        "tree": "1c41e2d8baac0ab15875f91ce34386db06283d88",
+        "checkSha256": "6df7d3879cf9f12a50f737de8f1fbc81e359aeb7b290eede06765f9203f2c41f"
+      },
+      {
+        "step": 2,
+        "state": "failed",
+        "commit": "2ec9907f52de661307190fe9d1f6e8b13d0dcbcc",
+        "tree": "ce31cf7cc4f8a3bb984d23cce2ce831e343e48ff",
+        "checkSha256": "7e6b4ce741d7b129a2b20fd180db3bb7def857635c96b28a8293c71df5aa14fd"
+      },
+      {
+        "step": 3,
+        "state": "passed",
+        "commit": "ca53b8fe5a96c4486d7012926c30d43954606fa5",
+        "tree": "0ea4c5cc0c0aac6e65881c2ec65353cd69042066",
+        "checkSha256": "7e6b4ce741d7b129a2b20fd180db3bb7def857635c96b28a8293c71df5aa14fd"
+      },
+      {
+        "step": 4,
+        "state": "passed",
+        "commit": "cf83ed0becfc7f0ef338fa885756b0a8eced129d",
+        "tree": "a6f1f7538c484cf14246892382d15be80885af50",
+        "checkSha256": "7e6b4ce741d7b129a2b20fd180db3bb7def857635c96b28a8293c71df5aa14fd"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44910638944",
+    "testedSha": "cf83ed0becfc7f0ef338fa885756b0a8eced129d",
+    "checkFrom": "base",
+    "baseSha": "ca53b8fe5a96c4486d7012926c30d43954606fa5",
+    "checkSha256": "7e6b4ce741d7b129a2b20fd180db3bb7def857635c96b28a8293c71df5aa14fd",
+    "checkEdited": false,
+    "baseCheck": "unchanged",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": []
+  },
+  "checkFrom": "base"
+}
