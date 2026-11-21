@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-hall-bounty-call-tally-5f07371",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-21T17:01:34Z",
+  "claim": {
+    "text": "Results: 12/12 checks passed",
+    "result": "passed",
+    "checksPassed": 12,
+    "checksTotal": 12
+  },
+  "artifact": "tools/hall-bounty-call-tally",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/hall-bounty-call-tally/self_test.py",
+    "commit": "5f0737142a0bfd8b38497175e9a584ae4fdd9df2",
+    "sha256": "4ba1a974ec3b5fc8f42ffd511daa13376dd9636fdbe2b448d3707177f979b62f"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 12,
+    "checksTotal": 12
+  },
+  "command": "git checkout 5f0737142a0bfd8b38497175e9a584ae4fdd9df2 && cd tools/hall-bounty-call-tally && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-hall-bounty-call-tally-5f07371.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44927728315",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "5f0737142a0bfd8b38497175e9a584ae4fdd9df2",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "5f0737142a0bfd8b38497175e9a584ae4fdd9df2",
+        "tree": "72adbec33734499be550fd0fe05e157a49a25428",
+        "checkSha256": "4ba1a974ec3b5fc8f42ffd511daa13376dd9636fdbe2b448d3707177f979b62f"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44927728315",
+    "testedSha": "5f0737142a0bfd8b38497175e9a584ae4fdd9df2",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "4ba1a974ec3b5fc8f42ffd511daa13376dd9636fdbe2b448d3707177f979b62f",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
