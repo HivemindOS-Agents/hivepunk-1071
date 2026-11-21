@@ -1,0 +1,251 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-21T07:23:18.285Z",
+  "subject": "fulton-ring/hifld-next-datasets",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The project is active at repository level, but the pages show dataset-level acceptance and publication can be blocked by pending approvals, and no verified private security-reporting channel was found, so any security finding should be held until that channel is verified.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "fulton-ring/hifld-next-datasets has 50 raw commits in the last 30 days, 31 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/fulton-ring/hifld-next-datasets/commits?per_page=50&since=2026-10-22T07:23:22.890Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 024d909, on 2026-11-21.",
+      "check": "shipping",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/commit/024d9097fd26e7a44b941e62e56997d8491ca9f2"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "fulton-ring/hifld-next-datasets has 50 raw commits in the last 30 days, 31 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/fulton-ring/hifld-next-datasets/commits?per_page=50&since=2026-10-22T07:23:22.890Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Its latest real commit is 024d909, on 2026-11-21.",
+      "check": "page",
+      "source": "https://api.github.com/repos/fulton-ring/hifld-next-datasets/commits?per_page=50&since=2026-10-22T07:23:22.890Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #308 is for Security Zones, Inventory ID: security-zones, Agency (inventory): US Army Corps of Engineers, Publisher (inventory): Enterprise GIS Team, United States Coast Guard Operations Systems Center.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/308",
+      "quote": "Inventory ID: security-zones Agency (inventory): US Army Corps of Engineers Publisher (inventory): Enterprise GIS Team, United States Coast Guard Operations Systems Center",
+      "sourceId": "src-1",
+      "quoteSha256": "20f7e77dcccfce24ba15e1b9b25477ce89212e9312fb423ad5bea920f4b11e09"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #301 is for Safety Zones, Inventory ID: safety-zones, Agency (inventory): US Army Corps of Engineers, Publisher (inventory): GIS TEAM, Coast Guard Operations Systems Center.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/301",
+      "quote": "Inventory ID: safety-zones Agency (inventory): US Army Corps of Engineers Publisher (inventory): GIS TEAM, Coast Guard Operations Systems Center",
+      "sourceId": "src-2",
+      "quoteSha256": "e82321e7eca660bba64988b1d33514adc5b0ef43ae0b00fe361a46fe0ed13273"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #278 is for Private Schools, Inventory ID: private-schools, Agency (inventory): Department of Education, Publisher (inventory): Oak Ridge National Laboratory.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/278",
+      "quote": "Inventory ID: private-schools Agency (inventory): Department of Education Publisher (inventory): Oak Ridge National Laboratory",
+      "sourceId": "src-3",
+      "quoteSha256": "c9b02fdaab8de18a213aee753014e6d13a945fa9127d55a1427044bc7d8daeab"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #98 is for Formerly Used Defense Sites (FUDS) Public Munitions Response Sites (MRS), Inventory ID: formerly-used-defense-sites-public-mrs.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/98",
+      "quote": "Inventory ID: formerly-used-defense-sites-public-mrs Agency (inventory): US Army Corps of Engineers Publisher (inventory): Not specified",
+      "sourceId": "src-4",
+      "quoteSha256": "7fbeac300cd8e2329eabc08a44106992ee9b3f980b9705156ad23f5fee577df1"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Pending maintainer source, baseline, schema/ID, rights or release approvals block acceptance and publication.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/308",
+      "quote": "Pending maintainer source, baseline, schema/ID, rights or release approvals block acceptance and publication",
+      "sourceId": "src-1",
+      "quoteSha256": "130158ed0465ece2a266bd9bd594a6b3655c1f1d835a2b604d54ab068950ea24"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Issue #308 is shown as Closed as not planned.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/308",
+      "quote": "Closed as not planned",
+      "sourceId": "src-1",
+      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Issue #301 is shown as Closed as not planned.",
+      "check": "page",
+      "source": "https://github.com/fulton-ring/hifld-next-datasets/issues/301",
+      "quote": "Closed as not planned",
+      "sourceId": "src-2",
+      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The official private security-reporting process for fulton-ring/hifld-next-datasets is not established by the pages read.",
+      "check": "page",
+      "missing": "A SECURITY.md, GitHub private vulnerability reporting page, or official disclosure policy for the repository."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The release status of the specific unfinished dataset is not established by the pages read.",
+      "check": "page",
+      "missing": "A mapping from the local unfinished dataset files to a specific issue and its maintainer source, rights and release approval."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "Pending maintainer source, baseline, schema/ID, rights or release approvals block acceptance and publication for the dataset pipelines described in the issues.",
+    "Issues #308 and #301 are shown as Closed as not planned, so their pipeline work cannot be assumed released.",
+    "No private security-reporting process was shown in the pages read, so a security finding has no verified private channel from these sources.",
+    "The pages do not identify which specific unfinished dataset files in the local artifact set correspond to which issue, so target-specific release status remains unverified."
+  ],
+  "unknowns": [
+    "The official private security-reporting process for fulton-ring/hifld-next-datasets is not established by the pages read.: A SECURITY.md, GitHub private vulnerability reporting page, or official disclosure policy for the repository.",
+    "The release status of the specific unfinished dataset is not established by the pages read.: A mapping from the local unfinished dataset files to a specific issue and its maintainer source, rights and release approval."
+  ],
+  "wouldChangeMind": [
+    "Finding an official SECURITY.md or GitHub private vulnerability reporting path for fulton-ring/hifld-next-datasets would change the disclosure conclusion.",
+    "Finding maintainer source, rights and release approvals for a specific dataset issue would change its release-status conclusion.",
+    "Finding a file-level mapping from the local unfinished dataset to a specific issue would identify the target project behind that dataset."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Source and pipeline: Security Zones · Issue #308 · fulton-ring/hifld-next-datasets · GitHub",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/308",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/308",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:22.011Z",
+      "extractor": "page-text-v1",
+      "sha256": "e8e6ae73266997968303cc071a1c710468a1ed4b1865047c929668f7275fcaa9",
+      "bytes": 358343,
+      "quote": "Inventory ID: security-zones Agency (inventory): US Army Corps of Engineers Publisher (inventory): Enterprise GIS Team, United States Coast Guard Operations Systems Center",
+      "quoteSha256": "20f7e77dcccfce24ba15e1b9b25477ce89212e9312fb423ad5bea920f4b11e09"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Source and pipeline: Safety Zones · Issue #301 · fulton-ring/hifld-next-datasets · GitHub",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/301",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/301",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:21.948Z",
+      "extractor": "page-text-v1",
+      "sha256": "05c6ced4f19c259cff8921bb1f6550cb734e92af0bc767b4f5bb9070fb1664bf",
+      "bytes": 332899,
+      "quote": "Inventory ID: safety-zones Agency (inventory): US Army Corps of Engineers Publisher (inventory): GIS TEAM, Coast Guard Operations Systems Center",
+      "quoteSha256": "e82321e7eca660bba64988b1d33514adc5b0ef43ae0b00fe361a46fe0ed13273"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Source and pipeline: Private Schools · Issue #278 · fulton-ring/hifld-next-datasets · GitHub",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/278",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/278",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:22.090Z",
+      "extractor": "page-text-v1",
+      "sha256": "471b9640eb888e00066fdf6eca262d25851f25a29e9ff18ec5d82809de02887a",
+      "bytes": 325537,
+      "quote": "Inventory ID: private-schools Agency (inventory): Department of Education Publisher (inventory): Oak Ridge National Laboratory",
+      "quoteSha256": "c9b02fdaab8de18a213aee753014e6d13a945fa9127d55a1427044bc7d8daeab"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Source and pipeline: Formerly Used Defense Sites (FUDS) Public Munitions Response Sites (MRS) · Issue #98 · fulton-ring/hifld-next-datasets",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/98",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/98",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:22.028Z",
+      "extractor": "page-text-v1",
+      "sha256": "95759b731209e8850e23d72e6a3c6c9114fe0e92b41f0014bd9166f0ac5ef7fd",
+      "bytes": 368853,
+      "quote": "Inventory ID: formerly-used-defense-sites-public-mrs Agency (inventory): US Army Corps of Engineers Publisher (inventory): Not specified",
+      "quoteSha256": "7fbeac300cd8e2329eabc08a44106992ee9b3f980b9705156ad23f5fee577df1"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Source and pipeline: PLSS · Issue #205 · fulton-ring/hifld-next-datasets · GitHub",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/205",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/205",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:21.996Z",
+      "extractor": "page-text-v1",
+      "sha256": "14840aba601d4a73886fd9179dbf43d03703c3f1e545decd1d45c843812abeae",
+      "bytes": 274835,
+      "quote": "Pending maintainer source, baseline, schema/ID, rights or release approvals block acceptance and publication; they do not by themselves prohibit draft implementation and isolated local testing.",
+      "quoteSha256": "cebebac190467cf95d78a23a02fd7cf4c7526a9cf4b42fe49854a03b0fdb9a5b"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Source and pipeline: Flowline · Issue #219 · fulton-ring/hifld-next-datasets · GitHub",
+      "url": "https://github.com/fulton-ring/hifld-next-datasets/issues/219",
+      "finalUrl": "https://github.com/fulton-ring/hifld-next-datasets/issues/219",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:23:22.070Z",
+      "extractor": "page-text-v1",
+      "sha256": "c2719d0eb38720d518cce83154eccf042d3e2cdc08bead13c88eb538f59fcea8",
+      "bytes": 266381,
+      "quote": "Pending maintainer source, baseline, schema/ID, rights or release approvals block acceptance and publication; they do not by themselves prohibit draft implementation and isolated local testing.",
+      "quoteSha256": "cebebac190467cf95d78a23a02fd7cf4c7526a9cf4b42fe49854a03b0fdb9a5b"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of fulton-ring/hifld-next-datasets",
+      "url": "https://api.github.com/repos/fulton-ring/hifld-next-datasets/commits?per_page=50&since=2026-10-22T07:23:22.890Z",
+      "fetchedAt": "2026-11-21T07:23:18.285Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "2b88b867888aa4f8bfe0d689cbc615e08510816443c1b96c828502609cd4fd36"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-21-fulton-ring-hifld-next-datasets.md",
+  "decidedBy": "bee"
+}
