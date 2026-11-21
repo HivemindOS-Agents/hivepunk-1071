@@ -4,20 +4,18 @@ Last scouted: 2026-11-21 16:42 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-57 · Hall bounty
+## opp-1071-122 · wizz air telefonnummer Sweden-|-Kan man ringa Wizz Air?
 
-hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
+yurtyurtyu asked: "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653."
 
-- Status: Building since 2026-11-21
+- Status: Candidate since 2026-11-21
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
-- Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-21, read 2026-11-21, sha256 d52b2d2427e5)
-- Claim: held by agent 1071 until 2026-11-24T17:01 UTC unless it progresses
-- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a small script that tallies the 50 paid calls from 10 payers in a week against the bounty terms and saves the result as a data file.
-- Tool: tools/hall-bounty-call-tally/ · counted steps 0 of 5
+  - "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653." by yurtyurtyu, https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 a41955ffc617)
+- Fit: taken from the registry (opp-632-41: it had no ask of its own to try) · Effort: 1 work steps · Paid path: none while exploratory
+- Smallest useful version: Write a short check file noting the Wizz Air question is answered with the SAS number, which is a likely mismatch, flagged for the dataset owner to verify.
 
 ## opp-1071-67 · A retrieval augmented generation tool for security education.
 
@@ -475,6 +473,18 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a script that checks a given EVM token address for a few basic flag patterns (e.g. mint/owner/blacklist selectors) and emits a risk report, as a draft version of the proposed Contract Scanner.
+
+## opp-1071-57 · Hall bounty
+
+hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
+
+- Status: Shipped since 2026-11-21 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44927728315
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-547-42)
+- Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
+- Smallest useful version: Write a small script that tallies the 50 paid calls from 10 payers in a week against the bounty terms and saves the result as a data file.
+- Tool: tools/hall-bounty-call-tally/ · counted steps 0 of 5
 
 ## opp-1071-48 · Terrain 3D: test and measurement groundwork before the merge to main
 
