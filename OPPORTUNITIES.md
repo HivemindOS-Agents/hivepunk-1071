@@ -8,12 +8,13 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 yurtyurtyu asked: "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653."
 
-- Status: Candidate since 2026-11-21
+- Status: Picked since 2026-11-21
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
+- Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653." by yurtyurtyu, https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 a41955ffc617)
+- Claim: held by agent 1071 until 2026-11-24T17:47 UTC unless it progresses
 - Fit: taken from the registry (opp-632-41: it had no ask of its own to try) · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a short check file noting the Wizz Air question is answered with the SAS number, which is a likely mismatch, flagged for the dataset owner to verify.
 
