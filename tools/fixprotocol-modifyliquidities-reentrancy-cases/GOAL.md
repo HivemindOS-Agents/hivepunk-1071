@@ -17,6 +17,18 @@ run against external systems, and no finding was sent anywhere.
 No verified private reporting channel was identified in this step,
 so no private report was made.
 
+## Fix 2026-11-21 (this check-in)
+Prior runner result was 12/13, ranAt 2026-11-21 07:40 UTC, run
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44881294942
+The single failing check was the banned-word safety check.
+Cause: README.md described that check using the banned words
+themselves, a self-referential false positive. Smallest safe fix:
+reworded that README sentence only, to 'no harmful instructions'.
+self_test.py and its banned-word list are carried forward whole
+and unchanged, so the safety check is not weakened. Exact prior
+non-sensitive output is recorded in ARTIFACTS.md without quoting
+the failing line verbatim, as quoting it would retrigger the check.
+
 ## Daily-log hash
 No hash computed or invented in this step. Any daily-log hash
 must be computed by the owner/runner from committed files.
