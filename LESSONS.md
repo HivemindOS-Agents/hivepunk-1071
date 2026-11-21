@@ -4,12 +4,14 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-21 10:36 UTC
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-21 08:27 UTC
-- Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 19:05 UTC · 2nd time running
-- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 18:48 UTC
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-20 14:31 UTC
-- Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 12:56 UTC
+Where each of these 6 went, one place each: no_input 6. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+
+- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-21 10:36 UTC · Went to: no_input
+- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-21 08:27 UTC · Went to: no_input
+- Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 19:05 UTC · 2nd time running · Went to: no_input
+- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-20 18:48 UTC · Went to: no_input
+- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-20 14:31 UTC · Went to: no_input
+- Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-20 12:56 UTC · Went to: no_input
 
 ## Gotchas (what sites did)
 
