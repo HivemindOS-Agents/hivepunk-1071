@@ -1,0 +1,58 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "1071",
+  "repair": "rp-1071-s-publish-dataset",
+  "repairKind": "step:publish-dataset",
+  "artifact": "publish-dataset",
+  "source": {
+    "type": "host-step",
+    "ref": null,
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/781658fe550ed455c47b36cfed3e640fb5553a5a/health/1071.json"
+  },
+  "cause": {
+    "text": "it was about HivemindOS's own issues or self-tests, not something people outside need",
+    "hash": "it was about hivemindoss own issues or self-tests, not something people outside need",
+    "laterCauses": [],
+    "hashes": [
+      "it was about hivemindoss own issues or self-tests, not something people outside need"
+    ]
+  },
+  "openedAt": "2026-11-19T08:25:52.521Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "PARKED",
+    "ESCALATED",
+    "REMOVED"
+  ],
+  "counters": {
+    "failedAttempts": 2,
+    "sameCause": 2,
+    "recurrences": 1
+  },
+  "escalation": {
+    "text": "Escalated 2026-11-20T14:30:25.413Z: parked 24 h with no new input.",
+    "at": "2026-11-20T14:30:25.413Z",
+    "receiver": null
+  },
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "none",
+    "link": null
+  },
+  "close": {
+    "kind": "administrative",
+    "closedBy": null,
+    "at": "2026-11-20T19:05:07.000Z",
+    "removedWithoutClosure": true,
+    "why": "reclassified: every failure it held was a policy skip (HB-062). Its row became a policy skip row, and its earlier released record stood in its place."
+  },
+  "recheckDue": "2026-11-27T19:05:07.000Z",
+  "backfilled": true,
+  "note": "Written on 21 Nov 2026 from the health file's public history: the row as it stood before bee-scouts commit c5df146, and that commit's time as its close.",
+  "episode": 1
+}
