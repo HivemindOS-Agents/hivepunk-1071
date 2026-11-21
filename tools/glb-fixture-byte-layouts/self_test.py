@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """self_test.py - run from inside the folder: python3 self_test.py
 No arguments, no network. Imports glb_check and publish_manifest, rebuilds
-every CSV case, compares accept/reject, and exercises the upload-set
-tool on fixtures written under a temp dir. Exits 0 only when all pass.
+every CSV case, compares accept/reject, checks dataset files and source
+references (README case coverage, num_examples vs row count, unique
+case_ids, defect consistency, JSON/hex well-formedness, no invented
+URLs in the CSV), and exercises the upload-set tool on fixtures written
+under a temp dir. Exits 0 only when all pass.
 """
 import csv
 import hashlib
+import json
 import os
+import re
 import shutil
 import struct
 import sys
@@ -47,12 +52,47 @@ def expect_refused(files, label):
         shutil.rmtree(tmp, ignore_errors=True)
 
 def main():
-    fields, rows = g.load_rows(HERE / "data" / "data.csv")
+    csv_path = HERE / "data" / "data.csv"
+    fields, rows = g.load_rows(csv_path)
     check(fields == ["case_id", "expected", "defect", "description", "json_text", "bin_hex"], "header matches")
     check(len(rows) == 9, "exactly 9 rows (%d)" % len(rows))
     check(sum(r["expected"] == "valid" for r in rows) == 3, "3 valid rows")
     check(sum(r["expected"] == "invalid" for r in rows) == 6, "6 invalid rows")
     check(all(r["defect"] in g.DEFECTS for r in rows), "all defects known")
+
+    # --- dataset files and source references ---
+    raw_csv = csv_path.read_text(encoding="utf-8")
+    readme_path = HERE / "README.md"
+    check(readme_path.exists(), "README.md present")
+    readme = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+    case_ids = [r["case_id"] for r in rows]
+    check(len(set(case_ids)) == len(case_ids), "case_ids are unique")
+    check(all(cid in readme for cid in case_ids), "README names every case_id from the CSV")
+    m = re.search(r"num_examples:\s*(\d+)", readme)
+    check(m is not None and int(m.group(1)) == len(rows), "README num_examples matches CSV row count")
+    check(all((r["defect"] == "none") == (r["expected"] == "valid") for r in rows), "valid rows use defect none, invalid rows do not")
+    def _json_ok(r):
+        try:
+            json.loads(r["json_text"])
+            return True
+        except Exception:
+            return False
+    check(all(_json_ok(r) for r in rows), "every json_text parses as JSON")
+    def _hex_ok(r):
+        h = r["bin_hex"]
+        if h == "":
+            return True
+        if len(h) % 2:
+            return False
+        try:
+            bytes.fromhex(h)
+            return True
+        except Exception:
+            return False
+    check(all(_hex_ok(r) for r in rows), "every bin_hex is empty or even-length hex")
+    check("http://" not in raw_csv and "https://" not in raw_csv, "CSV contains no invented source URLs")
+    check(all(r["description"].strip() for r in rows), "every row has a non-empty description")
+
     for r in rows:
         data = g.row_to_bytes(r)
         magic, version, total = struct.unpack("<III", data[:12])
@@ -81,8 +121,6 @@ def main():
         check(True, "unknown defect raises")
     check(g.check_glb(b"short")[0] is False, "short file rejected")
 
-    # upload-set tool: exact two-entry fixture must be ACCEPTED (regression
-    # for the earlier failure where a >=3-entry demand failed a correct set).
     tmp = Path(tempfile.mkdtemp())
     try:
         write_tree(tmp, {"README.md": "card\n", "data/data.csv": "a,b\n1,2\n"})
@@ -98,8 +136,6 @@ def main():
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
-    # a third file at the top level is not in the set and must be ignored,
-    # while a third file under data/ is part of the data/ tree and allowed.
     tmp = Path(tempfile.mkdtemp())
     try:
         write_tree(tmp, {"README.md": "c\n", "data/data.csv": "a\n", "data/extra.csv": "b\n", "notes.txt": "x\n"})
@@ -112,7 +148,6 @@ def main():
     expect_refused({"README.md": "c\n"}, "missing data/ is refused")
     expect_refused({"data/data.csv": "a\n"}, "missing README.md is refused")
 
-    # --write then --check on a temp tree, and drift detection.
     tmp = Path(tempfile.mkdtemp())
     try:
         write_tree(tmp, {"README.md": "card\n", "data/data.csv": "a,b\n"})
@@ -125,7 +160,6 @@ def main():
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
-    # shipped MANIFEST.txt must be honest about being a local read-back.
     shipped = (HERE / "MANIFEST.txt")
     if shipped.exists():
         txt = shipped.read_text(encoding="utf-8")
