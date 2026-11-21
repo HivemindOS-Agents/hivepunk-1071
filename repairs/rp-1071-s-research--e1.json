@@ -1,0 +1,50 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "1071",
+  "repair": "rp-1071-s-research",
+  "episode": 1,
+  "repairKind": "step:research",
+  "artifact": "research",
+  "source": {
+    "type": "host-step",
+    "ref": "step:research-20778:249d8303-5ff6-48c6-b83f-19bf1802ab5d:481:1795279288136:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json"
+  },
+  "cause": {
+    "text": "it linked a page it did not read",
+    "hash": "it linked a page it did not read",
+    "laterCauses": [],
+    "hashes": [
+      "it linked a page it did not read"
+    ]
+  },
+  "openedAt": "2026-11-21T16:43:45.726Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 1
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "host-step-record",
+    "link": null
+  },
+  "close": {
+    "kind": "outcome-unverified",
+    "closedBy": "step: a research step ended done (research-20778:249d8303-5ff6-48c6-b83f-19bf1802ab5d:482:1795290928639:a0a0dbac-1732-4814-ae88-ec439a3bca29)",
+    "at": "2026-11-21T19:56:34.736Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-11-28T19:56:34.736Z"
+}
