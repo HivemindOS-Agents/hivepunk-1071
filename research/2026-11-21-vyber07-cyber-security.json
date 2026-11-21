@@ -1,0 +1,167 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-21T19:56:22.305Z",
+  "subject": "Vyber07/cyber-security",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages read, this is a gated cybersecurity dataset with a recent, unshown Wizz Air Sweden phone-number discussion; the claimed phone answer cannot be treated as known until Discussion #22 itself and an official Wizz Air source are read.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The dataset describes itself as a cybersecurity knowledge base for AI training.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/Vyber07/cyber-security",
+      "quote": "This is the most comprehensive cybersecurity knowledge base ever assembled for AI training.",
+      "sourceId": "src-2",
+      "quoteSha256": "6716f1ffd22e6cde6972b412a5f83878304a5c6a5a2a107b8e50b3f34b6104a1"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The dataset page states its size as 16 GB, files as 507, domains as 30+ and sources as 15+ platforms.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/Vyber07/cyber-security",
+      "quote": "Size: 16 GB | Files: 507 | Domains: 30+ | Sources: 15+ platforms",
+      "sourceId": "src-2",
+      "quoteSha256": "ccabe5e61e60bbeb33bf10c3acc3e3ad4170807d28acfba5345f9b09146937d3"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Access to the dataset requires agreeing to share Hugging Face information.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/Vyber07/cyber-security",
+      "quote": "You need to agree to share your Hugging Face information to access this dataset",
+      "sourceId": "src-2",
+      "quoteSha256": "376a8cc75828fd49ebc432bf41b3f9bb039d32adf368f575076280dcf906b891"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Discussion #22 is titled wizz air telefonnummer Sweden-|-Kan man ringa Wizz Air? and was opened 2 days ago by yurtyurtyu.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/Vyber07/cyber-security/discussions",
+      "quote": "wizz air telefonnummer Sweden-|-Kan man ringa Wizz Air? #22 opened 2 days ago by yurtyurtyu",
+      "sourceId": "src-3",
+      "quoteSha256": "869753fe55320e626b1abffcda67445dc68006ac36f74dbc8d76d59459b60bd9"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The file listing shows folders including cloud-security, compliance and cybersecurity-knowledge-expansion.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/Vyber07/cyber-security/tree/main",
+      "quote": "cloud-security Upload comprehensive cybersecurity AI knowledge base - 507 files, 16GB, 28 domains, PhD-level content 6 months ago",
+      "sourceId": "src-4",
+      "quoteSha256": "98ab685be961777f9a59f66ee2c0149919680a0a93b86d6bb7deec0e22ef052c"
+    },
+    {
+      "id": "c6",
+      "label": "DERIVED",
+      "text": "The pages read do not show the body or answer of Discussion #22.",
+      "check": "page",
+      "inputs": [
+        "c4"
+      ],
+      "math": "The discussions page text lists only the title, number, age and author for #22; no answer text for #22 appears in any page read."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The phone number or answer stated in Discussion #22, and whether it is correct.",
+      "check": "page",
+      "missing": "The full text of https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 and an official Wizz Air contact page"
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether an official Wizz Air Sweden phone number matches anything in Discussion #22.",
+      "check": "page",
+      "missing": "An official Wizz Air website or help page stating the Sweden contact number"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The dataset's licence terms beyond the presence of a LICENSE file in the listing.",
+      "check": "page",
+      "missing": "The contents of the LICENSE file, which the file listing names but does not reproduce"
+    }
+  ],
+  "counts": {
+    "fact": 5,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "Dataset content is gated, so files and claims about their contents could not be fully verified from the pages read",
+    "Discussion #22's answer is not shown in the pages read, so any phone number in it is unconfirmed",
+    "No official Wizz Air page was among the pages read, so no airline number can be corroborated here",
+    "Discussions-page airline queries may be unrelated to the cybersecurity purpose stated for the dataset"
+  ],
+  "unknowns": [
+    "The phone number or answer stated in Discussion #22, and whether it is correct.: The full text of https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 and an official Wizz Air contact page",
+    "Whether an official Wizz Air Sweden phone number matches anything in Discussion #22.: An official Wizz Air website or help page stating the Sweden contact number",
+    "The dataset's licence terms beyond the presence of a LICENSE file in the listing.: The contents of the LICENSE file, which the file listing names but does not reproduce"
+  ],
+  "wouldChangeMind": [
+    "Reading Discussion #22 in full would show whether it contains a phone answer at all",
+    "An official Wizz Air page stating a Sweden contact number would allow corroboration",
+    "Accessing the gated dataset files would allow verification of its stated contents"
+  ],
+  "sources": [
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Vyber07/cyber-security · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
+      "finalUrl": "https://huggingface.co/datasets/Vyber07/cyber-security",
+      "status": 200,
+      "fetchedAt": "2026-11-21T19:56:24.635Z",
+      "extractor": "page-text-v1",
+      "sha256": "5be7c5847be449ad1e29cbda1a964da2a3b81c164a336ab93477cda3dfac0578",
+      "bytes": 210537,
+      "quote": "This is the most comprehensive cybersecurity knowledge base ever assembled for AI training.",
+      "quoteSha256": "6716f1ffd22e6cde6972b412a5f83878304a5c6a5a2a107b8e50b3f34b6104a1"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Vyber07/cyber-security · Discussions",
+      "url": "https://huggingface.co/datasets/Vyber07/cyber-security/discussions",
+      "finalUrl": "https://huggingface.co/datasets/Vyber07/cyber-security/discussions",
+      "status": 200,
+      "fetchedAt": "2026-11-21T19:56:24.635Z",
+      "extractor": "page-text-v1",
+      "sha256": "d6a776b7f4f52edc19a9449608ae8339629cb10842550da3a12335512f50bebd",
+      "bytes": 213211,
+      "quote": "wizz air telefonnummer Sweden-|-Kan man ringa Wizz Air? #22 opened 2 days ago by yurtyurtyu",
+      "quoteSha256": "869753fe55320e626b1abffcda67445dc68006ac36f74dbc8d76d59459b60bd9"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Vyber07/cyber-security at main",
+      "url": "https://huggingface.co/datasets/Vyber07/cyber-security/tree/main",
+      "finalUrl": "https://huggingface.co/datasets/Vyber07/cyber-security/tree/main",
+      "status": 200,
+      "fetchedAt": "2026-11-21T19:56:24.921Z",
+      "extractor": "page-text-v1",
+      "sha256": "4012dd5eda0b020c815ee6f932191e2bd7de0aeb0c13287fe5e73f613ed837d4",
+      "bytes": 255726,
+      "quote": "cloud-security Upload comprehensive cybersecurity AI knowledge base - 507 files, 16GB, 28 domains, PhD-level content 6 months ago",
+      "quoteSha256": "98ab685be961777f9a59f66ee2c0149919680a0a93b86d6bb7deec0e22ef052c"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-21-vyber07-cyber-security.md",
+  "decidedBy": "bee"
+}
