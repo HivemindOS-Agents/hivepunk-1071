@@ -1,0 +1,266 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-21T01:02:39.429Z",
+  "subject": "soos-security/soos",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages read, the only concrete, verifiable project is soos-security/soos, and its documented disclosure gap is the material finding. Any claim about FixProtocol's identity, traction or private channel remains unconfirmed and should not be assumed from these pages.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "soos-security/soos has 6 raw commits in the last 30 days, 5 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/soos-security/soos/commits?per_page=50&since=2026-10-22T01:02:51.352Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 3f7fbf5, on 2026-11-20.",
+      "check": "shipping",
+      "source": "https://github.com/soos-security/soos/commit/3f7fbf5b4f08f4b8e53c830ab97bfce2c28518cc"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "soos-security/soos has 6 raw commits in the last 30 days, 5 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/soos-security/soos/commits?per_page=50&since=2026-10-22T01:02:51.352Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The latest real commit of soos-security/soos is 3f7fbf5, on 2026-11-20.",
+      "check": "page",
+      "source": "https://api.github.com/repos/soos-security/soos/commits?per_page=50&since=2026-10-22T01:02:51.352Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The public soos-security/soos repository has no SECURITY.md in root, .github/ or Docs/, and no document names a private reporting channel.",
+      "check": "page",
+      "source": "https://github.com/soos-security/soos/issues/618",
+      "quote": "The public repository has no SECURITY.md (root, .github/ or Docs/ ), and no document names a private reporting channel",
+      "sourceId": "src-2",
+      "quoteSha256": "1b82e4eb7fdf615ed16244112b9492e442aea92206b972c990b3d4978bb44cc5"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "External researchers therefore have only public issues to report a PAM bypass in soos-security/soos.",
+      "check": "page",
+      "source": "https://github.com/soos-security/soos/issues/618",
+      "quote": "External researchers therefore have only public issues to report a PAM bypass.",
+      "sourceId": "src-2",
+      "quoteSha256": "3656e1d366e57587797f803d9eab749caed87e753d8a5667ba39a00cb30768b1"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "SECR-04 is recorded as accepted residual risk in soos-security/soos.",
+      "check": "page",
+      "source": "https://github.com/soos-security/soos/issues/618",
+      "quote": "Accepted residual risk.",
+      "sourceId": "src-2",
+      "quoteSha256": "f10d10c393c9e55d8b687265f9641ab18d3e4f94ff341b06ae38513597c99054"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Changing the accepted residual risk needs an owner decision and an ADR update.",
+      "check": "page",
+      "source": "https://github.com/soos-security/soos/issues/618",
+      "quote": "Changing it needs an owner decision and an ADR update; closing this issue with that rationale is a valid outcome.",
+      "sourceId": "src-2",
+      "quoteSha256": "8b3e51c9d1a7c431f4e88b5b71e74f7c889048fe969d87a4427773670ac67cf5"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The 2026-09-29 full review of soos-security/soos was committed to main and filed as 140 public issues labelled review-2026-09-29.",
+      "check": "page",
+      "source": "https://github.com/soos-security/soos/issues/618",
+      "quote": "was committed to main and filed as 140 public issues (label review-2026-09-29 ) hours before the P0 fixes merged.",
+      "sourceId": "src-2",
+      "quoteSha256": "e5cb56225cd7fe122ea6fcba4a4817408fc56b655625fa55c1e0f4da48b2ae32"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Security Alliance guidance says to test only on local forks and report privately through a verified contact.",
+      "check": "page",
+      "source": "https://frameworks.securityalliance.org/vulnerability-disclosure/reporting-a-vulnerability/",
+      "quote": "Test only on local forks, report privately through a contact you have verified, and state your disclosure timeline up front.",
+      "sourceId": "src-1",
+      "quoteSha256": "41b92782b3493a968bc28211bf43c337f113cf89f92123eef2286f77c3eebe71"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Security Alliance guidance says to confirm a security contact in at least two independent places before sending details.",
+      "check": "page",
+      "source": "https://frameworks.securityalliance.org/vulnerability-disclosure/reporting-a-vulnerability/",
+      "quote": "Confirm the contact in at least two independent places before sending details, for example the website and the repository.",
+      "sourceId": "src-1",
+      "quoteSha256": "aa299c0e468be082aca9dcb45493a87767555085299be3a59af3bfa3b438eba7"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "OWASP guidance says organisations should provide a clear method for researchers to securely report vulnerabilities.",
+      "check": "page",
+      "source": "https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html",
+      "quote": "Provide a clear method for researchers to securely report vulnerabilities.",
+      "sourceId": "src-3",
+      "quoteSha256": "00ed823a50786213d5e9bc594c388703c7811bf7e8070e0782b637b7d5cbc4ae"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "FixProtocol's identity, official pages, traction and private security-reporting channel are not shown in the pages read.",
+      "check": "page",
+      "missing": "Official FixProtocol pages naming the project and its disclosure channel, such as SECURITY.md, security.txt, or a GitHub private vulnerability reporting page"
+    },
+    {
+      "id": "c12",
+      "label": "DERIVED",
+      "text": "Because c3 and c4 show no private channel for soos-security/soos, security findings there risk public exposure before remediation.",
+      "check": "page",
+      "inputs": [
+        "c3",
+        "c4",
+        "c7"
+      ],
+      "math": "No private channel (c3) plus only public issues available (c4) plus a prior instance of 140 public review issues before fixes (c7) implies public-exposure risk for future findings in that repository."
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "No private disclosure channel shown for soos-security/soos, so findings may be forced into public issues.",
+    "The issue links that absence to a past public publication of vulnerability details before fixes.",
+    "Accepted residual risk status means the gap may remain until an owner decision and ADR update.",
+    "Private-channel guidance requires verifying a contact in at least two independent places, which was not shown for FixProtocol in the pages read.",
+    "FixProtocol identity, traction and disclosure status cannot be confirmed from the pages provided."
+  ],
+  "unknowns": [
+    "FixProtocol's identity, official pages, traction and private security-reporting channel are not shown in the pages read.: Official FixProtocol pages naming the project and its disclosure channel, such as SECURITY.md, security.txt, or a GitHub private vulnerability reporting page"
+  ],
+  "wouldChangeMind": [
+    "Official FixProtocol pages identifying the project and its private reporting channel",
+    "A SECURITY.md or security.txt for FixProtocol verified from its official domain or repository",
+    "Verified FixProtocol usage or activity from official sources"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Reporting a Vulnerability | Security Alliance",
+      "url": "https://frameworks.securityalliance.org/vulnerability-disclosure/reporting-a-vulnerability/",
+      "finalUrl": "https://frameworks.securityalliance.org/vulnerability-disclosure/reporting-a-vulnerability/",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:45.938Z",
+      "extractor": "page-text-v1",
+      "sha256": "c8b07331bf0aefa256820b4449c527f87789b69c925eeb9802655af50c0f6e76",
+      "bytes": 194392,
+      "quote": "Test only on local forks, report privately through a contact you have verified, and state your disclosure timeline up front.",
+      "quoteSha256": "41b92782b3493a968bc28211bf43c337f113cf89f92123eef2286f77c3eebe71"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "[SECR-04] No SECURITY.md or private disclosure channel; past audit published vulnerability details publicly before fixes · Issue #618 · soos",
+      "url": "https://github.com/soos-security/soos/issues/618",
+      "finalUrl": "https://github.com/soos-security/soos/issues/618",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:46.453Z",
+      "extractor": "page-text-v1",
+      "sha256": "bb2f2b5c92f3335b11321e8cfa7cb5466756bd7b346f8029645a55f71b4bd470",
+      "bytes": 292583,
+      "quote": "The public repository has no SECURITY.md (root, .github/ or Docs/ ), and no document names a private reporting channel",
+      "quoteSha256": "1b82e4eb7fdf615ed16244112b9492e442aea92206b972c990b3d4978bb44cc5"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Vulnerability Disclosure - OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html",
+      "finalUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:45.940Z",
+      "extractor": "page-text-v1",
+      "sha256": "6241fb1ae16d59ffb2b298a35b2b533086a4504425f0dc33242d2f51d7604434",
+      "bytes": 101964,
+      "quote": "Provide a clear method for researchers to securely report vulnerabilities.",
+      "quoteSha256": "00ed823a50786213d5e9bc594c388703c7811bf7e8070e0782b637b7d5cbc4ae"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "How to find, verify, and report open source vulnerabilities using GitHub tools - The GitHub Blog",
+      "url": "https://github.blog/security/vulnerability-research/security-research-without-ever-leaving-github-from-code-scanning-to-cve-via-codespaces-and-private-vulnerability-reporting/",
+      "finalUrl": "https://github.blog/security/vulnerability-research/security-research-without-ever-leaving-github-from-code-scanning-to-cve-via-codespaces-and-private-vulnerability-reporting/",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:46.520Z",
+      "extractor": "page-text-v1",
+      "sha256": "1941888777d476c92a1f47900e7191b958fd9bce64bb981c4f19d49a981c5d03",
+      "bytes": 217655,
+      "quote": "By the time we conclude, you&rsquo;ll have mastered the art of swiftly configuring a clean, temporary environment for the discovery, verification, and disclosure of vulnerabilities in open source software (OSS).",
+      "quoteSha256": "f5f008e731d9ce6c7c01e2d41fe72d60e96ad98854c978d39f22b846ce809a66"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "How To Report A Vulnerability Responsibly: A Practical Guide For Security Researchers - ROIhacks.com",
+      "url": "https://roihacks.com/how-to-report-a-vulnerability-responsibly/",
+      "finalUrl": "https://roihacks.com/how-to-report-a-vulnerability-responsibly/",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:46.038Z",
+      "extractor": "page-text-v1",
+      "sha256": "fc38d33fb3db113fd45a88427a1b4664b5e24c14153244df05f4d0ae50c78b9d",
+      "bytes": 112804,
+      "quote": "What Responsible Vulnerability Reporting Means Responsible vulnerability reporting is the process of notifying the right party about a security weakness in a way that gives them a fair chance to investigate and fix it.",
+      "quoteSha256": "5633ba2a62edc9342c9fcb64336c1d48298df521e0c2e9a5999cfb3998b72832"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "How to Report a Security Vulnerability — Beginner Guide (2026)",
+      "url": "https://safeguard.sh/resources/blog/how-to-report-a-security-vulnerability",
+      "finalUrl": "https://safeguard.sh/resources/blog/how-to-report-a-security-vulnerability",
+      "status": 200,
+      "fetchedAt": "2026-11-21T01:02:51.352Z",
+      "extractor": "page-text-v1",
+      "sha256": "b5abaeb5a3060e5c547b258c948ee7c400b31c35804cd25b8411366a751ec444",
+      "bytes": 359570,
+      "quote": "What you will accomplish You will confirm your finding is real, locate the correct private channel to report it, write a report a maintainer can act on quickly, and coordinate a sensible disclosure timeline.",
+      "quoteSha256": "76e04128cd4a44b69b880aadafaa271a32558d68809ee3ae7c3e39d8e1c3f7a3"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of soos-security/soos",
+      "url": "https://api.github.com/repos/soos-security/soos/commits?per_page=50&since=2026-10-22T01:02:51.352Z",
+      "fetchedAt": "2026-11-21T01:02:39.429Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "b2a02430b75dd379862ccfb1f7b52aeac3a8895407bd19a3adc090710039cbec"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-21-soos-security-soos.md",
+  "decidedBy": "bee"
+}
