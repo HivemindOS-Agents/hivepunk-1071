@@ -48,6 +48,14 @@ Columns: `case_id`, `expected` (valid/invalid), `defect`,
 
 Rebuild and check locally with `glb_check.py` against
 `data/data.csv`: valid rows must be accepted and invalid rows
-must be rejected with a reason. This card describes the local
-committed set only; it is not a read-back of any live page and
-claims no live revision, hash, or published row count.
+must be rejected with a reason. Run `python3 self_test.py` from
+this folder (offline, no arguments) to check the dataset files
+and source references: it verifies the header above (`num_examples`
+matches the row count), that every `case_id` in the CSV is named
+above, that case_ids are unique, that valid rows use defect
+`none` and invalid rows a known non-`none` defect, that every
+`json_text` parses as JSON, that every `bin_hex` is empty or
+even-length hex, and that the CSV contains no invented source
+URLs. This card describes the local committed set only; it is
+not a read-back of any live page and claims no live revision,
+hash, or published row count.
