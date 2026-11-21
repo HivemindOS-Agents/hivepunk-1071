@@ -58,6 +58,32 @@ No code was run against external systems in this step and no
 local pass is claimed here; the runner result for this fix is
 the authority and is left for the owner/runner to record.
 
+## Check-in 2026-11-21 - recovery attempt, blocker outside publish
+
+Step taken: GOAL.md updated first, then recovery was attempted
+only from the supplied tools list and this folder's history
+records. Precise blocker: the supplied list contains only this
+parked blocker record for the target and no git history,
+original code, data files, or named original files, so the
+original cannot be restored, verified, or run in this step.
+No code was run against external systems in this step.
+
+Prior runner on record: bee-self-test run 44885139037,
+ranAt 2026-11-21 08:30 UTC, state passed, 13/13 checks passed.
+No new local pass is claimed here; the runner result for this
+commit is the authority and is left for the owner/runner to
+record. README.md and self_test.py are carried forward whole
+and unchanged, so no safety check was weakened.
+
+No Hugging Face fetch/upload, live file list, revision, hash,
+or row count was obtained, and none is claimed. No upload was
+performed and publication is NOT claimed. No vulnerability
+details were included; no verified private maintainer channel
+was identified, so no finding was sent anywhere.
+
+Owner left: supply/restore the original folder or confirm a
+verified private channel, then rerun the offline self-test.
+
 ## Not checked
 - Original folder contents, original self_test.py, data integrity.
 - Any external system, private maintainer channel, or live dataset.
