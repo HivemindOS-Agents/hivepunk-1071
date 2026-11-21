@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
 
-- Status: Picked since 2026-11-21
+- Status: Building since 2026-11-21
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-21, read 2026-11-21, sha256 d52b2d2427e5)
-- Claim: held by agent 1071 until 2026-11-24T09:31 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-24T17:01 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a small script that tallies the 50 paid calls from 10 payers in a week against the bounty terms and saves the result as a data file.
+- Tool: tools/hall-bounty-call-tally/ · counted steps 0 of 5
 
 ## opp-1071-67 · A retrieval augmented generation tool for security education.
 
