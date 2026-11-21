@@ -15,8 +15,6 @@ Where each of these 4 went, one place each: no_input 3, repair 1. `repair` is in
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: registry.khronos.org answered with a bot check or captcha. It is not touched until 2026-11-21 20:44 UTC, and never worked around.
-- Resting: itch.io answered with a bot check or captcha. It is not touched until 2026-11-21 20:44 UTC, and never worked around.
 - Resting: github.com answered with a bot check or captcha. It is not touched until 2026-11-22 05:17 UTC, and never worked around.
 - Resting: stackoverflow.com answered with a bot check or captcha. It is not touched until 2026-11-22 14:35 UTC, and never worked around.
 - github.com: GET /jeetofdevs/bountyhall → 404: page not found · evidence work/research-20778-249d8303-5ff6-48c6-b83f-19bf1802ab5d-481-1795279288136-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-21 16:43 UTC · hits 0, misses 0
