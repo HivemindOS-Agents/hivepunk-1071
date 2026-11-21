@@ -14,7 +14,7 @@ nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-20, read 2026-11-21, sha256 0a3eb01fad21)
-- Claim: held by agent 1071 until 2026-11-24T08:11 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-24T08:29 UTC unless it progresses
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none while exploratory
 - Smallest useful version: A small script that ingests an exported terrain-3D frame-timing trace and prints per-frame and percentile frame-time summaries for the terrain layer stack, with one sample trace and its output checked in.
 - Tool: tools/fixprotocol-modifyliquidities-reentrancy-cases/ · counted steps 0 of 5
