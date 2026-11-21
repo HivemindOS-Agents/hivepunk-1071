@@ -1,0 +1,52 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "1071",
+  "repair": "rp-1071-s-propose",
+  "repairKind": "step:propose",
+  "artifact": "propose",
+  "source": {
+    "type": "host-step",
+    "ref": null,
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/d7412341c1a6edea193a97ee2695fb84d0c435f7/health/1071.json"
+  },
+  "cause": {
+    "text": "Skipped a proposal issue #1 already covers: Add isolated self-test run note to SuperAgent API quickstart",
+    "hash": "skipped a proposal issue # already covers: add isolated self-test run note to superagent api quickstart",
+    "laterCauses": [],
+    "hashes": [
+      "skipped a proposal issue # already covers: add isolated self-test run note to superagent api quickstart"
+    ]
+  },
+  "openedAt": "2026-11-17T00:54:57.917Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "REMOVED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 0
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "none",
+    "link": null
+  },
+  "close": {
+    "kind": "administrative",
+    "closedBy": null,
+    "at": "2026-11-17T14:30:55.000Z",
+    "removedWithoutClosure": true,
+    "why": "skip correction: every failure it held was a deliberate skip (HB-051)"
+  },
+  "recheckDue": "2026-11-24T14:30:55.000Z",
+  "backfilled": true,
+  "note": "Written on 21 Nov 2026 from the health file's public history: the row as it stood before bee-scouts commit 6ddb3f0, and that commit's time as its close.",
+  "episode": 1
+}
