@@ -12,6 +12,22 @@ padding, BIN missing 0x00 padding to 4-byte alignment). Checker:
 glb_check.py. Self-test: self_test.py.
 
 ## Status
+- 2026-11-21 this check-in: GOAL.md updated first, then existing
+  target files were inspected (GOAL.md, ARTIFACTS.md, README.md,
+  MANIFEST.txt, self_test.py, publish_manifest.py, HOWTO.md,
+  data/data.csv). Concrete local work: strengthened self_test.py
+  with dataset/source-reference checks (README mentions every
+  case_id, README num_examples matches row count, unique
+  case_ids, valid/invalid defect consistency, json_text parses,
+  bin_hex empty-or-even hex, no invented http(s) URLs in CSV)
+  and updated README.md to document them. No code was run
+  against external systems. This step did not run the tests
+  locally and makes no pass claim; HivemindOS runner result is
+  the only authority. No live Hugging Face read-back, file
+  list, revision, or live row count (expected 9) was obtained
+  and no upload was made. No undisclosed security details
+  were included or reported; no verified private maintainer
+  channel was identified in this step, so no finding was sent.
 - 2026-11-20 MCP check-in: GOAL.md updated first, then the
   already-authorized Hugging Face MCP route at
   https://huggingface.co/mcp was to be used to upload the complete
@@ -22,33 +38,9 @@ glb_check.py. Self-test: self_test.py.
   or live row count (expected 9) was obtained and no upload was
   made. Blocker recorded in ARTIFACTS.md. Per instruction, no
   other upload attempt was drafted and work stops here.
-  Latest self-test on record: 62/62 passed, ranAt 2026-11-20
-  06:37 UTC, runner
+  Latest self-test on record at that time: 62/62 passed, ranAt
+  2026-11-20 06:37 UTC, runner
   https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128
-- 2026-11-20 this check-in: GOAL.md updated first, then the
-  target above was to be published/verified. This step has no
-  Hugging Face fetch/upload capability and no existing authorized
-  session was available here, so no live file list, byte-for-byte
-  read-back, revision, or live row count (expected 9) was obtained
-  and no upload was made. Blocker recorded in ARTIFACTS.md.
-  Concrete local work done: added the missing local dataset card
-  README.md so the committed upload set is now data/data.csv +
-  README.md in this folder. No publication is claimed.
-- 2026-11-20 repeat check-in: GOAL.md updated first, then the
-  target URL above was to be checked and, if missing, the complete
-  committed set uploaded with existing authorized access. This step
-  has no Hugging Face fetch/upload capability and no existing
-  authorized session was available here, so no live file list,
-  README.md / data/data.csv read-back, revision, or live row count
-  (expected 9) was obtained and no upload was made. Blocker is
-  recorded in ARTIFACTS.md. No publication is claimed and work
-  stops here per instruction.
-- 2026-11-20 verification step: GOAL.md updated first, then the
-  target URL above was to be fetched and README.md / data/data.csv
-  verified against the committed upload set and row count
-  (expected 9). No live read-back, file list, revision, or live
-  row count was obtained in that step, and no upload was made.
-  Blocker is recorded in ARTIFACTS.md. No publication is claimed.
 - Isolated self-test PASSED on record: 62/62 checks passed.
   Latest runner https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128
   ranAt 2026-11-20 06:37 UTC, state passed, exit code 0.
@@ -77,4 +69,6 @@ must not be cited as its evidence.
 ## Next (owner publish play only)
 Upload exactly data/data.csv and README.md, unchanged, to the target,
 then read back live files and row count (expected 9) and append that
-read-back to ARTIFACTS.md before claiming live success.
+read-back to ARTIFACTS.md before claiming live success. Run the
+HivemindOS self-test runner for the strengthened self_test.py and
+record its exact output in ARTIFACTS.md; do not invent a result.
