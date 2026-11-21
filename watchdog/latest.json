@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-20T00:04:08.934Z",
+  "at": "2026-11-21T00:12:09.297Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,16 +52,6 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "name": "failure_not_in_health",
-      "severity": "repair",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered.",
-      "evidence": [],
-      "firstSeen": "2026-11-17T14:46:28.176Z"
-    },
-    {
       "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
       "check": "D13",
       "name": "receipt_or_link_false",
@@ -88,41 +78,41 @@
       "firstSeen": "2026-11-20T00:04:08.934Z"
     },
     {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
       "check": "D13",
       "name": "receipt_or_link_false",
       "severity": "report",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
       "detail": "ARTIFACTS.md calls it live; it answered 429.",
       "evidence": [
-        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
         "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
       ],
-      "firstSeen": "2026-11-20T00:04:08.934Z"
+      "firstSeen": "2026-11-21T00:12:09.297Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
+      "id": "wd-1071-D15-reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
+      "subject": "reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json"
       ],
-      "firstSeen": "2026-11-20T00:04:08.934Z"
+      "firstSeen": "2026-11-21T00:12:09.297Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
+      "id": "wd-1071-D15-reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
+      "subject": "reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-20-gltf-validator-issue-codes-sampled.json"
       ],
-      "firstSeen": "2026-11-20T00:04:08.934Z"
+      "firstSeen": "2026-11-21T00:12:09.297Z"
     },
     {
       "id": "wd-1071-D18-artifacts",
@@ -142,37 +132,43 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "7 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: the platform Publish a small open dataset play for exactly data/data\".",
+      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: run the platform publish play / authorized MCP upload for exactly data/data\".",
       "evidence": [
-        "step 2026-11-19T19:53Z",
-        "step 2026-11-19T13:15Z",
-        "step 2026-11-19T12:42Z",
-        "step 2026-11-19T09:30Z"
+        "step 2026-11-20T09:47Z",
+        "step 2026-11-20T06:37Z",
+        "step 2026-11-20T03:29Z",
+        "step 2026-11-20T00:21Z"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled.json",
+      "id": "wd-1071-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "subject": "publish-dataset",
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled-visibility.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-16-hugging-face-hub-dataset-upload-facts-compiled-visibility.json",
-      "firstSeen": "2026-11-18T00:12:17.135Z"
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "check": "D13",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "firstSeen": "2026-11-20T00:04:08.934Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json",
+      "id": "wd-1071-D15-reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
       "check": "D15",
-      "subject": "reviews/2026-11-16-hugging-face-dataset-sharing-facts-from-docs.json",
-      "firstSeen": "2026-11-17T14:46:28.176Z"
+      "subject": "reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
+      "firstSeen": "2026-11-20T00:04:08.934Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
+      "firstSeen": "2026-11-20T00:04:08.934Z"
     }
   ],
-  "said": "9 found",
+  "said": "8 found",
   "requests": 22,
-  "elapsedMs": 2860
+  "elapsedMs": 3197
 }
