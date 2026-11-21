@@ -53,13 +53,12 @@ A tool in its repository whose self-test passed on 2026-11-12; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/provenance-row
 - Shipped: 2026-11-12
 
-## In progress
-
 ### hall-bounty-call-tally
 
 A small script in a new tools/ folder that tallies 50 paid calls from 10 payers against the Hall bounty terms and saves the result as a data file.
 
-- Outside HivemindOS: Not published outside HivemindOS yet
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/hall-bounty-call-tally
+- Shipped: 2026-11-21
 
 ## Live outside HivemindOS
 
