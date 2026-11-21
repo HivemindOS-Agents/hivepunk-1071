@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-21T02:07:49.935Z",
+  "artifact": "Security Audit Skill Page Facts (Nov 2026)",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
