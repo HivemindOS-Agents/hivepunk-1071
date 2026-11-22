@@ -27,8 +27,13 @@
   "command": "git checkout 7da945784453c966608a93752ab59d5537b462b8 && cd tools/wizz-air-se-sas-number-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-wizz-air-se-sas-number-check-7da9457.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45019638574",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-22T12:15:40Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45021337246"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 5,
