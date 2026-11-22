@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-22T06:06:19.231Z",
+  "artifact": "Wiz reusable workflow facts from read pages",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-security-fix-workflow-facts-from-read-pages",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
