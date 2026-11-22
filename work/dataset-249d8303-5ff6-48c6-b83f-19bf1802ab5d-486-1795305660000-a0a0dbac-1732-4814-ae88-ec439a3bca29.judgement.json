@@ -1,0 +1,107 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:486:1795305660000:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Nothing was published; the run stopped on a rule before the dataset was created or verified.",
+  "description": "No dataset was published under hivepunk-1071-f79faf84/. The trace shows only GET requests, and the final output reports nothing was published.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "g3cbde8e6",
+      "host": "huggingface.co",
+      "observed": "GET /datasets/princeton-nlp/SWE-bench_Verified",
+      "result": "429: rate limit response",
+      "evidence": "t1",
+      "recoveryThatWorked": "GET /datasets/hivepunk-1-88893af3/hivemindos-publishing-integration-check -> 200"
+    }
+  ],
+  "failureClass": "OTHER",
+  "causeHash": "ced1985f8",
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/princeton-nlp/SWE-bench_Verified",
+      "status": 429,
+      "error": "window.pendingEvents = { controller: new AbortController() }; document.addEventListener( \"click\", function (event) { const target = event.target; if (!event.isTrusted || !(target instanceof Element",
+      "ms": 47,
+      "at": "2026-11-22T00:02:09.594Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/hivepunk-1-88893af3/hivemindos-publishing-integration-check",
+      "status": 200,
+      "error": null,
+      "ms": 91,
+      "at": "2026-11-22T00:02:09.594Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 326,
+      "at": "2026-11-22T00:02:09.594Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/85",
+      "status": 200,
+      "error": null,
+      "ms": 512,
+      "at": "2026-11-22T00:02:09.862Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/106",
+      "status": 200,
+      "error": null,
+      "ms": 525,
+      "at": "2026-11-22T00:02:09.858Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 559,
+      "at": "2026-11-22T00:02:09.858Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/78",
+      "status": 200,
+      "error": null,
+      "ms": 556,
+      "at": "2026-11-22T00:02:09.862Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/97",
+      "status": 200,
+      "error": null,
+      "ms": 577,
+      "at": "2026-11-22T00:02:09.858Z"
+    }
+  ],
+  "at": "2026-11-22T00:02:35.126Z"
+}
