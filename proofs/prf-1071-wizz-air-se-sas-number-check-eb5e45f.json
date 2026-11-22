@@ -1,0 +1,70 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-wizz-air-se-sas-number-check-eb5e45f",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-22T02:26:34Z",
+  "claim": {
+    "text": "Results: 17/17 checks passed",
+    "result": "passed",
+    "checksPassed": 17,
+    "checksTotal": 17
+  },
+  "artifact": "tools/wizz-air-se-sas-number-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/wizz-air-se-sas-number-check/self_test.py",
+    "commit": "eb5e45f310170f6ba899e8a29ef3ec334a6d88f6",
+    "sha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 17,
+    "checksTotal": 17
+  },
+  "command": "git checkout eb5e45f310170f6ba899e8a29ef3ec334a6d88f6 && cd tools/wizz-air-se-sas-number-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-wizz-air-se-sas-number-check-eb5e45f.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44976088379",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 2,
+    "shippedCommit": "eb5e45f310170f6ba899e8a29ef3ec334a6d88f6",
+    "outcome": "shipped-final",
+    "asOfStep": 2,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "f916bc75fd78bd45d894093aff096269d518366a",
+        "tree": "deabd8017fc4741f16e4933d796434df5e54d2e3",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "eb5e45f310170f6ba899e8a29ef3ec334a6d88f6",
+        "tree": "ac2353d55cacf7456e6d624c6b1500beb001df78",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44976088379",
+    "testedSha": "eb5e45f310170f6ba899e8a29ef3ec334a6d88f6",
+    "checkFrom": "base",
+    "baseSha": "f916bc75fd78bd45d894093aff096269d518366a",
+    "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97",
+    "checkEdited": false,
+    "baseCheck": "unchanged",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": []
+  },
+  "checkFrom": "base"
+}
