@@ -1,6 +1,6 @@
 # Artifacts - wizz-air-se-sas-number-check
 
-## Publication record 2026-11-22
+## Publication record 2026-11-22 (updated)
 
 Artifact URL (from prior step history, not fetched in this step):
 https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/wizz-air-se-sas-number-check
@@ -20,10 +20,11 @@ python3 self_test.py
 ~~~
 
 ## Exact runner output
-Runner: bee-self-test run 44961484437
-ranAt: 2026-11-21 23:22 UTC
-state: passed
-Output on record:
+Latest runner result supplied to this step:
+- Runner: bee-self-test run 44976088379
+- ranAt: 2026-11-22 02:26 UTC
+- state: passed
+- Tail of output on record:
 
 ~~~text
 ok: SAS software -> UNKNOWN, not MATCH
@@ -35,13 +36,10 @@ ok: CLI verdict correct
 Results: 17/17 checks passed
 ~~~
 
-Full output on record also covered normalisation, Wizz Air and
-SAS airline classification, SAS software separation, UNKNOWN
-rules for unretrieved discussion, missing claimed number,
-missing official numbers and unknown airline, and the CLI
-round-trip. HivemindOS runs self_test.py after commit; the
-runner result for this commit is the authority. No new local
-pass is claimed in this step.
+Earlier runner on record: run 44961484437, 2026-11-21 23:22 UTC,
+passed, same 17/17 result. HivemindOS runs self_test.py after
+commit; the runner result for this commit is the authority.
+No new local pass is claimed in this step.
 
 ## Could not confirm / blockers
 - Push and fetch of every named file to verify public access:
