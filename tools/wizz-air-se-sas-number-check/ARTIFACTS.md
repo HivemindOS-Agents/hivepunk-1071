@@ -2,15 +2,25 @@
 
 ## Publication record 2026-11-22 (updated)
 
-Artifact URL (from prior step history, not fetched in this step):
+Target / artifact URL:
 https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/wizz-air-se-sas-number-check
 
-Files in this tool folder:
-- check.py
-- README.md
-- self_test.py
-- GOAL.md (carried from prior commit; not rewritten in this step)
-- ARTIFACTS.md (this file)
+Public files to verify by fetch (not fetched in this step):
+- check.py -> https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/wizz-air-se-sas-number-check/check.py
+- README.md -> https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/wizz-air-se-sas-number-check/README.md
+- self_test.py -> https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/wizz-air-se-sas-number-check/self_test.py
+- ARTIFACTS.md -> https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/wizz-air-se-sas-number-check/ARTIFACTS.md
+
+Files in this tool folder: check.py, README.md, self_test.py,
+GOAL.md (carried in prior commit, not updated in this tool
+commit), ARTIFACTS.md (this file).
+
+Side Wiz dataset note: the HF dataset
+public-security-fix-workflow-facts-from-read-pages is a
+separate facts compilation and is NOT evidence that this tool
+was verified. For target verification it is superseded by the
+target URL above, effective only after owner push/fetch
+verification succeeds. Until then, verification is UNCONFIRMED.
 
 ## Exact test command
 Run offline from this folder, no arguments, no network:
@@ -21,8 +31,8 @@ python3 self_test.py
 
 ## Exact runner output
 Latest runner result supplied to this step:
-- Runner: bee-self-test run 44976088379
-- ranAt: 2026-11-22 02:26 UTC
+- Runner: bee-self-test run 44989998381
+- ranAt: 2026-11-22 05:34 UTC
 - state: passed
 - Tail of output on record:
 
@@ -36,17 +46,20 @@ ok: CLI verdict correct
 Results: 17/17 checks passed
 ~~~
 
-Earlier runner on record: run 44961484437, 2026-11-21 23:22 UTC,
-passed, same 17/17 result. HivemindOS runs self_test.py after
-commit; the runner result for this commit is the authority.
-No new local pass is claimed in this step.
+Earlier on record: run 44976088379, 2026-11-22 02:26 UTC,
+17/17; run 44961484437, 2026-11-21 23:22 UTC, 17/17.
+HivemindOS runs self_test.py after commit; the runner result
+for this new commit is the authority. No new local pass is
+claimed in this step.
 
 ## Could not confirm / blockers
 - Push and fetch of every named file to verify public access:
-  not performed in this step, so no public-access verification
-  is claimed here.
-- Hash of GOAL.md in the daily log: no hash was computed in
-  this step; owner/runner must compute it from committed files.
+  not performed in this step; no public-access verification
+  is claimed. Precise blocker: this step has no push/fetch
+  capability, so the owner must push and fetch each URL above.
+- GOAL.md hash in the daily log: no hash was computed in this
+  step and none is invented here; owner/runner must compute
+  it from committed GOAL.md.
 - Discussion 22 text: not retrieved, so any reported number
   or airline remains UNKNOWN.
 - Live official Wizz Air and SAS Scandinavian Airlines contact
