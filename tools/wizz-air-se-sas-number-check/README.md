@@ -46,6 +46,11 @@ python3 check.py input.json --out result.json
 python3 self_test.py
 ~~~
 
+## Self-test status on record
+Latest runner result supplied to this step: 17/17 checks passed,
+213 checks at 02:26 UTC. The runner result for this new commit
+is the authority; no local pass is claimed here.
+
 ## Untested
 - Discussion 22 content; live official airline pages.
 - Runner execution of self_test.py for this commit.
