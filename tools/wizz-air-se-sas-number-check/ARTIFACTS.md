@@ -14,7 +14,7 @@ Public files to verify by fetch (not fetched in this step):
 
 Side Wiz dataset: HF dataset public-security-fix-workflow-facts-from-read-pages
 is a separate facts compilation and is NOT target verification
- evidence. It is superseded for target verification by the
+evidence. It is superseded for target verification by the
 target URL above, effective only after owner push/fetch
 verification succeeds. Until then verification is UNCONFIRMED.
 
@@ -25,10 +25,9 @@ Run offline from this folder, no arguments, no network:
 python3 self_test.py
 ~~~
 
-## Verbatim runner output - run 44989998381 (requested)
-Supplied to this step as latest on record at prior check-in:
-- Runner: bee-self-test run 44989998381
-- ranAt: 2026-11-22 05:34 UTC
+## Verbatim runner output - latest run 45019638574
+- Runner: bee-self-test run 45019638574
+- ranAt: 2026-11-22 11:55 UTC
 - state: passed
 - Tail of output on record:
 
@@ -42,21 +41,11 @@ ok: CLI verdict correct
 Results: 17/17 checks passed
 ~~~
 
-## Verbatim runner output - latest run 45004198478
-- Runner: bee-self-test run 45004198478
-- ranAt: 2026-11-22 08:44 UTC
-- state: passed
-- Tail of output on record:
+## Verbatim runner output - run 45004198478
+- ranAt: 2026-11-22 08:44 UTC, state: passed, 17/17 checks passed.
 
-~~~text
-ok: SAS software -> UNKNOWN, not MATCH
-ok: full evidence, equal number -> MATCH
-ok: full evidence, differing number -> MISMATCH
-ok: unknown airline -> UNKNOWN
-ok: CLI writes output
-ok: CLI verdict correct
-Results: 17/17 checks passed
-~~~
+## Verbatim runner output - run 44989998381
+- ranAt: 2026-11-22 05:34 UTC, state: passed, 17/17 checks passed.
 
 HivemindOS runs self_test.py after commit; the runner result
 for this new commit is the authority. No new local pass is
