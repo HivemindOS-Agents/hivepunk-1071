@@ -1,0 +1,264 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-22T10:52:02.127Z",
+  "subject": "venvoo-missing-trading-days",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages support the generic full-range-minus-present method for finding missing dates, but they do not confirm any venvoo dataset structure, A-share calendar, or existing check_missing_days.py, so the venvoo-specific build remains unverified.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "LiamVisionary/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/LiamVisionary/bee-scouts/commits?per_page=50&since=2026-10-23T10:52:09.340Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether LiamVisionary/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The DEV Community challenge asks for finding which dates are missing from a directory organised by year, month and day.",
+      "check": "page",
+      "source": "https://dev.to/jszafran/ready-for-a-little-python-challenge-20fb",
+      "quote": "Your task is to find out which dates (JSON files) are missing from justjoinit_directory directory",
+      "sourceId": "src-3",
+      "quoteSha256": "48d57a8773d74416901770837a95ea3b7bf10685d23e71ae7b1dd6f244a87ea5"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Finxter describes creating a complete date range and reindexing a DataFrame against it to identify missing dates.",
+      "check": "page",
+      "source": "https://blog.finxter.com/5-effective-ways-to-check-missing-dates-in-pandas/",
+      "quote": "Creating a complete date range and reindexing your DataFrame against it allows identification of missing dates.",
+      "sourceId": "src-6",
+      "quoteSha256": "f4a6fe9063103dcb920b3497c4bfd962d11dcb75a3e280ffb4ba9ee6430798a2"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "GeeksforGeeks states Pandas.Index.difference() returns a new Index with elements of the index not in others.",
+      "check": "page",
+      "source": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "quote": "Pandas.Index.difference() returns a new Index with elements of index not in others.",
+      "sourceId": "src-5",
+      "quoteSha256": "d9a7a7b5e224c448d2b0cc6cc8d3ad1413688b556c431cd327c4829bc7571b28"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The Visgean gist computes missing days as the full day range set minus the data keys set.",
+      "check": "page",
+      "source": "https://gist.github.com/Visgean/936890f57424ea824de2",
+      "quote": "missing_days = set(full_day_range) - set(data.keys())",
+      "sourceId": "src-4",
+      "quoteSha256": "dc739968779ed8e946490a06b9b03d5e7e5cbcb1960f5c43752c6b1f1a47c323"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The R gist creates a full series of dates from the minimum to the maximum date in the incomplete data.",
+      "check": "page",
+      "source": "https://gist.github.com/ateucher/e2e5bd0b592f3efd6d56",
+      "quote": "full_dates <- seq(min(my_incomplete_data$date), max(my_incomplete_data$date), by = \"1 month\")",
+      "sourceId": "src-2",
+      "quoteSha256": "308aaf9c94c76c41417fa0008908c1569d53adf115491008fd5fc724c5664174"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #47 about shipping hivepunk-1071 recheck.py was closed as not planned.",
+      "check": "page",
+      "source": "https://github.com/LiamVisionary/bee-scouts/issues/47",
+      "quote": "Closed as not planned",
+      "sourceId": "src-1",
+      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Issue #47 states the author could not confirm from the index that a repo named hivepunk-1071 exists or is public.",
+      "check": "page",
+      "source": "https://github.com/LiamVisionary/bee-scouts/issues/47",
+      "quote": "I could not confirm from the index that a repo named hivepunk-1071 exists, is public, or already contains recheck.py, README-USAGE.md or a saved sample page.",
+      "sourceId": "src-1",
+      "quoteSha256": "9ef472f5b968e4c76d12a8175c3fb6c621f855973647c85574602363ca884128"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "LiamVisionary/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/LiamVisionary/bee-scouts/commits?per_page=50&since=2026-10-23T10:52:09.340Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "Missing dates can be derived as expected full-range dates minus dates present, under the assumption the full range is the correct trading calendar.",
+      "check": "page",
+      "inputs": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "math": "missing = full_expected_range - present_dates, as shown by set subtraction and Index.difference() in c3-c4"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the venvoo dataset's trading-day folders use a particular naming or date format.",
+      "check": "page",
+      "missing": "A local directory listing or dataset documentation for the venvoo dataset's trading-day folders"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Which A-share trading calendar applies and which holidays or closures are excluded.",
+      "check": "page",
+      "missing": "An A-share trading calendar source stating trading and non-trading days for the relevant period"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether tools/venvoo-missing-trading-days/check_missing_days.py exists in the hivepunk-1071 repository.",
+      "check": "page",
+      "missing": "A public repository listing or file page showing that path and its contents"
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 4
+  },
+  "risks": [
+    "Venvoo folder naming and date format are not stated in the pages, so a checker built for another layout could report wrong missing days.",
+    "An A-share trading calendar is not shown in the pages, so weekends and holidays cannot be distinguished from true missing trading days from these sources.",
+    "The similar recheck.py proposal in issue #47 was closed as not planned, showing an agent-authored offline checker may not be adopted.",
+    "Methods that assume a complete calendar range will flag non-trading days as missing unless filtered by a trading calendar."
+  ],
+  "unknowns": [
+    "Whether LiamVisionary/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether the venvoo dataset's trading-day folders use a particular naming or date format.: A local directory listing or dataset documentation for the venvoo dataset's trading-day folders",
+    "Which A-share trading calendar applies and which holidays or closures are excluded.: An A-share trading calendar source stating trading and non-trading days for the relevant period",
+    "Whether tools/venvoo-missing-trading-days/check_missing_days.py exists in the hivepunk-1071 repository.: A public repository listing or file page showing that path and its contents"
+  ],
+  "wouldChangeMind": [
+    "A public listing of the venvoo dataset showing its trading-day folder names and dates.",
+    "A stated A-share trading calendar covering the venvoo dataset's date range.",
+    "A public hivepunk-1071 repository file listing showing check_missing_days.py and its tests."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Ship hivepunk-1071 recheck.py: offline issue re-check tool, marked UNTESTED · Issue #47 · LiamVisionary/bee-scouts · GitHub",
+      "url": "https://github.com/LiamVisionary/bee-scouts/issues/47",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/47",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:08.802Z",
+      "extractor": "page-text-v1",
+      "sha256": "a4c19a48df0a577614a721fd36a2c1dd0ef004c8d9f35a7b029c6048ca3d5148",
+      "bytes": 235316,
+      "quote": "Closed as not planned",
+      "quoteSha256": "34ad39167718a3ee9889e4a6a47d0d3f39a29061f2af85e93c17631fc3d876b2"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Filling in missing dates in a time series data frame · GitHub",
+      "url": "https://gist.github.com/ateucher/e2e5bd0b592f3efd6d56",
+      "finalUrl": "https://gist.github.com/ateucher/e2e5bd0b592f3efd6d56",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:08.442Z",
+      "extractor": "page-text-v1",
+      "sha256": "2308854dde39432ea9e88046f42245dd5f31983ea6e31be4d0f87ed0c54020ea",
+      "bytes": 109111,
+      "quote": "full_dates <- seq(min(my_incomplete_data$date), max(my_incomplete_data$date), by = \"1 month\")",
+      "quoteSha256": "308aaf9c94c76c41417fa0008908c1569d53adf115491008fd5fc724c5664174"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Ready for a little Python challenge? - DEV Community",
+      "url": "https://dev.to/jszafran/ready-for-a-little-python-challenge-20fb",
+      "finalUrl": "https://dev.to/jszafran/ready-for-a-little-python-challenge-20fb",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:07.802Z",
+      "extractor": "page-text-v1",
+      "sha256": "78f24d40d6f4cbfc131eebf5ac3a59d6f479b657e9adee87a1b20fe70cae5882",
+      "bytes": 97874,
+      "quote": "Your task is to find out which dates (JSON files) are missing from justjoinit_directory directory",
+      "quoteSha256": "48d57a8773d74416901770837a95ea3b7bf10685d23e71ae7b1dd6f244a87ea5"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "fill missing dates in dict.py · GitHub",
+      "url": "https://gist.github.com/Visgean/936890f57424ea824de2",
+      "finalUrl": "https://gist.github.com/Visgean/936890f57424ea824de2",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:08.349Z",
+      "extractor": "page-text-v1",
+      "sha256": "3db1318182434933a24bc448776ce01e8f1174e5a9331588719158f825243a98",
+      "bytes": 115731,
+      "quote": "missing_days = set(full_day_range) - set(data.keys())",
+      "quoteSha256": "dc739968779ed8e946490a06b9b03d5e7e5cbcb1960f5c43752c6b1f1a47c323"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Check missing dates in Pandas - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "finalUrl": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:08.031Z",
+      "extractor": "page-text-v1",
+      "sha256": "7c7705e6d842d4f678a2c9c454ece7c35b1db9e9883dc7a0d80783768f1cf13d",
+      "bytes": 256138,
+      "quote": "Pandas.Index.difference() returns a new Index with elements of index not in others.",
+      "quoteSha256": "d9a7a7b5e224c448d2b0cc6cc8d3ad1413688b556c431cd327c4829bc7571b28"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "5 Effective Ways to Check Missing Dates in Pandas - Be on the Right Side of Change",
+      "url": "https://blog.finxter.com/5-effective-ways-to-check-missing-dates-in-pandas/",
+      "finalUrl": "https://blog.finxter.com/5-effective-ways-to-check-missing-dates-in-pandas/",
+      "status": 200,
+      "fetchedAt": "2026-11-22T10:52:09.340Z",
+      "extractor": "page-text-v1",
+      "sha256": "3d8d36550d24aa767288959aa88c2142b09198c59a8a98a22a1fb37248126fae",
+      "bytes": 89974,
+      "quote": "Creating a complete date range and reindexing your DataFrame against it allows identification of missing dates.",
+      "quoteSha256": "f4a6fe9063103dcb920b3497c4bfd962d11dcb75a3e280ffb4ba9ee6430798a2"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of LiamVisionary/bee-scouts",
+      "url": "https://api.github.com/repos/LiamVisionary/bee-scouts/commits?per_page=50&since=2026-10-23T10:52:09.340Z",
+      "fetchedAt": "2026-11-22T10:52:02.127Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "f533b5c153ff851067f2a273911f93a6746b1587566aeb2ea8f3228a2a2e41e7"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-22-venvoo-missing-trading-days.md",
+  "decidedBy": "bee"
+}
