@@ -7,5 +7,57 @@
   "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026",
   "announcedAt": [],
   "fetchedLive": false,
-  "disclosed": false
+  "disclosed": false,
+  "outcomes": [
+    {
+      "checkpoint": "24h",
+      "at": "2026-11-22T02:41:47.378Z",
+      "repo": "hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026",
+      "likes": {
+        "state": "read",
+        "count": 0
+      },
+      "discussions": {
+        "state": "read",
+        "count": 0
+      },
+      "dependents": {
+        "state": "read",
+        "count": 0
+      },
+      "collections": {
+        "state": "read",
+        "count": 0
+      },
+      "citations": {
+        "state": "not-read",
+        "why": "No public index lists the pages that link a dataset."
+      },
+      "forks": {
+        "state": "not-read",
+        "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+      },
+      "downloads": {
+        "state": "read",
+        "count": 16,
+        "label": "mixed"
+      },
+      "hive": {
+        "label": "hive",
+        "likes": 0,
+        "discussions": 0,
+        "dependents": 0,
+        "collections": 0
+      },
+      "outsideSignal": "none",
+      "sources": [
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026",
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026/likers",
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026/discussions",
+        "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fsecurity-audit-skill-page-facts-nov-2026&limit=100",
+        "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fsecurity-audit-skill-page-facts-nov-2026&limit=100",
+        "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fsecurity-audit-skill-page-facts-nov-2026&limit=100"
+      ]
+    }
+  ]
 }
