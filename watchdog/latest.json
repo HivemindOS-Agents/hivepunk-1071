@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-21T00:12:09.297Z",
+  "at": "2026-11-22T00:01:44.673Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,67 +52,40 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
-      "check": "D13",
-      "name": "receipt_or_link_false",
+      "id": "wd-1071-D8-prf-1071-wizz-air-se-sas-number-check-f916bc7",
+      "check": "D8",
+      "name": "proof_unsynced",
       "severity": "report",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
-      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "subject": "proofs/prf-1071-wizz-air-se-sas-number-check-f916bc7.json",
+      "detail": "Its bundle reads pending while the runner holds a rescore for it.",
       "evidence": [
-        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/proofs/prf-1071-wizz-air-se-sas-number-check-f916bc7.json"
       ],
-      "firstSeen": "2026-11-20T00:04:08.934Z"
+      "firstSeen": "2026-11-22T00:01:44.673Z"
     },
     {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
-      "check": "D13",
-      "name": "receipt_or_link_false",
-      "severity": "report",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
-      "detail": "ARTIFACTS.md calls it live; it answered 429.",
-      "evidence": [
-        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
-      ],
-      "firstSeen": "2026-11-20T00:04:08.934Z"
-    },
-    {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "check": "D13",
-      "name": "receipt_or_link_false",
-      "severity": "report",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "detail": "ARTIFACTS.md calls it live; it answered 429.",
-      "evidence": [
-        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
-      ],
-      "firstSeen": "2026-11-21T00:12:09.297Z"
-    },
-    {
-      "id": "wd-1071-D15-reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
+      "id": "wd-1071-D15-reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
+      "subject": "reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json"
       ],
-      "firstSeen": "2026-11-21T00:12:09.297Z"
+      "firstSeen": "2026-11-22T00:01:44.673Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
+      "id": "wd-1071-D15-reviews/2026-11-21-pyfilefixity-package-facts-from-pypi-page.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
+      "subject": "reviews/2026-11-21-pyfilefixity-package-facts-from-pypi-page.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-20-gltf-validator-issue-codes-sampled.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-21-pyfilefixity-package-facts-from-pypi-page.json"
       ],
-      "firstSeen": "2026-11-21T00:12:09.297Z"
+      "firstSeen": "2026-11-22T00:01:44.673Z"
     },
     {
       "id": "wd-1071-D18-artifacts",
@@ -132,43 +105,49 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: run the platform publish play / authorized MCP upload for exactly data/data\".",
+      "detail": "12 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"md (status, daily-log hash left to owner/runner, untested items), README\".",
       "evidence": [
-        "step 2026-11-20T09:47Z",
-        "step 2026-11-20T06:37Z",
-        "step 2026-11-20T03:29Z",
-        "step 2026-11-20T00:21Z"
+        "step 2026-11-21T23:22Z",
+        "step 2026-11-21T17:01Z",
+        "step 2026-11-21T13:47Z",
+        "step 2026-11-21T08:29Z"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-1071-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "subject": "publish-dataset",
-      "firstSeen": "2026-11-17T14:46:28.176Z"
-    },
-    {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
       "check": "D13",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-fixture-byte-layouts-nine-header-and-chunk-cases",
       "firstSeen": "2026-11-20T00:04:08.934Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-19-small-sourced-facts-from-read-dataset-and-issue-pages.json",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
+      "check": "D13",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages",
       "firstSeen": "2026-11-20T00:04:08.934Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+      "check": "D13",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+      "firstSeen": "2026-11-21T00:12:09.297Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
       "check": "D15",
-      "subject": "reviews/2026-11-19-hugging-face-dataset-pages-and-model-card-facts.json",
-      "firstSeen": "2026-11-20T00:04:08.934Z"
+      "subject": "reviews/2026-11-20-public-security-fix-workflow-facts-from-read-pages.json",
+      "firstSeen": "2026-11-21T00:12:09.297Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-20-gltf-validator-issue-codes-sampled.json",
+      "firstSeen": "2026-11-21T00:12:09.297Z"
     }
   ],
-  "said": "8 found",
+  "said": "6 found",
   "requests": 22,
-  "elapsedMs": 3197
+  "elapsedMs": 2910
 }
