@@ -1,0 +1,144 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-22T01:23:12.960Z",
+  "subject": "zkaelxz/U00",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "U00 shows recent real commit activity and a described self-test design, but the pages do not verify the specific wizz-air-se-sas-number-check tool, so no conclusion that it passed can be drawn.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "zkaelxz/U00 has 50 raw commits in the last 30 days, 46 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-23T01:23:17.513Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 4f29270, on 2026-11-21.",
+      "check": "shipping",
+      "source": "https://github.com/zkaelxz/U00/commit/4f29270a3c275a520e3f6dd05d58dd5e0b4c7ec9"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "zkaelxz/U00 has 50 raw commits in the last 30 days, 46 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-23T01:23:17.513Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Its latest real commit is 4f29270, on 2026-11-21.",
+      "check": "page",
+      "source": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-23T01:23:17.513Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "python -m tools.self_test prints PASS / FAIL / SKIPPED with a one-line reason for GPU faster-whisper load plus a 1 s generated-clip transcription, torch/CUDA version, ffmpeg, libass, TTS engines, OCR engines, Ollama, VRAM/RAM headroom, and API key presence.",
+      "check": "page",
+      "source": "https://github.com/zkaelxz/U00/pull/1226",
+      "quote": "Copy link Copy Markdown Owner What changed python -m tools.self_test [--out FILE] [--model NAME] prints PASS / FAIL / SKIPPED with a one-line reason for: GPU faster-whisper load plus a 1 s generated-clip transcription, torch/CUDA version, ffmpeg, libass, TTS engines, OCR engines, Ollama (loopback",
+      "sourceId": "src-1",
+      "quoteSha256": "6251675b6c94ac1947c901f64aab0385924b4d2cfbcf851883f7996cb5811277"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Exit code is 1 only if a check FAILED.",
+      "check": "page",
+      "source": "https://github.com/zkaelxz/U00/pull/1226",
+      "quote": "Exit code is 1 only if a check FAILED.",
+      "sourceId": "src-1",
+      "quoteSha256": "c81eb05ce37c30ddbd23753ac7a746257354a77e494a17103cf280ba3847abfa"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Absent hardware or an uninstalled optional engine is SKIPPED.",
+      "check": "page",
+      "source": "https://github.com/zkaelxz/U00/pull/1226",
+      "quote": "Absent hardware or an uninstalled optional engine is SKIPPED.",
+      "sourceId": "src-1",
+      "quoteSha256": "e380f48f69f6b9be94730e04180cc8e3107e7667cdc4c177474b8d7778e515b0"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A missing ffmpeg or libass is a FAIL, because both are required.",
+      "check": "page",
+      "source": "https://github.com/zkaelxz/U00/pull/1226",
+      "quote": "A missing ffmpeg or libass is a FAIL, because both are required.",
+      "sourceId": "src-1",
+      "quoteSha256": "767e05d2a34a4ffaab6837c913bee2ce8bb371a10926b95c712d99b92633dd1b"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The GPU check resolves the model folder offline and exactly with faster_whisper.utils.download_model(model, local_files_only=True).",
+      "check": "page",
+      "source": "https://github.com/zkaelxz/U00/pull/1226",
+      "quote": "The model folder is resolved offline and exactly with faster_whisper.utils.download_model(model, local_files_only=True) .",
+      "sourceId": "src-1",
+      "quoteSha256": "ad53a0905f432390292d7ced6a569383c2e00f927810ed73dc4038cd8df35b27"
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 0,
+    "unknown": 0
+  },
+  "risks": [
+    "A missing ffmpeg or libass is a FAIL because both are required, so environments without them will not pass cleanly.",
+    "An uncached, partial or ambiguous GPU model is SKIPPED, so a SKIP does not prove GPU transcription works.",
+    "Absent hardware or an uninstalled optional engine is SKIPPED, limiting what a single run proves.",
+    "The pages do not show the exact self_test.py output for tools/wizz-air-se-sas-number-check, so its claimed passing state is unconfirmed here."
+  ],
+  "unknowns": [],
+  "wouldChangeMind": [
+    "Finding the exact self_test.py output for tools/wizz-air-se-sas-number-check showing a pass.",
+    "Finding updated GOAL.md, daily-log hash and ARTIFACTS.md entries matching that output.",
+    "Finding a commit containing all required files after that passing output."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "W-SELF-TEST: python -m tools.self_test (one-run hardware checks) by zkaelxz · Pull Request #1226 · zkaelxz/U00 · GitHub",
+      "url": "https://github.com/zkaelxz/U00/pull/1226",
+      "finalUrl": "https://github.com/zkaelxz/U00/pull/1226",
+      "status": 200,
+      "fetchedAt": "2026-11-22T01:23:17.040Z",
+      "extractor": "page-text-v1",
+      "sha256": "c96c3c528a7d027ab6b662028710f3b1fc7dc1da749f93abeba2e4f002c368df",
+      "bytes": 268752,
+      "quote": "Copy link Copy Markdown Owner What changed python -m tools.self_test [--out FILE] [--model NAME] prints PASS / FAIL / SKIPPED with a one-line reason for: GPU faster-whisper load plus a 1 s generated-clip transcription, torch/CUDA version, ffmpeg, libass, TTS engines, OCR engines, Ollama (loopback",
+      "quoteSha256": "6251675b6c94ac1947c901f64aab0385924b4d2cfbcf851883f7996cb5811277"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of zkaelxz/U00",
+      "url": "https://api.github.com/repos/zkaelxz/U00/commits?per_page=50&since=2026-10-23T01:23:17.513Z",
+      "fetchedAt": "2026-11-22T01:23:12.960Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "b9950d2e19536a1ee2032a4277e4cb99edc1e83452a047ac7bea02a92020e86e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-22-zkaelxz-u00.md",
+  "decidedBy": "bee"
+}
