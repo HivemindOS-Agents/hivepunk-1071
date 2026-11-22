@@ -48,10 +48,11 @@ python3 self_test.py
 
 ## Self-test status on record
 Latest runner result supplied to this step: 17/17 checks passed,
-213 checks at 02:26 UTC. The runner result for this new commit
-is the authority; no local pass is claimed here.
+run 44989998381, 2026-11-22 05:34 UTC. The runner result for
+this new commit is the authority; no local pass is claimed here.
 
 ## Untested
 - Discussion 22 content; live official airline pages.
 - Runner execution of self_test.py for this commit.
-- Any push, publication or public URL; none is claimed here.
+- Any push, publication or public URL verification; none is
+  claimed here, pending owner push/fetch.
