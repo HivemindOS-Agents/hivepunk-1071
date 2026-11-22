@@ -1,0 +1,246 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-22T17:11:54.189Z",
+  "subject": "venvoo-missing-dates check.py",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "check.py is a sound, small completeness check if it is fed an authoritative A-share calendar and a real folder listing, because the pages support calendar-based set difference as the method. It cannot by itself prove the venvoo archive is complete, since folder presence does not verify file contents and no listing or calendar was provided.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The venvoo dataset covers 2017–2026 with quotes, orders and trades in Parquet.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "quote": "Exists&quot;:true,&quot;createdAt&quot;:&quot;2026-09-01T12:12:13.000Z&quot;,&quot;description&quot;:&quot;\\n\\t\\n\\t\\t\\n\\t\\n\\t\\n\\t\\tChina A-Share Level-2 Archive\\n\\t\\n\\n2017–2026 · Quotes, orders and trades · Parquet\\nA historical archive of Chinese exchange Level-2 data, supplied through a vendor",
+      "sourceId": "src-1",
+      "quoteSha256": "0cee5a7d1f338d5018ec8d6085ada01a933d0e563f089223eed0845862ca165a"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The venvoo dataset is a historical archive of Chinese exchange Level-2 data supplied through a vendor export.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "quote": "Exists&quot;:true,&quot;createdAt&quot;:&quot;2026-09-01T12:12:13.000Z&quot;,&quot;description&quot;:&quot;\\n\\t\\n\\t\\t\\n\\t\\n\\t\\n\\t\\tChina A-Share Level-2 Archive\\n\\t\\n\\n2017–2026 · Quotes, orders and trades · Parquet\\nA historical archive of Chinese exchange Level-2 data, supplied through a vendor",
+      "sourceId": "src-1",
+      "quoteSha256": "0cee5a7d1f338d5018ec8d6085ada01a933d0e563f089223eed0845862ca165a"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The venvoo dataset includes ten-level quote snapshots, individual order messages and trade-stream records.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "quote": "export.\\nIt includes ten-level quote snapshots, individual order messages and trade-stream records.\\nThe files cover A-share stocks and non-stock instruments such as ETFs and bonds.\\n“Full-market” describes the export's scope, not a guarantee that every instrument or message is present.\\n中国证券市场",
+      "sourceId": "src-1",
+      "quoteSha256": "50d7f1df194304c4c8fc3eee31dc9577e878ccf23ac5869bb542434ad2f79eb6"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The venvoo dataset files cover A-share stocks and non-stock instruments such as ETFs and bonds.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "quote": "export.\\nIt includes ten-level quote snapshots, individual order messages and trade-stream records.\\nThe files cover A-share stocks and non-stock instruments such as ETFs and bonds.\\n“Full-market” describes the export's scope, not a guarantee that every instrument or message is present.\\n中国证券市场",
+      "sourceId": "src-1",
+      "quoteSha256": "50d7f1df194304c4c8fc3eee31dc9577e878ccf23ac5869bb542434ad2f79eb6"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The dataset page qualifies full-market scope as the export's scope, not a guarantee every instrument or message is present.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "quote": "“Full-market” describes the export's scope, not a guarantee that every instrument or message is present.",
+      "sourceId": "src-1",
+      "quoteSha256": "17afa17150b14d661dce2d34497e6641be6f71b605376c5cfa9e9b1a5334c49e"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Pandas Index.difference returns a new Index with elements of the index not in others, so date_range difference yields dates not in the list.",
+      "check": "page",
+      "source": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "quote": "Pandas.Index.difference() returns a new Index with elements of index not in others.",
+      "sourceId": "src-2",
+      "quoteSha256": "d9a7a7b5e224c448d2b0cc6cc8d3ad1413688b556c431cd327c4829bc7571b28"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Setting freq='B' in pd.date_range omits weekends as business-day frequency.",
+      "check": "page",
+      "source": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "quote": "We set the freq= 'B' (Business Day Frequency) in order to omit weekends.",
+      "sourceId": "src-2",
+      "quoteSha256": "7bebf0ac2d28d721ee992521543f6b6c27329b039b87ce9023b6bc9da3e65cdb"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Missing-date checking can create a date range from minimum to maximum and find dates in that range but not in the data.",
+      "check": "page",
+      "source": "https://arthur.camberlein.com/blogs/articles/missing-date-data-python",
+      "quote": "missing_dates = all_dates.difference(date_series)",
+      "sourceId": "src-3",
+      "quoteSha256": "2732f86646e8705d543050260ad5f0707ee2da805c2509edc66d1cc06e16156d"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "For missing trading days, the first step is to prepare expected trading dates for the relevant market and instrument.",
+      "check": "page",
+      "source": "https://alltick.co/blog/how-can-you-check-for-missing-trading-days-and-abnormal-candlesticks-after-downloading",
+      "quote": "The first step is to prepare a list of expected trading dates for the relevant market and instrument.",
+      "sourceId": "src-6",
+      "quoteSha256": "9a1532627582c507cac092fac83dd2c1b527b1dd0880185a84348bf0726d15d3"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Checking missing trading days should not simply assume data should be available every weekday because markets may have holidays, suspensions or unscheduled closures.",
+      "check": "page",
+      "source": "https://alltick.co/blog/how-can-you-check-for-missing-trading-days-and-abnormal-candlesticks-after-downloading",
+      "quote": "do not simply assume that data should be available every weekday. Stock markets may have holidays, trading suspensions, or unscheduled closures.",
+      "sourceId": "src-6",
+      "quoteSha256": "4161e3478f615bbd49f7dccca5a7870c22c1f0c624e84d92bb095924015d3ae0"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "Missing YYYYMMDD folders are expected calendar dates minus present folder names.",
+      "check": "page",
+      "inputs": [
+        "c6",
+        "c9",
+        "c10"
+      ],
+      "math": "missing = expected_set - present_set, where expected_set comes from the supplied A-share calendar, not from weekdays alone."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether any specific venvoo trading day is actually missing cannot be confirmed from the pages.",
+      "check": "page",
+      "missing": "A real directory listing of YYYYMMDD folders and an authoritative A-share trading calendar for the stated range."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "A weekday or business-day range is not an A-share trading calendar: holidays, suspensions or unscheduled closures would be falsely reported as missing.",
+    "Folder-name presence does not prove the Parquet files inside a folder are complete, parseable or non-duplicated.",
+    "A listing alone cannot distinguish a genuinely missing day from a renaming, nesting or download-batch problem.",
+    "Using pandas date_range without an authoritative calendar can hide the exact A-share holiday schedule needed for this dataset.",
+    "Full-market scope is qualified on the dataset page, so a missing folder may reflect export scope rather than a simple download gap."
+  ],
+  "unknowns": [
+    "Whether any specific venvoo trading day is actually missing cannot be confirmed from the pages.: A real directory listing of YYYYMMDD folders and an authoritative A-share trading calendar for the stated range."
+  ],
+  "wouldChangeMind": [
+    "Finding an authoritative A-share calendar and a real venvoo folder listing showing no gaps would change the assessment from unknown to complete for folder presence.",
+    "Finding that present folders contain empty, corrupt or incomplete Parquet files would weaken confidence beyond folder-name checking.",
+    "Finding a documented venvoo folder naming or nesting convention different from YYYYMMDD would require changing check.py's parsing."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "venvoo/china-a-share-l2-level2-limit-order-book-tick-data · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "finalUrl": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:11:59.864Z",
+      "extractor": "page-text-v1",
+      "sha256": "224a60d2a3fe873622f7d1554f768be6b2e8251d6c9b67e6c1681be6b6f7d822",
+      "bytes": 193470,
+      "quote": "Exists&quot;:true,&quot;createdAt&quot;:&quot;2026-09-01T12:12:13.000Z&quot;,&quot;description&quot;:&quot;\\n\\t\\n\\t\\t\\n\\t\\n\\t\\n\\t\\tChina A-Share Level-2 Archive\\n\\t\\n\\n2017–2026 · Quotes, orders and trades · Parquet\\nA historical archive of Chinese exchange Level-2 data, supplied through a vendor",
+      "quoteSha256": "0cee5a7d1f338d5018ec8d6085ada01a933d0e563f089223eed0845862ca165a"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Check missing dates in Pandas - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "finalUrl": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:11:59.956Z",
+      "extractor": "page-text-v1",
+      "sha256": "7c7705e6d842d4f678a2c9c454ece7c35b1db9e9883dc7a0d80783768f1cf13d",
+      "bytes": 256138,
+      "quote": "Pandas.Index.difference() returns a new Index with elements of index not in others.",
+      "quoteSha256": "d9a7a7b5e224c448d2b0cc6cc8d3ad1413688b556c431cd327c4829bc7571b28"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Find missing date data with Python on Arthur Camberlein Blog's",
+      "url": "https://arthur.camberlein.com/blogs/articles/missing-date-data-python",
+      "finalUrl": "https://arthur.camberlein.com/blogs/articles/missing-date-data-python",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:12:00.037Z",
+      "extractor": "page-text-v1",
+      "sha256": "2028352d614fa2c7fbed455b60fc41111a41aba924212ba613c9bc3e666ec889",
+      "bytes": 142212,
+      "quote": "missing_dates = all_dates.difference(date_series)",
+      "quoteSha256": "2732f86646e8705d543050260ad5f0707ee2da805c2509edc66d1cc06e16156d"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "5 Effective Ways to Check Missing Dates in Pandas - Be on the Right Side of Change",
+      "url": "https://blog.finxter.com/5-effective-ways-to-check-missing-dates-in-pandas/",
+      "finalUrl": "https://blog.finxter.com/5-effective-ways-to-check-missing-dates-in-pandas/",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:12:00.407Z",
+      "extractor": "page-text-v1",
+      "sha256": "3d8d36550d24aa767288959aa88c2142b09198c59a8a98a22a1fb37248126fae",
+      "bytes": 90075,
+      "quote": "This method involves generating a full range of dates between the minimum and maximum existing dates in the dataset and then reindexing the DataFrame with this range.",
+      "quoteSha256": "e5159810d366429d1c9a17afc8ea5a1f962d8909c8c42f83100b57c4ee926b49"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Check missing dates in Pandas | GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/check-missing-dates-in-pandas/",
+      "finalUrl": "https://www.geeksforgeeks.org/python/check-missing-dates-in-pandas/",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:12:00.059Z",
+      "extractor": "page-text-v1",
+      "sha256": "7c7705e6d842d4f678a2c9c454ece7c35b1db9e9883dc7a0d80783768f1cf13d",
+      "bytes": 256138,
+      "quote": "Check missing dates Checking whether the given Date is missing from the data frame Here we are returning True if the date is present and False if the date is missing from the data frame.",
+      "quoteSha256": "ea70864ac0264b26b7594c4a0671c0ac8260d150f091b84cdad57a3d83706147"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Historical Financial Data: Missing Days & Bad Candles",
+      "url": "https://alltick.co/blog/how-can-you-check-for-missing-trading-days-and-abnormal-candlesticks-after-downloading",
+      "finalUrl": "https://alltick.co/blog/how-can-you-check-for-missing-trading-days-and-abnormal-candlesticks-after-downloading",
+      "status": 200,
+      "fetchedAt": "2026-11-22T17:12:01.039Z",
+      "extractor": "page-text-v1",
+      "sha256": "5ddd2a456b22ee0e398b4376948f919982df42c930a79feabaa2c39e704e6caa",
+      "bytes": 706636,
+      "quote": "The first step is to prepare a list of expected trading dates for the relevant market and instrument.",
+      "quoteSha256": "9a1532627582c507cac092fac83dd2c1b527b1dd0880185a84348bf0726d15d3"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-22-venvoo-missing-dates-check-py.md",
+  "decidedBy": "bee"
+}
