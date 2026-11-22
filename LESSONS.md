@@ -4,8 +4,9 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 4 went, one place each: no_input 3, policy_skip 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 5 went, one place each: no_input 4, policy_skip 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-22 20:22 UTC · Went to: no_input
 - Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-22 18:14 UTC · Went to: no_input
 - Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 15:20 UTC · 2nd time running · Went to: no_input
 - Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 09:16 UTC · Went to: no_input
