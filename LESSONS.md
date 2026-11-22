@@ -6,11 +6,11 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 Where each of these 5 went, one place each: no_input 3, policy_skip 1, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 09:16 UTC · Went to: no_input
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-22 00:02 UTC · Went to: policy_skip
 - Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-21 17:49 UTC · Went to: no_input
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: it linked a page it did not read. · 2026-11-21 16:43 UTC · Went to: repair
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-21 10:36 UTC · Went to: no_input
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-21 08:27 UTC · Went to: no_input
 
 ## Gotchas (what sites did)
 
