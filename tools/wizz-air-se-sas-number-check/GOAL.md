@@ -4,36 +4,43 @@
 tools/wizz-air-se-sas-number-check
 Account: hivepunk-1071-f79faf84 (only account; no organisation)
 Source discussion: https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22
+Target URL: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/wizz-air-se-sas-number-check
 
-## Status 2026-11-21
-GOAL.md updated first in this step. Then this offline tool was
-built in this folder only: check.py, README.md, self_test.py and
-this GOAL.md. Existing research was reused; failed searches were
-not repeated and no external system was run against in this step.
+## Status 2026-11-22
+GOAL.md updated first in this step. ARTIFACTS.md records verbatim
+runner output for run 44989998381 as requested and the latest
+runner result supplied in tools. check.py and self_test.py are
+carried whole and unchanged. No code was run against external
+systems in this step.
 
-The contents of discussion 22 were not retrieved in the existing
-research, so what number or airline it reports is UNKNOWN. No
-mismatch is claimed. SAS numbers seen in prior research are kept
-only as unverified reference values (see README), not as live
-verified airline evidence. No official Wizz Air Sweden number was
-retrieved, so a Wizz Air comparison is also UNKNOWN.
+Latest self-test on record: 17/17 passed, bee-self-test run
+45004198478, 2026-11-22 08:44 UTC. Requested run 44989998381:
+17/17 passed, 2026-11-22 05:34 UTC. The runner result for this
+new commit is the authority; no local pass is claimed here.
 
-Entity rule: SAS airline means Scandinavian Airlines. SAS
-software means SAS Institute and related software/services. The
-two are never treated as the same entity by check.py.
+Discussion 22 text was not retrieved, so what number or airline
+it reports remains UNKNOWN. No mismatch is claimed. SAS Sweden
+reference numbers in README remain unverified reference values,
+not live-verified airline evidence. Entity rule: SAS airline is
+Scandinavian Airlines; SAS software is SAS Institute/software;
+check.py never treats software evidence as airline evidence.
+
+Side Wiz dataset: public-security-fix-workflow-facts-from-read-pages
+is a separate facts compilation, superseded for target
+verification by the target URL above only after owner push/fetch
+verification succeeds.
 
 ## Daily-log hash
-No hash computed or invented in this step. Any daily-log hash
-must be computed by the owner/runner from committed files.
+No hash computed or invented in this step. Precise blocker:
+this step has no hash/push/fetch capability; owner/runner must
+compute sha256 of committed GOAL.md and enter it in the daily log.
 
-## Untested
-- Discussion 22 text and any number it reports.
-- Live official Wizz Air and SAS Scandinavian Airlines contact pages.
+## Untested / blockers
+- Push and fetch of each public file; public access unconfirmed.
+- Discussion 22 text; live official Wizz Air / SAS airline pages.
 - Runner execution of self_test.py for this commit.
-- Push and public URL verification for this commit.
 
 ## Next (owner)
-Run python3 self_test.py offline from this folder, record its
-exact output and the public artifact URL in ARTIFACTS.md, push
-and verify, then supply retrieved discussion text plus official
-airline evidence before trusting any verdict beyond UNKNOWN.
+Push, fetch each named public file, hash GOAL.md in daily log,
+supply retrieved discussion text plus official airline evidence
+before any verdict beyond UNKNOWN.
