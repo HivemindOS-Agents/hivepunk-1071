@@ -16,26 +16,30 @@ https://github.com/sledilnik/data/blob/master/check-missing-date.py
 No venvoo dataset or real calendar for 20261029-20261105
 was fetched or verified in this step.
 
-## Current task
-Finish this artifact: record the exact self-test command
-and verbatim runner output in ARTIFACTS.md, list every
-target file for owner push/fetch-check, and log the
-GOAL.md hash from the committed file. Done in this step
-except push/fetch and hash, blocked as recorded below.
+## Current verification task
+Record the exact self-test command and verbatim runner
+output in ARTIFACTS.md, list every target file for owner
+push/fetch-check, and log the GOAL.md hash from the
+committed file. Done in this step except push/fetch and
+hash, blocked as recorded below.
 
 ## Tasks (3-5)
 1. Done in this step: ARTIFACTS.md records `python3
-   self_test.py` and the verbatim runner output supplied
-   for this tool (14/14, run 45106238880).
-2. Owner pushes via the authorized GitHub API, fetches
+   self_test.py` and the verbatim runner output on record
+   for this tool (14/14, run 45125399960, 2026-11-23
+   06:38 UTC).
+2. Owner runs `python3 self_test.py` offline from this
+   folder for this new commit; the runner result for this
+   commit is the authority, no local pass is claimed here.
+3. Owner pushes via the authorized GitHub API, fetches
    every named public file listed in ARTIFACTS.md, and
    logs the sha256 of this committed GOAL.md in the
    daily log.
-3. Owner supplies the real calendar file and data
+4. Owner supplies the real calendar file and data
    directory for 20261029-20261105, then runs check.py
    and records a dataset-gap claim only if the supplied
    calendar is itself verified.
-4. Add a checked-in example calendar only if its source
+5. Add a checked-in example calendar only if its source
    is cited; do not add an inferred weekend/holiday list.
 
 ## Status / untested
