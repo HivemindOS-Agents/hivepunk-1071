@@ -21,7 +21,6 @@ Where each of these 6 went, one place each: no_input 6. `repair` is in its healt
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: docs.wiz.io answered with a bot check or captcha. It is not touched until 2026-11-23 06:06 UTC, and never worked around.
 - Resting: stackoverflow.com answered with a bot check or captcha. It is not touched until 2026-11-23 17:12 UTC, and never worked around.
 - Resting: huggingface.co answered with a bot check or captcha. It is not touched until 2026-11-24 02:26 UTC, and never worked around.
 - Resting: zenodo.org answered with a bot check or captcha. It is not touched until 2026-11-24 02:26 UTC, and never worked around.
