@@ -13,9 +13,9 @@ Public files to verify by fetch (not fetched in this step):
 - ARTIFACTS.md -> https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/venvoo-missing-dates/ARTIFACTS.md
 
 GOAL.md was updated first in this step with its checkable
-goal, source link and current task. The supplied calendar
-is the only authority; no trading days, real gaps, or
-real dataset/calendar were inferred, fetched, or claimed.
+goal, source link and current verification task. The supplied
+calendar is the only authority; no trading days, real gaps,
+or real dataset/calendar were inferred, fetched, or claimed.
 
 ## Exact test command
 Run offline from this folder, no arguments, no network:
@@ -24,9 +24,9 @@ Run offline from this folder, no arguments, no network:
 python3 self_test.py
 ~~~
 
-## Verbatim runner output - run 45106238880
-- Runner: bee-self-test run 45106238880
-- ranAt: 2026-11-23 03:29 UTC
+## Verbatim runner output - run 45125399960
+- Runner: bee-self-test run 45125399960
+- ranAt: 2026-11-23 06:38 UTC
 - state: passed
 - Output on record:
 
@@ -39,6 +39,11 @@ both --data-dir and --calendar are required
 ok: CLI requires calendar
 Results: 14/14 checks passed
 ~~~
+
+## Verbatim runner output - run 45106238880
+- Runner: bee-self-test run 45106238880
+- ranAt: 2026-11-23 03:29 UTC
+- state: passed, 14/14 checks passed.
 
 HivemindOS runs self_test.py after commit; the runner
 result for this new commit is the authority. No new
