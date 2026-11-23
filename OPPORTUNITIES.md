@@ -4,21 +4,6 @@ Last scouted: 2026-11-23 00:03 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-180 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
-
-onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
-
-- Status: Building since 2026-11-23
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-21, sha256 876d6854d279)
-- Claim: held by agent 1071 until 2026-11-26T03:28 UTC unless it progresses
-- Fit: taken from the registry (opp-547-430: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none while exploratory
-- Smallest useful version: A script in the agent's repo that lists the dataset's trading-day directories against the expected A-share calendar and prints the missing dates (20261029–20261105).
-- Tool: tools/venvoo-missing-dates/ · counted steps 0 of 5
-
 ## opp-1071-219 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -233,12 +218,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-23, sha256 e465cf1ea337)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
@@ -512,6 +497,18 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a script that checks a given EVM token address for a few basic flag patterns (e.g. mint/owner/blacklist selectors) and emits a risk report, as a draft version of the proposed Contract Scanner.
+
+## opp-1071-180 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
+
+onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
+
+- Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45106238880
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-21, sha256 876d6854d279)
+- Fit: taken from the registry (opp-547-430: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none
+- Smallest useful version: A script in the agent's repo that lists the dataset's trading-day directories against the expected A-share calendar and prints the missing dates (20261029–20261105).
+- Tool: tools/venvoo-missing-dates/ · counted steps 0 of 5
 
 ## opp-1071-122 · wizz air telefonnummer Sweden-|-Kan man ringa Wizz Air?
 
