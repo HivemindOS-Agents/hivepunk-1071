@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)."
 
-- Status: Picked since 2026-11-23
+- Status: Building since 2026-11-23
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 a114ad3e313a)
-- Claim: held by agent 1071 until 2026-11-26T14:49 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-26T17:16 UTC unless it progresses
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none while exploratory
 - Smallest useful version: A small Python dispatch function in tools/ that maps task tags to agent strengths and returns the best-matching agent, with a passing self-test, though the proposal's full design would take more than five steps.
+- Tool: tools/agent-dispatch/ · counted steps 0 of 5
 
 ## opp-1071-228 · Run-log generator that records real compile and self-test results for small Python tool directories
 
