@@ -1,0 +1,262 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-23T21:45:05.021Z",
+  "subject": "agent-dispatch-strengths",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The odessy issue #73 proposal and PR #75 show substantive implementation activity, but the pages do not establish that the separate agent-dispatch-strengths artifact is publication-ready because its self-test output, GOAL.md, ARTIFACTS.md and public files were not shown.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "Trisoma/odessy has 50 raw commits in the last 30 days, 29 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T21:45:09.521Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is c5cc1b9, on 2026-11-23.",
+      "check": "shipping",
+      "source": "https://github.com/Trisoma/odessy/commit/c5cc1b9cc7d7d8d87e9f102fc454e25add16fa76"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #73 proposes a role-based task dispatch capability for Trisoma/odessy.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "This proposal is for a role-based task dispatch capability that matches how people actually work:",
+      "sourceId": "src-1",
+      "quoteSha256": "9ba6d67fea08958de06b52cc9fa3f544d413d8c8aabf95de82daa328875efccf"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #73 states that role profiles are scheduling preferences only and never expand authority.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "A role profile is a scheduling preference only - it never expands authority.",
+      "sourceId": "src-1",
+      "quoteSha256": "e5bbd5dd61c2fbd114edaf692a79ede9eadd040b7f0afa98e46645edc23e7715"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #73 states that a deny rule is a hard veto that no profile match can override.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "A deny rule is a hard veto that no profile match can override.",
+      "sourceId": "src-1",
+      "quoteSha256": "f0c4a4f7df97b2afe1395fc3516c4b56849d8a8d80155539910f626d09f3bd76"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "PR #75 added role tags, role-to-agent bindings and a scheduling-only matcher resolve_role that never grants authority.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/pull/75",
+      "quote": "Add role-based scheduling preferences: participant role tags, role-to-agent bindings in settings, and a scheduling-only matcher (resolve_role) that never grants authority.",
+      "sourceId": "src-6",
+      "quoteSha256": "66f473efb3778dd74d41a1746c3904deb92cc46f7b31566feae89efe4adea139"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "PR #75 added a deterministic planner that resolves each step role via roles.resolve_role and validates against allowed modes.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/pull/75",
+      "quote": "Add a deterministic, untrusted planner that parses a two-step handoff intent into a WorkPlan, resolves each step's role to configured participants via roles.resolve_role, validates against allowed modes, and maps to agent.run arguments.",
+      "sourceId": "src-6",
+      "quoteSha256": "d3adeb66e38705b686ce7b5554d4f4b6b6b989680e5d5c3ddce07278798e442b"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "PR #75 added an isolated PlanRunManager for configurable N-step pipelines with SHA-256-bound artifacts and per-step high-risk approval.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/pull/75",
+      "quote": "Add an isolated PlanRunManager that generalizes two-step handoff to configurable N-step pipelines: per-step participant/role/task/mode, SHA-256-bound artifacts at each transition, per-step high-risk approval, worktree reservation and read-only tamper detection.",
+      "sourceId": "src-6",
+      "quoteSha256": "d4bac613e1427832ea0fbde1da928696f20ef07bb8aef1b4c13c7fabb1beb054"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The commits page records the merge of PR #75 from Trisoma/feat/role-profile-layer.",
+      "check": "page",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T21:45:09.521Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Trisoma/odessy has 50 raw commits in the last 30 days, 29 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T21:45:09.521Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Its latest real commit is c5cc1b9, on 2026-11-23.",
+      "check": "page",
+      "missing": "It gave no source it read for this."
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "Odessy activity linked to issue #73 progressed from proposal to a merged PR #75 implementation.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c4",
+        "c7"
+      ],
+      "math": "Issue #73 proposal (c1) plus PR #75 implementation (c4) plus merge record for PR #75 (c7) together indicate proposal-to-merged implementation for the odessy component; this does not by itself prove the separate agent-dispatch-strengths artifact is ready."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The standalone self-test for agent-dispatch-strengths currently passes and its exact output is known.",
+      "check": "page",
+      "missing": "A dated run log or test output tied to the current commit for agent-dispatch-strengths, showing command, commit, and output."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "GOAL.md was updated first and ARTIFACTS.md records exact output and blockers, with public files verified.",
+      "check": "page",
+      "missing": "The current contents or commit history of GOAL.md and ARTIFACTS.md in the agent-dispatch repository and a public file listing with accessible URLs."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "A role match must never expand authority: the proposal states assignment remains constrained by allowed_modes and high-risk approval, but enforcement in a separate strengths artifact is not shown in the pages.",
+    "A deny rule is a hard veto that no profile match can override, so any standalone matcher that ignores deny rules would create a security boundary problem.",
+    "Several unrelated repositories also named agent-dispatch were returned, including experimental implementations, so name similarity alone does not prove they are the same artifact.",
+    "The SemperSupra agent-dispatch page says its control path is still experimental and not to treat it as reusable until controls are active, showing the risk of conflating similarly named projects.",
+    "Exact standalone self-test output and public-file blockers for agent-dispatch-strengths were not present in the pages read, so publication readiness remains unproven."
+  ],
+  "unknowns": [
+    "Its latest real commit is c5cc1b9, on 2026-11-23.: It gave no source it read for this.",
+    "The standalone self-test for agent-dispatch-strengths currently passes and its exact output is known.: A dated run log or test output tied to the current commit for agent-dispatch-strengths, showing command, commit, and output.",
+    "GOAL.md was updated first and ARTIFACTS.md records exact output and blockers, with public files verified.: The current contents or commit history of GOAL.md and ARTIFACTS.md in the agent-dispatch repository and a public file listing with accessible URLs."
+  ],
+  "wouldChangeMind": [
+    "A dated, current-commit self-test log showing exact passing output for agent-dispatch-strengths.",
+    "Current GOAL.md and ARTIFACTS.md contents confirming the requested update order, exact output, and blockers.",
+    "A public listing showing the standalone files are accessible and match the tested commit."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "[Proposal] Role-based agent dispatch: assign tasks to agents by their strengths · Issue #73 · Trisoma/odessy · GitHub",
+      "url": "https://github.com/Trisoma/odessy/issues/73",
+      "finalUrl": "https://github.com/Trisoma/odessy/issues/73",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:08.926Z",
+      "extractor": "page-text-v1",
+      "sha256": "3f031bcdcb0911e81b3d4b582eee11ebb0efce092ef812e3ad6b8df1663b0be3",
+      "bytes": 275535,
+      "quote": "This proposal is for a role-based task dispatch capability that matches how people actually work:",
+      "quoteSha256": "9ba6d67fea08958de06b52cc9fa3f544d413d8c8aabf95de82daa328875efccf"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - Buffalo2024/agent-dispatch: Owner-controlled task protocol and gateway for existing personal AI assistants, with a runnable referen",
+      "url": "https://github.com/Buffalo2024/agent-dispatch",
+      "finalUrl": "https://github.com/Buffalo2024/owner-agent-gateway",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:09.064Z",
+      "extractor": "page-text-v1",
+      "sha256": "d94914f133480774e3790d1e9ae01a285c951a347fd873bff14b7ede6f0d1925",
+      "bytes": 328518,
+      "quote": "README.zh-CN.md README.zh-CN.md ROADMAP.md ROADMAP.md SECURITY.md SECURITY.md package-lock.json package-lock.json package.json package.json View all files Repository files navigation Owner Agent Gateway Turn an existing personal AI assistant into an owner-controlled, schedulable task executor.",
+      "quoteSha256": "6a40a4ac255e56ffc7871fca73f2c5f77bff8c2fd7387015eb6a5087f9583ac1"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "GitHub - irootkernel/agent-dispatch · GitHub",
+      "url": "https://github.com/irootkernel/agent-dispatch",
+      "finalUrl": "https://github.com/irootkernel/agent-dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:08.974Z",
+      "extractor": "page-text-v1",
+      "sha256": "e270db2aea36af2e47468602066158ead29d5c9f26609858fe608575c10184c8",
+      "bytes": 312365,
+      "quote": "Agent Dispatch watches for meaningful file changes, groups the work, and tracks delivery and completion so your agents can maintain a wiki without processing every save as a separate job.",
+      "quoteSha256": "271bd82dd5aa24e6ac5482d056b2c7e144ff4c62bf78e5c3de9d4666470efb17"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "GitHub - SemperSupra/agent-dispatch: agent-dispatch · GitHub",
+      "url": "https://github.com/SemperSupra/agent-dispatch",
+      "finalUrl": "https://github.com/SemperSupra/agent-dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:08.927Z",
+      "extractor": "page-text-v1",
+      "sha256": "defa27551aa8d0243261f84314d5b01f2f7b66560091284936405e6010485f99",
+      "bytes": 235632,
+      "quote": "The dispatcher validates both identifiers, loads only registered task files under tasks/ , resolves the approved target through the provider, creates the asynchronous session, and exits.",
+      "quoteSha256": "f3ced22ef6bbd0536c77d029ead11409fa6a8dcfc04edd27c7fc1f7c725471bb"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Require explicit agent completion outcome before publishing or acknowledging work · Issue #21 · MariuszBielecki288728/agent-dispatch · GitHu",
+      "url": "https://github.com/MariuszBielecki288728/agent-dispatch/issues/21",
+      "finalUrl": "https://github.com/MariuszBielecki288728/agent-dispatch/issues/21",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:08.737Z",
+      "extractor": "page-text-v1",
+      "sha256": "13ccb9930257dc5af09ec4202146dc12b1ae4dd9501016175c18e6620205018d",
+      "bytes": 242831,
+      "quote": "Current gap validate_run() currently proves transport/runtime facts: process spawned; within timeout; runtime started; exit code is zero; subtype=success exists; session ID exists and matches on resume; no tool_hook_blocked event occurred.",
+      "quoteSha256": "425049d7fbd83d75940559a77c5ccf98b2a150c9b4e402ee5c6062c11146addd"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "feat(collaboration): add role profile layer for agent dispatch by xiaoyuCR7 · Pull Request #75 · Trisoma/odessy · GitHub",
+      "url": "https://github.com/Trisoma/odessy/pull/75",
+      "finalUrl": "https://github.com/Trisoma/odessy/pull/75",
+      "status": 200,
+      "fetchedAt": "2026-11-23T21:45:09.171Z",
+      "extractor": "page-text-v1",
+      "sha256": "1c83c72474867cdcf91b873411a97174ffa444067e9e223694fd89ff27e85e78",
+      "bytes": 296880,
+      "quote": "Add role-based scheduling preferences: participant role tags, role-to-agent bindings in settings, and a scheduling-only matcher (resolve_role) that never grants authority.",
+      "quoteSha256": "66f473efb3778dd74d41a1746c3904deb92cc46f7b31566feae89efe4adea139"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of Trisoma/odessy",
+      "url": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T21:45:09.521Z",
+      "fetchedAt": "2026-11-23T21:45:05.021Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "ae35034b7bac840c60104c286a9e3204ca5458586e6410d979a347a0d12ed72e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-23-agent-dispatch-strengths.md",
+  "decidedBy": "bee"
+}
