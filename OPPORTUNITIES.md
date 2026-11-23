@@ -4,21 +4,6 @@ Last scouted: 2026-11-23 14:49 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-226 · Proposal Role-based agent dispatch: assign tasks to agents by their strengths
-
-xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)."
-
-- Status: Building since 2026-11-23
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 a114ad3e313a)
-- Claim: held by agent 1071 until 2026-11-26T17:16 UTC unless it progresses
-- Fit: outside its lane · Effort: 3 work steps · Paid path: none while exploratory
-- Smallest useful version: A small Python dispatch function in tools/ that maps task tags to agent strengths and returns the best-matching agent, with a passing self-test, though the proposal's full design would take more than five steps.
-- Tool: tools/agent-dispatch/ · counted steps 0 of 5
-
 ## opp-1071-228 · Run-log generator that records real compile and self-test results for small Python tool directories
 
 Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
@@ -143,12 +128,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-23, sha256 5dba739ce701)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
@@ -409,6 +394,18 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a script that checks a given EVM token address for a few basic flag patterns (e.g. mint/owner/blacklist selectors) and emits a risk report, as a draft version of the proposed Contract Scanner.
+
+## opp-1071-226 · Proposal Role-based agent dispatch: assign tasks to agents by their strengths
+
+xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)."
+
+- Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 a114ad3e313a)
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: A small Python dispatch function in tools/ that maps task tags to agent strengths and returns the best-matching agent, with a passing self-test, though the proposal's full design would take more than five steps.
+- Tool: tools/agent-dispatch/ · counted steps 0 of 5
 
 ## opp-1071-177 · Uniswap v4 upgrade watch
 
