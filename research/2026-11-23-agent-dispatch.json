@@ -1,0 +1,250 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-23T18:35:16.953Z",
+  "subject": "agent-dispatch",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The evidence supports tracking Odessy issue 73 as an open role-based dispatch proposal with a clear non-expansion-of-authority principle, while the name agent-dispatch alone is not a reliable identifier. The claimed finished artifact cannot be concluded from the pages read because its GOAL.md hash, self-test output and fetch-checks are not shown.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "Trisoma/odessy has 50 raw commits in the last 30 days, 29 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T18:35:23.566Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is c5cc1b9, on 2026-11-23.",
+      "check": "shipping",
+      "source": "https://github.com/Trisoma/odessy/commit/c5cc1b9cc7d7d8d87e9f102fc454e25add16fa76"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The irootkernel agent-dispatch tool watches for meaningful file changes, groups work, and tracks delivery and completion so agents can maintain a wiki.",
+      "check": "page",
+      "source": "https://github.com/irootkernel/agent-dispatch",
+      "quote": "Agent Dispatch watches for meaningful file changes, groups the work, and tracks delivery and completion so your agents can maintain a wiki without processing every save as a separate job.",
+      "sourceId": "src-2",
+      "quoteSha256": "271bd82dd5aa24e6ac5482d056b2c7e144ff4c62bf78e5c3de9d4666470efb17"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The irootkernel tool requires Watchman and Hermes 0.20.5 or newer with the public Kanban interface.",
+      "check": "page",
+      "source": "https://github.com/irootkernel/agent-dispatch",
+      "quote": "Watchman, and Hermes 0.20.5 or newer with the public Kanban interface.",
+      "sourceId": "src-2",
+      "quoteSha256": "27a4b8c2c6e8374c198bf8a676ac704062df81250b7ca1a97ab4186e258805c3"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Odessy issue 73 states that deciding which agent does which step is currently entirely manual and handoff offers two fixed directions.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "Today, deciding \"which agent does which step\" is entirely manual, and handoff only offers two fixed directions.",
+      "sourceId": "src-1",
+      "quoteSha256": "c98a8af024f6d74ca94ae35312e2c7c34f155b0b175f69eb12e775f82607064f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Odessy issue 73 lists role semantics as missing, with no notion of roles such as requirements, implementation or review.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "Role semantics - no notion of roles such as \"requirements / implementation / review\", nor a role-to-agent mapping config.",
+      "sourceId": "src-1",
+      "quoteSha256": "6099a1e1df5f70fed67785cbae82f799c18b24501918ec804e6f113e68f4021a"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Odessy issue 73 states a role profile is a scheduling preference only and never expands authority.",
+      "check": "page",
+      "source": "https://github.com/Trisoma/odessy/issues/73",
+      "quote": "A role profile is a scheduling preference only - it never expands authority.",
+      "sourceId": "src-1",
+      "quoteSha256": "e5bbd5dd61c2fbd114edaf692a79ede9eadd040b7f0afa98e46645edc23e7715"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Trisoma/odessy has 50 raw commits in the last 30 days, 29 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T18:35:23.566Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The latest real Trisoma/odessy commit in the service check is c5cc1b9, on 2026-11-23.",
+      "check": "page",
+      "source": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T18:35:23.566Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "The unqualified name agent-dispatch is ambiguous across the pages read.",
+      "check": "page",
+      "inputs": [
+        "c1"
+      ],
+      "math": "At least three distinct repository URLs use the agent-dispatch name: irootkernel/agent-dispatch, YasushiKobayashi/agent-dispatch, and the dispatch repositories shown alongside them; therefore a full owner/repo identifier is needed."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "The GOAL.md hash is not confirmed by any page read.",
+      "check": "page",
+      "missing": "The public GOAL.md file and a computed hash of its exact contents."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The standalone self-test command and output for the current artifact are not confirmed by any page read.",
+      "check": "page",
+      "missing": "ARTIFACTS.md in the artifact repository showing the exact command and output for the current commit."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether every named file was published and fetch-checked is not confirmed by any page read.",
+      "check": "page",
+      "missing": "Public URLs for each named file plus fetch-check results tied to the current commit."
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "The name agent-dispatch covers at least three unrelated repositories, so citations and verification must include the full owner/repo path.",
+    "The Odessy proposal is a proposal, not proof of implementation; role semantics and a planner were listed as missing.",
+    "If role matching were treated as authority, it could bypass allowed_modes and deny rules, which the proposal explicitly forbids.",
+    "The irootkernel tool depends on Watchman and Hermes 0.20.5 or newer, adding external dependencies.",
+    "No page read confirms the GOAL.md hash, standalone self-test output, ARTIFACTS.md record, or public fetch-check for any named artifact."
+  ],
+  "unknowns": [
+    "The GOAL.md hash is not confirmed by any page read.: The public GOAL.md file and a computed hash of its exact contents.",
+    "The standalone self-test command and output for the current artifact are not confirmed by any page read.: ARTIFACTS.md in the artifact repository showing the exact command and output for the current commit.",
+    "Whether every named file was published and fetch-checked is not confirmed by any page read.: Public URLs for each named file plus fetch-check results tied to the current commit."
+  ],
+  "wouldChangeMind": [
+    "A public GOAL.md with a recorded hash matching its exact contents would change the artifact conclusion.",
+    "A committed ARTIFACTS.md showing the exact standalone self-test command and passing output for the current commit would change the verification conclusion.",
+    "Public fetch-check results for every named file at the current commit would change the publishing conclusion."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "[Proposal] Role-based agent dispatch: assign tasks to agents by their strengths · Issue #73 · Trisoma/odessy · GitHub",
+      "url": "https://github.com/Trisoma/odessy/issues/73",
+      "finalUrl": "https://github.com/Trisoma/odessy/issues/73",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:20.437Z",
+      "extractor": "page-text-v1",
+      "sha256": "870e4ec027a885f4353baf93b1ad843ced9a242640705f13d05cc52c0ea8cd05",
+      "bytes": 275933,
+      "quote": "Today, deciding \"which agent does which step\" is entirely manual, and handoff only offers two fixed directions.",
+      "quoteSha256": "c98a8af024f6d74ca94ae35312e2c7c34f155b0b175f69eb12e775f82607064f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - irootkernel/agent-dispatch · GitHub",
+      "url": "https://github.com/irootkernel/agent-dispatch",
+      "finalUrl": "https://github.com/irootkernel/agent-dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:20.194Z",
+      "extractor": "page-text-v1",
+      "sha256": "e270db2aea36af2e47468602066158ead29d5c9f26609858fe608575c10184c8",
+      "bytes": 312321,
+      "quote": "Agent Dispatch watches for meaningful file changes, groups the work, and tracks delivery and completion so your agents can maintain a wiki without processing every save as a separate job.",
+      "quoteSha256": "271bd82dd5aa24e6ac5482d056b2c7e144ff4c62bf78e5c3de9d4666470efb17"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "GitHub - YasushiKobayashi/agent-dispatch · GitHub",
+      "url": "https://github.com/YasushiKobayashi/agent-dispatch",
+      "finalUrl": "https://github.com/YasushiKobayashi/agent-dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:20.593Z",
+      "extractor": "page-text-v1",
+      "sha256": "24a5f912822e0c6c69cec9c6967ad50c9e41459e6cd14732d74853446724c7fb",
+      "bytes": 318565,
+      "quote": "You switched accounts on another tab or window.",
+      "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "GitHub - dispatch-ai-org/dispatch: Run the same software task through multiple coding-agent harnesses, compare the evidence, and choose the",
+      "url": "https://github.com/dispatch-ai-org/dispatch",
+      "finalUrl": "https://github.com/rundispatch/dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:20.455Z",
+      "extractor": "page-text-v1",
+      "sha256": "c826ba1499db2d9e5b0ac0401c9488b8409dd3c15ae2e3844fed0cfd3596a21a",
+      "bytes": 254355,
+      "quote": ".gitignore AGENTS.md AGENTS.md Cargo.lock Cargo.lock Cargo.toml Cargo.toml LICENSE LICENSE README.md README.md View all files Repository files navigation Dispatch Keep autonomous software work valid while the code moves.",
+      "quoteSha256": "4da10ed54f8c38ce8a868edeb3c498e34d05902b6773efa5f06c699924be81f2"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Connect approved SSH commands and stabilize voice, history and Windows upgrades by JaimeFine · Pull Request #68 · Trisoma/odessy · GitHub",
+      "url": "https://github.com/Trisoma/odessy/pull/68",
+      "finalUrl": "https://github.com/Trisoma/odessy/pull/68",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:23.566Z",
+      "extractor": "page-text-v1",
+      "sha256": "c14f2084759a45d1c39462335e7c63d22bd2fafba57ca691d2ca1ea9abafd0ab",
+      "bytes": 1117792,
+      "quote": "Copy link Copy Markdown Collaborator Summary Saved voice settings could leave the main composer using stale audio devices, SSH connections lacked an explicit agent-command loop, and saved chats and narrow inspectors required awkward navigation.",
+      "quoteSha256": "24ef87649a01285e09212d16858fd69e2543b5f851ba7d0244736d6ff0b5049d"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "GitHub - wsoule/dispatch: Source-available, git-native task tracking and AI-agent orchestration — tasks are markdown files in your repo · Gi",
+      "url": "https://github.com/wsoule/dispatch",
+      "finalUrl": "https://github.com/wsoule/dispatch",
+      "status": 200,
+      "fetchedAt": "2026-11-23T18:35:20.571Z",
+      "extractor": "page-text-v1",
+      "sha256": "5ef38be11bf89d3d86063ad40766a6ccf08ee9f525faa584ef8ea9ecfe0eed24",
+      "bytes": 503476,
+      "quote": "Give agents tasks, not chats: Claude Code, Codex or any MCP agent claims work from one board, runs it in its own worktree inside the files it declared, and lands it through review and a merge queue.",
+      "quoteSha256": "729e090ed640c68a00e8868dc76ee23bad05af621627ad4d5fdfda4bea686b52"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of Trisoma/odessy",
+      "url": "https://api.github.com/repos/Trisoma/odessy/commits?per_page=50&since=2026-10-24T18:35:23.566Z",
+      "fetchedAt": "2026-11-23T18:35:16.953Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "ae35034b7bac840c60104c286a9e3204ca5458586e6410d979a347a0d12ed72e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-23-agent-dispatch.md",
+  "decidedBy": "bee"
+}
