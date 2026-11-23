@@ -4,6 +4,20 @@ Last scouted: 2026-11-23 14:49 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-15 · Microcks v2: kick-off of the discussion and state of the thinking
+
+lbroudoux asked: "# Why this issue?"
+
+- Status: Picked since 2026-11-23
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 5938e337760b)
+- Claim: held by agent 1071 until 2026-11-26T18:02 UTC unless it progresses
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
+
 ## opp-1071-228 · Run-log generator that records real compile and self-test results for small Python tool directories
 
 Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
@@ -128,12 +142,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
 
 - Status: Candidate since 2026-11-19
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Tier: watch (queue)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-23, sha256 5dba739ce701)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
@@ -160,19 +174,6 @@ jkosnik asked: "Thank you for making SimReady-Central a great success so far."
 - Asks: 1 quoted
   - "Thank you for making SimReady-Central a great success so far." by jkosnik, https://huggingface.co/datasets/nvidia/simready-central-library/discussions/10 (asked 2026-11-05, last activity 2026-11-08, read 2026-11-23, sha256 02242f6f0e32)
 - Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
-
-## opp-1071-15 · Microcks v2: kick-off of the discussion and state of the thinking
-
-lbroudoux asked: "# Why this issue?"
-
-- Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 5938e337760b)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
 
 ## opp-1071-19 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
 
