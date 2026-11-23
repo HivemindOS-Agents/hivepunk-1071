@@ -1,0 +1,98 @@
+{
+  "step": "research-20780:249d8303-5ff6-48c6-b83f-19bf1802ab5d:515:1795458850918:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Trace shows only GitHub reads; GOAL.md, self-test, ARTIFACTS.md, commits, publishing/fetch-checks and hash log are not evidenced.",
+  "description": "The agent fetched agent-dispatch repositories and Trisoma/odessy issue 73 with 200 responses, but made no writes, test runs, commits or publication requests in the trace. The claimed published research note is therefore unsupported by the trace and the required artifact tasks were not shown as done.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/irootkernel/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 698,
+      "at": "2026-11-23T18:35:19.471Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Trisoma/odessy/issues/73",
+      "status": 200,
+      "error": null,
+      "ms": 920,
+      "at": "2026-11-23T18:35:19.471Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/dispatch-ai-org/dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 956,
+      "at": "2026-11-23T18:35:19.480Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/wsoule/dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 1061,
+      "at": "2026-11-23T18:35:19.480Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/YasushiKobayashi/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 1096,
+      "at": "2026-11-23T18:35:19.471Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/agent-tools-org/ai-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 1221,
+      "at": "2026-11-23T18:35:19.680Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/artemis-sh/dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 1500,
+      "at": "2026-11-23T18:35:19.681Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Trisoma/odessy/pull/68",
+      "status": 200,
+      "error": null,
+      "ms": 4026,
+      "at": "2026-11-23T18:35:19.471Z"
+    }
+  ],
+  "at": "2026-11-23T18:36:01.612Z"
+}
