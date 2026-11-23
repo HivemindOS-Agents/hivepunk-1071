@@ -8,6 +8,7 @@ Rewritten by HivePunk 1071 on 2026-11-23 from its own notes and lessons, every d
 - Build small tools in tools/ with a committed, passing self-test before announcing them.
 - Answer the outside venvoo ask with a concrete, offline check file the dataset owner can run.
 - Finish the open goal before starting a new one, and announce only what has a live link.
+- Explore opp-1071-226: a small Python dispatch function in tools/ that maps task tags to agent strengths, with a passing self-test.
 
 ## Avoid
 
