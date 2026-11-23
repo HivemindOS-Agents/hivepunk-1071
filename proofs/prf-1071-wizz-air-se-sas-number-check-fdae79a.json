@@ -1,0 +1,105 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-wizz-air-se-sas-number-check-fdae79a",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-23T00:20:43Z",
+  "claim": {
+    "text": "Results: 17/17 checks passed",
+    "result": "passed",
+    "checksPassed": 17,
+    "checksTotal": 17
+  },
+  "artifact": "tools/wizz-air-se-sas-number-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/wizz-air-se-sas-number-check/self_test.py",
+    "commit": "fdae79a89cdcbc4f713f187eb12692a138063718",
+    "sha256": "ff1904ff87638bd58c3c7a62010cb8ce282abefb47f36a1601c82edc9f9da76a"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 17,
+    "checksTotal": 17
+  },
+  "command": "git checkout fdae79a89cdcbc4f713f187eb12692a138063718 && cd tools/wizz-air-se-sas-number-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-wizz-air-se-sas-number-check-fdae79a.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45088185598",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 7,
+    "shippedCommit": "fdae79a89cdcbc4f713f187eb12692a138063718",
+    "outcome": "shipped-final",
+    "asOfStep": 7,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "f916bc75fd78bd45d894093aff096269d518366a",
+        "tree": "deabd8017fc4741f16e4933d796434df5e54d2e3",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "eb5e45f310170f6ba899e8a29ef3ec334a6d88f6",
+        "tree": "ac2353d55cacf7456e6d624c6b1500beb001df78",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      },
+      {
+        "step": 3,
+        "state": "passed",
+        "commit": "940444608ff076cffcfc51ee7575412c4486a35e",
+        "tree": "dcc82f5a29c5e9b9f921cc2c8c04f6e7da20f273",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      },
+      {
+        "step": 4,
+        "state": "passed",
+        "commit": "1fb1d9ca4b82e5bfe6630a55b85b843b55cfab25",
+        "tree": "6dcc6ae3fa032320e3e8035c56904db82924b38a",
+        "checkSha256": "8f123e8f563ecc67663fb3a22a1d4e7c122ae1095b9da3413323f1dab39e1a97"
+      },
+      {
+        "step": 5,
+        "state": "passed",
+        "commit": "7da945784453c966608a93752ab59d5537b462b8",
+        "tree": "5a40f86ed2d50bb14e9065a192b75b740410c829",
+        "checkSha256": "ff1904ff87638bd58c3c7a62010cb8ce282abefb47f36a1601c82edc9f9da76a"
+      },
+      {
+        "step": 6,
+        "state": "passed",
+        "commit": "d0dfca0b4612863a83560ee09f84184981199f7f",
+        "tree": "f813853e90af98fc815b8ab299eddc30a94cf74d",
+        "checkSha256": "ff1904ff87638bd58c3c7a62010cb8ce282abefb47f36a1601c82edc9f9da76a"
+      },
+      {
+        "step": 7,
+        "state": "passed",
+        "commit": "fdae79a89cdcbc4f713f187eb12692a138063718",
+        "tree": "136ac630b23a3ab40a70c0bac83a650a5eecab2b",
+        "checkSha256": "ff1904ff87638bd58c3c7a62010cb8ce282abefb47f36a1601c82edc9f9da76a"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45088185598",
+    "testedSha": "fdae79a89cdcbc4f713f187eb12692a138063718",
+    "checkFrom": "base",
+    "baseSha": "d0dfca0b4612863a83560ee09f84184981199f7f",
+    "checkSha256": "ff1904ff87638bd58c3c7a62010cb8ce282abefb47f36a1601c82edc9f9da76a",
+    "checkEdited": false,
+    "baseCheck": "unchanged",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": []
+  },
+  "checkFrom": "base"
+}
