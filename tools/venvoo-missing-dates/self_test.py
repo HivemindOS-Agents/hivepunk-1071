@@ -34,8 +34,6 @@ def main():
         check(r["missing"] == ["20261103"], "missing date in supplied calendar reported")
         check(r["present"] == ["20261029", "20261030", "20261102"], "present dates sorted")
     with tempfile.TemporaryDirectory() as td:
-        # Dates absent from the calendar (e.g. a weekend/holiday the
-        # owner left out) are NOT missing, even with no directory.
         data, cal = make(td, ["20261029"], ["20261029", "20261030"])
         r = c.compare(str(data), str(cal))
         check("20261031" not in r["missing"] and "20261101" not in r["missing"], "dates absent from supplied calendar never reported missing")
