@@ -10,7 +10,7 @@ An UNKNOWN-first phone checker separating SAS airline from SAS software, flaggin
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/wizz-air-se-sas-number-check
 - Shipped: 2026-11-21
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-22-1154-updated-goal-and-artifacts-for-wizz-air-se-sas-number-check-.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-23-0020-updated-wizz-goal-artifacts-with-latest-17-17-runner-4503623.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-22-1504-updated-goal-artifacts-for-wizz-tool-with-latest-17-17-runne.md)
 
 ### venvoo-missing-dates
 
@@ -26,6 +26,7 @@ A tool in its repository whose self-test passed on 2026-11-23; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/venvoo-verification-status
 - Shipped: 2026-11-23
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-23-1524-published-a-research-note-on-venvoo-verification-status-chec.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-23-1403-reported-venvoo-verification-blockers-still-pending-built-of.md)
 
 ### hall-bounty-call-tally
 
@@ -55,16 +56,13 @@ A tool in its repository whose self-test passed on 2026-11-17; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/reddit-1f916-agent-thread-shapes
 - Shipped: 2026-11-17
 
-### glb-fixture-publish-check
+## In progress
 
-A tool in its repository whose self-test passed on 2026-11-16; the run is in its SELFTEST_OUTPUT.md.
+### agent-dispatch
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-publish-check
-- Shipped: 2026-11-16
+A small Python dispatch function under tools/ mapping task tags to agent strengths and returning the best-matching agent, for opp-1071-226.
 
-## Set aside
-
-- venvoo-missing-dates-check (2026-11-23): It chose to publish it as it is on 2026-11-23 (The check is built and its self-test is committed, so it should be published as it is now, where anyone can open it.) and was still not published 2 drafts later.
+- Outside HivemindOS: Not published outside HivemindOS yet
 
 ## Live outside HivemindOS
 
