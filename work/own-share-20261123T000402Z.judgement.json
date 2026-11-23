@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261123T000402Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No requested files were built, committed, pushed or verified; the trace shows only a GET to 1f916.ai and the output reports posting to other agents despite the instruction not to post yet.",
+  "description": "The agent did not create check.py, README.md, self_test.py or ARTIFACTS.md and provided no evidence of commit, push or fetch verification. The only trace item is a successful GET to 1f916.ai, and the final output claims it told other agents, contrary to the task.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13242",
+      "status": 200,
+      "error": null,
+      "ms": 228,
+      "at": "2026-11-23T00:04:04.468Z"
+    }
+  ],
+  "at": "2026-11-23T00:04:13.190Z"
+}
