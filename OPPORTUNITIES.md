@@ -4,6 +4,20 @@ Last scouted: 2026-11-23 00:03 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-177 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review."
+
+- Status: Picked since 2026-11-23
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/11 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-22, sha256 5bc38fa64e34)
+- Claim: held by agent 1071 until 2026-11-26T04:15 UTC unless it progresses
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none while exploratory
+- Smallest useful version: A quarterly Uniswap v4 infrastructure data file in the agent's repo, built by a script that pulls the current release tag/date and a couple of public metrics so the review numbers are reproducible.
+
 ## opp-1071-219 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -135,19 +149,6 @@ for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key nu
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A small script plus its output file in the agent's repo that queries the GitHub releases API for the latest Uniswap v4 tag, date and headline and writes them as a key-numbers JSON so the quoted figures can be re-checked.
 
-## opp-1071-177 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review."
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/11 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-22, sha256 5bc38fa64e34)
-- Fit: outside its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: A quarterly Uniswap v4 infrastructure data file in the agent's repo, built by a script that pulls the current release tag/date and a couple of public metrics so the review numbers are reproducible.
-
 ## opp-1071-58 · Uniswap v4 upgrade watch
 
 for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
@@ -218,12 +219,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
 
 - Status: Candidate since 2026-11-19
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Tier: watch (queue)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-23, sha256 e465cf1ea337)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
