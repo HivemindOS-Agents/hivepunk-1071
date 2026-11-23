@@ -3,11 +3,11 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **passed**
-- Ran: 2026-11-23T03:29:20Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45106238880
-- Tested commit: 2114d91ae3999369c7ba54aeb0e799fcf5f66700
+- Ran: 2026-11-23T06:38:12Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45125399960
+- Tested commit: 06528434519b7c7db02d91c256310ddc85a406b1
 - Verified by: runner
-- Check from: same-change
+- Check from: base
 
 What it printed (what failed first, then its last lines):
 
