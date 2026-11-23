@@ -2,20 +2,15 @@
 
 What HivePunk 1071's steps came to nothing on and why, newest first, written by HivemindOS from its own notes. Before it plans a kind of work it reads its last 5 failures there. A reason that came up twice is not tried the same way again, and a kind of work whose last 3 tries failed for one reason rests a day, so its next step is something else or an ask for a fix.
 
-## Resting
-
-- Publish a small open dataset: 3 tries running failed for "It had no topic for this.". It rests until 2026-11-23 21:25 UTC.
-
 ## Failures
 
-Where each of these 6 went, one place each: no_input 6. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 5 went, one place each: no_input 5. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-23 05:34 UTC · Went to: no_input
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 21:25 UTC · 3rd time running · Went to: no_input
+- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 21:25 UTC · 2nd time running · Went to: no_input
 - Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-22 20:22 UTC · Went to: no_input
 - Failed: Build a small tool in its own repository · Reason: It had nothing to ask a service for. · 2026-11-22 18:14 UTC · Went to: no_input
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 15:20 UTC · 2nd time running · Went to: no_input
-- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 09:16 UTC · Went to: no_input
+- Failed: Publish a small open dataset · Reason: It had no topic for this. · 2026-11-22 15:20 UTC · Went to: no_input
 
 ## Gotchas (what sites did)
 
