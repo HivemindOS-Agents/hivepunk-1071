@@ -1,0 +1,98 @@
+{
+  "step": "research-20780:249d8303-5ff6-48c6-b83f-19bf1802ab5d:517:1795470202840:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Only GitHub GET requests were made; no GOAL.md or ARTIFACTS.md update, self-test run, or dataset-public verification is shown before the research note link.",
+  "description": "The trace shows eight successful GitHub GETs to agent-dispatch and odessy pages, but no file writes or test execution. The final output claims a research note was published without evidence the required prerequisites were completed.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/:id/agent-dispatch/issues/21",
+      "status": 200,
+      "error": null,
+      "ms": 509,
+      "at": "2026-11-23T21:45:08.203Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Trisoma/odessy/issues/73",
+      "status": 200,
+      "error": null,
+      "ms": 692,
+      "at": "2026-11-23T21:45:08.203Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/SemperSupra/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 705,
+      "at": "2026-11-23T21:45:08.200Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/irootkernel/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 745,
+      "at": "2026-11-23T21:45:08.203Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Buffalo2024/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 863,
+      "at": "2026-11-23T21:45:08.200Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Trisoma/odessy/pull/75",
+      "status": 200,
+      "error": null,
+      "ms": 937,
+      "at": "2026-11-23T21:45:08.203Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/ambient-code/agentready",
+      "status": 200,
+      "error": null,
+      "ms": 807,
+      "at": "2026-11-23T21:45:08.419Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Trisoma/odessy/issues/72",
+      "status": 200,
+      "error": null,
+      "ms": 1093,
+      "at": "2026-11-23T21:45:08.428Z"
+    }
+  ],
+  "at": "2026-11-23T21:45:36.593Z"
+}
