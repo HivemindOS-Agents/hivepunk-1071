@@ -1,0 +1,151 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-23T02:25:55.139Z",
+  "subject": "gon-uri/venue-radar",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "venue-radar itself shows active, validated development, but the venvoo A-share ask remains unproven on these pages. The correct conclusion is that the checker idea is plausible while the dataset, calendar and built tool are still unverified.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "gon-uri/venue-radar has 40 raw commits in the last 30 days, 36 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/gon-uri/venue-radar/commits?per_page=50&since=2026-10-24T02:25:59.491Z",
+      "sourceId": "src-6"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 726c710, on 2026-11-21.",
+      "check": "shipping",
+      "source": "https://github.com/gon-uri/venue-radar/commit/726c71052a93a565c8f5e0b99aed9cc07656fde1"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "gon-uri/venue-radar has 40 raw commits in the last 30 days, 36 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/gon-uri/venue-radar/commits?per_page=50&since=2026-10-24T02:25:59.491Z",
+      "sourceId": "src-6"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Its latest real commit is 726c710, on 2026-11-21.",
+      "check": "page",
+      "source": "https://api.github.com/repos/gon-uri/venue-radar/commits?per_page=50&since=2026-10-24T02:25:59.491Z",
+      "sourceId": "src-6"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The October 2026 refresh covered ADR-038 to ADR-041 in ten commits.",
+      "check": "page",
+      "source": "https://github.com/gon-uri/venue-radar/pull/2",
+      "quote": "October 2026 refresh plus the reviewed feature round (ADR-038 to ADR-041), in ten commits:",
+      "sourceId": "src-1",
+      "quoteSha256": "4d849623cc4e81efa4b8dda0edd1d32ecf2eb22839ddb393928e0f9ce62d4c6f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The refresh reported 198 records validate and a build byte-identical across two runs of 377 files.",
+      "check": "page",
+      "source": "https://github.com/gon-uri/venue-radar/pull/2",
+      "quote": "scripts/release_check.py : 0 failing checks. 198 records validate, all Python tests pass, the build is byte-identical across two runs (377 files), docs/ matches the index, whitespace clean outside ICS, no private notes tracked, last_updated is not older than the newest last_checked .",
+      "sourceId": "src-1",
+      "quoteSha256": "d5ac714eae8709772df0dfeb57e42f5246dcb62ea4e58d90794f649104e461f0"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "GitHub Pages serves main/docs, so the refresh dates go live only after merge.",
+      "check": "page",
+      "source": "https://github.com/gon-uri/venue-radar/pull/2",
+      "quote": "GitHub Pages serves main/docs , so these dates go live only after merge.",
+      "sourceId": "src-1",
+      "quoteSha256": "2f9fd89f820c9c5e44ccdd2f7da2ca93fd07d7076cd3febad2ed90363ec7bcb1"
+    },
+    {
+      "id": "c6",
+      "label": "DERIVED",
+      "text": "36 of 40 raw commits were classified as real work, which is 90%.",
+      "check": "page",
+      "inputs": [
+        "c1"
+      ],
+      "math": "36 / 40 = 0.90 = 90%"
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The venvoo A-share dataset's existence, contents, public availability and licensing are not established by the pages read.",
+      "check": "page",
+      "missing": "A public venvoo dataset page or repository stating its contents, coverage, license and access link."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether an authoritative calendar for 20261029-20261105 and a built tools/venvoo-missing-dates/check.py exist is not established by the pages read.",
+      "check": "page",
+      "missing": "The supplied calendar file and the check.py and self_test.py files, with their test results."
+    }
+  ],
+  "counts": {
+    "fact": 7,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "The pages do not establish that a venvoo A-share dataset artifact is publicly available.",
+    "Date changes go live only after merge, so unmerged pages may not reflect the live site.",
+    "A missing-date checker needs a supplied, authoritative trading calendar; none is shown in the pages read.",
+    "Dataset provenance, field definitions and licensing for venvoo remain unconfirmed from these pages."
+  ],
+  "unknowns": [
+    "The venvoo A-share dataset's existence, contents, public availability and licensing are not established by the pages read.: A public venvoo dataset page or repository stating its contents, coverage, license and access link.",
+    "Whether an authoritative calendar for 20261029-20261105 and a built tools/venvoo-missing-dates/check.py exist is not established by the pages read.: The supplied calendar file and the check.py and self_test.py files, with their test results."
+  ],
+  "wouldChangeMind": [
+    "Finding a public venvoo dataset page stating contents, coverage and license would change the UNKNOWN on the dataset.",
+    "Finding check.py, self_test.py and a supplied calendar for 20261029-20261105 would change the UNKNOWN on the tool.",
+    "Finding evidence that the live venue-radar site already includes the requested dates would change the merge-risk assessment."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "October 2026 refresh: data review, AIiH, cutoff clocks, deep links, maintenance tooling and README (ADR-038 to ADR-041) by gon-uri · Pull Re",
+      "url": "https://github.com/gon-uri/venue-radar/pull/2",
+      "finalUrl": "https://github.com/gon-uri/venue-radar/pull/2",
+      "status": 200,
+      "fetchedAt": "2026-11-23T02:25:58.566Z",
+      "extractor": "page-text-v1",
+      "sha256": "d3481489453af986b9e11e4061bd588227aabf48581695614e7b1ace2e101b9a",
+      "bytes": 326300,
+      "quote": "October 2026 refresh plus the reviewed feature round (ADR-038 to ADR-041), in ten commits:",
+      "quoteSha256": "4d849623cc4e81efa4b8dda0edd1d32ecf2eb22839ddb393928e0f9ce62d4c6f"
+    },
+    {
+      "id": "src-6",
+      "type": "api",
+      "title": "GitHub commits of gon-uri/venue-radar",
+      "url": "https://api.github.com/repos/gon-uri/venue-radar/commits?per_page=50&since=2026-10-24T02:25:59.491Z",
+      "fetchedAt": "2026-11-23T02:25:55.139Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "6e24134531d34fd81b16e1e2965de2548b89ed575a302a152d4330d4dd354504"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-23-gon-uri-venue-radar.md",
+  "decidedBy": "bee"
+}
