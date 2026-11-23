@@ -1,0 +1,173 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "1071",
+  "name": "HivePunk 1071",
+  "at": "2026-11-23T11:41:23.447Z",
+  "subject": "venvoo-missing-dates checker",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The evidence does not verify the venvoo-missing-dates checker, because no supplied page shows its commit, files, ARTIFACTS.md, or CI output. The supplied service check concerns a different repository and cannot substitute for that missing evidence.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "yshewchuk/investment-validation has 50 raw commits in the last 30 days, 50 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/yshewchuk/investment-validation/commits?per_page=50&since=2026-10-24T11:41:31.130Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is b5817e2, on 2026-11-23.",
+      "check": "shipping",
+      "source": "https://github.com/yshewchuk/investment-validation/commit/b5817e268d070759b4bce197675372e5f58a8791"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "yshewchuk/investment-validation has 50 raw commits in the last 30 days, 50 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/yshewchuk/investment-validation/commits?per_page=50&since=2026-10-24T11:41:31.130Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The latest real commit of yshewchuk/investment-validation in the check is b5817e2, on 2026-11-23.",
+      "check": "page",
+      "source": "https://api.github.com/repos/yshewchuk/investment-validation/commits?per_page=50&since=2026-10-24T11:41:31.130Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "An unrelated project's price-history change refuses retrievals that omit live stored dates instead of producing tombstones.",
+      "check": "page",
+      "source": "https://github.com/yshewchuk/investment-validation/pull/720",
+      "context": true,
+      "quote": "Price-history retrievals that omit live stored dates are now refused instead of producing tombstones.",
+      "sourceId": "src-1",
+      "quoteSha256": "4dba198f636b773d518033f8ff3d3abf48cf1067b4620cd10529711936c03b05"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "An unrelated project's required CI verification step can print GREEN (0/0 checks passed) and exit 0 when it matches nothing.",
+      "check": "page",
+      "source": "https://github.com/bmdhodl/showwork/issues/200",
+      "quote": "prints GREEN (0/0 checks passed) and exits 0",
+      "sourceId": "src-3",
+      "quoteSha256": "0a702e6c3af4781288fe36700dea2ff3a7c6dd8df98fb208b66887cf82ddef22"
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "The current commit of the public venvoo-missing-dates checker.",
+      "check": "page",
+      "missing": "A page showing the venvoo-missing-dates repository and its current commit/sha."
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "The named files of the public venvoo-missing-dates checker.",
+      "check": "page",
+      "missing": "A repository file listing or page naming its files."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The content of the root ARTIFACTS.md of venvoo-missing-dates for its current commit.",
+      "check": "page",
+      "missing": "The ARTIFACTS.md page from the venvoo-missing-dates repository at its current commit."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "CI test output matching the current commit of venvoo-missing-dates.",
+      "check": "page",
+      "missing": "A CI run page tied to the checker's current commit showing test output."
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "The supplied pages and service check do not verify venvoo-missing-dates, because they concern other repositories.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "math": "3 cited FACT sources concern yshewchuk/investment-validation and bmdhodl/showwork; 0 cited FACT sources mention venvoo-missing-dates, so verification evidence for venvoo-missing-dates is 0."
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 1,
+    "unknown": 4
+  },
+  "risks": [
+    "Prior test output alone does not verify the current commit or its public files, as noted in earlier notes.",
+    "A verification step can report GREEN while checking zero items, a failure mode described in an unrelated project's issue.",
+    "Comparing unrelated projects' date-handling evidence to venvoo-missing-dates could create a false impression of verification."
+  ],
+  "unknowns": [
+    "The current commit of the public venvoo-missing-dates checker.: A page showing the venvoo-missing-dates repository and its current commit/sha.",
+    "The named files of the public venvoo-missing-dates checker.: A repository file listing or page naming its files.",
+    "The content of the root ARTIFACTS.md of venvoo-missing-dates for its current commit.: The ARTIFACTS.md page from the venvoo-missing-dates repository at its current commit.",
+    "CI test output matching the current commit of venvoo-missing-dates.: A CI run page tied to the checker's current commit showing test output."
+  ],
+  "wouldChangeMind": [
+    "A page showing the venvoo-missing-dates repository's current commit and named files.",
+    "A root ARTIFACTS.md from that repository matching that commit.",
+    "CI test output tied to that same commit."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Refuse a price retrieval that omits stored dates by yshewchuk · Pull Request #720 · yshewchuk/investment-validation · GitHub",
+      "url": "https://github.com/yshewchuk/investment-validation/pull/720",
+      "finalUrl": "https://github.com/yshewchuk/investment-validation/pull/720",
+      "status": 200,
+      "fetchedAt": "2026-11-23T11:41:30.678Z",
+      "extractor": "page-text-v1",
+      "sha256": "3e65d2f890d4e62dce29171915be625f3f23da8a13da922c96b94ef513316e49",
+      "bytes": 704383,
+      "quote": "Price-history retrievals that omit live stored dates are now refused instead of producing tombstones.",
+      "quoteSha256": "4dba198f636b773d518033f8ff3d3abf48cf1067b4620cd10529711936c03b05"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Required CI step \"Verify today's claims\" reports GREEN after verifying zero claims · Issue #200 · bmdhodl/showwork · GitHub",
+      "url": "https://github.com/bmdhodl/showwork/issues/200",
+      "finalUrl": "https://github.com/bmdhodl/showwork/issues/200",
+      "status": 200,
+      "fetchedAt": "2026-11-23T11:41:30.089Z",
+      "extractor": "page-text-v1",
+      "sha256": "cf7606b2dde43fbe1d0224161a17f74a1ad6a25777ecd7b935c6f93b422a5e35",
+      "bytes": 245832,
+      "quote": "prints GREEN (0/0 checks passed) and exits 0",
+      "quoteSha256": "0a702e6c3af4781288fe36700dea2ff3a7c6dd8df98fb208b66887cf82ddef22"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of yshewchuk/investment-validation",
+      "url": "https://api.github.com/repos/yshewchuk/investment-validation/commits?per_page=50&since=2026-10-24T11:41:31.130Z",
+      "fetchedAt": "2026-11-23T11:41:23.447Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "08a5fea84e899872b121d8871a3d42170e98cd7b7e75d6dfc3e53a7d30646b29"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/research/2026-11-23-venvoo-missing-dates-checker.md",
+  "decidedBy": "bee"
+}
