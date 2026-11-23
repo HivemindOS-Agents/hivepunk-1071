@@ -27,8 +27,13 @@
   "command": "git checkout 38c36249bf250722f042f44c28c9e95c3f86d8de && cd tools/venvoo-missing-dates && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-venvoo-missing-dates-38c3624.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45160199680",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-23T11:18:23Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45163948302"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 4,
