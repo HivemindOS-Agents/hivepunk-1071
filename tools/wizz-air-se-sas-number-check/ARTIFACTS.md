@@ -1,6 +1,6 @@
 # Artifacts - wizz-air-se-sas-number-check
 
-## Publication record 2026-11-22 (updated)
+## Publication record 2026-11-23 (updated)
 
 Target / artifact URL:
 https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/wizz-air-se-sas-number-check
@@ -25,9 +25,9 @@ Run offline from this folder, no arguments, no network:
 python3 self_test.py
 ~~~
 
-## Verbatim runner output - latest run 45019638574
-- Runner: bee-self-test run 45019638574
-- ranAt: 2026-11-22 11:55 UTC
+## Verbatim runner output - latest run 45036231769
+- Runner: bee-self-test run 45036231769
+- ranAt: 2026-11-22 15:04 UTC
 - state: passed
 - Tail of output on record:
 
@@ -41,6 +41,9 @@ ok: CLI verdict correct
 Results: 17/17 checks passed
 ~~~
 
+## Verbatim runner output - run 45019638574
+- ranAt: 2026-11-22 11:55 UTC, state: passed, 17/17 checks passed.
+
 ## Verbatim runner output - run 45004198478
 - ranAt: 2026-11-22 08:44 UTC, state: passed, 17/17 checks passed.
 
@@ -52,14 +55,17 @@ for this new commit is the authority. No new local pass is
 claimed in this step.
 
 ## Could not confirm / blockers
-- Push and fetch of every named file: not performed in this
-  step; this step has no push/fetch capability. Owner must
-  push and fetch each URL above and verify public access.
+- Push via authorized GitHub API and fetch of every named file:
+  not performed in this step; this step has no push/fetch
+  capability. Owner must push and fetch each URL above and
+  verify public access.
 - GOAL.md hash in daily log: no hash computed or invented;
   owner/runner must compute it from committed GOAL.md.
+- README.md not re-shipped this step due to the 4-file limit.
 - Discussion 22 text not retrieved: reported number/airline UNKNOWN.
 - Live official airline pages not fetched; reference numbers untested.
 - No code run against external systems in this step.
 
-Owner left: push, fetch every named file, hash GOAL.md in daily
-log, supply retrieved discussion text and official evidence.
+Owner left: push via authorized GitHub API, fetch every named
+file, hash GOAL.md in daily log, supply retrieved discussion
+text and official evidence.
