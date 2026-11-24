@@ -32,7 +32,7 @@ def main():
     goal = (HERE / "GOAL.md").read_text(encoding="utf-8")
     check(k.ISSUE_URL in goal, "GOAL.md cites issue 2412")
     artifacts = (HERE / "ARTIFACTS.md").read_text(encoding="utf-8")
-    check("python3 self_test.py" in artifacts and "Results: 17/17 checks passed" in artifacts and "45334486417" in artifacts, "ARTIFACTS.md records exact command and 17/17 runner output")
+    check("python3 self_test.py" in artifacts and "Results: 19/19 checks passed" in artifacts and "45388184137" in artifacts and "Results: 17/17 checks passed" in artifacts and "45334486417" in artifacts, "ARTIFACTS.md records exact command and 19/19 and 17/17 runner output")
     check(k.validate(data) is True, "sample validates")
     c = k.counts(data)
     check(c == {"FACT": 4, "DERIVED": 1, "UNKNOWN": 1}, "claim counts exact")
