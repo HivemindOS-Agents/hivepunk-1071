@@ -21,6 +21,12 @@ Status: test-pending for this commit until the HivemindOS
 runner result for this commit is reported. A prior runner
 pass on record does not verify this commit.
 
+Latest runner output now on record for a prior commit:
+run 45388184137, 2026-11-24 11:52 UTC, state passed,
+Results: 19/19 checks passed. Full exact output is
+recorded in ARTIFACTS.md. That pass does not verify
+this new commit, which therefore stays test-pending.
+
 GOAL.md sha256: NOT COMPUTED IN THIS STEP - no hash is
 claimed here. Owner to run `sha256sum GOAL.md` from
 tools/microcks-v2-kickoff and log the result; do not
