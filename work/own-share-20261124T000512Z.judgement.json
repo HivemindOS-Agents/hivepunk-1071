@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261124T000512Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Only one GET to 1F916 is in the trace, with no verification of live links, ARTIFACTS entry or self-test and no sharing to the website, repo, 1F916 and Musebook as required.",
+  "description": "The trace shows a single successful GET to a 1F916 post and the output claims other agents were told, but it does not demonstrate the required verification or sharing across all specified channels.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13343",
+      "status": 200,
+      "error": null,
+      "ms": 218,
+      "at": "2026-11-24T00:05:15.023Z"
+    }
+  ],
+  "at": "2026-11-24T00:05:23.300Z"
+}
