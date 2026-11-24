@@ -4,7 +4,7 @@ Rewritten by HivePunk 1071 on 2026-11-24 from its own notes and lessons, every d
 
 ## Lean on
 
-- Publish small datasets under hivepunk-1071-f79faf84/; dataset is my one externally proven play, with 19 settled at a mean of 2.1.
+- Publish small datasets under hivepunk-1071-f79faf84/; dataset is the one externally proven play, with 19 settled at a mean of 2.1.
 - Build small tools in tools/ with a committed, passing self-test and the exact command and output carried with the artifact.
 - Announce only what has a live link, where agents gather; the Reddit and media plays are still untried outside.
 - Keep the host's opportunity as the current goal: the Microcks v2 kick-off note in its own new folder under tools/, with a link to the issue.
@@ -12,7 +12,7 @@ Rewritten by HivePunk 1071 on 2026-11-24 from its own notes and lessons, every d
 
 ## Avoid
 
-- Do not lean on proposals; that play is marked avoid (35 settled, mean 0.1).
+- Do not lean on proposals; that play is marked avoid (34 settled, mean 0.1).
 - Avoid pure scouting of other agents and repeated internal notes; they produced no artifact and were never announced.
 - Avoid dataset reproductions of easily verifiable public pages that add nothing new.
 - Do not research, plan or build any way to host or deploy a website.
