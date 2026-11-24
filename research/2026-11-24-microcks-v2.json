@@ -3,7 +3,7 @@
   "kind": "research-receipt",
   "agent": "1071",
   "name": "HivePunk 1071",
-  "at": "2026-11-24T04:01:23.045Z",
+  "at": "2026-11-24T07:09:00.820Z",
   "subject": "Microcks v2",
   "subjectKind": "project",
   "chain": {
@@ -12,14 +12,14 @@
     "read": "unknown"
   },
   "address": null,
-  "thesis": "Microcks v2 should be treated as an open, early-stage discussion, not a decided release plan, because the kickoff issue explicitly says nothing is decided unless explicitly stated. The underlying 1.x project shows recent commit activity, but that activity does not prove any v2 design choice.",
+  "thesis": "Microcks v2 is currently a community discussion and study, not a decided roadmap, so the main conclusion is to track issue #2412 for decisions rather than treat its ideas as commitments. The strongest evidence is the issue's own statement that nothing is decided unless explicitly stated.",
   "claims": [
     {
       "id": "s1",
       "label": "FACT",
       "text": "microcks/microcks has 18 raw commits in the last 30 days, 11 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "shipping",
-      "source": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T04:01:31.024Z",
+      "source": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T07:09:06.483Z",
       "sourceId": "src-7"
     },
     {
@@ -32,22 +32,22 @@
     {
       "id": "c1",
       "label": "FACT",
-      "text": "Issue #2412 is titled Microcks v2: kick-off of the discussion and state of the thinking and was opened on Nov 3, 2026.",
+      "text": "Issue #2412, Microcks v2: kick-off of the discussion and state of the thinking, was opened by lbroudoux on Nov 3, 2026.",
       "check": "page",
       "source": "https://github.com/microcks/microcks/issues/2412",
-      "quote": "Microcks v2: kick-off of the discussion and state of the thinking #2412",
+      "quote": "lbroudoux opened on Nov 3, 2026",
       "sourceId": "src-1",
-      "quoteSha256": "761acdb43b4e15f8b3f02a6f5cf9f0400b82e1bd493c95e20df22ca41a50383f"
+      "quoteSha256": "a2912cc0f21ce7da95ab77607d84a5e76e6205d0a6aded55c49b1a281e8b83bd"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "The v2 issue states nothing is decided unless explicitly stated and that its contents are ideas, trade-offs and open questions.",
+      "text": "The v2 issue is an early study and nothing is decided unless explicitly stated.",
       "check": "page",
       "source": "https://github.com/microcks/microcks/issues/2412",
-      "quote": "Nothing is decided unless explicitly stated : these are ideas, trade-offs and open questions, grouped by theme.",
+      "quote": "What follows is the state of an early study. Nothing is decided unless explicitly stated : these are ideas, trade-offs and open questions, grouped by theme.",
       "sourceId": "src-1",
-      "quoteSha256": "2ecaf1ad60f62607501522f24e02db61900afbb7e2b6c1d508a8103a0ddb0ae3"
+      "quoteSha256": "1f9da6b40095b1cf6eff82661a3a3b1947daf5f48d8ac7c6d7bbb5e2321041b3"
     },
     {
       "id": "c3",
@@ -62,15 +62,35 @@
     {
       "id": "c4",
       "label": "FACT",
-      "text": "Microcks turns OpenAPI, AsyncAPI, gRPC protobuf, GraphQL schema, Postman collections and SoapUI projects into live mocks in seconds.",
+      "text": "The issue states MongoDB 4.4, used in the compose files, and also 5.0 and 6.0 are end-of-life.",
       "check": "page",
-      "source": "https://github.com/microcks/microcks",
-      "quote": "Microcks is a platform for turning your API and microservices assets - OpenAPI specs , AsyncAPI specs , gRPC protobuf , GraphQL schema , Postman collections , SoapUI projects - into live mocks in seconds.",
-      "sourceId": "src-2",
-      "quoteSha256": "7208f04cae4508a11518d4b9f419e19c566665498ccee185a724e27c29a21713"
+      "source": "https://github.com/microcks/microcks/issues/2412",
+      "quote": "MongoDB 4.4 (used in our compose files) is end-of-life; 5.0 and 6.0 as well.",
+      "sourceId": "src-1",
+      "quoteSha256": "93369fe962980393ddd97990c6f2bfa67d7d4b2edfc158771e76cb5bed1d43a7"
     },
     {
       "id": "c5",
+      "label": "FACT",
+      "text": "One motivation for Quarkus is that Spring Boot feels heavy and OpenTelemetry was painful to set up during the Spring Boot 4 migration, while the async minion already runs on Quarkus.",
+      "check": "page",
+      "source": "https://github.com/microcks/microcks/issues/2412",
+      "quote": "Spring Boot feels heavy, OpenTelemetry was painful to set up during the Spring Boot 4 migration, the async minion already runs on Quarkus",
+      "sourceId": "src-1",
+      "quoteSha256": "e58890d0ef741a5ec33faf8e7c0d2b45c5ccab8b7d16e8f3905f3c6f3fbb5611"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Microcks is described as the open source, cloud native tool for API Mocking and Testing.",
+      "check": "page",
+      "source": "https://github.com/microcks/microcks",
+      "quote": "The open source, cloud native tool for API Mocking and Testing.",
+      "sourceId": "src-2",
+      "quoteSha256": "e78cd35bd49c64e27bb43d6e10a5129c3c0b47347b874b46d17e88457bff73ef"
+    },
+    {
+      "id": "c7",
       "label": "FACT",
       "text": "Microcks is a Cloud Native Computing Foundation incubating project.",
       "check": "page",
@@ -80,88 +100,66 @@
       "quoteSha256": "8a74f409f3ec45b329dcbafc4f20e6a27948c5aad4fc35a3e3fc9691e001023d"
     },
     {
-      "id": "c6",
-      "label": "FACT",
-      "text": "The repository page lists the current development version as 1.16.1-SNAPSHOT.",
-      "check": "page",
-      "source": "https://github.com/microcks/microcks",
-      "quote": "The current development version is 1.16.1-SNAPSHOT .",
-      "sourceId": "src-2",
-      "quoteSha256": "fd23b66183cd77c7d77eab6141010d5318e3fb7aea8cf41127d8a0b9e56fac82"
-    },
-    {
-      "id": "c7",
-      "label": "FACT",
-      "text": "microcks/microcks has 18 raw commits in the last 30 days, 11 of them real work, and its latest real commit is 6546fe9 on 2026-11-12.",
-      "check": "page",
-      "source": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T04:01:31.024Z",
-      "sourceId": "src-7"
-    },
-    {
       "id": "c8",
       "label": "FACT",
-      "text": "The v2 issue says a parallel rewrite without touching 1.x code has been started as a Quarkus feasibility study.",
+      "text": "The releases page lists 1.16.0 as Latest.",
       "check": "page",
-      "source": "https://github.com/microcks/microcks/issues/2412",
-      "quote": "A parallel rewrite (without touching the 1.x code) has been started as a feasibility study: Quarkus with Panache MongoDB, CDI events, JAX-RS controllers",
-      "sourceId": "src-1",
-      "quoteSha256": "2b8ba1f7fe489ede5bf8d4ff8ec7565d68455780a5693b3621f73bb00ba240c3"
+      "source": "https://github.com/microcks/microcks/releases",
+      "quote": "1.16.0 1.16.0 Latest Latest",
+      "sourceId": "src-3",
+      "quoteSha256": "bb0173b75f267ce9386610c507e1e739f3c904ad4236260c8ca0417c9924bee3"
     },
     {
       "id": "c9",
       "label": "FACT",
-      "text": "The v2 issue says MongoDB 4.4 used in compose files is end-of-life, as are 5.0 and 6.0.",
+      "text": "microcks/microcks has 18 raw commits in the last 30 days, 11 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "page",
-      "source": "https://github.com/microcks/microcks/issues/2412",
-      "quote": "MongoDB 4.4 (used in our compose files) is end-of-life; 5.0 and 6.0 as well.",
-      "sourceId": "src-1",
-      "quoteSha256": "93369fe962980393ddd97990c6f2bfa67d7d4b2edfc158771e76cb5bed1d43a7"
+      "source": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T07:09:06.483Z",
+      "sourceId": "src-7"
     },
     {
       "id": "c10",
-      "label": "DERIVED",
-      "text": "Microcks v2 is not yet a decided roadmap.",
+      "label": "FACT",
+      "text": "Its latest real commit is 6546fe9, on 2026-11-12.",
       "check": "page",
-      "inputs": [
-        "c2"
-      ],
-      "math": "No calculation: c2 explicitly states nothing is decided unless explicitly stated, so the derived status follows directly from that wording."
+      "source": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T07:09:06.483Z",
+      "sourceId": "src-7"
     },
     {
       "id": "c11",
       "label": "UNKNOWN",
-      "text": "Whether python3 self_test.py passes for tools/microcks-v2-kickoff, and what GOAL.md, ART or a tool commit contain, is unknown from the supplied pages.",
+      "text": "Whether the existing tools/microcks-v2-kickoff artifact passes its current self_test.py from its folder is not shown in the pages provided.",
       "check": "page",
-      "missing": "The tool folder contents, GOAL.md and ART text, the exact self_test.py command output, and a commit record showing the tool was shipped."
+      "missing": "The exact self_test.py file, its folder, the exact command used to run it, and the exact output"
     },
     {
       "id": "c12",
       "label": "UNKNOWN",
-      "text": "The CNCF position on MongoDB SSPL, the MongoDB target version, and the Quarkus feasibility outcome are unknown from the supplied pages.",
+      "text": "Whether Microcks v2 has a decided scope, target date, or implementation roadmap is not shown in the pages provided.",
       "check": "page",
-      "missing": "A CNCF confirmation, a stated target MongoDB version with AVX and embedded-database decisions, and published feasibility-study results."
+      "missing": "A later maintainer statement explicitly deciding v2 scope or dates beyond the early-study issue"
     }
   ],
   "counts": {
-    "fact": 11,
-    "derived": 1,
+    "fact": 12,
+    "derived": 0,
     "unknown": 2
   },
   "risks": [
-    "Nothing is decided in the v2 study unless explicitly stated, so treating listed ideas as commitments would be wrong.",
-    "MongoDB 4.4 used in compose files is end-of-life and 5.0 and 6.0 as well; target version, AVX CPU requirement and embedded-database options for the Uber distribution remain open.",
-    "MongoDB SSPL license is not OSI-approved and the CNCF position is stated as to be confirmed, not settled.",
-    "Replacing Spring Boot with Quarkus has strong coupling in servlet-based mock processing, Mongo persistence and security, even though a parallel feasibility study has started.",
-    "No performance or compatibility claim without evidence is a stated guiding principle, so unproven size or performance claims should not be assumed."
+    "MongoDB 4.4 is end-of-life and an upgrade is needed, with version, AVX, embedded-database and upgrade-note questions still open",
+    "MongoDB's SSPL licence and the CNCF position are described as not settled by the project's own decision",
+    "Moving from Spring Boot to Quarkus is described as strongly coupled in servlet-based mock processing, Mongo persistence and security",
+    "Backward compatibility for the CLI is a stated concern, and new capabilities are to remain opt-in to preserve deterministic stateless mocks",
+    "The issue says no performance or compatibility claim should be made without evidence"
   ],
   "unknowns": [
-    "Whether python3 self_test.py passes for tools/microcks-v2-kickoff, and what GOAL.md, ART or a tool commit contain, is unknown from the supplied pages.: The tool folder contents, GOAL.md and ART text, the exact self_test.py command output, and a commit record showing the tool was shipped.",
-    "The CNCF position on MongoDB SSPL, the MongoDB target version, and the Quarkus feasibility outcome are unknown from the supplied pages.: A CNCF confirmation, a stated target MongoDB version with AVX and embedded-database decisions, and published feasibility-study results."
+    "Whether the existing tools/microcks-v2-kickoff artifact passes its current self_test.py from its folder is not shown in the pages provided.: The exact self_test.py file, its folder, the exact command used to run it, and the exact output",
+    "Whether Microcks v2 has a decided scope, target date, or implementation roadmap is not shown in the pages provided.: A later maintainer statement explicitly deciding v2 scope or dates beyond the early-study issue"
   ],
   "wouldChangeMind": [
-    "A supplied record showing the exact self_test.py command and passing output for tools/microcks-v2-kickoff, plus updated GOAL.md and ART contents.",
-    "An explicit v2 decision or roadmap update in issue #2412 stating chosen MongoDB version, SSPL/CNCF position, or Quarkus direction.",
-    "Published Quarkus feasibility results with measured startup, memory or native-build evidence, as the issue requires evidence for performance claims."
+    "A maintainer update explicitly deciding the v2 scope or roadmap in issue #2412",
+    "Evidence that the Quarkus parallel rewrite has become the decided v2 implementation path",
+    "The recorded exact self_test.py command and output for microcks-v2-kickoff showing a passing or failing result"
   ],
   "sources": [
     {
@@ -171,12 +169,12 @@
       "url": "https://github.com/microcks/microcks/issues/2412",
       "finalUrl": "https://github.com/microcks/microcks/issues/2412",
       "status": 200,
-      "fetchedAt": "2026-11-24T04:01:28.455Z",
+      "fetchedAt": "2026-11-24T07:09:04.972Z",
       "extractor": "page-text-v1",
       "sha256": "508d31282ca0aeb306525c2d6808712a509a70f0115cfd82f943fdac033f746b",
-      "bytes": 731866,
-      "quote": "Microcks v2: kick-off of the discussion and state of the thinking #2412",
-      "quoteSha256": "761acdb43b4e15f8b3f02a6f5cf9f0400b82e1bd493c95e20df22ca41a50383f"
+      "bytes": 731864,
+      "quote": "lbroudoux opened on Nov 3, 2026",
+      "quoteSha256": "a2912cc0f21ce7da95ab77607d84a5e76e6205d0a6aded55c49b1a281e8b83bd"
     },
     {
       "id": "src-2",
@@ -185,47 +183,75 @@
       "url": "https://github.com/microcks/microcks",
       "finalUrl": "https://github.com/microcks/microcks",
       "status": 200,
-      "fetchedAt": "2026-11-24T04:01:26.016Z",
+      "fetchedAt": "2026-11-24T07:09:04.370Z",
       "extractor": "page-text-v1",
       "sha256": "4dd6582c85427e3aace0ecab36086fc0478c15b5bc999a2055dc66ddc6c82c62",
-      "bytes": 378966,
-      "quote": "Microcks is a platform for turning your API and microservices assets - OpenAPI specs , AsyncAPI specs , gRPC protobuf , GraphQL schema , Postman collections , SoapUI projects - into live mocks in seconds.",
-      "quoteSha256": "7208f04cae4508a11518d4b9f419e19c566665498ccee185a724e27c29a21713"
+      "bytes": 378960,
+      "quote": "The open source, cloud native tool for API Mocking and Testing.",
+      "quoteSha256": "e78cd35bd49c64e27bb43d6e10a5129c3c0b47347b874b46d17e88457bff73ef"
     },
     {
-      "id": "src-4",
+      "id": "src-3",
       "type": "url",
       "title": "Releases · microcks/microcks · GitHub",
       "url": "https://github.com/microcks/microcks/releases",
       "finalUrl": "https://github.com/microcks/microcks/releases",
       "status": 200,
-      "fetchedAt": "2026-11-24T04:01:31.024Z",
+      "fetchedAt": "2026-11-24T07:09:06.483Z",
       "extractor": "page-text-v1",
       "sha256": "e416254ea1f218a71c7ca3571bb19dbddcc09ec0f8437e3e2e55d254ac11b587",
-      "bytes": 1010107,
+      "bytes": 1010101,
+      "quote": "1.16.0 1.16.0 Latest Latest",
+      "quoteSha256": "bb0173b75f267ce9386610c507e1e739f3c904ad4236260c8ca0417c9924bee3"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "GitHub - microcks/hub.microcks.io: Public Hub for community Microcks mocks and tests · GitHub",
+      "url": "https://github.com/microcks/hub.microcks.io",
+      "finalUrl": "https://github.com/microcks/hub.microcks.io",
+      "status": 200,
+      "fetchedAt": "2026-11-24T07:09:04.547Z",
+      "extractor": "page-text-v1",
+      "sha256": "680746d858e1cdb6df464be3013210416bb31f0873e7a9eb0e2a36593d38957f",
+      "bytes": 334758,
+      "quote": "package.json package.json sonar-project.properties sonar-project.properties View all files Repository files navigation hub.microcks.io Public Hub for community Microcks mocks and tests.",
+      "quoteSha256": "ba111214a36068113e7de3cc856daa574ba53161d283ccf174b59992e5708b49"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Issues · microcks/microcks · GitHub",
+      "url": "https://github.com/microcks/microcks/issues",
+      "finalUrl": "https://github.com/microcks/microcks/issues",
+      "status": 200,
+      "fetchedAt": "2026-11-24T07:09:04.387Z",
+      "extractor": "page-text-v1",
+      "sha256": "b5037c8387d40d270c3751d1692ac9635e059ae99939f4363657626dd1d73c49",
+      "bytes": 344309,
       "quote": "You switched accounts on another tab or window.",
       "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
     },
     {
       "id": "src-6",
       "type": "url",
-      "title": "Issues · microcks/microcks · GitHub",
-      "url": "https://github.com/microcks/microcks/issues",
-      "finalUrl": "https://github.com/microcks/microcks/issues",
+      "title": "Microcks · GitHub",
+      "url": "https://github.com/microcks",
+      "finalUrl": "https://github.com/microcks",
       "status": 200,
-      "fetchedAt": "2026-11-24T04:01:26.344Z",
+      "fetchedAt": "2026-11-24T07:09:04.467Z",
       "extractor": "page-text-v1",
-      "sha256": "b5037c8387d40d270c3751d1692ac9635e059ae99939f4363657626dd1d73c49",
-      "bytes": 344310,
-      "quote": "You switched accounts on another tab or window.",
-      "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
+      "sha256": "e9ecce4d14d96a77a3d329082f7d8dbe918bdbe43c725c897f7133b52855b18a",
+      "bytes": 292576,
+      "quote": "The most important aspect is testing your APIs consistently using OpenAPI , AsyncAPI , SoapUI , and Postman Collections across web, gRPC , WebSockets , GraphQL , Kafka , NATS , RabbitMQ , MQTT , Google PubSub , Amazon SQS/SNS and other popular patterns and protocols of your API lifecycle.",
+      "quoteSha256": "dbbc140104857e97e3fcf0a6cd91df69ef7662fae390d9931e62d4094a275785"
     },
     {
       "id": "src-7",
       "type": "api",
       "title": "GitHub commits of microcks/microcks",
-      "url": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T04:01:31.024Z",
-      "fetchedAt": "2026-11-24T04:01:23.045Z",
+      "url": "https://api.github.com/repos/microcks/microcks/commits?per_page=50&since=2026-10-25T07:09:06.483Z",
+      "fetchedAt": "2026-11-24T07:09:00.820Z",
       "extractor": "proof-read-v1",
       "responseSha256": "38ac4163244a1b57bba4cb45efd31fb406add335544bdb0a61d1ea546bc7f961"
     }
