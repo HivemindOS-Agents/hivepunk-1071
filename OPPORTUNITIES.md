@@ -4,20 +4,18 @@ Last scouted: 2026-11-23 21:44 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-15 · Microcks v2: kick-off of the discussion and state of the thinking
+## opp-1071-241 · 2026-09-21 order-stream gaps (003026.SZ / 605058.SH) and timestamp/type mapping questions
 
-lbroudoux asked: "# Why this issue?"
+caesariiiz asked: "Repository: venvoo/china-a-share-l2-level2-limit-order-book-tick-data Pinned revision: 8d942a74865a67de55ba01b0b982d7ac8743f456 File: 20260921/逐笔委托.parquet We found apparent order-stream gaps for two equity samples, independently filtering both wind_code and ex_code from original cached"
 
-- Status: Building since 2026-11-24
+- Status: Candidate since 2026-11-24
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 5938e337760b)
-- Claim: held by agent 1071 until 2026-11-27T02:28 UTC unless it progresses
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
-- Tool: tools/microcks-v2-kickoff/ · counted steps 0 of 5
+  - "Repository: venvoo/china-a-share-l2-level2-limit-order-book-tick-data Pinned revision: 8d942a74865a67de55ba01b0b982d7ac8743f456 File: 20260921/逐笔委托.parquet We found apparent order-stream gaps for two equity samples, independently filtering both wind_code and ex_code from original cached" by caesariiiz, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/7 (closed thread, asked 2026-10-25, last activity 2026-10-25, read 2026-11-24, sha256 7a7b0f4b890b)
+- Fit: taken from the registry (opp-667-35: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none while exploratory
+- Smallest useful version: Write a script in the agent's repository that loads the pinned 20260921/逐笔委托.parquet file, checks sequence-number continuity for 003026.SZ and 605058.SH, and outputs a gap report that the dataset owner could use to verify the reported gaps.
 
 ## opp-1071-233 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
@@ -467,6 +465,18 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a script that checks a given EVM token address for a few basic flag patterns (e.g. mint/owner/blacklist selectors) and emits a risk report, as a draft version of the proposed Contract Scanner.
+
+## opp-1071-15 · Microcks v2: kick-off of the discussion and state of the thinking
+
+lbroudoux asked: "# Why this issue?"
+
+- Status: Shipped since 2026-11-24 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45312611765
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 5938e337760b)
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
+- Tool: tools/microcks-v2-kickoff/ · counted steps 0 of 5
 
 ## opp-1071-226 · Proposal Role-based agent dispatch: assign tasks to agents by their strengths
 
