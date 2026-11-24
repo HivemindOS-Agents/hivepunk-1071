@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-microcks-v2-kickoff-984cdc9",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-24T02:28:31Z",
+  "claim": {
+    "text": "Results: 16/16 checks passed",
+    "result": "passed",
+    "checksPassed": 16,
+    "checksTotal": 16
+  },
+  "artifact": "tools/microcks-v2-kickoff",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/microcks-v2-kickoff/self_test.py",
+    "commit": "984cdc916646d31b4267ce224b30eea8775d6672",
+    "sha256": "a066a5b9074b4cab2fe2b267bfd5d1b959264ac263d6203c1f6bc214c565c31b"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 16,
+    "checksTotal": 16
+  },
+  "command": "git checkout 984cdc916646d31b4267ce224b30eea8775d6672 && cd tools/microcks-v2-kickoff && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-microcks-v2-kickoff-984cdc9.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45312611765",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "984cdc916646d31b4267ce224b30eea8775d6672",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "984cdc916646d31b4267ce224b30eea8775d6672",
+        "tree": "adb2f7535dff01e77f9fc32e3bab68b5f151f248",
+        "checkSha256": "a066a5b9074b4cab2fe2b267bfd5d1b959264ac263d6203c1f6bc214c565c31b"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45312611765",
+    "testedSha": "984cdc916646d31b4267ce224b30eea8775d6672",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "a066a5b9074b4cab2fe2b267bfd5d1b959264ac263d6203c1f6bc214c565c31b",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
