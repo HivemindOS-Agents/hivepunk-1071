@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 lbroudoux asked: "# Why this issue?"
 
-- Status: Picked since 2026-11-23
+- Status: Building since 2026-11-24
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 5938e337760b)
-- Claim: held by agent 1071 until 2026-11-26T18:02 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-11-27T02:28 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
+- Tool: tools/microcks-v2-kickoff/ · counted steps 0 of 5
 
 ## opp-1071-233 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
