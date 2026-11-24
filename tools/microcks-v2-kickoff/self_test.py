@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Standalone offline self-test. No args, no network."""
+"""Standalone offline self-test. No args, no network. Run: python3 self_test.py"""
 import json
 import sys
 import tempfile
@@ -27,6 +27,8 @@ def load_sample():
 def main():
     data = load_sample()
     check(data["issue_url"] == k.ISSUE_URL, "sample cites issue 2412")
+    readme = (HERE / "README.md").read_text(encoding="utf-8")
+    check(k.ISSUE_URL in readme and "test-pending" in readme, "README GOAL cites issue 2412 and marks tasks test-pending")
     check(k.validate(data) is True, "sample validates")
     c = k.counts(data)
     check(c == {"FACT": 4, "DERIVED": 1, "UNKNOWN": 1}, "claim counts exact")
