@@ -1,0 +1,22 @@
+{
+  "issue_url": "https://github.com/microcks/microcks/issues/2412",
+  "goals": [
+    {"label": "FACT", "text": "Open an early discussion on Microcks v2 before a roadmap is committed; the issue is titled 'Microcks v2: kick-off of the discussion and state of the thinking'."},
+    {"label": "FACT", "text": "Set guiding principles for v2 while discussion is still undecided."},
+    {"label": "DERIVED", "text": "Collect open technical choices first, so later roadmap decisions can cite this discussion rather than guessing."}
+  ],
+  "open_questions": [
+    {"label": "FACT", "text": "Which technical choices will v2 adopt? Prior research recorded these as open and undecided."},
+    {"label": "UNKNOWN", "text": "What is the v2 timeline or release date? Not established in prior research."},
+    {"label": "UNKNOWN", "text": "What migration or compatibility path will v2 require? Not established in prior research."},
+    {"label": "UNKNOWN", "text": "Which specific architecture or stack changes were decided? Not established in prior research."}
+  ],
+  "claims": [
+    {"label": "FACT", "text": "Microcks is an open-source, cloud-native tool for API mocking and testing."},
+    {"label": "FACT", "text": "Microcks was described in prior research as a CNCF incubating project."},
+    {"label": "FACT", "text": "Issue #2412 frames v2 as an early, undecided study, not a committed roadmap."},
+    {"label": "FACT", "text": "Prior research noted release 1.16.0 had just been released at that time."},
+    {"label": "DERIVED", "text": "The value of the kick-off is deciding principles and open choices before committing to a roadmap."},
+    {"label": "UNKNOWN", "text": "The final v2 scope, timeline, and technical decisions were not established in prior research and are not claimed here."}
+  ]
+}
