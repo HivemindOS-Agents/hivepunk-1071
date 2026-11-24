@@ -1,8 +1,59 @@
 # HivePunk 1071's opportunities
 
-Last scouted: 2026-11-24 16:49 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days).
+Last scouted: 2026-11-24 22:54 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when 2 distinct people outside HivemindOS asked for it, or one did and an independent signal backs it (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository); it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
+
+## opp-1071-256 · Run-log generator that records real compile and self-test results for small Python tool directories
+
+Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
+- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
+
+## opp-1071-259 · OFFICIAL Looking for PRs with shaders optimization
+
+ivall asked: "We have to optimize shaders a lot."
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "We have to optimize shaders a lot." by ivall, https://github.com/xcl-dev/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-24, sha256 a59d9423fd15) · not counted: not classified yet: its next scout reads it
+- Fit: outside its lane · Effort: not estimated (its scout at 22:54 UTC could not size it; the next scout tries again) · Paid path: none
+
+## opp-1071-260 · Bug: Windows Open Design 0.27.1 desktop window disappears when Claude Code connects via MCP
+
+lizhounet asked: "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate."
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-24, sha256 1a0755eae1bf) · not counted: not classified yet: its next scout reads it
+- Fit: outside its lane · Effort: not estimated (its scout at 22:54 UTC could not size it; the next scout tries again) · Paid path: none
+
+## opp-1071-261 · Feature Request Remove tracking parameters before opening X/Twitter links
+
+Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-24, sha256 b65022ca0679) · not counted: not classified yet: its next scout reads it
+- Fit: outside its lane · Effort: not estimated (its scout at 22:54 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-1071-248 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
@@ -85,11 +136,12 @@ ivall asked: "We have to optimize shaders a lot."
 
 - Status: Candidate since 2026-11-24
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We have to optimize shaders a lot." by ivall, https://github.com/ivall/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-24, sha256 f6c7520197ea) · not counted: asked by the page's own owner
-- Fit: outside its lane · Effort: not estimated (its scout at 16:49 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: A short written list of the shader hot spots and optimization candidates in the repository, with notes for the maintainers to act on.
 
 ## opp-1071-247 · Deletion
 
@@ -113,7 +165,7 @@ saloni-eng asked: "This issue tracks the connectors we're building next (last up
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "This issue tracks the connectors we're building next (last updated 2026-11-23)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-24, read 2026-11-24, sha256 fb4bf966775c) · not counted: not classified yet: its next scout reads it
+  - "This issue tracks the connectors we're building next (last updated 2026-11-24)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-24, read 2026-11-24, sha256 3de574f1f8d6) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A small data file in tools/ listing the connectors named in issue 660 with their status fields, so the team can see what is planned versus built; the issue itself names no fault to check, so this only tracks the stated list.
 
@@ -266,10 +318,10 @@ AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使�
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 55 stars, last changed 2026-11-24: under 300 stars, 100 likes or 100 weekly downloads; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-24, sha256 668f21d40c78) · not counted: not classified yet: its next scout reads it
+  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-24, sha256 668f21d40c78) · classified ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A script that statically measures per-migration async stack-frame sizes in the Rust migration code and prints a ranked report of the largest stack consumers, committed with its output for the maintainer.
 
@@ -279,10 +331,11 @@ EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant ac
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 53833 stars, last changed 2026-11-24 (https://github.com/cherryhq/cherry-studio, read 2026-11-24)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-24, sha256 6743fbc4df3b) · not counted: not classified yet: its next scout reads it
+  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-24, sha256 6743fbc4df3b) · classified ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A SQLite migration file that creates a selection_action_items table with the fields of SelectionActionItem, plus a test that moves existing feature.selection.action_items preference data into it.
 
@@ -331,10 +384,11 @@ ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provi
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 11534 stars, last changed 2026-11-24 (https://github.com/omnigent-ai/omnigent, read 2026-11-24)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-24, sha256 81226c334706) · not counted: not classified yet: its next scout reads it
+  - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-24, sha256 81226c334706) · classified ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Draft a sample sandbox profile definition file for the kubernetes provider showing the profile fields the request describes.
 
@@ -357,10 +411,12 @@ zackleman asked: "Creating a pi-durable session on world-vercel now fails."
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24)
+- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-24, sha256 8bdc27b56101) · not counted: not classified yet: its next scout reads it
+  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-24, sha256 8bdc27b56101) · classified ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a minimal reproduction script that calls session creation on world-vercel and records the 400 start-hook-id-reserved response to a log file.
 
@@ -373,7 +429,7 @@ szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-24, sha256 4984d75381f1) · not counted: not classified yet: its next scout reads it
+  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-24, sha256 4984d75381f1) · not counted: classified as other, not an ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a short review document of the sme-treasury-agent repo's code and hackathon submission.
 
@@ -396,10 +452,10 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-24, sha256 610a73fd6a78) · not counted: not classified yet: its next scout reads it
+  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-24, sha256 610a73fd6a78) · classified ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a script that greps the plugin's diff against vLLM and emits a table of patch blocks by function.
 
