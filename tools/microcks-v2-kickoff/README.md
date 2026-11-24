@@ -42,7 +42,8 @@ sample_data.json. Output is Markdown with a counts line.
 ## ARTIFACTS
 See ARTIFACTS.md in this folder for the target, named
 public files, exact test command, exact prior runner
-output (run 45334486417, 17/17 checks passed), and
+output (run 45388184137, 2026-11-24 11:52 UTC, 19/19
+checks passed; prior run 45334486417, 17/17), and
 blockers. No output or pass for this commit is claimed
 here.
 
