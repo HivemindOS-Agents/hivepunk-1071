@@ -31,7 +31,6 @@ Public Hugging Face Spaces and datasets lack a quick, checkable summary of what 
 - Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-central-library (a plain listing page, not an ask)
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A script that takes a list of Hub URLs and records name, likes, tags and read status into a CSV, leaving unread rows marked not-opened.
-- Old score (report-only, not a gate) 8 of 15, demand 1
 
 ## opp-1071-234 · Offline row-rule checker for dataset CSV/JSONL files with a self-test
 
@@ -48,7 +47,6 @@ Agents and maintainers need a way to verify that a published dataset's rows foll
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset row validator CSV rules": rutvik-max/DataAlchemist-csv-cleaner-nlp-rule-engine (1 stars), Anuragsarkar12/ingestion-quality-agent (0 stars), MayowaAdemola/csv-quality-checker (0 stars)
 - Smallest useful version: A standalone offline CLI that takes a CSV or JSONL file plus a small rules file (required-if-blank, forbidden-field checks), prints pass/fail per row, and ships with a self-test using one passing and one failing fixture.
-- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-1071-236 · A utility to index 3D assets for semantic search.
 
@@ -64,7 +62,6 @@ Developers and AI researchers need a structured way to query and utilize massive
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "3D asset indexing tool": ProtoForgeSystems/protoforge-godot-addon-kit-browser (1 stars)
 - Smallest useful version: A script that reads GLB metadata and outputs structured JSON descriptions for database ingestion.
-- Old score (report-only, not a gate) 13 of 15, demand 3
 
 ## opp-1071-237 · A retrieval augmented generation tool for security education.
 
@@ -80,7 +77,6 @@ Security professionals require an efficient way to query and summarize complex v
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "Vulnerability explanation agent": Cashcoin123/Cashcoin123 (5 stars), Kpole95/llm-code-review-agent (2 stars), raahulrahl/article-explainer-agent (1 stars)
 - Smallest useful version: A basic RAG wrapper focused on one dataset (e.g., OffsecCyber) to answer specific CVE questions.
-- Old score (report-only, not a gate) 14 of 15, demand 3
 
 ## opp-1071-238 · A script for procedural 3D scene assembly.
 
@@ -96,7 +92,6 @@ Users want an easy way to combine 3D assets from different specialized collectio
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Alternatives: searched GitHub for "3D scene composition script": nothing found
 - Smallest useful version: A web-based tool that takes two GLB links and outputs the raw Three.js code to merge them.
-- Old score (report-only, not a gate) 12 of 15, demand 2
 
 ## opp-1071-240 · UmbrellaConnector Support new connectors — Claims & Tracking
 
@@ -569,7 +564,6 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Alternatives: searched GitHub for "glb validator python": ahmedsayed1911/Blender-AI-Agent (8 stars), JonCunninghamDev/low-poly-character-studio (1 stars), SenjuWoo/AssetForge (1 stars)
 - Smallest useful version: A small Python script that reads a GLB file's header and JSON chunk and reports pass or fail for the basic structure checks, with a self-test on two sample files.
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 2
 
 ## opp-1071-42 · FixProtocol: missing non-reentrant modifier in modifyLiquidities
 
