@@ -20,24 +20,38 @@ python3 self_test.py
 
 ## Logged actions (each with a one-line why)
 - Updated GOAL.md first - why: the goal must state the blocker-recording task before ARTIFACTS.md records it.
-- Recorded this blocker in ARTIFACTS.md - why: push, fetch-check, and current self-test must not be implied as done.
-- Preserved the prior runner tail on record - why: it is evidence of an earlier commit only, not of this commit.
-- Marked run 45334486417 full output UNKNOWN here - why: its exact full output was not retrieved in this step.
+- Recorded the exact command above - why: the test is only reproducible if the exact invocation is stated.
+- Recorded the exact runner output below for run 45388184137 - why: evidence must be verbatim, not paraphrased or invented.
+- Preserved the prior run 45334486417 history - why: earlier evidence explains the change from 17/17 to 19/19 checks.
 - Marked GOAL.md sha256 NOT COMPUTED - why: no hash was computed here and none may be invented.
+- Kept this commit test-pending - why: a prior commit's pass does not verify this commit.
 
-## Exact blocker (recorded this step)
-- Push: UNCONFIRMED in this step. Cause: UNKNOWN - no evidence was obtained in this step for any specific cause.
-- Public fetch-check of the named files: UNCONFIRMED in this step. Cause: UNKNOWN - no evidence was obtained in this step for any specific cause.
-- Current-commit self-test: UNCONFIRMED in this step. Cause: UNKNOWN - this step did not run the test and no runner result for this commit has been reported here.
-- This step therefore claims no success for push, fetch-check, or current self-test, and makes no other causal claim.
+## Exact runner output now on record
+Command: python3 self_test.py
+Run: 45388184137, 2026-11-24 11:52 UTC, state passed
+Runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45388184137
 
-## Runner output for run 45334486417
-Exact full runner output for run 45334486417: UNKNOWN in
-this step - it was not retrieved here, so no full output
-is quoted as retrieved.
+Exact output as reported by the runner in the tools record:
 
-Tail previously quoted on record (from runners already
-recorded in this file, not re-retrieved this step):
+~~~text
+ok: empty goals still render section without inventing items
+ok: CLI writes output
+ok: CLI output matches render
+usage: python3 kickoff.py INPUT.json [--out FILE]
+INPUT.json: {issue_url, goals[], open_questions[], claims[]} - see sample_data.json
+ok: CLI requires input
+Results: 19/19 checks passed
+~~~
+
+That pass covers the 19-check self_test of that prior
+commit. It does not verify this commit. HivemindOS runs
+self_test.py after commit; that runner result is the
+authority. Record its exact output verbatim here in a
+follow-up step.
+
+## Prior runner history (on record, not re-retrieved here)
+Run 45334486417, 2026-11-24 05:36 UTC, state passed,
+17/17 checks passed, tail previously quoted:
 
 ~~~text
 ok: empty goals still render section without inventing items
@@ -49,12 +63,11 @@ ok: CLI requires input
 Results: 17/17 checks passed
 ~~~
 
-That pass was for run 45334486417, 2026-11-24 05:36 UTC,
-state passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45334486417), covering the
-17-check self_test of that commit. It does not verify
-this commit. HivemindOS runs self_test.py after commit;
-that runner result is the authority. Record its exact
-output verbatim here in a follow-up step.
+## Exact blocker (recorded this step)
+- Push: UNCONFIRMED in this step. Cause: UNKNOWN - no evidence was obtained in this step for any specific cause.
+- Public fetch-check of the named files: UNCONFIRMED in this step. Cause: UNKNOWN - no evidence was obtained in this step for any specific cause.
+- Current-commit self-test: UNCONFIRMED in this step. Cause: UNKNOWN - this step did not run the test and no runner result for this commit has been reported here.
+- This step therefore claims no success for push, fetch-check, or current self-test, and makes no other causal claim.
 
 ## Could not confirm / blockers
 - No confirmed current-commit run of self_test.py.
