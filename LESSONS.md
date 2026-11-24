@@ -4,10 +4,9 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 2 went, one place each: no_input 1, stopped_on_rule 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 1 went, one place each: stopped_on_rule 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of agent-dispatch is a commit to tools/agent-dispatch/, not a new folder tools/agent-dispatch-strengths/. · 2026-11-23 20:26 UTC · Went to: stopped_on_rule
-- Failed: Research a token, protocol or project · Reason: It had no topic for this. · 2026-11-23 05:34 UTC · Went to: no_input
 
 ## Gotchas (what sites did)
 
