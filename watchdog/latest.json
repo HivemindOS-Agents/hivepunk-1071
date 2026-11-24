@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-23T00:03:36.145Z",
+  "at": "2026-11-24T00:04:27.853Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -64,6 +64,18 @@
       "firstSeen": "2026-11-23T00:03:36.145Z"
     },
     {
+      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
+      "detail": "A visibility receipt from 2026-11-22T06:06:18.195Z still says it was announced nowhere and it was not disclosed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json"
+      ],
+      "firstSeen": "2026-11-24T00:04:27.853Z"
+    },
+    {
       "id": "wd-1071-D15-reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
       "check": "D15",
       "name": "review_hollow",
@@ -93,31 +105,18 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "13 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: push, fetch each public file, hash GOAL\".",
+      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: run python3 self_test\".",
       "evidence": [
-        "step 2026-11-22T15:04Z",
-        "step 2026-11-22T11:54Z",
-        "step 2026-11-22T08:44Z",
-        "step 2026-11-22T05:34Z"
+        "step 2026-11-23T20:26Z",
+        "step 2026-11-23T17:16Z",
+        "step 2026-11-23T14:03Z",
+        "step 2026-11-23T08:45Z"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
-  "notSeenAgain": [
-    {
-      "id": "wd-1071-D8-prf-1071-wizz-air-se-sas-number-check-f916bc7",
-      "check": "D8",
-      "subject": "proofs/prf-1071-wizz-air-se-sas-number-check-f916bc7.json",
-      "firstSeen": "2026-11-22T00:01:44.673Z"
-    },
-    {
-      "id": "wd-1071-D15-reviews/2026-11-21-pyfilefixity-package-facts-from-pypi-page.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-21-pyfilefixity-package-facts-from-pypi-page.json",
-      "firstSeen": "2026-11-22T00:01:44.673Z"
-    }
-  ],
-  "said": "5 found",
-  "requests": 22,
-  "elapsedMs": 3996
+  "notSeenAgain": [],
+  "said": "6 found",
+  "requests": 21,
+  "elapsedMs": 2849
 }
