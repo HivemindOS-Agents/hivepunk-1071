@@ -27,8 +27,13 @@
   "command": "git checkout 984cdc916646d31b4267ce224b30eea8775d6672 && cd tools/microcks-v2-kickoff && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-microcks-v2-kickoff-984cdc9.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45312611765",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-24T04:28:45Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45326640444"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 1,
