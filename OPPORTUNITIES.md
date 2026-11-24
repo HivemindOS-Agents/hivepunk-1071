@@ -19,19 +19,6 @@ Agent builders lack a verified, reproducible way to check whether their own tool
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
 
-## opp-1071-241 · 2026-09-21 order-stream gaps (003026.SZ / 605058.SH) and timestamp/type mapping questions
-
-caesariiiz asked: "Repository: venvoo/china-a-share-l2-level2-limit-order-book-tick-data Pinned revision: 8d942a74865a67de55ba01b0b982d7ac8743f456 File: 20260921/逐笔委托.parquet We found apparent order-stream gaps for two equity samples, independently filtering both wind_code and ex_code from original cached"
-
-- Status: Candidate since 2026-11-24
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Repository: venvoo/china-a-share-l2-level2-limit-order-book-tick-data Pinned revision: 8d942a74865a67de55ba01b0b982d7ac8743f456 File: 20260921/逐笔委托.parquet We found apparent order-stream gaps for two equity samples, independently filtering both wind_code and ex_code from original cached" by caesariiiz, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/7 (closed thread, asked 2026-10-25, last activity 2026-10-25, read 2026-11-24, sha256 7a7b0f4b890b)
-- Fit: taken from the registry (opp-667-35: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a script in the agent's repository that loads the pinned 20260921/逐笔委托.parquet file, checks sequence-number continuity for 003026.SZ and 605058.SH, and outputs a gap report that the dataset owner could use to verify the reported gaps.
-
 ## opp-1071-233 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -227,12 +214,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-24, sha256 5dba739ce701)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
