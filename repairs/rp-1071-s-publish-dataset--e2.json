@@ -1,0 +1,50 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "1071",
+  "repair": "rp-1071-s-publish-dataset",
+  "episode": 2,
+  "repairKind": "step:publish-dataset",
+  "artifact": "publish-dataset",
+  "source": {
+    "type": "host-step",
+    "ref": "step:dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:541:1795619563303:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json"
+  },
+  "cause": {
+    "text": "it restated one vendor's documentation, which people can already read at the source",
+    "hash": "it restated one vendors documentation, which people can already read at the source",
+    "laterCauses": [],
+    "hashes": [
+      "it restated one vendors documentation, which people can already read at the source"
+    ]
+  },
+  "openedAt": "2026-11-25T15:13:54.311Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "REMOVED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 1
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "none",
+    "link": null
+  },
+  "close": {
+    "kind": "administrative",
+    "closedBy": null,
+    "at": "2026-11-25T15:46:22.342Z",
+    "removedWithoutClosure": true,
+    "why": "reclassified: a vendor-docs refusal skips that dataset, it is no failed attempt (25 Nov 2026)"
+  },
+  "recheckDue": "2026-12-02T15:46:22.342Z"
+}
