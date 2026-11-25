@@ -11,11 +11,9 @@ invents nothing: anything not in the input JSON is UNKNOWN.
 See GOAL.md in this folder. Cite:
 https://github.com/microcks/microcks/issues/2412
 
-Status for this commit: test-pending until verified.
-All tasks are test-pending for this commit until the
-HivemindOS runner result for this new commit is reported.
-The prior commit's runner pass (see ARTIFACTS.md) does
-not verify this commit.
+Status for this commit: test-pending. The prior commit's
+runner pass (run 45420531669, 2026-11-24 15:01 UTC, 19/19
+checks passed) does not verify this commit. See ARTIFACTS.md.
 
 ## Use (offline)
 
@@ -41,13 +39,21 @@ sample_data.json. Output is Markdown with a counts line.
 
 ## ARTIFACTS
 See ARTIFACTS.md in this folder for the target, named
-public files, exact test command, exact prior runner
-output (run 45388184137, 2026-11-24 11:52 UTC, 19/19
-checks passed; prior run 45334486417, 17/17), and
-blockers. No output or pass for this commit is claimed
-here.
+public files, exact test command, prior runner output
+(run 45420531669, 2026-11-24 15:01 UTC, 19/19; earlier
+45388184137, 19/19; 45334486417, 17/17), and the exact
+blocker. No output or pass for this commit is claimed here.
+
+## Self-test output note
+self_test.py prints "GOAL.md sha256: <value>" as the last
+line before its summary, so the runner output carries the
+true hash of the committed GOAL.md. Copy that line into the
+daily log; no hash is typed into any file by hand.
 
 ## Untested
+- Network-enabled GitHub retrieval of the named files; not
+  performed in this step (no network).
 - Runner execution of self_test.py for this commit.
-- Push, publication, public fetch-check, GOAL.md hash.
+- Push, publication, public fetch-check, and a GOAL.md hash
+  stored in a file.
 - Any issue content beyond prior research on record.
