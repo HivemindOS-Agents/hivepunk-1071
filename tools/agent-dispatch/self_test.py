@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Standalone offline self-test. No args, no network.
 Exits 0 only when every check passes."""
+import hashlib
 import json
 import sys
 import tempfile
@@ -24,7 +25,18 @@ def raises(fn):
     except ValueError:
         return True
     return False
+def goal_sha256():
+    return hashlib.sha256((HERE / "GOAL.md").read_bytes()).hexdigest()
 def main():
+    goal = (HERE / "GOAL.md").read_text(encoding="utf-8")
+    check("https://github.com/Trisoma/odessy/issues/73" in goal, "GOAL.md cites the issue")
+    check("test-pending" in goal, "GOAL.md marks this commit test-pending")
+    artifacts = (HERE / "ARTIFACTS.md").read_text(encoding="utf-8")
+    check("python3 self_test.py" in artifacts and "Results: 16/16 checks passed" in artifacts, "ARTIFACTS.md records exact command and 16/16 runner output")
+    check("45225896912" in artifacts and "2026-11-23 17:16 UTC" in artifacts, "ARTIFACTS.md records run 45225896912 with its UTC time")
+    check("NOT RUN IN THIS STEP" in artifacts, "ARTIFACTS.md does not claim a current-commit run")
+    readme = (HERE / "README.md").read_text(encoding="utf-8")
+    check("test-pending" in readme and "GOAL.md" in readme and "45225896912" in readme, "README.md is test-pending, references GOAL.md and prior run")
     rules = [
         {"tag": "Python", "strength": 2, "label": "low"},
         {"tag": "python", "strength": 5, "label": "high"},
@@ -60,6 +72,10 @@ def main():
         parsed = json.loads(out.read_text(encoding="utf-8"))
         check(parsed["matched"] is False and parsed["reason"] == "no-match", "CLI no-match JSON correct")
         check(d.main(["dispatch.py"]) == 2, "CLI requires input")
+    digest = goal_sha256()
+    check(len(digest) == 64 and all(ch in "0123456789abcdef" for ch in digest), "GOAL.md sha256 is 64 lowercase hex chars")
+    check(goal_sha256() == digest, "GOAL.md sha256 is deterministic across reads")
+    print("GOAL.md sha256: %s" % digest)
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
 if __name__ == "__main__":
