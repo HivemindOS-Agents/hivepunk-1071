@@ -2,8 +2,14 @@
 
 opportunity: opp-1071-226
 
-## GOAL (updated first for agent-dispatch)
-Cite: https://github.com/Trisoma/odessy/issues/73
+## GOAL
+See GOAL.md in this folder. Cite:
+https://github.com/Trisoma/odessy/issues/73
+
+Status for this commit: test-pending. The prior commit's
+runner pass (run 45225896912, 2026-11-23 17:16 UTC, 16/16
+checks passed) does not verify this commit. See ARTIFACTS.md.
+A separate GOAL.md file is now shipped in this folder.
 
 Build tools/agent-dispatch: a Python tag-to-strength matcher
 with deterministic ties and explicit no-match handling.
@@ -12,17 +18,6 @@ return the highest-strength match; break strength ties by
 earliest rule position, then normalized tag. If nothing
 matches, return an explicit no-match object - never guess a
 strength, label, or rule. No network, no external systems.
-
-Status: code, this README, ARTIFACTS.md, and self_test.py
-are committed in this step. Runner execution for this
-commit, push, public fetch-check, separate GOAL.md file,
-and GOAL.md hash are blockers - see ARTIFACTS.md. No
-pass is claimed here.
-
-Note: a separate GOAL.md file is not shipped in this commit
-due to the 4-file limit; the GOAL text above is the
-committed GOAL content for this step. Owner to add GOAL.md
-and hash it.
 
 ## Use (offline)
 
@@ -54,13 +49,25 @@ are null.
 - Winner: highest strength, then earliest rule, then tag.
   Result is independent of tag order.
 
+## ARTIFACTS
+See ARTIFACTS.md in this folder for the target, named
+public files, exact test command, prior runner output
+(run 45225896912, 2026-11-23 17:16 UTC, 16/16), and the
+exact blocker. No output or pass for this commit is claimed
+here.
+
+## Self-test output note
+self_test.py prints "GOAL.md sha256: <value>" as the last
+line before its summary, so the runner output carries the
+true hash of the committed GOAL.md. Copy that line into the
+daily log; no hash is typed into any file by hand.
+
 ## Untested
-- Runner execution of self_test.py for this commit; the
-  runner result is the authority and no local pass is
-  claimed here.
+- Runner/local execution of self_test.py for this commit;
+  no pass is claimed here.
 - Push, publication, and public-URL fetch-check; none
   performed or claimed here.
-- Separate GOAL.md file and its sha256; not shipped/
-  computed here (4-file limit), owner to do.
-- Any real dispatch data, issue content, or external
-  system; none fetched, inferred, or run against.
+- A GOAL.md sha256 stored in a file; the value is printed
+  by the self-test at run time for the owner to log.
+- Any real dispatch data, issue content beyond the citation,
+  or external system; none fetched, inferred, or run against.
