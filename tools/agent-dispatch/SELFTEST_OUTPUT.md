@@ -3,20 +3,20 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **passed**
-- Ran: 2026-11-23T17:16:55Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912
-- Tested commit: 4144bd978f63adbc55184013825973833079cb6b
+- Ran: 2026-11-25T09:43:17Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45588014110
+- Tested commit: c7602831cbb4d47f6ae60e13e86f3ee413836f06
 - Verified by: runner
-- Check from: same-change
+- Check from: base
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-ok: result independent of tag order
-ok: CLI writes output
-ok: CLI no-match JSON correct
 usage: python3 dispatch.py INPUT.json [--out FILE]
 INPUT.json: {"tags": ["..."], "rules": [{"tag": "...", "strength": 1, "label": "..."}]}
 ok: CLI requires input
-Results: 16/16 checks passed
+ok: GOAL.md sha256 is 64 lowercase hex chars
+ok: GOAL.md sha256 is deterministic across reads
+GOAL.md sha256: ecb04afed903686d5d4d4c9f9c467f86f31b6e025d215895e46df64ba4d8aa12
+Results: 24/24 checks passed
 ~~~
