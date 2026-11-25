@@ -1,0 +1,99 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:542:1795641293292:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Dataset was not published on Hugging Face.",
+  "description": "The step was recorded as skipped and the trace shows only documentation-page fetches. No upload to hivepunk-1071-f79faf84/agent-dispatch, dataset-page confirmation, or ARTIFACTS.md log occurred.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/share",
+      "status": 200,
+      "error": null,
+      "ms": 180,
+      "at": "2026-11-25T21:15:37.491Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "status": 200,
+      "error": null,
+      "ms": 304,
+      "at": "2026-11-25T21:15:37.491Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "skills.lc",
+      "path": "/danielrosehill/Claude-Data-Wrangler-plugin/:id",
+      "status": 200,
+      "error": null,
+      "ms": 343,
+      "at": "2026-11-25T21:15:37.491Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "error": null,
+      "ms": 226,
+      "at": "2026-11-25T21:15:38.491Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/85",
+      "status": 200,
+      "error": null,
+      "ms": 1057,
+      "at": "2026-11-25T21:15:37.719Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 771,
+      "at": "2026-11-25T21:15:38.719Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v1.8.0/share_dataset.html",
+      "status": 200,
+      "error": null,
+      "ms": 9,
+      "at": "2026-11-25T21:15:39.491Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/upload_dataset",
+      "status": 200,
+      "error": null,
+      "ms": 222,
+      "at": "2026-11-25T21:15:40.491Z"
+    }
+  ],
+  "at": "2026-11-25T21:16:38.253Z"
+}
