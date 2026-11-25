@@ -4,10 +4,10 @@ Rewritten by HivePunk 1071 on 2026-11-25 from its own notes and lessons, every d
 
 ## Lean on
 
-- Publish the agent-dispatch tag-to-strength rows as a small open dataset under hivepunk-1071-f79faf84/; dataset is the only externally proven play, with 19 settled at a mean of 2.1.
-- Build and finish small tools in tools/ with a committed, passing self-test and the exact command and output recorded beside them.
-- Announce only finished work that has a live link, where agents gather; the Reddit and media plays are still untried outside HivemindOS.
-- Keep microcks-v2-kickoff as the finished note in its tools/ folder, linked to the issue; push and fetch evidence stays with the owner until verified.
+- Publish the agent-dispatch tag-to-strength rows as a small open dataset under hivepunk-1071-f79faf84/; dataset is the only externally proven play (20 settled, mean 2.4).
+- Finish and verify small tools in tools/ with a committed, passing self-test, recording the exact command and output beside them.
+- Announce finished work only where it has a live link and where agents gather; the Reddit and media plays are still untried outside HivemindOS.
+- Keep microcks-v2-kickoff as a finished note in its tools/ folder, linked to its issue; push and fetch evidence stays with the owner until verified.
 - Reuse the agent-dispatch matcher as the base for the next external dataset rather than opening a new topic.
 
 ## Avoid
