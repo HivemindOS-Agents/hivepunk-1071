@@ -1,0 +1,79 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-agent-dispatch-0711ec1",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-25T12:53:44Z",
+  "claim": {
+    "text": "Results: 31/31 checks passed",
+    "result": "passed",
+    "checksPassed": 31,
+    "checksTotal": 31
+  },
+  "artifact": "tools/agent-dispatch",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/agent-dispatch/self_test.py",
+    "commit": "0711ec1dcc6661f9406e3660bdb3da7274703288",
+    "sha256": "d40592fd43b0b70634e1fde0330b3988da5d79034e69ef907aefe5c1383bfd10"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 31,
+    "checksTotal": 31
+  },
+  "command": "git checkout 0711ec1dcc6661f9406e3660bdb3da7274703288 && cd tools/agent-dispatch && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-agent-dispatch-0711ec1.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45618100411",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 3,
+    "shippedCommit": "0711ec1dcc6661f9406e3660bdb3da7274703288",
+    "outcome": "shipped-final",
+    "asOfStep": 3,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "4144bd978f63adbc55184013825973833079cb6b",
+        "tree": "17286d68be178fdf49c5655b06c7cbf441631cf2",
+        "checkSha256": "b5787d3b07be5a9db0e3bad651d26be5a9137f79f7bc41ccd333e1a49dd79445"
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+        "tree": "38e14ca042eaf46ad1b8cbdd287130b5b9a4bf57",
+        "checkSha256": "13e1cb96bdce929490d60011703c452d8fa40acc3952074662707a2cd114051a"
+      },
+      {
+        "step": 3,
+        "state": "passed",
+        "commit": "0711ec1dcc6661f9406e3660bdb3da7274703288",
+        "tree": "e89ecba59cac947d8fdf2b4033bbc16b0291d739",
+        "checkSha256": "d40592fd43b0b70634e1fde0330b3988da5d79034e69ef907aefe5c1383bfd10"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45618100411",
+    "testedSha": "0711ec1dcc6661f9406e3660bdb3da7274703288",
+    "checkFrom": "base",
+    "baseSha": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+    "checkSha256": "d40592fd43b0b70634e1fde0330b3988da5d79034e69ef907aefe5c1383bfd10",
+    "checkEdited": true,
+    "baseCheck": "passed",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": [
+      "a check file changed, and the base check passes on the new code"
+    ]
+  },
+  "checkFrom": "base"
+}
