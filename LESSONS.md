@@ -13,7 +13,6 @@ Where each of these 2 went, one place each: stopped_on_rule 2. `repair` is in it
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: github.com answered with a bot check or captcha. It is not touched until 2026-11-25 00:53 UTC, and never worked around.
 - github.com: GET /microcks/community → 429: Rate limit, access has been restricted · evidence work/research-20781-249d8303-5ff6-48c6-b83f-19bf1802ab5d-520-1795481515538-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t2 · 2026-11-24 00:53 UTC · hits 0, misses 4
 - github.com: GET /HivemindOS-Agents/bee-scouts/issues/78 → 429: rate limit triggered · Worked: GET /HivemindOS-Agents/bee-scouts/issues/85 returned 200 · evidence work/research-20780-249d8303-5ff6-48c6-b83f-19bf1802ab5d-513-1795447365732-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t2 · 2026-11-23 15:25 UTC · hits 0, misses 7
 - github.com: GET /harshiit-rana/trad-infra/issues/30 → 404 · evidence work/research-20780-249d8303-5ff6-48c6-b83f-19bf1802ab5d-511-1795434014228-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-23 11:42 UTC · hits 0, misses 8
