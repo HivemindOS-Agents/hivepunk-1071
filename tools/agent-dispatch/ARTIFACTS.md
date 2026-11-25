@@ -1,15 +1,15 @@
-# Artifacts - agent-dispatch
+# ARTIFACTS - agent-dispatch
 
 ## Target
 tools/agent-dispatch
 Public folder: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
 
-## Public files to verify by fetch (not fetched in this step)
-- dispatch.py (existing, unchanged in this commit)
-- self_test.py (extended in this commit)
-- README.md (updated in this commit)
-- GOAL.md (new separate file in this commit; cites https://github.com/Trisoma/odessy/issues/73)
-- ARTIFACTS.md (this file, updated in this commit)
+## Named public files (listed for fetch-check; not fetched in this step)
+- dispatch.py - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/dispatch.py (unchanged this commit)
+- self_test.py - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/self_test.py (extended this commit)
+- README.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/README.md (updated this commit)
+- GOAL.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/GOAL.md (unchanged this commit, on purpose - see below)
+- ARTIFACTS.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/ARTIFACTS.md (this file, updated this commit)
 
 ## Exact test command
 Run offline from this folder, no arguments, no network:
@@ -18,63 +18,49 @@ Run offline from this folder, no arguments, no network:
 python3 self_test.py
 ~~~
 
-## Exact test output for this commit
-NOT RUN IN THIS STEP. No output, count or pass for this
-commit is claimed or invented here. HivemindOS runs
-self_test.py after commit; that runner result is the
-authority. When it reports, record its exact output
-verbatim here in a follow-up step.
-
-## Runner result now on record (prior commit only)
-Command: python3 self_test.py
-Run: 45225896912, 2026-11-23 17:16 UTC, state passed
-Runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912
-
-Exact output as reported by the runner in the tools record
-for that prior commit:
+## Exact output recorded for the file set before this commit
+Source: HivemindOS runner run 45588014110, 2026-11-25 09:43 UTC, state passed.
+Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45588014110
+The runner reports the last lines it printed, verbatim:
 
 ~~~text
-ok: result independent of tag order
-ok: CLI writes output
-ok: CLI no-match JSON correct
 usage: python3 dispatch.py INPUT.json [--out FILE]
 INPUT.json: {"tags": ["..."], "rules": [{"tag": "...", "strength": 1, "label": "..."}]}
 ok: CLI requires input
-Results: 16/16 checks passed
+ok: GOAL.md sha256 is 64 lowercase hex chars
+ok: GOAL.md sha256 is deterministic across reads
+GOAL.md sha256: ecb04afed903686d5d4d4c9f9c467f86f31b6e025d215895e46df64ba4d8aa12
+Results: 24/24 checks passed
 ~~~
 
-That pass covers the prior commit's 16-check self_test. It
-does not verify this commit. This commit's self_test adds
-checks for the separate GOAL.md file (cites the issue,
-test-pending, sha256 is 64 lowercase hex and deterministic),
-for ARTIFACTS.md recording run 45225896912 with its UTC
-time and the 16/16 output, and for README.md marking this
-commit test-pending, and prints the computed
-"GOAL.md sha256: <value>" line, so its count will differ.
+## Logged GOAL.md sha256
+GOAL.md sha256: ecb04afed903686d5d4d4c9f9c467f86f31b6e025d215895e46df64ba4d8aa12
+
+Provenance: printed by runner run 45588014110 at 2026-11-25 09:43 UTC while hashing the committed GOAL.md. GOAL.md is not changed in this commit, so the same bytes and the same sha256 still hold; check with `sha256sum GOAL.md`. self_test.py also asserts the computed sha256 equals this value, so any later drift in GOAL.md fails the test instead of quietly invalidating the log.
+
+## Scope of that pass
+That 24/24 pass covers the files as committed before this commit. This commit extends self_test.py (new run id and UTC time, the logged-sha256 equality, command and output labels) and rewrites this file and README.md, so this commit's check count will differ. This commit is test-pending: no output, count or pass for this commit is claimed here.
+
+## Earlier evidence kept as history
+Run 45225896912, 2026-11-23 17:16 UTC, passed, last line: Results: 16/16 checks passed
+Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912
+Kept because it explains why the count moved from 16 to 24 and now higher.
 
 ## Logged actions (each with a one-line why)
-- Updated GOAL.md first as a separate file - why: the goal must state the finishing task and blocker before other files record it, and the prior commit could only carry GOAL text inside README.md under the 4-file limit.
-- Extended self_test.py with GOAL/ARTIFACTS/README checks - why: the repaired standalone test must guard the separate GOAL.md and the recorded runner evidence, not only the matcher.
-- Recorded run 45225896912 with its UTC time and verbatim output - why: it is the newest runner result on record and must be attributed to the prior commit only.
-- Marked this commit's output NOT RUN - why: no local run or network existed in this step, so no output may be claimed.
-- Left GOAL.md sha256 to the self-test's printed line - why: a hand-typed hash cannot be verified here.
-- Kept this commit test-pending - why: a prior commit's pass does not verify this commit.
-- Left dispatch.py unchanged - why: the task is to prepare the existing dataset, not to change the matcher.
+- Recorded run 45588014110 with its UTC time and verbatim tail - why: it is the newest runner result on record and is the only evidence that names a sha256 for GOAL.md.
+- Logged GOAL.md sha256 ecb04afe...aa12 - why: the step asks for the hash to be logged, and this is the one value a runner actually computed.
+- Left GOAL.md byte-identical - why: rewriting it would replace a verified hash with one that cannot be computed in this step; a stated stale sentence beats an unverifiable hash.
+- Added a sha256-equality check to self_test.py - why: the logged hash should fail loudly if GOAL.md ever drifts.
+- Kept run 45225896912 as history - why: the 16/16 result is the baseline the later counts build on.
+- Marked this commit test-pending in this file and README.md - why: a prior commit's pass does not verify this commit.
+- Left dispatch.py unchanged - why: the task is to finish evidence and docs, not to change the matcher.
 
-## Exact blocker (recorded this step)
-- Local run of `python3 self_test.py`: NOT PERFORMED. Cause: this step has no execution environment. No other cause evidenced.
-- Network-enabled GitHub retrieval of the named files: NOT PERFORMED. Cause: this step has no network access. No other cause evidenced.
-- Push via authorized GitHub API: NOT PERFORMED. Cause: no authorized push in this step. No other cause evidenced.
-- Current-commit self-test: UNCONFIRMED. Cause: no runner result for this commit has been reported here.
-- GOAL.md sha256: NOT COMPUTED IN THIS STEP and not typed into any file. Cause: no execution available here. The self-test prints it at run time; owner copies that line.
-- This step therefore claims no success for test, push, fetch-check, or publication, and makes no other causal claim.
+## Not done in this step (blocker)
+- Local run of `python3 self_test.py`: NOT RUN IN THIS STEP. Cause: this step has no execution environment. No other cause evidenced.
+- Public-URL fetch-check of the five named files: NOT PERFORMED. Cause: no network access in this step. No other cause evidenced.
+- Push: nothing pushed by hand here; the HivemindOS commit carries these files. No other cause evidenced.
+- Current-commit self-test: UNCONFIRMED. Cause: no runner result for this commit has been reported. No other cause evidenced.
+- GOAL.md rewrite: NOT MADE, on purpose, so the runner-printed sha256 stays exact. Stated plainly, not glossed.
+- No code run against others' systems; no paid retrieval used (spend $0.00 of a $0.09 cap).
 
-## Could not confirm / blockers
-- No confirmed current-commit run of self_test.py.
-- No push via authorized GitHub API performed here.
-- No publish and no public-file fetch-check performed.
-- GOAL.md sha256 value not computed or logged here; no hash invented.
-- The cited issue text was not retrieved in this step; nothing from it is claimed beyond the citation in GOAL.md/README.md.
-- No code run against others' systems in this step.
-
-Owner left: read the next runner result for this commit, copy its printed "GOAL.md sha256: <value>" line into the daily log (or run `sha256sum GOAL.md` here), push via authorized GitHub API, and fetch-check every named file.
+Owner left: run `python3 self_test.py` in tools/agent-dispatch, read the runner result for this commit, paste its exact tail here, copy the printed GOAL.md sha256 line into the daily log, and fetch-check the five URLs above.
