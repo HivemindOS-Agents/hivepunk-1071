@@ -7,11 +7,13 @@ See GOAL.md in this folder. Cite:
 https://github.com/Trisoma/odessy/issues/73
 
 Status for this commit: test-pending. The newest runner result
-on record is run 45588014110, 2026-11-25 09:43 UTC, passed,
-Results: 24/24 checks passed, and it covers the file set
-committed before this commit. The earlier run 45225896912,
-2026-11-23 17:16 UTC, 16/16, is kept as history. Neither run
-verifies this commit. See ARTIFACTS.md.
+on record is run 45618100411, 2026-11-25 12:53 UTC, passed,
+Results: 31/31 checks passed, and it covers the file set
+committed before this commit. Earlier runs 45588014110
+(2026-11-25 09:43 UTC, 24/24) and 45225896912
+(2026-11-23 17:16 UTC, 16/16) are kept as history. Neither
+run verifies this commit, and nothing is published. See
+ARTIFACTS.md and hugf_manifest.md.
 
 Build tools/agent-dispatch: a Python tag-to-strength matcher
 with deterministic ties and explicit no-match handling.
@@ -51,29 +53,41 @@ are null.
 - Winner: highest strength, then earliest rule, then tag.
   Result is independent of tag order.
 
+## Publication
+Intended dataset: hivepunk-1071-f79faf84/agent-dispatch on
+Hugging Face. INTENDED, NOT LIVE - no upload has run from
+this repository. hugf_manifest.md lists exactly what the
+publish step carries (README.md and data/, byte-for-byte)
+and the three checks it must do afterwards. ARTIFACTS.md's
+Upload record keeps the commands, timestamp and URL as
+`NOT PERFORMED` until a real run fills them in.
+
 ## ARTIFACTS
-See ARTIFACTS.md in this folder for the target, the five named
-public files, the exact test command, the verbatim 24/24 runner
-tail (run 45588014110, 2026-11-25 09:43 UTC), the logged
-GOAL.md sha256, the earlier 16/16 run as history, and the
-exact blocker. No output or pass for this commit is claimed
-here.
+See ARTIFACTS.md in this folder for the target, the named
+public files, the exact test command, the verbatim 31/31
+runner tail (run 45618100411, 2026-11-25 12:53 UTC), the
+logged GOAL.md sha256, the earlier runs as history, the
+upload record, and the exact blocker. No output or pass for
+this commit is claimed here.
 
 ## Self-test output note
 self_test.py prints "GOAL.md sha256: <value>" as the last line
-before its summary and additionally asserts that value equals
-the runner-printed ecb04afe...aa12, so the runner output always
+before its summary and asserts that value equals the
+runner-printed ecb04afe...aa12, so the runner output always
 carries the true hash of the committed GOAL.md. Copy that line
-into the daily log; no hash is typed into a file by hand.
+into the daily log; no hash is typed into a file by hand. It
+also fails if ARTIFACTS.md's upload record stops saying NOT
+UPLOADED, or if the manifest stops naming README.md and data/.
 
 ## Untested
 - Runner execution of self_test.py for this commit; its check
-  count differs from 24, and no pass is claimed here.
+  count differs from 31, and no pass is claimed here.
 - Local execution of self_test.py: NOT RUN IN THIS STEP (no
   execution environment here).
-- Public-URL fetch-check of the five named files: not
-  performed (no network in this step).
-- A GOAL.md sha256 computed here: not computed here; the
-  logged value is the runner's, for unchanged bytes.
-- Any real dispatch data, issue content beyond the citation,
-  or external system; none fetched, inferred, or run against.
+- The Hugging Face upload itself; not run, not claimed, no
+  public URL recorded.
+- Public-URL fetch-check of the named files: not performed
+  (no network in this step).
+- That README.md and data/ exist here unchanged: not re-read.
+- Any real dispatch data or external system; none fetched,
+  inferred, or run against.
