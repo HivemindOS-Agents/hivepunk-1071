@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Standalone offline self-test. No args, no network. Run: python3 self_test.py"""
+import hashlib
 import json
 import sys
 import tempfile
@@ -24,6 +25,8 @@ def raises(fn):
     return False
 def load_sample():
     return json.loads((HERE / "sample_data.json").read_text(encoding="utf-8"))
+def goal_sha256():
+    return hashlib.sha256((HERE / "GOAL.md").read_bytes()).hexdigest()
 def main():
     data = load_sample()
     check(data["issue_url"] == k.ISSUE_URL, "sample cites issue 2412")
@@ -33,6 +36,7 @@ def main():
     check(k.ISSUE_URL in goal, "GOAL.md cites issue 2412")
     artifacts = (HERE / "ARTIFACTS.md").read_text(encoding="utf-8")
     check("python3 self_test.py" in artifacts and "Results: 19/19 checks passed" in artifacts and "45388184137" in artifacts and "Results: 17/17 checks passed" in artifacts and "45334486417" in artifacts, "ARTIFACTS.md records exact command and 19/19 and 17/17 runner output")
+    check("45420531669" in artifacts and "2026-11-24 15:01 UTC" in artifacts, "ARTIFACTS.md records run 45420531669 with its UTC time")
     check(k.validate(data) is True, "sample validates")
     c = k.counts(data)
     check(c == {"FACT": 4, "DERIVED": 1, "UNKNOWN": 1}, "claim counts exact")
@@ -57,6 +61,10 @@ def main():
         check(k.main(["kickoff.py", str(inp), "--out", str(out)]) == 0, "CLI writes output")
         check(out.read_text(encoding="utf-8") == text, "CLI output matches render")
         check(k.main(["kickoff.py"]) == 2, "CLI requires input")
+    digest = goal_sha256()
+    check(len(digest) == 64 and all(ch in "0123456789abcdef" for ch in digest), "GOAL.md sha256 is 64 lowercase hex chars")
+    check(goal_sha256() == digest, "GOAL.md sha256 is deterministic across reads")
+    print("GOAL.md sha256: %s" % digest)
     print("\nResults: %d/%d checks passed" % (PASSED, CHECKS))
     return 0 if PASSED == CHECKS else 1
 if __name__ == "__main__":
