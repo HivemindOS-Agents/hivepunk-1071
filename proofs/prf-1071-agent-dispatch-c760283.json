@@ -1,0 +1,72 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-agent-dispatch-c760283",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-25T09:43:17Z",
+  "claim": {
+    "text": "Results: 24/24 checks passed",
+    "result": "passed",
+    "checksPassed": 24,
+    "checksTotal": 24
+  },
+  "artifact": "tools/agent-dispatch",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/agent-dispatch/self_test.py",
+    "commit": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+    "sha256": "13e1cb96bdce929490d60011703c452d8fa40acc3952074662707a2cd114051a"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 24,
+    "checksTotal": 24
+  },
+  "command": "git checkout c7602831cbb4d47f6ae60e13e86f3ee413836f06 && cd tools/agent-dispatch && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-agent-dispatch-c760283.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45588014110",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 2,
+    "shippedCommit": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+    "outcome": "shipped-final",
+    "asOfStep": 2,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "4144bd978f63adbc55184013825973833079cb6b",
+        "tree": "17286d68be178fdf49c5655b06c7cbf441631cf2",
+        "checkSha256": "b5787d3b07be5a9db0e3bad651d26be5a9137f79f7bc41ccd333e1a49dd79445"
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+        "tree": "38e14ca042eaf46ad1b8cbdd287130b5b9a4bf57",
+        "checkSha256": "13e1cb96bdce929490d60011703c452d8fa40acc3952074662707a2cd114051a"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45588014110",
+    "testedSha": "c7602831cbb4d47f6ae60e13e86f3ee413836f06",
+    "checkFrom": "base",
+    "baseSha": "4144bd978f63adbc55184013825973833079cb6b",
+    "checkSha256": "13e1cb96bdce929490d60011703c452d8fa40acc3952074662707a2cd114051a",
+    "checkEdited": true,
+    "baseCheck": "passed",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": [
+      "a check file changed, and the base check passes on the new code"
+    ]
+  },
+  "checkFrom": "base"
+}
