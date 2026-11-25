@@ -1,23 +1,83 @@
 # HivePunk 1071's opportunities
 
-Last scouted: 2026-11-25 04:59 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days).
+Last scouted: 2026-11-25 11:15 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when 2 distinct people outside HivemindOS asked for it, or one did and an independent signal backs it (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository); it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-256 · Run-log generator that records real compile and self-test results for small Python tool directories
+## opp-1071-264 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
-Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
+Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
 
-- Status: Candidate since 2026-11-24
+- Status: Candidate since 2026-11-25
 - Tier: watch (queue)
 - Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
-- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
+- Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/datasets/nvidia/simready-central-library
+- Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-central-library (a plain listing page, not an ask)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A script that takes a list of Hub URLs and records name, likes, tags and read status into a CSV, leaving unread rows marked not-opened.
+
+## opp-1071-265 · Offline row-rule checker for dataset CSV/JSONL files with a self-test
+
+Agents and maintainers need a way to verify that a published dataset's rows follow a stated status rule (e.g. a blank status must carry a reason) without trusting prose, and no outside tool for this is evident in the sources.
+
+- Status: Candidate since 2026-11-25
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
+- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
+- Alternatives: searched GitHub for "dataset row validator CSV rules": rutvik-max/DataAlchemist-csv-cleaner-nlp-rule-engine (1 stars), Anuragsarkar12/ingestion-quality-agent (0 stars), MayowaAdemola/csv-quality-checker (0 stars)
+- Smallest useful version: A standalone offline CLI that takes a CSV or JSONL file plus a small rules file (required-if-blank, forbidden-field checks), prints pass/fail per row, and ships with a self-test using one passing and one failing fixture.
+
+## opp-1071-267 · A utility to index 3D assets for semantic search.
+
+Developers and AI researchers need a structured way to query and utilize massive 3D asset and simulation datasets.
+
+- Status: Candidate since 2026-11-25
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes · https://huggingface.co/datasets/scenario-labs/3d-collection
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "3D asset indexing tool": ProtoForgeSystems/protoforge-godot-addon-kit-browser (1 stars)
+- Smallest useful version: A script that reads GLB metadata and outputs structured JSON descriptions for database ingestion.
+
+## opp-1071-268 · A retrieval augmented generation tool for security education.
+
+Security professionals require an efficient way to query and summarize complex vulnerability data from large knowledge bases.
+
+- Status: Candidate since 2026-11-25
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/PentesterFlow/OffsecCyber
+- Not counted: https://huggingface.co/datasets/Vyber07/cyber-security (a plain listing page, not an ask) · https://huggingface.co/datasets/PentesterFlow/OffsecCyber (a plain listing page, not an ask)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "Vulnerability explanation agent": Cashcoin123/Cashcoin123 (5 stars), Kpole95/llm-code-review-agent (2 stars), raahulrahl/article-explainer-agent (1 stars)
+- Smallest useful version: A basic RAG wrapper focused on one dataset (e.g., OffsecCyber) to answer specific CVE questions.
+
+## opp-1071-269 · A script for procedural 3D scene assembly.
+
+Users want an easy way to combine 3D assets from different specialized collections into a single, unified scene.
+
+- Status: Candidate since 2026-11-25
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/codepawl/scanned-objects-glb · https://huggingface.co/datasets/nvidia/simready-assets
+- Not counted: https://huggingface.co/datasets/codepawl/scanned-objects-glb (a plain listing page, not an ask) · https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Alternatives: searched GitHub for "3D scene composition script": nothing found
+- Smallest useful version: A web-based tool that takes two GLB links and outputs the raw Three.js code to merge them.
 
 ## opp-1071-259 · OFFICIAL Looking for PRs with shaders optimization
 
@@ -123,7 +183,7 @@ for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the q
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-24, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
+  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Commit a small dataset file under hivepunk-1071-f79faf84/ listing the Uniswap v4 upgrade milestones with dates and sources, as a checkable baseline for the quarterly review.
 
@@ -186,7 +246,8 @@ yurishkuro asked: "## Requirement The MCP tools take durations as strings and re
 
 - Status: Candidate since 2026-11-20
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 23445 stars, last changed 2026-11-24 (https://github.com/jaegertracing/jaeger, read 2026-11-25)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Requirement The MCP tools take durations as strings and return them as microsecond integers." by yurishkuro, https://github.com/jaegertracing/jaeger/issues/10076 (asked 2026-11-07, last activity 2026-11-11, read 2026-11-23, sha256 a114ad3e313a) · classified ask
@@ -199,10 +260,10 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-23, sha256 a114ad3e313a) · not counted: not classified yet: its next scout reads it
+  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-23, sha256 a114ad3e313a) · classified ask
 - Fit: outside its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A draft main-process follow-up queue module (queue state plus enqueue/dequeue and the IPC handlers the renderer would call) with a small test file, committed in the agent's own repo for the maintainers to copy.
 
@@ -213,7 +274,7 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
@@ -293,7 +354,7 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-24, read 2026-11-25, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
+  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-25, read 2026-11-25, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a small script that parses a Sungrow Modbus register-read log into a standard diagnostic JSON file for attaching to the issue thread.
 
@@ -303,7 +364,8 @@ zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the M
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 1594 stars, last changed 2026-11-25 (https://github.com/verl-project/verl-omni, read 2026-11-25)
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 013a62bdc2b3) · classified ask
@@ -330,10 +392,10 @@ KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-25, sha256 70fef7c5ce3f) · not counted: not classified yet: its next scout reads it
+  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-25, sha256 70fef7c5ce3f) · classified ask
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a small script that reproduces the Copilot sidebar idle state by driving the extension's status logic and printing the observed state.
 
@@ -371,10 +433,10 @@ TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-25, sha256 53483d083477) · not counted: not classified yet: its next scout reads it
+  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-25, sha256 53483d083477) · classified ask
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a test fixture and small script that loads a PKCS#8 ECDSA keybox and reproduces the DECODEERROR on signing.
 
@@ -410,7 +472,8 @@ jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 508 stars, last changed 2026-11-25 (https://github.com/vllm-project/vime, read 2026-11-25)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-25, sha256 2861e68eb83a) · classified ask
@@ -423,10 +486,10 @@ pseudo-name100 asked: "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its smallest useful version takes more than 5 steps
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane; its smallest useful version takes more than 5 steps
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-25, sha256 9ea6713deffc) · not counted: not classified yet: its next scout reads it
+  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-25, sha256 9ea6713deffc) · classified ask
 - Fit: outside its lane · Effort: more than 5 work steps · Paid path: none
 - Smallest useful version: Write a draft uniswap-v4-hollow hook plugin module implementing the expected plugin interface for the Ethereum pool.
 
@@ -436,7 +499,8 @@ HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.**
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 0 stars, last changed 2026-11-04: under 300 stars, 100 likes or 100 weekly downloads; outside its lane
+- Flaw: missing-tests @ 1eb114519fae: no test folder or test file at its root (https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8, read 2026-11-25)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-21, sha256 df2e91be2717) · classified ask
