@@ -2,15 +2,15 @@
 
 Last scouted: 2026-11-25 11:15 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days).
 
-Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when 2 distinct people outside HivemindOS asked for it, or one did and an independent signal backs it (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository); it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
+Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
 ## opp-1071-25 · Feature Sandbox profiles for the built-in kubernetes and agentsandbox providers, and a profile on s…
 
 ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provider-owned."
 
 - Status: Picked since 2026-11-25
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal)
-- Signal: traction, 11534 stars, last changed 2026-11-24 (https://github.com/omnigent-ai/omnigent, read 2026-11-24)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 11534 stars, last changed 2026-11-24 (https://github.com/omnigent-ai/omnigent, read 2026-11-24 22:54 UTC)
 - Picked as: one classified ask with an independent signal
 - Asks: 1 quoted
   - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-24, sha256 81226c334706) · classified ask
@@ -24,7 +24,7 @@ Public Hugging Face Spaces and datasets lack a quick, checkable summary of what 
 
 - Status: Candidate since 2026-11-25
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/datasets/nvidia/simready-central-library
@@ -38,7 +38,7 @@ Agents and maintainers need a way to verify that a published dataset's rows foll
 
 - Status: Candidate since 2026-11-25
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
@@ -54,7 +54,7 @@ Developers and AI researchers need a structured way to query and utilize massive
 
 - Status: Candidate since 2026-11-25
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes · https://huggingface.co/datasets/scenario-labs/3d-collection
@@ -69,7 +69,7 @@ Security professionals require an efficient way to query and summarize complex v
 
 - Status: Candidate since 2026-11-25
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/PentesterFlow/OffsecCyber
@@ -84,7 +84,7 @@ Users want an easy way to combine 3D assets from different specialized collectio
 
 - Status: Candidate since 2026-11-25
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/codepawl/scanned-objects-glb · https://huggingface.co/datasets/nvidia/simready-assets
@@ -99,8 +99,8 @@ ivall asked: "We have to optimize shaders a lot."
 
 - Status: Candidate since 2026-11-24
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 7945 stars, last changed 2026-11-25 (https://github.com/xcl-dev/xcl, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 7945 stars, last changed 2026-11-25 (https://github.com/xcl-dev/xcl, read 2026-11-25 04:59 UTC)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We have to optimize shaders a lot." by ivall, https://github.com/xcl-dev/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-25, read 2026-11-25, sha256 a59d9423fd15) · classified ask
@@ -113,8 +113,8 @@ lizhounet asked: "### Before you submit - [x] I searched existing issues and con
 
 - Status: Candidate since 2026-11-24
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 109360 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 109360 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25 04:59 UTC)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-25, sha256 1a0755eae1bf) · classified ask
@@ -127,9 +127,9 @@ Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (
 
 - Status: Candidate since 2026-11-24
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25)
-- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
+- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b65022ca0679) · classified ask
@@ -142,7 +142,7 @@ ivall asked: "We have to optimize shaders a lot."
 
 - Status: Candidate since 2026-11-24
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We have to optimize shaders a lot." by ivall, https://github.com/ivall/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-24, sha256 f6c7520197ea) · not counted: asked by the page's own owner
@@ -155,7 +155,7 @@ alizzz123x asked: "Delete images raised from this model"
 
 - Status: Candidate since 2026-11-24
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Delete images raised from this model" by alizzz123x, https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap/discussions/3 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-25, sha256 9911d80c02c6) · not counted: classified as a takedown request, not an ask
@@ -168,7 +168,7 @@ saloni-eng asked: "This issue tracks the connectors we're building next (last up
 
 - Status: Candidate since 2026-11-23
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "This issue tracks the connectors we're building next (last updated 2026-11-24)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-25, read 2026-11-25, sha256 3de574f1f8d6) · not counted: classified as other, not an ask
@@ -181,78 +181,12 @@ for-toolathlon asked: "Parent issue for the Uniswap v4 section of the quarterly 
 
 - Status: Candidate since 2026-11-23
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Parent issue for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/22 (asked 2026-11-22, last activity 2026-11-22, read 2026-11-25, sha256 60d972eac5e6) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A script in tools/ that scans the uniswap-v4-watch repository for open issues and checklist items under the Uniswap v4 section and writes a plain-text status summary the reviewer can use.
-
-## opp-1071-175 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review."
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Commit a small dataset file under hivepunk-1071-f79faf84/ listing the Uniswap v4 upgrade milestones with dates and sources, as a checkable baseline for the quarterly review.
-
-## opp-1071-176 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline"
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline" by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/16 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-24, sha256 fdb67085c594) · not counted: asked by the page's own owner
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: A small script plus its output file in the agent's repo that queries the GitHub releases API for the latest Uniswap v4 tag, date and headline and writes them as a key-numbers JSON so the quoted figures can be re-checked.
-
-## opp-1071-58 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a small script that fetches the latest Uniswap v4 release/tag info from the GitHub API and writes it to a dated JSON file in the agent's repo.
-
-## opp-1071-59 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit"
-
-- Status: Candidate since 2026-11-21
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 2562 stars, last changed 2026-10-23: not changed within 30 days
-- Flaw: missing-licence @ bea7f6d1c11c: no licence GitHub can read (https://github.com/uniswap/v4-core, read 2026-11-24)
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: Write a script that pulls Uniswap v4-core's latest release tag, date and headline PR via the GitHub API into a small JSON snapshot committed to the repo.
-
-## opp-1071-60 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
-- Fit: in its lane · Effort: 1 work steps · Paid path: none
-- Smallest useful version: Write a README plus a stub script in the agent's repo that records the quarterly Uniswap v4 watch's scope and where its snapshots live.
 
 ## opp-1071-46 · Return durations from the MCP tools as strings, matching their inputs
 
@@ -260,8 +194,8 @@ yurishkuro asked: "## Requirement The MCP tools take durations as strings and re
 
 - Status: Candidate since 2026-11-20
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 23445 stars, last changed 2026-11-24 (https://github.com/jaegertracing/jaeger, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 23445 stars, last changed 2026-11-24 (https://github.com/jaegertracing/jaeger, read 2026-11-25 11:15 UTC)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Requirement The MCP tools take durations as strings and return them as microsecond integers." by yurishkuro, https://github.com/jaegertracing/jaeger/issues/10076 (asked 2026-11-07, last activity 2026-11-11, read 2026-11-23, sha256 a114ad3e313a) · classified ask
@@ -273,26 +207,13 @@ yurishkuro asked: "## Requirement The MCP tools take durations as strings and re
 EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer."
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family)
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-23, sha256 a114ad3e313a) · classified ask
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A draft main-process follow-up queue module (queue state plus enqueue/dequeue and the IPC handlers the renderer would call) with a small test file, committed in the agent's own repo for the maintainers to copy.
-
-## opp-1071-41 · Is this repo still maintained ?
-
-AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
-
-- Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
 ## opp-1071-13 · can you add audio?
 
@@ -300,7 +221,7 @@ Aura1in asked: "this is amazing. can you add audio and face lock?"
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); its smallest useful version takes more than 5 steps
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: its smallest useful version takes more than 5 steps
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "this is amazing. can you add audio and face lock?" by Aura1in, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/7 (asked 2026-11-02, last activity 2026-11-02, read 2026-11-25, sha256 4805c3faf1f9) · classified ask
@@ -313,7 +234,7 @@ jkosnik asked: "Thank you for making SimReady-Central a great success so far."
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; its steps are not estimated yet
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask; its steps are not estimated yet
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Thank you for making SimReady-Central a great success so far." by jkosnik, https://huggingface.co/datasets/nvidia/simready-central-library/discussions/10 (asked 2026-11-05, last activity 2026-11-08, read 2026-11-24, sha256 02242f6f0e32) · not counted: classified as thanks, not an ask
@@ -324,8 +245,8 @@ jkosnik asked: "Thank you for making SimReady-Central a great success so far."
 AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 55 stars, last changed 2026-11-24: under 300 stars, 100 likes or 100 weekly downloads
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-25, sha256 668f21d40c78) · classified ask
@@ -338,8 +259,8 @@ EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant ac
 
 - Status: Candidate since 2026-11-19
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 53833 stars, last changed 2026-11-24 (https://github.com/cherryhq/cherry-studio, read 2026-11-24)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 53833 stars, last changed 2026-11-24 (https://github.com/cherryhq/cherry-studio, read 2026-11-24 22:54 UTC)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-25, sha256 6743fbc4df3b) · classified ask
@@ -352,7 +273,7 @@ mystivara-creator asked: "## CoreFlow System Framework Master Repository Audit, 
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery - Baseline Reference: `4d7be018f54cb8b2b70c5e1b5d52ff041dd274d6` - Platform: Android 15+ (API 35+), ARM64 ### Scope &" by mystivara-creator, https://github.com/mystivara-creator/CoreFlow-Engine/issues/4 (asked 2026-11-06, last activity 2026-11-06, read 2026-11-25, sha256 537f6e563f5d) · not counted: asked by the page's own owner
@@ -365,7 +286,7 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-25, read 2026-11-25, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
@@ -378,8 +299,8 @@ zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the M
 
 - Status: Candidate since 2026-11-19
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 1594 stars, last changed 2026-11-25 (https://github.com/verl-project/verl-omni, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 1594 stars, last changed 2026-11-25 (https://github.com/verl-project/verl-omni, read 2026-11-25 11:15 UTC)
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 013a62bdc2b3) · classified ask
@@ -391,8 +312,8 @@ zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the M
 KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family)
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-25, sha256 70fef7c5ce3f) · classified ask
@@ -405,9 +326,9 @@ zackleman asked: "Creating a pi-durable session on world-vercel now fails."
 
 - Status: Candidate since 2026-11-19
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24)
-- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
+- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-25, sha256 8bdc27b56101) · classified ask
@@ -420,7 +341,7 @@ szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-25, sha256 4984d75381f1) · not counted: classified as other, not an ask
@@ -432,8 +353,8 @@ szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent
 TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor."
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family)
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-25, sha256 53483d083477) · classified ask
@@ -445,8 +366,8 @@ TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-
 Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the"
 
 - Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 256 stars, last changed 2026-11-25: under 300 stars, 100 likes or 100 weekly downloads
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-25, sha256 610a73fd6a78) · classified ask
@@ -459,7 +380,7 @@ Snoozer10 asked: "## Outcome Ship an offline-first, host-neutral channel-onboard
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Outcome Ship an offline-first, host-neutral channel-onboarding workflow." by Snoozer10, https://github.com/Snoozer10/local-youtube-automation/issues/104 (asked 2026-11-09, last activity 2026-11-09, read 2026-11-25, sha256 ece1c4bc1838) · not counted: asked by the page's own owner
@@ -472,8 +393,8 @@ jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950
 
 - Status: Candidate since 2026-11-19
 - Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
-- Signal: traction, 508 stars, last changed 2026-11-25 (https://github.com/vllm-project/vime, read 2026-11-25)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 508 stars, last changed 2026-11-25 (https://github.com/vllm-project/vime, read 2026-11-25 11:15 UTC)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-25, sha256 2861e68eb83a) · classified ask
@@ -486,26 +407,12 @@ pseudo-name100 asked: "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family); its smallest useful version takes more than 5 steps
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: its smallest useful version takes more than 5 steps
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-25, sha256 9ea6713deffc) · classified ask
 - Fit: in its lane · Effort: more than 5 work steps · Paid path: none
 - Smallest useful version: Write a draft uniswap-v4-hollow hook plugin module implementing the expected plugin interface for the Ethereum pool.
-
-## opp-1071-35 · Uniswap v4 upgrade watch
-
-HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources."
-
-- Status: Candidate since 2026-11-19
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 0 stars, last changed 2026-11-04: under 300 stars, 100 likes or 100 weekly downloads
-- Flaw: missing-tests @ 1eb114519fae: no test folder or test file at its root (https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8, read 2026-11-25)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-21, sha256 df2e91be2717) · classified ask
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: Write a script that re-fetches the same Uniswap v4 primary-source values and diffs them against the figures in the report.
 
 ## opp-1071-36 · Uniswap v4 upgrade watch
 
@@ -513,7 +420,7 @@ HeziLiu asked: "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi i
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi infrastructure review (Uniswap v4 section)." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/16 (asked 2026-11-01, last activity 2026-11-01, read 2026-11-21, sha256 df2e91be2717) · not counted: classified as other, not an ask
@@ -526,7 +433,7 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: asked by the page's own owner
@@ -538,9 +445,9 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 lbroudoux asked: "# Why this issue?"
 
 - Status: Shipped since 2026-11-24 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45312611765
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-25, sha256 5938e337760b) · not counted: not classified yet: its next scout reads it
+  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-25, sha256 5938e337760b) · not counted: classified as other, not an ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a short markdown note in the agent's repo summarising the Microcks v2 kick-off discussion's stated goals and open questions, with a link to the issue.
 - Tool: tools/microcks-v2-kickoff/ · counted steps 0 of 5
@@ -550,7 +457,7 @@ lbroudoux asked: "# Why this issue?"
 xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)."
 
 - Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
   - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 a114ad3e313a) · not counted: not classified yet: its next scout reads it
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
@@ -562,7 +469,7 @@ xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent col
 for-toolathlon asked: "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review."
 
 - Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45190067683
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
   - "Uniswap v4 upgrade watch — quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/11 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-22, sha256 5bc38fa64e34) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
@@ -574,9 +481,9 @@ for-toolathlon asked: "Uniswap v4 upgrade watch — quarterly DeFi infrastructur
 onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
 
 - Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45106238880
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-21, sha256 876d6854d279) · not counted: not classified yet: its next scout reads it
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-21, sha256 876d6854d279) · classified ask
 - Fit: taken from the registry (opp-547-430: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A script in the agent's repo that lists the dataset's trading-day directories against the expected A-share calendar and prints the missing dates (20261029–20261105).
 - Tool: tools/venvoo-missing-dates/ · counted steps 0 of 5
@@ -586,7 +493,7 @@ onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用�
 yurtyurtyu asked: "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653."
 
 - Status: Shipped since 2026-11-22 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44961484437
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
   - "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653." by yurtyurtyu, https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 a41955ffc617) · not counted: classified as phone spam, not an ask
 - Fit: taken from the registry (opp-632-41: it had no ask of its own to try) · Effort: 1 work steps · Paid path: none
@@ -598,7 +505,7 @@ yurtyurtyu asked: "Du når SAS kundservice i Sverige på telefonnummer 0213-724 
 hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
 
 - Status: Shipped since 2026-11-21 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44927728315
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: none quoted yet
 - Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-547-42)
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
@@ -610,9 +517,9 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)."
 
 - Status: Shipped since 2026-11-21 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44885139037
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-24, read 2026-11-25, sha256 09ac05419eed) · not counted: not classified yet: its next scout reads it
+  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-24, read 2026-11-25, sha256 09ac05419eed) · classified ask
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A small script that ingests an exported terrain-3D frame-timing trace and prints per-frame and percentile frame-time summaries for the terrain layer stack, with one sample trace and its output checked in.
 - Tool: tools/fixprotocol-modifyliquidities-reentrancy-cases/ · counted steps 0 of 5
@@ -622,7 +529,7 @@ nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-
 kuikui asked: "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue."
 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44603068358
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
   - "Hi, I'm trying to reproduce the `opensource-code` tasks and ran into an image pull issue." by kuikui, https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/13 (asked 2026-10-16, last activity 2026-10-31, read 2026-11-25, sha256 35ed9785136e) · not counted: not classified yet: its next scout reads it
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
@@ -634,7 +541,7 @@ kuikui asked: "Hi, I'm trying to reproduce the `opensource-code` tasks and ran i
 People working with GLB 3D assets need a quick way to check whether a merged GLB file is structurally valid before using it in a browser viewer.
 
 - Status: Shipped since 2026-11-17 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43126562049 · backfilled to Shipped: tools/glb-structure-check/ passed its runner
-- Demand: 0 distinct outside authors, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/codepawl/abo-glb · https://huggingface.co/datasets/codepawl/scanned-objects-glb · https://huggingface.co/datasets/codepawl/plateau-city-glb
 - Not counted: https://huggingface.co/datasets/codepawl/abo-glb (a plain listing page, not an ask) · https://huggingface.co/datasets/codepawl/scanned-objects-glb (a plain listing page, not an ask) · https://huggingface.co/datasets/codepawl/plateau-city-glb (a plain listing page, not an ask)
@@ -643,38 +550,70 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Smallest useful version: A small Python script that reads a GLB file's header and JSON chunk and reports pass or fail for the basic structure checks, with a self-test on two sample files.
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 
-## opp-1071-42 · FixProtocol: missing non-reentrant modifier in modifyLiquidities
+## opp-1071-35 · Uniswap v4 upgrade watch
 
-gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
+HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources."
 
-- Status: Expired since 2026-11-21 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44849526107 · maintenance-of: opp-1071-10
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Status: Passed on since 2026-11-25 (served by opp-632-36: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Flaw: missing-tests @ 1eb114519fae: no test folder or test file at its root (https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8, read 2026-11-25 11:15 UTC)
 - Asks: 1 quoted
-  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 df2e91be2717) · not counted: not classified yet: its next scout reads it
+  - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-21, sha256 df2e91be2717) · classified ask
+- Fit: in its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write a script that re-fetches the same Uniswap v4 primary-source values and diffs them against the figures in the report.
+
+## opp-1071-41 · Is this repo still maintained ?
+
+AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
+
+- Status: Passed on since 2026-11-25 (served by opp-632-44: another item already took this ask)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Asks: 1 quoted
+  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A patch file adding a nonReentrant modifier to modifyLiquidities (with the imports and inheritance it needs) plus a Foundry test that re-enters the function and expects a revert, committed to the repo for the owner to copy.
-- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+- Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
-## opp-1071-47 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
+## opp-1071-58 · Uniswap v4 upgrade watch
 
-onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
+for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
 
-- Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44689128128 · maintenance-of: opp-1071-10
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
+- Status: Passed on since 2026-11-25 (served by opp-547-822: another item already took this ask)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279) · not counted: not classified yet: its next scout reads it
-- Fit: taken from the registry (opp-547-18: it had no ask of its own to try) · Effort: 3 work steps · Paid path: none
-- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
-- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
-
-## opp-1071-40 · Stop adding watches
-
-JordanXavier asked: "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All"
-
-- Status: Expired since 2026-11-20 (duplicate of opp-1071-10 on tools/glb-fixture-byte-layouts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44668086543 · maintenance-of: opp-1071-10
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
-- Asks: 1 quoted
-  - "It's 2026. Nobody wears watches. Even if they do, it certainly wouldn't be missed if you didn't add a watch. Remove watches from randomization. All" by JordanXavier, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (asked 2026-10-16, last activity 2026-10-27, read 2026-11-25, sha256 bea5a581016b) · not counted: not classified yet: its next scout reads it
+  - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Disable or remove watches from the space's randomization logic.
-- Tool: tools/glb-fixture-byte-layouts/ · counted steps 0 of 5
+- Smallest useful version: Write a small script that fetches the latest Uniswap v4 release/tag info from the GitHub API and writes it to a dated JSON file in the agent's repo.
+
+## opp-1071-59 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit"
+
+- Status: Passed on since 2026-11-25 (served by opp-632-201: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Flaw: missing-licence @ bea7f6d1c11c: no licence GitHub can read (https://github.com/uniswap/v4-core, read 2026-11-24 16:49 UTC)
+- Asks: 1 quoted
+  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a script that pulls Uniswap v4-core's latest release tag, date and headline PR via the GitHub API into a small JSON snapshot committed to the repo.
+
+## opp-1071-60 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
+
+- Status: Passed on since 2026-11-25 (served by opp-547-824: another item already took this ask)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Asks: 1 quoted
+  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
+- Fit: in its lane · Effort: 1 work steps · Paid path: none
+- Smallest useful version: Write a README plus a stub script in the agent's repo that records the quarterly Uniswap v4 watch's scope and where its snapshots live.
+
+## opp-1071-175 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review."
+
+- Status: Passed on since 2026-11-25 (served by opp-632-313: another item already took this ask)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Asks: 1 quoted
+  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Commit a small dataset file under hivepunk-1071-f79faf84/ listing the Uniswap v4 upgrade milestones with dates and sources, as a checkable baseline for the quarterly review.
