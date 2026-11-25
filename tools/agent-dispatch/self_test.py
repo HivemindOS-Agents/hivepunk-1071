@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Standalone offline self-test. No arguments, no network.
 
-Checks the matcher in dispatch.py and the recorded evidence in
-GOAL.md, ARTIFACTS.md and README.md. Exits 0 only when every
-check passes.
+Checks the matcher in dispatch.py, the recorded evidence in
+GOAL.md, ARTIFACTS.md and README.md, the publish manifest in
+hugf_manifest.md, and that no upload is claimed before one ran.
+Exits 0 only when every check passes.
 """
 import hashlib
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -18,12 +20,14 @@ if str(HERE) not in sys.path:
 import dispatch as d
 
 # Values printed by the HivemindOS runner for the file set before
-# this commit (run 45588014110, 2026-11-25 09:43 UTC).
+# this commit (run 45618100411, 2026-11-25 12:53 UTC).
 RECORDED_GOAL_SHA256 = (
     "ecb04afed903686d5d4d4c9f9c467f86f31b6e025d215895e46df64ba4d8aa12"
 )
-RECORDED_RUN = "45588014110"
-RECORDED_RUN_UTC = "2026-11-25 09:43 UTC"
+RECORDED_RUN = "45618100411"
+RECORDED_RUN_UTC = "2026-11-25 12:53 UTC"
+MID_RUN = "45588014110"
+MID_RUN_UTC = "2026-11-25 09:43 UTC"
 EARLIER_RUN = "45225896912"
 EARLIER_RUN_UTC = "2026-11-23 17:16 UTC"
 
@@ -66,10 +70,13 @@ def main():
     artifacts = text_of("ARTIFACTS.md")
     check("python3 self_test.py" in artifacts,
           "ARTIFACTS.md records the exact test command")
-    check("Results: 24/24 checks passed" in artifacts,
-          "ARTIFACTS.md records the 24/24 runner output verbatim")
+    check("Results: 31/31 checks passed" in artifacts,
+          "ARTIFACTS.md records the 31/31 runner output verbatim")
     check(RECORDED_RUN in artifacts and RECORDED_RUN_UTC in artifacts,
-          "ARTIFACTS.md records run 45588014110 with its UTC time")
+          "ARTIFACTS.md records run 45618100411 with its UTC time")
+    check("Results: 24/24 checks passed" in artifacts
+          and MID_RUN in artifacts and MID_RUN_UTC in artifacts,
+          "ARTIFACTS.md keeps the 24/24 run as history")
     check("Results: 16/16 checks passed" in artifacts
           and EARLIER_RUN in artifacts and EARLIER_RUN_UTC in artifacts,
           "ARTIFACTS.md keeps the earlier 16/16 run as history")
@@ -80,12 +87,36 @@ def main():
     check("test-pending" in artifacts,
           "ARTIFACTS.md marks this commit test-pending")
 
+    # Upload record: present, and honest that nothing was uploaded.
+    check("## Upload record" in artifacts,
+          "ARTIFACTS.md has an upload-record section")
+    check("NOT UPLOADED" in artifacts,
+          "ARTIFACTS.md marks the upload NOT UPLOADED")
+    check("Exact upload commands: NOT PERFORMED" in artifacts
+          and "UTC timestamp of the upload: NOT PERFORMED" in artifacts
+          and "Public dataset URL, fetch-checked after upload: NOT PERFORMED"
+          in artifacts,
+          "upload commands, timestamp and URL are explicit placeholders")
+    check(not re.search(r"https://huggingface\.co/datasets/hivepunk-1071-f79faf84/agent-dispatch\b",
+                        artifacts.split("## Upload record", 1)[1]),
+          "no dataset URL is presented as a live upload result")
+
     readme = text_of("README.md")
     check("test-pending" in readme and "GOAL.md" in readme,
           "README.md is test-pending and references GOAL.md")
-    check(RECORDED_RUN in readme and "24/24" in readme,
-          "README.md records the 24/24 run")
+    check(RECORDED_RUN in readme and "31/31" in readme,
+          "README.md records the 31/31 run")
     check(EARLIER_RUN in readme, "README.md keeps the earlier run id")
+
+    manifest = text_of("hugf_manifest.md")
+    check("hivepunk-1071-f79faf84/agent-dispatch" in manifest,
+          "manifest names the intended account/name")
+    check("README.md" in manifest and "data/" in manifest,
+          "manifest lists README.md and data/")
+    check("INTENDED, NOT LIVE" in manifest and "NOT PERFORMED" in manifest,
+          "manifest marks the URL intended and the checks not performed")
+    check("Do not send: GOAL.md" in manifest,
+          "manifest excludes GOAL.md from the upload")
 
     rules = [
         {"tag": "Python", "strength": 2, "label": "low"},
