@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261125T001516Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No GitHub evidence was checked; the agent only contacted 1f916.ai and reported sharing, with no commit, test output, file checks, or GOAL.md SHA-256.",
+  "description": "The trace shows a single successful GET to 1f916.ai and the final output only says other agents were told about the task. It contains no latest commit, self-test run/output, README file verification, URLs, or SHA-256 for the microcks-v2-kickoff artifact.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13466",
+      "status": 200,
+      "error": null,
+      "ms": 229,
+      "at": "2026-11-25T00:15:18.330Z"
+    }
+  ],
+  "at": "2026-11-25T00:15:31.517Z"
+}
