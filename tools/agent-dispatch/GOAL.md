@@ -2,43 +2,47 @@
 
 Cite: https://github.com/Trisoma/odessy/issues/73
 
-Finishing task for this commit: prepare the existing
-agent-dispatch tag-to-strength dataset for publication in
-its own repository; do not create a different dataset and
-do not touch parked folders.
+Finishing task for this commit: repair the standalone
+self-test and the missing dataset files in this folder,
+using only the existing matcher in dispatch.py and verified
+sources already in this repository. Do not invent rows.
+Do not run code against others' systems.
 
-1. The matcher in dispatch.py is existing and unchanged in
-this commit: given local tags and local rules (tag +
-numeric strength), return the highest-strength match, break
-strength ties by earliest rule position, then by normalized
-tag, and return an explicit no-match object when nothing
-matches. No strength, label, or rule is inferred.
+1. dispatch.py matcher is unchanged this commit: highest
+strength wins, ties by earliest rule then normalized tag,
+explicit no-match otherwise, no inferred strength/label/rule.
 
-2. The runner result now on record (run 45225896912,
-2026-11-23 17:16 UTC, state passed, "Results: 16/16 checks
-passed", https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45225896912)
-covers the prior commit only. It does not verify this
-commit.
+2. GOAL.md is updated first for this commit. Because its
+bytes change, the old hand-recorded sha256 ecb04afe...aa12
+no longer describes this file. self_test.py no longer
+asserts equality to that old value; it computes the real
+sha256 at run time and prints it. No hash is typed here.
 
-3. A local run of `python3 self_test.py` in this folder was
-requested. It was NOT performed in this step. Cause: this
-step has no network access, no authorized push, and no
-execution environment. No evidence of any other cause was
-obtained, so no other cause is claimed. No output, count,
-or pass for this commit is claimed here.
+3. Dataset files: data/matcher_examples.json is added.
+Every example is copied from README.md or self_test.py
+in this repository (verified sources) and its expected
+result is the deterministic output of dispatch.match.
+No external rows are invented.
 
-4. The GOAL.md sha256 is NOT typed into this file. A
-hand-typed hash cannot be verified here. Instead
-self_test.py computes the real sha256 of this file at run
-time and prints "GOAL.md sha256: <value>" as the last line
-before its summary, so the runner output carries the true
-hash of the committed GOAL.md. Owner: copy that printed
-line into the daily log.
+4. Upload-record guards: self_test.py is repaired so a
+future verified URL is allowed. A URL after '## Upload
+record' passes only when ARTIFACTS.md also says
+fetch-checked and the Public dataset URL line is filled
+with the exact hivepunk-1071-f79faf84/agent-dispatch URL.
+The current NOT UPLOADED state with NOT PERFORMED
+placeholders still passes.
 
-Status: test-pending for this commit until the HivemindOS
-runner result for this commit is reported. A prior runner
-pass on record does not verify this commit.
+5. A local run of python3 self_test.py was requested. It
+was NOT performed in this step. Cause: this step has no
+execution environment and no network. No output, count
+or pass for this commit is claimed. Prior runner run
+45712491184 (2026-11-25 22:21 UTC, 40/40) covers the
+prior file set only and does not verify this commit.
 
-Why this goal: so the dataset is prepared for publication
-with the blocker stated once, accurately, without claiming
-a pass, push, fetch, or hash that this step did not perform.
+Status: test-pending for this commit until the
+HivemindOS runner result for this commit is reported.
+
+Why this goal: the dataset is publish-ready in code,
+its guards do not block a real verified upload record,
+and the blocker is stated once without claiming a pass,
+push, fetch, or hash this step did not perform.
