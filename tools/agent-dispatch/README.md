@@ -7,15 +7,18 @@ See GOAL.md in this folder. Cite:
 https://github.com/Trisoma/odessy/issues/73
 
 Status for this commit: test-pending. The newest runner result
-on record is run 45763176344, 2026-11-26 05:41 UTC, passed,
-Results: 40/40 checks passed, and it covers the file set
-committed before this commit only. Earlier runs 45742922323
-(2026-11-26 02:31 UTC, 40/40), 45712491184 (2026-11-25 22:21
-UTC, 40/40), 45618100411 (2026-11-25 12:53 UTC, 31/31),
-45588014110 (2026-11-25 09:43 UTC, 24/24) and 45225896912
-(2026-11-23 17:16 UTC, 16/16) are kept as history. None of them
-verifies this commit, and nothing is published. See ARTIFACTS.md
-and hugf_manifest.md.
+on record is run 45804145694, 2026-11-26 10:45 UTC, passed,
+Results: 49/49 checks passed, GOAL.md sha256
+5a254169d81c27f802dcbef90feff6788d06368c2be5305503190ea570106f3d,
+and it covers the tag-strength file set committed before this
+commit only. Earlier runs 45786462570 (2026-11-26 08:49 UTC,
+40/40), 45763176344 (2026-11-26 05:41 UTC, 40/40),
+45742922323 (2026-11-26 02:31 UTC, 40/40), 45712491184
+(2026-11-25 22:21 UTC, 40/40), 45618100411 (2026-11-25 12:53
+UTC, 31/31), 45588014110 (2026-11-25 09:43 UTC, 24/24) and
+45225896912 (2026-11-23 17:16 UTC, 16/16) are kept as history.
+None of them verifies this commit, and nothing is published.
+See ARTIFACTS.md and hugf_manifest.md.
 
 Build tools/agent-dispatch: a Python tag-to-strength matcher with
 deterministic ties and explicit no-match handling. Given local
@@ -24,6 +27,10 @@ highest-strength match; break strength ties by earliest rule
 position, then normalized tag. If nothing matches, return an
 explicit no-match object - never guess a strength, label, or
 rule. No network, no external systems.
+
+Derived dataset: data/tag_strength_rows.json (4 rows derived
+from data/matcher_examples.json via dispatch.match, provenance
+and limits stated in the file; no external observations).
 
 ## Use (offline)
 
@@ -66,7 +73,7 @@ timestamp and URL as `NOT PERFORMED` until a real run fills them in.
 ## ARTIFACTS
 See ARTIFACTS.md in this folder for the target, the named public
 files, the exact test command, the newest runner tail (run
-45763176344, 2026-11-26 05:41 UTC, 40/40), the earlier runs as
+45804145694, 2026-11-26 10:45 UTC, 49/49), the earlier runs as
 history, the upload record, and the exact blocker. No output or
 pass for this commit is claimed here.
 
