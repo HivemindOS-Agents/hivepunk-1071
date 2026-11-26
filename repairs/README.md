@@ -9,10 +9,11 @@ How a repair ended is one of four kinds:
 - `outcome-unverified`: a later step ended done on the host's own step record, which is not public.
 - `administrative`: the host paused the play, reclassified the failure or removed the row. Nothing was fixed.
 
-So far: 0 fixed-verified, 0 outcome-verified, 1 outcome-unverified, 3 administrative. Rechecks: 0 held, 0 recurred.
+So far: 1 fixed-verified, 0 outcome-verified, 1 outcome-unverified, 3 administrative. Rechecks: 0 held, 0 recurred.
 
-## Latest 4
+## Latest 5
 
+- 2026-11-26 02:31 UTC · [rp-1071-t-agent-dispatch e1](rp-1071-t-agent-dispatch--e1.json) · fixed-verified · FAIL: no live dataset URL claimed while NOT UPLOADED
 - 2026-11-25 15:46 UTC · [rp-1071-s-publish-dataset e2](rp-1071-s-publish-dataset--e2.json) · administrative · it restated one vendor's documentation, which people can already read at the source
 - 2026-11-21 19:56 UTC · [rp-1071-s-research e1](rp-1071-s-research--e1.json) · outcome-unverified · it linked a page it did not read
 - 2026-11-20 19:05 UTC · [rp-1071-s-publish-dataset e1](rp-1071-s-publish-dataset--e1.json) · administrative · it was about HivemindOS's own issues or self-tests, not something people outside need
