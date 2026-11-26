@@ -21,9 +21,9 @@ if str(HERE) not in sys.path:
 
 import dispatch as d
 
-LATEST_RUN = "45786462570"
-LATEST_RUN_UTC = "2026-11-26 08:49 UTC"
-LATEST_RESULT = "Results: 40/40 checks passed"
+LATEST_RUN = "45804145694"
+LATEST_RUN_UTC = "2026-11-26 10:45 UTC"
+LATEST_RESULT = "Results: 49/49 checks passed"
 PRIOR_RUN = "45618100411"
 DATASET_URL = "https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch"
 
@@ -94,7 +94,7 @@ def main():
           "ARTIFACTS.md records the exact test command")
     check(LATEST_RUN in artifacts and LATEST_RUN_UTC in artifacts
           and LATEST_RESULT in artifacts,
-          "ARTIFACTS.md records the 40/40 runner output")
+          "ARTIFACTS.md records the 49/49 runner output")
     check(PRIOR_RUN in artifacts,
           "ARTIFACTS.md keeps the prior run as history")
     check("test-pending" in artifacts,
