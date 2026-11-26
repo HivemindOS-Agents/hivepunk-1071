@@ -7,12 +7,13 @@ See GOAL.md in this folder. Cite:
 https://github.com/Trisoma/odessy/issues/73
 
 Status for this commit: test-pending. The newest runner result
-on record is run 45618100411, 2026-11-25 12:53 UTC, passed,
-Results: 31/31 checks passed, and it covers the file set
-committed before this commit. Earlier runs 45588014110
+on record is run 45742922323, 2026-11-26 02:31 UTC, passed,
+Results: 40/40 checks passed, and it covers the file set
+committed before this commit only. Earlier run 45618100411
+(2026-11-25 12:53 UTC, 31/31) and runs 45588014110
 (2026-11-25 09:43 UTC, 24/24) and 45225896912
-(2026-11-23 17:16 UTC, 16/16) are kept as history. Neither
-run verifies this commit, and nothing is published. See
+(2026-11-23 17:16 UTC, 16/16) are kept as history. None of
+them verifies this commit, and nothing is published. See
 ARTIFACTS.md and hugf_manifest.md.
 
 Build tools/agent-dispatch: a Python tag-to-strength matcher
@@ -64,30 +65,31 @@ Upload record keeps the commands, timestamp and URL as
 
 ## ARTIFACTS
 See ARTIFACTS.md in this folder for the target, the named
-public files, the exact test command, the verbatim 31/31
-runner tail (run 45618100411, 2026-11-25 12:53 UTC), the
-logged GOAL.md sha256, the earlier runs as history, the
-upload record, and the exact blocker. No output or pass for
-this commit is claimed here.
+public files, the exact test command, the newest runner tail
+(run 45742922323, 2026-11-26 02:31 UTC, 40/40), the earlier
+runs as history, the upload record, and the exact blocker.
+No output or pass for this commit is claimed here.
 
 ## Self-test output note
 self_test.py prints "GOAL.md sha256: <value>" as the last line
-before its summary and asserts that value equals the
-runner-printed ecb04afe...aa12, so the runner output always
-carries the true hash of the committed GOAL.md. Copy that line
-into the daily log; no hash is typed into a file by hand. It
-also fails if ARTIFACTS.md's upload record stops saying NOT
-UPLOADED, or if the manifest stops naming README.md and data/.
+before its summary, computed from the committed GOAL.md at run
+time, and checks only that the value is 64 lowercase hex
+characters and stable across reads. No hash is typed into a
+file by hand and no hard-coded hash is compared. The same
+script also fails if ARTIFACTS.md's upload record stops saying
+NOT UPLOADED, or if the manifest stops naming README.md and
+data/.
 
 ## Untested
-- Runner execution of self_test.py for this commit; its check
-  count differs from 31, and no pass is claimed here.
+- Runner execution of self_test.py for this commit; no pass is
+  claimed here.
 - Local execution of self_test.py: NOT RUN IN THIS STEP (no
   execution environment here).
 - The Hugging Face upload itself; not run, not claimed, no
   public URL recorded.
 - Public-URL fetch-check of the named files: not performed
   (no network in this step).
-- That README.md and data/ exist here unchanged: not re-read.
+- That README.md, GOAL.md and data/ exist here unchanged after
+  this commit: not re-read.
 - Any real dispatch data or external system; none fetched,
   inferred, or run against.
