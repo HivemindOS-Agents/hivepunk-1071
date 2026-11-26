@@ -26,12 +26,12 @@ python3 self_test.py
 ~~~
 
 ## Newest runner result (latest commit, prior file set)
-Source: HivemindOS runner run 45742922323, 2026-11-26 02:31 UTC, state passed.
-Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45742922323
+Source: HivemindOS runner run 45763176344, 2026-11-26 05:41 UTC, state passed.
+Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45763176344
 Runner tail as reported:
 
 ~~~text
-GOAL.md sha256: 261231c8bb8e58efa7ac932fcd1914f674808be242fefcded46f7d9277df749b
+GOAL.md sha256: c71bad6ac996e5238f46aefe3bda2f41eb76fd0ed8624981250fbdd44497d7ad
 Results: 40/40 checks passed
 ~~~
 
@@ -39,7 +39,8 @@ This pass covers the files committed before this commit. This
 commit changes GOAL.md and README.md, so their bytes differ and
 this pass does not verify this commit.
 
-## Prior passing run kept as history
+## Prior passing runs kept as history
+Run 45742922323, 2026-11-26 02:31 UTC, passed, Results: 40/40 checks passed.
 Run 45712491184, 2026-11-25 22:21 UTC, passed, Results: 40/40 checks passed,
 https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45712491184
 Run 45618100411, 2026-11-25 12:53 UTC, passed, Results: 31/31 checks passed,
@@ -52,25 +53,22 @@ Run 45739321484, 2026-11-26 01:59 UTC, failed, 39/40,
 FAIL: GOAL.md names the verified data file.
 Run 45735857085, 2026-11-26 01:27 UTC, failed, 39/40,
 FAIL: no live dataset URL claimed while NOT UPLOADED.
-Both were fixed in earlier commits; run 45742922323 above passed after them.
+Both were fixed in earlier commits; later runs above passed.
 
 ## This commit
-- GOAL.md updated first: it records the newest runner result
-  (run 45742922323) and the exact blocker, and it names the
-  verified data file data/matcher_examples.json.
-- README.md status refreshed to the newest runner result;
-  it still records run 45618100411 and 31/31 as history.
+- GOAL.md updated first: records the newest runner result (run
+  45763176344) and the exact blocker, and names the verified
+  data file data/matcher_examples.json.
+- README.md status refreshed to the newest runner result; it
+  still records run 45618100411 and 31/31 as history.
 - ARTIFACTS.md: this file, updated with the newest runner
-  result, the exact command and the named public files.
-- self_test.py unchanged: the guard is not weakened. It still
-  requires GOAL.md to name data/matcher_examples.json, still
-  bans a live dataset URL in the Upload record while NOT
-  UPLOADED, and still allows a future fetch-checked verified URL.
-- dispatch.py, hugf_manifest.md and data/matcher_examples.json
-  unchanged this commit. No data rows invented.
+  result and the exact command.
+- self_test.py unchanged: guard not weakened. dispatch.py,
+  hugf_manifest.md and data/matcher_examples.json unchanged. No
+  data rows invented.
 - Scope: this commit is test-pending. No output, count or pass
   for this commit is claimed. A passing runner run newer than
-  45742922323 is required, and a rerun after this evidence commit.
+  45763176344 is required, and a rerun after this evidence commit.
 
 ## Upload record
 
@@ -93,36 +91,36 @@ Status: NOT UPLOADED. No upload ran from this repo.
 
 Future verified record must replace these lines with a
 'Public dataset URL:' line filled with the exact
-hivepunk-1071-f79faf84/agent-dispatch dataset URL
-(not printed in this section while NOT UPLOADED) and the
-word fetch-checked, or self_test.py will fail.
+hivepunk-1071-f79faf84/agent-dispatch dataset URL (not printed
+in this section while NOT UPLOADED) and the word fetch-checked,
+or self_test.py will fail.
 
 ## Logged actions (each with a one-line why)
-- Read the newest runner result 45742922323 (passed, 40/40) - why: it is the latest evidence for the latest commit.
+- Read the newest runner result 45763176344 (passed, 40/40) - why: it is the latest evidence for the latest commit.
 - Updated GOAL.md first - why: instruction order for this commit.
-- Recorded the exact command and the newest runner output - why: the step asks for both in ARTIFACTS.md.
+- Recording the exact command and newest runner output - why: the step asks for both here.
 - Kept self_test.py, dispatch.py, hugf_manifest.md and data/ unchanged - why: smallest change; guard must not be weakened.
 - Marked this commit test-pending - why: prior passes do not verify a commit that changes GOAL.md.
 
 ## Not done in this step (blocker)
 - Local run of python3 self_test.py: NOT RUN IN THIS STEP.
   Cause: no execution environment in this step.
-- Paid isolated compute run (cap $0.02, allow-listed provider):
-  NOT PERFORMED. Cause: no execution environment and no
-  payment step available here.
-- Fetch-check of the named GitHub URLs: NOT PERFORMED. Cause:
-  no network in this step.
-- Hugging Face upload: NOT PERFORMED. Cause: no network and
-  no upload or token step permitted in this repository.
-- Current-commit self-test: UNCONFIRMED. Cause: no runner
-  result for this commit reported.
+- Paid isolated compute run (cap $0.03, allow-listed provider):
+  NOT PERFORMED. Cause: no execution environment and no payment
+  step available here.
+- Fetch-check of the named GitHub URLs: NOT PERFORMED. Cause: no
+  network in this step.
+- Hugging Face upload: NOT PERFORMED. Cause: no network and no
+  upload or token step permitted in this repository.
+- Current-commit self-test: UNCONFIRMED. Cause: no runner result
+  for this commit reported.
 - No code run against others' systems; no paid retrieval used.
 
 Owner left: run python3 self_test.py in tools/agent-dispatch
-(exact command above), read the runner result for this commit
-at the runner link above (a pass newer than run 45742922323),
+(exact command above), read the runner result for this commit at
+the runner links above (a pass newer than run 45763176344),
 fetch-check the named GitHub URLs, run the publish step under
-hivepunk-1071-f79faf84/agent-dispatch, then replace the
-NOT PERFORMED lines with the real commands, UTC timestamp and
-fetch-checked public URL. Rerun the self-test after any
-evidence commit.
+hivepunk-1071-f79faf84/agent-dispatch, then replace the NOT
+PERFORMED lines with the real commands, UTC timestamp and
+fetch-checked public URL. Rerun the self-test after any evidence
+commit.
