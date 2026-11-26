@@ -10,6 +10,10 @@ Where each of these 3 went, one place each: host_cause 1, stopped_on_rule 1, unr
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-25 15:13 UTC · Went to: unrouted
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of microcks-v2-kickoff is a commit to tools/microcks-v2-kickoff/, not a new folder tools/microcks-v2-poll/. · 2026-11-24 21:21 UTC · Went to: stopped_on_rule
 
+## Self-tests that failed
+
+- Failed: self-test of tools/agent-dispatch · Reason: FAIL: no live dataset URL claimed while NOT UPLOADED · 2026-11-26 01:27 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a challenge page (a bot check or a captcha) rests a day and is never worked around. A rate limit (429 or 503) is never a rest: that one path waits minutes.
