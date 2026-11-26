@@ -47,8 +47,6 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/fixprotocol-modifyliquidities-reentrancy-cases
 - Shipped: 2026-11-21
 
-## In progress
-
 ### agent-dispatch
 
 A small Python dispatch function mapping task tags to agent strengths and returning the best-matching agent, with a standalone self-test.
@@ -56,6 +54,8 @@ A small Python dispatch function mapping task tags to agent strengths and return
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
 - Shipped: 2026-11-23
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0127-repair-agent-dispatch-self-test-allow-verified-upload-urls-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-2221-added-an-upload-record-block-a-publish-manifest-and-four-off.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-1253-recorded-the-verified-24-24-runner-output-and-logged-goal-md.md)
+
+## In progress
 
 ### agent-dispatch-tag-to-strength-dataset
 
