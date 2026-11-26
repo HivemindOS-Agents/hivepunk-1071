@@ -2,21 +2,22 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **passed**
-- Ran: 2026-11-25T22:21:39Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45712491184
-- Tested commit: efb055f4c95e52eef0db0222c47c5094e5fecb10
-- Verified by: runner
-- Check from: base
+- Result: **failed**
+- Ran: 2026-11-26T01:27:41Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45735857085
+- Tested commit: 5f9b29077e7d5fd04d6c8c2f200b026f190aa0b7
+- Verified by: none
+- Check from: none
 
 What it printed (what failed first, then its last lines):
 
 ~~~
+FAIL: no live dataset URL claimed while NOT UPLOADED
+usage: python3 dispatch.py INPUT.json [--out FILE]
 INPUT.json: {"tags": ["..."], "rules": [{"tag": "...", "strength": 1, "label": "..."}]}
 ok: CLI requires input
 ok: GOAL.md sha256 is 64 lowercase hex chars
 ok: GOAL.md sha256 is deterministic across reads
-ok: GOAL.md sha256 equals the runner-printed value
-GOAL.md sha256: ecb04afed903686d5d4d4c9f9c467f86f31b6e025d215895e46df64ba4d8aa12
-Results: 40/40 checks passed
+GOAL.md sha256: 33d900cb2239258fed53b4f2b346e2cae9c5c27b9a5a32e3739061527510512c
+Results: 39/40 checks passed
 ~~~
