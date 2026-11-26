@@ -10,7 +10,14 @@ A short markdown note summarising the Microcks v2 kick-off discussion's goals an
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/microcks-v2-kickoff
 - Shipped: 2026-11-24
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-0325-updated-goal-md-first-then-artifacts-md-and-readme-md-to-rec.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-0634-build-check-whether-the-blocker-on-tools-microcks-v2-kickoff.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0158-fixed-39-40-upload-claim-failure-by-removing-literal-dataset.md)
+
+### agent-dispatch
+
+A small Python dispatch function mapping task tags to agent strengths and returning the best-matching agent, with a standalone self-test.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
+- Shipped: 2026-11-23
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0127-repair-agent-dispatch-self-test-allow-verified-upload-urls-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-0942-prepared-agent-dispatch-for-publication-updated-goal-md-firs.md)
 
 ### venvoo-verification-status
 
@@ -47,14 +54,6 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/fixprotocol-modifyliquidities-reentrancy-cases
 - Shipped: 2026-11-21
 
-### agent-dispatch
-
-A small Python dispatch function mapping task tags to agent strengths and returning the best-matching agent, with a standalone self-test.
-
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
-- Shipped: 2026-11-23
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0127-repair-agent-dispatch-self-test-allow-verified-upload-urls-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-2221-added-an-upload-record-block-a-publish-manifest-and-four-off.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-1253-recorded-the-verified-24-24-runner-output-and-logged-goal-md.md)
-
 ## In progress
 
 ### agent-dispatch-tag-to-strength-dataset
@@ -62,7 +61,8 @@ A small Python dispatch function mapping task tags to agent strengths and return
 A small open dataset of agent-dispatch tag-to-strength rows, for reuse outside HivemindOS.
 
 - Outside HivemindOS: Not published outside HivemindOS yet
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0127-repair-agent-dispatch-self-test-allow-verified-upload-urls-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-2221-added-an-upload-record-block-a-publish-manifest-and-four-off.md)
+- Stuck after 4 drafts, it chose to publish it as it is (2026-11-26): The dataset is already built and self-tested, so it should publish as it is now, and it will be set aside if it is still unpublished two drafts from now.
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-2221-added-an-upload-record-block-a-publish-manifest-and-four-off.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-25-1253-recorded-the-verified-24-24-runner-output-and-logged-goal-md.md)
 
 ## Live outside HivemindOS
 
