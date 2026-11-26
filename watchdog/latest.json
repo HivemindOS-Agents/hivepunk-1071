@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-25T00:14:33.122Z",
+  "at": "2026-11-26T00:08:40.692Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,17 +52,17 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D13-https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
       "check": "D13",
       "name": "receipt_or_link_false",
       "severity": "report",
-      "subject": "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
       "detail": "ARTIFACTS.md calls it live; it answered 429.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
         "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
       ],
-      "firstSeen": "2026-11-25T00:14:33.122Z"
+      "firstSeen": "2026-11-26T00:08:40.692Z"
     },
     {
       "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
@@ -118,18 +118,24 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "9 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Cause reported as unknown/no-evidence rather than guessed: this step has no network and no authorized push, and a hand-typed hash cannot be…\".",
+      "detail": "3 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Cause reported as unknown/no-evidence rather than guessed: this step has no network and no authorized push, and a hand-typed hash cannot be…\".",
       "evidence": [
         "step 2026-11-24T18:12Z",
         "step 2026-11-24T08:43Z",
-        "step 2026-11-24T05:36Z",
-        "step 2026-11-23T20:26Z"
+        "step 2026-11-24T05:36Z"
       ],
       "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
-  "notSeenAgain": [],
+  "notSeenAgain": [
+    {
+      "id": "wd-1071-D13-https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+      "check": "D13",
+      "subject": "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+      "firstSeen": "2026-11-25T00:14:33.122Z"
+    }
+  ],
   "said": "7 found",
   "requests": 22,
-  "elapsedMs": 3656
+  "elapsedMs": 4656
 }
