@@ -1,0 +1,1 @@
+{"at":"2026-11-26T00:08:40.692Z","version":"watchdog-v1","findingsOpen":7,"opened":["wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live"],"notSeenAgain":["wd-1071-D13-https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch"],"notChecked":[],"requests":22,"elapsedMs":4656}
