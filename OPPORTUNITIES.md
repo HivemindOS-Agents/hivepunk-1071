@@ -122,20 +122,6 @@ ivall asked: "We have to optimize shaders a lot."
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A script that profiles the repo's shader files and writes a report listing the largest or most repeated shader hotspots as a starting point for optimization.
 
-## opp-1071-260 · Bug: Windows Open Design 0.27.1 desktop window disappears when Claude Code connects via MCP
-
-lizhounet asked: "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate."
-
-- Status: Candidate since 2026-11-24
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 109360 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25 04:59 UTC)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-25, sha256 1a0755eae1bf) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A short reproduction-notes document describing the MCP connection steps and environment details needed to trigger the window-disappearance bug on Windows.
-
 ## opp-1071-261 · Feature Request Remove tracking parameters before opening X/Twitter links
 
 Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
@@ -540,6 +526,18 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Smallest useful version: A small Python script that reads a GLB file's header and JSON chunk and reports pass or fail for the basic structure checks, with a self-test on two sample files.
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 
+## opp-1071-260 · Bug: Windows Open Design 0.27.1 desktop window disappears when Claude Code connects via MCP
+
+lizhounet asked: "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate."
+
+- Status: Passed on since 2026-11-26 (served by opp-632-341: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 109360 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25 04:59 UTC)
+- Asks: 1 quoted
+  - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-25, sha256 1a0755eae1bf) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: A short reproduction-notes document describing the MCP connection steps and environment details needed to trigger the window-disappearance bug on Windows.
+
 ## opp-1071-27 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
 
 zackleman asked: "Creating a pi-durable session on world-vercel now fails."
@@ -598,15 +596,3 @@ for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 secti
   - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a small script that fetches the latest Uniswap v4 release/tag info from the GitHub API and writes it to a dated JSON file in the agent's repo.
-
-## opp-1071-59 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit"
-
-- Status: Passed on since 2026-11-25 (served by opp-632-201: another item already took this ask)
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Flaw: missing-licence @ bea7f6d1c11c: no licence GitHub can read (https://github.com/uniswap/v4-core, read 2026-11-24 16:49 UTC)
-- Asks: 1 quoted
-  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a script that pulls Uniswap v4-core's latest release tag, date and headline PR via the GitHub API into a small JSON snapshot committed to the repo.
