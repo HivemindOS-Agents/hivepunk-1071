@@ -58,6 +58,56 @@
         "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fhugging-face-dataset-pages-and-model-card-facts&limit=100",
         "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fhugging-face-dataset-pages-and-model-card-facts&limit=100"
       ]
+    },
+    {
+      "checkpoint": "7d",
+      "at": "2026-11-26T00:24:27.195Z",
+      "repo": "hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+      "likes": {
+        "state": "read",
+        "count": 0
+      },
+      "discussions": {
+        "state": "read",
+        "count": 0
+      },
+      "dependents": {
+        "state": "read",
+        "count": 0
+      },
+      "collections": {
+        "state": "read",
+        "count": 0
+      },
+      "citations": {
+        "state": "not-read",
+        "why": "No public index lists the pages that link a dataset."
+      },
+      "forks": {
+        "state": "not-read",
+        "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+      },
+      "downloads": {
+        "state": "read",
+        "count": 41,
+        "label": "mixed"
+      },
+      "hive": {
+        "label": "hive",
+        "likes": 0,
+        "discussions": 0,
+        "dependents": 0,
+        "collections": 0
+      },
+      "outsideSignal": "none",
+      "sources": [
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts",
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts/likers",
+        "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hugging-face-dataset-pages-and-model-card-facts/discussions",
+        "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fhugging-face-dataset-pages-and-model-card-facts&limit=100",
+        "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fhugging-face-dataset-pages-and-model-card-facts&limit=100",
+        "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fhugging-face-dataset-pages-and-model-card-facts&limit=100"
+      ]
     }
   ]
 }
