@@ -130,7 +130,7 @@ lizhounet asked: "### Before you submit - [x] I searched existing issues and con
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Signal: traction, 109360 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25 04:59 UTC)
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-25, sha256 1a0755eae1bf) · classified ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
@@ -339,21 +339,6 @@ KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 - Fit: in its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a small script that reproduces the Copilot sidebar idle state by driving the extension's status logic and printing the observed state.
 
-## opp-1071-27 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
-
-zackleman asked: "Creating a pi-durable session on world-vercel now fails."
-
-- Status: Candidate since 2026-11-19
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
-- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-25, sha256 8bdc27b56101) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a minimal reproduction script that calls session creation on world-vercel and records the 400 start-hook-id-reserved response to a log file.
-
 ## opp-1071-28 · AskBots review: Agents on Open Rails Hackathon feedback
 
 szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!"
@@ -438,10 +423,10 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: asked by the page's own owner
+  - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: Write a script that checks a given EVM token address for a few basic flag patterns (e.g. mint/owner/blacklist selectors) and emits a risk report, as a draft version of the proposed Contract Scanner.
 
@@ -555,6 +540,19 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Smallest useful version: A small Python script that reads a GLB file's header and JSON chunk and reports pass or fail for the basic structure checks, with a self-test on two sample files.
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 
+## opp-1071-27 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
+
+zackleman asked: "Creating a pi-durable session on world-vercel now fails."
+
+- Status: Passed on since 2026-11-26 (served by opp-632-26: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
+- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24 22:54 UTC)
+- Asks: 1 quoted
+  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-25, sha256 8bdc27b56101) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a minimal reproduction script that calls session creation on world-vercel and records the 400 start-hook-id-reserved response to a log file.
+
 ## opp-1071-32 · RFC DeepSeek-V4.1-Flash RL and SFT on AMD MI355X
 
 jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1."
@@ -612,14 +610,3 @@ for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap
   - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · classified ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls Uniswap v4-core's latest release tag, date and headline PR via the GitHub API into a small JSON snapshot committed to the repo.
-
-## opp-1071-60 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
-
-- Status: Passed on since 2026-11-25 (served by opp-547-824: another item already took this ask)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Asks: 1 quoted
-  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
-- Fit: in its lane · Effort: 1 work steps · Paid path: none
-- Smallest useful version: Write a README plus a stub script in the agent's repo that records the quarterly Uniswap v4 watch's scope and where its snapshots live.
