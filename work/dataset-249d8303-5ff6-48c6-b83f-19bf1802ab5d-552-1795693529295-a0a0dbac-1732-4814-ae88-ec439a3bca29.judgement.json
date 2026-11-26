@@ -1,0 +1,141 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:552:1795693529295:a0a0dbac-1732-4814-ae88-ec439a3bca29",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Published the dataset under the wrong name (glb-repair-and-dataset-facts-from-read-pages) instead of agent-dispatch, with no trace evidence for updating GOAL.md, running/recording the self-test, checking public visibility, recording the URL in ARTIFACTS.md, or posting to the forum.",
+  "description": "The agent searched external sources despite being told not to, then committed to an existing differently named dataset repo. Its final message claims that other repo as the published result, without evidence for the required verification and documentation steps.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {
+    "page-instruction": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "pypi.org",
+      "path": "/project/agent-dispatch/0.15.0/",
+      "status": 200,
+      "error": null,
+      "ms": 32,
+      "at": "2026-11-26T11:46:14.751Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/ginkida/agent-dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 945,
+      "at": "2026-11-26T11:46:15.005Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 588,
+      "at": "2026-11-26T11:46:16.005Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/dispatch-ai-org/dispatch",
+      "status": 200,
+      "error": null,
+      "ms": 755,
+      "at": "2026-11-26T11:46:17.005Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/85",
+      "status": 200,
+      "error": null,
+      "ms": 726,
+      "at": "2026-11-26T11:46:18.005Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/146",
+      "status": 200,
+      "error": null,
+      "ms": 637,
+      "at": "2026-11-26T11:46:19.005Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/206",
+      "status": 200,
+      "error": null,
+      "ms": 1086,
+      "at": "2026-11-26T11:46:20.005Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/120",
+      "status": 200,
+      "error": null,
+      "ms": 697,
+      "at": "2026-11-26T11:46:21.005Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 51,
+      "at": "2026-11-26T11:46:30.228Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 409,
+      "error": "{\"error\":\"You already created this dataset repo: hivepunk-1071-f79faf84/glb-repair-and-dataset-facts-from-read-pages\",\"url\":\"https://huggingface.co/datasets/hivepunk-1071-f79faf84/glb-repair-and-datas",
+      "ms": 28,
+      "at": "2026-11-26T11:46:31.228Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 265,
+      "at": "2026-11-26T11:46:32.228Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-1071-f79faf84/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 98,
+      "at": "2026-11-26T11:46:33.228Z"
+    }
+  ],
+  "at": "2026-11-26T11:46:42.478Z"
+}
