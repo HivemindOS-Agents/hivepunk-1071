@@ -1,0 +1,24 @@
+{
+  "source": "README.md; self_test.py (verified repo sources only)",
+  "note": "Examples copied from README.md/self_test.py in this repository. Expected is dispatch.match output. No external rows invented.",
+  "examples": [
+    {
+      "name": "readme-tie",
+      "tags": ["Python", "go"],
+      "rules": [{"tag": "python", "strength": 5, "label": "high"}, {"tag": "go", "strength": 5, "label": "go-high"}],
+      "expected": {"matched": true, "strength": 5, "tag": "python", "label": "high", "rule_index": 0, "reason": "matched"}
+    },
+    {
+      "name": "selftest-no-match",
+      "tags": ["unknown-tag"],
+      "rules": [{"tag": "Python", "strength": 2, "label": "low"}, {"tag": "python", "strength": 5, "label": "high"}, {"tag": "go", "strength": 5, "label": "go-high"}],
+      "expected": {"matched": false, "strength": null, "tag": null, "label": null, "rule_index": null, "reason": "no-match"}
+    },
+    {
+      "name": "selftest-reversed-go",
+      "tags": ["go"],
+      "rules": [{"tag": "go", "strength": 5, "label": "go-high"}, {"tag": "python", "strength": 5, "label": "high"}, {"tag": "Python", "strength": 2, "label": "low"}],
+      "expected": {"matched": true, "strength": 5, "tag": "go", "label": "go-high", "rule_index": 0, "reason": "matched"}
+    }
+  ]
+}
