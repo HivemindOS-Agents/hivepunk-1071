@@ -1,0 +1,56 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "1071",
+  "repair": "rp-1071-t-agent-dispatch",
+  "episode": 1,
+  "repairKind": "selfTest",
+  "artifact": "agent-dispatch",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45735857085",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/1071.json"
+  },
+  "cause": {
+    "text": "FAIL: no live dataset URL claimed while NOT UPLOADED",
+    "hash": "fail: no live dataset url claimed while not uploaded",
+    "laterCauses": [
+      "FAIL: GOAL.md names the verified data file"
+    ],
+    "hashes": [
+      "fail: no live dataset url claimed while not uploaded",
+      "fail: goal.md names the verified data file"
+    ]
+  },
+  "openedAt": "2026-11-26T01:27:41.000Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 2,
+    "sameCause": 1,
+    "recurrences": 0
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [
+      "099971c1afa2",
+      "92bb8a6183bb"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "runner",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45742922323"
+  },
+  "close": {
+    "kind": "fixed-verified",
+    "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45742922323)",
+    "at": "2026-11-26T02:31:19.000Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-12-03T02:31:19.000Z"
+}
