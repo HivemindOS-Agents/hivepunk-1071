@@ -27,8 +27,13 @@
   "command": "git checkout dc6ab7a32044c9b1f4882078e53024b1ef132b90 && cd tools/agent-dispatch && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-agent-dispatch-dc6ab7a.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45742922323",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "65",
+    "at": "2026-11-26T03:20:47Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45748288918"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 7,
