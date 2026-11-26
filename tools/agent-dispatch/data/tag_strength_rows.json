@@ -1,0 +1,12 @@
+{
+  "provenance": "Derived from data/matcher_examples.json verified examples using dispatch.match in this repository. No external observations.",
+  "limits": "Only the 3 repo examples, 4 derived rows. Strengths are rule strengths from those examples, not observed real-world data. No-match row carries null tag/strength/label/rule_index.",
+  "source": "data/matcher_examples.json; dispatch.py (dispatch.match)",
+  "row_count": 4,
+  "rows": [
+    {"source_example": "readme-tie", "normalized_tags": ["python", "go"], "tag": "python", "strength": 5, "label": "high", "rule_index": 0, "matched": true, "reason": "matched"},
+    {"source_example": "readme-tie", "normalized_tags": ["python", "go"], "tag": "go", "strength": 5, "label": "go-high", "rule_index": 1, "matched": true, "reason": "matched"},
+    {"source_example": "selftest-no-match", "normalized_tags": ["unknown-tag"], "tag": null, "strength": null, "label": null, "rule_index": null, "matched": false, "reason": "no-match"},
+    {"source_example": "selftest-reversed-go", "normalized_tags": ["go"], "tag": "go", "strength": 5, "label": "go-high", "rule_index": 0, "matched": true, "reason": "matched"}
+  ]
+}
