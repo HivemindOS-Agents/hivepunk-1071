@@ -2,10 +2,11 @@
 """Standalone offline self-test. No arguments, no network.
 
 Checks dispatch.match, GOAL/ARTIFACTS/README evidence,
-hugf_manifest.md, the verified data file, and that the
-upload record is honest: either NOT UPLOADED with no live
-URL claimed, or a future verified URL that is fetch-checked.
-Exits 0 only when every check passes.
+hugf_manifest.md, the verified data file, the derived
+tag-strength rows (recomputed from matcher_examples.json),
+and that the upload record is honest: either NOT UPLOADED
+with no live URL claimed, or a future verified URL that is
+fetch-checked. Exits 0 only when every check passes.
 """
 import hashlib
 import json
@@ -20,8 +21,8 @@ if str(HERE) not in sys.path:
 
 import dispatch as d
 
-LATEST_RUN = "45712491184"
-LATEST_RUN_UTC = "2026-11-25 22:21 UTC"
+LATEST_RUN = "45786462570"
+LATEST_RUN_UTC = "2026-11-26 08:49 UTC"
 LATEST_RESULT = "Results: 40/40 checks passed"
 PRIOR_RUN = "45618100411"
 DATASET_URL = "https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch"
@@ -56,6 +57,28 @@ def goal_sha256():
     return hashlib.sha256((HERE / "GOAL.md").read_bytes()).hexdigest()
 
 
+def derived_rows(examples):
+    rows = []
+    for ex in examples:
+        result = d.match(ex["tags"], ex["rules"])
+        if not result["matched"]:
+            rows.append({"source_example": ex["name"],
+                         "normalized_tags": result["normalized_tags"],
+                         "tag": None, "strength": None, "label": None,
+                         "rule_index": None, "matched": False,
+                         "reason": "no-match"})
+        else:
+            for cand in result["candidates"]:
+                rows.append({"source_example": ex["name"],
+                             "normalized_tags": result["normalized_tags"],
+                             "tag": cand["tag"],
+                             "strength": cand["strength"],
+                             "label": cand["label"],
+                             "rule_index": cand["rule_index"],
+                             "matched": True, "reason": "matched"})
+    return rows
+
+
 def main():
     goal = text_of("GOAL.md")
     check("https://github.com/Trisoma/odessy/issues/73" in goal,
@@ -63,6 +86,8 @@ def main():
     check("test-pending" in goal, "GOAL.md marks this commit test-pending")
     check("data/matcher_examples.json" in goal,
           "GOAL.md names the verified data file")
+    check("data/tag_strength_rows.json" in goal,
+          "GOAL.md names the derived tag-strength rows file")
 
     artifacts = text_of("ARTIFACTS.md")
     check("python3 self_test.py" in artifacts,
@@ -78,6 +103,8 @@ def main():
           "ARTIFACTS.md does not claim a local run in this step")
     check("data/matcher_examples.json" in artifacts,
           "ARTIFACTS.md names the repaired dataset file")
+    check("data/tag_strength_rows.json" in artifacts,
+          "ARTIFACTS.md names the derived rows file")
     check("https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch" in artifacts,
           "ARTIFACTS.md lists the public repository URL")
 
@@ -119,9 +146,9 @@ def main():
     check("Do not send: GOAL.md" in manifest,
           "manifest excludes GOAL.md from the upload")
 
-    # Verified dataset file: only examples from repo sources.
     data_path = HERE / "data" / "matcher_examples.json"
     check(data_path.is_file(), "data/matcher_examples.json exists")
+    examples = []
     if data_path.is_file():
         payload = json.loads(data_path.read_text(encoding="utf-8"))
         check(payload.get("source", "").startswith("README.md; self_test.py"),
@@ -133,6 +160,25 @@ def main():
             exp = ex["expected"]
             check(all(result[k] == exp[k] for k in exp),
                   "data example '%s' matches dispatch.match" % ex["name"])
+
+    rows_path = HERE / "data" / "tag_strength_rows.json"
+    check(rows_path.is_file(), "data/tag_strength_rows.json exists")
+    if rows_path.is_file() and examples:
+        payload = json.loads(rows_path.read_text(encoding="utf-8"))
+        check("Derived from data/matcher_examples.json" in payload.get("provenance", ""),
+              "derived rows cite provenance from matcher_examples")
+        check("No external observations" in payload.get("provenance", ""),
+              "derived rows state no external observations")
+        check(bool(payload.get("limits", "")),
+              "derived rows state limits")
+        expected_rows = derived_rows(examples)
+        check(payload.get("row_count") == len(expected_rows) == 4,
+              "derived rows file has exactly 4 rows")
+        check(payload.get("rows") == expected_rows,
+              "derived rows equal recomputed dispatch.match rows")
+        check(any(r["reason"] == "no-match" and r["matched"] is False
+                  for r in payload.get("rows", [])),
+              "derived rows include an explicit no-match row")
 
     rules = [
         {"tag": "Python", "strength": 2, "label": "low"},
