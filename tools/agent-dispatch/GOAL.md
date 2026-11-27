@@ -4,9 +4,25 @@ Cite: https://github.com/Trisoma/odessy/issues/73
 
 Finishing task for this commit: record the newest runner
 pass for the tag-strength dataset revision in ARTIFACTS.md
-(with exact command, output and tested revision), and
-leave this commit test-pending. GOAL.md is updated first,
-so its bytes and sha256 change.
+(with exact command, output and tested revision), break
+the verification loop by separating tested inputs from
+changing evidence, and leave this commit test-pending.
+GOAL.md is updated first, so its bytes and sha256 change.
+
+## Tested inputs vs changing evidence (loop broken)
+Tested inputs - the only files whose change makes a new
+tested revision: dispatch.py, data/matcher_examples.json,
+data/tag_strength_rows.json. self_test.py recomputes the
+derived rows from the matcher examples via dispatch.match
+and checks all three.
+Evidence files - GOAL.md, ARTIFACTS.md, README.md and the
+latest-run constants in self_test.py. Updating only these
+records a new runner result; it does not change the tested
+inputs above and does not by itself create a new tested
+revision to re-run. The runner-reported GOAL.md sha256 is
+kept as history of the revision that was tested, printed by
+self_test.py at run time, never hard-coded as a pass gate.
+No test was weakened to achieve this separation.
 
 1. Dataset: data/matcher_examples.json supplies 3
 illustrated examples (tags + rules + expected results),
@@ -21,26 +37,27 @@ examples, not real-world data. No rows invented.
 
 2. Newest runner result on record (covers the
 tag-strength revision): HivemindOS runner run
-45891956381, 2026-11-26 20:34 UTC, state passed,
+45930351100, 2026-11-27 02:47 UTC, state passed,
 "Results: 49/49 checks passed". Runner page:
-https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45891956381
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45930351100
 That run reported "GOAL.md sha256:
-43ea88d3c5b508844f88d8a27923b349f9535c0e1a0ac437a8819a32cc13ba88".
+66e3c88a5273b8648f07eed89eea8ecd7a8419ee6c574f38c99381e7ffcb5211".
 Exact command for that run, offline, from this folder,
 no arguments, no network: python3 self_test.py
-Because this commit changes GOAL.md, that pass does
-not verify this commit.
+Because this commit changes GOAL.md and the latest-run
+constants in self_test.py, that pass does not verify this
+commit. It verifies the tested inputs listed above.
 
 3. Independent model review: NOT PERFORMED / NOT
-CONFIRMED in this step (earlier step likewise). No
+CONFIRMED in this step (earlier steps likewise). No
 review output was obtained, so no gap is claimed and no
 regression test or fix was added on the basis of a
 review. Inspection of the actual rows, derivation and
 standalone tests in the supplied files found no verified
 failure (newest run 49/49), so no code, data or guard was
 changed to fix an observed failure. self_test.py only
-updates its latest-run constants to 45891956381 /
-2026-11-26 20:34 UTC / 49/49. dispatch.py, data/*.json and
+updates its latest-run constants to 45930351100 /
+2026-11-27 02:47 UTC / 49/49. dispatch.py, data/*.json and
 hugf_manifest.md are unchanged.
 
 4. GOAL.md sha256 is computed by self_test.py at run
@@ -49,10 +66,12 @@ from quoting the runner-reported value above.
 
 Status: test-pending for this commit until the runner
 result for this exact commit is reported. A passing
-runner run newer than 45891956381 is required. No
-evidence-only follow-up loop is planned.
+runner run newer than 45930351100 is required. After
+that, evidence-only updates to GOAL.md / ARTIFACTS.md /
+README.md record history under the separation above and
+do not restart the loop unless a tested input changes.
 
 Why this goal: bind the verified 49/49 pass to the
-exact tag-strength revision and its command/output,
-state plainly what could not be confirmed, and avoid
-claiming a pass or review this step did not run.
+exact tested inputs and its command/output, state plainly
+what could not be confirmed, and avoid claiming a pass or
+review this step did not run.
