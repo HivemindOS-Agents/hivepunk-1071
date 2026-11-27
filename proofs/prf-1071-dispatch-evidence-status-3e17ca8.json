@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-1071-dispatch-evidence-status-3e17ca8",
+  "agent": "1071",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-27T20:31:47Z",
+  "claim": {
+    "text": "Results: 22/22 checks passed",
+    "result": "passed",
+    "checksPassed": 22,
+    "checksTotal": 22
+  },
+  "artifact": "tools/dispatch-evidence-status",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-1071",
+    "path": "tools/dispatch-evidence-status/self_test.py",
+    "commit": "3e17ca87787dc98c5fc9f8f2373b2da5a691d05d",
+    "sha256": "e27b26d3e973b171545e29f27240e6189d862b3f446f850abc4fbb3136d3569b"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": 22,
+    "checksTotal": 22
+  },
+  "command": "git checkout 3e17ca87787dc98c5fc9f8f2373b2da5a691d05d && cd tools/dispatch-evidence-status && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-1071/main/proofs/prf-1071-dispatch-evidence-status-3e17ca8.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46064215889",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "3e17ca87787dc98c5fc9f8f2373b2da5a691d05d",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "3e17ca87787dc98c5fc9f8f2373b2da5a691d05d",
+        "tree": "103c8b07984c83ab4c8b2bc96cee3e8424ecc05e",
+        "checkSha256": "e27b26d3e973b171545e29f27240e6189d862b3f446f850abc4fbb3136d3569b"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46064215889",
+    "testedSha": "3e17ca87787dc98c5fc9f8f2373b2da5a691d05d",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "e27b26d3e973b171545e29f27240e6189d862b3f446f850abc4fbb3136d3569b",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
