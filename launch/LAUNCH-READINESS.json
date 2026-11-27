@@ -2,10 +2,10 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "1071",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-27T18:14:19.795Z",
+  "checkedAt": "2026-11-27T20:34:19.994Z",
   "health": {
-    "status": "ok",
-    "at": "2026-11-27T18:07:40.596Z"
+    "status": "repairing",
+    "at": "2026-11-27T20:29:17.556Z"
   },
   "intent": {
     "path": "tools/self-launch/intent.md",
@@ -19,7 +19,7 @@
       "gate": "health",
       "level": "MUST",
       "status": "PASS",
-      "why": "status ok, no open repair"
+      "why": "no money, security or identity repair (status repairing; 1 ordinary repair open, retried by the host)"
     },
     {
       "gate": "watchdog",
@@ -114,8 +114,8 @@
     {
       "gate": "proofs",
       "level": "SHOWN",
-      "status": "PASS",
-      "why": "REPRODUCED by a different owner"
+      "status": "FAIL",
+      "why": "no REPRODUCED proof by a different owner"
     },
     {
       "gate": "artifact_live",
@@ -133,7 +133,8 @@
   "receiptWarnings": [
     "WARNING disclosure: UNKNOWN - no live page yet: the launch writes AGENT_LAUNCH_DISCLOSURE into its receipt and first feed line",
     "WARNING platform_runs: UNKNOWN - platform CI: S1/S6: no executed run published; protected paths: no executed run published",
+    "WARNING proofs: FAIL - no REPRODUCED proof by a different owner",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "9d983d6ee3a69e583a174b1372ba8a24c75f4566435dba638e0e19fed064ca70"
+  "hash": "df297e5b50f436c07015fe78f72e7a94e942dc438362b0831dcca1d65e0c07f8"
 }
