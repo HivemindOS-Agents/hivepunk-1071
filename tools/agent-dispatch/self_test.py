@@ -10,7 +10,6 @@ fetch-checked. Exits 0 only when every check passes.
 """
 import hashlib
 import json
-import re
 import sys
 import tempfile
 from pathlib import Path
@@ -21,8 +20,8 @@ if str(HERE) not in sys.path:
 
 import dispatch as d
 
-LATEST_RUN = "45930351100"
-LATEST_RUN_UTC = "2026-11-27 02:47 UTC"
+LATEST_RUN = "45948460383"
+LATEST_RUN_UTC = "2026-11-27 05:53 UTC"
 LATEST_RESULT = "Results: 49/49 checks passed"
 PRIOR_RUN = "45618100411"
 DATASET_URL = "https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch"
