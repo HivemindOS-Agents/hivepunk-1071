@@ -2,11 +2,12 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-26T00:08:40.692Z",
+  "at": "2026-11-27T00:11:05.920Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
     "D0",
+    "D4",
     "D1",
     "D2",
     "D3",
@@ -19,11 +20,11 @@
     "D22",
     "D23",
     "D24",
+    "D26",
     "D28"
   ],
   "notChecked": [],
   "notBuilt": [
-    "D4",
     "D5",
     "D6",
     "D7",
@@ -35,8 +36,7 @@
     "D19",
     "D20",
     "D21",
-    "D25",
-    "D26"
+    "D25"
   ],
   "findings": [
     {
@@ -52,17 +52,16 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "check": "D13",
-      "name": "receipt_or_link_false",
+      "id": "wd-1071-D15-reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
+      "check": "D15",
+      "name": "review_hollow",
       "severity": "report",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "detail": "ARTIFACTS.md calls it live; it answered 429.",
+      "subject": "reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json"
       ],
-      "firstSeen": "2026-11-26T00:08:40.692Z"
+      "firstSeen": "2026-11-27T00:11:05.920Z"
     },
     {
       "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
@@ -77,28 +76,16 @@
       "firstSeen": "2026-11-23T00:03:36.145Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
-      "detail": "A visibility receipt from 2026-11-22T06:06:18.195Z still says it was announced nowhere and it was not disclosed.",
+      "id": "wd-1071-D17---agent-dispatch-tag-to-strength-dataset-2026-11-26-:-It-chose-to-publish-it-a-",
+      "check": "D17",
+      "name": "publish_while_failing",
+      "severity": "repair",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- agent-dispatch-tag-to-strength-dataset (2026-11-26): It chose to publish it as it is on 2026-11-26 (The dataset is already built and self-tested, so it shoul…\"",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
       ],
-      "firstSeen": "2026-11-24T00:04:27.853Z"
-    },
-    {
-      "id": "wd-1071-D15-reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
-      "detail": "A value review with no self-test, no evidence and no claim proof.",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json"
-      ],
-      "firstSeen": "2026-11-22T00:01:44.673Z"
+      "firstSeen": "2026-11-27T00:11:05.920Z"
     },
     {
       "id": "wd-1071-D18-artifacts",
@@ -113,29 +100,45 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D23-owner",
-      "check": "D23",
-      "name": "owner_handoff",
-      "severity": "report",
-      "subject": "its steps",
-      "detail": "3 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Cause reported as unknown/no-evidence rather than guessed: this step has no network and no authorized push, and a hand-typed hash cannot be…\".",
+      "id": "wd-1071-D22-tools/agent-dispatch/matcher_examples.json",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/agent-dispatch/matcher_examples.json",
+      "detail": "A step said it built tools/agent-dispatch/matcher_examples.json; it is not in the commit.",
       "evidence": [
-        "step 2026-11-24T18:12Z",
-        "step 2026-11-24T08:43Z",
-        "step 2026-11-24T05:36Z"
+        "step 2026-11-26T01:27Z"
       ],
-      "firstSeen": "2026-11-17T14:46:28.176Z"
+      "firstSeen": "2026-11-27T00:11:05.920Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-1071-D13-https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
+      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
       "check": "D13",
-      "subject": "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch",
-      "firstSeen": "2026-11-25T00:14:33.122Z"
+      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+      "firstSeen": "2026-11-26T00:08:40.692Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
+      "firstSeen": "2026-11-24T00:04:27.853Z"
+    },
+    {
+      "id": "wd-1071-D15-reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
+      "firstSeen": "2026-11-22T00:01:44.673Z"
+    },
+    {
+      "id": "wd-1071-D23-owner",
+      "check": "D23",
+      "subject": "its steps",
+      "firstSeen": "2026-11-17T14:46:28.176Z"
     }
   ],
-  "said": "7 found",
+  "said": "6 found",
   "requests": 22,
-  "elapsedMs": 4656
+  "elapsedMs": 2914
 }
