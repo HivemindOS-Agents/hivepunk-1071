@@ -1,0 +1,482 @@
+{
+  "v": 1,
+  "kind": "outcome-backfill",
+  "agent": "1071",
+  "updatedAt": "2026-11-27T06:00:20.921Z",
+  "note": "Outside-use reads for its datasets that have no visibility receipt, at +7 d and +14 d after each was published, from the public Hugging Face API with no token. A read taken later than its checkpoint is dated by its own `at`. Counts, never a score; not-read is never zero; downloads are mixed and context only. Report only: no read here gates anything.",
+  "totals": {
+    "datasets": 9,
+    "read": 8,
+    "outsideSignalYes": 0,
+    "outsideSignalNone": 8,
+    "outsideSignalNotRead": 0,
+    "unread": 1
+  },
+  "overdue": [
+    "hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step"
+  ],
+  "datasets": [
+    {
+      "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced",
+      "publishedAt": "2026-10-28T18:08:07.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 96,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-rows-card-sourced&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-rows-card-sourced&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-rows-card-sourced&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence",
+      "publishedAt": "2026-10-29T09:09:42.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 52,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-format-evidence/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-format-evidence&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-format-evidence&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fbee-scouts-issue-index-re-check-format-evidence&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask",
+      "publishedAt": "2026-10-30T11:14:41.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 87,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/bee-scouts-issue-pages-3563-state-labels-and-ask/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-pages-3563-state-labels-and-ask&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fbee-scouts-issue-pages-3563-state-labels-and-ask&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fbee-scouts-issue-pages-3563-state-labels-and-ask&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates",
+      "publishedAt": "2026-11-05T08:13:32.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 87,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-llm-context-windows-and-release-dates/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-llm-context-windows-and-release-dates&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-llm-context-windows-and-release-dates&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fpublic-llm-context-windows-and-release-dates&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+      "publishedAt": "2026-11-05T16:08:14.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 82,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-ai-model-release-pages-context-window-claims-read-live&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-ai-model-release-pages-context-window-claims-read-live&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fpublic-ai-model-release-pages-context-window-claims-read-live&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals",
+      "publishedAt": "2026-11-07T15:25:22.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 66,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/hivemindos-agent-tool-self-test-and-re-check-proposals/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fhivemindos-agent-tool-self-test-and-re-check-proposals&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fhivemindos-agent-tool-self-test-and-re-check-proposals&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fhivemindos-agent-tool-self-test-and-re-check-proposals&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares",
+      "publishedAt": "2026-11-07T18:40:42.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 58,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-hugging-face-space-pages-what-each-one-declares/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-hugging-face-space-pages-what-each-one-declares&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-hugging-face-space-pages-what-each-one-declares&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fpublic-hugging-face-space-pages-what-each-one-declares&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues",
+      "publishedAt": "2026-11-08T05:22:14.000Z",
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-27T06:00:20.921Z",
+          "repo": "hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 174,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/provenance-self-test-capture-asks-in-bee-scouts-issues/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fprovenance-self-test-capture-asks-in-bee-scouts-issues&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fprovenance-self-test-capture-asks-in-bee-scouts-issues&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fprovenance-self-test-capture-asks-in-bee-scouts-issues&limit=100"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+      "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+      "publishedAt": "2026-11-13T11:59:03.000Z",
+      "outcomes": []
+    }
+  ]
+}
