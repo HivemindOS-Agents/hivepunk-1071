@@ -27,25 +27,25 @@ python3 self_test.py
 ~~~
 
 ## Newest runner result (tag-strength revision)
-Source: HivemindOS runner run 45833790679, 2026-11-26 13:55 UTC, state passed.
-Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45833790679
+Source: HivemindOS runner run 45891956381, 2026-11-26 20:34 UTC, state passed.
+Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45891956381
 Exact command: python3 self_test.py (from tools/agent-dispatch)
 Runner tail as reported:
 
 ~~~text
-GOAL.md sha256: a0e77b87fcb83f2018c8c3ba79fde0e66be95b83a7b9682102d2cddfa4804f55
+GOAL.md sha256: 43ea88d3c5b508844f88d8a27923b349f9535c0e1a0ac437a8819a32cc13ba88
 Results: 49/49 checks passed
 ~~~
 
 Tested revision: the file set whose GOAL.md hashed to
-a0e77b87fcb83f2018c8c3ba79fde0e66be95b83a7b9682102d2cddfa4804f55
+43ea88d3c5b508844f88d8a27923b349f9535c0e1a0ac437a8819a32cc13ba88
 and which included data/tag_strength_rows.json (4 derived
 rows recomputed by self_test.py from data/matcher_examples.json
 via dispatch.match). This pass covers that revision only.
 This commit changes GOAL.md, ARTIFACTS.md, self_test.py and
 README.md, so this pass does not verify this commit.
 
-## Independent model review (capped at $0.03)
+## Independent model review
 Status: NOT PERFORMED / NOT CONFIRMED in this step.
 No review output, finding or gap was obtained, so no
 regression test or fix was added on that basis. This is
@@ -53,6 +53,7 @@ stated plainly rather than invented. No rows invented,
 no tests weakened.
 
 ## Prior passing runs kept as history
+Run 45833790679, 2026-11-26 13:55 UTC, passed, Results: 49/49 checks passed.
 Run 45804145694, 2026-11-26 10:45 UTC, passed, Results: 49/49 checks passed.
 Run 45786462570, 2026-11-26 08:49 UTC, passed, Results: 40/40 checks passed.
 Run 45763176344, 2026-11-26 05:41 UTC, passed, Results: 40/40 checks passed.
@@ -70,24 +71,24 @@ FAIL: GOAL.md names the verified data file.
 Run 45735857085, 2026-11-26 01:27 UTC, failed, 39/40,
 FAIL: no live dataset URL claimed while NOT UPLOADED.
 Both were fixed in earlier commits; later runs above passed,
-including run 45833790679 at 49/49.
+including run 45891956381 at 49/49.
 
 ## This commit
-- GOAL.md updated first: records runner pass 45833790679,
+- GOAL.md updated first: records runner pass 45891956381,
   tested revision sha256, exact command, unconfirmed
   independent review, and test-pending status.
 - ARTIFACTS.md: records the exact command, the runner tail
   output, and the tested revision above.
 - self_test.py: only the latest-run constants updated to
-  45833790679 / 2026-11-26 13:55 UTC / 49/49; all 49 checks
+  45891956381 / 2026-11-26 20:34 UTC / 49/49; all 49 checks
   retained, including derived-row recomputation. No guard
   weakened, no rows invented, no observed failure to repair.
-- README.md: status line refreshed to run 45833790679.
+- README.md: status line refreshed to run 45891956381.
 - dispatch.py, hugf_manifest.md, data/matcher_examples.json
   and data/tag_strength_rows.json unchanged.
 - Scope: this commit is test-pending. No output, count or pass
   for this commit is claimed. A passing runner run newer than
-  45833790679 is required.
+  45891956381 is required.
 
 ## Upload record
 
@@ -116,7 +117,7 @@ or self_test.py will fail.
 
 ## Logged actions (each with a one-line why)
 - Updated GOAL.md first - why: instruction order for this commit.
-- Recorded runner pass 45833790679 (49/49), its exact command and tested GOAL.md sha256 in ARTIFACTS.md - why: step asks for all three here.
+- Recorded runner pass 45891956381 (49/49), its exact command and tested GOAL.md sha256 in ARTIFACTS.md - why: step asks for all three here.
 - Noted independent model review as NOT CONFIRMED - why: no review was obtained in this step and none is invented.
 - Updated self_test.py latest-run constants only - why: keep recorded evidence in sync without weakening any check.
 - Checked for verified gaps to repair - why: newest run passed 49/49, so none observed and no guard changed.
@@ -134,11 +135,10 @@ or self_test.py will fail.
   upload or token step permitted in this repository.
 - Current-commit self-test: UNCONFIRMED. Cause: no runner result
   for this commit reported.
-- No code run against others' systems; no paid retrieval used
-  beyond the capped review that was not obtained.
+- No code run against others' systems; no paid retrieval used.
 
 Owner left: read the runner result for this commit (a pass
-newer than run 45833790679), fetch-check the named GitHub
+newer than run 45891956381), fetch-check the named GitHub
 URLs, run the publish step under
 hivepunk-1071-f79faf84/agent-dispatch, then replace the NOT
 PERFORMED lines with the real commands, UTC timestamp and
