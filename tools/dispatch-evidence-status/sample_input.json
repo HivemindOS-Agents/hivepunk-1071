@@ -1,0 +1,12 @@
+{
+  "note": "What this step could actually observe offline for the HivemindOS-Agents/hivepunk-1071 inspection. No value here was fetched: GitHub is not connected for this holder and there is no network in this step.",
+  "goal_md_updated_first": false,
+  "observed": {
+    "goal_md_first": null,
+    "tested_revision": null,
+    "self_test_command": "python3 self_test.py",
+    "runner_output": "ACCESS_BLOCKED",
+    "artifacts_evidence": null,
+    "artifact_url_fetch_check": null
+  }
+}
