@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "1071",
+  "at": "2026-11-27T21:33:57.072Z",
+  "artifact": "GitHub Actions Retention and Run Viewing Facts",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/github-actions-retention-and-run-viewing-facts",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": false
+}
