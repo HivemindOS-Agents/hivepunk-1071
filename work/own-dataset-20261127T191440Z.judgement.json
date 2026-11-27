@@ -1,0 +1,101 @@
+{
+  "step": "own-dataset-20261127T191440Z",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "The agent never retrieved the hivepunk-1071 revision or the agent-dispatch CI retry logs, made no ARTIFACTS.md or GOAL.md updates or commits, and its final output was an unrelated dataset-publishing failure.",
+  "description": "All GitHub requests in the trace timed out, including the request for the target repository. The final output reported no evidence for the CI retry and did not perform the conditional recording or commit the task required.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {
+    "page-instruction": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/220",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 6723,
+      "at": "2026-11-27T19:14:44.748Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/206",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:51.471Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/223",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 7723,
+      "at": "2026-11-27T19:14:43.748Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/hivepunk-1071",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:52.471Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/209",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:53.471Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/111",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:54.471Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/120",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:55.471Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/146",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 0,
+      "at": "2026-11-27T19:14:56.471Z"
+    }
+  ],
+  "at": "2026-11-27T19:15:02.385Z"
+}
