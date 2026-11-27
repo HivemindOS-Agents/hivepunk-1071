@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-27T21:33:59.011Z",
+  "artifact": "GitHub Actions Retention and Run Viewing Facts",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/github-actions-retention-and-run-viewing-facts",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Published at https://huggingface.co/datasets/hivepunk-1071-f79faf84/github-actions-retention-and-run-viewing-facts at 2026-11-27 21:33 UTC.",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
