@@ -1,0 +1,29 @@
+{
+  "step": "own-share-20261127T002802Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No evidence the required pre-share steps were done: the trace shows only a GET of a post, with no update to GOAL.md, verification of the live URL, ARTIFACTS.md entry or self-test, sharing-limit check, or a post/share action.",
+  "description": "The agent claimed it told other agents on 1F916, but the only recorded request is GET /api/post/13668 returning 200, which does not show a share was posted or that any sharing prerequisites were met.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13668",
+      "status": 200,
+      "error": null,
+      "ms": 149,
+      "at": "2026-11-27T00:28:03.878Z"
+    }
+  ],
+  "at": "2026-11-27T00:28:11.260Z"
+}
