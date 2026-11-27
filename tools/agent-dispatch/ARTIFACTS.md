@@ -9,7 +9,17 @@ https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch
 Account: hivepunk-1071-f79faf84. No organisation and no other account.
 The URL above is INTENDED, NOT LIVE.
 
+## Tested inputs vs changing evidence
+Tested inputs (change = new tested revision): dispatch.py,
+data/matcher_examples.json, data/tag_strength_rows.json.
+Evidence files (change = new history entry only): GOAL.md,
+ARTIFACTS.md, README.md, latest-run constants in
+self_test.py. This separation breaks the loop where
+recording evidence redefined what was tested.
+
 ## Named public files (listed for fetch-check; not fetched in this step)
+Fetch-check status for every URL below: NOT PERFORMED in
+this step (no network). No fetch-checked claim is made.
 - GOAL.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/GOAL.md (updated first this commit)
 - ARTIFACTS.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/ARTIFACTS.md (this file, updated this commit)
 - README.md - https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/tools/agent-dispatch/README.md (updated this commit)
@@ -27,23 +37,25 @@ python3 self_test.py
 ~~~
 
 ## Newest runner result (tag-strength revision)
-Source: HivemindOS runner run 45891956381, 2026-11-26 20:34 UTC, state passed.
-Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45891956381
+Source: HivemindOS runner run 45930351100, 2026-11-27 02:47 UTC, state passed.
+Runner page: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45930351100
 Exact command: python3 self_test.py (from tools/agent-dispatch)
 Runner tail as reported:
 
 ~~~text
-GOAL.md sha256: 43ea88d3c5b508844f88d8a27923b349f9535c0e1a0ac437a8819a32cc13ba88
+GOAL.md sha256: 66e3c88a5273b8648f07eed89eea8ecd7a8419ee6c574f38c99381e7ffcb5211
 Results: 49/49 checks passed
 ~~~
 
-Tested revision: the file set whose GOAL.md hashed to
-43ea88d3c5b508844f88d8a27923b349f9535c0e1a0ac437a8819a32cc13ba88
-and which included data/tag_strength_rows.json (4 derived
-rows recomputed by self_test.py from data/matcher_examples.json
-via dispatch.match). This pass covers that revision only.
-This commit changes GOAL.md, ARTIFACTS.md, self_test.py and
-README.md, so this pass does not verify this commit.
+Tested revision: tested inputs dispatch.py +
+data/matcher_examples.json + data/tag_strength_rows.json
+as committed for the revision whose GOAL.md hashed to
+66e3c88a5273b8648f07eed89eea8ecd7a8419ee6c574f38c99381e7ffcb5211
+(4 derived rows recomputed by self_test.py from
+data/matcher_examples.json via dispatch.match). This pass
+covers those tested inputs only. This commit changes
+GOAL.md, ARTIFACTS.md, self_test.py and README.md
+(evidence files), so this pass does not verify this commit.
 
 ## Independent model review
 Status: NOT PERFORMED / NOT CONFIRMED in this step.
@@ -53,6 +65,7 @@ stated plainly rather than invented. No rows invented,
 no tests weakened.
 
 ## Prior passing runs kept as history
+Run 45891956381, 2026-11-26 20:34 UTC, passed, Results: 49/49 checks passed.
 Run 45833790679, 2026-11-26 13:55 UTC, passed, Results: 49/49 checks passed.
 Run 45804145694, 2026-11-26 10:45 UTC, passed, Results: 49/49 checks passed.
 Run 45786462570, 2026-11-26 08:49 UTC, passed, Results: 40/40 checks passed.
@@ -71,24 +84,25 @@ FAIL: GOAL.md names the verified data file.
 Run 45735857085, 2026-11-26 01:27 UTC, failed, 39/40,
 FAIL: no live dataset URL claimed while NOT UPLOADED.
 Both were fixed in earlier commits; later runs above passed,
-including run 45891956381 at 49/49.
+including run 45930351100 at 49/49.
 
 ## This commit
-- GOAL.md updated first: records runner pass 45891956381,
-  tested revision sha256, exact command, unconfirmed
-  independent review, and test-pending status.
+- GOAL.md updated first: records runner pass 45930351100,
+  tested inputs vs evidence separation, tested revision
+  sha256, exact command, unconfirmed independent review,
+  and test-pending status.
 - ARTIFACTS.md: records the exact command, the runner tail
   output, and the tested revision above.
 - self_test.py: only the latest-run constants updated to
-  45891956381 / 2026-11-26 20:34 UTC / 49/49; all 49 checks
+  45930351100 / 2026-11-27 02:47 UTC / 49/49; all 49 checks
   retained, including derived-row recomputation. No guard
   weakened, no rows invented, no observed failure to repair.
-- README.md: status line refreshed to run 45891956381.
+- README.md: status line refreshed to run 45930351100.
 - dispatch.py, hugf_manifest.md, data/matcher_examples.json
-  and data/tag_strength_rows.json unchanged.
+  and data/tag_strength_rows.json unchanged (tested inputs).
 - Scope: this commit is test-pending. No output, count or pass
   for this commit is claimed. A passing runner run newer than
-  45891956381 is required.
+  45930351100 is required.
 
 ## Upload record
 
@@ -117,7 +131,8 @@ or self_test.py will fail.
 
 ## Logged actions (each with a one-line why)
 - Updated GOAL.md first - why: instruction order for this commit.
-- Recorded runner pass 45891956381 (49/49), its exact command and tested GOAL.md sha256 in ARTIFACTS.md - why: step asks for all three here.
+- Recorded runner pass 45930351100 (49/49), its exact command and tested GOAL.md sha256 in ARTIFACTS.md - why: step asks for all three here.
+- Separated tested inputs from evidence files in GOAL.md and here - why: break the verification loop without weakening tests.
 - Noted independent model review as NOT CONFIRMED - why: no review was obtained in this step and none is invented.
 - Updated self_test.py latest-run constants only - why: keep recorded evidence in sync without weakening any check.
 - Checked for verified gaps to repair - why: newest run passed 49/49, so none observed and no guard changed.
@@ -138,7 +153,7 @@ or self_test.py will fail.
 - No code run against others' systems; no paid retrieval used.
 
 Owner left: read the runner result for this commit (a pass
-newer than run 45891956381), fetch-check the named GitHub
+newer than run 45930351100), fetch-check the named GitHub
 URLs, run the publish step under
 hivepunk-1071-f79faf84/agent-dispatch, then replace the NOT
 PERFORMED lines with the real commands, UTC timestamp and
