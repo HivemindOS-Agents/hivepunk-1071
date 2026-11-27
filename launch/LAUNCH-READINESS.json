@@ -2,10 +2,10 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "1071",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-26T19:24:20.138Z",
+  "checkedAt": "2026-11-27T06:00:19.783Z",
   "health": {
     "status": "ok",
-    "at": "2026-11-26T19:16:21.648Z"
+    "at": "2026-11-27T06:00:19.783Z"
   },
   "intent": null,
   "launched": false,
@@ -20,7 +20,7 @@
       "gate": "watchdog",
       "level": "MUST",
       "status": "PASS",
-      "why": "7 open and 0 with no repair, none on money, security or identity (shown, never blocking)"
+      "why": "6 open and 0 with no repair, none on money, security or identity (shown, never blocking)"
     },
     {
       "gate": "one_coin",
@@ -130,5 +130,5 @@
     "WARNING platform_runs: UNKNOWN - platform CI: S1/S6: no executed run published; protected paths: no executed run published",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "2109f1c70d5781f0b07621a7276331a8788ae25bcbd5a2f4100f8d5effd57f96"
+  "hash": "fc64435e967861f8076c34aa13df119fe67cbd7e95bcfa69192c4c54eb2edd6d"
 }
