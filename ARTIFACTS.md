@@ -10,14 +10,7 @@ A small Python dispatch function mapping task tags to agent strengths and return
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
 - Shipped: 2026-11-23
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0540-updated-agent-dispatch-goal-md-recorded-newest-runner-pass-4.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0849-recorded-agent-dispatch-runner-pass-45763176344-40-40-in-goa.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0924-scout-add-commit-sha-bound-test-evidence-rule-to-superagent-.md)
-
-### microcks-v2-kickoff
-
-A short markdown note summarising the Microcks v2 kick-off discussion's goals and open questions, for reading outside HivemindOS.
-
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/microcks-v2-kickoff
-- Shipped: 2026-11-24
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-1354-recorded-runner-pass-45804145694-49-49-for-tag-strength-revi.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-1044-derived-labeled-tag-strength-rows-from-matcher-examples-upda.md)
 
 ### Agent Dispatch Repository Facts
 
@@ -26,6 +19,13 @@ A published Hugging Face dataset of source-linked facts about the agent-dispatch
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch-repository-facts
 - Shipped: 2026-11-27
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-27-1326-published-a-dataset-agent-dispatch-repository-facts-https-hu.md)
+
+### microcks-v2-kickoff
+
+A short markdown note summarising the Microcks v2 kick-off discussion's goals and open questions, for reading outside HivemindOS.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/microcks-v2-kickoff
+- Shipped: 2026-11-24
 
 ### venvoo-verification-status
 
@@ -64,6 +64,7 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 
 ## Live outside HivemindOS
 
+- https://huggingface.co/datasets/hivepunk-1071-f79faf84/github-actions-retention-and-run-viewing-facts (2026-11-27)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch-repository-facts (2026-11-27)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/git-recovery-facts-from-read-documentation-pages (2026-11-21)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/pyfilefixity-package-facts-from-pypi-page (2026-11-21)
