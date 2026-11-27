@@ -7,25 +7,26 @@ See GOAL.md in this folder. Cite:
 https://github.com/Trisoma/odessy/issues/73
 
 Status for this commit: test-pending. The newest runner result
-on record is run 45930351100, 2026-11-27 02:47 UTC, passed,
+on record is run 45948460383, 2026-11-27 05:53 UTC, passed,
 Results: 49/49 checks passed, GOAL.md sha256
-66e3c88a5273b8648f07eed89eea8ecd7a8419ee6c574f38c99381e7ffcb5211,
+e43d0996994fa64a2d261bdc342355e6cb28bc360f938c16f972a68e390b5cc2,
 and it covers the tested inputs (dispatch.py, data/*.json) of
 the file set committed before this commit only. Tested inputs
 are separated from changing evidence (GOAL.md, ARTIFACTS.md,
 README.md, latest-run constants) so recording evidence does not
-redefine the tested revision. Earlier runs 45891956381
-(2026-11-26 20:34 UTC, 49/49), 45833790679 (2026-11-26 13:55
-UTC, 49/49), 45804145694 (2026-11-26 10:45 UTC, 49/49),
-45786462570 (2026-11-26 08:49 UTC, 40/40),
-45763176344 (2026-11-26 05:41 UTC, 40/40), 45742922323
-(2026-11-26 02:31 UTC, 40/40), 45712491184 (2026-11-25 22:21
-UTC, 40/40), 45618100411 (2026-11-25 12:53 UTC, 31/31),
-45588014110 (2026-11-25 09:43 UTC, 24/24) and 45225896912
-(2026-11-23 17:16 UTC, 16/16) are kept as history. None of
-them verifies this commit, and nothing is published. See
-ARTIFACTS.md and hugf_manifest.md. Independent model review:
-not confirmed in this step; no finding is claimed.
+redefine the tested revision. Earlier runs 45930351100
+(2026-11-27 02:47 UTC, 49/49), 45891956381 (2026-11-26 20:34
+UTC, 49/49), 45833790679 (2026-11-26 13:55 UTC, 49/49),
+45804145694 (2026-11-26 10:45 UTC, 49/49), 45786462570
+(2026-11-26 08:49 UTC, 40/40), 45763176344 (2026-11-26 05:41
+UTC, 40/40), 45742922323 (2026-11-26 02:31 UTC, 40/40),
+45712491184 (2026-11-25 22:21 UTC, 40/40), 45618100411
+(2026-11-25 12:53 UTC, 31/31), 45588014110 (2026-11-25 09:43
+UTC, 24/24) and 45225896912 (2026-11-23 17:16 UTC, 16/16) are
+kept as history. None of them verifies this commit, and nothing
+is published. See ARTIFACTS.md and hugf_manifest.md.
+Independent model review: not confirmed in this step; no
+finding is claimed.
 
 Build tools/agent-dispatch: a Python tag-to-strength matcher with
 deterministic ties and explicit no-match handling. Given local
@@ -80,7 +81,7 @@ timestamp and URL as `NOT PERFORMED` until a real run fills them in.
 ## ARTIFACTS
 See ARTIFACTS.md in this folder for the target, the named public
 files, the exact test command, the newest runner tail (run
-45930351100, 2026-11-27 02:47 UTC, 49/49), the earlier runs as
+45948460383, 2026-11-27 05:53 UTC, 49/49), the earlier runs as
 history, the upload record, and the exact blocker. No output or
 pass for this commit is claimed here.
 
