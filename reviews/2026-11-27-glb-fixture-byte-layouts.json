@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-27T06:00:23.455Z",
+  "artifact": "glb-fixture-byte-layouts",
+  "url": "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-byte-layouts",
+  "public": true,
+  "selfTest": "passed",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Its page answered 200 at 2026-11-27 06:00 UTC (https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/contents/tools/glb-fixture-byte-layouts?ref=main). Its self-test passed in the runner's run (proof proofs/prf-1071-glb-fixture-byte-layouts-5479a2b.json).",
+  "repeat": "",
+  "drop": "",
+  "claimProof": "proofs/prf-1071-glb-fixture-byte-layouts-5479a2b.json",
+  "outsideSignal": null
+}
