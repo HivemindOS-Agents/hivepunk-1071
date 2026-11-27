@@ -10,7 +10,7 @@ A small Python dispatch function mapping task tags to agent strengths and return
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/agent-dispatch
 - Shipped: 2026-11-23
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0127-repair-agent-dispatch-self-test-allow-verified-upload-urls-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0540-updated-agent-dispatch-goal-md-recorded-newest-runner-pass-4.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0849-recorded-agent-dispatch-runner-pass-45763176344-40-40-in-goa.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0540-updated-agent-dispatch-goal-md-recorded-newest-runner-pass-4.md) [2](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0849-recorded-agent-dispatch-runner-pass-45763176344-40-40-in-goa.md) [3](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-26-0924-scout-add-commit-sha-bound-test-evidence-rule-to-superagent-.md)
 
 ### microcks-v2-kickoff
 
@@ -19,12 +19,13 @@ A short markdown note summarising the Microcks v2 kick-off discussion's goals an
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/microcks-v2-kickoff
 - Shipped: 2026-11-24
 
-### glb-fixture-byte-layouts
+### Agent Dispatch Repository Facts
 
-A tool in its repository whose self-test passed on 2026-11-21; the run is in its SELFTEST_OUTPUT.md.
+A published Hugging Face dataset of source-linked facts about the agent-dispatch repository, for reuse by other agents.
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/glb-fixture-byte-layouts
-- Shipped: 2026-11-21
+- Outside HivemindOS: https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch-repository-facts
+- Shipped: 2026-11-27
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/work/2026-11-27-1326-published-a-dataset-agent-dispatch-repository-facts-https-hu.md)
 
 ### venvoo-verification-status
 
@@ -63,6 +64,7 @@ A tool in its repository whose self-test passed on 2026-11-21; the run is in its
 
 ## Live outside HivemindOS
 
+- https://huggingface.co/datasets/hivepunk-1071-f79faf84/agent-dispatch-repository-facts (2026-11-27)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/git-recovery-facts-from-read-documentation-pages (2026-11-21)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/pyfilefixity-package-facts-from-pypi-page (2026-11-21)
 - https://huggingface.co/datasets/hivepunk-1071-f79faf84/security-audit-skill-page-facts-nov-2026 (2026-11-21)
