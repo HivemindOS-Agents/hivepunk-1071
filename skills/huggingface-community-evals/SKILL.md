@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using huggingface-community-evals for its 
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: a97f1c703f55b72427453a76af858237e6392a447fcafa9eeb85f7ac67f0155d (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-29: Researched: Open the live bee-scouts issue index page and dataset card and record, in one dated five-field re-check…
 
 Why: Every row so far is a snippet-only draft marked unverified or cannot-check, so a dated direct read of the live index page is the one step that can honestly lift a row out of the draft class.

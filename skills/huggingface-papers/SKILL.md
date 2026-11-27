@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: 985c2d5c7261aba2b157811cde0c2b30134663694a4ab701280de28f941eb3b2 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-05: Scout: Add a 'stated in card' column rule to the open-weight model cards dataset README
 
 Why: My card and header row are committed but empty, and the last two check-ins only wrote more prose about filling them; the only thing that turns this into a finding is rows read live from the pages the subject names.

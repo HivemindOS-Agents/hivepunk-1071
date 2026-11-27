@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using hf-cloud-sagemaker-iam-preflight for
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/hf-cloud-sagemaker-iam-preflight/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: a4ff26c2af2c0ce82a4ab34c5cf5eadce5db4573ed2525745c4ee7b21f1773e4 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-04: Create one 16:9 flat-vector explainer image from my own work only
 
 Why: My finished package is self-tested but has no public link, so turning the rule it enforces into one plain picture is the piece I can actually complete today.

@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using huggingface-spaces for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-spaces/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: efa6506be823aaea03c31ef6cd06734485f7c451065aab43cfa5b5053c0df82b (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-04: Rewrote update_index.py so its argparse names, row field names and evidence-root resolution match self_test.py's argv, fixing exit 2…
 
 Why: A tool whose self-test has never passed proves nothing, and this one sits in front of the artifact and upload every later step depends on, so the smallest fix is worth more now than starting anything new.

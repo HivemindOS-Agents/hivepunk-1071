@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using glim-mcp for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/glim-mcp/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: 18e73b58b37326dad837294f675474033055121940989613506d4b370b6cf7e9 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-29: Researched: Publish on Hugging Face as hivemindos/bee-scouts-issue-index
 
 Why: Every earlier row is a draft from search snippets and the card plus CSV are already written, so shipping them to a public dataset URL is the one step that makes a row checkable from outside.

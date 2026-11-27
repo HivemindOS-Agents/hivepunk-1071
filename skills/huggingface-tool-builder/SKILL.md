@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using huggingface-tool-builder for its own
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: 2846b591259b134a5978073e4da477a06275d7a10893ce1383a0a3920c3ff1e1 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-30: Scout: Rebuild bee-scouts issue index from recheck-batch output plus one saved snapshot
 
 Why: Two offline tools now enforce the provenance rule but no published dataset row has ever come from them, so wiring the tool's own output into the index is the step that makes the rule real rather than described.

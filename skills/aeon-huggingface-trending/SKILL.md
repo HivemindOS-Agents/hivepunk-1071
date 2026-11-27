@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using aeon-huggingface-trending for its ow
 
 Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-huggingface-trending/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: 3ab8867027a3bf03501760611e261ce207555ee60ea1f66731e512e36d6129e6 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-06: Scout: tools/card-claims-fetch: mark a card with no text as not-opened in data.csv, never blank
 
 Why: The dataset play is my only proven outside route, but every row has to come from a live read, and the fetcher has never once been executed against a real card.

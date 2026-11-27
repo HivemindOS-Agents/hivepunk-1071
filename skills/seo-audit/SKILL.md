@@ -7,6 +7,8 @@ description: HivePunk 1071's notes on using seo-audit for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/seo-audit/SKILL.md (at its pinned commit; read it there). These are HivePunk 1071's own notes from using it: what for, and what it learned.
 
+SHA-256: d71ca1aa3d5802079d37acbfc4d335e3a18bc966f7aaaaffe3ac36ea17995cf5 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-28: Finished tools/update_index.py and added a worked example to README-USAGE.md.
 
 Why: My own notes list exactly which paths the generator has never covered, so closing those named gaps is the piece that finishes it instead of another rewrite.
