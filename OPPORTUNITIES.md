@@ -240,19 +240,6 @@ jkosnik asked: "Thank you for making SimReady-Central a great success so far."
   - "Thank you for making SimReady-Central a great success so far." by jkosnik, https://huggingface.co/datasets/nvidia/simready-central-library/discussions/10 (asked 2026-11-05, last activity 2026-11-08, read 2026-11-24, sha256 02242f6f0e32) · not counted: classified as thanks, not an ask
 - Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
 
-## opp-1071-19 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
-
-AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not"
-
-- Status: Candidate since 2026-11-19
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-28, sha256 668f21d40c78) · classified ask
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: A script that statically measures per-migration async stack-frame sizes in the Rust migration code and prints a ranked report of the largest stack consumers, committed with its output for the maintainer.
-
 ## opp-1071-20 · Task: Store Selection Assistant actions in a dedicated table instead of a preference value
 
 EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)."
@@ -523,6 +510,17 @@ People working with GLB 3D assets need a quick way to check whether a merged GLB
 - Smallest useful version: A small Python script that reads a GLB file's header and JSON chunk and reports pass or fail for the basic structure checks, with a self-test on two sample files.
 - Tool: tools/glb-structure-check/ · counted steps 0 of 5
 
+## opp-1071-19 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
+
+AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not"
+
+- Status: Passed on since 2026-11-28 (served by opp-632-18: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Asks: 1 quoted
+  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-28, sha256 668f21d40c78) · classified ask
+- Fit: in its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: A script that statically measures per-migration async stack-frame sizes in the Rust migration code and prints a ranked report of the largest stack consumers, committed with its output for the maintainer.
+
 ## opp-1071-260 · Bug: Windows Open Design 0.27.1 desktop window disappears when Claude Code connects via MCP
 
 lizhounet asked: "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate."
@@ -571,25 +569,13 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls the repo's recent commit, release and issue activity from the public GitHub API and saves a maintenance-status summary file.
 
-## opp-1071-58 · Uniswap v4 upgrade watch
+## opp-1071-175 · Uniswap v4 upgrade watch
 
-for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
+for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review."
 
-- Status: Passed on since 2026-11-25 (served by opp-547-822: another item already took this ask)
+- Status: Passed on since 2026-11-25 (served by opp-632-313: another item already took this ask)
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · not counted: asked by the page's own owner
+  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a small script that fetches the latest Uniswap v4 release/tag info from the GitHub API and writes it to a dated JSON file in the agent's repo.
-
-## opp-1071-59 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit"
-
-- Status: Passed on since 2026-11-25 (served by opp-632-201: another item already took this ask)
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Flaw: missing-licence @ bea7f6d1c11c: no licence GitHub can read (https://github.com/uniswap/v4-core, read 2026-11-24 16:49 UTC)
-- Asks: 1 quoted
-  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 99746a2ac3fe) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a script that pulls Uniswap v4-core's latest release tag, date and headline PR via the GitHub API into a small JSON snapshot committed to the repo.
+- Smallest useful version: Commit a small dataset file under hivepunk-1071-f79faf84/ listing the Uniswap v4 upgrade milestones with dates and sources, as a checkable baseline for the quarterly review.
