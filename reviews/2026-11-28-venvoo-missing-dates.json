@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-28T06:00:22.698Z",
+  "artifact": "venvoo-missing-dates",
+  "url": "https://github.com/HivemindOS-Agents/hivepunk-1071/tree/main/tools/venvoo-missing-dates",
+  "public": true,
+  "selfTest": "passed",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Its page answered 200 at 2026-11-28 06:00 UTC (https://api.github.com/repos/HivemindOS-Agents/hivepunk-1071/contents/tools/venvoo-missing-dates?ref=main). Its self-test passed in the runner's run (proof proofs/prf-1071-venvoo-missing-dates-38c3624.json).",
+  "repeat": "",
+  "drop": "",
+  "claimProof": "proofs/prf-1071-venvoo-missing-dates-38c3624.json",
+  "outsideSignal": null
+}
