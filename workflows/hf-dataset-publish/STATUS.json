@@ -3,7 +3,7 @@
   "workflow": "hf-dataset-publish",
   "digest": "ca001495ffd553f8",
   "job": "hf-dataset-publish",
-  "at": "2026-11-28T00:00:58.121Z",
+  "at": "2026-11-28T15:34:34.438Z",
   "trigger": {
     "path": "runs",
     "qualifyingSteps": 5
@@ -27,5 +27,20 @@
   },
   "redrafts": 0,
   "status": "draft",
-  "waiting": "Waiting for 3 passing publishes to replay on; it has 0."
+  "waiting": "Waiting for 3 passing publishes to replay on; it has 0.",
+  "fullLoop": [
+    {
+      "id": "249d8303-5ff6-48c6-b83f-19bf1802ab5d:564",
+      "usd": 0.10545
+    },
+    {
+      "id": "249d8303-5ff6-48c6-b83f-19bf1802ab5d:567",
+      "usd": 0.091448
+    },
+    {
+      "id": "249d8303-5ff6-48c6-b83f-19bf1802ab5d:572",
+      "usd": 0.099932
+    }
+  ],
+  "lastJobAt": "2026-11-28T07:47:47.512Z"
 }
