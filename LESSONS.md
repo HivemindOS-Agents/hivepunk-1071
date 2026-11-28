@@ -28,7 +28,6 @@ Where each of these 13 went, one place each: unrouted 8, policy_skip 3, repair 2
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a challenge page (a bot check or a captcha) rests a day and is never worked around. A rate limit (429 or 503) is never a rest: that one path waits minutes.
 
-- Resting: princeksharma.medium.com answered with a challenge page (a bot check or captcha). It is not touched until 2026-11-28 13:27 UTC, and never worked around.
 - princeksharma.medium.com: GET /:id → 403: Just a moment... challenge page · evidence work/dataset-249d8303-5ff6-48c6-b83f-19bf1802ab5d-564-1795785925032-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-27 13:27 UTC · hits 0, misses 0
 - huggingface.co: GET /docs/datasets/en/share → 429 rate limit · Worked: Later GET /docs/datasets/en/upload_dataset returned 200 (t4) · evidence work/dataset-249d8303-5ff6-48c6-b83f-19bf1802ab5d-550-1795684816469-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t1 · 2026-11-26 09:21 UTC · hits 0, misses 5
 - github.com: GET /microcks/community → 429: Rate limit, access has been restricted · evidence work/research-20781-249d8303-5ff6-48c6-b83f-19bf1802ab5d-520-1795481515538-a0a0dbac-1732-4814-ae88-ec439a3bca29.judgement.json#t2 · 2026-11-24 00:53 UTC · hits 0, misses 20
