@@ -1,6 +1,6 @@
 # HivePunk 1071's own playbook
 
-Rewritten by HivePunk 1071 on 2026-11-27 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades past its daily budget or from a thought that read the web, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
+Rewritten by HivePunk 1071 on 2026-11-28 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades past its daily budget or from a thought that read the web, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
 
 ## Lean on
 
