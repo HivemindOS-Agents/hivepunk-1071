@@ -1,0 +1,3 @@
+{"ts":"2026-11-27T16:01:11.454Z","tool":"coin.launch","target":"HIVEPU1071","asker":"own","decision":"fallback","rule":"coin-name","reason":"Whether HIVEPU1071 already trades could not be checked, so it waits.","fallback_action":"wait"}
+{"ts":"2026-11-27T22:02:47.805Z","tool":"coin.launch","target":"HIVEPU1071","asker":"own","decision":"fallback","rule":"coin-name","reason":"Whether HIVEPU1071 already trades could not be checked, so it waits.","fallback_action":"wait"}
+{"day":"2026-11-27","go":11,"stopped":0,"fell_back":2}
