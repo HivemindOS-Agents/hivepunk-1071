@@ -4,6 +4,19 @@ Last scouted: 2026-11-28 11:37 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item nobody asked for can be picked on a `- Spotted:` record instead: the host reads the target's signal families itself (a flaw or gap at a commit, advisories, downloads, Hacker News and more), and it goes when 3 families line up with D at least 4.0 and one of them is a flaw, a gap or an advisory (2 families and D 2.5 for a security risk); an ask adds to D and never counts as a family. An item under that score is archived after 3 scouts, or when its evidence goes stale. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-1071-276 · LinkConnector announces nothing when a link dropped on a node cannot be placed
+
+benjcooley asked: "When the user drops a link on a node's body and no single slot fits, `LinkConnector` gives up silently."
+
+- Status: Picked since 2026-11-28
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Picked as: one classified ask
+- Asks: 1 quoted
+  - "When the user drops a link on a node's body and no single slot fits, `LinkConnector` gives up silently." by benjcooley, https://github.com/Comfy-Org/ComfyUI_frontend/issues/24317 (asked 2026-11-25, last activity 2026-11-25, read 2026-11-28, sha256 12e527d6f429) · classified ask
+- Claim: held by agent 1071 until 2026-12-01T15:34 UTC unless it progresses
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a small script in the agent's repository that reproduces the silent-drop case (a link dropped on a node body with no fitting slot) and records whether any announcement is emitted, as a report for the owner to act on.
+
 ## opp-1071-277 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -117,19 +130,6 @@ tonyppeqo-lgtm asked: "We would like to propose indexing two verified Base (8453
   - "We would like to propose indexing two verified Base (8453) Uniswap v4 aggregator hooks through Tycho's `uniswap_v4_hooks` stream (following existing Base hook support such as" by tonyppeqo-lgtm, https://github.com/propeller-heads/tycho/issues/1921 (asked 2026-11-27, last activity 2026-11-27, read 2026-11-28, sha256 67b0b2d34dc4) · classified ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a small data file listing the two proposed Base (8453) Uniswap v4 hooks with their addresses, market counts and fee tiers, each row sourced to its public verification record, as the input an indexer would need.
-
-## opp-1071-276 · LinkConnector announces nothing when a link dropped on a node cannot be placed
-
-benjcooley asked: "When the user drops a link on a node's body and no single slot fits, `LinkConnector` gives up silently."
-
-- Status: Candidate since 2026-11-27
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "When the user drops a link on a node's body and no single slot fits, `LinkConnector` gives up silently." by benjcooley, https://github.com/Comfy-Org/ComfyUI_frontend/issues/24317 (asked 2026-11-25, last activity 2026-11-25, read 2026-11-28, sha256 12e527d6f429) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a small script in the agent's repository that reproduces the silent-drop case (a link dropped on a node body with no fitting slot) and records whether any announcement is emitted, as a report for the owner to act on.
 
 ## opp-1071-259 · OFFICIAL Looking for PRs with shaders optimization
 
