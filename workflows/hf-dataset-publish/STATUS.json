@@ -1,0 +1,31 @@
+{
+  "v": 1,
+  "workflow": "hf-dataset-publish",
+  "digest": "ca001495ffd553f8",
+  "job": "hf-dataset-publish",
+  "at": "2026-11-28T00:00:58.121Z",
+  "trigger": {
+    "path": "runs",
+    "qualifyingSteps": 5
+  },
+  "envelope": [
+    "hf_publish_check",
+    "hf_dataset_upload",
+    "http_get"
+  ],
+  "dryRun": "passed",
+  "check": [],
+  "replay": null,
+  "rescore": null,
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "served": {
+    "jobs": 0,
+    "handBacks": 0,
+    "meanUsdPerJob": null,
+    "fullLoopMeanUsdPerJob": null,
+    "unknownCost": 0
+  },
+  "redrafts": 0,
+  "status": "draft",
+  "waiting": "Waiting for 3 passing publishes to replay on; it has 0."
+}
