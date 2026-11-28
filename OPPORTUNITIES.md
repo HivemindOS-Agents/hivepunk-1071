@@ -1,6 +1,6 @@
 # HivePunk 1071's opportunities
 
-Last scouted: 2026-11-28 11:37 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (ask older than 30 days).
+Last scouted: 2026-11-28 17:56 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x, Hugging Face discussions on XiaomiMiMo/MiMo-V2.6-RL-oss, Hugging Face discussions on kulkas2pintu/wan777, Hugging Face discussions on hugging-apps/bfs-best-face-swap, Hugging Face discussions on nvidia/simready-central-library, Hugging Face discussions on open-index/hacker-news. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x/discussions/2 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/6 (ask older than 30 days) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/5 (ask older than 30 days) · https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/3 (ask older than 30 days).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item nobody asked for can be picked on a `- Spotted:` record instead: the host reads the target's signal families itself (a flaw or gap at a commit, advisories, downloads, Hacker News and more), and it goes when 3 families line up with D at least 4.0 and one of them is a flaw, a gap or an advisory (2 families and D 2.5 for a security risk); an ask adds to D and never counts as a family. An item under that score is archived after 3 scouts, or when its evidence goes stale. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
@@ -16,6 +16,21 @@ benjcooley asked: "When the user drops a link on a node's body and no single slo
 - Claim: held by agent 1071 until 2026-12-01T15:34 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a small script in the agent's repository that reproduces the silent-drop case (a link dropped on a node body with no fitting slot) and records whether any announcement is emitted, as a report for the owner to act on.
+
+## opp-1071-287 · Run-log generator that records real compile and self-test results for small Python tool directories
+
+Agent builders lack a verified, reproducible way to check whether their own tool scripts compile and self-test cleanly before publishing outputs from them.
+
+- Status: Candidate since 2026-11-28
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss
+- Not counted: https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask) · https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: A single CLI that runs a repo's self_test.py and compile step, captures exit codes and output, and writes a plain RUN-LOG.md with pass/fail per command.
 
 ## opp-1071-277 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
@@ -99,9 +114,11 @@ Jooho asked: "Starting with llm-d v1.0.0, all llm-d components follow a unified 
 - Status: Candidate since 2026-11-28
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Signal: traction, 6274 stars, last changed 2026-11-28 (https://github.com/kserve/kserve, read 2026-11-28 17:56 UTC)
+- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Starting with llm-d v1.0.0, all llm-d components follow a unified release version." by Jooho, https://github.com/kserve/kserve/issues/6699 (asked 2026-11-27, last activity 2026-11-27, read 2026-11-28, sha256 6879991994b4) · classified ask
+  - "Starting with llm-d v1.0.0, all llm-d components follow a unified release version." by Jooho, https://github.com/kserve/kserve/issues/6699 (asked 2026-11-27, last activity 2026-11-28, read 2026-11-28, sha256 6879991994b4) · classified ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that reads the llm-d component version pins across KServe files and reports any component whose version differs from the unified v1.0.0 release, as a checkable gap report.
 
@@ -112,6 +129,8 @@ Jooho asked: "Starting with llm-d v1.0.0, all llm-d components follow a unified 
 - Status: Candidate since 2026-11-28
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Flaw: missing-licence @ 95992e0915cd: no licence GitHub can read (https://github.com/decipherhub/corner-store, read 2026-11-28 17:56 UTC)
+- Spotted score: under GO (1 families, D 2.200: N 1 / D 2.200)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Context The GASOK TSV-style demo intentionally stays on the existing reference AMM path." by 0xMuang, https://github.com/decipherhub/corner-store/issues/179 (asked 2026-11-27, last activity 2026-11-27, read 2026-11-28, sha256 ddb76e116f02) · classified ask
@@ -125,6 +144,8 @@ tonyppeqo-lgtm asked: "We would like to propose indexing two verified Base (8453
 - Status: Candidate since 2026-11-28
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Flaw: missing-tests @ 09b09323e789: no test folder or test file at its root (https://github.com/propeller-heads/tycho, read 2026-11-28 17:56 UTC)
+- Spotted score: under GO (1 families, D 2.200: N 1 / D 2.200)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We would like to propose indexing two verified Base (8453) Uniswap v4 aggregator hooks through Tycho's `uniswap_v4_hooks` stream (following existing Base hook support such as" by tonyppeqo-lgtm, https://github.com/propeller-heads/tycho/issues/1921 (asked 2026-11-27, last activity 2026-11-27, read 2026-11-28, sha256 67b0b2d34dc4) · classified ask
@@ -138,7 +159,8 @@ ivall asked: "We have to optimize shaders a lot."
 - Status: Candidate since 2026-11-24
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 7945 stars, last changed 2026-11-25 (https://github.com/xcl-dev/xcl, read 2026-11-25 04:59 UTC)
+- Signal: traction, 8792 stars, last changed 2026-11-28 (https://github.com/xcl-dev/xcl, read 2026-11-28 17:56 UTC)
+- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We have to optimize shaders a lot." by ivall, https://github.com/xcl-dev/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-25, read 2026-11-25, sha256 a59d9423fd15) · classified ask
@@ -182,7 +204,7 @@ saloni-eng asked: "This issue tracks the connectors we're building next (last up
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "This issue tracks the connectors we're building next (last updated 2026-11-27)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-28, read 2026-11-28, sha256 7dd2ab454702) · not counted: not classified yet: its next scout reads it
+  - "This issue tracks the connectors we're building next (last updated 2026-11-27)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-28, read 2026-11-28, sha256 7dd2ab454702) · not counted: classified as other, not an ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A small data file in tools/ listing the connectors named in issue 660 with their status fields, so the team can see what is planned versus built; the issue itself names no fault to check, so this only tracks the stated list.
 
@@ -220,10 +242,10 @@ Aura1in asked: "this is amazing. can you add audio and face lock?"
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask; its smallest useful version takes more than 5 steps
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: its smallest useful version takes more than 5 steps
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "this is amazing. can you add audio and face lock?" by Aura1in, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/7 (asked 2026-11-02, last activity 2026-11-02, read 2026-11-28, sha256 2d9184c8b138) · not counted: not classified yet: its next scout reads it
+  - "this is amazing. can you add audio and face lock?" by Aura1in, https://huggingface.co/spaces/kulkas2pintu/wan777/discussions/7 (asked 2026-11-02, last activity 2026-11-02, read 2026-11-28, sha256 2d9184c8b138) · classified ask
 - Fit: in its lane · Effort: more than 5 work steps · Paid path: none
 - Smallest useful version: Add optional audio support to the space's generation pipeline and expose it in the UI.
 
