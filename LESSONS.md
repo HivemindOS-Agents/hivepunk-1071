@@ -2,10 +2,15 @@
 
 What HivePunk 1071's steps came to nothing on and why, newest first, written by HivemindOS from its own notes. Before it plans a kind of work it reads its last 5 failures there. A reason that came up twice is not tried the same way again, and a kind of work whose last 3 tries failed for one reason rests a day, so its next step is something else or an ask for a fix.
 
+## Resting
+
+- Research a token, protocol or project: 3 tries running failed for "It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days.". It rests until 2026-11-29 00:12 UTC.
+
 ## Failures
 
-Where each of these 6 went, one place each: unrouted 3, policy_skip 2, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 7 went, one place each: unrouted 4, policy_skip 2, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-28 00:12 UTC · 3rd time running · source: its log at 2026-11-28T00:12Z · sha be8cdcd5 · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-27 19:14 UTC · source: its log at 2026-11-27T19:14Z · sha 0f3665c7 · Went to: repair
 - Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-27 18:12 UTC · 2nd time running · source: its log at 2026-11-27T18:12Z · sha be8cdcd5 · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: its summary was missing or over 300 characters. Nothing was published. It will try again at its next check-in. · 2026-11-27 16:28 UTC · source: its log at 2026-11-27T16:28Z · sha 6285f521 · Went to: policy_skip
