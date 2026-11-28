@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "1071",
-  "at": "2026-11-27T00:11:05.920Z",
+  "at": "2026-11-28T00:00:50.307Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -21,7 +21,8 @@
     "D23",
     "D24",
     "D26",
-    "D28"
+    "D28",
+    "D29"
   ],
   "notChecked": [],
   "notBuilt": [
@@ -52,40 +53,14 @@
       "firstSeen": "2026-11-17T14:46:28.176Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
-      "detail": "A value review with no self-test, no evidence and no claim proof.",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json"
-      ],
-      "firstSeen": "2026-11-27T00:11:05.920Z"
-    },
-    {
-      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
-      "detail": "A value review with no self-test, no evidence and no claim proof.",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json"
-      ],
-      "firstSeen": "2026-11-23T00:03:36.145Z"
-    },
-    {
-      "id": "wd-1071-D17---agent-dispatch-tag-to-strength-dataset-2026-11-26-:-It-chose-to-publish-it-a-",
-      "check": "D17",
-      "name": "publish_while_failing",
+      "id": "wd-1071-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "name": "failure_not_in_health",
       "severity": "repair",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- agent-dispatch-tag-to-strength-dataset (2026-11-26): It chose to publish it as it is on 2026-11-26 (The dataset is already built and self-tested, so it shoul…\"",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-1071/blob/main/ARTIFACTS.md"
-      ],
-      "firstSeen": "2026-11-27T00:11:05.920Z"
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered.",
+      "evidence": [],
+      "firstSeen": "2026-11-28T00:00:50.307Z"
     },
     {
       "id": "wd-1071-D18-artifacts",
@@ -114,31 +89,25 @@
   ],
   "notSeenAgain": [
     {
-      "id": "wd-1071-D13-https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "check": "D13",
-      "subject": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-ai-model-release-pages-context-window-claims-read-live",
-      "firstSeen": "2026-11-26T00:08:40.692Z"
-    },
-    {
-      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
+      "id": "wd-1071-D15-reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
       "check": "D15",
-      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages-visibility.json",
-      "firstSeen": "2026-11-24T00:04:27.853Z"
+      "subject": "reviews/2026-11-26-agent-dispatch-and-dispatch-facts-from-read-pages.json",
+      "firstSeen": "2026-11-27T00:11:05.920Z"
     },
     {
-      "id": "wd-1071-D15-reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
+      "id": "wd-1071-D15-reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
       "check": "D15",
-      "subject": "reviews/2026-11-21-security-audit-skill-page-facts-nov-2026.json",
-      "firstSeen": "2026-11-22T00:01:44.673Z"
+      "subject": "reviews/2026-11-22-wiz-reusable-workflow-facts-from-read-pages.json",
+      "firstSeen": "2026-11-23T00:03:36.145Z"
     },
     {
-      "id": "wd-1071-D23-owner",
-      "check": "D23",
-      "subject": "its steps",
-      "firstSeen": "2026-11-17T14:46:28.176Z"
+      "id": "wd-1071-D17---agent-dispatch-tag-to-strength-dataset-2026-11-26-:-It-chose-to-publish-it-a-",
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "firstSeen": "2026-11-27T00:11:05.920Z"
     }
   ],
-  "said": "6 found",
+  "said": "4 found",
   "requests": 22,
-  "elapsedMs": 2914
+  "elapsedMs": 3934
 }
