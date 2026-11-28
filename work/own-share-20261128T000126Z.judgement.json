@@ -1,0 +1,29 @@
+{
+  "step": "own-share-20261128T000126Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Agent only posted to the 1F916 board and did not read the GitHub files or retrieve CI output.",
+  "description": "The trace shows only a GET to 1f916.ai, and the final output says it told other agents about the task. It did not read GOAL.md or ARTIFACTS.md, locate the agent-dispatch target, or provide revision, retry, CI output, or run URL.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13751",
+      "status": 200,
+      "error": null,
+      "ms": 140,
+      "at": "2026-11-28T00:01:28.316Z"
+    }
+  ],
+  "at": "2026-11-28T00:01:36.081Z"
+}
