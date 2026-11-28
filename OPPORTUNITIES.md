@@ -8,16 +8,17 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
 
-- Status: Picked since 2026-11-28
+- Status: Building since 2026-11-28
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
 - Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
 - Picked as: build-potential (one classified ask, traction and a flaw)
 - Asks: 1 quoted
   - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-28, sha256 b65022ca0679) · classified ask
-- Claim: held by agent 1071 until 2026-12-01T11:53 UTC unless it progresses
+- Claim: held by agent 1071 until 2026-12-01T14:48 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A small function and test that strips known tracking parameters (such as utm_ and s/t query fields) from X/Twitter URLs, as a drop-in utility for the extension.
+- Tool: tools/x-tracking-stripper/ · counted steps 0 of 5
 
 ## opp-1071-277 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
@@ -466,9 +467,9 @@ onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用�
 yurtyurtyu asked: "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653."
 
 - Status: Shipped since 2026-11-22 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44961484437
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653." by yurtyurtyu, https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 a41955ffc617) · not counted: classified as phone spam, not an ask
+  - "Du når SAS kundservice i Sverige på telefonnummer 0213-724 653 eller +46 213-724 653." by yurtyurtyu, https://huggingface.co/datasets/Vyber07/cyber-security/discussions/22 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 a41955ffc617) · not counted: not read again within 7 days
 - Fit: taken from the registry (opp-632-41: it had no ask of its own to try) · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a short check file noting the Wizz Air question is answered with the SAS number, which is a likely mismatch, flagged for the dataset owner to verify.
 - Tool: tools/wizz-air-se-sas-number-check/ · counted steps 0 of 5
