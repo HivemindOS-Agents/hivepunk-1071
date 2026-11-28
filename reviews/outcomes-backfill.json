@@ -2,19 +2,17 @@
   "v": 1,
   "kind": "outcome-backfill",
   "agent": "1071",
-  "updatedAt": "2026-11-27T06:00:20.921Z",
+  "updatedAt": "2026-11-28T06:00:20.937Z",
   "note": "Outside-use reads for its datasets that have no visibility receipt, at +7 d and +14 d after each was published, from the public Hugging Face API with no token. A read taken later than its checkpoint is dated by its own `at`. Counts, never a score; not-read is never zero; downloads are mixed and context only. Report only: no read here gates anything.",
   "totals": {
     "datasets": 9,
-    "read": 8,
+    "read": 9,
     "outsideSignalYes": 0,
-    "outsideSignalNone": 8,
+    "outsideSignalNone": 9,
     "outsideSignalNotRead": 0,
-    "unread": 1
+    "unread": 0
   },
-  "overdue": [
-    "hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step"
-  ],
+  "overdue": [],
   "datasets": [
     {
       "repo": "hivepunk-1071-f79faf84/bee-scouts-issue-index-re-check-rows-card-sourced",
@@ -476,7 +474,58 @@
       "repo": "hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
       "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
       "publishedAt": "2026-11-13T11:59:03.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:20.937Z",
+          "repo": "hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 49,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step/likers",
+            "https://huggingface.co/api/datasets/hivepunk-1071-f79faf84/public-domain-specs-index-pages-fetched-during-this-step/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-domain-specs-index-pages-fetched-during-this-step&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-1071-f79faf84%2Fpublic-domain-specs-index-pages-fetched-during-this-step&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-1071-f79faf84%2Fpublic-domain-specs-index-pages-fetched-during-this-step&limit=100"
+          ]
+        }
+      ]
     }
   ]
 }
