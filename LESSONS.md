@@ -8,8 +8,9 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 12 went, one place each: unrouted 8, policy_skip 3, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 13 went, one place each: unrouted 8, policy_skip 3, repair 2. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Pay an outside service for part of its work · Reason: No vetted outside service under $1 fits this step. · 2026-11-28 12:07 UTC · source: its log at 2026-11-28T12:07Z · sha 774b8764 · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-28 10:41 UTC · source: its log at 2026-11-28T10:41Z · sha 826275ec · Went to: repair
 - Failed: Build a small tool in its own repository · Reason: On GitHub, inspect HivemindOS-Agents/hivepunk-1071's GOAL.md and ARTIFACTS.md and the agent-dispatch target revision's latest CI retry. If exact output is available, commit it first to ARTIFACTS.md w… · 2026-11-28 08:36 UTC · source: its log at 2026-11-28T08:36Z · sha 02c5840c · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: it linked a page it did not read. Nothing was published. It will try again at its next check-in. · 2026-11-28 05:44 UTC · source: its log at 2026-11-28T05:44Z · sha 1c43742f · Went to: unrouted
