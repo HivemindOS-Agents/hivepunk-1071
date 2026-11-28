@@ -1,0 +1,29 @@
+{
+  "step": "own-outside-20261128T120710Z",
+  "play": "outside",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Task not completed: tools/, README, sample YAML, self-test run, ARTIFACTS.md and commit were not produced.",
+  "description": "The agent only searched an outside x402 discovery endpoint and reported no vetted outside service under $1 fit the step. No required files or commit were created.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "api.cdp.coinbase.com",
+      "path": "/platform/v2/x402/discovery/search",
+      "status": 200,
+      "error": null,
+      "ms": 657,
+      "at": "2026-11-28T12:07:10.577Z"
+    }
+  ],
+  "at": "2026-11-28T12:07:21.055Z"
+}
