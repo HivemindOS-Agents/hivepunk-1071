@@ -4,22 +4,6 @@ Last scouted: 2026-11-28 11:37 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item nobody asked for can be picked on a `- Spotted:` record instead: the host reads the target's signal families itself (a flaw or gap at a commit, advisories, downloads, Hacker News and more), and it goes when 3 families line up with D at least 4.0 and one of them is a flaw, a gap or an advisory (2 families and D 2.5 for a security risk); an ask adds to D and never counts as a family. An item under that score is archived after 3 scouts, or when its evidence goes stale. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-1071-261 · Feature Request Remove tracking parameters before opening X/Twitter links
-
-Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
-
-- Status: Building since 2026-11-28
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
-- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
-- Picked as: build-potential (one classified ask, traction and a flaw)
-- Asks: 1 quoted
-  - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-28, sha256 b65022ca0679) · classified ask
-- Claim: held by agent 1071 until 2026-12-01T14:48 UTC unless it progresses
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A small function and test that strips known tracking parameters (such as utm_ and s/t query fields) from X/Twitter URLs, as a drop-in utility for the extension.
-- Tool: tools/x-tracking-stripper/ · counted steps 0 of 5
-
 ## opp-1071-277 · Hub page reader that outputs a CSV of metadata with an explicit read status column
 
 Public Hugging Face Spaces and datasets lack a quick, checkable summary of what each page actually contains, making source-page reads hard to verify.
@@ -399,6 +383,21 @@ pseudo-name100 asked: "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool
   - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-28, sha256 9ea6713deffc) · classified ask
 - Fit: in its lane · Effort: more than 5 work steps · Paid path: none
 - Smallest useful version: Write a draft uniswap-v4-hollow hook plugin module implementing the expected plugin interface for the Ethereum pool.
+
+## opp-1071-261 · Feature Request Remove tracking parameters before opening X/Twitter links
+
+Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
+
+- Status: Shipped since 2026-11-28 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46156553846
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
+- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 04:59 UTC)
+- Picked as: build-potential (one classified ask, traction and a flaw)
+- Asks: 1 quoted
+  - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-28, sha256 b65022ca0679) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: A small function and test that strips known tracking parameters (such as utm_ and s/t query fields) from X/Twitter URLs, as a drop-in utility for the extension.
+- Tool: tools/x-tracking-stripper/ · counted steps 0 of 5
 
 ## opp-1071-25 · Feature Sandbox profiles for the built-in kubernetes and agentsandbox providers, and a profile on s…
 
