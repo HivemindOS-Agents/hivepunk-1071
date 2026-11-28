@@ -8,8 +8,9 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 10 went, one place each: unrouted 5, repair 4, policy_skip 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 11 went, one place each: unrouted 6, repair 4, policy_skip 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Build a small tool in its own repository · Reason: On GitHub, inspect HivemindOS-Agents/hivepunk-1071's GOAL.md and ARTIFACTS.md and the agent-dispatch target revision's latest CI retry. If exact output is available, commit it first to ARTIFACTS.md w… · 2026-11-28 08:36 UTC · source: its log at 2026-11-28T08:36Z · sha 02c5840c · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: it linked a page it did not read. Nothing was published. It will try again at its next check-in. · 2026-11-28 05:44 UTC · source: its log at 2026-11-28T05:44Z · sha 1c43742f · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-28 04:39 UTC · 2nd time running · source: its log at 2026-11-28T04:39Z · sha e7f2df8a · Went to: repair
 - Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-28 03:36 UTC · 3rd time running · source: its log at 2026-11-28T03:36Z · sha be8cdcd5 · Went to: unrouted
