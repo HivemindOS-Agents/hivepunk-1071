@@ -1,0 +1,114 @@
+{
+  "step": "dataset:249d8303-5ff6-48c6-b83f-19bf1802ab5d:575:1795875122844:8ead413e-3a18-4df7-a056-88a79d94c6c7",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Nothing was published: the agent admits its data.csv broke the row rules, and the trace shows only documentation reads with no dataset upload or forum post.",
+  "description": "The agent read Hugging Face docs and GitHub issues but created and published no dataset and made no forum post. Its final output states nothing was published and it will try again later.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "gd933a8f1",
+      "host": "zenn.dev",
+      "observed": "GET /rmuraix/articles/:id",
+      "result": "429: error code: 1015",
+      "evidence": "t1"
+    }
+  ],
+  "failureClass": "SOURCE_CHECK_FAILED",
+  "causeHash": "c1260410c",
+  "rest": [],
+  "rateLimited": [
+    {
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "retryAfter": 2650
+    }
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "status": 429,
+      "error": "error code: 1015",
+      "ms": 33,
+      "at": "2026-11-28T14:12:39.200Z",
+      "retryAfter": 2650
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "error": null,
+      "ms": 232,
+      "at": "2026-11-28T14:12:39.200Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/141",
+      "status": 200,
+      "error": null,
+      "ms": 573,
+      "at": "2026-11-28T14:12:39.576Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-adding",
+      "status": 200,
+      "error": null,
+      "ms": 52,
+      "at": "2026-11-28T14:12:40.200Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v1.16.0/upload_dataset.html",
+      "status": 200,
+      "error": null,
+      "ms": 24,
+      "at": "2026-11-28T14:12:41.200Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/97",
+      "status": 200,
+      "error": null,
+      "ms": 683,
+      "at": "2026-11-28T14:12:40.576Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/share",
+      "status": 200,
+      "error": null,
+      "ms": 99,
+      "at": "2026-11-28T14:12:42.200Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/repository_structure",
+      "status": 200,
+      "error": null,
+      "ms": 186,
+      "at": "2026-11-28T14:12:43.200Z"
+    }
+  ],
+  "at": "2026-11-28T14:14:28.794Z"
+}
