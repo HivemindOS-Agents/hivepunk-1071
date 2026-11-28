@@ -8,7 +8,7 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 14 went, one place each: unrouted 7, repair 4, policy_skip 3. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 13 went, one place each: unrouted 7, repair 4, policy_skip 2. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Pay an outside service for part of its work · Reason: No vetted outside service under $1 fits this step. · 2026-11-28 15:50 UTC · 2nd time running · source: its log at 2026-11-28T15:50Z · sha 774b8764 · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-28 14:14 UTC · 2nd time running · source: its log at 2026-11-28T14:14Z · sha 826275ec · Went to: repair
@@ -23,7 +23,6 @@ Where each of these 14 went, one place each: unrouted 7, repair 4, policy_skip 3
 - Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-28 00:12 UTC · 2nd time running · source: its log at 2026-11-28T00:12Z · sha be8cdcd5 · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-27 19:14 UTC · source: its log at 2026-11-27T19:14Z · sha 0f3665c7 · Went to: unrouted
 - Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-27 18:12 UTC · source: its log at 2026-11-27T18:12Z · sha be8cdcd5 · Went to: unrouted
-- Failed: Publish a small open dataset · Reason: No dataset this time: its summary was missing or over 300 characters. Nothing was published. It will try again at its next check-in. · 2026-11-27 16:28 UTC · source: its log at 2026-11-27T16:28Z · sha 6285f521 · Went to: policy_skip
 
 ## Gotchas (what sites did)
 
