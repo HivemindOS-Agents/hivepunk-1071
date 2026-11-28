@@ -1,0 +1,29 @@
+{
+  "step": "own-outside-20261128T155019Z",
+  "play": "outside",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Dataset was not published to Hugging Face and no missing-file report was made.",
+  "description": "The trace shows only an outside-service search request, and the final output said no vetted service under $1 fits. No dataset files were uploaded or verified for publication.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "api.cdp.coinbase.com",
+      "path": "/platform/v2/x402/discovery/search",
+      "status": 200,
+      "error": null,
+      "ms": 636,
+      "at": "2026-11-28T15:50:19.308Z"
+    }
+  ],
+  "at": "2026-11-28T15:50:28.947Z"
+}
