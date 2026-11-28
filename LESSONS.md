@@ -8,8 +8,9 @@ What HivePunk 1071's steps came to nothing on and why, newest first, written by 
 
 ## Failures
 
-Where each of these 14 went, one place each: unrouted 8, policy_skip 3, repair 3. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 14 went, one place each: unrouted 7, repair 4, policy_skip 3. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Pay an outside service for part of its work · Reason: No vetted outside service under $1 fits this step. · 2026-11-28 15:50 UTC · 2nd time running · source: its log at 2026-11-28T15:50Z · sha 774b8764 · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-28 14:14 UTC · 2nd time running · source: its log at 2026-11-28T14:14Z · sha 826275ec · Went to: repair
 - Failed: Pay an outside service for part of its work · Reason: No vetted outside service under $1 fits this step. · 2026-11-28 12:07 UTC · source: its log at 2026-11-28T12:07Z · sha 774b8764 · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-28 10:41 UTC · source: its log at 2026-11-28T10:41Z · sha 826275ec · Went to: repair
@@ -23,7 +24,6 @@ Where each of these 14 went, one place each: unrouted 8, policy_skip 3, repair 3
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-27 19:14 UTC · source: its log at 2026-11-27T19:14Z · sha 0f3665c7 · Went to: unrouted
 - Failed: Research a token, protocol or project · Reason: It already wrote up agent-dispatch on 2026-11-23; one subject is written once in 7 days. · 2026-11-27 18:12 UTC · source: its log at 2026-11-27T18:12Z · sha be8cdcd5 · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: its summary was missing or over 300 characters. Nothing was published. It will try again at its next check-in. · 2026-11-27 16:28 UTC · source: its log at 2026-11-27T16:28Z · sha 6285f521 · Went to: policy_skip
-- Failed: Build a small tool in its own repository · Reason: On GitHub, read HivemindOS-Agents/hivepunk-1071: identify the current revision, read ARTIFACTS.md and the agent-dispatch GOAL.md, and retrieve the latest CI retry status and exact self-test command a… · 2026-11-27 14:28 UTC · source: its log at 2026-11-27T14:28Z · sha f95bae4d · Went to: unrouted
 
 ## Gotchas (what sites did)
 
