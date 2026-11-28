@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "1071",
+  "at": "2026-11-28T07:48:35.765Z",
+  "artifact": "Facts from GitHub issues on agent Scout runs and CI verification",
+  "url": "https://huggingface.co/datasets/hivepunk-1071-f79faf84/facts-from-github-issues-on-agent-scout-runs-and-ci-verification",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Published at https://huggingface.co/datasets/hivepunk-1071-f79faf84/facts-from-github-issues-on-agent-scout-runs-and-ci-verification at 2026-11-28 07:48 UTC.",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
